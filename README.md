@@ -1,13 +1,21 @@
 # Smash Suite
 
-Smash Suite 是一个本地优先的自动化羽毛球视频套件。第一版面向固定机位、手机高帧率视频或本地摄像头，目标是在场边准实时显示羽毛球速度曲线，并避免上传完整 120/240fps 视频。
+Smash Suite 是一个本地优先的自动化羽毛球视频套件。当前仓库已有 PC-only 的测速 baseline；下一阶段 demo 目标是用 Android 手机作为智能摄像头节点降低回传数据量，由 PC 完成控制、标定、测速、结果展示和导出。
+
+## 快速接手
+
+- 想粗略了解项目：读完本 README 即可知道产品目标、当前 baseline、技术栈和运行方式。
+- 想继续开发：先读 [AGENTS.md](AGENTS.md)，再从 [docs/plan/roadmap.md](docs/plan/roadmap.md) 顶部的 `Current Focus` 开始。
+- 想深入产品和架构：读 [docs/features.md](docs/features.md) 和 [docs/architecture.md](docs/architecture.md)。
 
 ## MVP（Minimum Viable Product） 目标
 
+- Android 阶段性只负责高帧率采集、粗场景识别和片段上传，不做业务 UI。
+- PC 是唯一产品入口和控制中心，负责设备控制、场地标定、测速分析和结果展示。
 - 固定单机位，通过球场关键点完成平面标定。
-- 本地读取视频文件路径或摄像头输入，视觉分析在本机完成。
-- 先用 OpenCV 传统视觉 baseline 跑通端到端流程，再预留模型检测器接口。
-- Web UI 通过 WebSocket 展示实时状态、轨迹点、速度曲线和当前读数。
+- 当前 PC baseline 可读取本地视频文件路径或摄像头输入，视觉分析在本机完成。
+- 先用 OpenCV 传统视觉 baseline 跑通 Android 片段到 PC 测速闭环，再预留模型检测器接口。
+- PC Web UI 展示设备状态、标定、速度曲线、轨迹点、关键帧和导出结果。
 - Demo 阶段速度趋势可用，目标误差不高于 20%。
 
 ## 技术栈
@@ -28,8 +36,9 @@ Smash Suite 是一个本地优先的自动化羽毛球视频套件。第一版�
 │   └── tests/            # 后端单元测试
 ├── frontend/             # React 场边测速界面
 ├── data/                 # 本地会话、样片和导出结果
-├── models/               # 后续检测模型目录
-└── plan/                 # 项目计划与路线图
+├── docs/                 # 目标、功能、架构与作战手册
+│   └── plan/             # 计划手册、里程碑路线图和执行记录
+└── models/               # 后续检测模型目录
 ```
 
 ## 运行方式
@@ -74,9 +83,7 @@ pnpm run dev:frontend
 
 ## 后续路线
 
-完整实施计划见 [plan/features.md](plan/features.md)。
-
-长期整体规划与架构设计见 [plan/architecture.md](plan/architecture.md)。
+文档入口见 [docs/README.md](docs/README.md)。当前优先级、里程碑状态、证据和阻塞以 [docs/plan/roadmap.md](docs/plan/roadmap.md) 为准。
 
 ## 其他
 Assistant by Codex & Copilot
