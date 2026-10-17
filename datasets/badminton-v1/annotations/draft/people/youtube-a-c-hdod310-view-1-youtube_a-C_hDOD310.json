@@ -1,0 +1,256 @@
+{
+  "annotations": [
+    {
+      "attributes": {
+        "court_side": "near",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 1
+      },
+      "bbox": [
+        391.0426677527254,
+        203.5005308562303,
+        119.9369515730861,
+        148.4994691437697
+      ],
+      "id": 1,
+      "item_id": "clean-000000008000-frame-000000",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "far",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 2
+      },
+      "bbox": [
+        182.00291306408295,
+        121.52512331453806,
+        39.68477112622065,
+        116.57355498869609
+      ],
+      "id": 7,
+      "item_id": "clean-000000008000-frame-000000",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "near",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 1
+      },
+      "bbox": [
+        436.84771789260185,
+        155.6189001544987,
+        47.96072419164295,
+        196.3810998455013
+      ],
+      "id": 2,
+      "item_id": "clean-000000008000-frame-000021",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "far",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 2
+      },
+      "bbox": [
+        212.86615569526904,
+        167.5298917152748,
+        31.537341639229254,
+        96.88352801075649
+      ],
+      "id": 8,
+      "item_id": "clean-000000008000-frame-000036",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "near",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 1
+      },
+      "bbox": [
+        474.1222077955876,
+        157.38421054019548,
+        57.45879168011396,
+        171.85346996731076
+      ],
+      "id": 3,
+      "item_id": "clean-000000008000-frame-000058",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "far",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 2
+      },
+      "bbox": [
+        218.49660764123198,
+        146.38011536356174,
+        29.62900784591227,
+        91.3063300772192
+      ],
+      "id": 9,
+      "item_id": "clean-000000008000-frame-000070",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "near",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 1
+      },
+      "bbox": [
+        449.0591552246767,
+        146.43833135359486,
+        42.17509447898607,
+        142.94407236914228
+      ],
+      "id": 4,
+      "item_id": "clean-000000008000-frame-000095",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "far",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 2
+      },
+      "bbox": [
+        70.04364623328084,
+        135.24508062301297,
+        36.52036865659741,
+        101.48110598626954
+      ],
+      "id": 10,
+      "item_id": "clean-000000008000-frame-000116",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "far",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 2
+      },
+      "bbox": [
+        83.04073897079361,
+        132.27219290601874,
+        36.09844346502457,
+        109.88330445665315
+      ],
+      "id": 11,
+      "item_id": "clean-000000008000-frame-000133",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "near",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 1
+      },
+      "bbox": [
+        523.1619890058104,
+        146.57895148077282,
+        56.60522113776585,
+        204.08009159163063
+      ],
+      "id": 5,
+      "item_id": "clean-000000008000-frame-000142",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "near",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 1
+      },
+      "bbox": [
+        516.7361813863924,
+        147.60225332289025,
+        59.43746070454904,
+        201.84435887553872
+      ],
+      "id": 6,
+      "item_id": "clean-000000008000-frame-000149",
+      "label_id": 0,
+      "type": "bbox"
+    },
+    {
+      "attributes": {
+        "court_side": "far",
+        "keyframe": true,
+        "occluded": false,
+        "outside": false,
+        "role": "participant",
+        "track_id": 2
+      },
+      "bbox": [
+        49.064015304277945,
+        137.04919282803476,
+        45.50921517173636,
+        94.3034589855074
+      ],
+      "id": 12,
+      "item_id": "clean-000000008000-frame-000149",
+      "label_id": 0,
+      "type": "bbox"
+    }
+  ],
+  "court_geometry": "annotations/verified/court/youtube-a-c-hdod310-view-1.json",
+  "datumaro_sha256": "119725fe4fdbaf924ab71daaff3be59e6e7e7f1d3f59d1525c97d040b91a9d7d",
+  "imported_at": "2026-07-27T11:41:08+00:00",
+  "reviewer": "user",
+  "scene_types": [
+    "clean"
+  ],
+  "schema_version": 2,
+  "source_id": "youtube:a-C_hDOD310",
+  "status": "draft",
+  "target": "people",
+  "view_id": "youtube-a-c-hdod310-view-1"
+}

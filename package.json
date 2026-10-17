@@ -1,0 +1,16 @@
+{
+  "name": "smash-suite",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local-first badminton shuttle speed measurement demo.",
+  "scripts": {
+    "dev:frontend": "pnpm -C frontend dev",
+    "dev:backend": "cd backend && ../.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8000",
+    "test:backend": "cd backend && python3 -m pytest",
+    "typecheck:frontend": "pnpm -C frontend exec tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
+  }
+}

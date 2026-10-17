@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "status": "draft_pending_human_review",
+  "used_segmentation_predictions": false,
+  "total_candidate_rallies": 32,
+  "total_pending_events": 8,
+  "clips": [
+    {
+      "short": "D1-01",
+      "annotation": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-01-20261015/full-v1.json",
+      "annotation_sha256": "48fc478c76111a29a22378c4dc572a6bca069d4c575f31afde7ec90f2bdfac15",
+      "duration_s": 150.989125,
+      "count": 7,
+      "verified": 0,
+      "pending_events": 2,
+      "video": "datasets/badminton-v1/local/rally/m1-short-d1-01-20261015/clip.mp4",
+      "video_sha256": "8254de0fdbed330b3049215c00ce67679771e40eb4bd9dc448186aa139766f2f",
+      "source_origin_ms": 0.0,
+      "native_frame_count": 4528,
+      "excluded_events": [
+        {
+          "event_id": "d1-01-event-1",
+          "range_ms": [
+            32000,
+            38000
+          ],
+          "source_range_ms": [
+            32000.0,
+            38000.0
+          ],
+          "classification": "ambiguous_return_or_failed_serve",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "reason": "疑似远端还球或失败发球，近端未持续对打，随后近端捡球；需确认类别。"
+        },
+        {
+          "event_id": "d1-01-event-2",
+          "range_ms": [
+            39000,
+            43000
+          ],
+          "source_range_ms": [
+            39000.0,
+            43000.0
+          ],
+          "classification": "shuttle_return",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "reason": "近端轻挑还球，远端随后捡球，无持续对打。"
+        }
+      ],
+      "review_status": "needs_review"
+    },
+    {
+      "short": "D1-02",
+      "annotation": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-02-20261015/full-v1.json",
+      "annotation_sha256": "30504e34d9a2281cb66d495ea54f6c5f03231f7710e4d7a71de470fecf2c20ed",
+      "duration_s": 154.989125,
+      "count": 9,
+      "verified": 0,
+      "pending_events": 2,
+      "video": "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/clip.mp4",
+      "video_sha256": "82d29f3f431cd3ba386af88dc77daaf8e5496ff520ace229e24b8a51f19851b5",
+      "source_origin_ms": 150989.125,
+      "native_frame_count": 4648,
+      "excluded_events": [
+        {
+          "event_id": "d1-02-event-1",
+          "range_ms": [
+            54867.0,
+            57633.0
+          ],
+          "source_range_ms": [
+            205856.125,
+            208622.125
+          ],
+          "classification": "failed_receive",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。"
+        },
+        {
+          "event_id": "d1-02-event-2",
+          "range_ms": [
+            93989.0,
+            98500.0
+          ],
+          "source_range_ms": [
+            244978.125,
+            249489.125
+          ],
+          "classification": "shuttle_return",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。"
+        }
+      ],
+      "review_status": "needs_review"
+    },
+    {
+      "short": "D1-03",
+      "annotation": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-03-20261015/full-v1.json",
+      "annotation_sha256": "937347cf18664fc9098ef819adecc29bfd09d03da46b73d2a93fff24a99785ac",
+      "duration_s": 149.9891875,
+      "count": 8,
+      "verified": 0,
+      "pending_events": 2,
+      "video": "datasets/badminton-v1/local/rally/m1-short-d1-03-20261015/clip.mp4",
+      "video_sha256": "45c77879af8c7ef14b70515ae7409410e6433f480da572505cb0032a42bbdf36",
+      "source_origin_ms": 305978.25,
+      "native_frame_count": 4498,
+      "excluded_events": [
+        {
+          "event_id": "d1-03-event-1",
+          "range_ms": [
+            103000,
+            109000
+          ],
+          "source_range_ms": [
+            408978.25,
+            414978.25
+          ],
+          "classification": "ambiguous_short_event",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "reason": "前景遮挡下疑似失败发球或接发失败；事件性质不明确，单列重点复核。"
+        },
+        {
+          "event_id": "d1-03-event-2",
+          "range_ms": [
+            141989.0,
+            145423.0
+          ],
+          "source_range_ms": [
+            447967.25,
+            451401.25
+          ],
+          "classification": "shuttle_return",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "reason": "近端捡球后还球，远端等待；随后才恢复发球准备。"
+        }
+      ],
+      "review_status": "needs_review"
+    },
+    {
+      "short": "D1-04",
+      "annotation": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-04-20261015/full-v1.json",
+      "annotation_sha256": "c110c0de3e4582d42f072a3df7a992216a510f1ec34d5156d25a0e66a33340ec",
+      "duration_s": 154.978375,
+      "count": 8,
+      "verified": 0,
+      "pending_events": 2,
+      "video": "datasets/badminton-v1/local/rally/m1-short-d1-04-20261015/clip.mp4",
+      "video_sha256": "b5ef8d3a78389fd5a81af42564684a41c57b46cca2f97202a0f069ccdeee5606",
+      "source_origin_ms": 455967.4375,
+      "native_frame_count": 4646,
+      "excluded_events": [
+        {
+          "event_id": "d1-04-event-1",
+          "range_ms": [
+            49989.0,
+            59000
+          ],
+          "source_range_ms": [
+            505956.4375,
+            514967.4375
+          ],
+          "classification": "shuttle_return_and_self_bounce",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "reason": "近端自颠球、球落脚旁、捡起后还给远端；非正式回合。"
+        },
+        {
+          "event_id": "d1-04-event-2",
+          "range_ms": [
+            146000,
+            150000
+          ],
+          "source_range_ms": [
+            601967.4375,
+            605967.4375
+          ],
+          "classification": "shuttle_return",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "reason": "对打后近端轻挑还球，球落近场；不新增回合。"
+        }
+      ],
+      "review_status": "needs_review"
+    }
+  ]
+}

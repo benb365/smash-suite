@@ -1,0 +1,11 @@
+{
+  "corrected_sha256": null,
+  "decision": "needs_review",
+  "proposal": "annotations/proposed/court/youtube-gmxvbt-ac8o-view-1/3b4d08235728571849d2.json",
+  "proposal_sha256": "1b8ababfac0ef4753e4f84f433aa5c33be60a8a6a90fd18751e44bb160f2871a",
+  "reason": "人工复核：点位坐标或语义均需修正，保留原始 proposal 供校正",
+  "reviewed_at": "2026-07-27T13:55:02+00:00",
+  "reviewer": "user",
+  "schema_version": 2,
+  "target": "court_proposal_review"
+}

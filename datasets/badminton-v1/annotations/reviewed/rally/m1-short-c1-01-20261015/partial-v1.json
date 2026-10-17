@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_reviewed_annotation",
+  "status": "verified_partial",
+  "sample_id": "m1-short-c1-01-20261015",
+  "category": "C",
+  "video": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4",
+  "video_sha256": "2aec0dc53ecb1e436b916c5d615252cdfd64a9ed03741f02073eea175662d481",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 118.0,
+    "source_origin_ms": 120073.0,
+    "source_time_rule": "source_ms = source_origin_ms + timestamp_ms",
+    "clip_pts_rule": "clip_pts_ms = first_decoded_clip_pts_ms + timestamp_ms"
+  },
+  "coverage": {
+    "partial": true,
+    "reviewed_range_ms": [
+      0,
+      60000
+    ],
+    "outside_range": "unannotated",
+    "completeness": "human_confirmed_within_reviewed_range",
+    "uncertain_boundaries_are_not_verified_truth": true,
+    "boundary_intervals_preserved": true
+  },
+  "main_court": "画面中央的单打球场，近端黑衣、远端白衣；不计邻场及前景路人。",
+  "main_court_review_status": "human_confirmed",
+  "generation": {
+    "method": "human_confirmed_agent_visual_intervals",
+    "producer": "Codex",
+    "date": "2026-10-15",
+    "requires_human_review": false,
+    "used_segmentation_predictions": false,
+    "notes": "用户确认首批视频标注正确并指定start采用区间左端、end采用区间右端；保留原区间，不宣称代表时间是已知精确触球/落地瞬间。"
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01",
+    "overview_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/frame-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/boundary-frame-index.json",
+    "native_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/native-frame-index.json",
+    "near_player_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/native-near-frame-index.json",
+    "serve_context_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/serve2-context-index.json"
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "start_ms": 11107.0,
+      "end_ms": 13675.0,
+      "start_frame": 333,
+      "end_frame": 410,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": {
+            "frame_id": 334,
+            "timestamp_ms": 11141.0,
+            "clip_pts_ms": 11259.0
+          },
+          "review_window_frames": [
+            333,
+            335
+          ],
+          "review_window_ms": [
+            11107.0,
+            11174.0
+          ],
+          "source_review_window_ms": [
+            131180.0,
+            131247.0
+          ],
+          "note": "近端黑衣在11.141秒拍面附近可见球，下一帧球离开；远端白衣为接发方。",
+          "selected_endpoint": "left",
+          "selected_ms": 11107.0,
+          "selected_frame": 333
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": null,
+          "review_window_frames": [
+            404,
+            410
+          ],
+          "review_window_ms": [
+            13475.0,
+            13675.0
+          ],
+          "source_review_window_ms": [
+            133548.0,
+            133748.0
+          ],
+          "note": "远端右前场白衣扑救后球在地面附近出现，触地瞬间不够清楚，保留复核范围。",
+          "selected_endpoint": "right",
+          "selected_ms": 13675.0,
+          "selected_frame": 410
+        }
+      }
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 28318.0,
+      "end_ms": 43794.0,
+      "start_frame": 849,
+      "end_frame": 1313,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": null,
+          "review_window_frames": [
+            849,
+            862
+          ],
+          "review_window_ms": [
+            28318.0,
+            28751.0
+          ],
+          "source_review_window_ms": [
+            148391.0,
+            148824.0
+          ],
+          "note": "远端白衣发高球、近端黑衣后退接球；28秒前后的持拍准备不能当作击球。",
+          "selected_endpoint": "left",
+          "selected_ms": 28318.0,
+          "selected_frame": 849
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": null,
+          "review_window_frames": [
+            1301,
+            1313
+          ],
+          "review_window_ms": [
+            43394.0,
+            43794.0
+          ],
+          "source_review_window_ms": [
+            163467.0,
+            163867.0
+          ],
+          "note": "球在近端左前方下落，黑衣让球后身体遮挡落点；需核对首次落地，不以停步或裁判手势反推精确时刻。",
+          "selected_endpoint": "right",
+          "selected_ms": 43794.0,
+          "selected_frame": 1313
+        }
+      }
+    }
+  ],
+  "human_review": {
+    "reviewer": "user",
+    "date": "2026-10-15",
+    "instruction": "确认视频标注正确，start 同意采用区间左边界，end 同意采用区间右边界",
+    "scope": "A1-01与C1-01各归一化前60秒，5个回合及C组主球场",
+    "boundary_selection": {
+      "start": "left_endpoint_of_review_window",
+      "end": "right_endpoint_of_review_window"
+    },
+    "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-c1-01-20261015/partial-v1.json",
+    "proposal_sha256": "0e364557772a1d866d645b3d736d451fce8e091039baeda1ab0acad804546b2d",
+    "limits": "确认不扩展到尚未检查的其余视频；partial覆盖之外不能算负例；边界误差分析保留原区间宽度。"
+  }
+}

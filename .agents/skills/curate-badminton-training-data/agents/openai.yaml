@@ -1,0 +1,4 @@
+interface:
+  display_name: "Badminton Video Curator"
+  short_description: "Collect native-rate Rally test clips and reviewed training data"
+  default_prompt: "Use $curate-badminton-training-data to collect and validate fixed-camera Rally test videos, or curate reviewed court and people annotations."

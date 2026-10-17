@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_annotation_proposal",
+  "status": "needs_human_review",
+  "sample_id": "m1-short-c1-01-20261015",
+  "category": "C",
+  "video": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4",
+  "video_sha256": "2aec0dc53ecb1e436b916c5d615252cdfd64a9ed03741f02073eea175662d481",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 118.0,
+    "source_origin_ms": 120073.0,
+    "source_time_rule": "source_ms = source_origin_ms + timestamp_ms",
+    "clip_pts_rule": "clip_pts_ms = first_decoded_clip_pts_ms + timestamp_ms"
+  },
+  "coverage": {
+    "partial": true,
+    "reviewed_range_ms": [
+      0,
+      60000
+    ],
+    "outside_range": "unannotated",
+    "completeness": "agent_proposed_pending_human_review",
+    "uncertain_boundaries_are_not_verified_truth": true
+  },
+  "main_court": "画面中央的单打球场，近端黑衣、远端白衣；不计邻场及前景路人。",
+  "main_court_review_status": "proposed_pending_human_review",
+  "generation": {
+    "method": "agent_visual_review_of_decoded_frames",
+    "producer": "Codex",
+    "date": "2026-10-15",
+    "requires_human_review": true,
+    "used_segmentation_predictions": false,
+    "notes": "整数帧号及时间取自真实解码PTS；不确定边界保留null。复核窗口为建议检查范围，并非已证实的误差上界。"
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01",
+    "overview_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/frame-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/boundary-frame-index.json",
+    "native_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/native-frame-index.json",
+    "near_player_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/native-near-frame-index.json",
+    "serve_context_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/serve2-context-index.json"
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "start_ms": 11141.0,
+      "end_ms": null,
+      "start_frame": 334,
+      "end_frame": null,
+      "review_status": "uncertain",
+      "boundary_review": {
+        "start": {
+          "status": "proposed",
+          "candidate_frame": {
+            "frame_id": 334,
+            "timestamp_ms": 11141.0,
+            "clip_pts_ms": 11259.0
+          },
+          "review_window_frames": [
+            333,
+            335
+          ],
+          "review_window_ms": [
+            11107.0,
+            11174.0
+          ],
+          "source_review_window_ms": [
+            131180.0,
+            131247.0
+          ],
+          "note": "近端黑衣在11.141秒拍面附近可见球，下一帧球离开；远端白衣为接发方。"
+        },
+        "end": {
+          "status": "uncertain",
+          "candidate_frame": null,
+          "review_window_frames": [
+            404,
+            410
+          ],
+          "review_window_ms": [
+            13475.0,
+            13675.0
+          ],
+          "source_review_window_ms": [
+            133548.0,
+            133748.0
+          ],
+          "note": "远端右前场白衣扑救后球在地面附近出现，触地瞬间不够清楚，保留复核范围。"
+        }
+      }
+    },
+    {
+      "rally_id": 2,
+      "start_ms": null,
+      "end_ms": null,
+      "start_frame": null,
+      "end_frame": null,
+      "review_status": "uncertain",
+      "boundary_review": {
+        "start": {
+          "status": "uncertain",
+          "candidate_frame": null,
+          "review_window_frames": [
+            849,
+            862
+          ],
+          "review_window_ms": [
+            28318.0,
+            28751.0
+          ],
+          "source_review_window_ms": [
+            148391.0,
+            148824.0
+          ],
+          "note": "远端白衣发高球、近端黑衣后退接球；28秒前后的持拍准备不能当作击球。"
+        },
+        "end": {
+          "status": "uncertain",
+          "candidate_frame": null,
+          "review_window_frames": [
+            1301,
+            1313
+          ],
+          "review_window_ms": [
+            43394.0,
+            43794.0
+          ],
+          "source_review_window_ms": [
+            163467.0,
+            163867.0
+          ],
+          "note": "球在近端左前方下落，黑衣让球后身体遮挡落点；需核对首次落地，不以停步或裁判手势反推精确时刻。"
+        }
+      }
+    }
+  ]
+}

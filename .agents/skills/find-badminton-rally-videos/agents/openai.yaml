@@ -1,0 +1,4 @@
+interface:
+  display_name: "Find Badminton Rally Videos"
+  short_description: "Find continuous badminton recordings through searches and UPs"
+  default_prompt: "Use $find-badminton-rally-videos to search public badminton recordings, inspect play-and-break continuity, and propose source windows for human confirmation."

@@ -1,0 +1,109 @@
+{
+  "corrected_points": [
+    {
+      "confidence": 1.0,
+      "point_id": "far_left_baseline",
+      "reason": "人工校正",
+      "uncertain": true,
+      "x": 185.35,
+      "y": 387.44
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "far_center_baseline",
+      "reason": "人工校正",
+      "uncertain": true,
+      "x": 336.49,
+      "y": 372.24
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "net_right",
+      "reason": "人工校正",
+      "uncertain": true,
+      "x": 656.08,
+      "y": 413.11
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "far_right_baseline",
+      "reason": "人工校正",
+      "uncertain": false,
+      "x": 453.52,
+      "y": 370.85
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "near_left_short_service",
+      "reason": "人工校正",
+      "uncertain": true,
+      "x": 364.05,
+      "y": 497.03
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "near_center_short_service",
+      "reason": "人工校正",
+      "uncertain": true,
+      "x": 603.84,
+      "y": 455.71
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "near_right_short_service",
+      "reason": "人工校正",
+      "uncertain": true,
+      "x": 749.03,
+      "y": 433.65
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "near_center_baseline",
+      "reason": "人工校正",
+      "uncertain": true,
+      "x": 1086.02,
+      "y": 604.03
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "near_right_baseline",
+      "reason": "人工校正",
+      "uncertain": true,
+      "x": 1189.92,
+      "y": 519.25
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "far_left_short_service",
+      "reason": "人工校正",
+      "uncertain": false,
+      "x": 245.43,
+      "y": 427.94
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "far_center_short_service",
+      "reason": "人工校正",
+      "uncertain": false,
+      "x": 433.39,
+      "y": 408.83
+    },
+    {
+      "confidence": 1.0,
+      "point_id": "far_right_short_service",
+      "reason": "人工校正",
+      "uncertain": false,
+      "x": 580.7,
+      "y": 397.57
+    }
+  ],
+  "corrected_sha256": "ef6fc14d8fb4e66b115fdef81af951921b4658d53eb36331375d43724f00bab0",
+  "decision": "needs_review",
+  "proposal": "annotations/proposed/court/youtube-gmxvbt-ac8o-view-1/8fbb0a6d1d37b9ab8c12.json",
+  "proposal_sha256": "73814fb86b736c58db668569e4b6145023b8f9e5cd9b7635a07ca4cc1481b879",
+  "reason": "人工已校正 12 个控制点；8 个仍不确定，继续待审核",
+  "reviewed_at": "2026-07-27T14:25:19+00:00",
+  "reviewer": "user",
+  "schema_version": 2,
+  "target": "court_proposal_review"
+}

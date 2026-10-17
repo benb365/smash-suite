@@ -1,0 +1,2 @@
+datumaro>=1.9
+cvat-cli>=2.40

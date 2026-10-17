@@ -1,0 +1,3678 @@
+{
+  "date": "2026-10-16",
+  "evaluator_version": "rally-iou-v3",
+  "source_report": "docs/experiments/m1-a-candidate-comparison-20261016.json",
+  "source_report_sha256": "092071b4a435327d3cc4eeb0f9a953ee4e0ebd58a6cbdaaf173a6f13ef1b8800",
+  "reevaluation_after_check_results_seen": true,
+  "inference_rerun": false,
+  "algorithm_or_annotations_changed": false,
+  "independent_acceptance": false,
+  "evaluator_sha256": "26b1931830e3f30677ca4c06cd905f2733d909d18e5c855948f391aef0b414f2",
+  "stages": {
+    "tuning": {
+      "path": "models/SoloShuttlePose/.runtime/m1-a-comparison-20261016/tuning-boundary-v3/comparison.json",
+      "sha256": "6dfaf52ea1c32dae19886273e9a3c116a5251776ecd746377339c2b392c8e869",
+      "report": {
+        "status": "same_source_diagnostic_not_independent_acceptance",
+        "stage": "tuning",
+        "manifest": "datasets/badminton-v1/manifests/m1-a-trial-20261016.json",
+        "manifest_sha256": "e387253b0184611517e20d28142e05537e8e2ec9d595874edbb53bdcabf569ba",
+        "code_sha256": "5a053f472d4340fffd9be6d3ce1450adc963b04824e9c4a6c7db177d7b4c6e53",
+        "evaluator_sha256": "26b1931830e3f30677ca4c06cd905f2733d909d18e5c855948f391aef0b414f2",
+        "candidates": [
+          {
+            "name": "streaming-flight-v1",
+            "mode": "streaming"
+          },
+          {
+            "name": "offline-motion-v1-gap1600",
+            "mode": "offline",
+            "gap_ms": 1600,
+            "min_span_ms": 2200,
+            "min_observations": 3
+          },
+          {
+            "name": "offline-motion-v1-gap2400",
+            "mode": "offline",
+            "gap_ms": 2400,
+            "min_span_ms": 2200,
+            "min_observations": 3
+          }
+        ],
+        "inference_reused": true,
+        "latency_note": "Offline emitted_at is EOF bookkeeping, not live latency.",
+        "coverage_note": "Uses conservative representative boundaries; non-target complement is provisional.",
+        "check_lock_sha256": null,
+        "results": [
+          {
+            "sample": {
+              "id": "A1-01",
+              "source_id": "A1",
+              "split_group_id": "A1-same-recording",
+              "split": "tuning",
+              "video": "datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+              "video_sha256": "fdd2aba069839480ebb6b5edb2dfbdf036e3b0c3de4893693edcb48fda00bca4",
+              "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-01-20261015/full-v1.json",
+              "annotation_sha256": "b5f538e867c92336189fa8360ac3fe2c2fbc264314893d092ee3d1298b1470fd",
+              "duration_ms": 168000.0,
+              "native_frame_count": 4200,
+              "source_origin_ms": 599960.0
+            },
+            "run_result": "models/SoloShuttlePose/.runtime/m1-a-tuning-20261016/A1-01/01-01-clip/result.json",
+            "run_sha256": "bbf4ea5e53f364c4de857a20f25f700cd6bef479afa84294141531f3b863f291",
+            "provenance": {
+              "input_video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+              "script": "/Users/bytedance/workspace/test/smash-suite/backend/tests/rally_benchmark/run_live_tracknet.py",
+              "source_files": {
+                "tracknet_rally.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/tracknet_rally.py",
+                "video_input.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/video_input.py",
+                "rally_stream.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/rally_stream.py"
+              },
+              "weights": "/Users/bytedance/workspace/test/smash-suite/models/SoloShuttlePose/src/models/weights/ball_track.pt",
+              "sha256": {
+                "video": "fdd2aba069839480ebb6b5edb2dfbdf036e3b0c3de4893693edcb48fda00bca4",
+                "runner": "8add94ca5581d144f9f8b279b957e2d12fff62052b3ee5412c751f14e94e2bc6",
+                "tracknet_rally.py": "ffdc46072896abb79243b4427c2e52f3581d03c39ca89891c2e28ea4e0694197",
+                "video_input.py": "dbbf7475e58e0204e3004f3bcf24b5036f4e196e16b3a05e8e0418c2af21d898",
+                "rally_stream.py": "48586d5b70b9252c26bb7053ba6d14ef7188e21c04f8d0a9b8f27c6e9c74a2e3",
+                "weights": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+              },
+              "environment": {
+                "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+                "torch": "2.8.0",
+                "av": "14.2.0",
+                "device_requested": "mps",
+                "machine": "arm64",
+                "platform": "macOS-26.6.2-arm64-arm-64bit",
+                "macos": "26.6.2",
+                "macos_build": "25G83",
+                "mps_available_in_sandbox_preflight": false,
+                "run_execution": "require_escalated after sandbox MPS initialization failure",
+                "mps_confirmed_during_run": true,
+                "ps_rss_sampling_confirmed_during_run": true
+              }
+            },
+            "provenance_sha256": "bad53d8be530d727050f2b5f07a157d230c2e8cf521d67d990737c077992517e",
+            "diagnostics_sha256": "d562ae7597e763ecef146ad6f2d4a83123f7085a77cc0a73aac6499db23203c6",
+            "inference_config": {
+              "confidence": 0.6,
+              "motion_window_ms": 200,
+              "min_motion_window_ms": 80,
+              "min_speed_px_s": 100,
+              "max_speed_px_s": 4000,
+              "quiet_ms": 1600,
+              "min_flight_span_ms": 2200,
+              "field": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            "observation_count": 4200,
+            "unobserved_tail_frames": 0,
+            "unobserved_tail_ms": 0.0,
+            "inference_wall_s": 98.173964333,
+            "memory_samples": [
+              {
+                "wall_s": 0.03417662500000063,
+                "rss_mib": 446.140625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 30.077452916000002,
+                "rss_mib": 562.75,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 60.15352274999999,
+                "rss_mib": 563.359375,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 90.177954375,
+                "rss_mib": 563.359375,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 98.173964333,
+                "rss_mib": 563.15625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              }
+            ],
+            "realtime_factor": 1.7112479988090774,
+            "variants": [
+              {
+                "candidate": {
+                  "name": "streaming-flight-v1",
+                  "mode": "streaming"
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 5,
+                    "matched_count": 5,
+                    "start_acceptable_count": 2,
+                    "start_acceptable_rate": 0.4,
+                    "end_acceptable_count": 4,
+                    "end_acceptable_rate": 0.8,
+                    "both_acceptable_count": 2,
+                    "both_acceptable_rate": 0.4
+                  },
+                  "truth_count": 5,
+                  "prediction_count": 7,
+                  "input_prediction_count": 7,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.8791946308724832,
+                      "start_offset_ms": -400.0,
+                      "end_offset_ms": 320.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 1640.0
+                    },
+                    {
+                      "prediction_id": 3,
+                      "truth_id": 2,
+                      "temporal_iou": 0.40828402366863903,
+                      "start_offset_ms": 3600.0,
+                      "end_offset_ms": 400.0,
+                      "start_error_ms": 3600.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.9152542372881356,
+                      "start_offset_ms": -200.0,
+                      "end_offset_ms": 600.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 6,
+                      "truth_id": 4,
+                      "temporal_iou": 0.9698492462311558,
+                      "start_offset_ms": 200.0,
+                      "end_offset_ms": -40.0,
+                      "start_error_ms": 200.0,
+                      "end_error_ms": 40.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 7,
+                      "truth_id": 5,
+                      "temporal_iou": 0.9340277777777778,
+                      "start_offset_ms": 120.0,
+                      "end_offset_ms": 640.0,
+                      "start_error_ms": 120.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1640.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 2,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 3,
+                    "mean": 1306.6666666666667,
+                    "p50": 200.0,
+                    "p95": 3259.9999999999995,
+                    "max": 3600.0
+                  },
+                  "end_error_ms": {
+                    "count": 1,
+                    "mean": 40.0,
+                    "p50": 40.0,
+                    "p95": 40.0,
+                    "max": 40.0
+                  },
+                  "output_latency_ms": {
+                    "count": 7,
+                    "mean": 1668.5714285714287,
+                    "p50": 1680.0,
+                    "p95": 1680.0,
+                    "max": 1680.0
+                  },
+                  "unmatched_prediction_ids": [
+                    2,
+                    5
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [],
+                    "3": [
+                      2
+                    ],
+                    "4": [
+                      3
+                    ],
+                    "5": [],
+                    "6": [
+                      4
+                    ],
+                    "7": [
+                      5
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      3
+                    ],
+                    "3": [
+                      4
+                    ],
+                    "4": [
+                      6
+                    ],
+                    "5": [
+                      7
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 3640.0,
+                      "end_ms": 9600.0,
+                      "emitted_at_ms": 11240.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 11360.0,
+                      "end_ms": 15320.0,
+                      "emitted_at_ms": 17000.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 28240.0,
+                      "end_ms": 31400.0,
+                      "emitted_at_ms": 33080.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 47280.0,
+                      "end_ms": 56720.0,
+                      "emitted_at_ms": 58400.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 84160.0,
+                      "end_ms": 87320.0,
+                      "emitted_at_ms": 89000.0
+                    },
+                    {
+                      "rally_id": 6,
+                      "start_ms": 101080.0,
+                      "end_ms": 108800.0,
+                      "emitted_at_ms": 110480.0
+                    },
+                    {
+                      "rally_id": 7,
+                      "start_ms": 142440.0,
+                      "end_ms": 153840.0,
+                      "emitted_at_ms": 155480.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 4040.0,
+                      "end_ms": 9280.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 24640.0,
+                      "end_ms": 31000.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 47480.0,
+                      "end_ms": 56120.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 100880.0,
+                      "end_ms": 108840.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 142320.0,
+                      "end_ms": 153200.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 39080.0,
+                  "retained_target_ms": 35120.0,
+                  "non_target_ms": 128920.0,
+                  "retained_non_target_ms": 9680.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.8986693961105425,
+                  "non_target_retention": 0.07508532423208192
+                },
+                "postprocess_wall_s": 1.2708000000000164e-05,
+                "output_latency_applicable": true
+              },
+              {
+                "candidate": {
+                  "name": "offline-motion-v1-gap1600",
+                  "mode": "offline",
+                  "gap_ms": 1600,
+                  "min_span_ms": 2200,
+                  "min_observations": 3
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 5,
+                    "matched_count": 5,
+                    "start_acceptable_count": 2,
+                    "start_acceptable_rate": 0.4,
+                    "end_acceptable_count": 4,
+                    "end_acceptable_rate": 0.8,
+                    "both_acceptable_count": 2,
+                    "both_acceptable_rate": 0.4
+                  },
+                  "truth_count": 5,
+                  "prediction_count": 8,
+                  "input_prediction_count": 8,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.9097222222222222,
+                      "start_offset_ms": -200.0,
+                      "end_offset_ms": 320.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 158360.0
+                    },
+                    {
+                      "prediction_id": 3,
+                      "truth_id": 2,
+                      "temporal_iou": 0.38461538461538464,
+                      "start_offset_ms": 3760.0,
+                      "end_offset_ms": 400.0,
+                      "start_error_ms": 3760.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 136560.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.9152542372881356,
+                      "start_offset_ms": -200.0,
+                      "end_offset_ms": 600.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 111240.0
+                    },
+                    {
+                      "prediction_id": 6,
+                      "truth_id": 4,
+                      "temporal_iou": 0.9597989949748744,
+                      "start_offset_ms": 280.0,
+                      "end_offset_ms": -40.0,
+                      "start_error_ms": 280.0,
+                      "end_error_ms": 40.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 59160.0
+                    },
+                    {
+                      "prediction_id": 8,
+                      "truth_id": 5,
+                      "temporal_iou": 0.9270833333333334,
+                      "start_offset_ms": 200.0,
+                      "end_offset_ms": 640.0,
+                      "start_error_ms": 200.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 14120.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 3,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 3,
+                    "mean": 1413.3333333333333,
+                    "p50": 280.0,
+                    "p95": 3411.9999999999995,
+                    "max": 3760.0
+                  },
+                  "end_error_ms": {
+                    "count": 1,
+                    "mean": 40.0,
+                    "p50": 40.0,
+                    "p95": 40.0,
+                    "max": 40.0
+                  },
+                  "output_latency_ms": {
+                    "count": 8,
+                    "mean": 95700.0,
+                    "p50": 95940.0,
+                    "p95": 156358.0,
+                    "max": 158360.0
+                  },
+                  "unmatched_prediction_ids": [
+                    2,
+                    5,
+                    7
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [],
+                    "3": [
+                      2
+                    ],
+                    "4": [
+                      3
+                    ],
+                    "5": [],
+                    "6": [
+                      4
+                    ],
+                    "7": [],
+                    "8": [
+                      5
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      3
+                    ],
+                    "3": [
+                      4
+                    ],
+                    "4": [
+                      6
+                    ],
+                    "5": [
+                      8
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 3840.0,
+                      "end_ms": 9600.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 11480.0,
+                      "end_ms": 15320.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 28400.0,
+                      "end_ms": 31400.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 47280.0,
+                      "end_ms": 56720.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 82400.0,
+                      "end_ms": 87320.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 6,
+                      "start_ms": 101160.0,
+                      "end_ms": 108800.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 7,
+                      "start_ms": 112640.0,
+                      "end_ms": 115080.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 8,
+                      "start_ms": 142520.0,
+                      "end_ms": 153840.0,
+                      "emitted_at_ms": 167960.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 4040.0,
+                      "end_ms": 9280.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 24640.0,
+                      "end_ms": 31000.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 47480.0,
+                      "end_ms": 56120.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 100880.0,
+                      "end_ms": 108840.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 142320.0,
+                      "end_ms": 153200.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 39080.0,
+                  "retained_target_ms": 34800.0,
+                  "non_target_ms": 128920.0,
+                  "retained_non_target_ms": 13560.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.8904810644831116,
+                  "non_target_retention": 0.10518150791188334
+                },
+                "postprocess_wall_s": 0.0002118329999999946,
+                "output_latency_applicable": false
+              },
+              {
+                "candidate": {
+                  "name": "offline-motion-v1-gap2400",
+                  "mode": "offline",
+                  "gap_ms": 2400,
+                  "min_span_ms": 2200,
+                  "min_observations": 3
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 5,
+                    "matched_count": 5,
+                    "start_acceptable_count": 3,
+                    "start_acceptable_rate": 0.6,
+                    "end_acceptable_count": 3,
+                    "end_acceptable_rate": 0.6,
+                    "both_acceptable_count": 2,
+                    "both_acceptable_rate": 0.4
+                  },
+                  "truth_count": 5,
+                  "prediction_count": 7,
+                  "input_prediction_count": 7,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.4564459930313589,
+                      "start_offset_ms": -200.0,
+                      "end_offset_ms": 6040.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 4540.0,
+                      "start_acceptable": true,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 152640.0
+                    },
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 2,
+                      "temporal_iou": 0.9352941176470588,
+                      "start_offset_ms": -40.0,
+                      "end_offset_ms": 400.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 136560.0
+                    },
+                    {
+                      "prediction_id": 3,
+                      "truth_id": 3,
+                      "temporal_iou": 0.9152542372881356,
+                      "start_offset_ms": -200.0,
+                      "end_offset_ms": 600.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 111240.0
+                    },
+                    {
+                      "prediction_id": 5,
+                      "truth_id": 4,
+                      "temporal_iou": 0.9597989949748744,
+                      "start_offset_ms": 280.0,
+                      "end_offset_ms": -40.0,
+                      "start_error_ms": 280.0,
+                      "end_error_ms": 40.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 59160.0
+                    },
+                    {
+                      "prediction_id": 7,
+                      "truth_id": 5,
+                      "temporal_iou": 0.9270833333333334,
+                      "start_offset_ms": 200.0,
+                      "end_offset_ms": 640.0,
+                      "start_error_ms": 200.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 14120.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 2,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 2,
+                    "mean": 240.0,
+                    "p50": 240.0,
+                    "p95": 276.0,
+                    "max": 280.0
+                  },
+                  "end_error_ms": {
+                    "count": 2,
+                    "mean": 2290.0,
+                    "p50": 2290.0,
+                    "p95": 4315.0,
+                    "max": 4540.0
+                  },
+                  "output_latency_ms": {
+                    "count": 7,
+                    "mean": 86222.85714285714,
+                    "p50": 80640.0,
+                    "p95": 147816.0,
+                    "max": 152640.0
+                  },
+                  "unmatched_prediction_ids": [
+                    4,
+                    6
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [
+                      3
+                    ],
+                    "4": [],
+                    "5": [
+                      4
+                    ],
+                    "6": [],
+                    "7": [
+                      5
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [
+                      3
+                    ],
+                    "4": [
+                      5
+                    ],
+                    "5": [
+                      7
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 3840.0,
+                      "end_ms": 15320.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 24600.0,
+                      "end_ms": 31400.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 47280.0,
+                      "end_ms": 56720.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 82400.0,
+                      "end_ms": 87320.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 101160.0,
+                      "end_ms": 108800.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 6,
+                      "start_ms": 112640.0,
+                      "end_ms": 118760.0,
+                      "emitted_at_ms": 167960.0
+                    },
+                    {
+                      "rally_id": 7,
+                      "start_ms": 142520.0,
+                      "end_ms": 153840.0,
+                      "emitted_at_ms": 167960.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 4040.0,
+                      "end_ms": 9280.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 24640.0,
+                      "end_ms": 31000.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 47480.0,
+                      "end_ms": 56120.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 100880.0,
+                      "end_ms": 108840.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 142320.0,
+                      "end_ms": 153200.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 39080.0,
+                  "retained_target_ms": 38560.0,
+                  "non_target_ms": 128920.0,
+                  "retained_non_target_ms": 19160.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.9866939611054247,
+                  "non_target_retention": 0.14861929878994726
+                },
+                "postprocess_wall_s": 0.00019058299999999417,
+                "output_latency_applicable": false
+              }
+            ]
+          },
+          {
+            "sample": {
+              "id": "A1-02",
+              "source_id": "A1",
+              "split_group_id": "A1-same-recording",
+              "split": "tuning",
+              "video": "datasets/badminton-v1/local/rally/m1-short-a1-02-20261015/clip.mp4",
+              "video_sha256": "c47445822f9f03205e87fbf1cddd6920edadc46f73abd6f6e84eaccb533ee6f4",
+              "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-02-20261015/full-v1.json",
+              "annotation_sha256": "8c18b65519002e57b53339fccc23773dae90b7bc03f18a881cbd859d9e560afd",
+              "duration_ms": 174000.0,
+              "native_frame_count": 4350,
+              "source_origin_ms": 1200040.0
+            },
+            "run_result": "models/SoloShuttlePose/.runtime/m1-a-tuning-20261016/A1-02/01-01-clip/result.json",
+            "run_sha256": "91f29ed36c6398d4291948dafcb75e753c5dcae2ca5921742314e9a1b5098e8d",
+            "provenance": {
+              "input_video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-02-20261015/clip.mp4",
+              "script": "/Users/bytedance/workspace/test/smash-suite/backend/tests/rally_benchmark/run_live_tracknet.py",
+              "source_files": {
+                "tracknet_rally.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/tracknet_rally.py",
+                "video_input.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/video_input.py",
+                "rally_stream.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/rally_stream.py"
+              },
+              "weights": "/Users/bytedance/workspace/test/smash-suite/models/SoloShuttlePose/src/models/weights/ball_track.pt",
+              "sha256": {
+                "video": "c47445822f9f03205e87fbf1cddd6920edadc46f73abd6f6e84eaccb533ee6f4",
+                "runner": "8add94ca5581d144f9f8b279b957e2d12fff62052b3ee5412c751f14e94e2bc6",
+                "tracknet_rally.py": "ffdc46072896abb79243b4427c2e52f3581d03c39ca89891c2e28ea4e0694197",
+                "video_input.py": "dbbf7475e58e0204e3004f3bcf24b5036f4e196e16b3a05e8e0418c2af21d898",
+                "rally_stream.py": "48586d5b70b9252c26bb7053ba6d14ef7188e21c04f8d0a9b8f27c6e9c74a2e3",
+                "weights": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+              },
+              "environment": {
+                "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+                "torch": "2.8.0",
+                "av": "14.2.0",
+                "device_requested": "mps",
+                "machine": "arm64",
+                "platform": "macOS-26.6.2-arm64-arm-64bit",
+                "macos": "26.6.2",
+                "macos_build": "25G83",
+                "mps_available_in_sandbox_preflight": false,
+                "run_execution": "require_escalated after sandbox MPS initialization failure",
+                "mps_confirmed_during_run": true,
+                "ps_rss_sampling_confirmed_during_run": true
+              }
+            },
+            "provenance_sha256": "80dd092a66b6f3cc17722401c37868f2f521d743adb7618e88b2823da4f29fc5",
+            "diagnostics_sha256": "354c2d9cfaddeba7b0cd44f976e6387a51644f2a3c9a3ffb392feaf441d66c6a",
+            "inference_config": {
+              "confidence": 0.6,
+              "motion_window_ms": 200,
+              "min_motion_window_ms": 80,
+              "min_speed_px_s": 100,
+              "max_speed_px_s": 4000,
+              "quiet_ms": 1600,
+              "min_flight_span_ms": 2200,
+              "field": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            "observation_count": 4350,
+            "unobserved_tail_frames": 0,
+            "unobserved_tail_ms": 0.0,
+            "inference_wall_s": 88.81571174999999,
+            "memory_samples": [
+              {
+                "wall_s": 0.03308937500000031,
+                "rss_mib": 450.0625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 30.054992292,
+                "rss_mib": 569.015625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 60.106211249999994,
+                "rss_mib": 569.265625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 88.81571174999999,
+                "rss_mib": 569.515625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              }
+            ],
+            "realtime_factor": 1.9591128255525128,
+            "variants": [
+              {
+                "candidate": {
+                  "name": "streaming-flight-v1",
+                  "mode": "streaming"
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 3,
+                    "matched_count": 3,
+                    "start_acceptable_count": 1,
+                    "start_acceptable_rate": 0.3333333333333333,
+                    "end_acceptable_count": 1,
+                    "end_acceptable_rate": 0.3333333333333333,
+                    "both_acceptable_count": 0,
+                    "both_acceptable_rate": 0.0
+                  },
+                  "truth_count": 3,
+                  "prediction_count": 4,
+                  "input_prediction_count": 4,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.9719827586206896,
+                      "start_offset_ms": 120.0,
+                      "end_offset_ms": 400.0,
+                      "start_error_ms": 120.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 2,
+                      "temporal_iou": 0.9267399267399268,
+                      "start_offset_ms": -40.0,
+                      "end_offset_ms": -760.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 760.0,
+                      "start_acceptable": true,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.8208955223880597,
+                      "start_offset_ms": 3760.0,
+                      "end_offset_ms": -560.0,
+                      "start_error_ms": 3760.0,
+                      "end_error_ms": 560.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1640.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 1,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 2,
+                    "mean": 1940.0,
+                    "p50": 1940.0,
+                    "p95": 3578.0,
+                    "max": 3760.0
+                  },
+                  "end_error_ms": {
+                    "count": 2,
+                    "mean": 660.0,
+                    "p50": 660.0,
+                    "p95": 750.0,
+                    "max": 760.0
+                  },
+                  "output_latency_ms": {
+                    "count": 4,
+                    "mean": 1670.0,
+                    "p50": 1680.0,
+                    "p95": 1680.0,
+                    "max": 1680.0
+                  },
+                  "unmatched_prediction_ids": [
+                    3
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [],
+                    "4": [
+                      3
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [
+                      4
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 18840.0,
+                      "end_ms": 37280.0,
+                      "emitted_at_ms": 38960.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 61920.0,
+                      "end_ms": 72080.0,
+                      "emitted_at_ms": 73760.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 75960.0,
+                      "end_ms": 80240.0,
+                      "emitted_at_ms": 81920.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 105600.0,
+                      "end_ms": 125400.0,
+                      "emitted_at_ms": 127040.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 18720.0,
+                      "end_ms": 36880.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 61960.0,
+                      "end_ms": 72840.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 101840.0,
+                      "end_ms": 125960.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 53160.0,
+                  "retained_target_ms": 47960.0,
+                  "non_target_ms": 120840.0,
+                  "retained_non_target_ms": 4720.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.9021820917983446,
+                  "non_target_retention": 0.039059913935782856
+                },
+                "postprocess_wall_s": 8.583000000006447e-06,
+                "output_latency_applicable": true
+              },
+              {
+                "candidate": {
+                  "name": "offline-motion-v1-gap1600",
+                  "mode": "offline",
+                  "gap_ms": 1600,
+                  "min_span_ms": 2200,
+                  "min_observations": 3
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 3,
+                    "matched_count": 3,
+                    "start_acceptable_count": 0,
+                    "start_acceptable_rate": 0.0,
+                    "end_acceptable_count": 1,
+                    "end_acceptable_rate": 0.3333333333333333,
+                    "both_acceptable_count": 0,
+                    "both_acceptable_rate": 0.0
+                  },
+                  "truth_count": 3,
+                  "prediction_count": 5,
+                  "input_prediction_count": 5,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.9676724137931034,
+                      "start_offset_ms": 200.0,
+                      "end_offset_ms": 400.0,
+                      "start_error_ms": 200.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 136680.0
+                    },
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 2,
+                      "temporal_iou": 0.9227941176470589,
+                      "start_offset_ms": 80.0,
+                      "end_offset_ms": -760.0,
+                      "start_error_ms": 80.0,
+                      "end_error_ms": 760.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 101880.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.8175787728026535,
+                      "start_offset_ms": 3840.0,
+                      "end_offset_ms": -560.0,
+                      "start_error_ms": 3840.0,
+                      "end_error_ms": 560.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 48560.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 2,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 3,
+                    "mean": 1373.3333333333333,
+                    "p50": 200.0,
+                    "p95": 3475.9999999999995,
+                    "max": 3840.0
+                  },
+                  "end_error_ms": {
+                    "count": 2,
+                    "mean": 660.0,
+                    "p50": 660.0,
+                    "p95": 750.0,
+                    "max": 760.0
+                  },
+                  "output_latency_ms": {
+                    "count": 5,
+                    "mean": 80072.0,
+                    "p50": 93720.0,
+                    "p95": 129720.0,
+                    "max": 136680.0
+                  },
+                  "unmatched_prediction_ids": [
+                    3,
+                    5
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [],
+                    "4": [
+                      3
+                    ],
+                    "5": []
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [
+                      4
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 18920.0,
+                      "end_ms": 37280.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 62040.0,
+                      "end_ms": 72080.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 76040.0,
+                      "end_ms": 80240.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 105680.0,
+                      "end_ms": 125400.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 152000.0,
+                      "end_ms": 154440.0,
+                      "emitted_at_ms": 173960.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 18720.0,
+                      "end_ms": 36880.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 61960.0,
+                      "end_ms": 72840.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 101840.0,
+                      "end_ms": 125960.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 53160.0,
+                  "retained_target_ms": 47720.0,
+                  "non_target_ms": 120840.0,
+                  "retained_non_target_ms": 7040.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.8976674191121143,
+                  "non_target_retention": 0.05825885468387951
+                },
+                "postprocess_wall_s": 0.00027679099999999845,
+                "output_latency_applicable": false
+              },
+              {
+                "candidate": {
+                  "name": "offline-motion-v1-gap2400",
+                  "mode": "offline",
+                  "gap_ms": 2400,
+                  "min_span_ms": 2200,
+                  "min_observations": 3
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 3,
+                    "matched_count": 3,
+                    "start_acceptable_count": 0,
+                    "start_acceptable_rate": 0.0,
+                    "end_acceptable_count": 1,
+                    "end_acceptable_rate": 0.3333333333333333,
+                    "both_acceptable_count": 0,
+                    "both_acceptable_rate": 0.0
+                  },
+                  "truth_count": 3,
+                  "prediction_count": 5,
+                  "input_prediction_count": 5,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.9676724137931034,
+                      "start_offset_ms": 200.0,
+                      "end_offset_ms": 400.0,
+                      "start_error_ms": 200.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 136680.0
+                    },
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 2,
+                      "temporal_iou": 0.9227941176470589,
+                      "start_offset_ms": 80.0,
+                      "end_offset_ms": -760.0,
+                      "start_error_ms": 80.0,
+                      "end_error_ms": 760.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 101880.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.9751243781094527,
+                      "start_offset_ms": 40.0,
+                      "end_offset_ms": -560.0,
+                      "start_error_ms": 40.0,
+                      "end_error_ms": 560.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 48560.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 2,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 3,
+                    "mean": 106.66666666666667,
+                    "p50": 80.0,
+                    "p95": 188.0,
+                    "max": 200.0
+                  },
+                  "end_error_ms": {
+                    "count": 2,
+                    "mean": 660.0,
+                    "p50": 660.0,
+                    "p95": 750.0,
+                    "max": 760.0
+                  },
+                  "output_latency_ms": {
+                    "count": 5,
+                    "mean": 80072.0,
+                    "p50": 93720.0,
+                    "p95": 129720.0,
+                    "max": 136680.0
+                  },
+                  "unmatched_prediction_ids": [
+                    3,
+                    5
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [],
+                    "4": [
+                      3
+                    ],
+                    "5": []
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [
+                      4
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 18920.0,
+                      "end_ms": 37280.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 62040.0,
+                      "end_ms": 72080.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 76040.0,
+                      "end_ms": 80240.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 101880.0,
+                      "end_ms": 125400.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 152000.0,
+                      "end_ms": 154440.0,
+                      "emitted_at_ms": 173960.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 18720.0,
+                      "end_ms": 36880.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 61960.0,
+                      "end_ms": 72840.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 101840.0,
+                      "end_ms": 125960.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 53160.0,
+                  "retained_target_ms": 51520.0,
+                  "non_target_ms": 120840.0,
+                  "retained_non_target_ms": 7040.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.9691497366440933,
+                  "non_target_retention": 0.05825885468387951
+                },
+                "postprocess_wall_s": 0.00020616699999997934,
+                "output_latency_applicable": false
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "check": {
+      "path": "models/SoloShuttlePose/.runtime/m1-a-comparison-20261016/check-boundary-v3/comparison.json",
+      "sha256": "41e3ed1fd20b855075d567bb19d1129044fdffffd722beed8e6c289c13fc44b9",
+      "report": {
+        "status": "same_source_diagnostic_not_independent_acceptance",
+        "stage": "check",
+        "manifest": "datasets/badminton-v1/manifests/m1-a-trial-20261016.json",
+        "manifest_sha256": "e387253b0184611517e20d28142e05537e8e2ec9d595874edbb53bdcabf569ba",
+        "code_sha256": "5a053f472d4340fffd9be6d3ce1450adc963b04824e9c4a6c7db177d7b4c6e53",
+        "evaluator_sha256": "26b1931830e3f30677ca4c06cd905f2733d909d18e5c855948f391aef0b414f2",
+        "candidates": [
+          {
+            "name": "streaming-flight-v1",
+            "mode": "streaming"
+          },
+          {
+            "name": "offline-motion-v1-gap1600",
+            "mode": "offline",
+            "gap_ms": 1600,
+            "min_span_ms": 2200,
+            "min_observations": 3
+          },
+          {
+            "name": "offline-motion-v1-gap2400",
+            "mode": "offline",
+            "gap_ms": 2400,
+            "min_span_ms": 2200,
+            "min_observations": 3
+          }
+        ],
+        "inference_reused": true,
+        "latency_note": "Offline emitted_at is EOF bookkeeping, not live latency.",
+        "coverage_note": "Uses conservative representative boundaries; non-target complement is provisional.",
+        "check_lock_sha256": "f8dd072177a82a0b17a72dd3cdda527d178e9000befba2bb93bffa20a1b8b3f4",
+        "results": [
+          {
+            "sample": {
+              "id": "A1-03",
+              "source_id": "A1",
+              "split_group_id": "A1-same-recording",
+              "split": "check",
+              "video": "datasets/badminton-v1/local/rally/m1-short-a1-03-20261015/clip.mp4",
+              "video_sha256": "11525be4013d3eaeb343d6343ad58e5d97dba9415ff3aafdb905524a52fa30b2",
+              "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-03-20261015/full-v1.json",
+              "annotation_sha256": "a296dd6f67b9501df53df230b7d50b92ed4bb2c7cf9f1fe44c2a348ea0e49929",
+              "duration_ms": 174000.0,
+              "native_frame_count": 4350,
+              "source_origin_ms": 1800120.0
+            },
+            "run_result": "models/SoloShuttlePose/.runtime/m1-a-check-20261016/A1-03/01-01-clip/result.json",
+            "run_sha256": "a49891fa31a1e25652d33cec71ffc0fc30a36d2c75d682c579b01856e1379d27",
+            "provenance": {
+              "input_video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-03-20261015/clip.mp4",
+              "script": "/Users/bytedance/workspace/test/smash-suite/backend/tests/rally_benchmark/run_live_tracknet.py",
+              "source_files": {
+                "tracknet_rally.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/tracknet_rally.py",
+                "video_input.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/video_input.py",
+                "rally_stream.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/rally_stream.py"
+              },
+              "weights": "/Users/bytedance/workspace/test/smash-suite/models/SoloShuttlePose/src/models/weights/ball_track.pt",
+              "sha256": {
+                "video": "11525be4013d3eaeb343d6343ad58e5d97dba9415ff3aafdb905524a52fa30b2",
+                "runner": "8add94ca5581d144f9f8b279b957e2d12fff62052b3ee5412c751f14e94e2bc6",
+                "tracknet_rally.py": "ffdc46072896abb79243b4427c2e52f3581d03c39ca89891c2e28ea4e0694197",
+                "video_input.py": "dbbf7475e58e0204e3004f3bcf24b5036f4e196e16b3a05e8e0418c2af21d898",
+                "rally_stream.py": "48586d5b70b9252c26bb7053ba6d14ef7188e21c04f8d0a9b8f27c6e9c74a2e3",
+                "weights": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+              },
+              "environment": {
+                "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+                "torch": "2.8.0",
+                "av": "14.2.0",
+                "device_requested": "mps",
+                "mps_available_in_sandbox_preflight": false,
+                "run_execution": "require_escalated after sandbox MPS initialization failure",
+                "machine": "arm64",
+                "platform": "macOS-26.6.2-arm64-arm-64bit",
+                "macos": "26.6.2",
+                "macos_build": "25G83",
+                "mps_confirmed_during_run": true,
+                "ps_rss_sampling_confirmed_during_run": true
+              }
+            },
+            "provenance_sha256": "657600ce0a455bd5b665def00571734a3f3cf9f94c6f078a39d11a8e68989316",
+            "diagnostics_sha256": "a44161f50fb0a9adeb77aa5218a1551c1f61033281260524833dfdab80ea7fc3",
+            "inference_config": {
+              "confidence": 0.6,
+              "motion_window_ms": 200,
+              "min_motion_window_ms": 80,
+              "min_speed_px_s": 100,
+              "max_speed_px_s": 4000,
+              "quiet_ms": 1600,
+              "min_flight_span_ms": 2200,
+              "field": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            "observation_count": 4350,
+            "unobserved_tail_frames": 0,
+            "unobserved_tail_ms": 0.0,
+            "inference_wall_s": 88.44955025,
+            "memory_samples": [
+              {
+                "wall_s": 0.035251832999999344,
+                "rss_mib": 445.265625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 30.091855833000004,
+                "rss_mib": 562.640625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 60.151441625,
+                "rss_mib": 562.71875,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 88.44955025,
+                "rss_mib": 566.21875,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              }
+            ],
+            "realtime_factor": 1.9672231176777522,
+            "variants": [
+              {
+                "candidate": {
+                  "name": "streaming-flight-v1",
+                  "mode": "streaming"
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 6,
+                    "matched_count": 6,
+                    "start_acceptable_count": 2,
+                    "start_acceptable_rate": 0.3333333333333333,
+                    "end_acceptable_count": 2,
+                    "end_acceptable_rate": 0.3333333333333333,
+                    "both_acceptable_count": 1,
+                    "both_acceptable_rate": 0.16666666666666666
+                  },
+                  "truth_count": 6,
+                  "prediction_count": 8,
+                  "input_prediction_count": 9,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [
+                    {
+                      "event_id": "a1-03-shuttle-return-110-120",
+                      "range_ms": [
+                        110000,
+                        120000
+                      ],
+                      "source_range_ms": [
+                        1910120.0,
+                        1920120.0
+                      ],
+                      "range_semantics": "用户确认的复核窗口，不宣称是还球动作精确起止点。",
+                      "classification": "shuttle_return",
+                      "review_status": "human_confirmed",
+                      "include_in_target_rallies": false,
+                      "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+                      "reason": "用户确认为还球，允许不纳入回合以及成功率判定。"
+                    }
+                  ],
+                  "ignored_predictions": [
+                    {
+                      "prediction": {
+                        "rally_id": 6,
+                        "start_ms": 115400.0,
+                        "end_ms": 119320.0,
+                        "emitted_at_ms": 121040.0
+                      },
+                      "event_ids": [
+                        "a1-03-shuttle-return-110-120"
+                      ]
+                    }
+                  ],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 1,
+                      "temporal_iou": 0.8409090909090909,
+                      "start_offset_ms": -40.0,
+                      "end_offset_ms": 1360.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 1720.0
+                    },
+                    {
+                      "prediction_id": 3,
+                      "truth_id": 2,
+                      "temporal_iou": 0.7928571428571428,
+                      "start_offset_ms": -200.0,
+                      "end_offset_ms": -960.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 960.0,
+                      "start_acceptable": true,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.78125,
+                      "start_offset_ms": 640.0,
+                      "end_offset_ms": -480.0,
+                      "start_error_ms": 640.0,
+                      "end_error_ms": 480.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 5,
+                      "truth_id": 4,
+                      "temporal_iou": 0.9510204081632653,
+                      "start_offset_ms": 360.0,
+                      "end_offset_ms": -120.0,
+                      "start_error_ms": 360.0,
+                      "end_error_ms": 120.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1720.0
+                    },
+                    {
+                      "prediction_id": 7,
+                      "truth_id": 5,
+                      "temporal_iou": 0.8307692307692308,
+                      "start_offset_ms": 240.0,
+                      "end_offset_ms": 640.0,
+                      "start_error_ms": 240.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1720.0
+                    },
+                    {
+                      "prediction_id": 9,
+                      "truth_id": 6,
+                      "temporal_iou": 0.49166666666666664,
+                      "start_offset_ms": 6840.0,
+                      "end_offset_ms": -480.0,
+                      "start_error_ms": 6840.0,
+                      "end_error_ms": 480.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1640.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 1,
+                  "false_split_count": 1,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 4,
+                    "mean": 2020.0,
+                    "p50": 500.0,
+                    "p95": 5909.999999999998,
+                    "max": 6840.0
+                  },
+                  "end_error_ms": {
+                    "count": 4,
+                    "mean": 510.0,
+                    "p50": 480.0,
+                    "p95": 887.9999999999998,
+                    "max": 960.0
+                  },
+                  "output_latency_ms": {
+                    "count": 8,
+                    "mean": 1695.0,
+                    "p50": 1700.0,
+                    "p95": 1720.0,
+                    "max": 1720.0
+                  },
+                  "unmatched_prediction_ids": [
+                    1,
+                    8
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [],
+                    "2": [
+                      1
+                    ],
+                    "3": [
+                      2
+                    ],
+                    "4": [
+                      3
+                    ],
+                    "5": [
+                      4
+                    ],
+                    "7": [
+                      5
+                    ],
+                    "8": [
+                      6
+                    ],
+                    "9": [
+                      6
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      2
+                    ],
+                    "2": [
+                      3
+                    ],
+                    "3": [
+                      4
+                    ],
+                    "4": [
+                      5
+                    ],
+                    "5": [
+                      7
+                    ],
+                    "6": [
+                      8,
+                      9
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 3640.0,
+                      "end_ms": 6160.0,
+                      "emitted_at_ms": 7880.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 20160.0,
+                      "end_ms": 28960.0,
+                      "emitted_at_ms": 30680.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 48120.0,
+                      "end_ms": 52760.0,
+                      "emitted_at_ms": 54440.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 70720.0,
+                      "end_ms": 74720.0,
+                      "emitted_at_ms": 76400.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 97160.0,
+                      "end_ms": 106480.0,
+                      "emitted_at_ms": 108200.0
+                    },
+                    {
+                      "rally_id": 7,
+                      "start_ms": 130440.0,
+                      "end_ms": 135400.0,
+                      "emitted_at_ms": 137120.0
+                    },
+                    {
+                      "rally_id": 8,
+                      "start_ms": 157560.0,
+                      "end_ms": 162320.0,
+                      "emitted_at_ms": 164000.0
+                    },
+                    {
+                      "rally_id": 9,
+                      "start_ms": 164040.0,
+                      "end_ms": 171120.0,
+                      "emitted_at_ms": 172760.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 20200.0,
+                      "end_ms": 27600.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 48320.0,
+                      "end_ms": 53720.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 70080.0,
+                      "end_ms": 75200.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 96800.0,
+                      "end_ms": 106600.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 130200.0,
+                      "end_ms": 134760.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 6,
+                      "start_ms": 157200.0,
+                      "end_ms": 171600.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 46680.0,
+                  "retained_target_ms": 41320.0,
+                  "non_target_ms": 117320.0,
+                  "retained_non_target_ms": 4760.0,
+                  "ignored_ms": 10000.0,
+                  "target_retention": 0.8851756640959726,
+                  "non_target_retention": 0.0405727923627685
+                },
+                "postprocess_wall_s": 1.483299999999188e-05,
+                "output_latency_applicable": true
+              },
+              {
+                "candidate": {
+                  "name": "offline-motion-v1-gap1600",
+                  "mode": "offline",
+                  "gap_ms": 1600,
+                  "min_span_ms": 2200,
+                  "min_observations": 3
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 6,
+                    "matched_count": 6,
+                    "start_acceptable_count": 2,
+                    "start_acceptable_rate": 0.3333333333333333,
+                    "end_acceptable_count": 2,
+                    "end_acceptable_rate": 0.3333333333333333,
+                    "both_acceptable_count": 1,
+                    "both_acceptable_rate": 0.16666666666666666
+                  },
+                  "truth_count": 6,
+                  "prediction_count": 8,
+                  "input_prediction_count": 9,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [
+                    {
+                      "event_id": "a1-03-shuttle-return-110-120",
+                      "range_ms": [
+                        110000,
+                        120000
+                      ],
+                      "source_range_ms": [
+                        1910120.0,
+                        1920120.0
+                      ],
+                      "range_semantics": "用户确认的复核窗口，不宣称是还球动作精确起止点。",
+                      "classification": "shuttle_return",
+                      "review_status": "human_confirmed",
+                      "include_in_target_rallies": false,
+                      "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+                      "reason": "用户确认为还球，允许不纳入回合以及成功率判定。"
+                    }
+                  ],
+                  "ignored_predictions": [
+                    {
+                      "prediction": {
+                        "rally_id": 6,
+                        "start_ms": 115480.0,
+                        "end_ms": 119320.0,
+                        "emitted_at_ms": 173960.0
+                      },
+                      "event_ids": [
+                        "a1-03-shuttle-return-110-120"
+                      ]
+                    }
+                  ],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 1,
+                      "temporal_iou": 0.8401826484018264,
+                      "start_offset_ms": 40.0,
+                      "end_offset_ms": 1360.0,
+                      "start_error_ms": 40.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 145000.0
+                    },
+                    {
+                      "prediction_id": 3,
+                      "truth_id": 2,
+                      "temporal_iou": 0.8102189781021898,
+                      "start_offset_ms": -80.0,
+                      "end_offset_ms": -960.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 960.0,
+                      "start_acceptable": true,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 121200.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.890625,
+                      "start_offset_ms": 80.0,
+                      "end_offset_ms": -480.0,
+                      "start_error_ms": 80.0,
+                      "end_error_ms": 480.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 99240.0
+                    },
+                    {
+                      "prediction_id": 5,
+                      "truth_id": 4,
+                      "temporal_iou": 0.9795918367346939,
+                      "start_offset_ms": 80.0,
+                      "end_offset_ms": -120.0,
+                      "start_error_ms": 80.0,
+                      "end_error_ms": 120.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 67480.0
+                    },
+                    {
+                      "prediction_id": 7,
+                      "truth_id": 5,
+                      "temporal_iou": 0.8571428571428571,
+                      "start_offset_ms": -120.0,
+                      "end_offset_ms": 640.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 38560.0
+                    },
+                    {
+                      "prediction_id": 9,
+                      "truth_id": 6,
+                      "temporal_iou": 0.4861111111111111,
+                      "start_offset_ms": 6920.0,
+                      "end_offset_ms": -480.0,
+                      "start_error_ms": 6920.0,
+                      "end_error_ms": 480.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 2840.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 1,
+                  "false_split_count": 1,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 4,
+                    "mean": 1780.0,
+                    "p50": 80.0,
+                    "p95": 5893.999999999997,
+                    "max": 6920.0
+                  },
+                  "end_error_ms": {
+                    "count": 4,
+                    "mean": 510.0,
+                    "p50": 480.0,
+                    "p95": 887.9999999999998,
+                    "max": 960.0
+                  },
+                  "output_latency_ms": {
+                    "count": 8,
+                    "mean": 81720.0,
+                    "p50": 83360.0,
+                    "p95": 159820.0,
+                    "max": 167800.0
+                  },
+                  "unmatched_prediction_ids": [
+                    1,
+                    8
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [],
+                    "2": [
+                      1
+                    ],
+                    "3": [
+                      2
+                    ],
+                    "4": [
+                      3
+                    ],
+                    "5": [
+                      4
+                    ],
+                    "7": [
+                      5
+                    ],
+                    "8": [
+                      6
+                    ],
+                    "9": [
+                      6
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      2
+                    ],
+                    "2": [
+                      3
+                    ],
+                    "3": [
+                      4
+                    ],
+                    "4": [
+                      5
+                    ],
+                    "5": [
+                      7
+                    ],
+                    "6": [
+                      8,
+                      9
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 3240.0,
+                      "end_ms": 6160.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 20240.0,
+                      "end_ms": 28960.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 48240.0,
+                      "end_ms": 52760.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 70160.0,
+                      "end_ms": 74720.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 96880.0,
+                      "end_ms": 106480.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 7,
+                      "start_ms": 130080.0,
+                      "end_ms": 135400.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 8,
+                      "start_ms": 157520.0,
+                      "end_ms": 162320.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 9,
+                      "start_ms": 164120.0,
+                      "end_ms": 171120.0,
+                      "emitted_at_ms": 173960.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 20200.0,
+                      "end_ms": 27600.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 48320.0,
+                      "end_ms": 53720.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 70080.0,
+                      "end_ms": 75200.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 96800.0,
+                      "end_ms": 106600.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 130200.0,
+                      "end_ms": 134760.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 6,
+                      "start_ms": 157200.0,
+                      "end_ms": 171600.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 46680.0,
+                  "retained_target_ms": 42320.0,
+                  "non_target_ms": 117320.0,
+                  "retained_non_target_ms": 5120.0,
+                  "ignored_ms": 10000.0,
+                  "target_retention": 0.9065981148243359,
+                  "non_target_retention": 0.043641322877599725
+                },
+                "postprocess_wall_s": 0.0002368749999999975,
+                "output_latency_applicable": false
+              },
+              {
+                "candidate": {
+                  "name": "offline-motion-v1-gap2400",
+                  "mode": "offline",
+                  "gap_ms": 2400,
+                  "min_span_ms": 2200,
+                  "min_observations": 3
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 6,
+                    "matched_count": 6,
+                    "start_acceptable_count": 2,
+                    "start_acceptable_rate": 0.3333333333333333,
+                    "end_acceptable_count": 2,
+                    "end_acceptable_rate": 0.3333333333333333,
+                    "both_acceptable_count": 1,
+                    "both_acceptable_rate": 0.16666666666666666
+                  },
+                  "truth_count": 6,
+                  "prediction_count": 7,
+                  "input_prediction_count": 8,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [
+                    {
+                      "event_id": "a1-03-shuttle-return-110-120",
+                      "range_ms": [
+                        110000,
+                        120000
+                      ],
+                      "source_range_ms": [
+                        1910120.0,
+                        1920120.0
+                      ],
+                      "range_semantics": "用户确认的复核窗口，不宣称是还球动作精确起止点。",
+                      "classification": "shuttle_return",
+                      "review_status": "human_confirmed",
+                      "include_in_target_rallies": false,
+                      "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+                      "reason": "用户确认为还球，允许不纳入回合以及成功率判定。"
+                    }
+                  ],
+                  "ignored_predictions": [
+                    {
+                      "prediction": {
+                        "rally_id": 6,
+                        "start_ms": 115480.0,
+                        "end_ms": 119320.0,
+                        "emitted_at_ms": 173960.0
+                      },
+                      "event_ids": [
+                        "a1-03-shuttle-return-110-120"
+                      ]
+                    }
+                  ],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 1,
+                      "temporal_iou": 0.8401826484018264,
+                      "start_offset_ms": 40.0,
+                      "end_offset_ms": 1360.0,
+                      "start_error_ms": 40.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 145000.0
+                    },
+                    {
+                      "prediction_id": 3,
+                      "truth_id": 2,
+                      "temporal_iou": 0.8102189781021898,
+                      "start_offset_ms": -80.0,
+                      "end_offset_ms": -960.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 960.0,
+                      "start_acceptable": true,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 121200.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.890625,
+                      "start_offset_ms": 80.0,
+                      "end_offset_ms": -480.0,
+                      "start_error_ms": 80.0,
+                      "end_error_ms": 480.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 99240.0
+                    },
+                    {
+                      "prediction_id": 5,
+                      "truth_id": 4,
+                      "temporal_iou": 0.81,
+                      "start_offset_ms": 80.0,
+                      "end_offset_ms": 2200.0,
+                      "start_error_ms": 80.0,
+                      "end_error_ms": 700.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 65160.0
+                    },
+                    {
+                      "prediction_id": 7,
+                      "truth_id": 5,
+                      "temporal_iou": 0.8571428571428571,
+                      "start_offset_ms": -120.0,
+                      "end_offset_ms": 640.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 38560.0
+                    },
+                    {
+                      "prediction_id": 8,
+                      "truth_id": 6,
+                      "temporal_iou": 0.9444444444444444,
+                      "start_offset_ms": 320.0,
+                      "end_offset_ms": -480.0,
+                      "start_error_ms": 320.0,
+                      "end_error_ms": 480.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 2840.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 1,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 4,
+                    "mean": 130.0,
+                    "p50": 80.0,
+                    "p95": 283.9999999999999,
+                    "max": 320.0
+                  },
+                  "end_error_ms": {
+                    "count": 4,
+                    "mean": 655.0,
+                    "p50": 590.0,
+                    "p95": 920.9999999999999,
+                    "max": 960.0
+                  },
+                  "output_latency_ms": {
+                    "count": 7,
+                    "mean": 91400.0,
+                    "p50": 99240.0,
+                    "p95": 160959.99999999997,
+                    "max": 167800.0
+                  },
+                  "unmatched_prediction_ids": [
+                    1
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [],
+                    "2": [
+                      1
+                    ],
+                    "3": [
+                      2
+                    ],
+                    "4": [
+                      3
+                    ],
+                    "5": [
+                      4
+                    ],
+                    "7": [
+                      5
+                    ],
+                    "8": [
+                      6
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      2
+                    ],
+                    "2": [
+                      3
+                    ],
+                    "3": [
+                      4
+                    ],
+                    "4": [
+                      5
+                    ],
+                    "5": [
+                      7
+                    ],
+                    "6": [
+                      8
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 3240.0,
+                      "end_ms": 6160.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 20240.0,
+                      "end_ms": 28960.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 48240.0,
+                      "end_ms": 52760.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 70160.0,
+                      "end_ms": 74720.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 96880.0,
+                      "end_ms": 108800.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 7,
+                      "start_ms": 130080.0,
+                      "end_ms": 135400.0,
+                      "emitted_at_ms": 173960.0
+                    },
+                    {
+                      "rally_id": 8,
+                      "start_ms": 157520.0,
+                      "end_ms": 171120.0,
+                      "emitted_at_ms": 173960.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 20200.0,
+                      "end_ms": 27600.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 48320.0,
+                      "end_ms": 53720.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 70080.0,
+                      "end_ms": 75200.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 96800.0,
+                      "end_ms": 106600.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 130200.0,
+                      "end_ms": 134760.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 6,
+                      "start_ms": 157200.0,
+                      "end_ms": 171600.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 46680.0,
+                  "retained_target_ms": 44240.0,
+                  "non_target_ms": 117320.0,
+                  "retained_non_target_ms": 7320.0,
+                  "ignored_ms": 10000.0,
+                  "target_retention": 0.9477292202227935,
+                  "non_target_retention": 0.06239345380156836
+                },
+                "postprocess_wall_s": 0.00022754099999999777,
+                "output_latency_applicable": false
+              }
+            ]
+          },
+          {
+            "sample": {
+              "id": "A1-04",
+              "source_id": "A1",
+              "split_group_id": "A1-same-recording",
+              "split": "check",
+              "video": "datasets/badminton-v1/local/rally/m1-short-a1-04-20261015/clip.mp4",
+              "video_sha256": "17f4fe934509e6c16799923c4b8f3c42b4f3bed0d96cdb7c376674c0fb670e02",
+              "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-04-20261015/full-v1.json",
+              "annotation_sha256": "8bfde90b7d71a77bdea4912a39bf20412ba4fd09f400129866406f4e2aeaec11",
+              "duration_ms": 168040.0,
+              "native_frame_count": 4201,
+              "source_origin_ms": 2346160.0
+            },
+            "run_result": "models/SoloShuttlePose/.runtime/m1-a-check-20261016/A1-04/01-01-clip/result.json",
+            "run_sha256": "c2bb1059b4ea14ff8a8189d923544c61678dc0d560656329bc78a58a1868385c",
+            "provenance": {
+              "input_video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-04-20261015/clip.mp4",
+              "script": "/Users/bytedance/workspace/test/smash-suite/backend/tests/rally_benchmark/run_live_tracknet.py",
+              "source_files": {
+                "tracknet_rally.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/tracknet_rally.py",
+                "video_input.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/video_input.py",
+                "rally_stream.py": "/Users/bytedance/workspace/test/smash-suite/backend/app/vision/rally_stream.py"
+              },
+              "weights": "/Users/bytedance/workspace/test/smash-suite/models/SoloShuttlePose/src/models/weights/ball_track.pt",
+              "sha256": {
+                "video": "17f4fe934509e6c16799923c4b8f3c42b4f3bed0d96cdb7c376674c0fb670e02",
+                "runner": "8add94ca5581d144f9f8b279b957e2d12fff62052b3ee5412c751f14e94e2bc6",
+                "tracknet_rally.py": "ffdc46072896abb79243b4427c2e52f3581d03c39ca89891c2e28ea4e0694197",
+                "video_input.py": "dbbf7475e58e0204e3004f3bcf24b5036f4e196e16b3a05e8e0418c2af21d898",
+                "rally_stream.py": "48586d5b70b9252c26bb7053ba6d14ef7188e21c04f8d0a9b8f27c6e9c74a2e3",
+                "weights": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+              },
+              "environment": {
+                "python": "3.9.6 (default, Dec  2 2025, 07:27:58) \n[Clang 17.0.0 (clang-1700.6.3.2)]",
+                "torch": "2.8.0",
+                "av": "14.2.0",
+                "device_requested": "mps",
+                "mps_available_in_sandbox_preflight": false,
+                "run_execution": "require_escalated after sandbox MPS initialization failure",
+                "machine": "arm64",
+                "platform": "macOS-26.6.2-arm64-arm-64bit",
+                "macos": "26.6.2",
+                "macos_build": "25G83",
+                "mps_confirmed_during_run": true,
+                "ps_rss_sampling_confirmed_during_run": true
+              }
+            },
+            "provenance_sha256": "2c87cd883881708aa15af538123fc635965a799fe5eb5cbee2037c4a7aed9579",
+            "diagnostics_sha256": "b31fa0d22c4a7306d23398645ab8a26240f52c729252819cdcc27d3d60c339e6",
+            "inference_config": {
+              "confidence": 0.6,
+              "motion_window_ms": 200,
+              "min_motion_window_ms": 80,
+              "min_speed_px_s": 100,
+              "max_speed_px_s": 4000,
+              "quiet_ms": 1600,
+              "min_flight_span_ms": 2200,
+              "field": [
+                0,
+                0,
+                1,
+                1
+              ]
+            },
+            "observation_count": 4200,
+            "unobserved_tail_frames": 1,
+            "unobserved_tail_ms": 40.0,
+            "inference_wall_s": 85.75467725,
+            "memory_samples": [
+              {
+                "wall_s": 0.041253041000000046,
+                "rss_mib": 445.109375,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 30.076682875,
+                "rss_mib": 558.90625,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 60.077006833,
+                "rss_mib": 565.328125,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              },
+              {
+                "wall_s": 85.75467725,
+                "rss_mib": 573.421875,
+                "mps_allocated_mib": 43.27001953125,
+                "mps_driver_mib": 1106.546875
+              }
+            ],
+            "realtime_factor": 1.9595432621140205,
+            "variants": [
+              {
+                "candidate": {
+                  "name": "streaming-flight-v1",
+                  "mode": "streaming"
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 4,
+                    "matched_count": 3,
+                    "start_acceptable_count": 1,
+                    "start_acceptable_rate": 0.25,
+                    "end_acceptable_count": 2,
+                    "end_acceptable_rate": 0.5,
+                    "both_acceptable_count": 1,
+                    "both_acceptable_rate": 0.25
+                  },
+                  "truth_count": 4,
+                  "prediction_count": 3,
+                  "input_prediction_count": 3,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.9844413012729845,
+                      "start_offset_ms": -160.0,
+                      "end_offset_ms": 280.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 3,
+                      "temporal_iou": 0.8405466970387244,
+                      "start_offset_ms": 2240.0,
+                      "end_offset_ms": -560.0,
+                      "start_error_ms": 2240.0,
+                      "end_error_ms": 560.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1680.0
+                    },
+                    {
+                      "prediction_id": 3,
+                      "truth_id": 4,
+                      "temporal_iou": 0.7374631268436578,
+                      "start_offset_ms": 2360.0,
+                      "end_offset_ms": 1200.0,
+                      "start_error_ms": 2360.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 1680.0
+                    }
+                  ],
+                  "missed_rally_count": 1,
+                  "false_positive_count": 0,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 2,
+                    "mean": 2300.0,
+                    "p50": 2300.0,
+                    "p95": 2354.0,
+                    "max": 2360.0
+                  },
+                  "end_error_ms": {
+                    "count": 1,
+                    "mean": 560.0,
+                    "p50": 560.0,
+                    "p95": 560.0,
+                    "max": 560.0
+                  },
+                  "output_latency_ms": {
+                    "count": 3,
+                    "mean": 1680.0,
+                    "p50": 1680.0,
+                    "p95": 1680.0,
+                    "max": 1680.0
+                  },
+                  "unmatched_prediction_ids": [],
+                  "unmatched_truth_ids": [
+                    2
+                  ],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      3
+                    ],
+                    "3": [
+                      4
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [],
+                    "3": [
+                      2
+                    ],
+                    "4": [
+                      3
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 7080.0,
+                      "end_ms": 35360.0,
+                      "emitted_at_ms": 37040.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 83000.0,
+                      "end_ms": 97760.0,
+                      "emitted_at_ms": 99440.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 130600.0,
+                      "end_ms": 141800.0,
+                      "emitted_at_ms": 143480.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 7240.0,
+                      "end_ms": 35080.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 60080.0,
+                      "end_ms": 63680.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 80760.0,
+                      "end_ms": 98320.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 128240.0,
+                      "end_ms": 140600.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 61360.0,
+                  "retained_target_ms": 52600.0,
+                  "non_target_ms": 106680.0,
+                  "retained_non_target_ms": 1640.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.8572359843546284,
+                  "non_target_retention": 0.01537307836520435
+                },
+                "postprocess_wall_s": 8.625000000012095e-06,
+                "output_latency_applicable": true
+              },
+              {
+                "candidate": {
+                  "name": "offline-motion-v1-gap1600",
+                  "mode": "offline",
+                  "gap_ms": 1600,
+                  "min_span_ms": 2200,
+                  "min_observations": 3
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 4,
+                    "matched_count": 3,
+                    "start_acceptable_count": 1,
+                    "start_acceptable_rate": 0.25,
+                    "end_acceptable_count": 2,
+                    "end_acceptable_rate": 0.5,
+                    "both_acceptable_count": 1,
+                    "both_acceptable_rate": 0.25
+                  },
+                  "truth_count": 4,
+                  "prediction_count": 4,
+                  "input_prediction_count": 4,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.9872340425531915,
+                      "start_offset_ms": -80.0,
+                      "end_offset_ms": 280.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 132640.0
+                    },
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 3,
+                      "temporal_iou": 0.835990888382688,
+                      "start_offset_ms": 2320.0,
+                      "end_offset_ms": -560.0,
+                      "start_error_ms": 2320.0,
+                      "end_error_ms": 560.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 70240.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 4,
+                      "temporal_iou": 0.7315634218289085,
+                      "start_offset_ms": 2440.0,
+                      "end_offset_ms": 1200.0,
+                      "start_error_ms": 2440.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 26200.0
+                    }
+                  ],
+                  "missed_rally_count": 1,
+                  "false_positive_count": 1,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 2,
+                    "mean": 2380.0,
+                    "p50": 2380.0,
+                    "p95": 2434.0,
+                    "max": 2440.0
+                  },
+                  "end_error_ms": {
+                    "count": 1,
+                    "mean": 560.0,
+                    "p50": 560.0,
+                    "p95": 560.0,
+                    "max": 560.0
+                  },
+                  "output_latency_ms": {
+                    "count": 4,
+                    "mean": 71080.0,
+                    "p50": 62740.0,
+                    "p95": 123279.99999999997,
+                    "max": 132640.0
+                  },
+                  "unmatched_prediction_ids": [
+                    3
+                  ],
+                  "unmatched_truth_ids": [
+                    2
+                  ],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      3
+                    ],
+                    "3": [],
+                    "4": [
+                      4
+                    ]
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [],
+                    "3": [
+                      2
+                    ],
+                    "4": [
+                      4
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 7160.0,
+                      "end_ms": 35360.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 83080.0,
+                      "end_ms": 97760.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 110520.0,
+                      "end_ms": 112760.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 130680.0,
+                      "end_ms": 141800.0,
+                      "emitted_at_ms": 168000.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 7240.0,
+                      "end_ms": 35080.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 60080.0,
+                      "end_ms": 63680.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 80760.0,
+                      "end_ms": 98320.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 128240.0,
+                      "end_ms": 140600.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 61360.0,
+                  "retained_target_ms": 52440.0,
+                  "non_target_ms": 106680.0,
+                  "retained_non_target_ms": 3800.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.8546284224250326,
+                  "non_target_retention": 0.03562054743157105
+                },
+                "postprocess_wall_s": 0.0003099169999999929,
+                "output_latency_applicable": false
+              },
+              {
+                "candidate": {
+                  "name": "offline-motion-v1-gap2400",
+                  "mode": "offline",
+                  "gap_ms": 2400,
+                  "min_span_ms": 2200,
+                  "min_observations": 3
+                },
+                "metrics": {
+                  "evaluator_version": "rally-iou-v3",
+                  "boundary_policy": {
+                    "outward_tolerance_ms": 1500.0,
+                    "start_offset_range_ms": [
+                      -1500.0,
+                      0.0
+                    ],
+                    "end_offset_range_ms": [
+                      0.0,
+                      1500.0
+                    ],
+                    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+                    "acceptance_denominator": "all_verified_truth"
+                  },
+                  "boundary_acceptance": {
+                    "truth_count": 4,
+                    "matched_count": 4,
+                    "start_acceptable_count": 1,
+                    "start_acceptable_rate": 0.25,
+                    "end_acceptable_count": 3,
+                    "end_acceptable_rate": 0.75,
+                    "both_acceptable_count": 1,
+                    "both_acceptable_rate": 0.25
+                  },
+                  "truth_count": 4,
+                  "prediction_count": 7,
+                  "input_prediction_count": 7,
+                  "exclusion_policy": "fully_contained_without_truth_overlap",
+                  "excluded_events": [],
+                  "ignored_predictions": [],
+                  "excluded_annotation_ids": [],
+                  "matches": [
+                    {
+                      "prediction_id": 1,
+                      "truth_id": 1,
+                      "temporal_iou": 0.9872340425531915,
+                      "start_offset_ms": -80.0,
+                      "end_offset_ms": 280.0,
+                      "start_error_ms": 0.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": true,
+                      "end_acceptable": true,
+                      "both_acceptable": true,
+                      "output_latency_ms": 132640.0
+                    },
+                    {
+                      "prediction_id": 2,
+                      "truth_id": 2,
+                      "temporal_iou": 0.7981651376146789,
+                      "start_offset_ms": 120.0,
+                      "end_offset_ms": 760.0,
+                      "start_error_ms": 120.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 103560.0
+                    },
+                    {
+                      "prediction_id": 4,
+                      "truth_id": 3,
+                      "temporal_iou": 0.8518518518518519,
+                      "start_offset_ms": 80.0,
+                      "end_offset_ms": 2960.0,
+                      "start_error_ms": 80.0,
+                      "end_error_ms": 1460.0,
+                      "start_acceptable": false,
+                      "end_acceptable": false,
+                      "both_acceptable": false,
+                      "output_latency_ms": 66720.0
+                    },
+                    {
+                      "prediction_id": 6,
+                      "truth_id": 4,
+                      "temporal_iou": 0.9026548672566371,
+                      "start_offset_ms": 120.0,
+                      "end_offset_ms": 1200.0,
+                      "start_error_ms": 120.0,
+                      "end_error_ms": 0.0,
+                      "start_acceptable": false,
+                      "end_acceptable": true,
+                      "both_acceptable": false,
+                      "output_latency_ms": 26200.0
+                    }
+                  ],
+                  "missed_rally_count": 0,
+                  "false_positive_count": 3,
+                  "false_split_count": 0,
+                  "false_merge_count": 0,
+                  "start_error_ms": {
+                    "count": 3,
+                    "mean": 106.66666666666667,
+                    "p50": 120.0,
+                    "p95": 120.0,
+                    "max": 120.0
+                  },
+                  "end_error_ms": {
+                    "count": 1,
+                    "mean": 1460.0,
+                    "p50": 1460.0,
+                    "p95": 1460.0,
+                    "max": 1460.0
+                  },
+                  "output_latency_ms": {
+                    "count": 7,
+                    "mean": 70634.28571428571,
+                    "p50": 66720.0,
+                    "p95": 123915.99999999997,
+                    "max": 132640.0
+                  },
+                  "unmatched_prediction_ids": [
+                    3,
+                    5,
+                    7
+                  ],
+                  "unmatched_truth_ids": [],
+                  "prediction_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [],
+                    "4": [
+                      3
+                    ],
+                    "5": [],
+                    "6": [
+                      4
+                    ],
+                    "7": []
+                  },
+                  "truth_overlaps": {
+                    "1": [
+                      1
+                    ],
+                    "2": [
+                      2
+                    ],
+                    "3": [
+                      4
+                    ],
+                    "4": [
+                      6
+                    ]
+                  },
+                  "predictions": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 7160.0,
+                      "end_ms": 35360.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 60200.0,
+                      "end_ms": 64440.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 67520.0,
+                      "end_ms": 69800.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 80840.0,
+                      "end_ms": 101280.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 5,
+                      "start_ms": 110520.0,
+                      "end_ms": 112760.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 6,
+                      "start_ms": 128360.0,
+                      "end_ms": 141800.0,
+                      "emitted_at_ms": 168000.0
+                    },
+                    {
+                      "rally_id": 7,
+                      "start_ms": 152120.0,
+                      "end_ms": 156120.0,
+                      "emitted_at_ms": 168000.0
+                    }
+                  ],
+                  "annotations": [
+                    {
+                      "rally_id": 1,
+                      "start_ms": 7240.0,
+                      "end_ms": 35080.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 2,
+                      "start_ms": 60080.0,
+                      "end_ms": 63680.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 3,
+                      "start_ms": 80760.0,
+                      "end_ms": 98320.0,
+                      "review_status": "verified"
+                    },
+                    {
+                      "rally_id": 4,
+                      "start_ms": 128240.0,
+                      "end_ms": 140600.0,
+                      "review_status": "verified"
+                    }
+                  ]
+                },
+                "retained_time": {
+                  "target_ms": 61360.0,
+                  "retained_target_ms": 61040.0,
+                  "non_target_ms": 106680.0,
+                  "retained_non_target_ms": 13800.0,
+                  "ignored_ms": 0.0,
+                  "target_retention": 0.9947848761408083,
+                  "non_target_retention": 0.12935883014623173
+                },
+                "postprocess_wall_s": 0.00026550000000000185,
+                "output_latency_applicable": false
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "summary": {
+    "tuning": [
+      {
+        "candidate": "streaming-flight-v1",
+        "truth_count": 8,
+        "input_prediction_count": 11,
+        "prediction_count": 11,
+        "missed_rally_count": 0,
+        "false_positive_count": 3,
+        "false_split_count": 0,
+        "false_merge_count": 0,
+        "boundary_acceptance": {
+          "truth_count": 8,
+          "matched_count": 8,
+          "start_acceptable_count": 3,
+          "start_acceptable_rate": 0.375,
+          "end_acceptable_count": 5,
+          "end_acceptable_rate": 0.625,
+          "both_acceptable_count": 2,
+          "both_acceptable_rate": 0.25
+        },
+        "start_error_ms": {
+          "count": 5,
+          "mean": 1560.0,
+          "p50": 200.0,
+          "p95": 3728.0,
+          "max": 3760.0
+        },
+        "end_error_ms": {
+          "count": 3,
+          "mean": 453.3333333333333,
+          "p50": 560.0,
+          "p95": 740.0,
+          "max": 760.0
+        }
+      },
+      {
+        "candidate": "offline-motion-v1-gap1600",
+        "truth_count": 8,
+        "input_prediction_count": 13,
+        "prediction_count": 13,
+        "missed_rally_count": 0,
+        "false_positive_count": 5,
+        "false_split_count": 0,
+        "false_merge_count": 0,
+        "boundary_acceptance": {
+          "truth_count": 8,
+          "matched_count": 8,
+          "start_acceptable_count": 2,
+          "start_acceptable_rate": 0.25,
+          "end_acceptable_count": 5,
+          "end_acceptable_rate": 0.625,
+          "both_acceptable_count": 2,
+          "both_acceptable_rate": 0.25
+        },
+        "start_error_ms": {
+          "count": 6,
+          "mean": 1393.3333333333333,
+          "p50": 240.0,
+          "p95": 3820.0,
+          "max": 3840.0
+        },
+        "end_error_ms": {
+          "count": 3,
+          "mean": 453.3333333333333,
+          "p50": 560.0,
+          "p95": 740.0,
+          "max": 760.0
+        }
+      },
+      {
+        "candidate": "offline-motion-v1-gap2400",
+        "truth_count": 8,
+        "input_prediction_count": 12,
+        "prediction_count": 12,
+        "missed_rally_count": 0,
+        "false_positive_count": 4,
+        "false_split_count": 0,
+        "false_merge_count": 0,
+        "boundary_acceptance": {
+          "truth_count": 8,
+          "matched_count": 8,
+          "start_acceptable_count": 3,
+          "start_acceptable_rate": 0.375,
+          "end_acceptable_count": 4,
+          "end_acceptable_rate": 0.5,
+          "both_acceptable_count": 2,
+          "both_acceptable_rate": 0.25
+        },
+        "start_error_ms": {
+          "count": 5,
+          "mean": 160.0,
+          "p50": 200.0,
+          "p95": 264.0,
+          "max": 280.0
+        },
+        "end_error_ms": {
+          "count": 4,
+          "mean": 1475.0,
+          "p50": 660.0,
+          "p95": 3972.9999999999986,
+          "max": 4540.0
+        }
+      }
+    ],
+    "check": [
+      {
+        "candidate": "streaming-flight-v1",
+        "truth_count": 10,
+        "input_prediction_count": 12,
+        "prediction_count": 11,
+        "missed_rally_count": 1,
+        "false_positive_count": 1,
+        "false_split_count": 1,
+        "false_merge_count": 0,
+        "boundary_acceptance": {
+          "truth_count": 10,
+          "matched_count": 9,
+          "start_acceptable_count": 3,
+          "start_acceptable_rate": 0.3,
+          "end_acceptable_count": 4,
+          "end_acceptable_rate": 0.4,
+          "both_acceptable_count": 2,
+          "both_acceptable_rate": 0.2
+        },
+        "start_error_ms": {
+          "count": 6,
+          "mean": 2113.3333333333335,
+          "p50": 1440.0,
+          "p95": 5720.0,
+          "max": 6840.0
+        },
+        "end_error_ms": {
+          "count": 5,
+          "mean": 520.0,
+          "p50": 480.0,
+          "p95": 880.0,
+          "max": 960.0
+        }
+      },
+      {
+        "candidate": "offline-motion-v1-gap1600",
+        "truth_count": 10,
+        "input_prediction_count": 13,
+        "prediction_count": 12,
+        "missed_rally_count": 1,
+        "false_positive_count": 2,
+        "false_split_count": 1,
+        "false_merge_count": 0,
+        "boundary_acceptance": {
+          "truth_count": 10,
+          "matched_count": 9,
+          "start_acceptable_count": 3,
+          "start_acceptable_rate": 0.3,
+          "end_acceptable_count": 4,
+          "end_acceptable_rate": 0.4,
+          "both_acceptable_count": 2,
+          "both_acceptable_rate": 0.2
+        },
+        "start_error_ms": {
+          "count": 6,
+          "mean": 1980.0,
+          "p50": 1200.0,
+          "p95": 5800.0,
+          "max": 6920.0
+        },
+        "end_error_ms": {
+          "count": 5,
+          "mean": 520.0,
+          "p50": 480.0,
+          "p95": 880.0,
+          "max": 960.0
+        }
+      },
+      {
+        "candidate": "offline-motion-v1-gap2400",
+        "truth_count": 10,
+        "input_prediction_count": 15,
+        "prediction_count": 14,
+        "missed_rally_count": 0,
+        "false_positive_count": 4,
+        "false_split_count": 0,
+        "false_merge_count": 0,
+        "boundary_acceptance": {
+          "truth_count": 10,
+          "matched_count": 10,
+          "start_acceptable_count": 3,
+          "start_acceptable_rate": 0.3,
+          "end_acceptable_count": 5,
+          "end_acceptable_rate": 0.5,
+          "both_acceptable_count": 2,
+          "both_acceptable_rate": 0.2
+        },
+        "start_error_ms": {
+          "count": 7,
+          "mean": 120.0,
+          "p50": 80.0,
+          "p95": 259.9999999999999,
+          "max": 320.0
+        },
+        "end_error_ms": {
+          "count": 5,
+          "mean": 816.0,
+          "p50": 700.0,
+          "p95": 1360.0,
+          "max": 1460.0
+        }
+      }
+    ]
+  },
+  "validation": {
+    "backend_tests": "72 passed",
+    "test_log": "/private/tmp/m1-boundary-v3-tests-20261016.txt"
+  }
+}

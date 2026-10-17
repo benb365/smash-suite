@@ -1,0 +1,44 @@
+{
+  "status": "retained_camera_experiment",
+  "cameras": {
+    "personal-club-exhibition-stable": {
+      "profile": "strict1200",
+      "config": {
+        "confidence": 0.8,
+        "motion_window_ms": 200,
+        "min_motion_window_ms": 80,
+        "min_speed_px_s": 100,
+        "max_speed_px_s": 4000,
+        "quiet_ms": 1200,
+        "min_flight_span_ms": 1200,
+        "field": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weights_sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+    },
+    "personal-jiangmen-stable": {
+      "profile": "personal-singlecourt",
+      "config": {
+        "confidence": 0.8,
+        "motion_window_ms": 200,
+        "min_motion_window_ms": 80,
+        "min_speed_px_s": 100,
+        "max_speed_px_s": 4000,
+        "quiet_ms": 1600,
+        "min_flight_span_ms": 1200,
+        "field": [
+          0,
+          0,
+          1,
+          1
+        ]
+      },
+      "weights_sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+    }
+  },
+  "scope": "Partial improvement at reviewed positions; no complete human labels; not a global default."
+}

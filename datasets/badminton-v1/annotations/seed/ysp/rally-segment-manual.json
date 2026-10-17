@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_manual_annotation",
+  "status": "verified",
+  "video": "test_ysp.ts",
+  "fps": 25.0,
+  "duration_ms": 309000,
+  "frame_count": 7725,
+  "coordinate_files": {
+    "roi": "ROI.json"
+  },
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "generation": {
+    "method": "human_verified_from_video_frames",
+    "source": "manual review",
+    "requires_human_review": false
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "start_ms": 58000,
+      "end_ms": 66800,
+      "start_time": "00:58.000",
+      "end_time": "01:06.800",
+      "start_frame": 1450,
+      "end_frame": 1670,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 77200,
+      "end_ms": 82800,
+      "start_time": "01:17.200",
+      "end_time": "01:22.800",
+      "start_frame": 1930,
+      "end_frame": 2070,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 92400,
+      "end_ms": 98000,
+      "start_time": "01:32.400",
+      "end_time": "01:38.000",
+      "start_frame": 2310,
+      "end_frame": 2450,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 109600,
+      "end_ms": 124800,
+      "start_time": "01:49.600",
+      "end_time": "02:04.800",
+      "start_frame": 2740,
+      "end_frame": 3120,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 144400,
+      "end_ms": 160400,
+      "start_time": "02:24.400",
+      "end_time": "02:40.400",
+      "start_frame": 3610,
+      "end_frame": 4010,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 178800,
+      "end_ms": 184400,
+      "start_time": "02:58.800",
+      "end_time": "03:04.400",
+      "start_frame": 4470,
+      "end_frame": 4610,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 197600,
+      "end_ms": 202800,
+      "start_time": "03:17.600",
+      "end_time": "03:22.800",
+      "start_frame": 4940,
+      "end_frame": 5070,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 213600,
+      "end_ms": 222000,
+      "start_time": "03:33.600",
+      "end_time": "03:42.000",
+      "start_frame": 5340,
+      "end_frame": 5550,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 234400,
+      "end_ms": 245200,
+      "start_time": "03:54.400",
+      "end_time": "04:05.200",
+      "start_frame": 5860,
+      "end_frame": 6130,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 257600,
+      "end_ms": 267600,
+      "start_time": "04:17.600",
+      "end_time": "04:27.600",
+      "start_frame": 6440,
+      "end_frame": 6690,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 11,
+      "start_ms": 294400,
+      "end_ms": 303200,
+      "start_time": "04:54.400",
+      "end_time": "05:03.200",
+      "start_frame": 7360,
+      "end_frame": 7580,
+      "review_status": "verified"
+    }
+  ],
+  "notes": [
+    "Frame ranges were provided after human review.",
+    "start_ms and end_ms are derived from frame ids at 25fps."
+  ]
+}

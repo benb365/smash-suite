@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "type": "rally_annotation_review_decision",
+  "sample_id": "m1-short-a1-03-20261015",
+  "date": "2026-10-16",
+  "reviewer": "user",
+  "instruction": "A1-03 的 110–120 秒 确实是还球，类似这种情况，以及超短回合在判定时都可以允许不纳入回合以及成功率判定，例如接发失败",
+  "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-a1-03-20261015/full-v1.json",
+  "proposal_sha256": "27ec6a3e0026861d882ee516a01c366d94a3185c0de6dad8c0c83af292f1b352",
+  "video": "datasets/badminton-v1/local/rally/m1-short-a1-03-20261015/clip.mp4",
+  "video_sha256": "11525be4013d3eaeb343d6343ad58e5d97dba9415ff3aafdb905524a52fa30b2",
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 115.0,
+    "source_origin_ms": 1800120.0,
+    "source_time_rule": "source_ms = source_origin_ms + timestamp_ms",
+    "clip_pts_rule": "clip_pts_ms = first_decoded_clip_pts_ms + timestamp_ms"
+  },
+  "scope": "仅确认110–120秒还球及通用可排除口径，未确认其他新增回合；原草稿和边界不变。",
+  "events": [
+    {
+      "event_id": "a1-03-shuttle-return-110-120",
+      "range_ms": [
+        110000,
+        120000
+      ],
+      "source_range_ms": [
+        1910120.0,
+        1920120.0
+      ],
+      "range_semantics": "用户确认的复核窗口，不宣称是还球动作精确起止点。",
+      "classification": "shuttle_return",
+      "review_status": "human_confirmed",
+      "include_in_target_rallies": false,
+      "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+      "reason": "用户确认为还球，允许不纳入回合以及成功率判定。"
+    }
+  ],
+  "short_rally_policy": {
+    "examples": [
+      "接发失败"
+    ],
+    "fixed_duration_threshold_ms": null,
+    "automatic_exclusion_by_duration": false,
+    "specific_other_events_reviewed": false
+  },
+  "evaluation_implementation_status": "pending_ignore_region_support",
+  "requirements": "docs/plan/rally-segmentation-requirement.md#可排除的事件"
+}

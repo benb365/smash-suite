@@ -1,0 +1,89 @@
+{
+  "schema_version": 2,
+  "target": "court",
+  "source_id": "youtube:a-C_hDOD310",
+  "view_id": "youtube-a-c-hdod310-view-1",
+  "status": "draft",
+  "reviewer": "user",
+  "items": [
+    {
+      "item_id": "youtube_a-C_hDOD310-court_partial-000000000000-1",
+      "image_size": {
+        "width": 640,
+        "height": 352
+      },
+      "points": [
+        {
+          "point_id": "far_center_baseline",
+          "x": 88.64403281846658,
+          "y": 215.5336847411988,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "far_right_baseline",
+          "x": 196.407366833073,
+          "y": 212.92649284738397,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "far_left_short_service",
+          "x": 2.607177435837252,
+          "y": 260.725010900656,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "far_center_short_service",
+          "x": 186.84771623500308,
+          "y": 250.29624332539666,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "far_right_short_service",
+          "x": 318.0756471721448,
+          "y": 243.34373160855708,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "net_left",
+          "x": 46.060134699791455,
+          "y": 294.6185055202489,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "net_right",
+          "x": 401.50532511893687,
+          "y": 259.85594693605105,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "near_left_short_service",
+          "x": 119.06110290323453,
+          "y": 345.89327943194075,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "near_center_short_service",
+          "x": 367.6120184530526,
+          "y": 305.9163370601132,
+          "visibility": "visible",
+          "source": "manual"
+        },
+        {
+          "point_id": "near_right_short_service",
+          "x": 522.3045463127296,
+          "y": 286.79692983880443,
+          "visibility": "visible",
+          "source": "manual"
+        }
+      ]
+    }
+  ]
+}

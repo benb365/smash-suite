@@ -1,0 +1,1124 @@
+{
+  "date": "2026-10-15",
+  "purpose": "按人工确认方案从A/C/D来源准备约2–3分钟的连续短片；B本轮暂缓。当前主线状态见roadmap。",
+  "human_plan_confirmation": "每段约2–3分钟，每类累计至少10分钟；A/C从原片不同位置选段，D拆分现有稳定范围；保留对打和间歇。",
+  "source_decision_record": "docs/experiments/four-view-video-candidates-20261015.json",
+  "previous_long_window_evidence": "docs/experiments/m1-test-clip-preparation-20261015.json",
+  "sources": [
+    {
+      "source_id": "A1",
+      "category": "官方高视角",
+      "url": "https://huya.com/video/play/1099925376.html",
+      "title": "【回放】女单 瓦尔达尼vs黄玲青 1/8赛 2026瑞士羽毛球公开赛 清流",
+      "uploader": "虎牙羽毛球3号场地",
+      "source_path": "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+      "source_sha256": "1cc16c20974409b6d6e710a46cc185b8ff5e6951d898daf6116a694c914a1caa",
+      "human_source_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "source_group": "source:A1",
+      "usage": "diagnostic_tuning_only",
+      "clip_count": 4,
+      "non_overlapping_candidate_duration_s": 684.04,
+      "frame_count": 17101,
+      "contact_sheet": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/short-clips-contact.jpg",
+      "review_evidence": [
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/0600-0775/boundary-keyframes.jpg",
+          "sha256": "6d6db4552af6eeb6b6f9ba2b4b0612bd0b615f3918d293e0436c2e56095e8013"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/0600-0775/index-every-10s.jpg",
+          "sha256": "1c1ae187e45a191b6d224a317d25239c33e52ff99ca9d80cc0a1e8b4c5a84a8c"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/0600-0775/review-images.json",
+          "sha256": "bcfec4af36798554be301ac85b2780aa0364dcd09c0186806c7a74994f56cb03"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/0600-0775/scan.json",
+          "sha256": "66053449fd825ecd43443518bac8da529e6817205502a01a997fa77c6b7da042"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/1200-1375/boundary-keyframes.jpg",
+          "sha256": "042fceb79475763cf9d8a3c1522c9b580d7fb939514d57798fe5f483cc0ea992"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/1200-1375/index-every-10s.jpg",
+          "sha256": "ddf4c94969290599108e2d5a8f644b46c9488e3d639f54326ff3e22b92eeee04"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/1200-1375/review-images.json",
+          "sha256": "8e59d41b894670f2d3c9fa04bb2e4731fa62e5f0a94b98637ac557bef8b74191"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/1200-1375/scan.json",
+          "sha256": "edca36fb1280ebbc54557e4ce627ebd7fd6f8facc9799cac3a83ab9f0dd092e2"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/1800-1975/boundary-keyframes.jpg",
+          "sha256": "acc6c2e9f68ba019ff2c8f85f2b63c1966ed1269e5279b80ae03b502ac9ce8cd"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/1800-1975/index-every-10s.jpg",
+          "sha256": "f10306e08c88a7b9122a61f2b21589a82a8bf1433daaa4814f595e4fbc8dea46"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/1800-1975/review-images.json",
+          "sha256": "c19c3301779c83ea734b0763bcf1930245ad541bebbd1b2801fc845a5b081f63"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/1800-1975/scan.json",
+          "sha256": "176131a8ab6a2f0af17877338176fca1802769cca325306a2189866a1731f69c"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/2340-2515/boundary-keyframes.jpg",
+          "sha256": "564a15fc7d77919d7280b71deadd5066a4a808a40200ba449de97170ca42b034"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/2340-2515/index-every-10s.jpg",
+          "sha256": "078aefdc443c345fdfd21c5e2afeb909695e3766561687dc29ee10dba91abe19"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/2340-2515/review-images.json",
+          "sha256": "2feb9c99a7c229254021ab6d4a3e52d44878d068c197304f9df937250f5a831e"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/2340-2515/scan.json",
+          "sha256": "01d90ca330436e42c8bbc1119bb49adfacc9b7a096c14173aa57e5e5cca3a46b"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/boundary-keyframes.jpg",
+          "sha256": "f97cb1dee9f6e4dfcd1e1fbc122642d51ec6c06cc777339e40243be5ba3e4722"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/review/selected-boundary-context.jpg",
+          "sha256": "df50014ae32d460e2340a0d23aa08b901d3b6465159b5f96c23c619a56990e3d"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/review/selected-boundary-context.json",
+          "sha256": "468ea8a45108a392a6918ea43d88c2992dc383a8eab382e2f6e2a1e8af77abe4"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/review-images.json",
+          "sha256": "bd3789e02ea19d37362ac308bd2a94b78feea89c5c5c4419ff3c8b07bb55d404"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/scan.json",
+          "sha256": "035076f88424be9f8b1976682d872d390ceb2f55475a917f41be338aa59a8d49"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/short-clips-contact.jpg",
+          "sha256": "7a72fd5c71f8902dc6c0e64f4cb89c76b7ce8fdb0b627d1f86965ea5999d88d0"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/short-clips-contact.json",
+          "sha256": "2f48d5b59f09a50ca2ecc2ce97ffcf16eb181bb8c9e48e34036439cc682ae129"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/transition-pairs.jpg",
+          "sha256": "ea472ddc8664f09bd4c512c6f1f9dddfe6cae9b9f4fe290f58ef5e142e806c10"
+        }
+      ]
+    },
+    {
+      "source_id": "C1",
+      "category": "场边低视角",
+      "url": "https://www.bilibili.com/video/BV12zPKzRE4v/",
+      "title": "2026排名賽 黃宥薰 vs 王珮伃",
+      "uploader": "台湾陈师傅低视角羽球",
+      "source_path": "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+      "source_sha256": "b6405dc2783ccad495d85a478169f9c77a303ac844a673699d9ed75053550c72",
+      "human_source_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "source_group": "source:C1",
+      "usage": "unassigned_no_tuning_yet",
+      "clip_count": 4,
+      "non_overlapping_candidate_duration_s": 685.68725,
+      "frame_count": 20558,
+      "contact_sheet": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/short-clips-contact.jpg",
+      "review_evidence": [
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/0120-0295/boundary-keyframes.jpg",
+          "sha256": "a32973606652577b350e6e4c6df3e3df28157c1eb6e0d6eaf2e53ad7562b83c8"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/0120-0295/index-every-10s.jpg",
+          "sha256": "71af054f860942d99d070736564813133803af16f5cf8aff30d165b57a8e207a"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/0120-0295/review-images.json",
+          "sha256": "fdb16dff9d2056c6077359bff2e95edcca17cda50f36fcd4621af7ce9a7e9944"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/0120-0295/scan.json",
+          "sha256": "7b67c3b95a4c78d13ce5755853b2e800e1ae4ab6a529e75447f3909390d75407"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/1200-1375/boundary-keyframes.jpg",
+          "sha256": "2cda2742c38677b629243c7a645a82784a90bcfae0a7897a6192cf78bb807370"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/1200-1375/index-every-10s.jpg",
+          "sha256": "cb5d4ab065e5e7b3bde5b6c12dedb5b3ed1778c96424807666debcfbbea301d3"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/1200-1375/review-images.json",
+          "sha256": "38ac18b1a0b8def018ce65f0fcb6a4f2d95bb3c3d5fc7171da8482a6bf5aba9f"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/1200-1375/scan.json",
+          "sha256": "c4c48043e9a58fe0be49fa3fe9bc631df241ac589e7e048174391d9572fdbbbb"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/2400-2575/boundary-keyframes.jpg",
+          "sha256": "9b8f4bd911f875225c33fcbc6f4214564065cb46759a900f4018df5c508449fa"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/2400-2575/index-every-10s.jpg",
+          "sha256": "78ba757ee6f74e534ca105432de736037a23a6bdfdd5c710044ec420ced41bda"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/2400-2575/review-images.json",
+          "sha256": "6fc6ce6d7c40b529cff4f12f998bb5c6bce2b14ac6a698033fc01126b04cf01c"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/2400-2575/scan.json",
+          "sha256": "e70eabb991515651648e364224b82cd2e4ee0415c2921325925841dd51ad2d9c"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/3600-3775/boundary-keyframes.jpg",
+          "sha256": "c7bd09a745df4a2fc8c4ddaf0477c98b4f58b407d584aea5f2ac2421a19c5bec"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/3600-3775/index-every-10s.jpg",
+          "sha256": "36680b4f1bed1bc8293f07d162600a41df2c7c9704d49948d11a32d7046f17d2"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/3600-3775/review-images.json",
+          "sha256": "9aac1f78f10bb55115a396047a91fb7ecf213125d2fbaf5a49e12cfa2cf3f933"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/3600-3775/scan.json",
+          "sha256": "e90f9c3cd1b9e8d95305cc04a42ea7b40bb2b5a02604b71b20339371b9413e69"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/boundary-keyframes.jpg",
+          "sha256": "ddabb1ef2f54bc0083bb3a87e7e8527d4f38631974e0010119b72000974dd827"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/review/selected-boundary-context.jpg",
+          "sha256": "3f0667861f4c7d5c46ffb5d65dad1fbccd684469dd8cb295d8c64303385fcaca"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/review/selected-boundary-context.json",
+          "sha256": "87ccaf00aaff0788c670d11552b6a5e8efa4ca4dddfa12028e6b330fc68cae6b"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/review-images.json",
+          "sha256": "1269b3cb5245b7aef0bb542bb931c00f315899ff090f904d721d49bec940f31c"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/scan.json",
+          "sha256": "bf0ce4485077f40b15171c1cc5219f2b1b6f57038c2a25051b43c3f264bfe25e"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/short-clips-contact.jpg",
+          "sha256": "f4e2300040665326d4042d4c5a99d0de3ca78fd5e3501bd259d962e5976b116d"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/short-clips-contact.json",
+          "sha256": "16949749f8fac84a951de5bbe2a48d31896bdf21f63edb0ef0ff835f6a707106"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/transition-pairs.jpg",
+          "sha256": "594cf2fb3dbf04c6ff6e70b335aae12a37c76dd7647c0d0681448f493b8b548e"
+        }
+      ]
+    },
+    {
+      "source_id": "D1",
+      "category": "个人常见斜侧方视角",
+      "url": "https://www.bilibili.com/video/BV1QPpz6pEJJ/",
+      "title": "中羽3级对抗",
+      "uploader": "今天不摸鱼1",
+      "source_path": "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+      "source_sha256": "67cdb92e722b82eddab7b00eb6ed701db4c3bdb8f26a95d9f0d7cc527d1c53a6",
+      "human_source_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "source_group": "source:D1",
+      "usage": "unassigned_no_tuning_yet",
+      "clip_count": 4,
+      "non_overlapping_candidate_duration_s": 610.9458125,
+      "frame_count": 18320,
+      "contact_sheet": "datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/short-clips-contact.jpg",
+      "review_evidence": [
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/D1-boundaries.jpg",
+          "sha256": "95de3be344c79a95a3222cf3f97d188495714aa78ea1767b43674f34f5f63e6a"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/review/selected-boundary-context.jpg",
+          "sha256": "608ca40aeddf956b35d8c567977f73bd17f527b0b26a34ca67b61513d2197172"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/review/selected-boundary-context.json",
+          "sha256": "70611b573fc730477c1d9c10a12736d338a9baf89dca74bf36b8d7699d5ec5af"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/review-images.json",
+          "sha256": "eda8e0e90b014b52eb476d58e4f4446e63e705395082d3f8ed26579196ccc6ac"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/scan.json",
+          "sha256": "e2121ba863bd700302edab229bbf907a504e908465978b7d7482b19b16b858b2"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/short-clips-contact.jpg",
+          "sha256": "9211297f2796aabd1cb54884a0d9b77649a85ce1b508ed4076b335f3b1291e22"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/short-clips-contact.json",
+          "sha256": "0d47a32da72b1d115d2588ec40292009fb571eac22788eb4e6712c229f764090"
+        }
+      ]
+    }
+  ],
+  "clips": [
+    {
+      "sample_id": "m1-short-a1-01-20261015",
+      "source_id": "A1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "actual_source_window_s": [
+        599.96,
+        767.96
+      ],
+      "duration_s": 168.0,
+      "frame_count": 4200,
+      "bytes": 70417188,
+      "sha256": "fdd2aba069839480ebb6b5edb2dfbdf036e3b0c3de4893693edcb48fda00bca4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.04,
+      "source_pts_minus_clip_pts_exact": "599869/1000",
+      "first_decoded_clip_pts_s": 0.091,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "599.96",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "-t",
+        "167.92",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-a1-02-20261015",
+      "source_id": "A1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-a1-02-20261015/clip.mp4",
+      "actual_source_window_s": [
+        1200.04,
+        1374.04
+      ],
+      "duration_s": 174.0,
+      "frame_count": 4350,
+      "bytes": 73770929,
+      "sha256": "c47445822f9f03205e87fbf1cddd6920edadc46f73abd6f6e84eaccb533ee6f4",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.04,
+      "source_pts_minus_clip_pts_exact": "1199949/1000",
+      "first_decoded_clip_pts_s": 0.091,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-a1-02-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "1200.04",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "-t",
+        "173.92",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-a1-02-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-a1-03-20261015",
+      "source_id": "A1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-a1-03-20261015/clip.mp4",
+      "actual_source_window_s": [
+        1800.12,
+        1974.12
+      ],
+      "duration_s": 174.0,
+      "frame_count": 4350,
+      "bytes": 71853925,
+      "sha256": "11525be4013d3eaeb343d6343ad58e5d97dba9415ff3aafdb905524a52fa30b2",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.04,
+      "source_pts_minus_clip_pts_exact": "360001/200",
+      "first_decoded_clip_pts_s": 0.115,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-a1-03-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "1800.12",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "-t",
+        "173.92",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-a1-03-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-a1-04-20261015",
+      "source_id": "A1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-a1-04-20261015/clip.mp4",
+      "actual_source_window_s": [
+        2346.16,
+        2514.2
+      ],
+      "duration_s": 168.04,
+      "frame_count": 4201,
+      "bytes": 69830113,
+      "sha256": "17f4fe934509e6c16799923c4b8f3c42b4f3bed0d96cdb7c376674c0fb670e02",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.04,
+      "source_pts_minus_clip_pts_exact": "1173029/500",
+      "first_decoded_clip_pts_s": 0.102,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-a1-04-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "2346.16",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "-t",
+        "167.96",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-a1-04-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-c1-01-20261015",
+      "source_id": "C1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4",
+      "actual_source_window_s": [
+        120.073,
+        285.1743125
+      ],
+      "duration_s": 165.1013125,
+      "frame_count": 4950,
+      "bytes": 66517549,
+      "sha256": "2aec0dc53ecb1e436b916c5d615252cdfd64a9ed03741f02073eea175662d481",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.034,
+      "source_pts_minus_clip_pts_exact": "23991/200",
+      "first_decoded_clip_pts_s": 0.118,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "120.073",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "-t",
+        "165.001",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-c1-02-20261015",
+      "source_id": "C1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-c1-02-20261015/clip.mp4",
+      "actual_source_window_s": [
+        1200.55,
+        1380.6603125
+      ],
+      "duration_s": 180.1103125,
+      "frame_count": 5400,
+      "bytes": 69618995,
+      "sha256": "6f5856f7bcb304019d76eadc9bbc352055ada8e6a7f8eb71783ac2ff324fb4cb",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.034,
+      "source_pts_minus_clip_pts_exact": "1200449/1000",
+      "first_decoded_clip_pts_s": 0.101,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-c1-02-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "1200.55",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "-t",
+        "180.01",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-c1-02-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-c1-03-20261015",
+      "source_id": "C1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/clip.mp4",
+      "actual_source_window_s": [
+        2400.217,
+        2565.5863125
+      ],
+      "duration_s": 165.3693125,
+      "frame_count": 4958,
+      "bytes": 67945246,
+      "sha256": "697f072c28a6a6ac1a9f704149c8bacb87b217da9defc2f721145085cd9a6abd",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.034,
+      "source_pts_minus_clip_pts_exact": "600027/250",
+      "first_decoded_clip_pts_s": 0.109,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "2400.217",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "-t",
+        "165.269",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-c1-04-20261015",
+      "source_id": "C1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-c1-04-20261015/clip.mp4",
+      "actual_source_window_s": [
+        3600.152,
+        3775.2583125
+      ],
+      "duration_s": 175.1063125,
+      "frame_count": 5250,
+      "bytes": 68916575,
+      "sha256": "ed67141233e7be9122c511c12db8315cd00047df41576819ff4b7d8f25e5b44e",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.034,
+      "source_pts_minus_clip_pts_exact": "720009/200",
+      "first_decoded_clip_pts_s": 0.107,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-c1-04-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "3600.152",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "-t",
+        "175.007",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-c1-04-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-d1-01-20261015",
+      "source_id": "D1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-d1-01-20261015/clip.mp4",
+      "actual_source_window_s": [
+        0.0,
+        150.989125
+      ],
+      "duration_s": 150.989125,
+      "frame_count": 4528,
+      "bytes": 40052604,
+      "sha256": "8254de0fdbed330b3049215c00ce67679771e40eb4bd9dc448186aa139766f2f",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.089125,
+      "source_pts_minus_clip_pts_exact": "-133/1000",
+      "first_decoded_clip_pts_s": 0.133,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-d1-01-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "0",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "-t",
+        "150.8558125",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-d1-01-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-d1-02-20261015",
+      "source_id": "D1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/clip.mp4",
+      "actual_source_window_s": [
+        150.989125,
+        305.97825
+      ],
+      "duration_s": 154.989125,
+      "frame_count": 4648,
+      "bytes": 39618867,
+      "sha256": "82d29f3f431cd3ba386af88dc77daaf8e5496ff520ace229e24b8a51f19851b5",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.089125,
+      "source_pts_minus_clip_pts_exact": "241357/1600",
+      "first_decoded_clip_pts_s": 0.141,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "150.989125",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "-t",
+        "154.8558125",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-d1-03-20261015",
+      "source_id": "D1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-d1-03-20261015/clip.mp4",
+      "actual_source_window_s": [
+        305.97825,
+        455.9674375
+      ],
+      "duration_s": 149.9891875,
+      "frame_count": 4498,
+      "bytes": 40909454,
+      "sha256": "45c77879af8c7ef14b70515ae7409410e6433f480da572505cb0032a42bbdf36",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.0891875,
+      "source_pts_minus_clip_pts_exact": "1223341/4000",
+      "first_decoded_clip_pts_s": 0.143,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-d1-03-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "305.97825",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "-t",
+        "149.855875",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-d1-03-20261015/clip.mp4"
+      ]
+    },
+    {
+      "sample_id": "m1-short-d1-04-20261015",
+      "source_id": "D1",
+      "video": "datasets/badminton-v1/local/rally/m1-short-d1-04-20261015/clip.mp4",
+      "actual_source_window_s": [
+        455.9674375,
+        610.9458125
+      ],
+      "duration_s": 154.978375,
+      "frame_count": 4646,
+      "bytes": 35637680,
+      "sha256": "b5ef8d3a78389fd5a81af42564684a41c57b46cca2f97202a0f069ccdeee5606",
+      "dimensions": [
+        1920,
+        1080
+      ],
+      "native_max_frame_interval_s": 0.0891875,
+      "source_pts_minus_clip_pts_exact": "7293271/16000",
+      "first_decoded_clip_pts_s": 0.138,
+      "source_packet_fidelity_and_full_decode_passed": true,
+      "all_source_presentation_frames_preserved": true,
+      "audio_preserved_and_fully_decoded": true,
+      "human_clip_review": "pending",
+      "rally_annotation": "none",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-d1-04-20261015/validation.json",
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "455.9674375",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "-t",
+        "154.8450625",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a:0",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-short-d1-04-20261015/clip.mp4"
+      ]
+    }
+  ],
+  "extraction_method": "FFmpeg stream copy with audio; keyframe/GOP-aligned boundaries; no re-encoding, frame-rate conversion, resampling or stitching over removed source time.",
+  "verification_method": "Compressed video packets match a contiguous source sequence, codec extradata unchanged, complete presentation-PTS sets, constant source-minus-clip PTS/DTS offset; full video decode with strictly increasing PTS and full audio decode.",
+  "source_time_mapping": "source_seconds = normalized_FileFrameSource_seconds + actual_source_window_s[0]. For raw MP4 PTS use source_pts_minus_clip_pts_exact instead; MP4 first PTS may be nonzero.",
+  "review_limits": [
+    "每10秒索引、每窗前三帧差峰的原生相邻帧和切点附近画面已实际查看；未逐个标注所有回合边界，不据此宣称全片绝无跳切。",
+    "切点尽量放在准备、走动或等待期间；精确首末回合完整性仍需逐回合标注复核。",
+    "12段仅来自3个原始来源，不增加独立机位或拍摄会话数量；同源窗口不得跨迭代/独立验收。",
+    "A1已用于旧诊断，仅作迭代；C1/D1尚未用于模型调参，最终用途划分待确认。",
+    "人工已确认来源、类别和截短方案；本次不代填逐片人工验收或人工回合真值。",
+    "不与之前长窗口或旧短样片重复累计时长；旧清单的target_met不验证这些新片段。"
+  ],
+  "formal_benchmark_modified": false,
+  "legacy_rally_samples_modified": false,
+  "rally_annotations_added": false,
+  "recognition_algorithm_run": false,
+  "new_human_approved_clip_duration_s": 0,
+  "execution_record": "datasets/badminton-v1/local/rally/m1-short-review-20261015/extraction-execution.json",
+  "media_checks": {
+    "source_window_totals": {
+      "A1": {
+        "actual_windows_s": [
+          {
+            "start": 599.96,
+            "end": 767.96,
+            "sample_id": "m1-short-a1-01-20261015"
+          },
+          {
+            "start": 1200.04,
+            "end": 1374.04,
+            "sample_id": "m1-short-a1-02-20261015"
+          },
+          {
+            "start": 1800.12,
+            "end": 1974.12,
+            "sample_id": "m1-short-a1-03-20261015"
+          },
+          {
+            "start": 2346.16,
+            "end": 2514.2,
+            "sample_id": "m1-short-a1-04-20261015"
+          }
+        ],
+        "non_overlapping": true,
+        "overlaps": [],
+        "nonoverlap_total_s": 684.04,
+        "at_least_600s": true
+      },
+      "C1": {
+        "actual_windows_s": [
+          {
+            "start": 120.073,
+            "end": 285.1743125,
+            "sample_id": "m1-short-c1-01-20261015"
+          },
+          {
+            "start": 1200.55,
+            "end": 1380.6603125,
+            "sample_id": "m1-short-c1-02-20261015"
+          },
+          {
+            "start": 2400.217,
+            "end": 2565.5863125,
+            "sample_id": "m1-short-c1-03-20261015"
+          },
+          {
+            "start": 3600.152,
+            "end": 3775.2583125,
+            "sample_id": "m1-short-c1-04-20261015"
+          }
+        ],
+        "non_overlapping": true,
+        "overlaps": [],
+        "nonoverlap_total_s": 685.68725,
+        "at_least_600s": true
+      },
+      "D1": {
+        "actual_windows_s": [
+          {
+            "start": 0.0,
+            "end": 150.989125,
+            "sample_id": "m1-short-d1-01-20261015"
+          },
+          {
+            "start": 150.989125,
+            "end": 305.97825,
+            "sample_id": "m1-short-d1-02-20261015"
+          },
+          {
+            "start": 305.97825,
+            "end": 455.9674375,
+            "sample_id": "m1-short-d1-03-20261015"
+          },
+          {
+            "start": 455.9674375,
+            "end": 610.9458125,
+            "sample_id": "m1-short-d1-04-20261015"
+          }
+        ],
+        "non_overlapping": true,
+        "overlaps": [],
+        "nonoverlap_total_s": 610.9458125,
+        "at_least_600s": true
+      }
+    },
+    "original_sha256_checks": {
+      "A1": {
+        "path": "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "expected_bytes": 1124307223,
+        "actual_bytes": 1124307223,
+        "expected_sha256": "1cc16c20974409b6d6e710a46cc185b8ff5e6951d898daf6116a694c914a1caa",
+        "actual_sha256": "1cc16c20974409b6d6e710a46cc185b8ff5e6951d898daf6116a694c914a1caa",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      "B1": {
+        "path": "datasets/badminton-v1/local/source-videos/B1/source.mp4",
+        "expected_bytes": 314513654,
+        "actual_bytes": 314513654,
+        "expected_sha256": "a92f5a505ce5548dc52ee3b47dca4c18cc604ff6143f89beef5965d2b6d65396",
+        "actual_sha256": "a92f5a505ce5548dc52ee3b47dca4c18cc604ff6143f89beef5965d2b6d65396",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      "C1": {
+        "path": "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "expected_bytes": 1631426699,
+        "actual_bytes": 1631426699,
+        "expected_sha256": "b6405dc2783ccad495d85a478169f9c77a303ac844a673699d9ed75053550c72",
+        "actual_sha256": "b6405dc2783ccad495d85a478169f9c77a303ac844a673699d9ed75053550c72",
+        "bytes_match": true,
+        "sha256_match": true
+      },
+      "D1": {
+        "path": "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "expected_bytes": 156925690,
+        "actual_bytes": 156925690,
+        "expected_sha256": "67cdb92e722b82eddab7b00eb6ed701db4c3bdb8f26a95d9f0d7cc527d1c53a6",
+        "actual_sha256": "67cdb92e722b82eddab7b00eb6ed701db4c3bdb8f26a95d9f0d7cc527d1c53a6",
+        "bytes_match": true,
+        "sha256_match": true
+      }
+    },
+    "D1_packet_pts_prefix_check": {
+      "source_path": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/source-videos/D1/source.mp4",
+      "prefix_range_s": [
+        0.0,
+        610.9458125
+      ],
+      "original_packet_pts_count": 18320,
+      "short_clip_packets": {
+        "m1-short-d1-01-20261015": {
+          "path": "datasets/badminton-v1/local/rally/m1-short-d1-01-20261015/clip.mp4",
+          "packet_count": 4528,
+          "mapped_min_s": 0.0,
+          "mapped_max_s": 150.9558125,
+          "duplicate_pts_within_clip": 0
+        },
+        "m1-short-d1-02-20261015": {
+          "path": "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/clip.mp4",
+          "packet_count": 4648,
+          "mapped_min_s": 150.989125,
+          "mapped_max_s": 305.9449375,
+          "duplicate_pts_within_clip": 0
+        },
+        "m1-short-d1-03-20261015": {
+          "path": "datasets/badminton-v1/local/rally/m1-short-d1-03-20261015/clip.mp4",
+          "packet_count": 4498,
+          "mapped_min_s": 305.97825,
+          "mapped_max_s": 455.934125,
+          "duplicate_pts_within_clip": 0
+        },
+        "m1-short-d1-04-20261015": {
+          "path": "datasets/badminton-v1/local/rally/m1-short-d1-04-20261015/clip.mp4",
+          "packet_count": 4646,
+          "mapped_min_s": 455.9674375,
+          "mapped_max_s": 610.9125,
+          "duplicate_pts_within_clip": 0
+        }
+      },
+      "clip_packet_pts_total": 18320,
+      "unique_mapped_clip_pts": 18320,
+      "cross_clip_duplicate_count": 0,
+      "missing_count": 0,
+      "extra_count": 0,
+      "missing_examples_s": [],
+      "extra_examples_s": [],
+      "exact_union_match": true
+    },
+    "contact_sheets": {
+      "A1": {
+        "image": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/short-clips-contact.jpg",
+        "image_bytes": 331781,
+        "metadata": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-review-20261015/A1/short-clips-contact.json",
+        "row_count": 4,
+        "samples_per_row": 4
+      },
+      "C1": {
+        "image": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/short-clips-contact.jpg",
+        "image_bytes": 452186,
+        "metadata": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-review-20261015/C1/short-clips-contact.json",
+        "row_count": 4,
+        "samples_per_row": 4
+      },
+      "D1": {
+        "image": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/short-clips-contact.jpg",
+        "image_bytes": 376079,
+        "metadata": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/m1-short-review-20261015/D1/short-clips-contact.json",
+        "row_count": 4,
+        "samples_per_row": 4
+      }
+    },
+    "scope": "Read existing validations; hash full source files; demux D1 source prefix and D1 clips; seek/decode only selected preview frames from short clips. No full decode, no algorithm, no manifest changes."
+  },
+  "cut_plan": "datasets/badminton-v1/local/rally/m1-short-review-20261015/cut-plan.json",
+  "boundary_review_note": "selected-boundary-context images show the preliminary selection. A1-01, C1-01 and C1-02 final ends were adjusted after reviewing those images and the neighboring keyframe sheets; final source intervals are recorded here and in each validation."
+}

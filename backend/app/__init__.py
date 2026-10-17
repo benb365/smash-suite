@@ -1,0 +1,1 @@
+"""Smash Suite backend package."""

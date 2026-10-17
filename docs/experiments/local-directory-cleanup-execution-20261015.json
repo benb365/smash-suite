@@ -1,0 +1,752 @@
+{
+  "date": "2026-10-15",
+  "authorization": {
+    "reviewer": "user",
+    "instruction": "确定",
+    "scope": "确认清理提案列明的18个clip.mp4；不授权扩大范围。"
+  },
+  "scope": "首批已拒绝样本视频清理；只删除18个精确路径，不删除目录、不修改样本状态、来源、窗口、标注或审核材料。",
+  "state": "deleted_and_verified",
+  "proposal": "docs/experiments/local-directory-cleanup-proposal-20261015.json",
+  "preflight": {
+    "target_count": 18,
+    "unique_path_count": 18,
+    "checks": [
+      {
+        "path": "datasets/badminton-v1/local/rally/official-asia-2026-court2/clip.mp4",
+        "sample_id": "official-asia-2026-court2",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 62269561,
+        "sha256_expected": "78e345e718838fcf8e763835fe53db93f90610c21c0bb521188a1f2c42c0cbd0",
+        "bytes_actual": 62269561,
+        "sha256_actual": "78e345e718838fcf8e763835fe53db93f90610c21c0bb521188a1f2c42c0cbd0",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/official-malaysia-2026-court2/clip.mp4",
+        "sample_id": "official-malaysia-2026-court2",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 53487100,
+        "sha256_expected": "0f1a1fd089a6994be9d7949651f141b6595e5bbef26fcadf551a13889593f925",
+        "bytes_actual": 53487100,
+        "sha256_actual": "0f1a1fd089a6994be9d7949651f141b6595e5bbef26fcadf551a13889593f925",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/official-malaysia-2026-court2-play/clip.mp4",
+        "sample_id": "official-malaysia-2026-court2-play",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 60339635,
+        "sha256_expected": "396a3ffa413379b76b94c8795c1d00825a4b91b7b0437a4688dd946f10ac8ff6",
+        "bytes_actual": 60339635,
+        "sha256_actual": "396a3ffa413379b76b94c8795c1d00825a4b91b7b0437a4688dd946f10ac8ff6",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/official-worlds-2023/clip.mp4",
+        "sample_id": "official-worlds-2023",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 61127148,
+        "sha256_expected": "48a5a5d681bc8f7248d3da5eb10ba0beb72f1d071231afa69d64ea18d258c4f8",
+        "bytes_actual": 61127148,
+        "sha256_actual": "48a5a5d681bc8f7248d3da5eb10ba0beb72f1d071231afa69d64ea18d258c4f8",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-BV1Z64y1W7dJ/clip.mp4",
+        "sample_id": "personal-BV1Z64y1W7dJ",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 20870980,
+        "sha256_expected": "73479dc3052792850c0245c3f08f34772a5f8569174601a59ccc1692ff016f70",
+        "bytes_actual": 20870980,
+        "sha256_actual": "73479dc3052792850c0245c3f08f34772a5f8569174601a59ccc1692ff016f70",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-BV1sJKP6qEVt-v2/clip.mp4",
+        "sample_id": "personal-BV1sJKP6qEVt-v2",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 72536248,
+        "sha256_expected": "cdb9d27cd1e086e4d07f0421d5d10081232ca83862dc60b2ffe1556733557d32",
+        "bytes_actual": 72536248,
+        "sha256_actual": "cdb9d27cd1e086e4d07f0421d5d10081232ca83862dc60b2ffe1556733557d32",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-amateur-match/clip.mp4",
+        "sample_id": "personal-amateur-match",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 56942621,
+        "sha256_expected": "5baec660bd24f9c8c4f7dfaea2f38796ab666b20bacab0f82c70a6cd33c01aa8",
+        "bytes_actual": 56942621,
+        "sha256_actual": "5baec660bd24f9c8c4f7dfaea2f38796ab666b20bacab0f82c70a6cd33c01aa8",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-beijing-womens-final/clip.mp4",
+        "sample_id": "personal-beijing-womens-final",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 90112840,
+        "sha256_expected": "4a954fce1955eb2080352478f360309aa96e42c8488f84a3afd45eae4a4b39f5",
+        "bytes_actual": 90112840,
+        "sha256_actual": "4a954fce1955eb2080352478f360309aa96e42c8488f84a3afd45eae4a4b39f5",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-cuhksz-stable/clip.mp4",
+        "sample_id": "personal-cuhksz-stable",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 63064823,
+        "sha256_expected": "d906d7e84155d64686bdbaabd7eb9cd927a9f4d9670435a1bdb2602f1ac83bc8",
+        "bytes_actual": 63064823,
+        "sha256_actual": "d906d7e84155d64686bdbaabd7eb9cd927a9f4d9670435a1bdb2602f1ac83bc8",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-dong-singles/clip.mp4",
+        "sample_id": "personal-dong-singles",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 34677691,
+        "sha256_expected": "b74f2465e88a9f1f0d3dedec23ac45ffb7d03b40aee6a5b57fb0d1e3732fe7de",
+        "bytes_actual": 34677691,
+        "sha256_actual": "b74f2465e88a9f1f0d3dedec23ac45ffb7d03b40aee6a5b57fb0d1e3732fe7de",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-japan-highschool/clip.mp4",
+        "sample_id": "personal-japan-highschool",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 25316771,
+        "sha256_expected": "650762330414ce7597cefbb7f1b0dedc57d0d5951fcb8700f1ef065da6f0a2be",
+        "bytes_actual": 25316771,
+        "sha256_actual": "650762330414ce7597cefbb7f1b0dedc57d0d5951fcb8700f1ef065da6f0a2be",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-jiangmen-native-v2/clip.mp4",
+        "sample_id": "personal-jiangmen-native-v2",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 70841924,
+        "sha256_expected": "55b9ffedd70b3f85ffcd8fbc02fc05cc35de0bcf422905147d39ce0f99fb25eb",
+        "bytes_actual": 70841924,
+        "sha256_actual": "55b9ffedd70b3f85ffcd8fbc02fc05cc35de0bcf422905147d39ce0f99fb25eb",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-qaq-singles/clip.mp4",
+        "sample_id": "personal-qaq-singles",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 46328391,
+        "sha256_expected": "1b23da1318da891a67ad2c20cee2e84012a59fc65aeb500c3a4f895dd4beae15",
+        "bytes_actual": 46328391,
+        "sha256_actual": "1b23da1318da891a67ad2c20cee2e84012a59fc65aeb500c3a4f895dd4beae15",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-school-games/clip.mp4",
+        "sample_id": "personal-school-games",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 74455513,
+        "sha256_expected": "bb920d7e9e5665b3118954cd440cef3570b87ecbb0cbc751f3d0bcccd7f68f1a",
+        "bytes_actual": 74455513,
+        "sha256_actual": "bb920d7e9e5665b3118954cd440cef3570b87ecbb0cbc751f3d0bcccd7f68f1a",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/personal-tennis-player-singles/clip.mp4",
+        "sample_id": "personal-tennis-player-singles",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 46772909,
+        "sha256_expected": "c5ac5e37b3bfc82640a3288f1cfdfa5f60d8e2b90f68cfd72c6f77f189653231",
+        "bytes_actual": 46772909,
+        "sha256_actual": "c5ac5e37b3bfc82640a3288f1cfdfa5f60d8e2b90f68cfd72c6f77f189653231",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/phone-momota-play/clip.mp4",
+        "sample_id": "phone-momota-play",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 88495884,
+        "sha256_expected": "19523641f834e53ac51655d79b68a13033a8739b09b5a7f18a42686a729b42ed",
+        "bytes_actual": 88495884,
+        "sha256_actual": "19523641f834e53ac51655d79b68a13033a8739b09b5a7f18a42686a729b42ed",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/phone-xjtu-freshmen/clip.mp4",
+        "sample_id": "phone-xjtu-freshmen",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 75493972,
+        "sha256_expected": "67fab48a343cbb3bbbefc380cf0cf51f6867b5cd51a8d96a9629e472e2ea64a0",
+        "bytes_actual": 75493972,
+        "sha256_actual": "67fab48a343cbb3bbbefc380cf0cf51f6867b5cd51a8d96a9629e472e2ea64a0",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      },
+      {
+        "path": "datasets/badminton-v1/local/rally/phone-yuzi-native-v2/clip.mp4",
+        "sample_id": "phone-yuzi-native-v2",
+        "exists": true,
+        "no_symlink": true,
+        "resolved_under_rally": true,
+        "manifest_status": "rejected",
+        "manifest_rejected": true,
+        "bytes_expected": 49672440,
+        "sha256_expected": "c2ccf420b7ae794ecf0dd0f28b4102e0870ad1db655702ebc0aea25819537665",
+        "bytes_actual": 49672440,
+        "sha256_actual": "c2ccf420b7ae794ecf0dd0f28b4102e0870ad1db655702ebc0aea25819537665",
+        "bytes_match": true,
+        "sha256_match": true,
+        "ok": true
+      }
+    ],
+    "errors": [],
+    "passed": true
+  },
+  "deleted": [
+    {
+      "path": "datasets/badminton-v1/local/rally/official-asia-2026-court2/clip.mp4",
+      "bytes": 62269561,
+      "sha256": "78e345e718838fcf8e763835fe53db93f90610c21c0bb521188a1f2c42c0cbd0",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/official-malaysia-2026-court2/clip.mp4",
+      "bytes": 53487100,
+      "sha256": "0f1a1fd089a6994be9d7949651f141b6595e5bbef26fcadf551a13889593f925",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/official-malaysia-2026-court2-play/clip.mp4",
+      "bytes": 60339635,
+      "sha256": "396a3ffa413379b76b94c8795c1d00825a4b91b7b0437a4688dd946f10ac8ff6",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/official-worlds-2023/clip.mp4",
+      "bytes": 61127148,
+      "sha256": "48a5a5d681bc8f7248d3da5eb10ba0beb72f1d071231afa69d64ea18d258c4f8",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-BV1Z64y1W7dJ/clip.mp4",
+      "bytes": 20870980,
+      "sha256": "73479dc3052792850c0245c3f08f34772a5f8569174601a59ccc1692ff016f70",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-BV1sJKP6qEVt-v2/clip.mp4",
+      "bytes": 72536248,
+      "sha256": "cdb9d27cd1e086e4d07f0421d5d10081232ca83862dc60b2ffe1556733557d32",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-amateur-match/clip.mp4",
+      "bytes": 56942621,
+      "sha256": "5baec660bd24f9c8c4f7dfaea2f38796ab666b20bacab0f82c70a6cd33c01aa8",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-beijing-womens-final/clip.mp4",
+      "bytes": 90112840,
+      "sha256": "4a954fce1955eb2080352478f360309aa96e42c8488f84a3afd45eae4a4b39f5",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-cuhksz-stable/clip.mp4",
+      "bytes": 63064823,
+      "sha256": "d906d7e84155d64686bdbaabd7eb9cd927a9f4d9670435a1bdb2602f1ac83bc8",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-dong-singles/clip.mp4",
+      "bytes": 34677691,
+      "sha256": "b74f2465e88a9f1f0d3dedec23ac45ffb7d03b40aee6a5b57fb0d1e3732fe7de",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-japan-highschool/clip.mp4",
+      "bytes": 25316771,
+      "sha256": "650762330414ce7597cefbb7f1b0dedc57d0d5951fcb8700f1ef065da6f0a2be",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-jiangmen-native-v2/clip.mp4",
+      "bytes": 70841924,
+      "sha256": "55b9ffedd70b3f85ffcd8fbc02fc05cc35de0bcf422905147d39ce0f99fb25eb",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-qaq-singles/clip.mp4",
+      "bytes": 46328391,
+      "sha256": "1b23da1318da891a67ad2c20cee2e84012a59fc65aeb500c3a4f895dd4beae15",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-school-games/clip.mp4",
+      "bytes": 74455513,
+      "sha256": "bb920d7e9e5665b3118954cd440cef3570b87ecbb0cbc751f3d0bcccd7f68f1a",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/personal-tennis-player-singles/clip.mp4",
+      "bytes": 46772909,
+      "sha256": "c5ac5e37b3bfc82640a3288f1cfdfa5f60d8e2b90f68cfd72c6f77f189653231",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/phone-momota-play/clip.mp4",
+      "bytes": 88495884,
+      "sha256": "19523641f834e53ac51655d79b68a13033a8739b09b5a7f18a42686a729b42ed",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/phone-xjtu-freshmen/clip.mp4",
+      "bytes": 75493972,
+      "sha256": "67fab48a343cbb3bbbefc380cf0cf51f6867b5cd51a8d96a9629e472e2ea64a0",
+      "unlink_succeeded": true
+    },
+    {
+      "path": "datasets/badminton-v1/local/rally/phone-yuzi-native-v2/clip.mp4",
+      "bytes": 49672440,
+      "sha256": "c2ccf420b7ae794ecf0dd0f28b4102e0870ad1db655702ebc0aea25819537665",
+      "unlink_succeeded": true
+    }
+  ],
+  "annotations_before": {
+    "datasets/badminton-v1/annotations/draft/.gitkeep": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "datasets/badminton-v1/annotations/draft/court/youtube-a-c-hdod310-view-1.json": {
+      "bytes": 4790,
+      "sha256": "8779cf6a325ecb42755212b9d489793dc4135e0fd940ee6eeb3171091689c8cf"
+    },
+    "datasets/badminton-v1/annotations/draft/court-controls/youtube-a-c-hdod310-view-1.json": {
+      "bytes": 2363,
+      "sha256": "bcabfb0daf6d90275b29f039576956d9feeef6a173cebd22918ba118a9a601ae"
+    },
+    "datasets/badminton-v1/annotations/draft/people/youtube-a-c-hdod310-view-1-youtube_a-C_hDOD310.json": {
+      "bytes": 5829,
+      "sha256": "50ba6bc1faebf3c452d6b88cd6289476d0359652f5b723cd2aca3fd521be3210"
+    },
+    "datasets/badminton-v1/annotations/draft/people-keyframes/youtube-a-c-hdod310-view-1.json": {
+      "bytes": 3614,
+      "sha256": "b7049c66bc3781e24e424f27621e6d202738849d4b8e825d1f18c2b572b16050"
+    },
+    "datasets/badminton-v1/annotations/proposed/court/youtube-gmxvbt-ac8o-view-1/3b4d08235728571849d2.json": {
+      "bytes": 4036,
+      "sha256": "1b8ababfac0ef4753e4f84f433aa5c33be60a8a6a90fd18751e44bb160f2871a"
+    },
+    "datasets/badminton-v1/annotations/proposed/court/youtube-gmxvbt-ac8o-view-1/3b4d08235728571849d2.review.json": {
+      "bytes": 473,
+      "sha256": "2b36394a95f33fe7490a98fa10cd799460e48b770747902f200d0aea0134d6f2"
+    },
+    "datasets/badminton-v1/annotations/proposed/court/youtube-gmxvbt-ac8o-view-1/8fbb0a6d1d37b9ab8c12.json": {
+      "bytes": 2891,
+      "sha256": "73814fb86b736c58db668569e4b6145023b8f9e5cd9b7635a07ca4cc1481b879"
+    },
+    "datasets/badminton-v1/annotations/proposed/court/youtube-gmxvbt-ac8o-view-1/8fbb0a6d1d37b9ab8c12.review.json": {
+      "bytes": 2646,
+      "sha256": "b76320cacc6b6e66c8f00b8c95425e0c47cacaf333aa33d41ceecfaa6de77d30"
+    },
+    "datasets/badminton-v1/annotations/proposed/court/youtube-ul7xw-wp5ia-view-1/0a14cc7d7e18627555bb.json": {
+      "bytes": 2555,
+      "sha256": "505a0a7719b8f1d58ae16ae6a5f166c796ae694625803e2b0ecf7bd17ee2633c"
+    },
+    "datasets/badminton-v1/annotations/proposed/court/youtube-ul7xw-wp5ia-view-1/0a14cc7d7e18627555bb.review.json": {
+      "bytes": 2629,
+      "sha256": "69cdc8fd500b098ec2635dba510a529f58b60f3ae8bb30753ef440f441080818"
+    },
+    "datasets/badminton-v1/annotations/proposed/court/youtube-ul7xw-wp5ia-view-1/b52cfe57ddec99eafbc9.json": {
+      "bytes": 3916,
+      "sha256": "8d9277aeb127f7b543d286b0bbbc608f59f8cdde215ccff81bfc8fb64ee81d24"
+    },
+    "datasets/badminton-v1/annotations/proposed/court/youtube-ul7xw-wp5ia-view-1/b52cfe57ddec99eafbc9.review.json": {
+      "bytes": 473,
+      "sha256": "d0673b77cb88cc090557895f619134758ed81676eb564f984eabff21296dc893"
+    },
+    "datasets/badminton-v1/annotations/seed/test001/manual_scene": {
+      "bytes": 327,
+      "sha256": "df457a0ab52e9da46d32bbc8e2764aa764097c5160082c56217699e5a0f792e0"
+    },
+    "datasets/badminton-v1/annotations/seed/ysp/ROI.json": {
+      "bytes": 2634,
+      "sha256": "8025db81fdb8fbfcc74778a117b224c7943f0189080e40c668e33bee12518b09"
+    },
+    "datasets/badminton-v1/annotations/seed/ysp/rally-segment-manual.json": {
+      "bytes": 3145,
+      "sha256": "c5dad843eb002c06b482f00f27ae03ea9a7b56462847b5e6e74422aa285311b1"
+    },
+    "datasets/badminton-v1/annotations/verified/.gitkeep": {
+      "bytes": 1,
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+    },
+    "datasets/badminton-v1/annotations/verified/court/youtube-a-c-hdod310-view-1.json": {
+      "bytes": 4790,
+      "sha256": "8779cf6a325ecb42755212b9d489793dc4135e0fd940ee6eeb3171091689c8cf"
+    }
+  },
+  "manifest_before": {
+    "bytes": 52865,
+    "sha256": "dd64a2342f4dc44c889969931fd3c0c96e9b40ab696999a2b4b74124c16be5b8"
+  },
+  "remaining_verification_progress": {
+    "checked": 416,
+    "total": 416,
+    "passed_so_far": true
+  },
+  "protected_verification": {
+    "accepted_clips": {
+      "count": 12,
+      "all_match": true,
+      "checks": [
+        {
+          "path": "datasets/badminton-v1/local/rally/personal-BV1pk4y1Y7XB-v2/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/personal-jiangmen-stable/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/personal-club-exhibition-stable/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/personal-college-21points/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/personal-qianfoshan-singles/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/official-india-2026-court3/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/official-orleans-2026-court2/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/official-singapore-2026-court2/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/official-allengland-2026-court3/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/official-canada-2026-court2/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/official-swiss-2026-court3/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/personal-20261001-singles/clip.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      ]
+    },
+    "source_videos": {
+      "count": 4,
+      "all_match": true,
+      "checks": [
+        {
+          "path": "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/source-videos/B1/source.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+          "exists": true,
+          "proposal_recorded": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      ]
+    },
+    "model_originals": {
+      "count": 6,
+      "all_match": true,
+      "checks": [
+        {
+          "path": "datasets/badminton-v1/local/model-inputs/0a14cc7d7e18627555bb-user-correction.json",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/model-inputs/8fbb0a6d1d37b9ab8c12-user-correction.json",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/model-inputs/youtube-gmxvbt-ac8o-view-1-claude-doubao-seed-2.1-turbo-proposal.json",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/model-inputs/youtube-ul7xw-wp5ia-view-1-claude-doubao-seed-2.1-turbo-proposal.json",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/model-inputs/youtube-ul7xw-wp5ia-view-1-codex-proposal.json",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        },
+        {
+          "path": "datasets/badminton-v1/local/model-proposals/youtube-gmxvbt-ac8o-view-1.json",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true
+        }
+      ]
+    },
+    "review_jpgs": {
+      "count": 3,
+      "all_match": true,
+      "all_have_text_refs": true,
+      "checks": [
+        {
+          "path": "datasets/badminton-v1/local/rally-review/rally-20261003/personal-beijing-womens-final-background.jpg",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true,
+          "text_path_references": [
+            "datasets/badminton-v1/manifests/rally-samples.json"
+          ]
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally-review/rally-20261003/personal-cuhksz-stable-background.jpg",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true,
+          "text_path_references": [
+            "datasets/badminton-v1/manifests/rally-samples.json"
+          ]
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally-review/rally-20261003/personal-dong-singles-100-130s.jpg",
+          "exists": true,
+          "bytes_match": true,
+          "sha256_match": true,
+          "text_path_references": [
+            "datasets/badminton-v1/manifests/rally-samples.json"
+          ]
+        }
+      ]
+    },
+    "manifest_unchanged": true,
+    "annotations_unchanged": true,
+    "remaining_416_match": true
+  },
+  "remaining_verification": {
+    "expected_count": 416,
+    "checked_count": 416,
+    "expected_bytes": 4579315450,
+    "actual_bytes": 4579315450,
+    "all_match": true
+  },
+  "skill_commands_after_delete": {
+    "status": {
+      "exit_code": 0,
+      "summary": {
+        "source_status": {
+          "accepted": 3,
+          "candidate": 10,
+          "held_out": 1,
+          "rejected": 1
+        },
+        "cached_preview_failures": 3,
+        "verified_views": 1,
+        "verified_non_broadcast_views": 1,
+        "verified_split_groups": 1
+      }
+    },
+    "rally-status": {
+      "exit_code": 0,
+      "summary": {
+        "samples": 37,
+        "accepted_clips": 12,
+        "official_views": 6,
+        "personal_views": 6,
+        "confirmed_phone_views": 0,
+        "target_met": false,
+        "statuses": {
+          "accepted": 12,
+          "rejected": 18,
+          "failed": 4,
+          "needs_visual_review": 3
+        }
+      }
+    },
+    "validate": {
+      "exit_code": 0,
+      "summary": {
+        "output": "valid: 15 source(s), 0 split assignment(s), 0 split group(s)"
+      }
+    }
+  }
+}

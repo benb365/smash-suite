@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-07-27T13:50:30+00:00",
+  "frame": "local/frames/court/youtube-gmxvbt-ac8o-view-1/youtube_gmXVbt-AC8o-court_partial-000000197600-1.jpg",
+  "image_sha256": "ae1608204584c54aeebc7967912872110f440dd3542d996e3410f9699687d01f",
+  "image_size": {
+    "height": 720,
+    "width": 1280
+  },
+  "item_id": "youtube_gmXVbt-AC8o-court_partial-000000197600-1",
+  "points": [
+    {
+      "confidence": 0.65,
+      "point_id": "far_left_baseline",
+      "reason": "远端左侧底角可见，但因透视压缩和距离较远，像素级定位不精确",
+      "uncertain": true,
+      "x": 248.0,
+      "y": 467.0
+    },
+    {
+      "confidence": 0.7,
+      "point_id": "far_center_baseline",
+      "reason": "远端底线中心标记可见但尺寸小，受透视影响定位有偏差",
+      "uncertain": true,
+      "x": 428.0,
+      "y": 467.0
+    },
+    {
+      "confidence": 0.65,
+      "point_id": "far_right_baseline",
+      "reason": "远端右侧底角可见，距离远且受透视影响，精度有限",
+      "uncertain": true,
+      "x": 612.0,
+      "y": 467.0
+    },
+    {
+      "confidence": 0.65,
+      "point_id": "far_left_short_service",
+      "reason": "远侧左发球线与双打边线交点可见，但较小且受透视影响",
+      "uncertain": true,
+      "x": 280.0,
+      "y": 492.0
+    },
+    {
+      "confidence": 0.7,
+      "point_id": "far_center_short_service",
+      "reason": "远侧T点（中线与前发球线交点）可见，但距离远定位不精确",
+      "uncertain": true,
+      "x": 428.0,
+      "y": 492.0
+    },
+    {
+      "confidence": 0.65,
+      "point_id": "far_right_short_service",
+      "reason": "远侧右发球线与双打边线交点可见，透视影响精度",
+      "uncertain": true,
+      "x": 578.0,
+      "y": 492.0
+    },
+    {
+      "confidence": 0.85,
+      "point_id": "net_left",
+      "reason": "左侧黄色网柱清晰可见，网柱底座位置即左网与双打边线交点",
+      "uncertain": false,
+      "x": 178.0,
+      "y": 538.0
+    },
+    {
+      "confidence": 0.85,
+      "point_id": "net_right",
+      "reason": "右侧黄色网柱清晰可见，网柱底座位置即右网与双打边线交点",
+      "uncertain": false,
+      "x": 706.0,
+      "y": 538.0
+    },
+    {
+      "confidence": 0.8,
+      "point_id": "near_left_short_service",
+      "reason": "近侧左发球线与双打边线交点清晰可见",
+      "uncertain": false,
+      "x": 218.0,
+      "y": 612.0
+    },
+    {
+      "confidence": 0.85,
+      "point_id": "near_center_short_service",
+      "reason": "近侧T点（中线与前发球线交点）清晰可辨",
+      "uncertain": false,
+      "x": 428.0,
+      "y": 612.0
+    },
+    {
+      "confidence": 0.8,
+      "point_id": "near_right_short_service",
+      "reason": "近侧右发球线与双打边线交点清晰可见",
+      "uncertain": false,
+      "x": 638.0,
+      "y": 612.0
+    },
+    {
+      "confidence": 0.6,
+      "point_id": "near_left_baseline",
+      "reason": "近左端底角接近画面左边缘，左侧边线与底线交点部分被遮挡，定位不确定",
+      "uncertain": true,
+      "x": 142.0,
+      "y": 715.0
+    },
+    {
+      "confidence": 0.8,
+      "point_id": "near_center_baseline",
+      "reason": "近端底线中心标记清晰可见",
+      "uncertain": false,
+      "x": 428.0,
+      "y": 715.0
+    },
+    {
+      "confidence": 0.75,
+      "point_id": "near_right_baseline",
+      "reason": "近右端底角可见，接近画面右边缘，定位有一定不确定性",
+      "uncertain": true,
+      "x": 948.0,
+      "y": 715.0
+    }
+  ],
+  "producer": {
+    "model": "Doubao-Seed-2.1-turbo",
+    "model_version": "claude-code-2.1.206",
+    "prompt_version": "court-points-v1",
+    "tool": "claude-code"
+  },
+  "proposal_id": "3b4d08235728571849d2",
+  "schema_version": 2,
+  "source_id": "youtube:gmXVbt-AC8o",
+  "status": "proposed",
+  "target": "court",
+  "uncertain_point_count": 8,
+  "view_id": "youtube-gmxvbt-ac8o-view-1",
+  "view_state": "court_partial"
+}

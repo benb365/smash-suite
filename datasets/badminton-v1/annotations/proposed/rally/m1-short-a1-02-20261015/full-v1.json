@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_annotation_proposal",
+  "status": "draft_full_clip",
+  "sample_id": "m1-short-a1-02-20261015",
+  "category": "A",
+  "video": "datasets/badminton-v1/local/rally/m1-short-a1-02-20261015/clip.mp4",
+  "video_sha256": "c47445822f9f03205e87fbf1cddd6920edadc46f73abd6f6e84eaccb533ee6f4",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 91.0,
+    "source_origin_ms": 1200040.0,
+    "source_time_rule": "source_ms = source_origin_ms + timestamp_ms",
+    "clip_pts_rule": "clip_pts_ms = first_decoded_clip_pts_ms + timestamp_ms"
+  },
+  "coverage": {
+    "partial": false,
+    "reviewed_range_ms": [
+      0,
+      174000.0
+    ],
+    "completeness": "agent_draft_whole_clip_sampled_review",
+    "method": "全片约1秒抽帧筛查，候选起止附近约0.12秒抽帧细查；未使用回合分割预测。",
+    "human_confirmation_complete": false,
+    "negative_time_is_not_verified": true,
+    "limits": "全片草稿仍可能漏掉短回合；非回合补集、疑似还球和新边界均未获人工确认，不能作为正式评测真值。"
+  },
+  "main_court": "转播主球场，近端红衣、远端绿衣。",
+  "main_court_review_status": "agent_reviewed",
+  "generation": {
+    "method": "agent_visual_sampled_frames_with_native_pts",
+    "producer": "Codex",
+    "date": "2026-10-15",
+    "requires_human_review": true,
+    "used_segmentation_predictions": false,
+    "boundary_policy": "start_left_end_right",
+    "boundary_policy_authorization": "用户2026-10-15确认首批视频标注正确并同意start区间左边界、end区间右边界；该规则沿用至新增草稿，不把新增内容标为verified。"
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02",
+    "overview_index": "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02/frame-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02/boundary-index.json",
+    "pilot_annotation": null
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "review_status": "needs_review",
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            468,
+            474
+          ],
+          "review_window_ms": [
+            18720.0,
+            18960.0
+          ],
+          "source_review_window_ms": [
+            1218760.0,
+            1219000.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 18720.0,
+          "selected_frame": 468,
+          "selected_clip_pts_ms": 18811.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02/boundary-index.json"
+          ],
+          "note": "基于约0.12秒抽帧的视觉区间，尚需人工复核；端点是保守保留时间，不宣称精确触球/落地瞬间。"
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            913,
+            922
+          ],
+          "review_window_ms": [
+            36520.0,
+            36880.0
+          ],
+          "source_review_window_ms": [
+            1236560.0,
+            1236920.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 36880.0,
+          "selected_frame": 922,
+          "selected_clip_pts_ms": 36971.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02/boundary-index.json"
+          ],
+          "note": "基于约0.12秒抽帧的视觉区间，尚需人工复核；端点是保守保留时间，不宣称精确触球/落地瞬间。"
+        }
+      },
+      "note": "近端红衣发球，网前末球，18分到19分。",
+      "start_ms": 18720.0,
+      "start_frame": 468,
+      "end_ms": 36880.0,
+      "end_frame": 922
+    },
+    {
+      "rally_id": 2,
+      "review_status": "needs_review",
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            1549,
+            1555
+          ],
+          "review_window_ms": [
+            61960.0,
+            62200.0
+          ],
+          "source_review_window_ms": [
+            1262000.0,
+            1262240.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 61960.0,
+          "selected_frame": 1549,
+          "selected_clip_pts_ms": 62051.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02/boundary-index.json"
+          ],
+          "note": "基于约0.12秒抽帧的视觉区间，尚需人工复核；端点是保守保留时间，不宣称精确触球/落地瞬间。"
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            1812,
+            1821
+          ],
+          "review_window_ms": [
+            72480.0,
+            72840.0
+          ],
+          "source_review_window_ms": [
+            1272520.0,
+            1272880.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 72840.0,
+          "selected_frame": 1821,
+          "selected_clip_pts_ms": 72931.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02/boundary-index.json"
+          ],
+          "note": "基于约0.12秒抽帧的视觉区间，尚需人工复核；端点是保守保留时间，不宣称精确触球/落地瞬间。"
+        }
+      },
+      "note": "近端红衣发球，末球后退接球后停止，19分到20分。",
+      "start_ms": 61960.0,
+      "start_frame": 1549,
+      "end_ms": 72840.0,
+      "end_frame": 1821
+    },
+    {
+      "rally_id": 3,
+      "review_status": "needs_review",
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            2546,
+            2552
+          ],
+          "review_window_ms": [
+            101840.0,
+            102080.0
+          ],
+          "source_review_window_ms": [
+            1301880.0,
+            1302120.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 101840.0,
+          "selected_frame": 2546,
+          "selected_clip_pts_ms": 101931.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02/boundary-index.json"
+          ],
+          "note": "基于约0.12秒抽帧的视觉区间，尚需人工复核；端点是保守保留时间，不宣称精确触球/落地瞬间。"
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            3137,
+            3149
+          ],
+          "review_window_ms": [
+            125480.0,
+            125960.0
+          ],
+          "source_review_window_ms": [
+            1325520.0,
+            1326000.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 125960.0,
+          "selected_frame": 3149,
+          "selected_clip_pts_ms": 126051.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/A1-02/boundary-index.json"
+          ],
+          "note": "基于约0.12秒抽帧的视觉区间，尚需人工复核；端点是保守保留时间，不宣称精确触球/落地瞬间。"
+        }
+      },
+      "note": "近端红衣发球，长回合末段近端左前场扑救后球落地，随后21分局间休息。",
+      "start_ms": 101840.0,
+      "start_frame": 2546,
+      "end_ms": 125960.0,
+      "end_frame": 3149
+    }
+  ]
+}

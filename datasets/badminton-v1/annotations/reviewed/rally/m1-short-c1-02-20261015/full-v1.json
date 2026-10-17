@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_reviewed_annotation",
+  "status": "verified_full_clip",
+  "sample_id": "m1-short-c1-02-20261015",
+  "category": "C",
+  "video": "datasets/badminton-v1/local/rally/m1-short-c1-02-20261015/clip.mp4",
+  "video_sha256": "6f5856f7bcb304019d76eadc9bbc352055ada8e6a7f8eb71783ac2ff324fb4cb",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 101.0,
+    "source_origin_ms": 1200550.0,
+    "source_time_rule": "source_ms = source_origin_ms + timestamp_ms",
+    "clip_pts_rule": "clip_pts_ms = first_decoded_clip_pts_ms + timestamp_ms"
+  },
+  "coverage": {
+    "partial": false,
+    "reviewed_range_ms": [
+      0,
+      180110.3125
+    ],
+    "completeness": "human_confirmed_whole_clip_rally_annotations",
+    "method": "全片约1秒抽帧筛查，候选起止附近约0.12秒抽帧细查；未使用回合分割预测。",
+    "human_confirmation_complete": true,
+    "negative_time_is_not_verified": true,
+    "limits": "用户完成A/C全片复核；边界区间保留，不宣称代表值是精确物理瞬间。排除事件与正式评测资格另行处理。"
+  },
+  "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+  "main_court_review_status": "human_confirmed",
+  "generation": {
+    "method": "agent_visual_sampled_frames_with_native_pts",
+    "producer": "Codex",
+    "date": "2026-10-15",
+    "requires_human_review": false,
+    "used_segmentation_predictions": false,
+    "boundary_policy": "start_left_end_right",
+    "boundary_policy_authorization": "用户2026-10-15确认首批视频标注正确并同意start区间左边界、end区间右边界；该规则沿用至新增草稿，不把新增内容标为verified。",
+    "human_confirmed_date": "2026-10-16"
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02",
+    "overview_index": "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02/frame-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02/boundary-index.json",
+    "pilot_annotation": null
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            130,
+            137
+          ],
+          "review_window_ms": [
+            4336.0,
+            4570.0
+          ],
+          "source_review_window_ms": [
+            1204886.0,
+            1205120.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 4336.0,
+          "selected_frame": 130,
+          "selected_clip_pts_ms": 4437.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02/boundary-index.json"
+          ],
+          "note": "原视觉区间已获用户全量复核确认；端点保守取值，区间及原帧证据保留。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            667,
+            681
+          ],
+          "review_window_ms": [
+            22247.0,
+            22714.0
+          ],
+          "source_review_window_ms": [
+            1222797.0,
+            1223264.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 22714.0,
+          "selected_frame": 681,
+          "selected_clip_pts_ms": 22815.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02/boundary-index.json"
+          ],
+          "note": "原视觉区间已获用户全量复核确认；端点保守取值，区间及原帧证据保留。"
+        }
+      },
+      "note": "主球场回合；发球及末球边界见原生帧复核区间。",
+      "start_ms": 4336.0,
+      "start_frame": 130,
+      "end_ms": 22714.0,
+      "end_frame": 681
+    },
+    {
+      "rally_id": 2,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            1281,
+            1288
+          ],
+          "review_window_ms": [
+            42726.0,
+            42960.0
+          ],
+          "source_review_window_ms": [
+            1243276.0,
+            1243510.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 42726.0,
+          "selected_frame": 1281,
+          "selected_clip_pts_ms": 42827.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02/boundary-index.json"
+          ],
+          "note": "原视觉区间已获用户全量复核确认；端点保守取值，区间及原帧证据保留。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            1356,
+            1367
+          ],
+          "review_window_ms": [
+            45228.0,
+            45595.0
+          ],
+          "source_review_window_ms": [
+            1245778.0,
+            1246145.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 45595.0,
+          "selected_frame": 1367,
+          "selected_clip_pts_ms": 45696.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02/boundary-index.json"
+          ],
+          "note": "原视觉区间已获用户全量复核确认；端点保守取值，区间及原帧证据保留。"
+        }
+      },
+      "note": "主球场回合；发球及末球边界见原生帧复核区间。",
+      "start_ms": 42726.0,
+      "start_frame": 1281,
+      "end_ms": 45595.0,
+      "end_frame": 1367
+    },
+    {
+      "rally_id": 3,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            4900,
+            4907
+          ],
+          "review_window_ms": [
+            163433.0,
+            163667.0
+          ],
+          "source_review_window_ms": [
+            1363983.0,
+            1364217.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 163433.0,
+          "selected_frame": 4900,
+          "selected_clip_pts_ms": 163534.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02/boundary-index.json"
+          ],
+          "note": "原视觉区间已获用户全量复核确认；端点保守取值，区间及原帧证据保留。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            5220,
+            5231
+          ],
+          "review_window_ms": [
+            174107.0,
+            174473.0
+          ],
+          "source_review_window_ms": [
+            1374657.0,
+            1375023.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 174473.0,
+          "selected_frame": 5231,
+          "selected_clip_pts_ms": 174574.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-full-annotation-review-20261015/C1-02/boundary-index.json"
+          ],
+          "note": "原视觉区间已获用户全量复核确认；端点保守取值，区间及原帧证据保留。"
+        }
+      },
+      "note": "主球场回合；发球及末球边界见原生帧复核区间。",
+      "start_ms": 163433.0,
+      "start_frame": 4900,
+      "end_ms": 174473.0,
+      "end_frame": 5231
+    }
+  ],
+  "non_rally_review_notes": [
+    {
+      "range_ms": [
+        47000,
+        131000
+      ],
+      "review_status": "human_confirmed",
+      "interpretation": "长时间擦场与换边间歇；换边后近端白衣、远端黑衣。"
+    }
+  ],
+  "excluded_events": [],
+  "human_review": {
+    "reviewer": "user",
+    "date": "2026-10-16",
+    "instruction": "复合完成，开始下一步",
+    "interpretation": "结合上文A/C全量复核页及31条待审标注，将复合理解为复核；本次确认A/C八段36个回合和全片标注完整性。",
+    "scope": "A/C八段全片，36个回合；不包含D组。",
+    "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-c1-02-20261015/full-v1.json",
+    "proposal_sha256": "ad94bdda429b4ddc4717f79e695d1c9a627346b4afabd64e154054290416050a",
+    "boundary_selection": {
+      "start": "left_endpoint_of_review_window",
+      "end": "right_endpoint_of_review_window"
+    },
+    "non_rally_decision": null
+  },
+  "evaluation_eligibility": {
+    "formal_benchmark_ready": false,
+    "blockers": [
+      "source_usage_split_not_locked",
+      "benchmark_registration_pending",
+      "exclusion_policy_not_implemented_in_evaluator"
+    ],
+    "notes": "人工确认标注不等于本轮M1完成或独立验收通过；正式评测前先接入排除规则。"
+  }
+}

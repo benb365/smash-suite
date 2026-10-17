@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-16",
+  "reviewer": "user",
+  "instruction": "刚刚D组的标注全部符合通过，包括单独审批事件",
+  "results": [
+    {
+      "sample_id": "m1-short-d1-01-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-01-20261015/full-v1.json",
+      "proposal_sha256": "48fc478c76111a29a22378c4dc572a6bca069d4c575f31afde7ec90f2bdfac15",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-01-20261015/full-v1.json",
+      "reviewed_sha256": "8c77fef9f6b4e0ada6dbf0545bffba5b9e03f8315ec33e0e6101b12c7fa3bb72",
+      "verified_rally_count": 7,
+      "confirmed_excluded_event_count": 2,
+      "coverage_ms": [
+        0,
+        150989.125
+      ]
+    },
+    {
+      "sample_id": "m1-short-d1-02-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-02-20261015/full-v1.json",
+      "proposal_sha256": "30504e34d9a2281cb66d495ea54f6c5f03231f7710e4d7a71de470fecf2c20ed",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-02-20261015/full-v1.json",
+      "reviewed_sha256": "aef30591e01a6853e9a8e3b40e7eb4b85e846cd432bdd78cff6c41cb8c09b102",
+      "verified_rally_count": 9,
+      "confirmed_excluded_event_count": 2,
+      "coverage_ms": [
+        0,
+        154989.125
+      ]
+    },
+    {
+      "sample_id": "m1-short-d1-03-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-03-20261015/full-v1.json",
+      "proposal_sha256": "937347cf18664fc9098ef819adecc29bfd09d03da46b73d2a93fff24a99785ac",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-03-20261015/full-v1.json",
+      "reviewed_sha256": "b94ea7d190521fdcc840aae7b1aaa8477fbb57baec74c312c556e5f15e1c6762",
+      "verified_rally_count": 8,
+      "confirmed_excluded_event_count": 2,
+      "coverage_ms": [
+        0,
+        149989.1875
+      ]
+    },
+    {
+      "sample_id": "m1-short-d1-04-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-04-20261015/full-v1.json",
+      "proposal_sha256": "c110c0de3e4582d42f072a3df7a992216a510f1ec34d5156d25a0e66a33340ec",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-04-20261015/full-v1.json",
+      "reviewed_sha256": "3b733ca29784ff9dcfab03b84633e948adb04a94125339ca2ef22d56eb7b675b",
+      "verified_rally_count": 8,
+      "confirmed_excluded_event_count": 2,
+      "coverage_ms": [
+        0,
+        154978.375
+      ]
+    }
+  ],
+  "totals": {
+    "clips": 4,
+    "verified_rallies": 32,
+    "confirmed_excluded_events": 8,
+    "human_confirmed_video_duration_s": 610.9458125
+  },
+  "limitations": "草稿、预览和原视频保留；D不参与已冻结的A组比较，来源用途和正式benchmark登记另行完成。"
+}

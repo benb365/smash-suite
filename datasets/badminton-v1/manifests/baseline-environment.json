@@ -1,0 +1,18 @@
+{
+  "captured_at": "2026-07-27T00:00:00+08:00",
+  "hardware": {
+    "gpu_cores": 18,
+    "memory_gb": 36,
+    "model": "Apple M3 Pro"
+  },
+  "opencv_decode_smoke_test": {
+    "decode_fps": 2735.13,
+    "elapsed_s": 0.2194,
+    "frames": 600,
+    "opencv": "4.13.0",
+    "python": "3.9.6",
+    "realtime_multiple_at_10fps": 273.51,
+    "workload": "generated H.264 1280x720, 10 FPS, 60 seconds, approximately 1 Mbps"
+  },
+  "qualification": "Environment smoke test only. It is not a model-speed or acceptance result, and must be repeated on real sampled footage."
+}

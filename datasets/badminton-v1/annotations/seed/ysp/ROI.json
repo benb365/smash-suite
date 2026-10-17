@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "type": "main_court_roi",
+  "status": "verified",
+  "court_profile": "badminton_singles",
+  "active_roi": "singles_court",
+  "video": "test_ysp.ts",
+  "reference_image": "ROI-reference.jpg",
+  "preview_image": "ROI-preview.jpg",
+  "candidate_frames_image": "ROI-candidate-frames.jpg",
+  "reference_frame": {
+    "frame_index": 1500,
+    "time_ms": 60000,
+    "fps": 25.0
+  },
+  "image_size": {
+    "width": 1920,
+    "height": 1080
+  },
+  "coordinate_system": {
+    "origin": "top_left",
+    "unit": "pixel",
+    "frame_index_base": 0
+  },
+  "roi_polygon": [
+    {"name": "near_left_singles_sideline", "x": 545, "y": 1031},
+    {"name": "near_right_singles_sideline", "x": 1374, "y": 1032},
+    {"name": "far_right_singles_sideline", "x": 1266, "y": 494},
+    {"name": "far_left_singles_sideline", "x": 656, "y": 494}
+  ],
+  "court_keypoints": {
+    "singles_corners": [
+      {"name": "far_left_singles_corner", "x": 656, "y": 494},
+      {"name": "far_right_singles_corner", "x": 1266, "y": 494},
+      {"name": "near_right_singles_corner", "x": 1374, "y": 1032},
+      {"name": "near_left_singles_corner", "x": 545, "y": 1031}
+    ],
+    "outer_corners": [
+      {"name": "far_left_outer_corner", "x": 603, "y": 494},
+      {"name": "far_right_outer_corner", "x": 1323, "y": 494},
+      {"name": "near_right_outer_corner", "x": 1453, "y": 1032},
+      {"name": "near_left_outer_corner", "x": 470, "y": 1031}
+    ]
+  },
+  "court_variants": {
+    "singles_court": {
+      "status": "verified",
+      "reference_marking": "purple singles sidelines in ROI-reference.jpg",
+      "roi_polygon": [
+        {"name": "near_left_singles_sideline", "x": 545, "y": 1031},
+        {"name": "near_right_singles_sideline", "x": 1374, "y": 1032},
+        {"name": "far_right_singles_sideline", "x": 1266, "y": 494},
+        {"name": "far_left_singles_sideline", "x": 656, "y": 494}
+      ]
+    },
+    "doubles_outer_court": {
+      "status": "historical_reference",
+      "reference_marking": "black outer court boundary in ROI-reference.jpg",
+      "roi_polygon": [
+        {"name": "near_left_margin", "x": 364, "y": 1079},
+        {"name": "near_right_margin", "x": 1552, "y": 1079},
+        {"name": "far_right_margin", "x": 1380, "y": 469},
+        {"name": "far_left_margin", "x": 541, "y": 469}
+      ]
+    }
+  },
+  "notes": [
+    "Top-level roi_polygon is the active singles court ROI and follows the purple marked singles sidelines.",
+    "outer_corners remain as historical doubles/outer-court reference points.",
+    "court_variants.doubles_outer_court preserves the previous broad ROI for comparison."
+  ]
+}

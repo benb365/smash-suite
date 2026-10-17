@@ -1,0 +1,90 @@
+{
+  "created_at": "2026-07-27T13:28:22+00:00",
+  "frame": "local/frames/court/youtube-ul7xw-wp5ia-view-1/youtube_Ul7xw-wp5iA-court_partial-000000276800-1.jpg",
+  "image_sha256": "63b20a019e7e232a9d8e65fe6e4ab38fb5dc4fb02da473954318a50b5f4de7f5",
+  "image_size": {
+    "height": 720,
+    "width": 1280
+  },
+  "item_id": "youtube_Ul7xw-wp5iA-court_partial-000000276800-1",
+  "points": [
+    {
+      "confidence": 0.54,
+      "point_id": "far_left_baseline",
+      "reason": "远端左侧底线与单打边线候选交点，邻场白线造成歧义",
+      "uncertain": true,
+      "x": 468.0,
+      "y": 389.0
+    },
+    {
+      "confidence": 0.63,
+      "point_id": "far_center_baseline",
+      "reason": "主场地中心线与远端底线候选交点，球员附近有遮挡",
+      "uncertain": true,
+      "x": 615.0,
+      "y": 388.0
+    },
+    {
+      "confidence": 0.55,
+      "point_id": "far_right_baseline",
+      "reason": "远端右侧底线与单打边线候选交点，需排除邻场线",
+      "uncertain": true,
+      "x": 774.0,
+      "y": 388.0
+    },
+    {
+      "confidence": 0.58,
+      "point_id": "far_left_short_service",
+      "reason": "远半场短发球线与左单打边线候选交点",
+      "uncertain": true,
+      "x": 432.0,
+      "y": 421.0
+    },
+    {
+      "confidence": 0.66,
+      "point_id": "far_center_short_service",
+      "reason": "远半场中心线与短发球线候选交点",
+      "uncertain": true,
+      "x": 617.0,
+      "y": 417.0
+    },
+    {
+      "confidence": 0.56,
+      "point_id": "far_right_short_service",
+      "reason": "远半场短发球线与右单打边线候选交点",
+      "uncertain": true,
+      "x": 814.0,
+      "y": 414.0
+    },
+    {
+      "confidence": 0.5,
+      "point_id": "net_left",
+      "reason": "左单打边线与球网地面投影候选交点，网柱和器材干扰",
+      "uncertain": true,
+      "x": 399.0,
+      "y": 451.0
+    },
+    {
+      "confidence": 0.51,
+      "point_id": "net_right",
+      "reason": "右单打边线与球网地面投影候选交点，网柱邻近线条密集",
+      "uncertain": true,
+      "x": 829.0,
+      "y": 447.0
+    }
+  ],
+  "producer": {
+    "model": "gpt-5",
+    "model_version": "current-session",
+    "prompt_version": "court-points-v1",
+    "tool": "codex"
+  },
+  "proposal_id": "0a14cc7d7e18627555bb",
+  "schema_version": 2,
+  "source_id": "youtube:Ul7xw-wp5iA",
+  "status": "proposed",
+  "target": "court",
+  "uncertain_point_count": 8,
+  "view_id": "youtube-ul7xw-wp5ia-view-1",
+  "view_state": "court_partial"
+}

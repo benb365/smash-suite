@@ -1,0 +1,230 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_reviewed_annotation",
+  "status": "verified_partial",
+  "sample_id": "m1-short-a1-01-20261015",
+  "category": "A",
+  "video": "datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+  "video_sha256": "fdd2aba069839480ebb6b5edb2dfbdf036e3b0c3de4893693edcb48fda00bca4",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 91.0,
+    "source_origin_ms": 599960.0,
+    "source_time_rule": "source_ms = source_origin_ms + timestamp_ms",
+    "clip_pts_rule": "clip_pts_ms = first_decoded_clip_pts_ms + timestamp_ms"
+  },
+  "coverage": {
+    "partial": true,
+    "reviewed_range_ms": [
+      0,
+      60000
+    ],
+    "outside_range": "unannotated",
+    "completeness": "human_confirmed_within_reviewed_range",
+    "uncertain_boundaries_are_not_verified_truth": true,
+    "boundary_intervals_preserved": true
+  },
+  "main_court": "转播画面主球场，近端红衣、远端绿衣。",
+  "main_court_review_status": "human_confirmed",
+  "generation": {
+    "method": "human_confirmed_agent_visual_intervals",
+    "producer": "Codex",
+    "date": "2026-10-15",
+    "requires_human_review": false,
+    "used_segmentation_predictions": false,
+    "notes": "用户确认首批视频标注正确并指定start采用区间左端、end采用区间右端；保留原区间，不宣称代表时间是已知精确触球/落地瞬间。"
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/A1-01",
+    "overview_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/A1-01/frame-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/A1-01/boundary-frame-index.json",
+    "native_index": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/A1-01/native-frame-index.json"
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "start_ms": 4040.0,
+      "end_ms": 9280.0,
+      "start_frame": 101,
+      "end_frame": 232,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": {
+            "frame_id": 102,
+            "timestamp_ms": 4080.0,
+            "clip_pts_ms": 4171.0
+          },
+          "review_window_frames": [
+            101,
+            103
+          ],
+          "review_window_ms": [
+            4040.0,
+            4120.0
+          ],
+          "source_review_window_ms": [
+            604000.0,
+            604080.0
+          ],
+          "note": "近端红衣发球，球离拍前后可见。",
+          "selected_endpoint": "left",
+          "selected_ms": 4040.0,
+          "selected_frame": 101
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": {
+            "frame_id": 231,
+            "timestamp_ms": 9240.0,
+            "clip_pts_ms": 9331.0
+          },
+          "review_window_frames": [
+            230,
+            232
+          ],
+          "review_window_ms": [
+            9200.0,
+            9280.0
+          ],
+          "source_review_window_ms": [
+            609160.0,
+            609240.0
+          ],
+          "note": "球下落后出现反弹，暂取第一处触地候选帧。",
+          "selected_endpoint": "right",
+          "selected_ms": 9280.0,
+          "selected_frame": 232
+        }
+      }
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 24640.0,
+      "end_ms": 31000.0,
+      "start_frame": 616,
+      "end_frame": 775,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": {
+            "frame_id": 617,
+            "timestamp_ms": 24680.0,
+            "clip_pts_ms": 24771.0
+          },
+          "review_window_frames": [
+            616,
+            618
+          ],
+          "review_window_ms": [
+            24640.0,
+            24720.0
+          ],
+          "source_review_window_ms": [
+            624600.0,
+            624680.0
+          ],
+          "note": "近端红衣发球，释放球与向前上方离拍可见。",
+          "selected_endpoint": "left",
+          "selected_ms": 24640.0,
+          "selected_frame": 616
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": null,
+          "review_window_frames": [
+            769,
+            775
+          ],
+          "review_window_ms": [
+            30760.0,
+            31000.0
+          ],
+          "source_review_window_ms": [
+            630720.0,
+            630960.0
+          ],
+          "note": "球从近端左侧界外下落，触地位置接近裁剪证据下沿，精确落地帧待复核。",
+          "selected_endpoint": "right",
+          "selected_ms": 31000.0,
+          "selected_frame": 775
+        }
+      }
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 47480.0,
+      "end_ms": 56120.0,
+      "start_frame": 1187,
+      "end_frame": 1403,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": {
+            "frame_id": 1188,
+            "timestamp_ms": 47520.0,
+            "clip_pts_ms": 47611.0
+          },
+          "review_window_frames": [
+            1187,
+            1189
+          ],
+          "review_window_ms": [
+            47480.0,
+            47560.0
+          ],
+          "source_review_window_ms": [
+            647440.0,
+            647520.0
+          ],
+          "note": "近端红衣发球，球从拍面附近向上离开。",
+          "selected_endpoint": "left",
+          "selected_ms": 47480.0,
+          "selected_frame": 1187
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "candidate_frame": {
+            "frame_id": 1401,
+            "timestamp_ms": 56040.0,
+            "clip_pts_ms": 56131.0
+          },
+          "review_window_frames": [
+            1400,
+            1403
+          ],
+          "review_window_ms": [
+            56000.0,
+            56120.0
+          ],
+          "source_review_window_ms": [
+            655960.0,
+            656080.0
+          ],
+          "note": "近端右侧球下落后反弹；暂取56.040秒，不能以红衣倒地作为结束事件。",
+          "selected_endpoint": "right",
+          "selected_ms": 56120.0,
+          "selected_frame": 1403
+        }
+      }
+    }
+  ],
+  "human_review": {
+    "reviewer": "user",
+    "date": "2026-10-15",
+    "instruction": "确认视频标注正确，start 同意采用区间左边界，end 同意采用区间右边界",
+    "scope": "A1-01与C1-01各归一化前60秒，5个回合及C组主球场",
+    "boundary_selection": {
+      "start": "left_endpoint_of_review_window",
+      "end": "right_endpoint_of_review_window"
+    },
+    "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-a1-01-20261015/partial-v1.json",
+    "proposal_sha256": "bfa12b23576ce033b32a3b65339abf8a9f597e95e827364aa6e2e2c1e9ab9ef9",
+    "limits": "确认不扩展到尚未检查的其余视频；partial覆盖之外不能算负例；边界误差分析保留原区间宽度。"
+  }
+}

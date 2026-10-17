@@ -1,0 +1,544 @@
+{
+  "date": "2026-10-15",
+  "purpose": "四类固定机位单打原视频候选，供人工确认后再选择连续测试片段",
+  "status": "人工确认的4个主选来源已完整下载为1080p MP4并保留音轨、所选公开流原帧率，时长及全片解码检查通过；3个备用来源本次未下载。尚未截取、清理或验收正式测试片段，未新增有效测试时长",
+  "skills": [
+    ".agents/skills/find-badminton-rally-videos/SKILL.md",
+    ".agents/skills/curate-badminton-training-data/SKILL.md"
+  ],
+  "method": [
+    "搜索前运行 status 和 rally-status，复用缓存、已有来源及永久人工决定。",
+    "在 Bilibili 使用高视角、俯拍、男单看台视角、圈内词与账号名，再沿合适投稿扩展上传者目录；在 YouTube 尝试 high angle、club singles final full match、varsity singles。",
+    "用赛事和选手定位官方录像；个人录像结合自然标题、账号投稿及实际画面，不把一镜到底、完整或视频长短当作连续性结论。",
+    "只作有界公开预览，不登录、不取 cookies、不下载整片；在可取得预览的候选上检查对打及回合间歇。疑似跳切由连续相邻帧确认，自动变化分数仅用于定位。"
+  ],
+  "interpretation_limits": [
+    "人工已按所列四类确认主选/备用来源；分类未设置角度/机位高度数值阈值，不扩张为其他视频的自动分类规则。",
+    "原片时长只用于选源；抽查通过不证明全片无剪辑或固定，更不等于该类别已累计10分钟有效测试内容。",
+    "临时预览经过降分辨率/重编码，仅用于选源，不是正式原帧率测试输入；帧率以后续正式采集核验为准。",
+    "temporary_record、temporary_metadata 和 /private/tmp 下索引图是本轮临时复核材料，可能被系统清理；本记录保存源链接、窗口和观察结论。",
+    "本轮未覆盖或撤销已有人工拒绝决定，未把 rally-only 发现写入 court/people 的 record-search 记录。"
+  ],
+  "candidates": [
+    {
+      "review_id": "A1",
+      "proposed_category": "官方高视角",
+      "review_status": "human_retained",
+      "recommendation": "人工确认主选来源",
+      "basis": "高机位沿球场纵向俯拍，全场边界清楚；缓存窗口可见比赛、等待和擦场。",
+      "limitations": [
+        "选源阶段复看缓存及历史解码记录；本次另已下载完整MP4并完成解码，整片机位与连续性尚未审核。",
+        "已经用于算法诊断，适合迭代集，不能直接作为未参与调参的独立验收来源。",
+        "原片其他时间是否持续固定、连续仍需检查。",
+        "选源阶段虎牙页面重新打开未完成；本次已通过公开下载取得完整原片。"
+      ],
+      "title": "【回放】女单 瓦尔达尼vs黄玲青 1/8赛 2026瑞士羽毛球公开赛 清流",
+      "url": "https://huya.com/video/play/1099925376.html",
+      "uploader": "虎牙羽毛球3号场地",
+      "original_duration_s": 2708,
+      "evidence_kind": "复看已有缓存及历史解码记录，未重新下载整片",
+      "inspected_source_windows_s": [
+        [
+          600,
+          780
+        ]
+      ],
+      "previously_used_for_algorithm_diagnostics": true,
+      "evidence": {
+        "sample_metadata": "datasets/badminton-v1/local/rally/official-swiss-2026-court3/sample.json",
+        "index_sheet": "datasets/badminton-v1/local/rally/official-swiss-2026-court3/contact.jpg",
+        "cached_clip_sha256": "71a5a21000a641b7b58d6278bb7d4b80796e98b80e9560630c55d1fed2f6003f",
+        "full_decode_passed": true
+      },
+      "human_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "full_source_download": {
+        "status": "downloaded_mp4_verified",
+        "date": "2026-10-15",
+        "path": "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "bytes": 1124307223,
+        "sha256": "1cc16c20974409b6d6e710a46cc185b8ff5e6951d898daf6116a694c914a1caa",
+        "duration_s": 2708.375873,
+        "streams": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "average_fps": 25
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2
+          }
+        ],
+        "format_id": "1080P",
+        "video_reencoded": false,
+        "frame_rate_converted": false,
+        "audio_preserved": true,
+        "full_decode_passed": true,
+        "duration_matches_source_within_2s": true,
+        "missing_fragment_warning_count": 0,
+        "local_verification": "datasets/badminton-v1/local/source-videos/A1/verification.json",
+        "continuity_and_test_clip_review": "pending"
+      }
+    },
+    {
+      "review_id": "A2",
+      "proposed_category": "官方高视角",
+      "review_status": "human_reserved",
+      "recommendation": "人工确认备用来源",
+      "basis": "固定全场高机位，缓存窗口有对打及回合间等待。",
+      "limitations": [
+        "已确认作为备用；截取后剔除花屏、跳屏部分，不再以保留花屏为使用目标。",
+        "已经用于算法诊断，不能直接作为独立验收来源。",
+        "虎牙页面本轮重新打开未完成，网页当前访问情况未重新确认。"
+      ],
+      "title": "【回放】女单\t安洗莹vs黄宥薰 2026印度羽毛球公开赛 清流",
+      "url": "https://huya.com/video/play/1091949210.html",
+      "uploader": "虎牙羽毛球3号场地",
+      "original_duration_s": 1992,
+      "evidence_kind": "复看已有缓存及历史解码记录，未重新下载整片",
+      "inspected_source_windows_s": [
+        [
+          600,
+          780
+        ]
+      ],
+      "previously_used_for_algorithm_diagnostics": true,
+      "evidence": {
+        "sample_metadata": "datasets/badminton-v1/local/rally/official-india-2026-court3/sample.json",
+        "index_sheet": "datasets/badminton-v1/local/rally/official-india-2026-court3/contact.jpg",
+        "cached_clip_sha256": "4d4868f17475f573b2805bd7ea2eae8549a190a811da702c54b4dc058292ea27",
+        "full_decode_passed": true
+      },
+      "human_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "reserve",
+        "clip_cleanup_requirement": "片段截取后剔除花屏和跳屏部分；问题位置和剔除范围待实际片段核验。保留原视频时间映射，不把跨越缺失时间的内容当作连续测试片段。",
+        "clip_cleanup_status": "pending_clip_extraction"
+      }
+    },
+    {
+      "review_id": "B1",
+      "proposed_category": "非官方高视角",
+      "review_status": "human_retained",
+      "recommendation": "人工确认主选来源",
+      "basis": "浏览器试看画面为看台方向的斜俯视，主要球场可见，有上传者水印；人工已确认按非官方高视角主选来源保留，作者是否自录仍未核验。",
+      "limitations": [
+        "仅检查浏览器开头试看画面，未记录精确源时间。",
+        "选源阶段下载器未取得格式；本次公开格式已恢复，1080p视频及音轨完整下载、封装MP4并通过解码检查。",
+        "固定性、回合间连续性及是否本人自录尚未确认；完整原片下载不代表测试片段已验收。"
+      ],
+      "title": "济南林丹杯羽毛球男单决赛 周泽奇 vs 杨启明",
+      "url": "https://www.bilibili.com/video/BV1FqpC67E8P/",
+      "uploader": "ZG看世界",
+      "original_duration_s": 1800.313,
+      "evidence_kind": "浏览器开头试看画面与公开文字元数据",
+      "inspected_source_windows_s": [],
+      "precise_browser_preview_timestamp_recorded": false,
+      "previously_used_for_algorithm_diagnostics": false,
+      "evidence": {
+        "temporary_metadata": "/private/tmp/smash-four-view-candidates-20261015/BV1FqpC67E8P/metadata-text-only.json"
+      },
+      "human_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "full_source_download": {
+        "status": "downloaded_mp4_verified",
+        "date": "2026-10-15",
+        "path": "datasets/badminton-v1/local/source-videos/B1/source.mp4",
+        "bytes": 314513654,
+        "sha256": "a92f5a505ce5548dc52ee3b47dca4c18cc604ff6143f89beef5965d2b6d65396",
+        "duration_s": 1800.313208,
+        "streams": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "average_fps": 30.00000104149312
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "sample_rate": 48000,
+            "channels": 2
+          }
+        ],
+        "format_id": "30080+30280",
+        "video_reencoded": false,
+        "frame_rate_converted": false,
+        "audio_preserved": true,
+        "full_decode_passed": true,
+        "duration_matches_source_within_2s": true,
+        "missing_fragment_warning_count": 0,
+        "local_verification": "datasets/badminton-v1/local/source-videos/B1/verification.json",
+        "continuity_and_test_clip_review": "pending"
+      }
+    },
+    {
+      "review_id": "C1",
+      "proposed_category": "场边低视角",
+      "review_status": "human_retained",
+      "recommendation": "人工确认主选来源",
+      "basis": "端线方向的较低机位，观察到连续对打、准备、捡球和走动；多个球场同时入画。",
+      "limitations": [
+        "人工已确认按场边低视角保留；具体为端线机位，不是贴近球网的侧边机位。",
+        "有观众经过遮挡前景，需要人工指定主球场。",
+        "只检查分散短窗口，没有核验完整69分钟连续性。"
+      ],
+      "title": "2026排名賽 黃宥薰 vs 王珮伃",
+      "url": "https://www.bilibili.com/video/BV12zPKzRE4v/",
+      "uploader": "台湾陈师傅低视角羽球",
+      "original_duration_s": 4153.956,
+      "evidence_kind": "本轮分散短窗口有界预览、完整解码及逐秒画面索引检查",
+      "inspected_source_windows_s": [
+        [
+          120,
+          150
+        ],
+        [
+          600,
+          630
+        ],
+        [
+          1200,
+          1230
+        ]
+      ],
+      "previously_used_for_algorithm_diagnostics": false,
+      "evidence": {
+        "temporary_record": "/private/tmp/smash-four-view-candidates-20261015/BV12zPKzRE4v/result.json",
+        "windows": [
+          {
+            "window_s": [
+              120,
+              150
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV12zPKzRE4v/window-1-index.jpg"
+          },
+          {
+            "window_s": [
+              600,
+              630
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV12zPKzRE4v/window-2-index.jpg"
+          },
+          {
+            "window_s": [
+              1200,
+              1230
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV12zPKzRE4v/window-3-index.jpg"
+          }
+        ]
+      },
+      "human_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "full_source_download": {
+        "status": "downloaded_mp4_verified",
+        "date": "2026-10-15",
+        "path": "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "bytes": 1631426699,
+        "sha256": "b6405dc2783ccad495d85a478169f9c77a303ac844a673699d9ed75053550c72",
+        "duration_s": 4153.957007,
+        "streams": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "average_fps": 29.98153823265564
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2
+          }
+        ],
+        "format_id": "30080+30280",
+        "video_reencoded": false,
+        "frame_rate_converted": false,
+        "audio_preserved": true,
+        "full_decode_passed": true,
+        "duration_matches_source_within_2s": true,
+        "missing_fragment_warning_count": 0,
+        "local_verification": "datasets/badminton-v1/local/source-videos/C1/verification.json",
+        "continuity_and_test_clip_review": "pending",
+        "verification_note": "首次null输出使用标称帧率时间精度产生DTS取整告警；保留demux时间基准及passthrough后全片解码无错误。MP4未改动，两次SHA256一致，初检日志保存在本地。"
+      }
+    },
+    {
+      "review_id": "C2",
+      "proposed_category": "场边低视角",
+      "review_status": "human_reserved",
+      "recommendation": "人工确认备用来源",
+      "basis": "低位从底线方向拍摄，近侧球员较大、邻场干扰明显；旧窗口保留过捡球与准备。",
+      "limitations": [
+        "近侧场地边界局部裁出画面，只建议作为困难场景备选。",
+        "已经用于算法诊断，不能直接作为独立验收来源。",
+        "本轮复用已有缓存，没有重采。"
+      ],
+      "title": "100zz单打",
+      "url": "https://www.bilibili.com/video/BV17D4y147F6/",
+      "uploader": "千佛山谌龙",
+      "original_duration_s": 707.818,
+      "evidence_kind": "复看已有缓存及历史解码记录，未重新下载整片",
+      "inspected_source_windows_s": [
+        [
+          120,
+          300
+        ]
+      ],
+      "previously_used_for_algorithm_diagnostics": true,
+      "evidence": {
+        "sample_metadata": "datasets/badminton-v1/local/rally/personal-qianfoshan-singles/sample.json",
+        "index_sheet": "datasets/badminton-v1/local/rally/personal-qianfoshan-singles/contact.jpg",
+        "cached_clip_sha256": "7215d4acf604834d44a5073f8c9a504642322c7528d8077688db932ab8292d74",
+        "full_decode_passed": true
+      },
+      "human_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "reserve"
+      }
+    },
+    {
+      "review_id": "D1",
+      "proposed_category": "个人常见斜侧方视角",
+      "review_status": "human_retained",
+      "recommendation": "人工确认主选来源",
+      "basis": "低位斜侧方个人球馆录像；本轮2:00、5:00、8:00附近各30秒可见对打、回合后走动及重新准备。",
+      "limitations": [
+        "人工已确认斜侧方分类；具体主球场范围仍待选片时记录。",
+        "短窗口通过不证明整段连续，也不直接计入10分钟目标。",
+        "5分钟附近有前景观众经过，长窗口仍需核验轻微机位移动与遮挡。"
+      ],
+      "title": "中羽3级对抗",
+      "url": "https://www.bilibili.com/video/BV1QPpz6pEJJ/",
+      "uploader": "今天不摸鱼1",
+      "original_duration_s": 613.29,
+      "evidence_kind": "本轮分散短窗口有界预览、完整解码及逐秒画面索引检查",
+      "inspected_source_windows_s": [
+        [
+          120,
+          150
+        ],
+        [
+          300,
+          330
+        ],
+        [
+          480,
+          510
+        ]
+      ],
+      "previously_used_for_algorithm_diagnostics": false,
+      "evidence": {
+        "temporary_record": "/private/tmp/smash-four-view-candidates-20261015/additional-probes-summary.json",
+        "windows": [
+          {
+            "window_s": [
+              120,
+              150
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV1QPpz6pEJJ/additional-windows/window-1-index.jpg"
+          },
+          {
+            "window_s": [
+              300,
+              330
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV1QPpz6pEJJ/additional-windows/window-2-index.jpg"
+          },
+          {
+            "window_s": [
+              480,
+              510
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV1QPpz6pEJJ/additional-windows/window-3-index.jpg"
+          }
+        ]
+      },
+      "human_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "full_source_download": {
+        "status": "downloaded_mp4_verified",
+        "date": "2026-10-15",
+        "path": "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "bytes": 156925690,
+        "sha256": "67cdb92e722b82eddab7b00eb6ed701db4c3bdb8f26a95d9f0d7cc527d1c53a6",
+        "duration_s": 613.290667,
+        "streams": [
+          {
+            "type": "video",
+            "codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "average_fps": 29.98634593995026
+          },
+          {
+            "type": "audio",
+            "codec": "aac",
+            "sample_rate": 48000,
+            "channels": 2
+          }
+        ],
+        "format_id": "30080+30280",
+        "video_reencoded": false,
+        "frame_rate_converted": false,
+        "audio_preserved": true,
+        "full_decode_passed": true,
+        "duration_matches_source_within_2s": true,
+        "missing_fragment_warning_count": 0,
+        "local_verification": "datasets/badminton-v1/local/source-videos/D1/verification.json",
+        "continuity_and_test_clip_review": "pending"
+      }
+    },
+    {
+      "review_id": "D2",
+      "proposed_category": "个人常见斜侧方视角",
+      "review_status": "human_reserved",
+      "recommendation": "人工确认备用来源",
+      "basis": "球场斜后方构图；本轮0:30、1:30、3:00附近各30秒可见对打、计分变化、走动、捡球和准备。",
+      "limitations": [
+        "标题的一镜到底不是审核结论，仍要检查原始时间是否连续。",
+        "原片约4分钟，需与其他确认素材共同累计类别时长。",
+        "有字幕和计分叠加；抽查画面保留间歇，叠加本身不是剪辑证据。"
+      ],
+      "title": "一镜到底算上闲聊才4分钟？起球就打！速通腿疼金老板！世界冠军也有今天！",
+      "url": "https://www.bilibili.com/video/BV1mz4y1J7DK/",
+      "uploader": "原来你是大唐啊",
+      "original_duration_s": 255.836,
+      "evidence_kind": "本轮分散短窗口有界预览、完整解码及逐秒画面索引检查",
+      "inspected_source_windows_s": [
+        [
+          30,
+          60
+        ],
+        [
+          90,
+          120
+        ],
+        [
+          180,
+          210
+        ]
+      ],
+      "previously_used_for_algorithm_diagnostics": false,
+      "evidence": {
+        "temporary_record": "/private/tmp/smash-four-view-candidates-20261015/additional-probes-summary.json",
+        "windows": [
+          {
+            "window_s": [
+              30,
+              60
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV1mz4y1J7DK/additional-windows/window-1-index.jpg"
+          },
+          {
+            "window_s": [
+              90,
+              120
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV1mz4y1J7DK/additional-windows/window-2-index.jpg"
+          },
+          {
+            "window_s": [
+              180,
+              210
+            ],
+            "full_decode_passed": true,
+            "index_sheet": "/private/tmp/smash-four-view-candidates-20261015/BV1mz4y1J7DK/additional-windows/window-3-index.jpg"
+          }
+        ]
+      },
+      "human_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "reserve",
+        "clip_cleanup_requirement": "片段截取后剔除花屏和跳屏部分；问题位置和剔除范围待实际片段核验。保留原视频时间映射，不把跨越缺失时间的内容当作连续测试片段。",
+        "clip_cleanup_status": "pending_clip_extraction"
+      }
+    }
+  ],
+  "excluded_recommendations": [
+    {
+      "url": "https://www.bilibili.com/video/BV1nDXoBFE32/",
+      "title": "林丹杯冠军庞博硕VS谌龙杯冠军叶舟洋，决战到天亮杭州站第一局30:28，一镜到底！",
+      "uploader": "一头唐狮",
+      "recommendation": "排除本轮主候选；未写入正式人工拒绝记录",
+      "basis": "120–150秒、600–630秒抽查中，相邻原生帧显示球员位置和构图瞬间跳变，确认时间跳切；标题一镜到底不可靠。",
+      "observed_source_cut_times_approx_s": [
+        124.738067,
+        606.339667,
+        609.542867
+      ],
+      "temporary_record": "/private/tmp/smash-four-view-candidates-20261015/BV1nDXoBFE32/result.json"
+    },
+    {
+      "url": "https://www.bilibili.com/video/BV1p4KK66ETC/",
+      "title": "我和桃田五五开？ 尤尼克斯上海公开赛16进8 Momota vs杨启明4K60p",
+      "uploader": "中碗牛肉丼",
+      "recommendation": "排除固定全场主候选；未写入正式人工拒绝记录",
+      "basis": "120–150、600–630、1200–1230秒预览出现跟拍、平移和变焦，部分时间失去完整球场；不是仅凭标题排除。",
+      "temporary_record": "/private/tmp/smash-four-view-candidates-20261015/BV1p4KK66ETC/result.json"
+    }
+  ],
+  "unresolved_leads": [
+    {
+      "url": "https://www.youtube.com/watch?v=2XlSAEtfERk",
+      "status": "原生搜索发现，但播放要求登录/机器人验证，未登录，未完成机位与连续性核验，不计入候选类别"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=vcESpUeecZk",
+      "status": "公开预览访问受机器人验证限制，未完成新核验，不计入候选类别"
+    }
+  ],
+  "human_confirmation": {
+    "date": "2026-10-15",
+    "reviewer": "user",
+    "instruction": "A1、B1、C1、D1 保留；D2、A2在片段截取后删除花屏和跳屏，和C2 作为备用记录",
+    "scope": "来源选择与所列视角分类；不代表未检查窗口的连续性、访问能力或测试片段已验收"
+  },
+  "follow_up_tasks": [
+    "从已下载的A1、B1、C1、D1完整MP4中选择、核验连续测试片段；B1公开取得原片的阻塞已解除，固定性及回合间连续性仍待检查。",
+    "A2、D2、C2作为备用，本次未下载；A2、D2后续截取后剔除花屏和跳屏，记录问题及排除区间、保留源时间映射。C2保留近侧边界裁切这一已知限制。",
+    "尚未执行测试片段截取或清理；后续实际核验不重叠有效时长，按来源/相关拍摄会话隔离迭代与验收。"
+  ],
+  "download_request": {
+    "date": "2026-10-15",
+    "instruction": "先下载主选视频并转为mp4",
+    "review_ids": [
+      "A1",
+      "B1",
+      "C1",
+      "D1"
+    ],
+    "scope": "按明确请求下载完整来源，覆盖搜索/预览阶段通常只取短窗口的规则；只使用公开、无cookie及无DRM格式。保留视频和音轨，不重编码、不缩放、不转帧率。"
+  }
+}

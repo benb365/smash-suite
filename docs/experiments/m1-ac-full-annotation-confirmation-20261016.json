@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-16",
+  "reviewer": "user",
+  "instruction": "复合完成，开始下一步",
+  "interpretation": "复核完成，确认当前A/C全量标注；按roadmap继续D组。",
+  "results": [
+    {
+      "sample_id": "m1-short-a1-01-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-a1-01-20261015/full-v1.json",
+      "proposal_sha256": "8d0188a8647cce8db72fd2409f64207e6c77c7726271afc6c376ae851777392d",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-01-20261015/full-v1.json",
+      "reviewed_sha256": "b5f538e867c92336189fa8360ac3fe2c2fbc264314893d092ee3d1298b1470fd",
+      "verified_rally_count": 5,
+      "coverage_ms": [
+        0,
+        168000.0
+      ],
+      "excluded_event_count": 0
+    },
+    {
+      "sample_id": "m1-short-a1-02-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-a1-02-20261015/full-v1.json",
+      "proposal_sha256": "38c892a25ffb1da0dc559e60542b630a0998ba22596e938749170f3c7fb9daf5",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-02-20261015/full-v1.json",
+      "reviewed_sha256": "8c18b65519002e57b53339fccc23773dae90b7bc03f18a881cbd859d9e560afd",
+      "verified_rally_count": 3,
+      "coverage_ms": [
+        0,
+        174000.0
+      ],
+      "excluded_event_count": 0
+    },
+    {
+      "sample_id": "m1-short-a1-03-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-a1-03-20261015/full-v1.json",
+      "proposal_sha256": "27ec6a3e0026861d882ee516a01c366d94a3185c0de6dad8c0c83af292f1b352",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-03-20261015/full-v1.json",
+      "reviewed_sha256": "a296dd6f67b9501df53df230b7d50b92ed4bb2c7cf9f1fe44c2a348ea0e49929",
+      "verified_rally_count": 6,
+      "coverage_ms": [
+        0,
+        174000.0
+      ],
+      "excluded_event_count": 1
+    },
+    {
+      "sample_id": "m1-short-a1-04-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-a1-04-20261015/full-v1.json",
+      "proposal_sha256": "e7f096cc91164a7fb8a50a485f0bec9159aae5e11b09fa42a86f285ce57476b6",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-04-20261015/full-v1.json",
+      "reviewed_sha256": "8bfde90b7d71a77bdea4912a39bf20412ba4fd09f400129866406f4e2aeaec11",
+      "verified_rally_count": 4,
+      "coverage_ms": [
+        0,
+        168040.0
+      ],
+      "excluded_event_count": 0
+    },
+    {
+      "sample_id": "m1-short-c1-01-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-c1-01-20261015/full-v1.json",
+      "proposal_sha256": "37e396497fa6e28e1ba3051be5df7b763e054b8e30a2aeca2e592f5bd7b382dc",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-01-20261015/full-v1.json",
+      "reviewed_sha256": "fb54d62bd53eb4d9c26ef555b1f883b325ea955d4aeebd17602c757594ec9867",
+      "verified_rally_count": 6,
+      "coverage_ms": [
+        0,
+        165101.3125
+      ],
+      "excluded_event_count": 0
+    },
+    {
+      "sample_id": "m1-short-c1-02-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-c1-02-20261015/full-v1.json",
+      "proposal_sha256": "ad94bdda429b4ddc4717f79e695d1c9a627346b4afabd64e154054290416050a",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-02-20261015/full-v1.json",
+      "reviewed_sha256": "bbcfd22e0217b903e1b4a0eda6795470ef34bb3d62ac3c9466f67fc2cacfb53b",
+      "verified_rally_count": 3,
+      "coverage_ms": [
+        0,
+        180110.3125
+      ],
+      "excluded_event_count": 0
+    },
+    {
+      "sample_id": "m1-short-c1-03-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-c1-03-20261015/full-v1.json",
+      "proposal_sha256": "07a214af5949daf061e65591a710a3417340697da69d00531168a7dfc39c63f4",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-03-20261015/full-v1.json",
+      "reviewed_sha256": "64dc9847bc30a86bc5f5bfe6272c4c7a7b10e91d19b71c7b9a8df233ce5434de",
+      "verified_rally_count": 5,
+      "coverage_ms": [
+        0,
+        165369.3125
+      ],
+      "excluded_event_count": 0
+    },
+    {
+      "sample_id": "m1-short-c1-04-20261015",
+      "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-c1-04-20261015/full-v1.json",
+      "proposal_sha256": "e40fd3b224c379e058b2b77951369c5afbf8e550e13e0ab7f3d1ed2b5f0cecf9",
+      "reviewed_annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-04-20261015/full-v1.json",
+      "reviewed_sha256": "a63c56098b66887fd17177cb8a4aa56a73104dd24c239f902b61367fecc00e5b",
+      "verified_rally_count": 4,
+      "coverage_ms": [
+        0,
+        175106.3125
+      ],
+      "excluded_event_count": 0
+    }
+  ],
+  "totals": {
+    "clips": 8,
+    "verified_rallies": 36,
+    "human_confirmed_video_duration_s": 1369.72725
+  },
+  "limitations": "原提案、原预览及已确认partial保持不变；来源用途与正式评测待完成。"
+}

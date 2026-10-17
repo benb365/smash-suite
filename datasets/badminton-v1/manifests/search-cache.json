@@ -1,0 +1,125 @@
+{
+  "queries": [
+    {
+      "purpose": "legacy_broadcast",
+      "query": "羽毛球 单打 全场 完整回放",
+      "query_key": "legacy_broadcast:羽毛球 单打 全场 完整回放",
+      "results": [
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1dRfABEEsL/",
+          "source_id": "bilibili:BV1dRfABEEsL",
+          "title": "2023 世锦赛女单决赛"
+        }
+      ],
+      "searched_at": "2026-07-27T00:00:00+00:00"
+    },
+    {
+      "purpose": "legacy_broadcast",
+      "query": "羽毛球 单打 决赛 完整转播 高位全场 首轮候选",
+      "query_key": "legacy_broadcast:羽毛球 单打 决赛 完整转播 高位全场 首轮候选",
+      "results": [
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1dRfABEEsL/",
+          "source_id": "bilibili:BV1dRfABEEsL",
+          "title": "2023 世界羽毛球锦标赛女单决赛 马林 vs 安洗莹"
+        },
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1K34y1U7f1/",
+          "source_id": "bilibili:BV1K34y1U7f1",
+          "title": "2021 丹麦羽毛球公开赛男单决赛 安赛龙 vs 桃田贤斗"
+        },
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1eF411y7oh/",
+          "source_id": "bilibili:BV1eF411y7oh",
+          "title": "2008 北京奥运会羽毛球男单决赛 林丹 vs 李宗伟"
+        },
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1PW41127zf/",
+          "source_id": "bilibili:BV1PW41127zf",
+          "title": "2018 全英羽毛球女单决赛 戴资颖 vs 山口茜"
+        },
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1t34y1o78G/",
+          "source_id": "bilibili:BV1t34y1o78G",
+          "title": "2021 丹麦羽毛球公开赛女单决赛 安洗莹 vs 山口茜"
+        }
+      ],
+      "searched_at": "2026-07-27T07:00:50+00:00"
+    },
+    {
+      "purpose": "court",
+      "query": "羽毛球 校园 俱乐部 业余 固定机位 全场 首轮",
+      "query_key": "court:羽毛球 校园 俱乐部 业余 固定机位 全场 首轮",
+      "results": [
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1AQ4y1Z7e7/",
+          "source_id": "bilibili:BV1AQ4y1Z7e7",
+          "title": "2021香港中文大学深圳-羽毛球单打决赛CUHKSZ"
+        },
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1pk4y1Y7XB/",
+          "source_id": "bilibili:BV1pk4y1Y7XB",
+          "title": "羽毛球业余单打练习赛 vs昱哥 20230215"
+        },
+        {
+          "canonical_url": "https://www.bilibili.com/video/BV1szYMzeEFT/",
+          "source_id": "bilibili:BV1szYMzeEFT",
+          "title": "业余羽毛球比赛"
+        }
+      ],
+      "searched_at": "2026-07-27T08:21:28+00:00"
+    },
+    {
+      "purpose": "court",
+      "query": "amateur badminton singles fixed camera youtube fallback",
+      "query_key": "court:amateur badminton singles fixed camera youtube fallback",
+      "results": [
+        {
+          "canonical_url": "https://www.youtube.com/watch?v=a-C_hDOD310",
+          "source_id": "youtube:a-C_hDOD310",
+          "title": "Badminton Singles Match: Stan Lee vs Leslie Lau"
+        },
+        {
+          "canonical_url": "https://www.youtube.com/watch?v=gmXVbt-AC8o",
+          "source_id": "youtube:gmXVbt-AC8o",
+          "title": "Bellevue Badminton Club exhibition match"
+        }
+      ],
+      "searched_at": "2026-07-27T08:22:55+00:00"
+    },
+    {
+      "purpose": "court",
+      "query": "amateur badminton singles fixed camera full court club campus",
+      "query_key": "court:amateur badminton singles fixed camera full court club campus",
+      "results": [
+        {
+          "canonical_url": "https://www.youtube.com/watch?v=gmXVbt-AC8o",
+          "source_id": "youtube:gmXVbt-AC8o",
+          "title": "Bellevue Badminton Club Viktor Axelsen Exhibition - Viktor Axelsen vs William Hu"
+        },
+        {
+          "canonical_url": "https://www.youtube.com/watch?v=vcESpUeecZk",
+          "source_id": "youtube:vcESpUeecZk",
+          "title": "Men's Singles Final - The DK Way Copper - Matt Honnor"
+        },
+        {
+          "canonical_url": "https://www.youtube.com/watch?v=Ul7xw-wp5iA",
+          "source_id": "youtube:Ul7xw-wp5iA",
+          "title": "Badminton Varsity 2020 - M1 Singles 1 - Tom Wade vs Andrew Zhu"
+        },
+        {
+          "canonical_url": "https://www.youtube.com/watch?v=5JcAyE7y4MA",
+          "source_id": "youtube:5JcAyE7y4MA",
+          "title": "Badminton Club"
+        },
+        {
+          "canonical_url": "https://www.youtube.com/watch?v=X9SNyjV0K-w",
+          "source_id": "youtube:X9SNyjV0K-w",
+          "title": "Kelvin Ho (Warwick1) vs Ashraf Alam (Nottingham3) 18/19 Set 1"
+        }
+      ],
+      "searched_at": "2026-07-27T12:44:43+00:00"
+    }
+  ],
+  "schema_version": 2
+}

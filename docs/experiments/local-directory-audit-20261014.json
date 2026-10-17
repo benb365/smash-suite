@@ -1,0 +1,372 @@
+{
+  "videos": [
+    {
+      "sample_id": "personal-BV1pk4y1Y7XB-v2",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-BV1pk4y1Y7XB-v2/clip.mp4",
+      "status": "accepted",
+      "group": "personal",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 5400,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/personal-fixed-camera-20261005/personal-BV1pk4y1Y7XB-v2/baseline/rallies.json",
+      "decoded_frames": 5400,
+      "decode_wall_s": 23.494,
+      "decoded_matches_historical": true,
+      "cached_frames": 5400,
+      "rallies": 2,
+      "replay_matches_saved": true,
+      "source_sha256": "e8a876cf5a97ccbac98befca540c9b25b8e54cda97a08fa7f5be0771bffe9d6b",
+      "native_fps": 29.99,
+      "duration_s": 180.03,
+      "historical_trace_sha256": "ce11ce88db29bd8c8148a2d61e81a394eb669ec949937f1f5299cc1c0c75eec2"
+    },
+    {
+      "sample_id": "personal-jiangmen-stable",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-jiangmen-stable/clip.mp4",
+      "status": "accepted",
+      "group": "personal",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 5395,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/personal-fixed-camera-20261005/personal-jiangmen-stable/baseline/rallies.json",
+      "decoded_frames": 5395,
+      "decode_wall_s": 21.42,
+      "decoded_matches_historical": true,
+      "cached_frames": 5394,
+      "rallies": 8,
+      "replay_matches_saved": true,
+      "source_sha256": "f39befdcf2d725236e6eebe34a48fb2b62e9f3572e47ee5a12155703a8a55555",
+      "native_fps": 29.97,
+      "duration_s": 180.01,
+      "historical_trace_sha256": "e070b58f223d2a9e046774d2709e78d6fef98bb9dc347a62ff94653857d3d1e9"
+    },
+    {
+      "sample_id": "personal-club-exhibition-stable",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-club-exhibition-stable/clip.mp4",
+      "status": "accepted",
+      "group": "personal",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 5395,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/personal-fixed-camera-20261005/personal-club-exhibition-stable/baseline/rallies.json",
+      "decoded_frames": 5395,
+      "decode_wall_s": 8.5,
+      "decoded_matches_historical": true,
+      "cached_frames": 5394,
+      "rallies": 9,
+      "replay_matches_saved": true,
+      "source_sha256": "c71dc1e838c2a7ab189e2817d2fa4fda2b774835e1e7532748fc481d9f6466c7",
+      "native_fps": 29.97,
+      "duration_s": 180.01,
+      "historical_trace_sha256": "65d5b0bdf18bb1cd19392358cc64dcecb56b3b4864e9541c0f99928bade15d11"
+    },
+    {
+      "sample_id": "personal-college-21points",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-college-21points/clip.mp4",
+      "status": "accepted",
+      "group": "personal",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 5396,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/personal-fixed-camera-20261005/personal-college-21points/baseline/rallies.json",
+      "decoded_frames": 5396,
+      "decode_wall_s": 22.048,
+      "decoded_matches_historical": true,
+      "cached_frames": 5394,
+      "rallies": 1,
+      "replay_matches_saved": true,
+      "source_sha256": "bc06837bb296e0d395a5c8f875d19931e0f1e02ffd21bf558fa1f10eae47bd6a",
+      "native_fps": 29.97,
+      "duration_s": 180.05,
+      "historical_trace_sha256": "1f9a2f47743c8ae50ccf4939623a53d22f274f94d19344b0e87733a537e3340b"
+    },
+    {
+      "sample_id": "personal-qianfoshan-singles",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles/clip.mp4",
+      "status": "accepted",
+      "group": "personal",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 5400,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/personal-fixed-camera-20261005/personal-qianfoshan-singles/baseline/rallies.json",
+      "decoded_frames": 5400,
+      "decode_wall_s": 24.173,
+      "decoded_matches_historical": true,
+      "cached_frames": 5400,
+      "rallies": 4,
+      "replay_matches_saved": true,
+      "source_sha256": "7215d4acf604834d44a5073f8c9a504642322c7528d8077688db932ab8292d74",
+      "native_fps": 30.0,
+      "duration_s": 180.0,
+      "historical_trace_sha256": "13e8ba90aba1771561246c83cd2e0c06830e13f451b626d0ba4577279bdf697d"
+    },
+    {
+      "sample_id": "official-india-2026-court3",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-india-2026-court3/clip.mp4",
+      "status": "accepted",
+      "group": "official",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 4500,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/official-high-angle-20261003/official-india-2026-court3/rallies.json",
+      "decoded_frames": 4500,
+      "decode_wall_s": 19.196,
+      "decoded_matches_historical": true,
+      "cached_frames": 4500,
+      "rallies": 8,
+      "replay_matches_saved": true,
+      "source_sha256": "4d4868f17475f573b2805bd7ea2eae8549a190a811da702c54b4dc058292ea27",
+      "native_fps": 25.0,
+      "duration_s": 180.0,
+      "historical_trace_sha256": "81be1f32da0c7d06ff34cea9b9c2fd354478eaf7ce1dc92387fd4fe3432da68d"
+    },
+    {
+      "sample_id": "official-orleans-2026-court2",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-orleans-2026-court2/clip.mp4",
+      "status": "accepted",
+      "group": "official",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 4500,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/official-high-angle-20261003/official-orleans-2026-court2/rallies.json",
+      "decoded_frames": 4500,
+      "decode_wall_s": 19.719,
+      "decoded_matches_historical": true,
+      "cached_frames": 4500,
+      "rallies": 4,
+      "replay_matches_saved": true,
+      "source_sha256": "9c026952989131666989e9abbd4714e627389384e0a99298eb40bdcc5fbab7c5",
+      "native_fps": 25.0,
+      "duration_s": 180.0,
+      "historical_trace_sha256": "a79154fcc0b2f239de6747fa2c5daa4069483387163684fe5032bce8756c0619"
+    },
+    {
+      "sample_id": "official-singapore-2026-court2",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-singapore-2026-court2/clip.mp4",
+      "status": "accepted",
+      "group": "official",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 4500,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/official-high-angle-20261003/official-singapore-2026-court2/rallies.json",
+      "decoded_frames": 4500,
+      "decode_wall_s": 15.929,
+      "decoded_matches_historical": true,
+      "cached_frames": 4500,
+      "rallies": 5,
+      "replay_matches_saved": true,
+      "source_sha256": "53993ffe01bdb5b997dd57e8da54685f09ff99a998eb3ba56845aac72df360e4",
+      "native_fps": 25.0,
+      "duration_s": 180.0,
+      "historical_trace_sha256": "9f74ec0beacc3b98f76b115375d1052a530e4810b4549847b1fa70f58ad25d0b"
+    },
+    {
+      "sample_id": "official-allengland-2026-court3",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-allengland-2026-court3/clip.mp4",
+      "status": "accepted",
+      "group": "official",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 4500,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/official-high-angle-20261003/official-allengland-2026-court3/rallies.json",
+      "decoded_frames": 4500,
+      "decode_wall_s": 19.989,
+      "decoded_matches_historical": true,
+      "cached_frames": 4500,
+      "rallies": 6,
+      "replay_matches_saved": true,
+      "source_sha256": "2754c317d79e56dd4bfa922b57be50dc6cced49f1022d648d77381c09e4b4c74",
+      "native_fps": 25.0,
+      "duration_s": 180.0,
+      "historical_trace_sha256": "918219d354c76cf41ef11cb3f9ff907107375711e9a0dac53777612f0e659bf9"
+    },
+    {
+      "sample_id": "official-canada-2026-court2",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-canada-2026-court2/clip.mp4",
+      "status": "accepted",
+      "group": "official",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 4500,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/official-high-angle-20261003/official-canada-2026-court2/rallies.json",
+      "decoded_frames": 4500,
+      "decode_wall_s": 20.271,
+      "decoded_matches_historical": true,
+      "cached_frames": 4500,
+      "rallies": 5,
+      "replay_matches_saved": true,
+      "source_sha256": "a0d06e9ed3f45b3a5bdeceaea36f9cbd4969324380bf00948482e0e0ef97be30",
+      "native_fps": 25.0,
+      "duration_s": 180.0,
+      "historical_trace_sha256": "dc0b352c5d1e011620f061aec169e9f225f964a5c6aaf098717ef88e0ec8cc20"
+    },
+    {
+      "sample_id": "official-swiss-2026-court3",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-swiss-2026-court3/clip.mp4",
+      "status": "accepted",
+      "group": "official",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 4500,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/official-high-angle-20261003/official-swiss-2026-court3/rallies.json",
+      "decoded_frames": 4500,
+      "decode_wall_s": 18.797,
+      "decoded_matches_historical": true,
+      "cached_frames": 4500,
+      "rallies": 6,
+      "replay_matches_saved": true,
+      "source_sha256": "71a5a21000a641b7b58d6278bb7d4b80796e98b80e9560630c55d1fed2f6003f",
+      "native_fps": 25.0,
+      "duration_s": 180.0,
+      "historical_trace_sha256": "35061c11591214866cb0193e3954239325dea79e90a28d5546ba5a8da6613453"
+    },
+    {
+      "sample_id": "personal-20261001-singles",
+      "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-20261001-singles/clip.mp4",
+      "status": "accepted",
+      "group": "personal",
+      "sha_matches_manifest": true,
+      "sha_matches_inference_result": true,
+      "historical_model_frames": 5396,
+      "result_path": "/Users/bytedance/workspace/test/meterials/outputs/personal-fixed-camera-20261005/personal-20261001-singles/baseline/rallies.json",
+      "decoded_frames": 5396,
+      "decode_wall_s": 19.807,
+      "decoded_matches_historical": true,
+      "cached_frames": 5394,
+      "rallies": 2,
+      "replay_matches_saved": true,
+      "source_sha256": "f2b43be090a075a2f3ccb99e6ad2f6b1b2b9e39f12b90d6a7a9420b192544a41",
+      "native_fps": 29.97,
+      "duration_s": 180.05,
+      "historical_trace_sha256": "92a2d522b5696a045b93a225784da175972445260ec4e2909c3fa4d020d60446"
+    }
+  ],
+  "status_counts": {
+    "failed": 4,
+    "rejected": 18,
+    "accepted": 12,
+    "needs_visual_review": 3
+  },
+  "local_directories": {
+    "clips": {
+      "files": 1,
+      "bytes": 1707989
+    },
+    "court-fits": {
+      "files": 1,
+      "bytes": 54355
+    },
+    "court-proposals": {
+      "files": 4,
+      "bytes": 615220
+    },
+    "cvat-tasks": {
+      "files": 15,
+      "bytes": 3523189
+    },
+    "exports": {
+      "files": 2,
+      "bytes": 9731
+    },
+    "frames": {
+      "files": 5,
+      "bytes": 449448
+    },
+    "model-inputs": {
+      "files": 5,
+      "bytes": 12500
+    },
+    "model-proposals": {
+      "files": 1,
+      "bytes": 2189
+    },
+    "previews": {
+      "files": 38,
+      "bytes": 9085533
+    },
+    "rally": {
+      "files": 243,
+      "bytes": 1906566896
+    },
+    "rally-review": {
+      "files": 4,
+      "bytes": 1748438
+    },
+    "search-results": {
+      "files": 1,
+      "bytes": 688
+    },
+    "source-probes": {
+      "files": 76,
+      "bytes": 675219
+    }
+  },
+  "seed": {
+    "video": "/Users/bytedance/workspace/test/smash-suite/captures/ysp/test_ysp.ts",
+    "decoded_frames": 7725,
+    "historical_model_frames": 7725,
+    "cached_frames": 7725,
+    "decoded_matches_historical": true,
+    "replay_matches_saved": true,
+    "rallies": 11,
+    "sha256": "03ea25472b69a6867413a6977b9b4eca7d3f804c75e721cce8d0af1fb435bf16"
+  },
+  "actual_model_window": {
+    "video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-india-2026-court3/clip.mp4",
+    "device": "cpu",
+    "limit_s": 3,
+    "status": "completed",
+    "actual_video_frames": 75,
+    "model_observations": 75,
+    "predictions": [],
+    "wall_s": 12.823315166,
+    "model": "existing TrackNet.py + ball_track.pt",
+    "note": "Direct run of production input/model/segmenter modules; CLI memory sampling uses ps and is blocked in sandbox. Three-second input only verifies execution, not rally accuracy."
+  },
+  "validation": {
+    "original": "15 sources passed",
+    "reference_only_copy": "15 sources passed with 43 referenced local files",
+    "excluded_directories": [
+      "search-results",
+      "source-probes",
+      "model-inputs",
+      "model-proposals",
+      "rally-review"
+    ],
+    "limitation": "This validates metadata-referenced court/people artifacts. It does not establish that all excluded files are disposable or validate all rally videos."
+  },
+  "automated_tests": {
+    "passed": 61,
+    "collected_media_used": false,
+    "note": "Real-container tests generate temporary VFR videos; model responses in routine tests use stubs."
+  },
+  "rally_screening_groups": {
+    "failed": {
+      "records": 4,
+      "clips": 0,
+      "clip_bytes": 0
+    },
+    "rejected": {
+      "records": 18,
+      "clips": 18,
+      "clip_bytes": 1052806451
+    },
+    "accepted": {
+      "records": 12,
+      "clips": 12,
+      "clip_bytes": 687629967
+    },
+    "needs_visual_review": {
+      "records": 3,
+      "clips": 3,
+      "clip_bytes": 157387133
+    }
+  },
+  "audit_date": "2026-10-14",
+  "scope": "Read-only local dataset audit; no media deleted or moved. Full decoding and cached trajectory replay plus a short actual model run.",
+  "source_versions": {
+    "backend/app/vision/video_input.py": "dbbf7475e58e0204e3004f3bcf24b5036f4e196e16b3a05e8e0418c2af21d898",
+    "backend/app/vision/tracknet_rally.py": "ffdc46072896abb79243b4427c2e52f3581d03c39ca89891c2e28ea4e0694197",
+    "backend/app/vision/rally_stream.py": "48586d5b70b9252c26bb7053ba6d14ef7188e21c04f8d0a9b8f27c6e9c74a2e3"
+  }
+}

@@ -1,0 +1,1391 @@
+{
+  "samples": [
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T06:39:16+00:00",
+      "description": "低视角 &quot;稳重心，赢一半&quot;男子羽毛球单打 民间男单单打视频",
+      "device_evidence": "unknown",
+      "duration": 377.602,
+      "error": "operation failed (1); see /Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-jiangmen-20240303/download.log",
+      "group": "personal",
+      "sample_id": "personal-jiangmen-20240303",
+      "source_id": "bilibili:BV16t421t7Qw",
+      "status": "failed",
+      "title": "低视角 \"稳重心，赢一半\"男子羽毛球单打 民间男单单打视频",
+      "uploader": "江门新手",
+      "url": "https://www.bilibili.com/video/BV16t421t7Qw/",
+      "view_id": "jiangmen-green-court-side",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "created_at": "2026-10-03T06:41:17+00:00",
+      "device_evidence": "Uploader description: 手机录的orz",
+      "error": "operation failed (1); see /Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/phone-yuzi-quanqing-20250324/metadata.log",
+      "group": "personal",
+      "sample_id": "phone-yuzi-quanqing-20250324",
+      "source_id": "bilibili:BV1Svo8YSESx",
+      "status": "failed",
+      "url": "https://www.bilibili.com/video/BV1Svo8YSESx/",
+      "view_id": "quangqing-chongqing-zhejiang-court",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T06:41:19+00:00",
+      "description": "2023年世界羽毛球锦标赛 女单决赛 卡罗琳娜.马林VS安洗莹",
+      "device_evidence": "unknown",
+      "duration": 3720.102,
+      "group": "official",
+      "media": {
+        "bytes": 61127148,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-worlds-2023/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "48a5a5d681bc8f7248d3da5eb10ba0beb72f1d071231afa69d64ea18d258c4f8",
+        "suspected_cut_times_s": [
+          16.133333,
+          52.533333,
+          59.666667,
+          67.766667,
+          78.6,
+          93.433333,
+          101.133333,
+          105.733333,
+          109.366667,
+          126.066667,
+          131.166667,
+          137.866667,
+          142.6,
+          147.433333,
+          165.433333,
+          166.933333,
+          173.133333,
+          174.733333
+        ],
+        "width": 1920
+      },
+      "sample_id": "official-worlds-2023",
+      "source_id": "bilibili:BV1dRfABEEsL",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T06:45:26+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "Contact sheet and 18 cut flags show player profiles, close-ups and spectators; not a continuous fixed-camera match window.",
+        "reviewer": "codex"
+      },
+      "title": "【1080P】2023年世界羽毛球锦标赛 女单决赛 卡罗琳娜.马林VS安洗莹",
+      "uploader": "bleach1949",
+      "url": "https://www.bilibili.com/video/BV1dRfABEEsL/",
+      "view_id": "copenhagen-worlds-2023-main",
+      "window_s": [
+        300.0,
+        480.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T06:45:03+00:00",
+      "description": "低视角 &quot;稳重心，赢一半&quot;男子羽毛球单打 民间男单单打视频",
+      "device_evidence": "unknown",
+      "duration": 377.602,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 70841924,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-jiangmen-native-v2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.01,
+        "fps": 29.97,
+        "height": 1080,
+        "sha256": "55b9ffedd70b3f85ffcd8fbc02fc05cc35de0bcf422905147d39ce0f99fb25eb",
+        "suspected_cut_times_s": [
+          84.517767
+        ],
+        "width": 1920
+      },
+      "sample_id": "personal-jiangmen-native-v2",
+      "source_id": "bilibili:BV16t421t7Qw",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "原取窗内有机位调整，改用145–325s独立取窗；同机位不重复计数。",
+        "reviewer": "codex"
+      },
+      "title": "低视角 \"稳重心，赢一半\"男子羽毛球单打 民间男单单打视频",
+      "uploader": "江门新手",
+      "url": "https://www.bilibili.com/video/BV16t421t7Qw/",
+      "view_id": "jiangmen-green-court-side",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T06:52:53+00:00",
+      "description": "20250324   重庆：卫志鹏／洪天岳vs浙江：夏义杰／钟家瑞\n\n（手机录的orz）\n（由于它临时调场，视频第一局前半局有缺失orz）",
+      "device_evidence": "上传者视频简介：手机录的orz",
+      "duration": 1717.972,
+      "group": "personal",
+      "match_type": "doubles",
+      "media": {
+        "bytes": 49672440,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/phone-yuzi-native-v2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 29.58,
+        "height": 1080,
+        "sha256": "c2ccf420b7ae794ecf0dd0f28b4102e0870ad1db655702ebc0aea25819537665",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "phone-yuzi-native-v2",
+      "source_id": "bilibili:BV1Svo8YSESx",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "双打，不属于当前固定机位单打范围。",
+        "reviewer": "codex"
+      },
+      "title": "【羽毛球】25全青（乙组男双小组赛）重庆：卫志鹏／洪天岳vs浙江：夏义杰／钟家瑞",
+      "uploader": "玉梓71",
+      "url": "https://www.bilibili.com/video/BV1Svo8YSESx/",
+      "view_id": "youth-2025-yuzi",
+      "window_s": [
+        180.0,
+        360.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T06:54:02+00:00",
+      "description": "手机录制抢先看！！！",
+      "device_evidence": "上传者视频简介：手机录制抢先看",
+      "duration": 1099.139,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 75493972,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/phone-xjtu-freshmen/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "67fab48a343cbb3bbbefc380cf0cf51f6867b5cd51a8d96a9629e472e2ea64a0",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "phone-xjtu-freshmen",
+      "source_id": "bilibili:BV1cH4y1d7M6",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "手机单打录制有持续移动/倾斜机位，不计入固定机位。",
+        "reviewer": "codex"
+      },
+      "title": "西安交通大学羽毛球新生杯男单决赛",
+      "uploader": "孤月千山",
+      "url": "https://www.bilibili.com/video/BV1cH4y1d7M6/",
+      "view_id": "xjtu-2023-freshmen",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "created_at": "2026-10-03T06:55:14+00:00",
+      "device_evidence": "上传者简介：现场高视角手机录制",
+      "error": "resolved metadata belongs to a different video",
+      "group": "personal",
+      "sample_id": "personal-BV1sJKP6qEVt",
+      "source_id": "bilibili:BV1sJKP6qEVt",
+      "status": "failed",
+      "url": "https://www.bilibili.com/video/BV1sJKP6qEVt/",
+      "view_id": "personal-BV1sJKP6qEVt",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T06:56:45+00:00",
+      "description": "现场高视角手机录制\n画质不好\n凑合看",
+      "device_evidence": "上传者简介：现场高视角手机录制",
+      "duration": 1426.564,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 72536248,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-BV1sJKP6qEVt-v2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "cdb9d27cd1e086e4d07f0421d5d10081232ca83862dc60b2ffe1556733557d32",
+        "suspected_cut_times_s": [
+          43.133333,
+          45.433333,
+          57.466667
+        ],
+        "width": 1920
+      },
+      "sample_id": "personal-BV1sJKP6qEVt-v2",
+      "source_id": "bilibili:BV1sJKP6qEVt",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "单打个人录制有变焦和转动机位。",
+        "reviewer": "codex"
+      },
+      "title": "Momota vs 叶舟洋 尤尼克斯上海公开赛 32进16 4K60p",
+      "uploader": "中碗牛肉丼",
+      "url": "https://www.bilibili.com/video/BV1sJKP6qEVt/",
+      "view_id": "personal-BV1sJKP6qEVt",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "created_at": "2026-10-03T06:58:09+00:00",
+      "device_evidence": "unknown",
+      "error": "resolved metadata belongs to a different video",
+      "group": "personal",
+      "sample_id": "personal-BV1pk4y1Y7XB",
+      "source_id": "bilibili:BV1pk4y1Y7XB",
+      "status": "failed",
+      "url": "https://www.bilibili.com/video/BV1pk4y1Y7XB/",
+      "view_id": "personal-BV1pk4y1Y7XB",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T06:59:14+00:00",
+      "description": "羽毛球业余单打练习赛 土豆核vs昱哥 20230215",
+      "device_evidence": "unknown",
+      "duration": 712.712,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 59394785,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-BV1pk4y1Y7XB-v2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.03,
+        "fps": 29.99,
+        "height": 1080,
+        "sha256": "e8a876cf5a97ccbac98befca540c9b25b8e54cda97a08fa7f5be0771bffe9d6b",
+        "suspected_cut_times_s": [],
+        "width": 1906
+      },
+      "sample_id": "personal-BV1pk4y1Y7XB-v2",
+      "source_id": "bilibili:BV1pk4y1Y7XB",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "固定后场低角度业余单打，有相邻场活动和短暂前景经过，设备未知。",
+        "reviewer": "codex"
+      },
+      "title": "羽毛球业余单打练习赛 vs昱哥 20230215 p01 第一局",
+      "uploader": "豆哥羽球日记",
+      "url": "https://www.bilibili.com/video/BV1pk4y1Y7XB/",
+      "view_id": "personal-BV1pk4y1Y7XB",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T06:59:45+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 3668,
+      "group": "official",
+      "match_type": "doubles",
+      "media": {
+        "bytes": 53487100,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-malaysia-2026-court2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "0f1a1fd089a6994be9d7949651f141b6595e5bbef26fcadf551a13889593f925",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "official-malaysia-2026-court2",
+      "source_id": "huya.com:3040a6f518cbaf6d",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "双打，且原窗口大部分为暖场，不计入单打范围。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】 王耀新/张御宇 vs 阿兹林/陈蔚强 2026马来西亚公开赛 清流",
+      "uploader": "虎牙羽毛球2号场地",
+      "url": "https://huya.com/video/play/1090937790.html",
+      "view_id": "malaysia-2026-court2",
+      "window_s": [
+        300.0,
+        480.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:00:06+00:00",
+      "description": "https://www.youtube.com/watch?v=vGlqQEKy_4Q",
+      "device_evidence": "unknown",
+      "duration": 687.078,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 20870980,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-BV1Z64y1W7dJ/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.01,
+        "fps": 29.97,
+        "height": 720,
+        "sha256": "73479dc3052792850c0245c3f08f34772a5f8569174601a59ccc1692ff016f70",
+        "suspected_cut_times_s": [
+          29.362667
+        ],
+        "width": 1280
+      },
+      "sample_id": "personal-BV1Z64y1W7dJ",
+      "source_id": "bilibili:BV1Z64y1W7dJ",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "原取窗有暖场到比赛的转场，改用120–300s；同机位不重复计数。",
+        "reviewer": "codex"
+      },
+      "title": "羽毛球真棒！一场精彩的羽毛球单打比赛！！！",
+      "uploader": "基本功才是硬道理",
+      "url": "https://www.bilibili.com/video/BV1Z64y1W7dJ/",
+      "view_id": "personal-BV1Z64y1W7dJ",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:00:47+00:00",
+      "description": "感谢每一个点赞！喜欢低视角可以点个关注",
+      "device_evidence": "unknown",
+      "duration": 317.052,
+      "group": "personal",
+      "media": {
+        "bytes": 48468283,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-BV1Cyn8z4ERv/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "97e301c4b4d12c991e7d3892d37aead605ab17623da45ef81217f082171babf6",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-BV1Cyn8z4ERv",
+      "source_id": "bilibili:BV1Cyn8z4ERv",
+      "status": "needs_visual_review",
+      "title": "低视角欣赏羽毛球职业男单的压迫感！",
+      "uploader": "零丹",
+      "url": "https://www.bilibili.com/video/BV1Cyn8z4ERv/",
+      "view_id": "personal-BV1Cyn8z4ERv",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:01:37+00:00",
+      "description": "22:20\n21:18",
+      "device_evidence": "unknown",
+      "duration": 713.943,
+      "group": "personal",
+      "media": {
+        "bytes": 63072719,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-BV1AQ4y1Z7e7/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "779649a05e643d8ae9a0b9bf2c084b70b5cab7bbd1a5152d202c43be3d1e025e",
+        "suspected_cut_times_s": [
+          110.833333
+        ],
+        "width": 1920
+      },
+      "sample_id": "personal-BV1AQ4y1Z7e7",
+      "source_id": "bilibili:BV1AQ4y1Z7e7",
+      "status": "needs_visual_review",
+      "title": "2021香港中文大学深圳-羽毛球单打决赛CUHKSZ",
+      "uploader": "轻拢慢捻抹复挑_",
+      "url": "https://www.bilibili.com/video/BV1AQ4y1Z7e7/",
+      "view_id": "personal-BV1AQ4y1Z7e7",
+      "window_s": [
+        60.0,
+        240.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:01:51+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 3668,
+      "group": "official",
+      "match_type": "doubles",
+      "media": {
+        "bytes": 60339635,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-malaysia-2026-court2-play/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "396a3ffa413379b76b94c8795c1d00825a4b91b7b0437a4688dd946f10ac8ff6",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "official-malaysia-2026-court2-play",
+      "source_id": "huya.com:3040a6f518cbaf6d",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "双打，不属于本轮单打范围。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】 王耀新/张御宇 vs 阿兹林/陈蔚强 2026马来西亚公开赛 清流",
+      "uploader": "虎牙羽毛球2号场地",
+      "url": "https://huya.com/video/play/1090937790.html",
+      "view_id": "malaysia-2026-court2",
+      "window_s": [
+        900.0,
+        1080.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:05:23+00:00",
+      "description": "低视角 &quot;稳重心，赢一半&quot;男子羽毛球单打 民间男单单打视频",
+      "device_evidence": "unknown",
+      "duration": 377.602,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 68901920,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-jiangmen-stable/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.01,
+        "fps": 29.97,
+        "height": 1080,
+        "sha256": "f39befdcf2d725236e6eebe34a48fb2b62e9f3572e47ee5a12155703a8a55555",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-jiangmen-stable",
+      "source_id": "bilibili:BV16t421t7Qw",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "固定低斜角民间单打，多个回合及换边，设备未知；避开原窗的相机调整。",
+        "reviewer": "codex"
+      },
+      "title": "低视角 \"稳重心，赢一半\"男子羽毛球单打 民间男单单打视频",
+      "uploader": "江门新手",
+      "url": "https://www.bilibili.com/video/BV16t421t7Qw/",
+      "view_id": "jiangmen-2024",
+      "window_s": [
+        145.0,
+        325.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:06:25+00:00",
+      "description": "https://www.youtube.com/watch?v=vGlqQEKy_4Q",
+      "device_evidence": "unknown",
+      "duration": 687.078,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 20534189,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-club-exhibition-stable/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.01,
+        "fps": 29.97,
+        "height": 720,
+        "sha256": "c71dc1e838c2a7ab189e2817d2fa4fda2b774835e1e7532748fc481d9f6466c7",
+        "suspected_cut_times_s": [],
+        "width": 1280
+      },
+      "sample_id": "personal-club-exhibition-stable",
+      "source_id": "bilibili:BV1Z64y1W7dJ",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "固定低斜角球馆单打表演赛，保留回合间停顿，720p，设备未知；避开片头转场。",
+        "reviewer": "codex"
+      },
+      "title": "羽毛球真棒！一场精彩的羽毛球单打比赛！！！",
+      "uploader": "基本功才是硬道理",
+      "url": "https://www.bilibili.com/video/BV1Z64y1W7dJ/",
+      "view_id": "personal-BV1Z64y1W7dJ",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:06:47+00:00",
+      "description": "-",
+      "device_evidence": "unknown",
+      "duration": 729.222,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 90112840,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-beijing-womens-final/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "4a954fce1955eb2080352478f360309aa96e42c8488f84a3afd45eae4a4b39f5",
+        "suspected_cut_times_s": [
+          46.4,
+          55.733333,
+          64.933333,
+          113.733333,
+          166.133333
+        ],
+        "width": 1920
+      },
+      "sample_id": "personal-beijing-womens-final",
+      "source_id": "bilibili:BV1AcAhesEen",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "背景比较确认跟拍转动和倾斜机位，不能计入固定机位。",
+        "reviewer": "codex",
+        "additional_contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally-review/rally-20261003/personal-beijing-womens-final-background.jpg"
+      },
+      "title": "首高羽毛球锦标赛 高水平组女单决赛 压箱底珍藏看了很多遍（侵删）",
+      "uploader": "L77i",
+      "url": "https://www.bilibili.com/video/BV1AcAhesEen/",
+      "view_id": "beijing-college-womens-final",
+      "window_s": [
+        180.0,
+        360.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:07:00+00:00",
+      "description": "现场高视角手机录制\n画质不好\n凑合看",
+      "device_evidence": "上传者简介：手机高视角",
+      "duration": 1426.564,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 88495884,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/phone-momota-play/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "19523641f834e53ac51655d79b68a13033a8739b09b5a7f18a42686a729b42ed",
+        "suspected_cut_times_s": [
+          9.833333,
+          20.333333
+        ],
+        "width": 1920
+      },
+      "sample_id": "phone-momota-play",
+      "source_id": "bilibili:BV1sJKP6qEVt",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "新取窗仍有变焦、观众远景、特写及转动机位，不合格。",
+        "reviewer": "codex"
+      },
+      "title": "Momota vs 叶舟洋 尤尼克斯上海公开赛 32进16 4K60p",
+      "uploader": "中碗牛肉丼",
+      "url": "https://www.bilibili.com/video/BV1sJKP6qEVt/",
+      "view_id": "personal-BV1sJKP6qEVt",
+      "window_s": [
+        300.0,
+        480.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:09:22+00:00",
+      "description": "22:20\n21:18",
+      "device_evidence": "unknown",
+      "duration": 713.943,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 63064823,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-cuhksz-stable/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "d906d7e84155d64686bdbaabd7eb9cd927a9f4d9670435a1bdb2602f1ac83bc8",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-cuhksz-stable",
+      "source_id": "bilibili:BV1AQ4y1Z7e7",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "更密的背景比较发现机位漂移/倾斜，主场近边界不全，未纳入固定机位主测试集。",
+        "reviewer": "codex",
+        "additional_contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally-review/rally-20261003/personal-cuhksz-stable-background.jpg"
+      },
+      "title": "2021香港中文大学深圳-羽毛球单打决赛CUHKSZ",
+      "uploader": "轻拢慢捻抹复挑_",
+      "url": "https://www.bilibili.com/video/BV1AQ4y1Z7e7/",
+      "view_id": "personal-BV1AQ4y1Z7e7",
+      "window_s": [
+        240.0,
+        420.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:12:06+00:00",
+      "description": "一般大学生，普通羽球爱好者，平均水平，日常记录\n欢迎各路高手随便喷",
+      "device_evidence": "unknown",
+      "duration": 565.962,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 71044755,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-college-21points/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.05,
+        "fps": 29.97,
+        "height": 1080,
+        "sha256": "bc06837bb296e0d395a5c8f875d19931e0f1e02ffd21bf558fa1f10eae47bd6a",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-college-21points",
+      "source_id": "bilibili:BV1KB4y1S7u1",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "固定后场校园单打连续对局，多个回合及准备/捡球，设备未知。",
+        "reviewer": "codex"
+      },
+      "title": "大学生羽毛球爱好者21分单打对局完整记录",
+      "uploader": "loludog",
+      "url": "https://www.bilibili.com/video/BV1KB4y1S7u1/",
+      "view_id": "college-21points",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:13:37+00:00",
+      "description": "业余羽毛球单打比赛，仅供初学者观摩，大神请绕道",
+      "device_evidence": "unknown",
+      "duration": 475.043,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 56942621,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-amateur-match/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 29.75,
+        "height": 720,
+        "sha256": "5baec660bd24f9c8c4f7dfaea2f38796ab666b20bacab0f82c70a6cd33c01aa8",
+        "suspected_cut_times_s": [],
+        "width": 1280
+      },
+      "sample_id": "personal-amateur-match",
+      "source_id": "bilibili:BV1WW411A7UC",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "持续转动/倾斜机位且前景遮挡，不能计入固定机位。",
+        "reviewer": "codex"
+      },
+      "title": "一场业余羽毛球单打比赛",
+      "uploader": "米酒的感悟",
+      "url": "https://www.bilibili.com/video/BV1WW411A7UC/",
+      "view_id": "amateur-2018",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:14:58+00:00",
+      "description": "考试加训练等于no更新 后面尽量多更",
+      "device_evidence": "unknown",
+      "duration": 426.689,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 34677691,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-dong-singles/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "b74f2465e88a9f1f0d3dedec23ac45ffb7d03b40aee6a5b57fb0d1e3732fe7de",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-dong-singles",
+      "source_id": "bilibili:BV1NN4y1G7xm",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "100–130s密集提帧确认119.5–120s附近突然换边，未保留连续比赛时间轴，不计入主测试集。",
+        "reviewer": "codex",
+        "additional_contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally-review/rally-20261003/personal-dong-singles-100-130s.jpg"
+      },
+      "title": "羽毛球单打比赛",
+      "uploader": "小董-睡不着",
+      "url": "https://www.bilibili.com/video/BV1NN4y1G7xm/",
+      "view_id": "dong-2022",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:17:27+00:00",
+      "description": "公司羽毛球男单季军赛",
+      "device_evidence": "unknown",
+      "duration": 389.49,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 46772909,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-tennis-player-singles/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "c5ac5e37b3bfc82640a3288f1cfdfa5f60d8e2b90f68cfd72c6f77f189653231",
+        "suspected_cut_times_s": [
+          25.866667
+        ],
+        "width": 1920
+      },
+      "sample_id": "personal-tennis-player-singles",
+      "source_id": "bilibili:BV1AF411S7to",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "训练到比赛转场且机位变化，有剪辑，不是连续固定单打窗口。",
+        "reviewer": "codex"
+      },
+      "title": "网球选手打羽毛球被溜日常",
+      "uploader": "Yeah_Jr",
+      "url": "https://www.bilibili.com/video/BV1AF411S7to/",
+      "view_id": "tennis-player-singles",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:18:25+00:00",
+      "description": "这位朋友是大运会男团甲组冠军的男单选手，本人只是普通羽毛球爱好者，难得能约他出来向他请教，人家也是非常热情地指导。为了配合我的实力达到指导的效果，人家没使出全力，所以还请B站各位林李嘴下留情",
+      "device_evidence": "unknown",
+      "duration": 447.06,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 46328391,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-qaq-singles/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "1b23da1318da891a67ad2c20cee2e84012a59fc65aeb500c3a4f895dd4beae15",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-qaq-singles",
+      "source_id": "bilibili:BV1im4y1u7iv",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "教学剪辑穿插文字页、跳剪和变焦，不是连续比赛窗口。",
+        "reviewer": "codex"
+      },
+      "title": "业余羽毛球单打该如何打",
+      "uploader": "手速不够快QAQ",
+      "url": "https://www.bilibili.com/video/BV1im4y1u7iv/",
+      "view_id": "qaq-singles",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:24:32+00:00",
+      "description": "-",
+      "device_evidence": "unknown",
+      "duration": 707.818,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 59794531,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "7215d4acf604834d44a5073f8c9a504642322c7528d8077688db932ab8292d74",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-qianfoshan-singles",
+      "source_id": "bilibili:BV17D4y147F6",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "固定低角度球馆单打，近侧边界局部裁出画面，保留为低机位挑战，设备未知。",
+        "reviewer": "codex"
+      },
+      "title": "100zz单打",
+      "uploader": "千佛山谌龙",
+      "url": "https://www.bilibili.com/video/BV17D4y147F6/",
+      "view_id": "qianfoshan-singles",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:26:14+00:00",
+      "description": "转载自优酷",
+      "device_evidence": "unknown",
+      "duration": 1353.493,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 25316771,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-japan-highschool/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 720,
+        "sha256": "650762330414ce7597cefbb7f1b0dedc57d0d5951fcb8700f1ef065da6f0a2be",
+        "suspected_cut_times_s": [
+          66.166667,
+          85.2,
+          96.466667,
+          151.9
+        ],
+        "width": 1280
+      },
+      "sample_id": "personal-japan-highschool",
+      "source_id": "bilibili:BV1h4411F7QF",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "来源描述为转载优酷；TV特写和转场频繁，不是个人固定机位。",
+        "reviewer": "codex"
+      },
+      "title": "大堀彩高中的单打比赛你看过吗？",
+      "uploader": "羽球怪咖",
+      "url": "https://www.bilibili.com/video/BV1h4411F7QF/",
+      "view_id": "japan-highschool",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:26:57+00:00",
+      "description": "三连支持一下！",
+      "device_evidence": "unknown",
+      "duration": 1463.716,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 74455513,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-school-games/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "bb920d7e9e5665b3118954cd440cef3570b87ecbb0cbc751f3d0bcccd7f68f1a",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-school-games",
+      "source_id": "bilibili:BV1wv411N73e",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "联系表确认随着运动员转动机位，不计入固定机位。",
+        "reviewer": "codex"
+      },
+      "title": "2021.中运会.初中组男子单打半决赛",
+      "uploader": "球Holiday",
+      "url": "https://www.bilibili.com/video/BV1wv411N73e/",
+      "view_id": "school-games",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:08:43+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 1992,
+      "group": "official",
+      "match_type": "singles",
+      "media": {
+        "bytes": 61670803,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-india-2026-court3/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "4d4868f17475f573b2805bd7ea2eae8549a190a811da702c54b4dc058292ea27",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "official-india-2026-court3",
+      "source_id": "huya.com:69638dc666056590",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "高视角固定全场，女单连续比赛；联系表有短暂压缩花屏，作为画质挑战保留。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】女单\t安洗莹vs黄宥薰 2026印度羽毛球公开赛 清流",
+      "uploader": "虎牙羽毛球3号场地",
+      "url": "https://huya.com/video/play/1091949210.html",
+      "view_id": "india-2026-court3",
+      "window_s": [
+        600.0,
+        780.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:04:45+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 3036,
+      "group": "official",
+      "match_type": "singles",
+      "media": {
+        "bytes": 76660746,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-orleans-2026-court2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "9c026952989131666989e9abbd4714e627389384e0a99298eb40bdcc5fbab7c5",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "official-orleans-2026-court2",
+      "source_id": "huya.com:8e9a5f724d441e75",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "高视角固定全场，女单连续比赛，含多回合与等待。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】女单 邱品蒨vs碧查梦 1/16赛 2026奥尔良羽毛球大师赛 清流",
+      "uploader": "虎牙羽毛球2号场地",
+      "url": "https://huya.com/video/play/1100833780.html",
+      "view_id": "orleans-2026-court2",
+      "window_s": [
+        600.0,
+        780.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:09:34+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 3456,
+      "group": "official",
+      "match_type": "singles",
+      "media": {
+        "bytes": 62269561,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-asia-2026-court2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "78e345e718838fcf8e763835fe53db93f90610c21c0bb521188a1f2c42c0cbd0",
+        "suspected_cut_times_s": [
+          15.56,
+          25.48,
+          38.28,
+          48.48,
+          85.92
+        ],
+        "width": 1920
+      },
+      "sample_id": "official-asia-2026-court2",
+      "source_id": "huya.com:9ddd00ef81b9279d",
+      "status": "rejected",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "TV回放内有多个特写、重播和镜头切换，不计入固定机位。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】男单 昆拉武特vs伍家朗 1/16赛 2026亚洲羽毛球锦标赛 清流",
+      "uploader": "虎牙羽毛球2号场地",
+      "url": "https://huya.com/video/play/1103855308.html",
+      "view_id": "asia-2026-court2",
+      "window_s": [
+        600.0,
+        780.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:10:52+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 3248,
+      "group": "official",
+      "match_type": "singles",
+      "media": {
+        "bytes": 46174415,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-singapore-2026-court2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "53993ffe01bdb5b997dd57e8da54685f09ff99a998eb3ba56845aac72df360e4",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "official-singapore-2026-court2",
+      "source_id": "huya.com:d6dadd3931f98209",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "高视角固定全场，男单连续比赛，含多回合与等待。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】男单 周天成vs奈良冈功大 1/16赛 2026新加坡羽毛球公开赛 清流",
+      "uploader": "虎牙羽毛球2号场地",
+      "url": "https://huya.com/video/play/1110867874.html",
+      "view_id": "singapore-2026-court2",
+      "window_s": [
+        600.0,
+        780.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:18:03+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 2660,
+      "group": "official",
+      "match_type": "singles",
+      "media": {
+        "bytes": 62848492,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-allengland-2026-court3/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "2754c317d79e56dd4bfa922b57be50dc6cced49f1022d648d77381c09e4b4c74",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "official-allengland-2026-court3",
+      "source_id": "huya.com:4c25be6f50652721",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "高视角固定全场，女单连续比赛，包含擦场与较长暂停。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】女单 明地阳菜vs王祉怡1/16赛 2026全英羽毛球公开赛 清流",
+      "uploader": "虎牙羽毛球3号场地",
+      "url": "https://huya.com/video/play/1098784534.html",
+      "view_id": "allengland-2026-court3",
+      "window_s": [
+        600.0,
+        780.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:06:54+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 2112,
+      "group": "official",
+      "match_type": "singles",
+      "media": {
+        "bytes": 61733272,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-canada-2026-court2/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "a0d06e9ed3f45b3a5bdeceaea36f9cbd4969324380bf00948482e0e0ef97be30",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "official-canada-2026-court2",
+      "source_id": "huya.com:22a6951134b67acc",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "高视角固定全场，男单连续比赛，含多回合与等待。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】男单\t冲本优大VS希莫加 2026加拿大羽毛球公开赛 清流",
+      "uploader": "虎牙羽毛球2号场地",
+      "url": "https://huya.com/video/play/1116089984.html",
+      "view_id": "canada-2026-court2",
+      "window_s": [
+        600.0,
+        780.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:03:57+00:00",
+      "description": null,
+      "device_evidence": "unknown",
+      "duration": 2708,
+      "group": "official",
+      "match_type": "singles",
+      "media": {
+        "bytes": 54673998,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-swiss-2026-court3/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 25.0,
+        "height": 1080,
+        "sha256": "71a5a21000a641b7b58d6278bb7d4b80796e98b80e9560630c55d1fed2f6003f",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "official-swiss-2026-court3",
+      "source_id": "huya.com:1cee36a21d6705e7",
+      "status": "accepted",
+      "suitability_review": {
+        "at": "2026-10-03T07:30:19.329055+00:00",
+        "note": "clip suitability only; not rally labels or court-geometry verification",
+        "phone_confirmed": false,
+        "reason": "高视角固定全场，女单连续比赛，含回合间等待与擦场。",
+        "reviewer": "codex"
+      },
+      "title": "【回放】女单 瓦尔达尼vs黄玲青 1/8赛 2026瑞士羽毛球公开赛 清流",
+      "uploader": "虎牙羽毛球3号场地",
+      "url": "https://huya.com/video/play/1099925376.html",
+      "view_id": "swiss-2026-court3",
+      "window_s": [
+        600.0,
+        780.0
+      ]
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:30:36+00:00",
+      "description": "-",
+      "device_evidence": "unknown",
+      "duration": 710.112,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 44198061,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-20261001-singles/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.05,
+        "fps": 29.97,
+        "height": 1080,
+        "sha256": "f2b43be090a075a2f3ccb99e6ad2f6b1b2b9e39f12b90d6a7a9420b192544a41",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-20261001-singles",
+      "source_id": "bilibili:BV16kaz6fEQz",
+      "status": "accepted",
+      "title": "20261001 羽毛球业余单打低视角 友vs超",
+      "uploader": "养成系羽毛球学习",
+      "url": "https://www.bilibili.com/video/BV16kaz6fEQz/",
+      "view_id": "amateur-20261001",
+      "window_s": [
+        120.0,
+        300.0
+      ],
+      "suitability_review": {
+        "reviewer": "codex",
+        "at": "2026-10-03T07:34:01.139201+00:00",
+        "reason": "固定后场低斜角业余单打，连续比赛及捡球/发球等待；行人多次遮挡画面，作为遮挡挑战保留。拍摄设备未知。",
+        "phone_confirmed": false,
+        "note": "clip suitability only; not rally labels or court-geometry verification"
+      }
+    },
+    {
+      "annotation_status": "unlabelled",
+      "channel": null,
+      "created_at": "2026-10-03T07:31:30+00:00",
+      "description": "",
+      "device_evidence": "unknown",
+      "duration": 735.615,
+      "group": "personal",
+      "match_type": "singles",
+      "media": {
+        "bytes": 45846131,
+        "contact_sheet": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/personal-newyear-2024/contact.jpg",
+        "decode_complete": true,
+        "duration_s": 180.0,
+        "fps": 30.0,
+        "height": 1080,
+        "sha256": "ff227c89656f8fe60dc3f1c35aa641a86efd2810c266f405c0d494060261f5a9",
+        "suspected_cut_times_s": [],
+        "width": 1920
+      },
+      "sample_id": "personal-newyear-2024",
+      "source_id": "bilibili:BV1UN4y1W7WG",
+      "status": "needs_visual_review",
+      "title": "2024新年第一次单打",
+      "uploader": "cHeNbOhAnNN",
+      "url": "https://www.bilibili.com/video/BV1UN4y1W7WG/",
+      "view_id": "newyear-2024",
+      "window_s": [
+        120.0,
+        300.0
+      ]
+    }
+  ],
+  "schema_version": 1
+}

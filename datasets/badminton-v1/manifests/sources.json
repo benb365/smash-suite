@@ -1,0 +1,821 @@
+{
+  "schema_version": 2,
+  "sources": [
+    {
+      "artifacts": {
+        "previews": [
+          {
+            "end_s": 12.0,
+            "path": "local/previews/local_test_ysp/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "c585df30a7bc92ac88e0187a0f0a207b0ef3f6c70885f8d10e7ed974133cf329",
+            "start_s": 0.0
+          },
+          {
+            "end_s": 72.0,
+            "path": "local/previews/local_test_ysp/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "869d68c393ae49dfef1ee29b5d5c48712f35f06b1bdda9b6d2fc9a28615b83a2",
+            "start_s": 60.0
+          },
+          {
+            "end_s": 132.0,
+            "path": "local/previews/local_test_ysp/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "2de19144bc6dda3c8acdaccf7dac8a0c2d043b20d24f61a1826d23d0ff585ce7",
+            "start_s": 120.0
+          },
+          {
+            "path": "local/previews/local_test_ysp/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "b4007d695bb2144bc8de760927295a38087e0e5f0f25ece019578f374e5f5357"
+          }
+        ]
+      },
+      "canonical_url": "file:datasets/badminton-v1/local/ysp/test_ysp.ts",
+      "capture_context": "other",
+      "competition_level": "unknown",
+      "platform": "local",
+      "platform_video_id": "test_ysp",
+      "purposes": [
+        "court"
+      ],
+      "source_id": "local:test_ysp",
+      "status": "held_out",
+      "title": "现有 YSP 样片",
+      "usage": "internal_research"
+    },
+    {
+      "canonical_url": "https://www.bilibili.com/video/BV1dRfABEEsL/",
+      "capture_context": "broadcast",
+      "competition_level": "professional",
+      "discovered_at": "2026-07-27T00:00:00+00:00",
+      "platform": "bilibili",
+      "platform_video_id": "BV1dRfABEEsL",
+      "purposes": [
+        "court",
+        "people"
+      ],
+      "source_id": "bilibili:BV1dRfABEEsL",
+      "status": "candidate",
+      "title": "2023 世锦赛女单决赛",
+      "usage": "internal_research",
+      "venue": "Copenhagen"
+    },
+    {
+      "artifacts": {
+        "previews": [
+          {
+            "end_s": 1813.429,
+            "path": "local/previews/bilibili_BV1K34y1U7f1/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "5047a80024ee3a2790f48694af846e93ba34053d2aab4ed1c58668adea5bdda3",
+            "start_s": 1801.429
+          },
+          {
+            "end_s": 3319.621,
+            "path": "local/previews/bilibili_BV1K34y1U7f1/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "c53ee3ab2f5b230c630e021d80760b1e931cf54ee30415421270b6798ccb588e",
+            "start_s": 3307.621
+          },
+          {
+            "end_s": 4825.812,
+            "path": "local/previews/bilibili_BV1K34y1U7f1/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "53192c646fe9afdcfe344fcf53f7b3aa297bd0c14f848782e6f4ff1f2593b622",
+            "start_s": 4813.812
+          },
+          {
+            "path": "local/previews/bilibili_BV1K34y1U7f1/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "db6883e95bea3c55aaf196d93cea64c8c4e5ae4d385ee0098d95251f0a87992e"
+          }
+        ]
+      },
+      "canonical_url": "https://www.bilibili.com/video/BV1K34y1U7f1/",
+      "capture_context": "broadcast",
+      "competition_level": "professional",
+      "discovered_at": "2026-07-27T07:00:50+00:00",
+      "media_metadata": {
+        "duration_s": 6024.765,
+        "height": 1080,
+        "inspected_at": "2026-07-27T07:31:57+00:00",
+        "width": 1920
+      },
+      "platform": "bilibili",
+      "platform_video_id": "BV1K34y1U7f1",
+      "purposes": [
+        "court",
+        "people"
+      ],
+      "source_id": "bilibili:BV1K34y1U7f1",
+      "status": "candidate",
+      "title": "2021 丹麦羽毛球公开赛男单决赛 安赛龙 vs 桃田贤斗",
+      "usage": "internal_research",
+      "venue": "Odense"
+    },
+    {
+      "artifacts": {
+        "previews": [
+          {
+            "end_s": 1007.081,
+            "path": "local/previews/bilibili_BV1eF411y7oh/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "b35922fc808a80d2a379a260eafea4f419c719f6931cd4302a1946096d740e3a",
+            "start_s": 995.081
+          },
+          {
+            "end_s": 1841.316,
+            "path": "local/previews/bilibili_BV1eF411y7oh/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "bb00e1b35fe82d34f060bc17aac226e727065e1629be18ec03e07452e007b0ea",
+            "start_s": 1829.316
+          },
+          {
+            "end_s": 2675.55,
+            "path": "local/previews/bilibili_BV1eF411y7oh/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "c7bdf896f2690ae52cbe150e524999c459e7a7dd3e224e44693449653613d955",
+            "start_s": 2663.55
+          },
+          {
+            "path": "local/previews/bilibili_BV1eF411y7oh/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "0d697d61f4003b7a7b72b55d6a4ed6d526c6bdc1151d19c86d8d6e3a8a9ef531"
+          }
+        ]
+      },
+      "canonical_url": "https://www.bilibili.com/video/BV1eF411y7oh/",
+      "capture_context": "broadcast",
+      "competition_level": "professional",
+      "discovered_at": "2026-07-27T07:00:50+00:00",
+      "media_metadata": {
+        "duration_s": 3336.938,
+        "height": 1080,
+        "inspected_at": "2026-07-27T07:32:11+00:00",
+        "width": 1920
+      },
+      "platform": "bilibili",
+      "platform_video_id": "BV1eF411y7oh",
+      "purposes": [
+        "court",
+        "people"
+      ],
+      "source_id": "bilibili:BV1eF411y7oh",
+      "status": "candidate",
+      "title": "2008 北京奥运会羽毛球男单决赛 林丹 vs 李宗伟",
+      "usage": "internal_research",
+      "venue": "Beijing"
+    },
+    {
+      "artifacts": {
+        "previews": [
+          {
+            "end_s": 1094.4,
+            "path": "local/previews/bilibili_BV1PW41127zf/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "b39578a209a4a08533b03d261cf7aa8cf5e6193bb9338f4287f543a0638f5ee3",
+            "start_s": 1082.4
+          },
+          {
+            "end_s": 2001.399,
+            "path": "local/previews/bilibili_BV1PW41127zf/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "cececd606fa65d82bf73454438037ea2f448017f6db7bc7bd6579754fb50be51",
+            "start_s": 1989.399
+          },
+          {
+            "end_s": 2908.399,
+            "path": "local/previews/bilibili_BV1PW41127zf/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "8dfa0cf58c53c95fd3a4f34a8209690f52e6a2daa6d04b7095c85a0b4ef037cd",
+            "start_s": 2896.399
+          },
+          {
+            "path": "local/previews/bilibili_BV1PW41127zf/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "b06f530fbbd78d7840e0ef2b51061a60147ff18d02af561a33ed663f668463c3"
+          }
+        ]
+      },
+      "canonical_url": "https://www.bilibili.com/video/BV1PW41127zf/",
+      "capture_context": "broadcast",
+      "competition_level": "professional",
+      "discovered_at": "2026-07-27T07:00:50+00:00",
+      "media_metadata": {
+        "duration_s": 3627.999,
+        "height": 720,
+        "inspected_at": "2026-07-27T07:32:31+00:00",
+        "width": 1280
+      },
+      "platform": "bilibili",
+      "platform_video_id": "BV1PW41127zf",
+      "purposes": [
+        "court",
+        "people"
+      ],
+      "source_id": "bilibili:BV1PW41127zf",
+      "status": "candidate",
+      "title": "2018 全英羽毛球女单决赛 戴资颖 vs 山口茜",
+      "usage": "internal_research",
+      "venue": "Birmingham"
+    },
+    {
+      "artifacts": {
+        "previews": [
+          {
+            "end_s": 1540.704,
+            "path": "local/previews/bilibili_BV1t34y1o78G/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "64c87518e6748a5b59f6406123124344fd88939ff7933e22800f0121b15299fe",
+            "start_s": 1528.704
+          },
+          {
+            "end_s": 2819.624,
+            "path": "local/previews/bilibili_BV1t34y1o78G/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "d910bfd031e73fb2e6f93667ed9bb117d3ef7f2043b8a9ef800f01e7e88b6517",
+            "start_s": 2807.624
+          },
+          {
+            "end_s": 4098.544,
+            "path": "local/previews/bilibili_BV1t34y1o78G/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "fc6ed9912b55d2df793007557cc53f73b65659929048d619f726539102ae3586",
+            "start_s": 4086.544
+          },
+          {
+            "path": "local/previews/bilibili_BV1t34y1o78G/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "7bce073700a87b773a1ee153fe9d1a7029ad38884a344a35a5ddb74c71ab6187"
+          }
+        ]
+      },
+      "canonical_url": "https://www.bilibili.com/video/BV1t34y1o78G/",
+      "capture_context": "broadcast",
+      "competition_level": "professional",
+      "discovered_at": "2026-07-27T07:00:50+00:00",
+      "media_metadata": {
+        "duration_s": 5115.68,
+        "height": 1080,
+        "inspected_at": "2026-07-27T07:30:34+00:00",
+        "width": 1920
+      },
+      "platform": "bilibili",
+      "platform_video_id": "BV1t34y1o78G",
+      "purposes": [
+        "court",
+        "people"
+      ],
+      "source_id": "bilibili:BV1t34y1o78G",
+      "status": "candidate",
+      "title": "2021 丹麦羽毛球公开赛女单决赛 安洗莹 vs 山口茜",
+      "usage": "internal_research",
+      "venue": "Odense"
+    },
+    {
+      "canonical_url": "https://www.bilibili.com/video/BV1AQ4y1Z7e7/",
+      "capture_context": "campus",
+      "competition_level": "amateur",
+      "discovered_at": "2026-07-27T08:21:28+00:00",
+      "platform": "bilibili",
+      "platform_video_id": "BV1AQ4y1Z7e7",
+      "preview_failure": {
+        "error": "No public video formats available without cookies",
+        "failed_at": "2026-07-27T08:26:35+00:00"
+      },
+      "purposes": [
+        "court"
+      ],
+      "source_id": "bilibili:BV1AQ4y1Z7e7",
+      "status": "candidate",
+      "title": "2021香港中文大学深圳-羽毛球单打决赛CUHKSZ",
+      "usage": "internal_research",
+      "venue": "CUHK Shenzhen"
+    },
+    {
+      "canonical_url": "https://www.bilibili.com/video/BV1pk4y1Y7XB/",
+      "capture_context": "personal",
+      "competition_level": "amateur",
+      "discovered_at": "2026-07-27T08:21:28+00:00",
+      "platform": "bilibili",
+      "platform_video_id": "BV1pk4y1Y7XB",
+      "preview_failure": {
+        "error": "No public video formats available without cookies",
+        "failed_at": "2026-07-27T08:26:35+00:00"
+      },
+      "purposes": [
+        "court"
+      ],
+      "source_id": "bilibili:BV1pk4y1Y7XB",
+      "status": "candidate",
+      "title": "羽毛球业余单打练习赛 vs昱哥 20230215",
+      "usage": "internal_research",
+      "venue": null
+    },
+    {
+      "canonical_url": "https://www.bilibili.com/video/BV1szYMzeEFT/",
+      "capture_context": "club",
+      "competition_level": "amateur",
+      "discovered_at": "2026-07-27T08:21:28+00:00",
+      "platform": "bilibili",
+      "platform_video_id": "BV1szYMzeEFT",
+      "preview_failure": {
+        "error": "No public video formats available without cookies",
+        "failed_at": "2026-07-27T08:26:35+00:00"
+      },
+      "purposes": [
+        "court"
+      ],
+      "source_id": "bilibili:BV1szYMzeEFT",
+      "status": "candidate",
+      "title": "业余羽毛球比赛",
+      "usage": "internal_research",
+      "venue": null
+    },
+    {
+      "artifacts": {
+        "court_samples": [
+          {
+            "end_s": 4.0,
+            "path": "local/frames/court/youtube-a-c-hdod310-view-1/youtube_a-C_hDOD310-court_partial-000000000000-1.jpg",
+            "sampling": {
+              "frame_count": 1
+            },
+            "scene": "court_partial",
+            "sha256": "6e49d78ecb55e61afacd38b2ae60545112e0c7abe7da84080d700a1e57a4fc58",
+            "start_s": 4.0,
+            "target": "court",
+            "view_id": "youtube-a-c-hdod310-view-1"
+          }
+        ],
+        "people_samples": [
+          {
+            "court_geometry": "annotations/verified/court/youtube-a-c-hdod310-view-1.json",
+            "end_s": 23.0,
+            "path": "local/clips/people/youtube-a-c-hdod310-view-1/clean-000000008000.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 10,
+              "max_height": 720,
+              "video_bitrate": "1000k"
+            },
+            "scene": "clean",
+            "sha256": "a911b0cf8b90761669a7706d101c05ceb460dfbb5d9bf99ed6307f9869b93b44",
+            "start_s": 8.0,
+            "target": "people",
+            "view_id": "youtube-a-c-hdod310-view-1"
+          }
+        ],
+        "previews": [
+          {
+            "end_s": 11.8,
+            "path": "local/previews/youtube_a-C_hDOD310/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "bb9219348196825456365b810c49c89e4bf53db612f326d31a343650f015966d",
+            "start_s": 3.8
+          },
+          {
+            "end_s": 23.5,
+            "path": "local/previews/youtube_a-C_hDOD310/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "42448d0dfcab640351ab8988a97dfbeae1d1a4e76529a5a201a4af0b8407da79",
+            "start_s": 15.5
+          },
+          {
+            "end_s": 35.2,
+            "path": "local/previews/youtube_a-C_hDOD310/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "e84ce4e99169514cc62246b28fe1ac1c8a67a64aa3f78d6cce0f3c846bef9b77",
+            "start_s": 27.2
+          },
+          {
+            "path": "local/previews/youtube_a-C_hDOD310/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "bbae81a22da48a794a04132ee01b809fbe391ef743759f2b59e376ba0cfbe28a"
+          }
+        ]
+      },
+      "canonical_url": "https://www.youtube.com/watch?v=a-C_hDOD310",
+      "capture_context": "personal",
+      "competition_level": "amateur",
+      "discovered_at": "2026-07-27T08:22:55+00:00",
+      "media_metadata": {
+        "duration_s": 39.0,
+        "height": 352,
+        "inspected_at": "2026-07-27T08:23:17+00:00",
+        "width": 640
+      },
+      "platform": "youtube",
+      "platform_video_id": "a-C_hDOD310",
+      "purposes": [
+        "court",
+        "people"
+      ],
+      "review": {
+        "decision": "accepted",
+        "reason": "人工确认：在 verified 球场几何基础上继续测试场地条件下的人员选择与跟踪",
+        "reviewed_at": "2026-07-27T11:26:52+00:00",
+        "reviewer": "user"
+      },
+      "source_id": "youtube:a-C_hDOD310",
+      "split_group_id": "youtube-a-c-hdod310-recording",
+      "status": "accepted",
+      "title": "Badminton Singles Match: Stan Lee vs Leslie Lau",
+      "usage": "internal_research",
+      "venue": null,
+      "view_id": "youtube-a-c-hdod310-view-1"
+    },
+    {
+      "artifacts": {
+        "court_samples": [
+          {
+            "end_s": 201.6,
+            "path": "local/frames/court/youtube-gmxvbt-ac8o-view-1/youtube_gmXVbt-AC8o-court_partial-000000197600-1.jpg",
+            "sampling": {
+              "frame_count": 1
+            },
+            "scene": "court_partial",
+            "sha256": "ae1608204584c54aeebc7967912872110f440dd3542d996e3410f9699687d01f",
+            "start_s": 201.6,
+            "target": "court",
+            "view_id": "youtube-gmxvbt-ac8o-view-1"
+          }
+        ],
+        "previews": [
+          {
+            "end_s": 205.6,
+            "path": "local/previews/youtube_gmXVbt-AC8o/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "840b85b85fd71eae66d118cb39ea5eabb0e9b720f7985a7be0658d6afe8585dc",
+            "start_s": 197.6
+          },
+          {
+            "end_s": 508.0,
+            "path": "local/previews/youtube_gmXVbt-AC8o/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "4f3ab9d059568ad31fc98116984b124a3b880f43cbccc04711cc1a12d717281d",
+            "start_s": 500.0
+          },
+          {
+            "end_s": 810.4,
+            "path": "local/previews/youtube_gmXVbt-AC8o/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "8d605d42eb5d40d741ef50c034387ead5d259ac4fe4a1d754a856f853fa83408",
+            "start_s": 802.4
+          },
+          {
+            "path": "local/previews/youtube_gmXVbt-AC8o/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "7051860871876d03330fd8d63afc20bd591a373d5219ccbf6f07890629e6a7ea"
+          }
+        ]
+      },
+      "canonical_url": "https://www.youtube.com/watch?v=gmXVbt-AC8o",
+      "capture_context": "club",
+      "competition_level": "amateur",
+      "discovered_at": "2026-07-27T08:22:55+00:00",
+      "media_metadata": {
+        "duration_s": 1008.0,
+        "height": 2160,
+        "inspected_at": "2026-07-27T12:12:49+00:00",
+        "width": 3840
+      },
+      "platform": "youtube",
+      "platform_video_id": "gmXVbt-AC8o",
+      "purposes": [
+        "court",
+        "people"
+      ],
+      "review": {
+        "decision": "accepted",
+        "reason": "用户接受；固定俱乐部低机位，作为 court_partial 与 extra_people 困难场景候选",
+        "reviewed_at": "2026-07-27T12:35:49+00:00",
+        "reviewer": "user"
+      },
+      "source_id": "youtube:gmXVbt-AC8o",
+      "split_group_id": "bellevue-badminton-club-session-1",
+      "status": "accepted",
+      "title": "Bellevue Badminton Club exhibition match",
+      "usage": "internal_research",
+      "venue": "Bellevue Badminton Club",
+      "view_id": "youtube-gmxvbt-ac8o-view-1"
+    },
+    {
+      "canonical_url": "https://www.youtube.com/watch?v=vcESpUeecZk",
+      "capture_context": "other",
+      "competition_level": "unknown",
+      "discovered_at": "2026-07-27T12:44:43+00:00",
+      "platform": "youtube",
+      "platform_video_id": "vcESpUeecZk",
+      "purposes": [
+        "court"
+      ],
+      "source_id": "youtube:vcESpUeecZk",
+      "status": "candidate",
+      "title": "Men's Singles Final - The DK Way Copper - Matt Honnor",
+      "usage": "internal_research",
+      "venue": null
+    },
+    {
+      "artifacts": {
+        "court_samples": [
+          {
+            "end_s": 280.8,
+            "path": "local/frames/court/youtube-ul7xw-wp5ia-view-1/youtube_Ul7xw-wp5iA-court_partial-000000276800-1.jpg",
+            "sampling": {
+              "frame_count": 1
+            },
+            "scene": "court_partial",
+            "sha256": "63b20a019e7e232a9d8e65fe6e4ab38fb5dc4fb02da473954318a50b5f4de7f5",
+            "start_s": 280.8,
+            "target": "court",
+            "view_id": "youtube-ul7xw-wp5ia-view-1"
+          },
+          {
+            "end_s": 702.0,
+            "path": "local/frames/court/youtube-ul7xw-wp5ia-view-1/youtube_Ul7xw-wp5iA-court_partial-000000698000-1.jpg",
+            "sampling": {
+              "frame_count": 1
+            },
+            "scene": "court_partial",
+            "sha256": "73cfa733251be828def82c16c30a0f510ce33180ebcd11db5bf8190d0e0495d7",
+            "start_s": 702.0,
+            "target": "court",
+            "view_id": "youtube-ul7xw-wp5ia-view-1"
+          },
+          {
+            "end_s": 1123.2,
+            "path": "local/frames/court/youtube-ul7xw-wp5ia-view-1/youtube_Ul7xw-wp5iA-court_partial-000001119200-1.jpg",
+            "sampling": {
+              "frame_count": 1
+            },
+            "scene": "court_partial",
+            "sha256": "f576fe8cb26f9d6bcf9fbb4b0eb159ac307c3b7c8825df3b88d56f69883034e9",
+            "start_s": 1123.2,
+            "target": "court",
+            "view_id": "youtube-ul7xw-wp5ia-view-1"
+          }
+        ],
+        "previews": [
+          {
+            "end_s": 284.8,
+            "path": "local/previews/youtube_Ul7xw-wp5iA/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "ea56b5c93b369f400f015afea41dac23d6019f782dddc6e4990bf40d8d301511",
+            "start_s": 276.8
+          },
+          {
+            "end_s": 706.0,
+            "path": "local/previews/youtube_Ul7xw-wp5iA/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "e6088d7f8502fca2bfc8170a3b55caaafa7bf999b891c07bbd8cca1b529b5d3c",
+            "start_s": 698.0
+          },
+          {
+            "end_s": 1127.2,
+            "path": "local/previews/youtube_Ul7xw-wp5iA/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "8eacd6ce6fac614ee3fa94c1e372670b4d62a8d0dca86c6ff379cdb7e14a4e0f",
+            "start_s": 1119.2
+          },
+          {
+            "path": "local/previews/youtube_Ul7xw-wp5iA/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "65201074ae7a198dce37d74fd2050fa8c599d65965ffb0b7c5fe011c86ee1de5"
+          }
+        ]
+      },
+      "canonical_url": "https://www.youtube.com/watch?v=Ul7xw-wp5iA",
+      "capture_context": "campus",
+      "competition_level": "amateur",
+      "discovered_at": "2026-07-27T12:44:43+00:00",
+      "media_metadata": {
+        "duration_s": 1404.0,
+        "height": 720,
+        "inspected_at": "2026-07-27T12:45:01+00:00",
+        "width": 1280
+      },
+      "platform": "youtube",
+      "platform_video_id": "Ul7xw-wp5iA",
+      "purposes": [
+        "court",
+        "people"
+      ],
+      "review": {
+        "decision": "accepted",
+        "reason": "用户接受；校园固定机位，覆盖相邻场地与前景人员遮挡，可用于球场几何并在几何验证后用于人员困难场景",
+        "reviewed_at": "2026-07-27T13:17:39+00:00",
+        "reviewer": "user"
+      },
+      "source_id": "youtube:Ul7xw-wp5iA",
+      "split_group_id": "varsity-2020-session-1",
+      "status": "accepted",
+      "title": "Badminton Varsity 2020 - M1 Singles 1 - Tom Wade vs Andrew Zhu",
+      "usage": "internal_research",
+      "venue": null,
+      "view_id": "youtube-ul7xw-wp5ia-view-1"
+    },
+    {
+      "canonical_url": "https://www.youtube.com/watch?v=5JcAyE7y4MA",
+      "capture_context": "other",
+      "competition_level": "unknown",
+      "discovered_at": "2026-07-27T12:44:43+00:00",
+      "platform": "youtube",
+      "platform_video_id": "5JcAyE7y4MA",
+      "purposes": [
+        "court"
+      ],
+      "source_id": "youtube:5JcAyE7y4MA",
+      "status": "candidate",
+      "title": "Badminton Club",
+      "usage": "internal_research",
+      "venue": null
+    },
+    {
+      "artifacts": {
+        "previews": [
+          {
+            "end_s": 98.4,
+            "path": "local/previews/youtube_X9SNyjV0K-w/preview-1.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "9cc568cefca4c75de5104f2424be94569a748296ba801267027766e129c174d3",
+            "start_s": 90.4
+          },
+          {
+            "end_s": 240.0,
+            "path": "local/previews/youtube_X9SNyjV0K-w/preview-2.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "19081d474181fcaa6ce7ede9f745a0ebc7e0a399ea57fc0b23f4f0c35b52ab41",
+            "start_s": 232.0
+          },
+          {
+            "end_s": 381.6,
+            "path": "local/previews/youtube_X9SNyjV0K-w/preview-3.mp4",
+            "sampling": {
+              "audio": false,
+              "fps": 1,
+              "height": 360
+            },
+            "sha256": "1dfd07e728fdfbf3a8a64505f825ffaa98c62055f6a506352144963c371e33b1",
+            "start_s": 373.6
+          },
+          {
+            "path": "local/previews/youtube_X9SNyjV0K-w/contact-sheet.jpg",
+            "sampling": {
+              "layout": "3x3"
+            },
+            "sha256": "5a5b88601f6d4cc25e8abff4ff0b86b6f5f3fc27eb73cdbc1faf3076403ffaa6"
+          }
+        ]
+      },
+      "canonical_url": "https://www.youtube.com/watch?v=X9SNyjV0K-w",
+      "capture_context": "campus",
+      "competition_level": "amateur",
+      "discovered_at": "2026-07-27T12:44:43+00:00",
+      "media_metadata": {
+        "duration_s": 472.0,
+        "height": 720,
+        "inspected_at": "2026-07-27T12:51:19+00:00",
+        "width": 1280
+      },
+      "platform": "youtube",
+      "platform_video_id": "X9SNyjV0K-w",
+      "purposes": [
+        "court"
+      ],
+      "review": {
+        "decision": "rejected",
+        "reason": "用户拒绝；低位广角畸变且场景质量过差，不适合作为当前目标样本",
+        "reviewed_at": "2026-07-27T13:09:09+00:00",
+        "reviewer": "user"
+      },
+      "source_id": "youtube:X9SNyjV0K-w",
+      "status": "rejected",
+      "title": "Kelvin Ho (Warwick1) vs Ashraf Alam (Nottingham3) 18/19 Set 1",
+      "usage": "internal_research",
+      "venue": null
+    }
+  ]
+}

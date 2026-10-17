@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-16",
+  "purpose": "same_source_trial_not_independent_acceptance",
+  "human_authorization": "用户确认A1-01/02调试，A1-03/04配置固定后留出检查；如检查后继续调整则本轮结果作诊断。C/D暂留，之后考虑A2。",
+  "independent_acceptance": false,
+  "boundary_metric": "absolute_error_against_conservative_selected_endpoint",
+  "baseline_config": {
+    "confidence": 0.6,
+    "motion_window_ms": 200,
+    "min_motion_window_ms": 80,
+    "min_speed_px_s": 100,
+    "max_speed_px_s": 4000,
+    "quiet_ms": 1600,
+    "min_flight_span_ms": 2200,
+    "field": [
+      0,
+      0,
+      1,
+      1
+    ]
+  },
+  "inference_sha256": {
+    "runner": "8add94ca5581d144f9f8b279b957e2d12fff62052b3ee5412c751f14e94e2bc6",
+    "tracknet_rally.py": "ffdc46072896abb79243b4427c2e52f3581d03c39ca89891c2e28ea4e0694197",
+    "video_input.py": "dbbf7475e58e0204e3004f3bcf24b5036f4e196e16b3a05e8e0418c2af21d898",
+    "rally_stream.py": "48586d5b70b9252c26bb7053ba6d14ef7188e21c04f8d0a9b8f27c6e9c74a2e3",
+    "weights": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+  },
+  "samples": [
+    {
+      "id": "A1-01",
+      "source_id": "A1",
+      "split_group_id": "A1-same-recording",
+      "split": "tuning",
+      "video": "datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "video_sha256": "fdd2aba069839480ebb6b5edb2dfbdf036e3b0c3de4893693edcb48fda00bca4",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-01-20261015/full-v1.json",
+      "annotation_sha256": "b5f538e867c92336189fa8360ac3fe2c2fbc264314893d092ee3d1298b1470fd",
+      "duration_ms": 168000.0,
+      "native_frame_count": 4200,
+      "source_origin_ms": 599960.0
+    },
+    {
+      "id": "A1-02",
+      "source_id": "A1",
+      "split_group_id": "A1-same-recording",
+      "split": "tuning",
+      "video": "datasets/badminton-v1/local/rally/m1-short-a1-02-20261015/clip.mp4",
+      "video_sha256": "c47445822f9f03205e87fbf1cddd6920edadc46f73abd6f6e84eaccb533ee6f4",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-02-20261015/full-v1.json",
+      "annotation_sha256": "8c18b65519002e57b53339fccc23773dae90b7bc03f18a881cbd859d9e560afd",
+      "duration_ms": 174000.0,
+      "native_frame_count": 4350,
+      "source_origin_ms": 1200040.0
+    },
+    {
+      "id": "A1-03",
+      "source_id": "A1",
+      "split_group_id": "A1-same-recording",
+      "split": "check",
+      "video": "datasets/badminton-v1/local/rally/m1-short-a1-03-20261015/clip.mp4",
+      "video_sha256": "11525be4013d3eaeb343d6343ad58e5d97dba9415ff3aafdb905524a52fa30b2",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-03-20261015/full-v1.json",
+      "annotation_sha256": "a296dd6f67b9501df53df230b7d50b92ed4bb2c7cf9f1fe44c2a348ea0e49929",
+      "duration_ms": 174000.0,
+      "native_frame_count": 4350,
+      "source_origin_ms": 1800120.0
+    },
+    {
+      "id": "A1-04",
+      "source_id": "A1",
+      "split_group_id": "A1-same-recording",
+      "split": "check",
+      "video": "datasets/badminton-v1/local/rally/m1-short-a1-04-20261015/clip.mp4",
+      "video_sha256": "17f4fe934509e6c16799923c4b8f3c42b4f3bed0d96cdb7c376674c0fb670e02",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-04-20261015/full-v1.json",
+      "annotation_sha256": "8bfde90b7d71a77bdea4912a39bf20412ba4fd09f400129866406f4e2aeaec11",
+      "duration_ms": 168040.0,
+      "native_frame_count": 4201,
+      "source_origin_ms": 2346160.0
+    }
+  ]
+}

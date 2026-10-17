@@ -1,0 +1,141 @@
+{
+  "schema_version": 2,
+  "target": "people",
+  "status": "draft",
+  "source_id": "youtube:a-C_hDOD310",
+  "view_id": "youtube-a-c-hdod310-view-1",
+  "scene": "clean",
+  "clip": "local/clips/people/youtube-a-c-hdod310-view-1/clean-000000008000.mp4",
+  "image_size": {
+    "width": 640,
+    "height": 352
+  },
+  "fps": 10,
+  "frame_count": 150,
+  "tracks": [
+    {
+      "track_id": 1,
+      "label": "person",
+      "role": "participant",
+      "court_side": "near",
+      "keyframes": [
+        {
+          "frame": 0,
+          "x": 391.0426677527254,
+          "y": 203.5005308562303,
+          "width": 119.9369515730861,
+          "height": 148.4994691437697,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 21,
+          "x": 436.84771789260185,
+          "y": 155.6189001544987,
+          "width": 47.96072419164295,
+          "height": 196.3810998455013,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 58,
+          "x": 474.1222077955876,
+          "y": 157.38421054019548,
+          "width": 57.45879168011396,
+          "height": 171.85346996731076,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 95,
+          "x": 449.0591552246767,
+          "y": 146.43833135359486,
+          "width": 42.17509447898607,
+          "height": 142.94407236914228,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 142,
+          "x": 523.1619890058104,
+          "y": 146.57895148077282,
+          "width": 56.60522113776585,
+          "height": 204.08009159163063,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 149,
+          "x": 516.7361813863924,
+          "y": 147.60225332289025,
+          "width": 59.43746070454904,
+          "height": 201.84435887553872,
+          "occluded": false,
+          "outside": false
+        }
+      ]
+    },
+    {
+      "track_id": 2,
+      "label": "person",
+      "role": "participant",
+      "court_side": "far",
+      "keyframes": [
+        {
+          "frame": 0,
+          "x": 182.00291306408295,
+          "y": 121.52512331453806,
+          "width": 39.68477112622065,
+          "height": 116.57355498869609,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 36,
+          "x": 212.86615569526904,
+          "y": 167.5298917152748,
+          "width": 31.537341639229254,
+          "height": 96.88352801075649,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 70,
+          "x": 218.49660764123198,
+          "y": 146.38011536356174,
+          "width": 29.62900784591227,
+          "height": 91.3063300772192,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 116,
+          "x": 70.04364623328084,
+          "y": 135.24508062301297,
+          "width": 36.52036865659741,
+          "height": 101.48110598626954,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 133,
+          "x": 83.04073897079361,
+          "y": 132.27219290601874,
+          "width": 36.09844346502457,
+          "height": 109.88330445665315,
+          "occluded": false,
+          "outside": false
+        },
+        {
+          "frame": 149,
+          "x": 49.064015304277945,
+          "y": 137.04919282803476,
+          "width": 45.50921517173636,
+          "height": 94.3034589855074,
+          "occluded": false,
+          "outside": false
+        }
+      ]
+    }
+  ]
+}

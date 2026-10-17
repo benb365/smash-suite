@@ -1,0 +1,11 @@
+{
+  "corrected_sha256": null,
+  "decision": "needs_review",
+  "proposal": "annotations/proposed/court/youtube-ul7xw-wp5ia-view-1/b52cfe57ddec99eafbc9.json",
+  "proposal_sha256": "8d9277aeb127f7b543d286b0bbbc608f59f8cdde215ccff81bfc8fb64ee81d24",
+  "reason": "人工复核：点位坐标或语义均需修正，保留原始 proposal 供校正",
+  "reviewed_at": "2026-07-27T13:55:02+00:00",
+  "reviewer": "user",
+  "schema_version": 2,
+  "target": "court_proposal_review"
+}

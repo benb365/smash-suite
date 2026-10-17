@@ -1,0 +1,138 @@
+{
+  "created_at": "2026-07-27T13:45:20+00:00",
+  "frame": "local/frames/court/youtube-ul7xw-wp5ia-view-1/youtube_Ul7xw-wp5iA-court_partial-000000276800-1.jpg",
+  "image_sha256": "63b20a019e7e232a9d8e65fe6e4ab38fb5dc4fb02da473954318a50b5f4de7f5",
+  "image_size": {
+    "height": 720,
+    "width": 1280
+  },
+  "item_id": "youtube_Ul7xw-wp5iA-court_partial-000000276800-1",
+  "points": [
+    {
+      "confidence": 0.45,
+      "point_id": "far_left_baseline",
+      "reason": "远端左底线角在透视下难以精确确认，多场地线条重叠，估计值",
+      "uncertain": true,
+      "x": 452.0,
+      "y": 532.0
+    },
+    {
+      "confidence": 0.55,
+      "point_id": "far_center_baseline",
+      "reason": "远端底线中点大致可辨，但中心线与底线交点不够清晰",
+      "uncertain": true,
+      "x": 525.0,
+      "y": 532.0
+    },
+    {
+      "confidence": 0.45,
+      "point_id": "far_right_baseline",
+      "reason": "远端右底线角受旁边球场线条干扰，估计值",
+      "uncertain": true,
+      "x": 598.0,
+      "y": 532.0
+    },
+    {
+      "confidence": 0.4,
+      "point_id": "far_left_short_service",
+      "reason": "远端左前发球线角不清晰，根据场地比例推算",
+      "uncertain": true,
+      "x": 458.0,
+      "y": 546.0
+    },
+    {
+      "confidence": 0.5,
+      "point_id": "far_center_short_service",
+      "reason": "远端前发球线中点，中心线交点隐约可辨",
+      "uncertain": true,
+      "x": 525.0,
+      "y": 546.0
+    },
+    {
+      "confidence": 0.4,
+      "point_id": "far_right_short_service",
+      "reason": "远端右前发球线角不清晰，根据场地比例推算",
+      "uncertain": true,
+      "x": 592.0,
+      "y": 546.0
+    },
+    {
+      "confidence": 0.75,
+      "point_id": "net_left",
+      "reason": "中央球场左网柱底部位置，红色网柱清晰可见",
+      "uncertain": false,
+      "x": 435.0,
+      "y": 565.0
+    },
+    {
+      "confidence": 0.75,
+      "point_id": "net_right",
+      "reason": "中央球场右网柱底部位置，红色网柱清晰可见",
+      "uncertain": false,
+      "x": 615.0,
+      "y": 565.0
+    },
+    {
+      "confidence": 0.45,
+      "point_id": "near_left_short_service",
+      "reason": "近端左前发球线角可辨但不够锐利，透视下估计",
+      "uncertain": true,
+      "x": 418.0,
+      "y": 592.0
+    },
+    {
+      "confidence": 0.55,
+      "point_id": "near_center_short_service",
+      "reason": "近端前发球线中点，中心线交点可见",
+      "uncertain": true,
+      "x": 525.0,
+      "y": 592.0
+    },
+    {
+      "confidence": 0.45,
+      "point_id": "near_right_short_service",
+      "reason": "近端右前发球线角受旁边球场线条干扰",
+      "uncertain": true,
+      "x": 632.0,
+      "y": 592.0
+    },
+    {
+      "confidence": 0.35,
+      "point_id": "near_left_baseline",
+      "reason": "近端左底线角接近画面底部，前景有人物遮挡，估计值",
+      "uncertain": true,
+      "x": 378.0,
+      "y": 668.0
+    },
+    {
+      "confidence": 0.5,
+      "point_id": "near_center_baseline",
+      "reason": "近端底线中点大致可辨，中心线延伸估计",
+      "uncertain": true,
+      "x": 525.0,
+      "y": 668.0
+    },
+    {
+      "confidence": 0.35,
+      "point_id": "near_right_baseline",
+      "reason": "近端右底线角接近画面底部且受前景干扰，估计值",
+      "uncertain": true,
+      "x": 672.0,
+      "y": 668.0
+    }
+  ],
+  "producer": {
+    "model": "Doubao-Seed-2.1-turbo",
+    "model_version": "claude-code-2.1.206",
+    "prompt_version": "court-points-v1",
+    "tool": "claude-code"
+  },
+  "proposal_id": "b52cfe57ddec99eafbc9",
+  "schema_version": 2,
+  "source_id": "youtube:Ul7xw-wp5iA",
+  "status": "proposed",
+  "target": "court",
+  "uncertain_point_count": 12,
+  "view_id": "youtube-ul7xw-wp5ia-view-1",
+  "view_state": "court_partial"
+}

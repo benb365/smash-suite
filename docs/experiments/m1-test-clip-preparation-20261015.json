@@ -1,0 +1,713 @@
+{
+  "date": "2026-10-15",
+  "purpose": "M1.1 candidate preparation evidence; not a benchmark or human acceptance record",
+  "source_decision_record": "docs/experiments/four-view-video-candidates-20261015.json",
+  "method": {
+    "selection": "Reuse human-approved sources. Sparse 10-second overviews locate play/breaks; adjacent native frames resolve suspect transitions.",
+    "extraction": "FFmpeg stream copy, preserving audio; no re-encoding, frame-rate conversion or stitching over missing time. Align ends to complete coded frame groups.",
+    "fidelity": "Compare contiguous compressed video packets and codec configuration; require complete presentation PTS sets and constant PTS/DTS offsets; fully decode video with strictly increasing PTS.",
+    "time_mapping": "source_time = raw_clip_PTS + source_pts_minus_clip_pts_s. FileFrameSource normalizes first decoded PTS: source_time = normalized_clip_time + actual_source_window_s[0].",
+    "visual_limit": "Sparse overviews and difference peaks do not prove editorial continuity. Human clip approval and rally labels remain pending."
+  },
+  "candidates": [
+    {
+      "candidate_id": "m1-a1-20261015-candidate",
+      "source_id": "A1",
+      "url": "https://huya.com/video/play/1099925376.html",
+      "title": "【回放】女单 瓦尔达尼vs黄玲青 1/8赛 2026瑞士羽毛球公开赛 清流",
+      "uploader": "虎牙羽毛球3号场地",
+      "category": "官方高视角",
+      "human_source_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "source_sha256": "1cc16c20974409b6d6e710a46cc185b8ff5e6951d898daf6116a694c914a1caa",
+      "clip_human_decision": "pending",
+      "rally_annotations": "none",
+      "usage": "diagnostic_tuning_only",
+      "observation": "Stable official high view; overview includes play, waiting and floor wiping. Previously used for diagnostics; the new window overlaps historical 600-780s footage.",
+      "capture_group": "source:A1",
+      "capture_group_limit": "Provisional source-level lock only; cross-source session correlation and final tuning/acceptance assignment remain unconfirmed.",
+      "validation": {
+        "source_review_id": "A1",
+        "source_path": "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "video": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/clip.mp4",
+        "requested_source_window_s": [
+          605.96,
+          1265.96
+        ],
+        "actual_source_window_s": [
+          605.96,
+          1266.04
+        ],
+        "effective_video_duration_s": 660.08,
+        "source_origin_s": 605.96,
+        "decoded_frame_count": 16502,
+        "full_video_decode_passed": true,
+        "decoded_pts_strictly_increasing": true,
+        "compressed_video_packets_identical_to_contiguous_source": true,
+        "video_packet_count": 16502,
+        "codec_configuration_unchanged": true,
+        "source_pts_minus_clip_pts_s": 605.86,
+        "source_pts_minus_clip_pts_exact": "30293/50",
+        "timestamp_intervals_unchanged": true,
+        "first_decoded_clip_pts_s": 0.1,
+        "last_decoded_clip_pts_s": 660.14,
+        "max_native_frame_interval_s": 0.04,
+        "media": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "time_base": "1/90000",
+          "audio_streams": 1,
+          "container_duration_s": 660.18,
+          "stream_frame_count": 16502,
+          "codec_extradata_sha256": "3365bc6e44ef751df8273ad175d545f1da2268de6816b36ebe05ebf7dab75cf7"
+        },
+        "bytes": 275929987,
+        "sha256": "f20151a07d6a49abf146e6ca6897aefa3a5aadef6baccb6374203df6be9d80e8",
+        "is_reused_original": false,
+        "review_status": "pending_human_clip_review",
+        "limits": "Frame/packet fidelity and decoding do not prove editorial continuity or provide rally labels.",
+        "all_source_presentation_frames_preserved": true,
+        "direct_presentation_pts_check": {
+          "source_interval_s": [
+            605.96,
+            1266.04
+          ],
+          "source_presentation_pts_count": 16502,
+          "clip_presentation_pts_count": 16502,
+          "mapped_clip_pts_match_source_exactly": true,
+          "source_pts_unique": true,
+          "clip_pts_unique": true,
+          "presentation_frames_preserved": true,
+          "offset_s": 605.86,
+          "method": "PyAV video-packet demux only; no frame decode."
+        }
+      },
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "605.96",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "-t",
+        "660",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a?",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/clip.mp4"
+      ],
+      "extraction_exit_code": 0,
+      "native_transition_review": {
+        "reviewer": "codex",
+        "times_s": [
+          821.08,
+          918.4,
+          751.0
+        ],
+        "finding": "Top three adjacent-frame difference peaks show continuous rally movement; no cut seen at these positions.",
+        "limit": "Only these suspect transitions were resolved; this is not exhaustive rally-boundary review."
+      },
+      "review_evidence": [
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/review/adjacent-751.000000.jpg",
+          "sha256": "a13146abfd3a7ebd8ed93248089c6c7dfe5b011500c6f900bcf77b08a6fdfb92"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/review/adjacent-821.080000.jpg",
+          "sha256": "5ca4ab21708b35ce24c5ad4c8c31fa750749029d64a2092fdee5df20df062d33"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/review/adjacent-918.400000.jpg",
+          "sha256": "6473b0dcdd0196ae2acb4acd94967d5fc62523b099d18558b1dc546b3a92b467"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/review/overview-1.jpg",
+          "sha256": "1e47a162d602046b4600897cdb3784041b9078b2e4c50432a75d39b24ddd3e33"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/review/overview-2.jpg",
+          "sha256": "af00027c692e3b595b824f7a2d2b26e593e69a703e638c3f712e183cf3c01e2a"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/review/overview-3.jpg",
+          "sha256": "3527300ba43916cfeecfc885042369d846a837f3ac5bd7dcc033336176b6a580"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/review/overview.json",
+          "sha256": "5abfd8cf23f4e385e578138b8c637c00e799c33906be3be06a6f3db2e97d886b"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/review/transition-scan.json",
+          "sha256": "6919ba7e6674f40b322a2b355db6fd7df3e1a2e0cf159a3126eb8cfb504d94ba"
+        }
+      ],
+      "audio_full_decode": {
+        "id": "A1",
+        "input": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/clip.mp4",
+        "input_bytes": 275929987,
+        "command": [
+          ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+          "-hide_banner",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/clip.mp4",
+          "-map",
+          "0:a?",
+          "-vn",
+          "-f",
+          "null",
+          "-"
+        ],
+        "exit_code": 0,
+        "log": "datasets/badminton-v1/local/rally/m1-a1-20261015-candidate/audio-decode.log",
+        "log_bytes": 0
+      }
+    },
+    {
+      "candidate_id": "m1-c1-20261015-candidate",
+      "source_id": "C1",
+      "url": "https://www.bilibili.com/video/BV12zPKzRE4v/",
+      "title": "2026排名賽 黃宥薰 vs 王珮伃",
+      "uploader": "台湾陈师傅低视角羽球",
+      "category": "场边低视角",
+      "human_source_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "source_sha256": "b6405dc2783ccad495d85a478169f9c77a303ac844a673699d9ed75053550c72",
+      "clip_human_decision": "pending",
+      "rally_annotations": "none",
+      "usage": "unassigned_no_tuning_yet",
+      "observation": "Low endline view with several courts and foreground occlusion. Main foreground court must be confirmed. Final candidate is clip-gop.mp4; first clip.mp4 is unsuitable due to missing tail presentation frames.",
+      "capture_group": "source:C1",
+      "capture_group_limit": "Provisional source-level lock only; cross-source session correlation and final tuning/acceptance assignment remain unconfirmed.",
+      "validation": {
+        "source_review_id": "C1",
+        "source_path": "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "video": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/clip-gop.mp4",
+        "requested_source_window_s": [
+          120.073,
+          779.927
+        ],
+        "actual_source_window_s": [
+          120.073,
+          780.0263125
+        ],
+        "effective_video_duration_s": 659.9533125,
+        "source_origin_s": 120.073,
+        "decoded_frame_count": 19786,
+        "full_video_decode_passed": true,
+        "decoded_pts_strictly_increasing": true,
+        "compressed_video_packets_identical_to_contiguous_source": true,
+        "video_packet_count": 19786,
+        "codec_configuration_unchanged": true,
+        "all_source_presentation_frames_preserved": true,
+        "source_pts_minus_clip_pts_s": 119.955,
+        "source_pts_minus_clip_pts_exact": "23991/200",
+        "timestamp_intervals_unchanged": true,
+        "first_decoded_clip_pts_s": 0.118,
+        "last_decoded_clip_pts_s": 660.038,
+        "max_native_frame_interval_s": 0.05,
+        "media": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "time_base": "1/16000",
+          "audio_streams": 1,
+          "container_duration_s": 660.071313,
+          "stream_frame_count": 19786,
+          "codec_extradata_sha256": "8003db3d70ba8a7dd775f42dc9d32f994f27cb9655e515e318b7ebf2722aa527"
+        },
+        "bytes": 254787034,
+        "sha256": "ac19c64246487410c6f23e2dae10be0eef4bc579c7ee932965bab6a2ae52cfbd",
+        "is_reused_original": false,
+        "review_status": "pending_human_clip_review",
+        "limits": "Frame/packet fidelity and decoding do not prove editorial continuity or provide rally labels."
+      },
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "120.073",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "-t",
+        "659.854",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a?",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/clip-gop.mp4"
+      ],
+      "extraction_exit_code": 0,
+      "native_transition_review": {
+        "reviewer": "codex",
+        "times_s": [
+          550.553,
+          524.304,
+          191.484
+        ],
+        "finding": "Top three peaks show continuous foreground walkers and player movement; no cut seen at these positions.",
+        "limit": "Only these suspect transitions were resolved; this is not exhaustive rally-boundary review."
+      },
+      "review_evidence": [
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/review/adjacent-191.484000.jpg",
+          "sha256": "1b41813229f36073e859c61f8e0b3bd36c46dea093ad7f5a12cf87364af56795"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/review/adjacent-524.304000.jpg",
+          "sha256": "4ede8c46576b28eaf0c1bf6f2f94f22527fbd2f1ff5ffa19eba1d332854b30ce"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/review/adjacent-550.553000.jpg",
+          "sha256": "a5e16bddbbe56616d732c1863244223dc609220341d6f9414e80317020727f31"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/review/overview-1.jpg",
+          "sha256": "ed6452e4e513d083b496e465a6e9491a56bcebc529a26a8aae26670a17262da0"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/review/overview-2.jpg",
+          "sha256": "4354ac701a378d49efe64b1733d1ef88e419c3332da57922c4fc15d2e2529fda"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/review/overview-3.jpg",
+          "sha256": "85124c5a969b9c39826e6ad025dd713ca2717c922cf5acf4b678716bcb6db2e9"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/review/overview.json",
+          "sha256": "af9ca92aa3ec88e28c009d1f748521716fc23aeab1e83ab2ae4f25d526407b83"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/review/transition-scan.json",
+          "sha256": "41126f7af7b0cf5d08301693f5fc1a0fa685c44a365d601a0f5d3ce0e0fbfb25"
+        }
+      ],
+      "audio_full_decode": {
+        "id": "C1",
+        "input": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/clip-gop.mp4",
+        "input_bytes": 254787034,
+        "command": [
+          ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+          "-hide_banner",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/clip-gop.mp4",
+          "-map",
+          "0:a?",
+          "-vn",
+          "-f",
+          "null",
+          "-"
+        ],
+        "exit_code": 0,
+        "log": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/audio-decode.log",
+        "log_bytes": 0
+      }
+    },
+    {
+      "candidate_id": "m1-d1-20261015-candidate",
+      "source_id": "D1",
+      "url": "https://www.bilibili.com/video/BV1QPpz6pEJJ/",
+      "title": "中羽3级对抗",
+      "uploader": "今天不摸鱼1",
+      "category": "个人常见斜侧方视角",
+      "human_source_decision": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "source_sha256": "67cdb92e722b82eddab7b00eb6ed701db4c3bdb8f26a95d9f0d7cc527d1c53a6",
+      "clip_human_decision": "pending",
+      "rally_annotations": "none",
+      "usage": "unassigned_no_tuning_yet",
+      "observation": "Diagonal fixed view with foreground walkers and a long break around 380-425s. Excludes end-of-recording camera shake around 612.7s. Only 10.946s above target, so further exclusions may require more material.",
+      "capture_group": "source:D1",
+      "capture_group_limit": "Provisional source-level lock only; cross-source session correlation and final tuning/acceptance assignment remain unconfirmed.",
+      "validation": {
+        "source_review_id": "D1",
+        "source_path": "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "video": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/clip.mp4",
+        "requested_source_window_s": [
+          0.0,
+          610.8125
+        ],
+        "actual_source_window_s": [
+          0.0,
+          610.9458125
+        ],
+        "effective_video_duration_s": 610.9458125,
+        "source_origin_s": 0.0,
+        "decoded_frame_count": 18320,
+        "full_video_decode_passed": true,
+        "decoded_pts_strictly_increasing": true,
+        "compressed_video_packets_identical_to_contiguous_source": true,
+        "video_packet_count": 18320,
+        "codec_configuration_unchanged": true,
+        "all_source_presentation_frames_preserved": true,
+        "source_pts_minus_clip_pts_s": -0.133,
+        "source_pts_minus_clip_pts_exact": "-133/1000",
+        "timestamp_intervals_unchanged": true,
+        "first_decoded_clip_pts_s": 0.133,
+        "last_decoded_clip_pts_s": 611.0455,
+        "max_native_frame_interval_s": 0.0891875,
+        "media": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "time_base": "1/16000",
+          "audio_streams": 1,
+          "container_duration_s": 610.945813,
+          "stream_frame_count": 18320,
+          "codec_extradata_sha256": "7767c61d235d608c27d45544fd0255c1a2e201ddba05b382e9417ccbb4f9c475"
+        },
+        "bytes": 156212605,
+        "sha256": "350dd064a175be887c120a523c0c63052b80fdec7e1a86bbfb520285752b2a13",
+        "is_reused_original": false,
+        "review_status": "pending_human_clip_review",
+        "limits": "Frame/packet fidelity and decoding do not prove editorial continuity or provide rally labels."
+      },
+      "extraction_argv": [
+        ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+        "-hide_banner",
+        "-nostdin",
+        "-v",
+        "error",
+        "-ss",
+        "0",
+        "-i",
+        "datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "-t",
+        "610.8125",
+        "-map",
+        "0:v:0",
+        "-map",
+        "0:a?",
+        "-c",
+        "copy",
+        "-avoid_negative_ts",
+        "make_zero",
+        "-movflags",
+        "+faststart",
+        "-n",
+        "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/clip.mp4"
+      ],
+      "extraction_exit_code": 0,
+      "native_transition_review": {
+        "reviewer": "codex",
+        "times_s": [
+          194.0224375,
+          425.7008125,
+          251.4115625,
+          612.7458125
+        ],
+        "finding": "First three peaks show continuous foreground walkers; the last position confirms end-of-recording camera shake, excluded from the candidate.",
+        "limit": "Only these suspect transitions were resolved; this is not exhaustive rally-boundary review."
+      },
+      "review_evidence": [
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/adjacent-194.022437.jpg",
+          "sha256": "8536e9e85def13a2a304566f977ff7ea7b84be147f3061e7267b68a3b7e8a1d4"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/adjacent-251.411563.jpg",
+          "sha256": "8f72ff19dc73363b68fa63ce1e7bb4cbdad278a986baf9b3bb94a1c02f3c91ec"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/adjacent-425.700812.jpg",
+          "sha256": "9e5c4965793023d133a903a8f88b3b63ac6efb2d37c093d9b9f3bd790446685a"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/adjacent-612.745813.jpg",
+          "sha256": "aa74ed7b280f5f375b0a2d4a52e2d34ad5c9bcd5cf6a021611cb67cc931a9f5b"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/overview-1.jpg",
+          "sha256": "931f1d5561becc48fc346478370d5e31a1eb14c3ca55d9f8fe20cd0ae5c3c361"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/overview-2.jpg",
+          "sha256": "4c94a5f4eca89e40d0992a70aafdfaac3ea9cad40da9591455b439769a91bf37"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/overview-3.jpg",
+          "sha256": "9f7b457fe3d6162376e15f8d63f4dcbadec7fb22e96904c83f2d44675d0e8ebc"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/overview.json",
+          "sha256": "fd40ab8a34ae7b104d028c3e8d436d30fbbbef05c7790a47f4578005bb1c300c"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/review/transition-scan.json",
+          "sha256": "50de5373e39ec704e716e32207e9b918009f9373975ccbe07537da758acfc19b"
+        }
+      ],
+      "audio_full_decode": {
+        "id": "D1",
+        "input": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/clip.mp4",
+        "input_bytes": 156212605,
+        "command": [
+          ".agents/skills/curate-badminton-training-data/.venv/lib/python3.12/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+          "-hide_banner",
+          "-nostdin",
+          "-v",
+          "error",
+          "-i",
+          "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/clip.mp4",
+          "-map",
+          "0:a?",
+          "-vn",
+          "-f",
+          "null",
+          "-"
+        ],
+        "exit_code": 0,
+        "log": "datasets/badminton-v1/local/rally/m1-d1-20261015-candidate/audio-decode.log",
+        "log_bytes": 0
+      }
+    }
+  ],
+  "unsuitable_windows": [
+    {
+      "source_id": "B1",
+      "url": "https://www.bilibili.com/video/BV1FqpC67E8P/",
+      "source_sha256": "a92f5a505ce5548dc52ee3b47dca4c18cc604ff6143f89beef5965d2b6d65396",
+      "human_source_decision_unchanged": {
+        "date": "2026-10-15",
+        "reviewer": "user",
+        "decision": "retain"
+      },
+      "source_window_s": [
+        300,
+        960
+      ],
+      "decision": "agent_unsuitable_window",
+      "reason": "Confirmed editorial time omissions; unsuitable as one continuous play-and-break test window.",
+      "confirmed_cuts": [
+        {
+          "source_time_s": 553.4,
+          "observation": "Score 10:15 to 0:0, ends swap and framing changes; game break omitted.",
+          "evidence": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/adjacent-553.400000.jpg"
+        },
+        {
+          "source_time_s": 643.3666875,
+          "observation": "Score remains 1:4; both players jump positions between consecutive native frames.",
+          "evidence": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/adjacent-643.366688.jpg"
+        },
+        {
+          "source_time_s": 835.0,
+          "observation": "Score 6:5 to 6:6 and player locations jump together.",
+          "evidence": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/adjacent-835.000000.jpg"
+        }
+      ],
+      "review_evidence": [
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/adjacent-553.400000.jpg",
+          "sha256": "0d0a22cfa88c754bbf597bb09cbb6b3fc5d95b705d574b8e42fb0de1deb650d2"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/adjacent-643.366688.jpg",
+          "sha256": "7b99d72348c03e8573d8964ef2a0ab3e876b16ed556eef560e62fd2499a364eb"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/adjacent-835.000000.jpg",
+          "sha256": "456012f4c8bb7dbeacff8d5ff58ff430935967d8d2cf2d9ea756c960eacfd828"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/overview-1.jpg",
+          "sha256": "66ddaf06a088309f869653e667fba090daa93dbc5e40f379ebdc6573b47d7400"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/overview-2.jpg",
+          "sha256": "dd68d4651a4f57e1b09250feec3099611c44d97a410687768ec2809978d42791"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/overview-3.jpg",
+          "sha256": "cd0a7bd44319d28f4ee6434759d2dc0fa1054a9e9af1da27519662df9d1ef905"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/overview.json",
+          "sha256": "a042b5ba9064305bfe0bb00d370724a7427b8be627eb9e5cee24be314b1f2a7f"
+        },
+        {
+          "path": "datasets/badminton-v1/local/rally/m1-b1-20261015-review/review/transition-scan.json",
+          "sha256": "1c5afb3c00220e25395aab02a3a254212c249292e20c412edb16cb010586bc50"
+        }
+      ],
+      "limit": "Only the inspected window is rejected; the original and human source-retain decision remain unchanged."
+    }
+  ],
+  "duration_accounting": {
+    "target_per_category_s": 600,
+    "newly_human_approved_duration_s": 0,
+    "policy": "Candidate duration only; do not add overlapping historical clips or claim the four-category target is met.",
+    "官方高视角": {
+      "candidate_duration_s": 660.08,
+      "newly_human_approved_duration_s": 0
+    },
+    "场边低视角": {
+      "candidate_duration_s": 659.9533125,
+      "newly_human_approved_duration_s": 0
+    },
+    "个人常见斜侧方视角": {
+      "candidate_duration_s": 610.9458125,
+      "newly_human_approved_duration_s": 0
+    },
+    "非官方高视角": {
+      "candidate_duration_s": 0,
+      "newly_human_approved_duration_s": 0,
+      "gap": "Inspect another continuous window or obtain human approval for a replacement source."
+    }
+  },
+  "preserved_inputs": {
+    "full_sources": [
+      "A1",
+      "B1",
+      "C1",
+      "D1"
+    ],
+    "legacy_rally_samples_changed": false,
+    "formal_benchmark_changed": false,
+    "annotations_changed": false,
+    "new_source_algorithm_runs": false,
+    "other_old_local_files_deleted_or_moved": false
+  },
+  "failed_extraction": {
+    "source_id": "C1",
+    "path": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/clip.mp4",
+    "not_for_benchmark": true,
+    "reason": "First copy cut ended inside a coded frame group. Contiguous packet matching passed, but the stricter presentation-PTS-set check found missing tail frames (0.134s maximum gap versus 0.05s source). Final GOP-aligned clip-gop.mp4 passes all checks.",
+    "superseded_validation": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/clip-original-validation.json",
+    "replacement": "datasets/badminton-v1/local/rally/m1-c1-20261015-candidate/clip-gop.mp4"
+  },
+  "replacement_source_trials": [
+    {
+      "source_id": "BV17y1NBoEHf",
+      "url": "https://www.bilibili.com/video/BV17y1NBoEHf/",
+      "title": "中海大第九届新生杯本科生组男单半决赛（上）",
+      "uploader": "海大羽协",
+      "uploader_id": "1856181408",
+      "duration_s": 846.399,
+      "selected_part_identity": [
+        "bilibili 115466068559516_part1"
+      ],
+      "discovery": "Native Bilibili search: badminton campus singles stands (Chinese query); then related uploads from the first verified candidate page.",
+      "requested_source_windows_s": [
+        [
+          60,
+          90
+        ],
+        [
+          360,
+          390
+        ],
+        [
+          720,
+          750
+        ]
+      ],
+      "bounded_previews_only": true,
+      "full_source_downloaded": false,
+      "human_decision": "none",
+      "agent_decision": "agent_wrong_category_for_current_gap",
+      "observation": "All three previews show a low diagonal court-side view, continuous-looking preparation and play. This does not fill the nonofficial-high-view gap.",
+      "evidence_record": "datasets/badminton-v1/local/source-probes/m1-haida-20261015/preview-report.json",
+      "limit": "Only inspected preview content is judged; no blanket source/uploader rejection or new approved duration."
+    },
+    {
+      "source_id": "BV1vf42197kL",
+      "url": "https://www.bilibili.com/video/BV1vf42197kL/",
+      "title": "上帝视角-福建师范大学2024羽毛球联赛男单巅峰赛-半决赛",
+      "uploader": "MatchaSherry",
+      "uploader_id": "494004804",
+      "duration_s": 886.769,
+      "selected_part_identity": [
+        "bilibili 1205150634_part1"
+      ],
+      "discovery": "Native Bilibili search: badminton campus singles stands (Chinese query); then related uploads from the first verified candidate page.",
+      "requested_source_windows_s": [
+        [
+          60,
+          90
+        ],
+        [
+          360,
+          390
+        ],
+        [
+          720,
+          750
+        ]
+      ],
+      "bounded_previews_only": true,
+      "full_source_downloaded": false,
+      "human_decision": "none",
+      "agent_decision": "agent_unsuitable_inspected_preview",
+      "observation": "Higher endline view. Two adjacent-frame cuts confirmed inside the first preview: players and framing change abruptly while breaks are omitted. Do not propose the inspected windows as continuous tests.",
+      "evidence_record": "datasets/badminton-v1/local/source-probes/m1-fjnu-20261015/preview-report.json",
+      "limit": "Only inspected preview content is judged; no blanket source/uploader rejection or new approved duration.",
+      "confirmed_cuts": [
+        {
+          "preview_relative_time_s": 6.267,
+          "approximate_source_time_s": 66.267,
+          "source_time_is_exact": false,
+          "evidence": "datasets/badminton-v1/local/source-probes/m1-fjnu-20261015/adjacent-review/adjacent-preview-6.267.jpg",
+          "finding": "Player positions and framing jump between consecutive preview frames."
+        },
+        {
+          "preview_relative_time_s": 25.867,
+          "approximate_source_time_s": 85.867,
+          "source_time_is_exact": false,
+          "evidence": "datasets/badminton-v1/local/source-probes/m1-fjnu-20261015/adjacent-review/adjacent-preview-25.867.jpg",
+          "finding": "Player positions and framing jump between consecutive preview frames."
+        }
+      ],
+      "timing_limit": "Remote preview includes GOP padding; source=60+preview is approximate, not a benchmark time mapping."
+    }
+  ],
+  "checks": {
+    "collector_status_exit_code": 0,
+    "collector_rally_status_exit_code": 0,
+    "collector_validate_exit_code": 0,
+    "legacy_validate_summary": {
+      "sources": 15,
+      "split_assignments": 0,
+      "split_groups": 0
+    },
+    "interpretation": "Legacy manifest validation only; does not accept these new clips or prove four-category coverage.",
+    "logs": "datasets/badminton-v1/local/rally/m1-preparation-20261015-checks",
+    "candidate_video_frames_fully_decoded": 54608,
+    "all_candidate_audio_fully_decoded": true
+  }
+}

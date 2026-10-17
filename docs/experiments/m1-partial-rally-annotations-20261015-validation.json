@@ -1,0 +1,178 @@
+{
+  "purpose": "Mechanical validation of two partial annotation drafts and review previews; drafts, source clips and annotations remain unchanged.",
+  "null_boundaries": 4,
+  "checks": [
+    {
+      "sample_id": "m1-short-a1-01-20261015",
+      "draft_path": "datasets/badminton-v1/annotations/proposed/rally/m1-short-a1-01-20261015/partial-v1.json",
+      "draft_sha256": "bfa12b23576ce033b32a3b65339abf8a9f597e95e827364aa6e2e2c1e9ab9ef9",
+      "clip_path": "datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "clip_sha256": "fdd2aba069839480ebb6b5edb2dfbdf036e3b0c3de4893693edcb48fda00bca4",
+      "clip_sha_matches_draft_and_validation": true,
+      "decoded_frames_within_0_60s": 1500,
+      "first_decoded_pts_s": 0.091,
+      "validated_boundary_and_review_frame_rows": 12,
+      "requires_human_review": true,
+      "verified_segments": 0,
+      "loader_result": {
+        "rejected": true,
+        "message": "Annotation file still requires human review."
+      },
+      "preview": {
+        "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/A1-01/annotation-preview.mp4",
+        "sha256": "a9f217ce062f5467197ffa65319c3eb7578b5393f0ff275ac5f6ad7a758d4dd8",
+        "sha256_matches_preview_validation": true,
+        "bytes": 13514331,
+        "ffmpeg_exit_code": 0,
+        "remux_exit_code": 0,
+        "full_decode": {
+          "video_frame_count": 1500,
+          "video_first_pts_s": 0.0,
+          "video_last_pts_s": 59.96,
+          "audio_frame_count": 2582,
+          "audio_first_pts_s": 0.0,
+          "audio_last_pts_s": 59.99700680272109
+        },
+        "video_pts_comparison": {
+          "source_first60_frame_count": 1500,
+          "preview_frame_count": 1500,
+          "counts_match": true,
+          "max_abs_pts_error_s": 7.105427357601002e-15,
+          "max_abs_pts_error_ms": 7.105427357601002e-12,
+          "all_pts_match_within_0_1ms": true,
+          "first_source_pts_s": 0.091,
+          "first_preview_pts_s": 0.0
+        },
+        "patched_last_video_packet_pts": 5396400,
+        "patched_last_video_packet_duration_ticks": 3600,
+        "screenshots": [
+          {
+            "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/A1-01/annotation-preview-norm-06.00s.jpg",
+            "exists": true,
+            "bytes": 181100
+          },
+          {
+            "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/A1-01/annotation-preview-norm-12.00s.jpg",
+            "exists": true,
+            "bytes": 182564
+          },
+          {
+            "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/A1-01/annotation-preview-norm-30.88s.jpg",
+            "exists": true,
+            "bytes": 193912
+          }
+        ]
+      },
+      "errors": [],
+      "proposed_review_extents": [
+        {
+          "rally_id": 1,
+          "start_ms": 4080.0,
+          "end_ms": 9240.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 24680.0,
+          "end_ms": 31000.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 47520.0,
+          "end_ms": 56040.0
+        }
+      ],
+      "proposed_review_extents_note": "Used only to check draft ordering: a present boundary candidate is used; a null start uses the start review-window lower bound and a null end uses the end review-window upper bound. These are not verified rally boundaries."
+    },
+    {
+      "sample_id": "m1-short-c1-01-20261015",
+      "draft_path": "datasets/badminton-v1/annotations/proposed/rally/m1-short-c1-01-20261015/partial-v1.json",
+      "draft_sha256": "0e364557772a1d866d645b3d736d451fce8e091039baeda1ab0acad804546b2d",
+      "clip_path": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4",
+      "clip_sha256": "2aec0dc53ecb1e436b916c5d615252cdfd64a9ed03741f02073eea175662d481",
+      "clip_sha_matches_draft_and_validation": true,
+      "decoded_frames_within_0_60s": 1799,
+      "first_decoded_pts_s": 0.118,
+      "validated_boundary_and_review_frame_rows": 35,
+      "requires_human_review": true,
+      "verified_segments": 0,
+      "loader_result": {
+        "rejected": true,
+        "message": "Annotation file still requires human review."
+      },
+      "preview": {
+        "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/annotation-preview.mp4",
+        "sha256": "ae60d26beea6304c8fab3e2f3c198716f0316deb9346396cc41e55755ca899d9",
+        "sha256_matches_preview_validation": true,
+        "bytes": 32060073,
+        "ffmpeg_exit_code": 0,
+        "remux_exit_code": 0,
+        "full_decode": {
+          "video_frame_count": 1799,
+          "video_first_pts_s": 0.0,
+          "video_last_pts_s": 59.97,
+          "audio_frame_count": 2584,
+          "audio_first_pts_s": 0.0,
+          "audio_last_pts_s": 59.97714285714286
+        },
+        "video_pts_comparison": {
+          "source_first60_frame_count": 1799,
+          "preview_frame_count": 1799,
+          "counts_match": true,
+          "max_abs_pts_error_s": 7.105427357601002e-15,
+          "max_abs_pts_error_ms": 7.105427357601002e-12,
+          "all_pts_match_within_0_1ms": true,
+          "first_source_pts_s": 0.118,
+          "first_preview_pts_s": 0.0
+        },
+        "patched_last_video_packet_pts": 959520,
+        "patched_last_video_packet_duration_ticks": 528,
+        "screenshots": [
+          {
+            "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/annotation-preview-norm-06.00s.jpg",
+            "exists": true,
+            "bytes": 269083
+          },
+          {
+            "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/annotation-preview-norm-12.00s.jpg",
+            "exists": true,
+            "bytes": 275868
+          },
+          {
+            "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/annotation-preview-norm-13.57s.jpg",
+            "exists": true,
+            "bytes": 287429
+          },
+          {
+            "path": "datasets/badminton-v1/local/rally/m1-partial-annotation-review-20261015/C1-01/annotation-preview-norm-35.00s.jpg",
+            "exists": true,
+            "bytes": 277444
+          }
+        ]
+      },
+      "errors": [],
+      "proposed_review_extents": [
+        {
+          "rally_id": 1,
+          "start_ms": 11141.0,
+          "end_ms": 13675.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 28318.0,
+          "end_ms": 43794.0
+        }
+      ],
+      "proposed_review_extents_note": "Used only to check draft ordering: a present boundary candidate is used; a null start uses the start review-window lower bound and a null end uses the end review-window upper bound. These are not verified rally boundaries."
+    }
+  ],
+  "summary": {
+    "clip_hashes_match": true,
+    "all_nonnull_boundary_and_review_window_frame_pts_match": true,
+    "four_null_boundaries_preserved": true,
+    "both_drafts_marked_for_human_review_with_no_verified_segments": true,
+    "existing_loader_rejects_both_drafts": true,
+    "both_preview_audio_video_full_decodes_passed": true,
+    "all_preview_screenshots_exist": true,
+    "both_previews_exact_frame_and_pts_match": true
+  }
+}
