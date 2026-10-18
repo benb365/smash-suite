@@ -1,0 +1,4 @@
+interface:
+  display_name: "视频结果对比网页"
+  short_description: "用固定网页展示视频、人工标注及多种算法区间，支持时间轴联动复核"
+  default_prompt: "使用 $review-video-results 展示这批视频及保存的算法结果，运行固定查看器后直接检查网页。"

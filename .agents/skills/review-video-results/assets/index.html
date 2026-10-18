@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>视频结果对比</title>
+<style>
+:root{font:15px/1.6 system-ui,-apple-system,sans-serif;color:#243143;background:#f3f5f8}*{box-sizing:border-box}body{max-width:1240px;margin:auto;padding:24px 22px 60px}h1{font-size:27px;margin:0 0 8px}h2{font-size:19px;margin:0 0 10px}p{margin:8px 0 14px}.muted{color:#68768a}.small{font-size:13px}.card{background:white;border:1px solid #dfe5ed;border-radius:12px;padding:19px;margin:16px 0}.summary,.controls,.clips,.issues{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.summary>div{flex:1;min-width:155px;background:#fff;border:1px solid #dfe5ed;border-radius:10px;padding:13px 18px}.summary b{display:block;font-size:23px}.summary small{color:#68768a}button,select{font:inherit;padding:7px 11px;border:1px solid #ccd4df;border-radius:7px;background:white;color:inherit;cursor:pointer}button:hover{background:#edf2fc}button.active{background:#3157cb;color:white;border-color:#3157cb}.clips{margin:16px 0}video{width:100%;max-height:320px;display:block;background:#111;border-radius:8px}.state{background:#f0f4fa;border-radius:6px;padding:9px 12px;margin:10px 0;font-variant-numeric:tabular-nums}.badge{display:inline-block;font-size:13px;border-radius:4px;background:#e8edf5;margin:2px 5px;padding:1px 7px}.badge.kept{background:#dff2e8}.badge.cut{background:#fce8df}.line{display:grid;grid-template-columns:108px 1fr;gap:8px;align-items:center;margin:9px 0}.label{overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.track{height:28px;background:#edf0f5;border-radius:5px;position:relative;overflow:hidden;cursor:pointer;touch-action:none}.band{height:100%;position:absolute;border-radius:4px;min-width:1px;opacity:.9;pointer-events:none}.cursor{position:absolute;width:2px;height:100%;background:#18212d;z-index:2;pointer-events:none}.scale{display:flex;justify-content:space-between;margin-left:116px;color:#68768a;font-size:12px}.legend{display:flex;gap:12px;flex-wrap:wrap;font-size:13px;color:#68768a;margin-top:12px}.dot{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}.tablewrap{overflow:auto}table{width:100%;min-width:660px;border-collapse:collapse;font-size:14px}th,td{padding:11px 9px;vertical-align:top;text-align:left;border-bottom:1px solid #e4e9ef}th{background:#f6f8fb;color:#5b6a7d}td button{font-size:13px;padding:4px 8px;margin:2px;white-space:nowrap}.loss{color:#a74827;font-weight:600}.ok{color:#218258}#player{scroll-margin-top:12px}.controls{margin:10px 0}input{accent-color:#3157cb}[hidden]{display:none!important}#loading{padding:24px}@media(max-width:650px){body{padding:16px 12px}.card{padding:13px}.line{grid-template-columns:78px 1fr}.scale{margin-left:86px}h1{font-size:23px}.summary b{font-size:20px}}
+</style>
+</head>
+<body>
+<h1 id="title">视频结果对比</h1><p id="note" class="muted"></p><div id="summary" class="summary"></div>
+<section id="issueCard" class="card" hidden><h2>先看这些位置</h2><div id="issues" class="issues"></div></section>
+<nav id="clips" class="clips" aria-label="选择视频"></nav>
+<section id="player" class="card" hidden>
+<h2 id="clipTitle"></h2><p id="clipNote" class="muted small"></p><div id="clipSummary" class="summary"></div>
+<video id="video" controls preload="metadata"></video><div id="state" class="state">加载视频…</div>
+<div class="controls"><button id="back">后退2秒</button><button id="forward">前进2秒</button><label>速度 <select id="speed"><option value="0.5">0.5倍</option><option value="1" selected>正常</option><option value="1.5">1.5倍</option><option value="2">2倍</option></select></label><label id="simulate"><input id="skip" type="checkbox">模拟剪辑，跳过删除部分</label><label id="methodLabel">模拟方案 <select id="method"></select></label></div>
+<p class="small muted">默认播放完整原视频，可查看被算法删除的画面。点击或拖动任意时间行、视频进度条，均与其余行同步。</p>
+<div id="tracks"></div><div id="scale" class="scale"></div><div id="legend" class="legend"></div>
+</section>
+<section id="rallyCard" class="card" hidden><h2>逐回合对照</h2><p class="small muted">起止均来自保存的区间；少留是被裁掉的人工对打，多留是相关输出中未覆盖任何人工回合或已确认排除事件的时间。多个回合共用输出时，多留数字可能重复，不可相加。这里帮助定位画面，不替代正式评估。</p><div class="tablewrap"><table><thead id="rallyHead"></thead><tbody id="rallies"></tbody></table></div></section>
+<section id="otherCard" class="card" hidden><h2 id="otherTitle"></h2><p class="small muted" id="otherNote"></p><div class="tablewrap"><table><thead><tr><th>方案</th><th>保存的区间</th><th>说明</th><th>检查</th></tr></thead><tbody id="others"></tbody></table></div></section>
+<p class="muted small">查看或播放不代表人工确认。反馈时请说明视频、回合序号和时间。</p><p id="loading">正在读取数据…</p>
+<script>
+let data,clip,pending=null,stopAt=null,selected=0;
+const $=id=>document.getElementById(id),video=$('video'),skip=$('skip');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const sec=ms=>(ms/1000).toFixed(2)+'秒',range=r=>(r.start_ms/1000).toFixed(2)+'–'+(r.end_ms/1000).toFixed(2)+'秒';
+const now=()=>Math.max(0,video.currentTime*1000-(clip?.media_offset_ms||0));
+const methods=()=>data.tracks.filter(t=>t.role==='prediction');
+const inside=(rows,t)=>rows.find(r=>r.start_ms<=t&&t<r.end_ms);
+function summary(id,items){$(id).innerHTML=(items||[]).map(s=>`<div>${esc(s.label)}<b>${esc(s.value)}</b>${s.note?`<small>${esc(s.note)}</small>`:''}</div>`).join('');$(id).hidden=!items?.length}
+function seek(ms,play=false,end=null){
+ stopAt=end;const t=(Math.max(0,Math.min(clip.duration_ms,ms))+clip.media_offset_ms)/1000;
+ if(video.readyState<1){pending={t,play};return}
+ video.currentTime=t;if(play)video.play().catch(()=>{});update();
+}
+function focusPlayer(){ $('player').scrollIntoView({behavior:'smooth',block:'start'}) }
+function show(index){
+ video.pause();pending=null;stopAt=null;skip.checked=false;selected=index;clip=data.clips[index];
+ $('player').hidden=false;$('clipTitle').textContent=clip.title||clip.id;$('clipNote').textContent=clip.note||'';summary('clipSummary',clip.summary);
+ $('clips').querySelectorAll('button').forEach((b,i)=>b.classList.toggle('active',i===index));
+ $('tracks').innerHTML=data.tracks.filter(t=>t.role!=='excluded'||clip.intervals[t.id].length).map(t=>`<div class="line"><span class="label" title="${esc(t.label)}">${esc(t.label)}</span><div class="track" data-track="${esc(t.id)}" role="slider" tabindex="0" aria-label="${esc(t.label)}时间轴" aria-valuemin="0" aria-valuemax="${clip.duration_ms/1000}">${clip.intervals[t.id].map(r=>`<span class="band" style="background:${t.color};left:${r.start_ms/clip.duration_ms*100}%;width:${(r.end_ms-r.start_ms)/clip.duration_ms*100}%" title="${esc(r.label||r.id)} ${range(r)}"></span>`).join('')}<span class="cursor"></span></div></div>`).join('');
+ $('tracks').querySelectorAll('.track').forEach(el=>{
+  let dragging=false;const jump=e=>{skip.checked=false;const r=el.getBoundingClientRect();seek(Math.max(0,Math.min(1,(e.clientX-r.left)/r.width))*clip.duration_ms)};
+  el.onpointerdown=e=>{dragging=true;el.setPointerCapture(e.pointerId);jump(e)};el.onpointermove=e=>{if(dragging)jump(e)};el.onpointerup=()=>dragging=false;el.onpointercancel=()=>dragging=false;
+  el.onkeydown=e=>{if(['ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();skip.checked=false;seek(now()+(e.key==='ArrowRight'?1000:-1000))}};
+ });
+ $('scale').innerHTML=[0,.25,.5,.75,1].map(f=>`<span>${Math.round(clip.duration_ms*f/1000)}秒</span>`).join('');
+ $('legend').innerHTML=data.tracks.filter(t=>t.role!=='excluded'||clip.intervals[t.id].length).map(t=>`<span><i class="dot" style="background:${t.color}"></i>${esc(t.label)}</span>`).join('');
+ $('rallyCard').hidden=!clip.rows.length;
+ $('rallyHead').innerHTML=`<tr><th>人工确认回合</th>${methods().map(t=>`<th>${esc(t.label)}</th>`).join('')}<th>检查</th></tr>`;
+ $('rallies').innerHTML=clip.rows.map((row,i)=>`<tr><td>${esc(row.truth.label||'第'+(i+1)+'回合')}<br>${range(row.truth)}</td>${methods().map(t=>{const m=row.methods[t.id];return `<td>${m.intervals.map(range).join('<br>')||'<span class="loss">没有输出</span>'}<br><span class="${m.missing_ms?'loss':'ok'}">少留${sec(m.missing_ms)}</span> · 多留${sec(m.extra_ms)}${m.shared?'<br>多个回合共用输出':''}</td>`}).join('')}<td><button data-row="${i}" data-side="start">看开头</button><button data-row="${i}" data-side="end">看结尾</button><button data-row="${i}" data-side="all">看整回合</button></td></tr>`).join('');
+ const hasTruth=data.tracks.some(t=>t.role==='truth');$('otherCard').hidden=!methods().length;
+ $('otherTitle').textContent=hasTruth?'未覆盖人工回合的输出':'算法区间明细';
+ $('otherNote').textContent=hasTruth?'仅表示没有覆盖已给出的人工回合，不自动判为误报；完整落在已确认排除事件内的会标明。':'本页没有人工回合标注，不计算少留对打或评估成绩。';
+ $('others').innerHTML=clip.other_outputs.map((r,i)=>`<tr><td>${esc(data.tracks.find(t=>t.id===r.track_id).label)}</td><td>${range(r.interval)}</td><td>${r.ignored?'已确认排除事件内':'按原输出展示'}</td><td><button data-other="${i}">看前后画面</button></td></tr>`).join('')||'<tr><td colspan="4">本段没有这类输出</td></tr>';
+ video.src=clip.video;video.load();update();
+}
+function update(){
+ if(!clip)return;const t=now();
+ $('state').innerHTML=`${(t/1000).toFixed(3)}秒 `+data.tracks.map(track=>{const found=inside(clip.intervals[track.id],t);if(track.role==='excluded'&&!found)return '';let text=track.role==='prediction'?(found?'保留':'删除'):(found?(found.label||'区间'+found.id):'已给区间之外');return `<span class="badge ${found?'kept':'cut'}">${esc(track.label)}：${esc(text)}</span>`}).join('');
+ $('tracks').querySelectorAll('.track').forEach(el=>{el.querySelector('.cursor').style.left=Math.min(100,t/clip.duration_ms*100)+'%';el.setAttribute('aria-valuenow',(t/1000).toFixed(3))});
+ if(!video.paused&&stopAt!==null&&t>=stopAt){video.pause();stopAt=null}
+ if(skip.checked&&!video.paused){const rows=clip.intervals[$('method').value];if(!inside(rows,t)){const next=rows.find(r=>r.start_ms>t);if(next)video.currentTime=(next.start_ms+clip.media_offset_ms)/1000;else video.pause()}}
+}
+video.addEventListener('loadedmetadata',()=>{video.playbackRate=Number($('speed').value);if(pending){const p=pending;pending=null;video.currentTime=p.t;if(p.play)video.play().catch(()=>{})}else video.currentTime=clip.media_offset_ms/1000;update()});
+video.addEventListener('timeupdate',update);video.addEventListener('seeked',update);video.addEventListener('pause',update);video.addEventListener('error',()=>{$('state').textContent='视频未能加载，请检查文件路径和浏览器支持的编码。'});
+if(video.requestVideoFrameCallback){const frame=()=>{update();video.requestVideoFrameCallback(frame)};video.requestVideoFrameCallback(frame)}
+$('speed').onchange=()=>video.playbackRate=Number($('speed').value);$('back').onclick=()=>seek(now()-2000);$('forward').onclick=()=>seek(now()+2000);skip.onchange=$('method').onchange=()=>{stopAt=null;update()};
+document.addEventListener('click',e=>{
+ const b=e.target.closest('button');if(!b||!data)return;
+ if(b.dataset.clip!==undefined)show(Number(b.dataset.clip));
+ if(b.dataset.issueClip!==undefined){show(Number(b.dataset.issueClip));const issue=clip.issues[Number(b.dataset.issue)];seek(issue.start_ms,true,issue.end_ms);focusPlayer()}
+ if(b.dataset.row!==undefined){skip.checked=false;const row=clip.rows[Number(b.dataset.row)],all=[row.truth,...Object.values(row.methods).flatMap(m=>m.intervals)];const a=Math.min(...all.map(r=>r.start_ms)),z=Math.max(...all.map(r=>r.end_ms));const start=b.dataset.side==='end'?Math.min(...all.map(r=>r.end_ms))-2000:a-2000;seek(start,true,Math.min(clip.duration_ms,b.dataset.side==='start'?Math.max(...all.map(r=>r.start_ms))+3000:z+2000));focusPlayer()}
+ if(b.dataset.other!==undefined){skip.checked=false;const p=clip.other_outputs[Number(b.dataset.other)].interval;seek(p.start_ms-2000,true,Math.min(clip.duration_ms,p.end_ms+2000));focusPlayer()}
+});
+fetch('/data.json').then(r=>{if(!r.ok)throw Error('结果数据加载失败');return r.json()}).then(d=>{
+ data=d;document.title=data.title;$('title').textContent=data.title;$('note').textContent=data.note||'';summary('summary',data.summary);
+ $('clips').innerHTML=data.clips.map((c,i)=>`<button data-clip="${i}">${esc(c.title||c.id)} · ${(c.duration_ms/60000).toFixed(2)}分钟</button>`).join('');
+ $('issues').innerHTML=data.clips.flatMap((c,i)=>(c.issues||[]).map((q,j)=>`<button data-issue-clip="${i}" data-issue="${j}">${esc(c.id)} · ${esc(q.label)}</button>`)).join('');$('issueCard').hidden=!$('issues').children.length;
+ $('method').innerHTML=methods().map(t=>`<option value="${esc(t.id)}">${esc(t.label)}</option>`).join('');$('method').value=data.primary_track||'';$('simulate').hidden=!methods().length;$('methodLabel').hidden=methods().length<2;
+ $('loading').remove();show(0);
+}).catch(error=>{$('loading').textContent=error.message});
+</script>
+</body>
+</html>

@@ -76,7 +76,7 @@ TrackNet 权重、不编码预览视频。依赖声明包含 `av==14.2.0`。更�
 - [系统边界](docs/architecture.md)
 - [当前路线图](docs/plan/roadmap.md)
 - [需求与评估口径](docs/plan/rally-segmentation-requirement.md)
-- [视频结果展示约定](docs/video-result-review.md)
+- [视频结果查看skill](.agents/skills/review-video-results/SKILL.md)
 - [轨迹方向、高球连接与回击候选试验](docs/experiments/m1-a-trajectory-20261016.md)
 - [给球与短片段过滤对照](docs/experiments/m1-a-return-filter-20261016.md)
 - [给球过滤参数复查](docs/experiments/m1-a-return-threshold-20261016.md)

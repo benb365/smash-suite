@@ -29,9 +29,10 @@ truly specific to one client, but must not copy these rules.
    the task.
 7. Read `docs/plan/README.md` when changing roadmap status, evidence, blockers,
    or maintenance rules.
-8. Read `docs/video-result-review.md` before creating or changing a video
-   review, annotation, or algorithm-result comparison UI. Use its synchronized
-   player and shared timeline with labeled interval rows as the default.
+8. Before displaying video annotations or comparing algorithm intervals, read
+   `.agents/skills/review-video-results/SKILL.md` and run its fixed viewer with
+   saved data. Its scripts, template, data format, and display conventions are
+   canonical; do not create another per-experiment HTML generator.
 
 Do not preload every document. If a document appears stale or contradicts the
 code, inspect the implementation and then correct the owning document.
