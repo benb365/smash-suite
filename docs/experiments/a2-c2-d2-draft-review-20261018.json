@@ -1,0 +1,4757 @@
+{
+  "status": "draft_diagnostic_not_formal_benchmark",
+  "date": "2026-10-18",
+  "explanation": "助手按原视频独立标注；所有边界与建议排除事件待用户校验。未调用拒绝草稿的正式评分入口，也未把状态伪装为人工确认。仅复用既有区间交并和时间重叠配对算法制作诊断。",
+  "policy": {
+    "start_acceptable_offset_ms": [
+      -1500,
+      0
+    ],
+    "end_acceptable_offset_ms": [
+      0,
+      1500
+    ],
+    "incomplete_events": "reported_separately_not_counted_as_complete_rallies",
+    "pending_exclusions": "not_ignored",
+    "outside_draft_time": "retained time outside complete draft rallies and separately shown incomplete ranges; includes pending exclusions, not verified idle time"
+  },
+  "source_frozen_report": "docs/experiments/a2-c2-d2-current-algorithms-20261018.json",
+  "frozen_source_sha256": "78beaeb40bea11b29b55a85e785941e329d86d56edd4a9541118ae04eb565e49",
+  "unchanged_viewer_sha256": "7e81c109f586109dc078d1b9d72ade35b652f476dc4c7e5bb961d63d68456244",
+  "results": [
+    {
+      "clip_id": "A2-01",
+      "annotation": "datasets/badminton-v1/annotations/proposed/rally/reserve-a2-01-20261018/full-v1.json",
+      "annotation_sha256": "fe5310125d93fac04281eb9d91941a7abaef9fa6be6baa5d7c6067e24864ff45",
+      "status": "assistant_draft_requires_human_review",
+      "formal_evaluation": false,
+      "annotation_method": {
+        "method": "agent_visual_sampled_frames_with_native_pts",
+        "producer": "Codex",
+        "date": "2026-10-18",
+        "requires_human_review": true,
+        "used_segmentation_predictions": false,
+        "boundary_policy": "start_left_end_right",
+        "boundary_policy_authorization": "按主任务转述的用户授权先自助标记A2/C2/D2再交用户校验；仅沿用start区间左端、end区间右端，不代表内容已获人工确认。"
+      },
+      "coverage": {
+        "partial": false,
+        "reviewed_range_ms": [
+          0,
+          96840
+        ],
+        "completeness": "agent_draft_whole_clip_sampled_review",
+        "method": "全片每1秒抽帧筛查，候选发球/末球及落地附近先0.16–0.20秒抽帧，再以25fps连续原帧核查边界。未读取任何模型分割预测或评估报告。",
+        "human_confirmation_complete": false,
+        "negative_time_is_not_verified": true,
+        "limits": "全片抽帧草稿可能漏掉极短或遮挡事件；补集不是已验证无回合区间。模糊边界保留区间，尚不能用作正式verified真值。"
+      },
+      "timebase": {
+        "origin": "first_decoded_clean_clip_video_frame",
+        "first_decoded_clip_pts_ms": 0.0,
+        "native_fps": 25,
+        "frame_count": 2421,
+        "stream_time_base": "1/12800",
+        "clip_pts_rule": "clip_pts_ms = timestamp_ms",
+        "parent_reserved_clip_origin_ms": 0,
+        "parent_reserved_clip_time_rule": "parent_reserved_clip_ms = parent_reserved_clip_origin_ms + timestamp_ms",
+        "parent_reserved_clip_range_ms": [
+          0,
+          96840
+        ]
+      },
+      "evidence": {
+        "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01",
+        "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/overview/frame-index.json",
+        "boundary_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json",
+        "original_frame_retention": "selected JPEG frames decoded at native 1920x1080, actual PTS recorded; contact sheets crop only for inspection"
+      },
+      "unresolved_regions": [
+        {
+          "range_ms": [
+            0,
+            3000
+          ],
+          "review_status": "needs_review",
+          "type": "opening_break",
+          "note": "片头处于上一分后的走位/捡球；未见正在进行的对打。不补造片头以前的发球或结束边界。"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "3",
+          "start_ms": 48800.0,
+          "end_ms": 53920.0
+        },
+        {
+          "id": "5",
+          "start_ms": 71040.0,
+          "end_ms": 89760.0
+        }
+      ],
+      "annotation_segments": [
+        {
+          "rally_id": 1,
+          "start_ms": 15920.0,
+          "end_ms": 17600.0,
+          "start_frame": 398,
+          "end_frame": 440,
+          "review_status": "needs_review",
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                398,
+                402
+              ],
+              "review_window_ms": [
+                15920.0,
+                16080.0
+              ],
+              "review_window_clip_pts_ms": [
+                15920.0,
+                16080.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                15920.0,
+                16080.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 15920.0,
+              "selected_frame": 398,
+              "selected_clip_pts_ms": 15920.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+              ],
+              "note": "远端白衣持球释放、拍面前后及离拍的球可见；25fps和运动模糊不能确认唯一触球帧。"
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                433,
+                440
+              ],
+              "review_window_ms": [
+                17320.0,
+                17600.0
+              ],
+              "review_window_clip_pts_ms": [
+                17320.0,
+                17600.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                17320.0,
+                17600.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 17600.0,
+              "selected_frame": 440,
+              "selected_clip_pts_ms": 17600.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+              ],
+              "note": "远端左侧网前救球后球下落至地面并停留；低球与网线接近，保留触地/停留间隔。"
+            }
+          },
+          "duration_ms": 1680.0,
+          "short_rally_le_3s": true,
+          "note": "远端白衣发球，近端黑衣成功回击后远端网前未能救起；正常短回合，保留在segments。"
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 28120.0,
+          "end_ms": 32400.0,
+          "start_frame": 703,
+          "end_frame": 810,
+          "review_status": "needs_review",
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                703,
+                707
+              ],
+              "review_window_ms": [
+                28120.0,
+                28280.0
+              ],
+              "review_window_clip_pts_ms": [
+                28120.0,
+                28280.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                28120.0,
+                28280.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 28120.0,
+              "selected_frame": 703,
+              "selected_clip_pts_ms": 28120.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+              ],
+              "note": "远端白衣发球，球由持球手附近移到拍前再飞向近端，保留相邻帧区间。"
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                804,
+                810
+              ],
+              "review_window_ms": [
+                32160.0,
+                32400.0
+              ],
+              "review_window_clip_pts_ms": [
+                32160.0,
+                32400.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                32160.0,
+                32400.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 32400.0,
+              "selected_frame": 810,
+              "selected_clip_pts_ms": 32400.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+              ],
+              "note": "近端黑衣向右伸拍后球落到右侧线边；初次触地与小反弹受拍杆/鞋/边线混叠影响。"
+            }
+          },
+          "duration_ms": 4280.0,
+          "short_rally_le_3s": false,
+          "note": "远端白衣发球，多拍后球落到近端右侧边线附近；分数变化只作为分段辅助证据。"
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 48640.0,
+          "end_ms": 53760.0,
+          "start_frame": 1216,
+          "end_frame": 1344,
+          "review_status": "needs_review",
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                1216,
+                1220
+              ],
+              "review_window_ms": [
+                48640.0,
+                48800.0
+              ],
+              "review_window_clip_pts_ms": [
+                48640.0,
+                48800.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                48640.0,
+                48800.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 48640.0,
+              "selected_frame": 1216,
+              "selected_clip_pts_ms": 48640.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+              ],
+              "note": "近端黑衣短发球，手释放与球过网可见，球拍触球附近有拖影。"
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                1336,
+                1344
+              ],
+              "review_window_ms": [
+                53440.0,
+                53760.0
+              ],
+              "review_window_clip_pts_ms": [
+                53440.0,
+                53760.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                53440.0,
+                53760.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 53760.0,
+              "selected_frame": 1344,
+              "selected_clip_pts_ms": 53760.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+              ],
+              "note": "连续原帧可见球沿近端左侧快速下落、在底线附近转为低位/反弹，首个触地帧有透视歧义。"
+            }
+          },
+          "duration_ms": 5120.0,
+          "short_rally_le_3s": false,
+          "note": "近端黑衣发球，末球近端左后侧未能回击；球落地后沿底线外继续小幅移动。"
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 71440.0,
+          "end_ms": 88200.0,
+          "start_frame": 1786,
+          "end_frame": 2205,
+          "review_status": "needs_review",
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                1786,
+                1790
+              ],
+              "review_window_ms": [
+                71440.0,
+                71600.0
+              ],
+              "review_window_clip_pts_ms": [
+                71440.0,
+                71600.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                71440.0,
+                71600.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 71440.0,
+              "selected_frame": 1786,
+              "selected_clip_pts_ms": 71440.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+              ],
+              "note": "远端白衣发球后球向近端飞来，保留拍前至离拍区间。"
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                2201,
+                2205
+              ],
+              "review_window_ms": [
+                88040.0,
+                88200.0
+              ],
+              "review_window_clip_pts_ms": [
+                88040.0,
+                88200.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                88040.0,
+                88200.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 88200.0,
+              "selected_frame": 2205,
+              "selected_clip_pts_ms": 88200.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+              ],
+              "note": "末球在近端右后场继续下降至底线附近并反弹；以球事件保留结束区间。"
+            }
+          },
+          "duration_ms": 16760.0,
+          "short_rally_le_3s": false,
+          "note": "远端白衣发球后长回合，末球飞向近端右后侧并落地；不把球员先停步算作结束。"
+        }
+      ],
+      "excluded_event_candidates": [
+        {
+          "event_id": "A2-01-E01",
+          "range_ms": [
+            7000,
+            8000
+          ],
+          "review_status": "needs_review",
+          "type": "shuttle_return_candidate",
+          "exclusion_status": "candidate_only",
+          "note": "近端黑衣在非发球站位轻拨球；远端白衣仍弯腰整理，未形成接发/连续对打，建议作为还球候选排除。"
+        },
+        {
+          "event_id": "A2-01-E02",
+          "range_ms": [
+            39400,
+            40280
+          ],
+          "review_status": "needs_review",
+          "type": "shuttle_handling",
+          "exclusion_status": "candidate_only",
+          "note": "近端黑衣捡起球后向上颠球并接住，远端静候；不是正式发球，建议排除。"
+        },
+        {
+          "event_id": "A2-01-E03",
+          "range_ms": [
+            58000,
+            61800
+          ],
+          "review_status": "needs_review",
+          "type": "shuttle_handling_or_return_candidate",
+          "exclusion_status": "candidate_only",
+          "note": "近端黑衣在后场整理/颠球，后续远端白衣捡球。跨网还球的精确时刻未收窄，保留宽事件窗待核查。"
+        },
+        {
+          "event_id": "A2-01-E04",
+          "range_ms": [
+            93240,
+            96400
+          ],
+          "review_status": "needs_review",
+          "type": "shuttle_return_candidate",
+          "exclusion_status": "candidate_only",
+          "note": "近端黑衣轻拨球过网给远端白衣；球落在远端网前，白衣随后捡起，建议作为还球排除。"
+        }
+      ],
+      "incomplete_events": [],
+      "all_complete": {
+        "target_count": 4,
+        "target_ms": 27840.0,
+        "retained_ms": 21720.0,
+        "retained_fraction": 0.7801724137931034,
+        "wholly_missed_ids": [
+          1,
+          2
+        ],
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 1,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 1,
+            "start_ms": 15920.0,
+            "end_ms": 17600.0,
+            "duration_ms": 1680.0,
+            "retained_ms": 0,
+            "missing_ms": 1680.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 28120.0,
+            "end_ms": 32400.0,
+            "duration_ms": 4280.0,
+            "retained_ms": 0,
+            "missing_ms": 4280.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 48640.0,
+            "end_ms": 53760.0,
+            "duration_ms": 5120.0,
+            "retained_ms": 4960.0,
+            "missing_ms": 160.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": false,
+            "end_acceptable": true,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": 160.0,
+            "end_offset_ms": 160.0,
+            "start_error_ms": 160.0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 71440.0,
+            "end_ms": 88200.0,
+            "duration_ms": 16760.0,
+            "retained_ms": 16760.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "5"
+            ],
+            "matched_prediction_id": "5",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -400.0,
+            "end_offset_ms": 1560.0,
+            "start_error_ms": 0,
+            "end_error_ms": 60.0
+          }
+        ]
+      },
+      "over_3_seconds": {
+        "target_count": 3,
+        "target_ms": 26160.0,
+        "retained_ms": 21720.0,
+        "retained_fraction": 0.8302752293577982,
+        "wholly_missed_ids": [
+          2
+        ],
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 1,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 2,
+            "start_ms": 28120.0,
+            "end_ms": 32400.0,
+            "duration_ms": 4280.0,
+            "retained_ms": 0,
+            "missing_ms": 4280.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 48640.0,
+            "end_ms": 53760.0,
+            "duration_ms": 5120.0,
+            "retained_ms": 4960.0,
+            "missing_ms": 160.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": false,
+            "end_acceptable": true,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": 160.0,
+            "end_offset_ms": 160.0,
+            "start_error_ms": 160.0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 71440.0,
+            "end_ms": 88200.0,
+            "duration_ms": 16760.0,
+            "retained_ms": 16760.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "5"
+            ],
+            "matched_prediction_id": "5",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -400.0,
+            "end_offset_ms": 1560.0,
+            "start_error_ms": 0,
+            "end_error_ms": 60.0
+          }
+        ]
+      },
+      "over_5_seconds": {
+        "target_count": 2,
+        "target_ms": 21880.0,
+        "retained_ms": 21720.0,
+        "retained_fraction": 0.9926873857404022,
+        "wholly_missed_ids": [],
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 1,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 3,
+            "start_ms": 48640.0,
+            "end_ms": 53760.0,
+            "duration_ms": 5120.0,
+            "retained_ms": 4960.0,
+            "missing_ms": 160.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": false,
+            "end_acceptable": true,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": 160.0,
+            "end_offset_ms": 160.0,
+            "start_error_ms": 160.0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 71440.0,
+            "end_ms": 88200.0,
+            "duration_ms": 16760.0,
+            "retained_ms": 16760.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "5"
+            ],
+            "matched_prediction_id": "5",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -400.0,
+            "end_offset_ms": 1560.0,
+            "start_error_ms": 0,
+            "end_error_ms": 60.0
+          }
+        ]
+      },
+      "selected_ms": 23840.0,
+      "retained_in_incomplete_ranges_ms": 0,
+      "retained_outside_complete_and_incomplete_drafts_ms": 2120.0,
+      "no_complete_or_incomplete_overlap_prediction_ids": [],
+      "merge_candidates": [],
+      "split_candidate_rally_ids": []
+    },
+    {
+      "clip_id": "A2-02",
+      "annotation": "datasets/badminton-v1/annotations/proposed/rally/reserve-a2-02-20261018/full-v1.json",
+      "annotation_sha256": "68c796494ef31c009c2535839f54d888a86622cd609dc89bba100ffb0c5e906c",
+      "status": "assistant_draft_requires_human_review",
+      "formal_evaluation": false,
+      "annotation_method": {
+        "method": "agent_visual_sampled_frames_with_native_pts",
+        "producer": "Codex",
+        "date": "2026-10-18",
+        "requires_human_review": true,
+        "used_segmentation_predictions": false,
+        "boundary_policy": "start_left_end_right",
+        "boundary_policy_authorization": "按主任务转述的用户授权先自助标记A2/C2/D2再交用户校验；仅沿用start区间左端、end区间右端，不代表内容已获人工确认。"
+      },
+      "coverage": {
+        "partial": false,
+        "reviewed_range_ms": [
+          0,
+          81120
+        ],
+        "completeness": "agent_draft_whole_clip_sampled_review",
+        "method": "全片每1秒抽帧筛查，候选发球/末球及落地附近先0.16–0.20秒抽帧，再以25fps连续原帧核查边界。未读取任何模型分割预测或评估报告。",
+        "human_confirmation_complete": false,
+        "negative_time_is_not_verified": true,
+        "limits": "全片抽帧草稿可能漏掉极短或遮挡事件；补集不是已验证无回合区间。模糊边界保留区间，尚不能用作正式verified真值。"
+      },
+      "timebase": {
+        "origin": "first_decoded_clean_clip_video_frame",
+        "first_decoded_clip_pts_ms": 0.0,
+        "native_fps": 25,
+        "frame_count": 2028,
+        "stream_time_base": "1/12800",
+        "clip_pts_rule": "clip_pts_ms = timestamp_ms",
+        "parent_reserved_clip_origin_ms": 98880,
+        "parent_reserved_clip_time_rule": "parent_reserved_clip_ms = parent_reserved_clip_origin_ms + timestamp_ms",
+        "parent_reserved_clip_range_ms": [
+          98880,
+          180000
+        ]
+      },
+      "evidence": {
+        "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02",
+        "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/overview/frame-index.json",
+        "boundary_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/boundary-index.json",
+        "original_frame_retention": "selected JPEG frames decoded at native 1920x1080, actual PTS recorded; contact sheets crop only for inspection"
+      },
+      "unresolved_regions": [
+        {
+          "range_ms": [
+            0,
+            3000
+          ],
+          "review_status": "needs_review",
+          "type": "opening_break",
+          "note": "片头处于上一分后的走位/捡球；未见正在进行的对打。不补造片头以前的发球或结束边界。"
+        },
+        {
+          "range_ms": [
+            79200,
+            81120
+          ],
+          "review_status": "needs_review",
+          "type": "trailing_service_preparation",
+          "note": "远端持球、近端准备接发；末帧81.08秒前未见发球触球或离拍，不补造跨片尾回合。画面近静止但相邻解码帧像素并非完全相同，不能仅据此认定冻结。",
+          "evidence": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/tail-pixel-difference.json"
+        },
+        {
+          "range_ms": [
+            32560,
+            33120
+          ],
+          "review_status": "needs_review",
+          "type": "end_event_occluded",
+          "note": "第2回合初次触地被近端身体/球拍和透视遮挡，必须由用户重点确认。"
+        }
+      ],
+      "predictions": [
+        {
+          "id": "3",
+          "start_ms": 48560.0,
+          "end_ms": 63800.0
+        }
+      ],
+      "annotation_segments": [
+        {
+          "rally_id": 1,
+          "start_ms": 7080.0,
+          "end_ms": 10200.0,
+          "start_frame": 177,
+          "end_frame": 255,
+          "review_status": "needs_review",
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                177,
+                181
+              ],
+              "review_window_ms": [
+                7080.0,
+                7240.0
+              ],
+              "review_window_clip_pts_ms": [
+                7080.0,
+                7240.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                105960.0,
+                106120.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 7080.0,
+              "selected_frame": 177,
+              "selected_clip_pts_ms": 7080.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/boundary-index.json"
+              ],
+              "note": "远端白衣发球，球从持球手向拍前、向近端飞出；保留可见离拍前后原帧。"
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                250,
+                255
+              ],
+              "review_window_ms": [
+                10000.0,
+                10200.0
+              ],
+              "review_window_clip_pts_ms": [
+                10000.0,
+                10200.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                108880.0,
+                109080.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 10200.0,
+              "selected_frame": 255,
+              "selected_clip_pts_ms": 10200.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/boundary-index.json"
+              ],
+              "note": "近端黑衣向右伸拍，球落到右侧线边后短距离反弹/停留；线与拍面混叠，保留0.20秒窗口。"
+            }
+          },
+          "duration_ms": 3120.0,
+          "short_rally_le_3s": false,
+          "note": "远端白衣发球，多拍后近端右侧边线附近球落地，近端黑衣随后捡球。"
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 27640.0,
+          "end_ms": 33120.0,
+          "start_frame": 691,
+          "end_frame": 828,
+          "review_status": "needs_review",
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                691,
+                695
+              ],
+              "review_window_ms": [
+                27640.0,
+                27800.0
+              ],
+              "review_window_clip_pts_ms": [
+                27640.0,
+                27800.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                126520.0,
+                126680.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 27640.0,
+              "selected_frame": 691,
+              "selected_clip_pts_ms": 27640.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/boundary-index.json"
+              ],
+              "note": "近端黑衣释放球并以低拍送出，球随后过网，保留离拍前后区间。"
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                814,
+                828
+              ],
+              "review_window_ms": [
+                32560.0,
+                33120.0
+              ],
+              "review_window_clip_pts_ms": [
+                32560.0,
+                33120.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                131440.0,
+                132000.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 33120.0,
+              "selected_frame": 828,
+              "selected_clip_pts_ms": 33120.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/boundary-index.json"
+              ],
+              "note": "远端白衣末次网前击球后球向近端下降；近端低拍与身体遮挡了触地，随后球未继续被回击。初次触地不能定位，保留32.56–33.12秒较宽窗口，不能把球员停步当作精确结束事件。"
+            }
+          },
+          "duration_ms": 5480.0,
+          "short_rally_le_3s": false,
+          "note": "近端黑衣发球，网前多拍后末球掉到近端身前/脚边；该结束边界是本片重点待审项。"
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 48960.0,
+          "end_ms": 64200.0,
+          "start_frame": 1224,
+          "end_frame": 1605,
+          "review_status": "needs_review",
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                1224,
+                1228
+              ],
+              "review_window_ms": [
+                48960.0,
+                49120.0
+              ],
+              "review_window_clip_pts_ms": [
+                48960.0,
+                49120.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                147840.0,
+                148000.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 48960.0,
+              "selected_frame": 1224,
+              "selected_clip_pts_ms": 48960.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/boundary-index.json"
+              ],
+              "note": "远端白衣发球，球由手/拍附近到拍前并向近端飞行，保留相邻原帧。"
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "review_status": "needs_review",
+              "review_window_frames": [
+                1601,
+                1605
+              ],
+              "review_window_ms": [
+                64040.0,
+                64200.0
+              ],
+              "review_window_clip_pts_ms": [
+                64040.0,
+                64200.0
+              ],
+              "parent_reserved_clip_review_window_ms": [
+                162920.0,
+                163080.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 64200.0,
+              "selected_frame": 1605,
+              "selected_clip_pts_ms": 64200.0,
+              "candidate_frame": null,
+              "native_contiguous_frame_evidence": true,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-02/boundary-index.json"
+              ],
+              "note": "近端右侧伸拍后球下落并在边线旁反弹/停留；球接近球拍和鞋，保留触地候选区间。"
+            }
+          },
+          "duration_ms": 15240.0,
+          "short_rally_le_3s": false,
+          "note": "远端白衣发球后长回合，末球落到近端右侧线边，近端黑衣随即走向场边。"
+        }
+      ],
+      "excluded_event_candidates": [
+        {
+          "event_id": "A2-02-E01",
+          "range_ms": [
+            18000,
+            19000
+          ],
+          "review_status": "needs_review",
+          "type": "shuttle_handling",
+          "exclusion_status": "candidate_only",
+          "note": "近端黑衣捡球后在自己身前颠球、接住；远端静候，建议排除。"
+        },
+        {
+          "event_id": "A2-02-E02",
+          "range_ms": [
+            34200,
+            38600
+          ],
+          "review_status": "needs_review",
+          "type": "shuttle_return_or_pickup_candidate",
+          "exclusion_status": "candidate_only",
+          "note": "上一回合后两人放松移动，球出现在远端脚前，白衣随后捡球；还球起点未精确定位，保留宽事件窗待核查。"
+        },
+        {
+          "event_id": "A2-02-E03",
+          "range_ms": [
+            71000,
+            73600
+          ],
+          "review_status": "needs_review",
+          "type": "shuttle_handling",
+          "exclusion_status": "candidate_only",
+          "note": "近端黑衣捡球后检查/整理手中球，未形成正式发球或对打，建议排除。"
+        }
+      ],
+      "incomplete_events": [],
+      "all_complete": {
+        "target_count": 3,
+        "target_ms": 23840.0,
+        "retained_ms": 14840.0,
+        "retained_fraction": 0.62248322147651,
+        "wholly_missed_ids": [
+          1,
+          2
+        ],
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 1,
+            "start_ms": 7080.0,
+            "end_ms": 10200.0,
+            "duration_ms": 3120.0,
+            "retained_ms": 0,
+            "missing_ms": 3120.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 27640.0,
+            "end_ms": 33120.0,
+            "duration_ms": 5480.0,
+            "retained_ms": 0,
+            "missing_ms": 5480.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 48960.0,
+            "end_ms": 64200.0,
+            "duration_ms": 15240.0,
+            "retained_ms": 14840.0,
+            "missing_ms": 400.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -400.0,
+            "end_offset_ms": -400.0,
+            "start_error_ms": 0,
+            "end_error_ms": 400.0
+          }
+        ]
+      },
+      "over_3_seconds": {
+        "target_count": 3,
+        "target_ms": 23840.0,
+        "retained_ms": 14840.0,
+        "retained_fraction": 0.62248322147651,
+        "wholly_missed_ids": [
+          1,
+          2
+        ],
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 1,
+            "start_ms": 7080.0,
+            "end_ms": 10200.0,
+            "duration_ms": 3120.0,
+            "retained_ms": 0,
+            "missing_ms": 3120.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 27640.0,
+            "end_ms": 33120.0,
+            "duration_ms": 5480.0,
+            "retained_ms": 0,
+            "missing_ms": 5480.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 48960.0,
+            "end_ms": 64200.0,
+            "duration_ms": 15240.0,
+            "retained_ms": 14840.0,
+            "missing_ms": 400.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -400.0,
+            "end_offset_ms": -400.0,
+            "start_error_ms": 0,
+            "end_error_ms": 400.0
+          }
+        ]
+      },
+      "over_5_seconds": {
+        "target_count": 2,
+        "target_ms": 20720.0,
+        "retained_ms": 14840.0,
+        "retained_fraction": 0.7162162162162162,
+        "wholly_missed_ids": [
+          2
+        ],
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 2,
+            "start_ms": 27640.0,
+            "end_ms": 33120.0,
+            "duration_ms": 5480.0,
+            "retained_ms": 0,
+            "missing_ms": 5480.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 48960.0,
+            "end_ms": 64200.0,
+            "duration_ms": 15240.0,
+            "retained_ms": 14840.0,
+            "missing_ms": 400.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -400.0,
+            "end_offset_ms": -400.0,
+            "start_error_ms": 0,
+            "end_error_ms": 400.0
+          }
+        ]
+      },
+      "selected_ms": 15240.0,
+      "retained_in_incomplete_ranges_ms": 0,
+      "retained_outside_complete_and_incomplete_drafts_ms": 400.0,
+      "no_complete_or_incomplete_overlap_prediction_ids": [],
+      "merge_candidates": [],
+      "split_candidate_rally_ids": []
+    },
+    {
+      "clip_id": "C2",
+      "annotation": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+      "annotation_sha256": "f12a3f271a5f52b56322177c5eff5a6b3aea19d2c61e294c800164a29a09f743",
+      "status": "assistant_draft_requires_human_review",
+      "formal_evaluation": false,
+      "annotation_method": {
+        "method": "agent_visual_sampled_frames_with_consecutive_native_boundary_review",
+        "producer": "Codex",
+        "date": "2026-10-18",
+        "requires_human_review": true,
+        "used_segmentation_predictions": false,
+        "boundary_policy": "start_left_end_right",
+        "authorization": "User authorized autonomous A2/C2/D2 draft annotation followed by human validation; no new content is human-confirmed."
+      },
+      "coverage": {
+        "partial": false,
+        "reviewed_range_ms": [
+          0,
+          180000
+        ],
+        "last_reviewed_frame_timestamp_ms": 179966.666667,
+        "completeness": "agent_draft_whole_clip_sampled_review",
+        "method": "Whole 180-second clip visually screened at 1 frame/s. Candidate boundaries located at 0.1-second sampling, then reviewed in consecutive native decoded frames; full-resolution native evidence retained. No algorithm intervals or outputs read.",
+        "human_confirmation_complete": false,
+        "negative_time_is_not_verified": true,
+        "limits": "All records are agent proposals pending human review. Wide end windows reflect occlusion or image exit. Sampled overview may miss ultra-short events; the complement is not verified negative ground truth."
+      },
+      "timebase": {
+        "origin": "first_decoded_video_frame",
+        "first_decoded_clip_pts_ms": 66.015625,
+        "frame_count": 5400,
+        "nominal_fps": 30,
+        "clip_pts_rule": "clip_pts_ms = 66.015625 + timestamp_ms",
+        "last_decoded_timestamp_ms": 179966.666667,
+        "last_decoded_clip_pts_ms": 180032.682292,
+        "displayed_duration_ms": 180000
+      },
+      "evidence": {
+        "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2",
+        "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/overview-index.json",
+        "boundary_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/boundary-index.json"
+      },
+      "unresolved_regions": [],
+      "predictions": [
+        {
+          "id": "1",
+          "start_ms": 7700.0,
+          "end_ms": 11200.0
+        },
+        {
+          "id": "2",
+          "start_ms": 14133.333333333334,
+          "end_ms": 20033.333333333332
+        },
+        {
+          "id": "3",
+          "start_ms": 24133.333333333332,
+          "end_ms": 88033.33333333333
+        },
+        {
+          "id": "4",
+          "start_ms": 92000.0,
+          "end_ms": 103000.0
+        },
+        {
+          "id": "5",
+          "start_ms": 120933.33333333333,
+          "end_ms": 133600.0
+        },
+        {
+          "id": "6",
+          "start_ms": 170266.66666666666,
+          "end_ms": 178466.66666666666
+        }
+      ],
+      "annotation_segments": [
+        {
+          "rally_id": 1,
+          "review_status": "needs_review",
+          "start_ms": 2000.0,
+          "start_frame": 60,
+          "end_ms": 5800.0,
+          "end_frame": 174,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                60,
+                64
+              ],
+              "review_window_ms": [
+                2000.0,
+                2133.333333
+              ],
+              "review_window_clip_pts_ms": [
+                2066.015625,
+                2199.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 2000.0,
+              "selected_frame": 60,
+              "selected_clip_pts_ms": 2066.015625,
+              "native_review_window_frames": [
+                59,
+                69
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-59-69-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                155,
+                174
+              ],
+              "review_window_ms": [
+                5166.666667,
+                5800.0
+              ],
+              "review_window_clip_pts_ms": [
+                5232.682292,
+                5866.015625
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 5800.0,
+              "selected_frame": 174,
+              "selected_clip_pts_ms": 5866.015625,
+              "native_review_window_frames": [
+                155,
+                174
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-155-174-step1-index.json"
+              ],
+              "note": "Far black player serves. Final shuttle is small and occluded by the near player/net; near player then retrieves it. Landing remains uncertain."
+            }
+          },
+          "note": "Far black player serves. Final shuttle is small and occluded by the near player/net; near player then retrieves it. Landing remains uncertain."
+        },
+        {
+          "rally_id": 2,
+          "review_status": "needs_review",
+          "start_ms": 14333.333333,
+          "start_frame": 430,
+          "end_ms": 17900.0,
+          "end_frame": 537,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                430,
+                433
+              ],
+              "review_window_ms": [
+                14333.333333,
+                14433.333333
+              ],
+              "review_window_clip_pts_ms": [
+                14399.348958,
+                14499.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 14333.333333,
+              "selected_frame": 430,
+              "selected_clip_pts_ms": 14399.348958,
+              "native_review_window_frames": [
+                425,
+                435
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-425-435-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                520,
+                537
+              ],
+              "review_window_ms": [
+                17333.333333,
+                17900.0
+              ],
+              "review_window_clip_pts_ms": [
+                17399.348958,
+                17966.015625
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 17900.0,
+              "selected_frame": 537,
+              "selected_clip_pts_ms": 17966.015625,
+              "native_review_window_frames": [
+                516,
+                537
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-516-537-step1-index.json"
+              ],
+              "note": "Near red player serves; far player attacks after returns. Right near-court landing is partly occluded. Retain this normal short rally."
+            }
+          },
+          "note": "Near red player serves; far player attacks after returns. Right near-court landing is partly occluded. Retain this normal short rally."
+        },
+        {
+          "rally_id": 3,
+          "review_status": "needs_review",
+          "start_ms": 24433.333333,
+          "start_frame": 733,
+          "end_ms": 42500.0,
+          "end_frame": 1275,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                733,
+                736
+              ],
+              "review_window_ms": [
+                24433.333333,
+                24533.333333
+              ],
+              "review_window_clip_pts_ms": [
+                24499.348958,
+                24599.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 24433.333333,
+              "selected_frame": 733,
+              "selected_clip_pts_ms": 24499.348958,
+              "native_review_window_frames": [
+                729,
+                738
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-729-738-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                1262,
+                1275
+              ],
+              "review_window_ms": [
+                42066.666667,
+                42500.0
+              ],
+              "review_window_clip_pts_ms": [
+                42132.682292,
+                42566.015625
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 42500.0,
+              "selected_frame": 1275,
+              "selected_clip_pts_ms": 42566.015625,
+              "native_review_window_frames": [
+                1250,
+                1275
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-1250-1275-step1-index.json"
+              ],
+              "note": "Near player serves, followed by multiple exchanges. Shuttle is still airborne at 41.8 s after the players relax, then descends to the left near floor around 42.1-42.5 s. Do not end at the earlier stop."
+            }
+          },
+          "note": "Near player serves, followed by multiple exchanges. Shuttle is still airborne at 41.8 s after the players relax, then descends to the left near floor around 42.1-42.5 s. Do not end at the earlier stop."
+        },
+        {
+          "rally_id": 4,
+          "review_status": "needs_review",
+          "start_ms": 49433.333333,
+          "start_frame": 1483,
+          "end_ms": 68600.0,
+          "end_frame": 2058,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                1483,
+                1486
+              ],
+              "review_window_ms": [
+                49433.333333,
+                49533.333333
+              ],
+              "review_window_clip_pts_ms": [
+                49499.348958,
+                49599.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 49433.333333,
+              "selected_frame": 1483,
+              "selected_clip_pts_ms": 49499.348958,
+              "native_review_window_frames": [
+                1480,
+                1488
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-1480-1488-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                2034,
+                2058
+              ],
+              "review_window_ms": [
+                67800.0,
+                68600.0
+              ],
+              "review_window_clip_pts_ms": [
+                67866.015625,
+                68666.015625
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 68600.0,
+              "selected_frame": 2058,
+              "selected_clip_pts_ms": 68666.015625,
+              "native_review_window_frames": [
+                2040,
+                2058
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2040-2058-step1-index.json",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2028-2049-step1-index.json"
+              ],
+              "note": "Near player serves, followed by a long rally. Final shuttle disappears at the right front behind the near player/net; retain a wide landing window."
+            }
+          },
+          "note": "Near player serves, followed by a long rally. Final shuttle disappears at the right front behind the near player/net; retain a wide landing window."
+        },
+        {
+          "rally_id": 5,
+          "review_status": "needs_review",
+          "start_ms": 76133.333333,
+          "start_frame": 2284,
+          "end_ms": 84800.0,
+          "end_frame": 2544,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                2284,
+                2287
+              ],
+              "review_window_ms": [
+                76133.333333,
+                76233.333333
+              ],
+              "review_window_clip_pts_ms": [
+                76199.348958,
+                76299.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 76133.333333,
+              "selected_frame": 2284,
+              "selected_clip_pts_ms": 76199.348958,
+              "native_review_window_frames": [
+                2280,
+                2288
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2280-2288-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                2538,
+                2544
+              ],
+              "review_window_ms": [
+                84600.0,
+                84800.0
+              ],
+              "review_window_clip_pts_ms": [
+                84666.015625,
+                84866.015625
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 84800.0,
+              "selected_frame": 2544,
+              "selected_clip_pts_ms": 84866.015625,
+              "native_review_window_frames": [
+                2520,
+                2544
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2520-2544-step1-index.json"
+              ],
+              "note": "Near player serves. Final shuttle continues flying left after both players relax at 83 s, descending toward the floor around 84.6-84.8 s. Do not end at player relaxation."
+            }
+          },
+          "note": "Near player serves. Final shuttle continues flying left after both players relax at 83 s, descending toward the floor around 84.6-84.8 s. Do not end at player relaxation."
+        },
+        {
+          "rally_id": 6,
+          "review_status": "needs_review",
+          "start_ms": 94566.666667,
+          "start_frame": 2837,
+          "end_ms": 103433.333333,
+          "end_frame": 3103,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                2837,
+                2841
+              ],
+              "review_window_ms": [
+                94566.666667,
+                94700.0
+              ],
+              "review_window_clip_pts_ms": [
+                94632.682292,
+                94766.015625
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 94566.666667,
+              "selected_frame": 2837,
+              "selected_clip_pts_ms": 94632.682292,
+              "native_review_window_frames": [
+                2831,
+                2845
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2831-2845-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                3097,
+                3103
+              ],
+              "review_window_ms": [
+                103233.333333,
+                103433.333333
+              ],
+              "review_window_clip_pts_ms": [
+                103299.348958,
+                103499.348958
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 103433.333333,
+              "selected_frame": 3103,
+              "selected_clip_pts_ms": 103499.348958,
+              "native_review_window_frames": [
+                3087,
+                3108
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3087-3108-step1-index.json"
+              ],
+              "note": "Far black player serves; after exchanges, final shuttle travels toward the left near court and lands without a return."
+            }
+          },
+          "note": "Far black player serves; after exchanges, final shuttle travels toward the left near court and lands without a return."
+        },
+        {
+          "rally_id": 7,
+          "review_status": "needs_review",
+          "start_ms": 111100.0,
+          "start_frame": 3333,
+          "end_ms": 114433.333333,
+          "end_frame": 3433,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                3333,
+                3337
+              ],
+              "review_window_ms": [
+                111100.0,
+                111233.333333
+              ],
+              "review_window_clip_pts_ms": [
+                111166.015625,
+                111299.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 111100.0,
+              "selected_frame": 3333,
+              "selected_clip_pts_ms": 111166.015625,
+              "native_review_window_frames": [
+                3330,
+                3339
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3330-3339-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                3423,
+                3433
+              ],
+              "review_window_ms": [
+                114100.0,
+                114433.333333
+              ],
+              "review_window_clip_pts_ms": [
+                114166.015625,
+                114499.348958
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 114433.333333,
+              "selected_frame": 3433,
+              "selected_clip_pts_ms": 114499.348958,
+              "native_review_window_frames": [
+                3420,
+                3447
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3420-3447-step1-index.json"
+              ],
+              "note": "Far player serves; near player attacks; far player fails a low front-court return. Retain this normal short rally. Subsequent scoop/return motions are break candidates."
+            }
+          },
+          "note": "Far player serves; near player attacks; far player fails a low front-court return. Retain this normal short rally. Subsequent scoop/return motions are break candidates."
+        },
+        {
+          "rally_id": 8,
+          "review_status": "needs_review",
+          "start_ms": 120833.333333,
+          "start_frame": 3625,
+          "end_ms": 128700.0,
+          "end_frame": 3861,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                3625,
+                3628
+              ],
+              "review_window_ms": [
+                120833.333333,
+                120933.333333
+              ],
+              "review_window_clip_pts_ms": [
+                120899.348958,
+                120999.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 120833.333333,
+              "selected_frame": 3625,
+              "selected_clip_pts_ms": 120899.348958,
+              "native_review_window_frames": [
+                3621,
+                3631
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3621-3631-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                3848,
+                3861
+              ],
+              "review_window_ms": [
+                128266.666667,
+                128700.0
+              ],
+              "review_window_clip_pts_ms": [
+                128332.682292,
+                128766.015625
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 128700.0,
+              "selected_frame": 3861,
+              "selected_clip_pts_ms": 128766.015625,
+              "native_review_window_frames": [
+                3840,
+                3861
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3840-3861-step1-index.json"
+              ],
+              "note": "Near player serves, followed by exchanges and a final right-front lunge. Final shuttle is occluded by the net/body near the floor."
+            }
+          },
+          "note": "Near player serves, followed by exchanges and a final right-front lunge. Final shuttle is occluded by the net/body near the floor."
+        },
+        {
+          "rally_id": 9,
+          "review_status": "needs_review",
+          "start_ms": 146266.666667,
+          "start_frame": 4388,
+          "end_ms": 151100.0,
+          "end_frame": 4533,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                4388,
+                4393
+              ],
+              "review_window_ms": [
+                146266.666667,
+                146433.333333
+              ],
+              "review_window_clip_pts_ms": [
+                146332.682292,
+                146499.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 146266.666667,
+              "selected_frame": 4388,
+              "selected_clip_pts_ms": 146332.682292,
+              "native_review_window_frames": [
+                4383,
+                4395
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4383-4395-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                4524,
+                4533
+              ],
+              "review_window_ms": [
+                150800.0,
+                151100.0
+              ],
+              "review_window_clip_pts_ms": [
+                150866.015625,
+                151166.015625
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 151100.0,
+              "selected_frame": 4533,
+              "selected_clip_pts_ms": 151166.015625,
+              "native_review_window_frames": [
+                4512,
+                4533
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4512-4533-step1-index.json"
+              ],
+              "note": "Far player serves; near player chases the final shuttle into the left front court. Retain this normal short rally."
+            }
+          },
+          "note": "Far player serves; near player chases the final shuttle into the left front court. Retain this normal short rally."
+        },
+        {
+          "rally_id": 10,
+          "review_status": "needs_review",
+          "start_ms": 157733.333333,
+          "start_frame": 4732,
+          "end_ms": 161600.0,
+          "end_frame": 4848,
+          "boundary_review": {
+            "start": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                4732,
+                4735
+              ],
+              "review_window_ms": [
+                157733.333333,
+                157833.333333
+              ],
+              "review_window_clip_pts_ms": [
+                157799.348958,
+                157899.348958
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 157733.333333,
+              "selected_frame": 4732,
+              "selected_clip_pts_ms": 157799.348958,
+              "native_review_window_frames": [
+                4728,
+                4737
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4728-4737-step1-index.json"
+              ],
+              "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+            },
+            "end": {
+              "status": "agent_proposed_interval",
+              "uncertain": true,
+              "review_window_frames": [
+                4824,
+                4848
+              ],
+              "review_window_ms": [
+                160800.0,
+                161600.0
+              ],
+              "review_window_clip_pts_ms": [
+                160866.015625,
+                161666.015625
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 161600.0,
+              "selected_frame": 4848,
+              "selected_clip_pts_ms": 161666.015625,
+              "native_review_window_frames": [
+                4815,
+                4848
+              ],
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4815-4848-step1-index.json"
+              ],
+              "note": "Near player serves and exchanges several shots. Final chase and shuttle leave the right image edge. Actual landing is not visible; this wide uncertain ending needs a human keep/reject decision."
+            }
+          },
+          "note": "Near player serves and exchanges several shots. Final chase and shuttle leave the right image edge. Actual landing is not visible; this wide uncertain ending needs a human keep/reject decision."
+        }
+      ],
+      "excluded_event_candidates": [
+        {
+          "event_id": "C2-E01",
+          "range_ms": [
+            8700.0,
+            10300.0
+          ],
+          "range_frames": [
+            261,
+            309
+          ],
+          "range_clip_pts_ms": [
+            8766.015625,
+            10366.015625
+          ],
+          "type": "failed_serve_or_return_candidate",
+          "note": "Near player strikes around 8.9 s; no sustained exchange, shuttle drops back to near court. Failed serve versus non-rally return needs review.",
+          "review_status": "needs_review",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-264-276-step1-index.json"
+          ]
+        },
+        {
+          "event_id": "C2-E02",
+          "range_ms": [
+            44000.0,
+            45000.0
+          ],
+          "range_frames": [
+            1320,
+            1350
+          ],
+          "range_clip_pts_ms": [
+            44066.015625,
+            45066.015625
+          ],
+          "type": "shuttle_return_candidate",
+          "note": "Near player returns the retrieved shuttle while both players are waiting or walking.",
+          "review_status": "needs_review",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-1320-1332-step1-index.json"
+          ]
+        },
+        {
+          "event_id": "C2-E03",
+          "range_ms": [
+            86000.0,
+            88000.0
+          ],
+          "range_frames": [
+            2580,
+            2640
+          ],
+          "range_clip_pts_ms": [
+            86066.015625,
+            88066.015625
+          ],
+          "type": "shuttle_return_candidate",
+          "note": "Net-front retrieval/return and repositioning; candidate from whole-clip overview, classification needs review.",
+          "review_status": "needs_review",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "C2-E04",
+          "range_ms": [
+            105800.0,
+            107800.0
+          ],
+          "range_frames": [
+            3174,
+            3234
+          ],
+          "range_clip_pts_ms": [
+            105866.015625,
+            107866.015625
+          ],
+          "type": "shuttle_return_candidate",
+          "note": "After near-court retrieval, shuttle is returned to the far player, who raises a hand to collect/signal.",
+          "review_status": "needs_review",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3194-3204-step1-index.json"
+          ]
+        },
+        {
+          "event_id": "C2-E05",
+          "range_ms": [
+            114600.0,
+            116000.0
+          ],
+          "range_frames": [
+            3438,
+            3480
+          ],
+          "range_clip_pts_ms": [
+            114666.015625,
+            116066.015625
+          ],
+          "type": "shuttle_return_candidate",
+          "note": "Post-rally scoop and shuttle return while near player walks; needs review separately from rally 7.",
+          "review_status": "needs_review",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3420-3480-step3-index.json"
+          ]
+        },
+        {
+          "event_id": "C2-E06",
+          "range_ms": [
+            132700.0,
+            134000.0
+          ],
+          "range_frames": [
+            3981,
+            4020
+          ],
+          "range_clip_pts_ms": [
+            132766.015625,
+            134066.015625
+          ],
+          "type": "shuttle_return_candidate",
+          "note": "Net-front handling after retrieval; overview candidate, not treated as a new normal rally.",
+          "review_status": "needs_review",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "C2-E07",
+          "range_ms": [
+            164800.0,
+            166000.0
+          ],
+          "range_frames": [
+            4944,
+            4980
+          ],
+          "range_clip_pts_ms": [
+            164866.015625,
+            166066.015625
+          ],
+          "type": "shuttle_return_candidate",
+          "note": "Near player returns from right edge and sends shuttle to far player, who receives it; no consecutive exchanges.",
+          "review_status": "needs_review",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4950-4965-step1-index.json"
+          ]
+        }
+      ],
+      "incomplete_events": [
+        {
+          "event_id": "C2-I01",
+          "type": "tail_incomplete_rally",
+          "range_ms": [
+            168400,
+            180000
+          ],
+          "range_frames": [
+            5052,
+            5399
+          ],
+          "range_clip_pts_ms": [
+            168466.015625,
+            180032.682292
+          ],
+          "known_start_ms": 168400,
+          "known_start_frame": 5052,
+          "last_visible_timestamp_ms": 179966.666667,
+          "last_visible_clip_pts_ms": 180032.682292,
+          "start_boundary_review": {
+            "status": "agent_proposed_interval",
+            "uncertain": true,
+            "review_window_frames": [
+              5052,
+              5056
+            ],
+            "review_window_ms": [
+              168400.0,
+              168533.333333
+            ],
+            "review_window_clip_pts_ms": [
+              168466.015625,
+              168599.348958
+            ],
+            "selected_endpoint": "left",
+            "selected_ms": 168400.0,
+            "selected_frame": 5052,
+            "selected_clip_pts_ms": 168466.015625,
+            "native_review_window_frames": [
+              5049,
+              5058
+            ],
+            "evidence_indices": [
+              "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-5049-5058-step1-index.json"
+            ],
+            "note": "Far player serves. This rally is incomplete at the clip tail and is excluded from complete segments."
+          },
+          "end_ms": null,
+          "review_status": "needs_review",
+          "note": "Far player serves around 168.4 s. At the last frame the near player is still following through an overhead attack. No landing or other terminal event is visible. Clip end is not a rally end.",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-5049-5058-step1-index.json",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-5390-5399-step1-index.json"
+          ]
+        }
+      ],
+      "all_complete": {
+        "target_count": 10,
+        "target_ms": 82033.333334,
+        "retained_ms": 65666.66666766666,
+        "retained_fraction": 0.8004876066696426,
+        "wholly_missed_ids": [
+          1,
+          7,
+          9,
+          10
+        ],
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 1,
+            "start_ms": 2000.0,
+            "end_ms": 5800.0,
+            "duration_ms": 3800.0,
+            "retained_ms": 0,
+            "missing_ms": 3800.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14333.333333,
+            "end_ms": 17900.0,
+            "duration_ms": 3566.6666669999995,
+            "retained_ms": 3566.6666669999995,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "2"
+            ],
+            "matched_prediction_id": "2",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -199.99999966666655,
+            "end_offset_ms": 2133.333333333332,
+            "start_error_ms": 0,
+            "end_error_ms": 633.3333333333321
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24433.333333,
+            "end_ms": 42500.0,
+            "duration_ms": 18066.666667,
+            "retained_ms": 18066.666667,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 49433.333333,
+            "end_ms": 68600.0,
+            "duration_ms": 19166.666666999998,
+            "retained_ms": 19166.666666999998,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -25299.99999966667,
+            "end_offset_ms": 19433.33333333333,
+            "start_error_ms": 23799.99999966667,
+            "end_error_ms": 17933.33333333333
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 76133.333333,
+            "end_ms": 84800.0,
+            "duration_ms": 8666.666666999998,
+            "retained_ms": 8666.666666999998,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 94566.666667,
+            "end_ms": 103433.333333,
+            "duration_ms": 8866.666666000005,
+            "retained_ms": 8433.333333000002,
+            "missing_ms": 433.3333330000023,
+            "overlapping_prediction_ids": [
+              "4"
+            ],
+            "matched_prediction_id": "4",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -2566.6666669999977,
+            "end_offset_ms": -433.3333330000023,
+            "start_error_ms": 1066.6666669999977,
+            "end_error_ms": 433.3333330000023
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 111100.0,
+            "end_ms": 114433.333333,
+            "duration_ms": 3333.3333330000023,
+            "retained_ms": 0,
+            "missing_ms": 3333.3333330000023,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 120833.333333,
+            "end_ms": 128700.0,
+            "duration_ms": 7866.666666999998,
+            "retained_ms": 7766.6666666666715,
+            "missing_ms": 100.00000033332617,
+            "overlapping_prediction_ids": [
+              "5"
+            ],
+            "matched_prediction_id": "5",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": 100.00000033332617,
+            "end_offset_ms": 4900.0,
+            "start_error_ms": 100.00000033332617,
+            "end_error_ms": 3400.0
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 146266.666667,
+            "end_ms": 151100.0,
+            "duration_ms": 4833.333332999988,
+            "retained_ms": 0,
+            "missing_ms": 4833.333332999988,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 157733.333333,
+            "end_ms": 161600.0,
+            "duration_ms": 3866.6666670000122,
+            "retained_ms": 0,
+            "missing_ms": 3866.6666670000122,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          }
+        ]
+      },
+      "over_3_seconds": {
+        "target_count": 10,
+        "target_ms": 82033.333334,
+        "retained_ms": 65666.66666766666,
+        "retained_fraction": 0.8004876066696426,
+        "wholly_missed_ids": [
+          1,
+          7,
+          9,
+          10
+        ],
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 1,
+            "start_ms": 2000.0,
+            "end_ms": 5800.0,
+            "duration_ms": 3800.0,
+            "retained_ms": 0,
+            "missing_ms": 3800.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14333.333333,
+            "end_ms": 17900.0,
+            "duration_ms": 3566.6666669999995,
+            "retained_ms": 3566.6666669999995,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "2"
+            ],
+            "matched_prediction_id": "2",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -199.99999966666655,
+            "end_offset_ms": 2133.333333333332,
+            "start_error_ms": 0,
+            "end_error_ms": 633.3333333333321
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24433.333333,
+            "end_ms": 42500.0,
+            "duration_ms": 18066.666667,
+            "retained_ms": 18066.666667,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 49433.333333,
+            "end_ms": 68600.0,
+            "duration_ms": 19166.666666999998,
+            "retained_ms": 19166.666666999998,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -25299.99999966667,
+            "end_offset_ms": 19433.33333333333,
+            "start_error_ms": 23799.99999966667,
+            "end_error_ms": 17933.33333333333
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 76133.333333,
+            "end_ms": 84800.0,
+            "duration_ms": 8666.666666999998,
+            "retained_ms": 8666.666666999998,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 94566.666667,
+            "end_ms": 103433.333333,
+            "duration_ms": 8866.666666000005,
+            "retained_ms": 8433.333333000002,
+            "missing_ms": 433.3333330000023,
+            "overlapping_prediction_ids": [
+              "4"
+            ],
+            "matched_prediction_id": "4",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -2566.6666669999977,
+            "end_offset_ms": -433.3333330000023,
+            "start_error_ms": 1066.6666669999977,
+            "end_error_ms": 433.3333330000023
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 111100.0,
+            "end_ms": 114433.333333,
+            "duration_ms": 3333.3333330000023,
+            "retained_ms": 0,
+            "missing_ms": 3333.3333330000023,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 120833.333333,
+            "end_ms": 128700.0,
+            "duration_ms": 7866.666666999998,
+            "retained_ms": 7766.6666666666715,
+            "missing_ms": 100.00000033332617,
+            "overlapping_prediction_ids": [
+              "5"
+            ],
+            "matched_prediction_id": "5",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": 100.00000033332617,
+            "end_offset_ms": 4900.0,
+            "start_error_ms": 100.00000033332617,
+            "end_error_ms": 3400.0
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 146266.666667,
+            "end_ms": 151100.0,
+            "duration_ms": 4833.333332999988,
+            "retained_ms": 0,
+            "missing_ms": 4833.333332999988,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 157733.333333,
+            "end_ms": 161600.0,
+            "duration_ms": 3866.6666670000122,
+            "retained_ms": 0,
+            "missing_ms": 3866.6666670000122,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          }
+        ]
+      },
+      "over_5_seconds": {
+        "target_count": 5,
+        "target_ms": 62633.333333999995,
+        "retained_ms": 62100.00000066667,
+        "retained_fraction": 0.9914848323577278,
+        "wholly_missed_ids": [],
+        "start_acceptable_count": 0,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "details": [
+          {
+            "rally_id": 3,
+            "start_ms": 24433.333333,
+            "end_ms": 42500.0,
+            "duration_ms": 18066.666667,
+            "retained_ms": 18066.666667,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 49433.333333,
+            "end_ms": 68600.0,
+            "duration_ms": 19166.666666999998,
+            "retained_ms": 19166.666666999998,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -25299.99999966667,
+            "end_offset_ms": 19433.33333333333,
+            "start_error_ms": 23799.99999966667,
+            "end_error_ms": 17933.33333333333
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 76133.333333,
+            "end_ms": 84800.0,
+            "duration_ms": 8666.666666999998,
+            "retained_ms": 8666.666666999998,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 94566.666667,
+            "end_ms": 103433.333333,
+            "duration_ms": 8866.666666000005,
+            "retained_ms": 8433.333333000002,
+            "missing_ms": 433.3333330000023,
+            "overlapping_prediction_ids": [
+              "4"
+            ],
+            "matched_prediction_id": "4",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -2566.6666669999977,
+            "end_offset_ms": -433.3333330000023,
+            "start_error_ms": 1066.6666669999977,
+            "end_error_ms": 433.3333330000023
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 120833.333333,
+            "end_ms": 128700.0,
+            "duration_ms": 7866.666666999998,
+            "retained_ms": 7766.6666666666715,
+            "missing_ms": 100.00000033332617,
+            "overlapping_prediction_ids": [
+              "5"
+            ],
+            "matched_prediction_id": "5",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": 100.00000033332617,
+            "end_offset_ms": 4900.0,
+            "start_error_ms": 100.00000033332617,
+            "end_error_ms": 3400.0
+          }
+        ]
+      },
+      "selected_ms": 105166.66666666667,
+      "retained_in_incomplete_ranges_ms": 8200.0,
+      "retained_outside_complete_and_incomplete_drafts_ms": 31299.999999000007,
+      "no_complete_or_incomplete_overlap_prediction_ids": [
+        "1"
+      ],
+      "merge_candidates": [
+        {
+          "prediction_id": "3",
+          "rally_ids": [
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "split_candidate_rally_ids": []
+    },
+    {
+      "clip_id": "D2",
+      "annotation": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+      "annotation_sha256": "5f575233a533c19e3e3fb947b20cc994ba5cb6fe6629df345b9cceb398438dee",
+      "status": "assistant_draft_requires_human_review",
+      "formal_evaluation": false,
+      "annotation_method": {
+        "method": "agent_independent_visual_sampling_with_native_pts",
+        "producer": "Codex",
+        "date": "2026-10-18",
+        "requires_human_review": true,
+        "used_segmentation_predictions": false,
+        "used_model_outputs": false,
+        "boundary_policy": "start_left_end_right",
+        "boundary_policy_authorization": "沿用用户已确认的保守端点规则；所有素材内容和边界仍待人审。"
+      },
+      "coverage": {
+        "partial": false,
+        "review_status": "needs_review",
+        "reviewed_range_ms": [
+          0.0,
+          250867.0
+        ],
+        "reviewed_frame_range": [
+          0,
+          7526
+        ],
+        "completeness": "agent_draft_whole_clip_sampled_review",
+        "method": "全片0–250秒每秒原帧视觉筛查；28个候选边界先100ms抽帧、再保存并复核连续原帧；未读算法预测或模型输出。R6结束的宽区间右端另用100ms原帧补查。",
+        "human_confirmation_complete": false,
+        "negative_time_is_not_verified": true,
+        "limits": "逐秒筛查可能漏掉超短事件；起止事件的遮挡、球体模糊和画面边缘不确定性保留在区间内。完整覆盖仅表示代理抽帧审查覆盖全片，不代表逐帧观看整段或人类确认。"
+      },
+      "timebase": {
+        "origin": "first_decoded_video_frame",
+        "first_decoded_clip_pts_ms": 0.0,
+        "clip_pts_rule": "clip_pts_ms = timestamp_ms",
+        "source_time_rule": null,
+        "source_time_note": "本草稿仅对经过尾部裁剪的输入文件标注，不推测相对原完整视频的源时间偏移。",
+        "video_frame_count": 7527,
+        "last_decoded_frame": 7526,
+        "last_decoded_clip_pts_ms": 250867.0,
+        "container_duration_ms": 250900.3125,
+        "timestamp_source": "decoded_frame.pts * decoded_frame.time_base * 1000",
+        "native_pts_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/pts-index.json"
+      },
+      "evidence": {
+        "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2",
+        "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json",
+        "native_pts_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/pts-index.json",
+        "boundary_indices": [
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end-index.json",
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start-index.json"
+        ]
+      },
+      "unresolved_regions": [],
+      "predictions": [
+        {
+          "id": "1",
+          "start_ms": 0,
+          "end_ms": 6800.0
+        },
+        {
+          "id": "2",
+          "start_ms": 18900.0,
+          "end_ms": 27000.0
+        },
+        {
+          "id": "3",
+          "start_ms": 29700.0,
+          "end_ms": 42000.0
+        },
+        {
+          "id": "4",
+          "start_ms": 48100.0,
+          "end_ms": 55800.0
+        },
+        {
+          "id": "5",
+          "start_ms": 63500.0,
+          "end_ms": 68600.0
+        },
+        {
+          "id": "6",
+          "start_ms": 77500.0,
+          "end_ms": 95000.0
+        },
+        {
+          "id": "7",
+          "start_ms": 101300.0,
+          "end_ms": 108400.0
+        },
+        {
+          "id": "8",
+          "start_ms": 115500.0,
+          "end_ms": 129600.0
+        },
+        {
+          "id": "9",
+          "start_ms": 137100.0,
+          "end_ms": 145000.0
+        },
+        {
+          "id": "10",
+          "start_ms": 153300.0,
+          "end_ms": 176400.0
+        },
+        {
+          "id": "11",
+          "start_ms": 198700.0,
+          "end_ms": 203600.0
+        },
+        {
+          "id": "12",
+          "start_ms": 215700.0,
+          "end_ms": 227400.0
+        },
+        {
+          "id": "13",
+          "start_ms": 229300.0,
+          "end_ms": 237600.0
+        }
+      ],
+      "annotation_segments": [
+        {
+          "rally_id": 1,
+          "review_status": "needs_review",
+          "start_ms": 533.0,
+          "start_frame": 16,
+          "end_ms": 5800.0,
+          "end_frame": 174,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                16,
+                23
+              ],
+              "review_window_ms": [
+                533.0,
+                767.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 533.0,
+              "selected_frame": 16,
+              "selected_clip_pts_ms": 533.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start/f000016.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start/f000023.jpg"
+              ],
+              "uncertainty_ms": 234.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                164,
+                174
+              ],
+              "review_window_ms": [
+                5467.0,
+                5800.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 5800.0,
+              "selected_frame": 174,
+              "selected_clip_pts_ms": 5800.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end/f000164.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end/f000174.jpg"
+              ],
+              "uncertainty_ms": 333.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球，片头保留准备过程；远端前场追球后落地事件较小，末球需人审。"
+        },
+        {
+          "rally_id": 2,
+          "review_status": "needs_review",
+          "start_ms": 19633.0,
+          "start_frame": 589,
+          "end_ms": 22700.0,
+          "end_frame": 681,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                589,
+                593
+              ],
+              "review_window_ms": [
+                19633.0,
+                19767.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 19633.0,
+              "selected_frame": 589,
+              "selected_clip_pts_ms": 19633.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start/f000589.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start/f000593.jpg"
+              ],
+              "uncertainty_ms": 134.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                667,
+                681
+              ],
+              "review_window_ms": [
+                22233.0,
+                22700.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 22700.0,
+              "selected_frame": 681,
+              "selected_clip_pts_ms": 22700.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end/f000667.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end/f000681.jpg"
+              ],
+              "uncertainty_ms": 467.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球后有连续对打；远端前场救球未延续，结束窗口保留球体模糊不确定性。"
+        },
+        {
+          "rally_id": 3,
+          "review_status": "needs_review",
+          "start_ms": 30367.0,
+          "start_frame": 911,
+          "end_ms": 39433.0,
+          "end_frame": 1183,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                911,
+                917
+              ],
+              "review_window_ms": [
+                30367.0,
+                30567.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 30367.0,
+              "selected_frame": 911,
+              "selected_clip_pts_ms": 30367.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start/f000911.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start/f000917.jpg"
+              ],
+              "uncertainty_ms": 200.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                1172,
+                1183
+              ],
+              "review_window_ms": [
+                39067.0,
+                39433.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 39433.0,
+              "selected_frame": 1183,
+              "selected_clip_pts_ms": 39433.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end/f001172.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end/f001183.jpg"
+              ],
+              "uncertainty_ms": 366.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球，远端前场追球结束。"
+        },
+        {
+          "rally_id": 4,
+          "review_status": "needs_review",
+          "start_ms": 49467.0,
+          "start_frame": 1484,
+          "end_ms": 55300.0,
+          "end_frame": 1659,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                1484,
+                1490
+              ],
+              "review_window_ms": [
+                49467.0,
+                49667.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 49467.0,
+              "selected_frame": 1484,
+              "selected_clip_pts_ms": 49467.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start/f001484.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start/f001490.jpg"
+              ],
+              "uncertainty_ms": 200.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                1648,
+                1659
+              ],
+              "review_window_ms": [
+                54933.0,
+                55300.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 55300.0,
+              "selected_frame": 1659,
+              "selected_clip_pts_ms": 55300.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end/f001648.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end/f001659.jpg"
+              ],
+              "uncertainty_ms": 367.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球；末球在近端前场，近端前移后转为捡球。"
+        },
+        {
+          "rally_id": 5,
+          "review_status": "needs_review",
+          "start_ms": 62667.0,
+          "start_frame": 1880,
+          "end_ms": 66967.0,
+          "end_frame": 2009,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                1880,
+                1886
+              ],
+              "review_window_ms": [
+                62667.0,
+                62867.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 62667.0,
+              "selected_frame": 1880,
+              "selected_clip_pts_ms": 62667.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start/f001880.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start/f001886.jpg"
+              ],
+              "uncertainty_ms": 200.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                1998,
+                2009
+              ],
+              "review_window_ms": [
+                66600.0,
+                66967.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 66967.0,
+              "selected_frame": 2009,
+              "selected_clip_pts_ms": 66967.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end/f001998.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end/f002009.jpg"
+              ],
+              "uncertainty_ms": 367.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "远端发球；远端右前场大步救球后球落地，身体和球拍局部遮挡末球。"
+        },
+        {
+          "rally_id": 6,
+          "review_status": "needs_review",
+          "start_ms": 77733.0,
+          "start_frame": 2332,
+          "end_ms": 88700.0,
+          "end_frame": 2661,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                2332,
+                2339
+              ],
+              "review_window_ms": [
+                77733.0,
+                77967.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 77733.0,
+              "selected_frame": 2332,
+              "selected_clip_pts_ms": 77733.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start/f002332.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start/f002339.jpg"
+              ],
+              "uncertainty_ms": 234.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                2637,
+                2661
+              ],
+              "review_window_ms": [
+                87900.0,
+                88700.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 88700.0,
+              "selected_frame": 2661,
+              "selected_clip_pts_ms": 88700.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-end-index.json",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/r06-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-end/f002637.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/r06-end/007.jpg"
+              ],
+              "uncertainty_ms": 800.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球；末球向画面右侧、近端球员与网柱方向运动，球体模糊且视野边缘，结束保留宽区间重点复核。"
+        },
+        {
+          "rally_id": 7,
+          "review_status": "needs_review",
+          "start_ms": 102300.0,
+          "start_frame": 3069,
+          "end_ms": 108267.0,
+          "end_frame": 3248,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                3069,
+                3075
+              ],
+              "review_window_ms": [
+                102300.0,
+                102500.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 102300.0,
+              "selected_frame": 3069,
+              "selected_clip_pts_ms": 102300.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start/f003069.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start/f003075.jpg"
+              ],
+              "uncertainty_ms": 200.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                3245,
+                3248
+              ],
+              "review_window_ms": [
+                108167.0,
+                108267.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 108267.0,
+              "selected_frame": 3248,
+              "selected_clip_pts_ms": 108267.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end/f003245.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end/f003248.jpg"
+              ],
+              "uncertainty_ms": 100.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球；远端末球飞到近端后场，原帧能见球继续下落，不能用近端提前停步代替结束。"
+        },
+        {
+          "rally_id": 8,
+          "review_status": "needs_review",
+          "start_ms": 116333.0,
+          "start_frame": 3490,
+          "end_ms": 130067.0,
+          "end_frame": 3902,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                3490,
+                3496
+              ],
+              "review_window_ms": [
+                116333.0,
+                116533.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 116333.0,
+              "selected_frame": 3490,
+              "selected_clip_pts_ms": 116333.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start/f003490.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start/f003496.jpg"
+              ],
+              "uncertainty_ms": 200.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                3891,
+                3902
+              ],
+              "review_window_ms": [
+                129700.0,
+                130067.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 130067.0,
+              "selected_frame": 3902,
+              "selected_clip_pts_ms": 130067.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end/f003891.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end/f003902.jpg"
+              ],
+              "uncertainty_ms": 367.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球；末球在右侧网前，远端身体、球网和网柱附近使落点不够清楚。"
+        },
+        {
+          "rally_id": 9,
+          "review_status": "needs_review",
+          "start_ms": 138467.0,
+          "start_frame": 4154,
+          "end_ms": 144367.0,
+          "end_frame": 4331,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                4154,
+                4161
+              ],
+              "review_window_ms": [
+                138467.0,
+                138700.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 138467.0,
+              "selected_frame": 4154,
+              "selected_clip_pts_ms": 138467.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start/f004154.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start/f004161.jpg"
+              ],
+              "uncertainty_ms": 233.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                4323,
+                4331
+              ],
+              "review_window_ms": [
+                144100.0,
+                144367.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 144367.0,
+              "selected_frame": 4331,
+              "selected_clip_pts_ms": 144367.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end/f004323.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end/f004331.jpg"
+              ],
+              "uncertainty_ms": 267.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "远端发球；远端前场末球落地，球体较小。"
+        },
+        {
+          "rally_id": 10,
+          "review_status": "needs_review",
+          "start_ms": 153467.0,
+          "start_frame": 4604,
+          "end_ms": 172700.0,
+          "end_frame": 5181,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                4604,
+                4610
+              ],
+              "review_window_ms": [
+                153467.0,
+                153667.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 153467.0,
+              "selected_frame": 4604,
+              "selected_clip_pts_ms": 153467.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start/f004604.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start/f004610.jpg"
+              ],
+              "uncertainty_ms": 200.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                5168,
+                5181
+              ],
+              "review_window_ms": [
+                172267.0,
+                172700.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 172700.0,
+              "selected_frame": 5181,
+              "selected_clip_pts_ms": 172700.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end/f005168.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end/f005181.jpg"
+              ],
+              "uncertainty_ms": 433.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球后长回合；末球在近端前场，保留触网/下落至落地的不确定性。"
+        },
+        {
+          "rally_id": 11,
+          "review_status": "needs_review",
+          "start_ms": 186567.0,
+          "start_frame": 5597,
+          "end_ms": 190900.0,
+          "end_frame": 5727,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                5597,
+                5604
+              ],
+              "review_window_ms": [
+                186567.0,
+                186800.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 186567.0,
+              "selected_frame": 5597,
+              "selected_clip_pts_ms": 186567.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start/f005597.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start/f005604.jpg"
+              ],
+              "uncertainty_ms": 233.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                5715,
+                5727
+              ],
+              "review_window_ms": [
+                190500.0,
+                190900.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 190900.0,
+              "selected_frame": 5727,
+              "selected_clip_pts_ms": 190900.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end/f005715.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end/f005727.jpg"
+              ],
+              "uncertainty_ms": 400.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "远端发球；远端右前场扑救后球落地，末球与身体局部重合。"
+        },
+        {
+          "rally_id": 12,
+          "review_status": "needs_review",
+          "start_ms": 200067.0,
+          "start_frame": 6002,
+          "end_ms": 207233.0,
+          "end_frame": 6217,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                6002,
+                6009
+              ],
+              "review_window_ms": [
+                200067.0,
+                200300.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 200067.0,
+              "selected_frame": 6002,
+              "selected_clip_pts_ms": 200067.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start/f006002.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start/f006009.jpg"
+              ],
+              "uncertainty_ms": 233.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                6208,
+                6217
+              ],
+              "review_window_ms": [
+                206933.0,
+                207233.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 207233.0,
+              "selected_frame": 6217,
+              "selected_clip_pts_ms": 207233.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end/f006208.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end/f006217.jpg"
+              ],
+              "uncertainty_ms": 300.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球；末球飞向近端左后场，近端让球后仍需等到下落落地，结束有身体遮挡。"
+        },
+        {
+          "rally_id": 13,
+          "review_status": "needs_review",
+          "start_ms": 216500.0,
+          "start_frame": 6495,
+          "end_ms": 232000.0,
+          "end_frame": 6960,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                6495,
+                6502
+              ],
+              "review_window_ms": [
+                216500.0,
+                216733.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 216500.0,
+              "selected_frame": 6495,
+              "selected_clip_pts_ms": 216500.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start/f006495.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start/f006502.jpg"
+              ],
+              "uncertainty_ms": 233.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                6945,
+                6960
+              ],
+              "review_window_ms": [
+                231500.0,
+                232000.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 232000.0,
+              "selected_frame": 6960,
+              "selected_clip_pts_ms": 232000.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end/f006945.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end/f006960.jpg"
+              ],
+              "uncertainty_ms": 500.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球；末球飞向近端左后场，球在近端身体附近下落，结束保留约半秒区间。"
+        },
+        {
+          "rally_id": 14,
+          "review_status": "needs_review",
+          "start_ms": 242467.0,
+          "start_frame": 7274,
+          "end_ms": 245967.0,
+          "end_frame": 7379,
+          "boundary_review": {
+            "start": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                7274,
+                7281
+              ],
+              "review_window_ms": [
+                242467.0,
+                242700.0
+              ],
+              "selected_endpoint": "left",
+              "selected_ms": 242467.0,
+              "selected_frame": 7274,
+              "selected_clip_pts_ms": 242467.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start/f007274.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start/f007281.jpg"
+              ],
+              "uncertainty_ms": 233.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            },
+            "end": {
+              "review_status": "needs_review",
+              "status": "agent_proposed_interval",
+              "review_window_frames": [
+                7365,
+                7379
+              ],
+              "review_window_ms": [
+                245500.0,
+                245967.0
+              ],
+              "selected_endpoint": "right",
+              "selected_ms": 245967.0,
+              "selected_frame": 7379,
+              "selected_clip_pts_ms": 245967.0,
+              "evidence_indices": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end-index.json"
+              ],
+              "endpoint_frame_paths": [
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end/f007365.jpg",
+                "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end/f007379.jpg"
+              ],
+              "uncertainty_ms": 467.0,
+              "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+            }
+          },
+          "note": "近端发球；有往返击球的短回合，远端前场结束，按短回合保留。"
+        }
+      ],
+      "excluded_event_candidates": [
+        {
+          "event_id": "d2-event-01",
+          "range_ms": [
+            7000,
+            18000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "首回合后远端捡球/还球与双方准备；未见新的连续对打。还球动作作为排除候选，待人审。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-02",
+          "range_ms": [
+            25000,
+            29000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "近端弯身处理地面球、网前还球/整理候选；随后重新准备发球，不作为新增回合。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-03",
+          "range_ms": [
+            40000,
+            48000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "回合后近端退到左侧拾球、走回发球位置；其间零散挥拍不作为新回合。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-04",
+          "range_ms": [
+            56000,
+            62000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "近端前场拾球、交换球与准备候选；对打在后续远端发球后开始。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-05",
+          "range_ms": [
+            93000,
+            101000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "前一回合后球员回位，近端弯身拾球；无新增正式回合。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-06",
+          "range_ms": [
+            109000,
+            115000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "近端后场拾球并走回发球位，零散颠/还球候选。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-07",
+          "range_ms": [
+            132000,
+            138000
+          ],
+          "type": "shuttle_return_and_preparation_candidate",
+          "note": "前一回合后还球与双方准备候选，随后由远端发球。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-08",
+          "range_ms": [
+            175000,
+            186000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "回合后近端走回、远端到右侧拾球并准备发球；中间给球/整理球候选。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-09",
+          "range_ms": [
+            208000,
+            215000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "近端左后场拾球和返回，零散球拍动作不作为新回合。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        },
+        {
+          "event_id": "d2-event-10",
+          "range_ms": [
+            233000,
+            241000
+          ],
+          "type": "pickup_and_shuttle_return_candidate",
+          "note": "近端左后场出画边缘拾球、回到场内并准备发球。",
+          "review_status": "needs_review",
+          "proposed_include_in_target_rallies": false,
+          "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+          ]
+        }
+      ],
+      "incomplete_events": [],
+      "all_complete": {
+        "target_count": 14,
+        "target_ms": 113833.0,
+        "retained_ms": 99167.0,
+        "retained_fraction": 0.8711621410311596,
+        "wholly_missed_ids": [
+          11,
+          14
+        ],
+        "start_acceptable_count": 11,
+        "end_acceptable_count": 4,
+        "both_acceptable_count": 4,
+        "details": [
+          {
+            "rally_id": 1,
+            "start_ms": 533.0,
+            "end_ms": 5800.0,
+            "duration_ms": 5267.0,
+            "retained_ms": 5267.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "1"
+            ],
+            "matched_prediction_id": "1",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -533.0,
+            "end_offset_ms": 1000.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 19633.0,
+            "end_ms": 22700.0,
+            "duration_ms": 3067.0,
+            "retained_ms": 3067.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "2"
+            ],
+            "matched_prediction_id": "2",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -733.0,
+            "end_offset_ms": 4300.0,
+            "start_error_ms": 0,
+            "end_error_ms": 2800.0
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 30367.0,
+            "end_ms": 39433.0,
+            "duration_ms": 9066.0,
+            "retained_ms": 9066.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -667.0,
+            "end_offset_ms": 2567.0,
+            "start_error_ms": 0,
+            "end_error_ms": 1067.0
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 49467.0,
+            "end_ms": 55300.0,
+            "duration_ms": 5833.0,
+            "retained_ms": 5833.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "4"
+            ],
+            "matched_prediction_id": "4",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": 500.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 62667.0,
+            "end_ms": 66967.0,
+            "duration_ms": 4300.0,
+            "retained_ms": 3467.0,
+            "missing_ms": 833.0,
+            "overlapping_prediction_ids": [
+              "5"
+            ],
+            "matched_prediction_id": "5",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": 833.0,
+            "end_offset_ms": 1633.0,
+            "start_error_ms": 833.0,
+            "end_error_ms": 133.0
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 77733.0,
+            "end_ms": 88700.0,
+            "duration_ms": 10967.0,
+            "retained_ms": 10967.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "6"
+            ],
+            "matched_prediction_id": "6",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -233.0,
+            "end_offset_ms": 6300.0,
+            "start_error_ms": 0,
+            "end_error_ms": 4800.0
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 102300.0,
+            "end_ms": 108267.0,
+            "duration_ms": 5967.0,
+            "retained_ms": 5967.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "7"
+            ],
+            "matched_prediction_id": "7",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1000.0,
+            "end_offset_ms": 133.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 116333.0,
+            "end_ms": 130067.0,
+            "duration_ms": 13734.0,
+            "retained_ms": 13267.0,
+            "missing_ms": 467.0,
+            "overlapping_prediction_ids": [
+              "8"
+            ],
+            "matched_prediction_id": "8",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -833.0,
+            "end_offset_ms": -467.0,
+            "start_error_ms": 0,
+            "end_error_ms": 467.0
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 138467.0,
+            "end_ms": 144367.0,
+            "duration_ms": 5900.0,
+            "retained_ms": 5900.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "9"
+            ],
+            "matched_prediction_id": "9",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": 633.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 153467.0,
+            "end_ms": 172700.0,
+            "duration_ms": 19233.0,
+            "retained_ms": 19233.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "10"
+            ],
+            "matched_prediction_id": "10",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -167.0,
+            "end_offset_ms": 3700.0,
+            "start_error_ms": 0,
+            "end_error_ms": 2200.0
+          },
+          {
+            "rally_id": 11,
+            "start_ms": 186567.0,
+            "end_ms": 190900.0,
+            "duration_ms": 4333.0,
+            "retained_ms": 0,
+            "missing_ms": 4333.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 12,
+            "start_ms": 200067.0,
+            "end_ms": 207233.0,
+            "duration_ms": 7166.0,
+            "retained_ms": 3533.0,
+            "missing_ms": 3633.0,
+            "overlapping_prediction_ids": [
+              "11"
+            ],
+            "matched_prediction_id": "11",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": -3633.0,
+            "start_error_ms": 0,
+            "end_error_ms": 3633.0
+          },
+          {
+            "rally_id": 13,
+            "start_ms": 216500.0,
+            "end_ms": 232000.0,
+            "duration_ms": 15500.0,
+            "retained_ms": 13600.0,
+            "missing_ms": 1900.0,
+            "overlapping_prediction_ids": [
+              "12",
+              "13"
+            ],
+            "matched_prediction_id": "12",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -800.0,
+            "end_offset_ms": -4600.0,
+            "start_error_ms": 0,
+            "end_error_ms": 4600.0
+          },
+          {
+            "rally_id": 14,
+            "start_ms": 242467.0,
+            "end_ms": 245967.0,
+            "duration_ms": 3500.0,
+            "retained_ms": 0,
+            "missing_ms": 3500.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          }
+        ]
+      },
+      "over_3_seconds": {
+        "target_count": 14,
+        "target_ms": 113833.0,
+        "retained_ms": 99167.0,
+        "retained_fraction": 0.8711621410311596,
+        "wholly_missed_ids": [
+          11,
+          14
+        ],
+        "start_acceptable_count": 11,
+        "end_acceptable_count": 4,
+        "both_acceptable_count": 4,
+        "details": [
+          {
+            "rally_id": 1,
+            "start_ms": 533.0,
+            "end_ms": 5800.0,
+            "duration_ms": 5267.0,
+            "retained_ms": 5267.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "1"
+            ],
+            "matched_prediction_id": "1",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -533.0,
+            "end_offset_ms": 1000.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 19633.0,
+            "end_ms": 22700.0,
+            "duration_ms": 3067.0,
+            "retained_ms": 3067.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "2"
+            ],
+            "matched_prediction_id": "2",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -733.0,
+            "end_offset_ms": 4300.0,
+            "start_error_ms": 0,
+            "end_error_ms": 2800.0
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 30367.0,
+            "end_ms": 39433.0,
+            "duration_ms": 9066.0,
+            "retained_ms": 9066.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -667.0,
+            "end_offset_ms": 2567.0,
+            "start_error_ms": 0,
+            "end_error_ms": 1067.0
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 49467.0,
+            "end_ms": 55300.0,
+            "duration_ms": 5833.0,
+            "retained_ms": 5833.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "4"
+            ],
+            "matched_prediction_id": "4",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": 500.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 62667.0,
+            "end_ms": 66967.0,
+            "duration_ms": 4300.0,
+            "retained_ms": 3467.0,
+            "missing_ms": 833.0,
+            "overlapping_prediction_ids": [
+              "5"
+            ],
+            "matched_prediction_id": "5",
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": 833.0,
+            "end_offset_ms": 1633.0,
+            "start_error_ms": 833.0,
+            "end_error_ms": 133.0
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 77733.0,
+            "end_ms": 88700.0,
+            "duration_ms": 10967.0,
+            "retained_ms": 10967.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "6"
+            ],
+            "matched_prediction_id": "6",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -233.0,
+            "end_offset_ms": 6300.0,
+            "start_error_ms": 0,
+            "end_error_ms": 4800.0
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 102300.0,
+            "end_ms": 108267.0,
+            "duration_ms": 5967.0,
+            "retained_ms": 5967.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "7"
+            ],
+            "matched_prediction_id": "7",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1000.0,
+            "end_offset_ms": 133.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 116333.0,
+            "end_ms": 130067.0,
+            "duration_ms": 13734.0,
+            "retained_ms": 13267.0,
+            "missing_ms": 467.0,
+            "overlapping_prediction_ids": [
+              "8"
+            ],
+            "matched_prediction_id": "8",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -833.0,
+            "end_offset_ms": -467.0,
+            "start_error_ms": 0,
+            "end_error_ms": 467.0
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 138467.0,
+            "end_ms": 144367.0,
+            "duration_ms": 5900.0,
+            "retained_ms": 5900.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "9"
+            ],
+            "matched_prediction_id": "9",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": 633.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 153467.0,
+            "end_ms": 172700.0,
+            "duration_ms": 19233.0,
+            "retained_ms": 19233.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "10"
+            ],
+            "matched_prediction_id": "10",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -167.0,
+            "end_offset_ms": 3700.0,
+            "start_error_ms": 0,
+            "end_error_ms": 2200.0
+          },
+          {
+            "rally_id": 11,
+            "start_ms": 186567.0,
+            "end_ms": 190900.0,
+            "duration_ms": 4333.0,
+            "retained_ms": 0,
+            "missing_ms": 4333.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          },
+          {
+            "rally_id": 12,
+            "start_ms": 200067.0,
+            "end_ms": 207233.0,
+            "duration_ms": 7166.0,
+            "retained_ms": 3533.0,
+            "missing_ms": 3633.0,
+            "overlapping_prediction_ids": [
+              "11"
+            ],
+            "matched_prediction_id": "11",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": -3633.0,
+            "start_error_ms": 0,
+            "end_error_ms": 3633.0
+          },
+          {
+            "rally_id": 13,
+            "start_ms": 216500.0,
+            "end_ms": 232000.0,
+            "duration_ms": 15500.0,
+            "retained_ms": 13600.0,
+            "missing_ms": 1900.0,
+            "overlapping_prediction_ids": [
+              "12",
+              "13"
+            ],
+            "matched_prediction_id": "12",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -800.0,
+            "end_offset_ms": -4600.0,
+            "start_error_ms": 0,
+            "end_error_ms": 4600.0
+          },
+          {
+            "rally_id": 14,
+            "start_ms": 242467.0,
+            "end_ms": 245967.0,
+            "duration_ms": 3500.0,
+            "retained_ms": 0,
+            "missing_ms": 3500.0,
+            "overlapping_prediction_ids": [],
+            "matched_prediction_id": null,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review"
+          }
+        ]
+      },
+      "over_5_seconds": {
+        "target_count": 10,
+        "target_ms": 98633.0,
+        "retained_ms": 92633.0,
+        "retained_fraction": 0.9391684324718907,
+        "wholly_missed_ids": [],
+        "start_acceptable_count": 10,
+        "end_acceptable_count": 4,
+        "both_acceptable_count": 4,
+        "details": [
+          {
+            "rally_id": 1,
+            "start_ms": 533.0,
+            "end_ms": 5800.0,
+            "duration_ms": 5267.0,
+            "retained_ms": 5267.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "1"
+            ],
+            "matched_prediction_id": "1",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -533.0,
+            "end_offset_ms": 1000.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 30367.0,
+            "end_ms": 39433.0,
+            "duration_ms": 9066.0,
+            "retained_ms": 9066.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "3"
+            ],
+            "matched_prediction_id": "3",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -667.0,
+            "end_offset_ms": 2567.0,
+            "start_error_ms": 0,
+            "end_error_ms": 1067.0
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 49467.0,
+            "end_ms": 55300.0,
+            "duration_ms": 5833.0,
+            "retained_ms": 5833.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "4"
+            ],
+            "matched_prediction_id": "4",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": 500.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 77733.0,
+            "end_ms": 88700.0,
+            "duration_ms": 10967.0,
+            "retained_ms": 10967.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "6"
+            ],
+            "matched_prediction_id": "6",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -233.0,
+            "end_offset_ms": 6300.0,
+            "start_error_ms": 0,
+            "end_error_ms": 4800.0
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 102300.0,
+            "end_ms": 108267.0,
+            "duration_ms": 5967.0,
+            "retained_ms": 5967.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "7"
+            ],
+            "matched_prediction_id": "7",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1000.0,
+            "end_offset_ms": 133.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 116333.0,
+            "end_ms": 130067.0,
+            "duration_ms": 13734.0,
+            "retained_ms": 13267.0,
+            "missing_ms": 467.0,
+            "overlapping_prediction_ids": [
+              "8"
+            ],
+            "matched_prediction_id": "8",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -833.0,
+            "end_offset_ms": -467.0,
+            "start_error_ms": 0,
+            "end_error_ms": 467.0
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 138467.0,
+            "end_ms": 144367.0,
+            "duration_ms": 5900.0,
+            "retained_ms": 5900.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "9"
+            ],
+            "matched_prediction_id": "9",
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": 633.0,
+            "start_error_ms": 0,
+            "end_error_ms": 0
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 153467.0,
+            "end_ms": 172700.0,
+            "duration_ms": 19233.0,
+            "retained_ms": 19233.0,
+            "missing_ms": 0.0,
+            "overlapping_prediction_ids": [
+              "10"
+            ],
+            "matched_prediction_id": "10",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -167.0,
+            "end_offset_ms": 3700.0,
+            "start_error_ms": 0,
+            "end_error_ms": 2200.0
+          },
+          {
+            "rally_id": 12,
+            "start_ms": 200067.0,
+            "end_ms": 207233.0,
+            "duration_ms": 7166.0,
+            "retained_ms": 3533.0,
+            "missing_ms": 3633.0,
+            "overlapping_prediction_ids": [
+              "11"
+            ],
+            "matched_prediction_id": "11",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": -3633.0,
+            "start_error_ms": 0,
+            "end_error_ms": 3633.0
+          },
+          {
+            "rally_id": 13,
+            "start_ms": 216500.0,
+            "end_ms": 232000.0,
+            "duration_ms": 15500.0,
+            "retained_ms": 13600.0,
+            "missing_ms": 1900.0,
+            "overlapping_prediction_ids": [
+              "12",
+              "13"
+            ],
+            "matched_prediction_id": "12",
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "review_status": "needs_review",
+            "start_offset_ms": -800.0,
+            "end_offset_ms": -4600.0,
+            "start_error_ms": 0,
+            "end_error_ms": 4600.0
+          }
+        ]
+      },
+      "selected_ms": 134600.0,
+      "retained_in_incomplete_ranges_ms": 0,
+      "retained_outside_complete_and_incomplete_drafts_ms": 35433.0,
+      "no_complete_or_incomplete_overlap_prediction_ids": [],
+      "merge_candidates": [],
+      "split_candidate_rally_ids": [
+        13
+      ]
+    }
+  ],
+  "aggregates": {
+    "A2": {
+      "prediction_count": 3,
+      "selected_ms": 39080.0,
+      "retained_outside_complete_and_incomplete_drafts_ms": 2520.0,
+      "all_complete": {
+        "target_count": 7,
+        "target_ms": 51680.0,
+        "retained_ms": 36560.0,
+        "start_acceptable_count": 2,
+        "end_acceptable_count": 1,
+        "both_acceptable_count": 0,
+        "retained_fraction": 0.7074303405572755,
+        "wholly_missed": [
+          {
+            "clip_id": "A2-01",
+            "rally_id": 1
+          },
+          {
+            "clip_id": "A2-01",
+            "rally_id": 2
+          },
+          {
+            "clip_id": "A2-02",
+            "rally_id": 1
+          },
+          {
+            "clip_id": "A2-02",
+            "rally_id": 2
+          }
+        ]
+      },
+      "over_3_seconds": {
+        "target_count": 6,
+        "target_ms": 50000.0,
+        "retained_ms": 36560.0,
+        "start_acceptable_count": 2,
+        "end_acceptable_count": 1,
+        "both_acceptable_count": 0,
+        "retained_fraction": 0.7312,
+        "wholly_missed": [
+          {
+            "clip_id": "A2-01",
+            "rally_id": 2
+          },
+          {
+            "clip_id": "A2-02",
+            "rally_id": 1
+          },
+          {
+            "clip_id": "A2-02",
+            "rally_id": 2
+          }
+        ]
+      },
+      "over_5_seconds": {
+        "target_count": 4,
+        "target_ms": 42600.0,
+        "retained_ms": 36560.0,
+        "start_acceptable_count": 2,
+        "end_acceptable_count": 1,
+        "both_acceptable_count": 0,
+        "retained_fraction": 0.8582159624413146,
+        "wholly_missed": [
+          {
+            "clip_id": "A2-02",
+            "rally_id": 2
+          }
+        ]
+      }
+    },
+    "C2": {
+      "prediction_count": 6,
+      "selected_ms": 105166.66666666667,
+      "retained_outside_complete_and_incomplete_drafts_ms": 31299.999999000007,
+      "all_complete": {
+        "target_count": 10,
+        "target_ms": 82033.333334,
+        "retained_ms": 65666.66666766666,
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "retained_fraction": 0.8004876066696426,
+        "wholly_missed": [
+          {
+            "clip_id": "C2",
+            "rally_id": 1
+          },
+          {
+            "clip_id": "C2",
+            "rally_id": 7
+          },
+          {
+            "clip_id": "C2",
+            "rally_id": 9
+          },
+          {
+            "clip_id": "C2",
+            "rally_id": 10
+          }
+        ]
+      },
+      "over_3_seconds": {
+        "target_count": 10,
+        "target_ms": 82033.333334,
+        "retained_ms": 65666.66666766666,
+        "start_acceptable_count": 1,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "retained_fraction": 0.8004876066696426,
+        "wholly_missed": [
+          {
+            "clip_id": "C2",
+            "rally_id": 1
+          },
+          {
+            "clip_id": "C2",
+            "rally_id": 7
+          },
+          {
+            "clip_id": "C2",
+            "rally_id": 9
+          },
+          {
+            "clip_id": "C2",
+            "rally_id": 10
+          }
+        ]
+      },
+      "over_5_seconds": {
+        "target_count": 5,
+        "target_ms": 62633.333333999995,
+        "retained_ms": 62100.00000066667,
+        "start_acceptable_count": 0,
+        "end_acceptable_count": 0,
+        "both_acceptable_count": 0,
+        "retained_fraction": 0.9914848323577278,
+        "wholly_missed": []
+      }
+    },
+    "D2": {
+      "prediction_count": 13,
+      "selected_ms": 134600.0,
+      "retained_outside_complete_and_incomplete_drafts_ms": 35433.0,
+      "all_complete": {
+        "target_count": 14,
+        "target_ms": 113833.0,
+        "retained_ms": 99167.0,
+        "start_acceptable_count": 11,
+        "end_acceptable_count": 4,
+        "both_acceptable_count": 4,
+        "retained_fraction": 0.8711621410311596,
+        "wholly_missed": [
+          {
+            "clip_id": "D2",
+            "rally_id": 11
+          },
+          {
+            "clip_id": "D2",
+            "rally_id": 14
+          }
+        ]
+      },
+      "over_3_seconds": {
+        "target_count": 14,
+        "target_ms": 113833.0,
+        "retained_ms": 99167.0,
+        "start_acceptable_count": 11,
+        "end_acceptable_count": 4,
+        "both_acceptable_count": 4,
+        "retained_fraction": 0.8711621410311596,
+        "wholly_missed": [
+          {
+            "clip_id": "D2",
+            "rally_id": 11
+          },
+          {
+            "clip_id": "D2",
+            "rally_id": 14
+          }
+        ]
+      },
+      "over_5_seconds": {
+        "target_count": 10,
+        "target_ms": 98633.0,
+        "retained_ms": 92633.0,
+        "start_acceptable_count": 10,
+        "end_acceptable_count": 4,
+        "both_acceptable_count": 4,
+        "retained_fraction": 0.9391684324718907,
+        "wholly_missed": []
+      }
+    }
+  },
+  "review_data": "models/SoloShuttlePose/.runtime/reserve-draft-review-20261018/review.json"
+}

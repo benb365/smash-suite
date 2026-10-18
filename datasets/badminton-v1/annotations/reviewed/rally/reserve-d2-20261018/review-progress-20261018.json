@@ -1,0 +1,330 @@
+{
+  "schema_version": 1,
+  "type": "rally_annotation_review_progress",
+  "date": "2026-10-18",
+  "reviewer": "user",
+  "proposal": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+  "proposal_sha256": "5f575233a533c19e3e3fb947b20cc994ba5cb6fe6629df345b9cceb398438dee",
+  "scope": "用户确认D2整片所列完整回合与排除事件；不改变算法、权重和视频。",
+  "confirmed_rallies": [
+    {
+      "rally_id": 1,
+      "start_ms": 533.0,
+      "end_ms": 5800.0,
+      "start_range_ms": [
+        533.0,
+        767.0
+      ],
+      "end_range_ms": [
+        5467.0,
+        5800.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 19633.0,
+      "end_ms": 22700.0,
+      "start_range_ms": [
+        19633.0,
+        19767.0
+      ],
+      "end_range_ms": [
+        22233.0,
+        22700.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 30367.0,
+      "end_ms": 39433.0,
+      "start_range_ms": [
+        30367.0,
+        30567.0
+      ],
+      "end_range_ms": [
+        39067.0,
+        39433.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 49467.0,
+      "end_ms": 55300.0,
+      "start_range_ms": [
+        49467.0,
+        49667.0
+      ],
+      "end_range_ms": [
+        54933.0,
+        55300.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 62667.0,
+      "end_ms": 66967.0,
+      "start_range_ms": [
+        62667.0,
+        62867.0
+      ],
+      "end_range_ms": [
+        66600.0,
+        66967.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 77733.0,
+      "end_ms": 88700.0,
+      "start_range_ms": [
+        77733.0,
+        77967.0
+      ],
+      "end_range_ms": [
+        87900.0,
+        88700.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 102300.0,
+      "end_ms": 108267.0,
+      "start_range_ms": [
+        102300.0,
+        102500.0
+      ],
+      "end_range_ms": [
+        108167.0,
+        108267.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 116333.0,
+      "end_ms": 130067.0,
+      "start_range_ms": [
+        116333.0,
+        116533.0
+      ],
+      "end_range_ms": [
+        129700.0,
+        130067.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 138467.0,
+      "end_ms": 144367.0,
+      "start_range_ms": [
+        138467.0,
+        138700.0
+      ],
+      "end_range_ms": [
+        144100.0,
+        144367.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 153467.0,
+      "end_ms": 172700.0,
+      "start_range_ms": [
+        153467.0,
+        153667.0
+      ],
+      "end_range_ms": [
+        172267.0,
+        172700.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 11,
+      "start_ms": 186567.0,
+      "end_ms": 190900.0,
+      "start_range_ms": [
+        186567.0,
+        186800.0
+      ],
+      "end_range_ms": [
+        190500.0,
+        190900.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 12,
+      "start_ms": 200067.0,
+      "end_ms": 207233.0,
+      "start_range_ms": [
+        200067.0,
+        200300.0
+      ],
+      "end_range_ms": [
+        206933.0,
+        207233.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 13,
+      "start_ms": 216500.0,
+      "end_ms": 232000.0,
+      "start_range_ms": [
+        216500.0,
+        216733.0
+      ],
+      "end_range_ms": [
+        231500.0,
+        232000.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "rally_id": 14,
+      "start_ms": 242467.0,
+      "end_ms": 245967.0,
+      "start_range_ms": [
+        242467.0,
+        242700.0
+      ],
+      "end_range_ms": [
+        245500.0,
+        245967.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "整个视频我都确认"
+    }
+  ],
+  "remaining_rally_ids": [],
+  "remaining_boundary_review_ids": [],
+  "confirmed_excluded_events": [
+    {
+      "event_id": "d2-event-01",
+      "range_ms": [
+        7000,
+        18000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-02",
+      "range_ms": [
+        25000,
+        29000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-03",
+      "range_ms": [
+        40000,
+        48000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-04",
+      "range_ms": [
+        56000,
+        62000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-05",
+      "range_ms": [
+        93000,
+        101000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-06",
+      "range_ms": [
+        109000,
+        115000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-07",
+      "range_ms": [
+        132000,
+        138000
+      ],
+      "type": "shuttle_return_and_preparation",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-08",
+      "range_ms": [
+        175000,
+        186000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-09",
+      "range_ms": [
+        208000,
+        215000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-10",
+      "range_ms": [
+        233000,
+        241000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    }
+  ],
+  "remaining_event_ids": [],
+  "remaining_incomplete_event_ids": [],
+  "whole_clip_review_complete": true,
+  "rally_review_complete": true,
+  "listed_items_review_complete": true
+}

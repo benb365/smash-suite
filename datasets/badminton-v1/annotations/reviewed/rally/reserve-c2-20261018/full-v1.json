@@ -1,0 +1,907 @@
+{
+  "schema_version": 1,
+  "sample_id": "reserve-c2-20261018",
+  "category": "C",
+  "video": "datasets/badminton-v1/local/rally/personal-qianfoshan-singles/clip.mp4",
+  "video_sha256": "7215d4acf604834d44a5073f8c9a504642322c7528d8077688db932ab8292d74",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 66.015625,
+    "frame_count": 5400,
+    "nominal_fps": 30,
+    "clip_pts_rule": "clip_pts_ms = 66.015625 + timestamp_ms",
+    "last_decoded_timestamp_ms": 179966.666667,
+    "last_decoded_clip_pts_ms": 180032.682292,
+    "displayed_duration_ms": 180000
+  },
+  "main_court": "Nearest red-shirt blue-shorts black-legging player versus the black-shirt player directly opposite across the net. Exclude adjacent courts, background players and passers-by.",
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2",
+    "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/overview-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/boundary-index.json"
+  },
+  "observation_log": [
+    {
+      "range_ms": [
+        0,
+        2000.0
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Opening is serve preparation, not a cut-in rally."
+    },
+    {
+      "range_ms": [
+        2000.0,
+        5800.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 1,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        5800.0,
+        14333.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Retrieval, failed-serve/return candidate, then preparation."
+    },
+    {
+      "range_ms": [
+        14333.333333,
+        17900.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 2,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        17900.0,
+        24433.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Retrieval and return to serving position."
+    },
+    {
+      "range_ms": [
+        24433.333333,
+        42500.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 3,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        42500.0,
+        49433.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Retrieval, shuttle return, and preparation."
+    },
+    {
+      "range_ms": [
+        49433.333333,
+        68600.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 4,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        68600.0,
+        76133.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Net-front retrieval and walk back."
+    },
+    {
+      "range_ms": [
+        76133.333333,
+        84800.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 5,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        84800.0,
+        94566.666667
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Net-front retrieval/return and repositioning."
+    },
+    {
+      "range_ms": [
+        94566.666667,
+        103433.333333
+      ],
+      "type": "rally_candidate",
+      "rally_id": 6,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        103433.333333,
+        111100.0
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Retrieval, shuttle return, and far-player preparation."
+    },
+    {
+      "range_ms": [
+        111100.0,
+        114433.333333
+      ],
+      "type": "rally_candidate",
+      "rally_id": 7,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        114433.333333,
+        120833.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Failed-return aftermath, scoop/return, and preparation."
+    },
+    {
+      "range_ms": [
+        120833.333333,
+        128700.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 8,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        128700.0,
+        146266.666667
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Long break after retrieval, then far-player preparation."
+    },
+    {
+      "range_ms": [
+        146266.666667,
+        151100.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 9,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        151100.0,
+        157733.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Near-court retrieval and walk back."
+    },
+    {
+      "range_ms": [
+        157733.333333,
+        161600.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 10,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        161600.0,
+        168400
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Right-edge retrieval, shuttle return, and far-player preparation."
+    },
+    {
+      "range_ms": [
+        168400,
+        180000
+      ],
+      "type": "tail_incomplete_rally",
+      "event_id": "C2-I01",
+      "review_status": "needs_review"
+    }
+  ],
+  "uncertain_windows": [
+    {
+      "rally_id": 1,
+      "boundary": "end",
+      "range_ms": [
+        5166.666667,
+        5800.0
+      ],
+      "note": "Far black player serves. Final shuttle is small and occluded by the near player/net; near player then retrieves it. Landing remains uncertain.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 2,
+      "boundary": "end",
+      "range_ms": [
+        17333.333333,
+        17900.0
+      ],
+      "note": "Near red player serves; far player attacks after returns. Right near-court landing is partly occluded. Retain this normal short rally.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 3,
+      "boundary": "end",
+      "range_ms": [
+        42066.666667,
+        42500.0
+      ],
+      "note": "Near player serves, followed by multiple exchanges. Shuttle is still airborne at 41.8 s after the players relax, then descends to the left near floor around 42.1-42.5 s. Do not end at the earlier stop.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 4,
+      "boundary": "end",
+      "range_ms": [
+        67800.0,
+        68600.0
+      ],
+      "note": "Near player serves, followed by a long rally. Final shuttle disappears at the right front behind the near player/net; retain a wide landing window.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 5,
+      "boundary": "end",
+      "range_ms": [
+        84600.0,
+        84800.0
+      ],
+      "note": "Near player serves. Final shuttle continues flying left after both players relax at 83 s, descending toward the floor around 84.6-84.8 s. Do not end at player relaxation.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 6,
+      "boundary": "end",
+      "range_ms": [
+        103233.333333,
+        103433.333333
+      ],
+      "note": "Far black player serves; after exchanges, final shuttle travels toward the left near court and lands without a return.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 7,
+      "boundary": "end",
+      "range_ms": [
+        114100.0,
+        114433.333333
+      ],
+      "note": "Far player serves; near player attacks; far player fails a low front-court return. Retain this normal short rally. Subsequent scoop/return motions are break candidates.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 8,
+      "boundary": "end",
+      "range_ms": [
+        128266.666667,
+        128700.0
+      ],
+      "note": "Near player serves, followed by exchanges and a final right-front lunge. Final shuttle is occluded by the net/body near the floor.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 9,
+      "boundary": "end",
+      "range_ms": [
+        150800.0,
+        151100.0
+      ],
+      "note": "Far player serves; near player chases the final shuttle into the left front court. Retain this normal short rally.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 10,
+      "boundary": "end",
+      "range_ms": [
+        160800.0,
+        161600.0
+      ],
+      "note": "Near player serves and exchanges several shots. Final chase and shuttle leave the right image edge. Actual landing is not visible; this wide uncertain ending needs a human keep/reject decision.",
+      "review_status": "needs_review"
+    }
+  ],
+  "type": "rally_segment_annotation",
+  "status": "human_reviewed_listed_items",
+  "generation": {
+    "method": "apply_saved_human_review",
+    "date": "2026-10-18",
+    "requires_human_review": false,
+    "original_proposal": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+    "original_proposal_sha256": "f12a3f271a5f52b56322177c5eff5a6b3aea19d2c61e294c800164a29a09f743",
+    "human_decisions": "datasets/badminton-v1/annotations/reviewed/rally/reserve-c2-20261018/review-progress-20261018.json",
+    "human_decisions_sha256": "e0ecbfd1f4c394fd7e929d19035718b3edcccdea9d96e8b637b1585d23a23699",
+    "used_segmentation_predictions_for_corrections": true,
+    "note": "初稿独立于分割输出；C2第2回合终点由用户选择已有算法终点，其余更正及确认见人审记录。"
+  },
+  "coverage": {
+    "human_scope": "C2所列10个完整回合、7项排除事件及片尾未完回合均已核对。第1回合终点5.167秒、第2回合终点20.033333秒；未完回合168.400秒开始，真实结束点未知。仅确认所列条目，不另外宣告整片无漏标。",
+    "listed_items_review_complete": true,
+    "whole_clip_review_complete": false,
+    "negative_time_is_not_verified": true
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "start_ms": 2000.0,
+      "end_ms": 5167.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 1,
+        "start_ms": 2000.0,
+        "end_ms": 5167.0,
+        "start_range_ms": [
+          2000.0,
+          2133.333333
+        ],
+        "original_proposal_end_ms": 5800.0,
+        "original_proposal_end_range_ms": [
+          5166.666667,
+          5800.0
+        ],
+        "confirmation_scope": "rally_with_user_corrected_end",
+        "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+        "note": "起点沿用所示2.000秒，用户将终点改为5.167秒；按用户给定时间记录，不猜新帧号或把旧终点区间当作已接受范围。"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 1
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 2000.0,
+          "review_window_ms": [
+            2000.0,
+            2133.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 5167.0,
+          "note": "用户更正的时间；未推测新帧号或沿用旧边界范围。"
+        }
+      },
+      "start_frame": 60
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 14333.333333,
+      "end_ms": 20033.333333333332,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 2,
+        "start_ms": 14333.333333,
+        "end_ms": 20033.333333333332,
+        "start_range_ms": [
+          14333.333333,
+          14433.333333
+        ],
+        "original_proposal_end_ms": 17900.0,
+        "original_proposal_end_range_ms": [
+          17333.333333,
+          17900.0
+        ],
+        "confirmation_scope": "rally_with_user_selected_algorithm_end",
+        "user_message": "第二回合算法保留的终点更合适",
+        "reference_prediction": {
+          "file": "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/C2/result.json",
+          "sha256": "44ccc9c64e2ea689b4c6d4ca5be6946b43ad0cd5872deb0d80aff24332554f63",
+          "rally_id": 2,
+          "end_ms": 20033.333333333332
+        },
+        "note": "用户认可该回合已有算法保留终点，故终点改为20.033333秒；起点沿用14.333333秒。原草稿和算法输出不改。"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 2
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 14333.333333,
+          "review_window_ms": [
+            14333.333333,
+            14433.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 20033.333333333332,
+          "note": "用户更正的时间；未推测新帧号或沿用旧边界范围。"
+        }
+      },
+      "start_frame": 430
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 24433.333333,
+      "end_ms": 42500.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 3,
+        "start_ms": 24433.333333,
+        "end_ms": 42500.0,
+        "start_range_ms": [
+          24433.333333,
+          24533.333333
+        ],
+        "end_range_ms": [
+          42066.666667,
+          42500.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "3/4/5/6 这几个回合的草稿都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 3
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 24433.333333,
+          "review_window_ms": [
+            24433.333333,
+            24533.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 42500.0,
+          "review_window_ms": [
+            42066.666667,
+            42500.0
+          ]
+        }
+      },
+      "start_frame": 733,
+      "end_frame": 1275
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 49433.333333,
+      "end_ms": 68600.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 4,
+        "start_ms": 49433.333333,
+        "end_ms": 68600.0,
+        "start_range_ms": [
+          49433.333333,
+          49533.333333
+        ],
+        "end_range_ms": [
+          67800.0,
+          68600.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "3/4/5/6 这几个回合的草稿都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 4
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 49433.333333,
+          "review_window_ms": [
+            49433.333333,
+            49533.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 68600.0,
+          "review_window_ms": [
+            67800.0,
+            68600.0
+          ]
+        }
+      },
+      "start_frame": 1483,
+      "end_frame": 2058
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 76133.333333,
+      "end_ms": 84800.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 5,
+        "start_ms": 76133.333333,
+        "end_ms": 84800.0,
+        "start_range_ms": [
+          76133.333333,
+          76233.333333
+        ],
+        "end_range_ms": [
+          84600.0,
+          84800.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "3/4/5/6 这几个回合的草稿都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 5
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 76133.333333,
+          "review_window_ms": [
+            76133.333333,
+            76233.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 84800.0,
+          "review_window_ms": [
+            84600.0,
+            84800.0
+          ]
+        }
+      },
+      "start_frame": 2284,
+      "end_frame": 2544
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 94566.666667,
+      "end_ms": 103433.333333,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 6,
+        "start_ms": 94566.666667,
+        "end_ms": 103433.333333,
+        "start_range_ms": [
+          94566.666667,
+          94700.0
+        ],
+        "end_range_ms": [
+          103233.333333,
+          103433.333333
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "3/4/5/6 这几个回合的草稿都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 6
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 94566.666667,
+          "review_window_ms": [
+            94566.666667,
+            94700.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 103433.333333,
+          "review_window_ms": [
+            103233.333333,
+            103433.333333
+          ]
+        }
+      },
+      "start_frame": 2837,
+      "end_frame": 3103
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 111100.0,
+      "end_ms": 114433.333333,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 7,
+        "start_ms": 111100.0,
+        "end_ms": 114433.333333,
+        "start_range_ms": [
+          111100.0,
+          111233.333333
+        ],
+        "end_range_ms": [
+          114100.0,
+          114433.333333
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 7
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 111100.0,
+          "review_window_ms": [
+            111100.0,
+            111233.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 114433.333333,
+          "review_window_ms": [
+            114100.0,
+            114433.333333
+          ]
+        }
+      },
+      "start_frame": 3333,
+      "end_frame": 3433
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 120833.333333,
+      "end_ms": 128700.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 8,
+        "start_ms": 120833.333333,
+        "end_ms": 128700.0,
+        "start_range_ms": [
+          120833.333333,
+          120933.333333
+        ],
+        "end_range_ms": [
+          128266.666667,
+          128700.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 8
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 120833.333333,
+          "review_window_ms": [
+            120833.333333,
+            120933.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 128700.0,
+          "review_window_ms": [
+            128266.666667,
+            128700.0
+          ]
+        }
+      },
+      "start_frame": 3625,
+      "end_frame": 3861
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 146266.666667,
+      "end_ms": 151100.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 9,
+        "start_ms": 146266.666667,
+        "end_ms": 151100.0,
+        "start_range_ms": [
+          146266.666667,
+          146433.333333
+        ],
+        "end_range_ms": [
+          150800.0,
+          151100.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 9
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 146266.666667,
+          "review_window_ms": [
+            146266.666667,
+            146433.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 151100.0,
+          "review_window_ms": [
+            150800.0,
+            151100.0
+          ]
+        }
+      },
+      "start_frame": 4388,
+      "end_frame": 4533
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 157733.333333,
+      "end_ms": 161600.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 10,
+        "start_ms": 157733.333333,
+        "end_ms": 161600.0,
+        "start_range_ms": [
+          157733.333333,
+          157833.333333
+        ],
+        "end_range_ms": [
+          160800.0,
+          161600.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+        "rally_id": 10
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 157733.333333,
+          "review_window_ms": [
+            157733.333333,
+            157833.333333
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 161600.0,
+          "review_window_ms": [
+            160800.0,
+            161600.0
+          ]
+        }
+      },
+      "start_frame": 4732,
+      "end_frame": 4848
+    }
+  ],
+  "excluded_events": [
+    {
+      "event_id": "C2-E01",
+      "range_ms": [
+        8700.0,
+        10300.0
+      ],
+      "type": "failed_serve_or_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E02",
+      "range_ms": [
+        44000.0,
+        45000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E03",
+      "range_ms": [
+        86000.0,
+        88000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E04",
+      "range_ms": [
+        105800.0,
+        107800.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E05",
+      "range_ms": [
+        114600.0,
+        116000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E06",
+      "range_ms": [
+        132700.0,
+        134000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E07",
+      "range_ms": [
+        164800.0,
+        166000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    }
+  ],
+  "incomplete_events": [
+    {
+      "event_id": "C2-I01",
+      "rally_presence_confirmed": true,
+      "user_reference_ms": 168000,
+      "proposed_start_ms": 168400,
+      "start_review_status": "human_confirmed",
+      "end_ms": null,
+      "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段",
+      "note": "片尾未完回合已获用户确认：168.400秒开始、可见对打持续到视频结束，真实结束点未知。",
+      "start_ms": 168400,
+      "end_state": "still_playing_at_clip_end",
+      "review_status": "human_confirmed",
+      "visible_range_ms": [
+        168400,
+        180000
+      ],
+      "confirmation_user_message": "ok，我没注意有未完回合",
+      "confirmation_context": "确认所提起点168.400秒，视频结束时仍在对打；片尾180秒仅为可见范围边界，不作为真实回合终点。"
+    }
+  ]
+}

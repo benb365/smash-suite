@@ -1,0 +1,1231 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_annotation_proposal",
+  "status": "draft_full_clip",
+  "sample_id": "reserve-c2-20261018",
+  "category": "C",
+  "video": "datasets/badminton-v1/local/rally/personal-qianfoshan-singles/clip.mp4",
+  "video_sha256": "7215d4acf604834d44a5073f8c9a504642322c7528d8077688db932ab8292d74",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 66.015625,
+    "frame_count": 5400,
+    "nominal_fps": 30,
+    "clip_pts_rule": "clip_pts_ms = 66.015625 + timestamp_ms",
+    "last_decoded_timestamp_ms": 179966.666667,
+    "last_decoded_clip_pts_ms": 180032.682292,
+    "displayed_duration_ms": 180000
+  },
+  "coverage": {
+    "partial": false,
+    "reviewed_range_ms": [
+      0,
+      180000
+    ],
+    "last_reviewed_frame_timestamp_ms": 179966.666667,
+    "completeness": "agent_draft_whole_clip_sampled_review",
+    "method": "Whole 180-second clip visually screened at 1 frame/s. Candidate boundaries located at 0.1-second sampling, then reviewed in consecutive native decoded frames; full-resolution native evidence retained. No algorithm intervals or outputs read.",
+    "human_confirmation_complete": false,
+    "negative_time_is_not_verified": true,
+    "limits": "All records are agent proposals pending human review. Wide end windows reflect occlusion or image exit. Sampled overview may miss ultra-short events; the complement is not verified negative ground truth."
+  },
+  "main_court": "Nearest red-shirt blue-shorts black-legging player versus the black-shirt player directly opposite across the net. Exclude adjacent courts, background players and passers-by.",
+  "main_court_review_status": "needs_review",
+  "generation": {
+    "method": "agent_visual_sampled_frames_with_consecutive_native_boundary_review",
+    "producer": "Codex",
+    "date": "2026-10-18",
+    "requires_human_review": true,
+    "used_segmentation_predictions": false,
+    "boundary_policy": "start_left_end_right",
+    "authorization": "User authorized autonomous A2/C2/D2 draft annotation followed by human validation; no new content is human-confirmed."
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2",
+    "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/overview-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/boundary-index.json"
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "review_status": "needs_review",
+      "start_ms": 2000.0,
+      "start_frame": 60,
+      "end_ms": 5800.0,
+      "end_frame": 174,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            60,
+            64
+          ],
+          "review_window_ms": [
+            2000.0,
+            2133.333333
+          ],
+          "review_window_clip_pts_ms": [
+            2066.015625,
+            2199.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 2000.0,
+          "selected_frame": 60,
+          "selected_clip_pts_ms": 2066.015625,
+          "native_review_window_frames": [
+            59,
+            69
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-59-69-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            155,
+            174
+          ],
+          "review_window_ms": [
+            5166.666667,
+            5800.0
+          ],
+          "review_window_clip_pts_ms": [
+            5232.682292,
+            5866.015625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 5800.0,
+          "selected_frame": 174,
+          "selected_clip_pts_ms": 5866.015625,
+          "native_review_window_frames": [
+            155,
+            174
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-155-174-step1-index.json"
+          ],
+          "note": "Far black player serves. Final shuttle is small and occluded by the near player/net; near player then retrieves it. Landing remains uncertain."
+        }
+      },
+      "note": "Far black player serves. Final shuttle is small and occluded by the near player/net; near player then retrieves it. Landing remains uncertain."
+    },
+    {
+      "rally_id": 2,
+      "review_status": "needs_review",
+      "start_ms": 14333.333333,
+      "start_frame": 430,
+      "end_ms": 17900.0,
+      "end_frame": 537,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            430,
+            433
+          ],
+          "review_window_ms": [
+            14333.333333,
+            14433.333333
+          ],
+          "review_window_clip_pts_ms": [
+            14399.348958,
+            14499.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 14333.333333,
+          "selected_frame": 430,
+          "selected_clip_pts_ms": 14399.348958,
+          "native_review_window_frames": [
+            425,
+            435
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-425-435-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            520,
+            537
+          ],
+          "review_window_ms": [
+            17333.333333,
+            17900.0
+          ],
+          "review_window_clip_pts_ms": [
+            17399.348958,
+            17966.015625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 17900.0,
+          "selected_frame": 537,
+          "selected_clip_pts_ms": 17966.015625,
+          "native_review_window_frames": [
+            516,
+            537
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-516-537-step1-index.json"
+          ],
+          "note": "Near red player serves; far player attacks after returns. Right near-court landing is partly occluded. Retain this normal short rally."
+        }
+      },
+      "note": "Near red player serves; far player attacks after returns. Right near-court landing is partly occluded. Retain this normal short rally."
+    },
+    {
+      "rally_id": 3,
+      "review_status": "needs_review",
+      "start_ms": 24433.333333,
+      "start_frame": 733,
+      "end_ms": 42500.0,
+      "end_frame": 1275,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            733,
+            736
+          ],
+          "review_window_ms": [
+            24433.333333,
+            24533.333333
+          ],
+          "review_window_clip_pts_ms": [
+            24499.348958,
+            24599.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 24433.333333,
+          "selected_frame": 733,
+          "selected_clip_pts_ms": 24499.348958,
+          "native_review_window_frames": [
+            729,
+            738
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-729-738-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            1262,
+            1275
+          ],
+          "review_window_ms": [
+            42066.666667,
+            42500.0
+          ],
+          "review_window_clip_pts_ms": [
+            42132.682292,
+            42566.015625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 42500.0,
+          "selected_frame": 1275,
+          "selected_clip_pts_ms": 42566.015625,
+          "native_review_window_frames": [
+            1250,
+            1275
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-1250-1275-step1-index.json"
+          ],
+          "note": "Near player serves, followed by multiple exchanges. Shuttle is still airborne at 41.8 s after the players relax, then descends to the left near floor around 42.1-42.5 s. Do not end at the earlier stop."
+        }
+      },
+      "note": "Near player serves, followed by multiple exchanges. Shuttle is still airborne at 41.8 s after the players relax, then descends to the left near floor around 42.1-42.5 s. Do not end at the earlier stop."
+    },
+    {
+      "rally_id": 4,
+      "review_status": "needs_review",
+      "start_ms": 49433.333333,
+      "start_frame": 1483,
+      "end_ms": 68600.0,
+      "end_frame": 2058,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            1483,
+            1486
+          ],
+          "review_window_ms": [
+            49433.333333,
+            49533.333333
+          ],
+          "review_window_clip_pts_ms": [
+            49499.348958,
+            49599.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 49433.333333,
+          "selected_frame": 1483,
+          "selected_clip_pts_ms": 49499.348958,
+          "native_review_window_frames": [
+            1480,
+            1488
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-1480-1488-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            2034,
+            2058
+          ],
+          "review_window_ms": [
+            67800.0,
+            68600.0
+          ],
+          "review_window_clip_pts_ms": [
+            67866.015625,
+            68666.015625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 68600.0,
+          "selected_frame": 2058,
+          "selected_clip_pts_ms": 68666.015625,
+          "native_review_window_frames": [
+            2040,
+            2058
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2040-2058-step1-index.json",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2028-2049-step1-index.json"
+          ],
+          "note": "Near player serves, followed by a long rally. Final shuttle disappears at the right front behind the near player/net; retain a wide landing window."
+        }
+      },
+      "note": "Near player serves, followed by a long rally. Final shuttle disappears at the right front behind the near player/net; retain a wide landing window."
+    },
+    {
+      "rally_id": 5,
+      "review_status": "needs_review",
+      "start_ms": 76133.333333,
+      "start_frame": 2284,
+      "end_ms": 84800.0,
+      "end_frame": 2544,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            2284,
+            2287
+          ],
+          "review_window_ms": [
+            76133.333333,
+            76233.333333
+          ],
+          "review_window_clip_pts_ms": [
+            76199.348958,
+            76299.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 76133.333333,
+          "selected_frame": 2284,
+          "selected_clip_pts_ms": 76199.348958,
+          "native_review_window_frames": [
+            2280,
+            2288
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2280-2288-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            2538,
+            2544
+          ],
+          "review_window_ms": [
+            84600.0,
+            84800.0
+          ],
+          "review_window_clip_pts_ms": [
+            84666.015625,
+            84866.015625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 84800.0,
+          "selected_frame": 2544,
+          "selected_clip_pts_ms": 84866.015625,
+          "native_review_window_frames": [
+            2520,
+            2544
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2520-2544-step1-index.json"
+          ],
+          "note": "Near player serves. Final shuttle continues flying left after both players relax at 83 s, descending toward the floor around 84.6-84.8 s. Do not end at player relaxation."
+        }
+      },
+      "note": "Near player serves. Final shuttle continues flying left after both players relax at 83 s, descending toward the floor around 84.6-84.8 s. Do not end at player relaxation."
+    },
+    {
+      "rally_id": 6,
+      "review_status": "needs_review",
+      "start_ms": 94566.666667,
+      "start_frame": 2837,
+      "end_ms": 103433.333333,
+      "end_frame": 3103,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            2837,
+            2841
+          ],
+          "review_window_ms": [
+            94566.666667,
+            94700.0
+          ],
+          "review_window_clip_pts_ms": [
+            94632.682292,
+            94766.015625
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 94566.666667,
+          "selected_frame": 2837,
+          "selected_clip_pts_ms": 94632.682292,
+          "native_review_window_frames": [
+            2831,
+            2845
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-2831-2845-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            3097,
+            3103
+          ],
+          "review_window_ms": [
+            103233.333333,
+            103433.333333
+          ],
+          "review_window_clip_pts_ms": [
+            103299.348958,
+            103499.348958
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 103433.333333,
+          "selected_frame": 3103,
+          "selected_clip_pts_ms": 103499.348958,
+          "native_review_window_frames": [
+            3087,
+            3108
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3087-3108-step1-index.json"
+          ],
+          "note": "Far black player serves; after exchanges, final shuttle travels toward the left near court and lands without a return."
+        }
+      },
+      "note": "Far black player serves; after exchanges, final shuttle travels toward the left near court and lands without a return."
+    },
+    {
+      "rally_id": 7,
+      "review_status": "needs_review",
+      "start_ms": 111100.0,
+      "start_frame": 3333,
+      "end_ms": 114433.333333,
+      "end_frame": 3433,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            3333,
+            3337
+          ],
+          "review_window_ms": [
+            111100.0,
+            111233.333333
+          ],
+          "review_window_clip_pts_ms": [
+            111166.015625,
+            111299.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 111100.0,
+          "selected_frame": 3333,
+          "selected_clip_pts_ms": 111166.015625,
+          "native_review_window_frames": [
+            3330,
+            3339
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3330-3339-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            3423,
+            3433
+          ],
+          "review_window_ms": [
+            114100.0,
+            114433.333333
+          ],
+          "review_window_clip_pts_ms": [
+            114166.015625,
+            114499.348958
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 114433.333333,
+          "selected_frame": 3433,
+          "selected_clip_pts_ms": 114499.348958,
+          "native_review_window_frames": [
+            3420,
+            3447
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3420-3447-step1-index.json"
+          ],
+          "note": "Far player serves; near player attacks; far player fails a low front-court return. Retain this normal short rally. Subsequent scoop/return motions are break candidates."
+        }
+      },
+      "note": "Far player serves; near player attacks; far player fails a low front-court return. Retain this normal short rally. Subsequent scoop/return motions are break candidates."
+    },
+    {
+      "rally_id": 8,
+      "review_status": "needs_review",
+      "start_ms": 120833.333333,
+      "start_frame": 3625,
+      "end_ms": 128700.0,
+      "end_frame": 3861,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            3625,
+            3628
+          ],
+          "review_window_ms": [
+            120833.333333,
+            120933.333333
+          ],
+          "review_window_clip_pts_ms": [
+            120899.348958,
+            120999.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 120833.333333,
+          "selected_frame": 3625,
+          "selected_clip_pts_ms": 120899.348958,
+          "native_review_window_frames": [
+            3621,
+            3631
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3621-3631-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            3848,
+            3861
+          ],
+          "review_window_ms": [
+            128266.666667,
+            128700.0
+          ],
+          "review_window_clip_pts_ms": [
+            128332.682292,
+            128766.015625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 128700.0,
+          "selected_frame": 3861,
+          "selected_clip_pts_ms": 128766.015625,
+          "native_review_window_frames": [
+            3840,
+            3861
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3840-3861-step1-index.json"
+          ],
+          "note": "Near player serves, followed by exchanges and a final right-front lunge. Final shuttle is occluded by the net/body near the floor."
+        }
+      },
+      "note": "Near player serves, followed by exchanges and a final right-front lunge. Final shuttle is occluded by the net/body near the floor."
+    },
+    {
+      "rally_id": 9,
+      "review_status": "needs_review",
+      "start_ms": 146266.666667,
+      "start_frame": 4388,
+      "end_ms": 151100.0,
+      "end_frame": 4533,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            4388,
+            4393
+          ],
+          "review_window_ms": [
+            146266.666667,
+            146433.333333
+          ],
+          "review_window_clip_pts_ms": [
+            146332.682292,
+            146499.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 146266.666667,
+          "selected_frame": 4388,
+          "selected_clip_pts_ms": 146332.682292,
+          "native_review_window_frames": [
+            4383,
+            4395
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4383-4395-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            4524,
+            4533
+          ],
+          "review_window_ms": [
+            150800.0,
+            151100.0
+          ],
+          "review_window_clip_pts_ms": [
+            150866.015625,
+            151166.015625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 151100.0,
+          "selected_frame": 4533,
+          "selected_clip_pts_ms": 151166.015625,
+          "native_review_window_frames": [
+            4512,
+            4533
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4512-4533-step1-index.json"
+          ],
+          "note": "Far player serves; near player chases the final shuttle into the left front court. Retain this normal short rally."
+        }
+      },
+      "note": "Far player serves; near player chases the final shuttle into the left front court. Retain this normal short rally."
+    },
+    {
+      "rally_id": 10,
+      "review_status": "needs_review",
+      "start_ms": 157733.333333,
+      "start_frame": 4732,
+      "end_ms": 161600.0,
+      "end_frame": 4848,
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            4732,
+            4735
+          ],
+          "review_window_ms": [
+            157733.333333,
+            157833.333333
+          ],
+          "review_window_clip_pts_ms": [
+            157799.348958,
+            157899.348958
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 157733.333333,
+          "selected_frame": 4732,
+          "selected_clip_pts_ms": 157799.348958,
+          "native_review_window_frames": [
+            4728,
+            4737
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4728-4737-step1-index.json"
+          ],
+          "note": "Consecutive native frames reviewed for serve contact; select the interval left endpoint."
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "uncertain": true,
+          "review_window_frames": [
+            4824,
+            4848
+          ],
+          "review_window_ms": [
+            160800.0,
+            161600.0
+          ],
+          "review_window_clip_pts_ms": [
+            160866.015625,
+            161666.015625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 161600.0,
+          "selected_frame": 4848,
+          "selected_clip_pts_ms": 161666.015625,
+          "native_review_window_frames": [
+            4815,
+            4848
+          ],
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4815-4848-step1-index.json"
+          ],
+          "note": "Near player serves and exchanges several shots. Final chase and shuttle leave the right image edge. Actual landing is not visible; this wide uncertain ending needs a human keep/reject decision."
+        }
+      },
+      "note": "Near player serves and exchanges several shots. Final chase and shuttle leave the right image edge. Actual landing is not visible; this wide uncertain ending needs a human keep/reject decision."
+    }
+  ],
+  "excluded_events": [
+    {
+      "event_id": "C2-E01",
+      "range_ms": [
+        8700.0,
+        10300.0
+      ],
+      "range_frames": [
+        261,
+        309
+      ],
+      "range_clip_pts_ms": [
+        8766.015625,
+        10366.015625
+      ],
+      "type": "failed_serve_or_return_candidate",
+      "note": "Near player strikes around 8.9 s; no sustained exchange, shuttle drops back to near court. Failed serve versus non-rally return needs review.",
+      "review_status": "needs_review",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-264-276-step1-index.json"
+      ]
+    },
+    {
+      "event_id": "C2-E02",
+      "range_ms": [
+        44000.0,
+        45000.0
+      ],
+      "range_frames": [
+        1320,
+        1350
+      ],
+      "range_clip_pts_ms": [
+        44066.015625,
+        45066.015625
+      ],
+      "type": "shuttle_return_candidate",
+      "note": "Near player returns the retrieved shuttle while both players are waiting or walking.",
+      "review_status": "needs_review",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-1320-1332-step1-index.json"
+      ]
+    },
+    {
+      "event_id": "C2-E03",
+      "range_ms": [
+        86000.0,
+        88000.0
+      ],
+      "range_frames": [
+        2580,
+        2640
+      ],
+      "range_clip_pts_ms": [
+        86066.015625,
+        88066.015625
+      ],
+      "type": "shuttle_return_candidate",
+      "note": "Net-front retrieval/return and repositioning; candidate from whole-clip overview, classification needs review.",
+      "review_status": "needs_review",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "C2-E04",
+      "range_ms": [
+        105800.0,
+        107800.0
+      ],
+      "range_frames": [
+        3174,
+        3234
+      ],
+      "range_clip_pts_ms": [
+        105866.015625,
+        107866.015625
+      ],
+      "type": "shuttle_return_candidate",
+      "note": "After near-court retrieval, shuttle is returned to the far player, who raises a hand to collect/signal.",
+      "review_status": "needs_review",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3194-3204-step1-index.json"
+      ]
+    },
+    {
+      "event_id": "C2-E05",
+      "range_ms": [
+        114600.0,
+        116000.0
+      ],
+      "range_frames": [
+        3438,
+        3480
+      ],
+      "range_clip_pts_ms": [
+        114666.015625,
+        116066.015625
+      ],
+      "type": "shuttle_return_candidate",
+      "note": "Post-rally scoop and shuttle return while near player walks; needs review separately from rally 7.",
+      "review_status": "needs_review",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-3420-3480-step3-index.json"
+      ]
+    },
+    {
+      "event_id": "C2-E06",
+      "range_ms": [
+        132700.0,
+        134000.0
+      ],
+      "range_frames": [
+        3981,
+        4020
+      ],
+      "range_clip_pts_ms": [
+        132766.015625,
+        134066.015625
+      ],
+      "type": "shuttle_return_candidate",
+      "note": "Net-front handling after retrieval; overview candidate, not treated as a new normal rally.",
+      "review_status": "needs_review",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "C2-E07",
+      "range_ms": [
+        164800.0,
+        166000.0
+      ],
+      "range_frames": [
+        4944,
+        4980
+      ],
+      "range_clip_pts_ms": [
+        164866.015625,
+        166066.015625
+      ],
+      "type": "shuttle_return_candidate",
+      "note": "Near player returns from right edge and sends shuttle to far player, who receives it; no consecutive exchanges.",
+      "review_status": "needs_review",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-4950-4965-step1-index.json"
+      ]
+    }
+  ],
+  "incomplete_events": [
+    {
+      "event_id": "C2-I01",
+      "type": "tail_incomplete_rally",
+      "range_ms": [
+        168400,
+        180000
+      ],
+      "range_frames": [
+        5052,
+        5399
+      ],
+      "range_clip_pts_ms": [
+        168466.015625,
+        180032.682292
+      ],
+      "known_start_ms": 168400,
+      "known_start_frame": 5052,
+      "last_visible_timestamp_ms": 179966.666667,
+      "last_visible_clip_pts_ms": 180032.682292,
+      "start_boundary_review": {
+        "status": "agent_proposed_interval",
+        "uncertain": true,
+        "review_window_frames": [
+          5052,
+          5056
+        ],
+        "review_window_ms": [
+          168400.0,
+          168533.333333
+        ],
+        "review_window_clip_pts_ms": [
+          168466.015625,
+          168599.348958
+        ],
+        "selected_endpoint": "left",
+        "selected_ms": 168400.0,
+        "selected_frame": 5052,
+        "selected_clip_pts_ms": 168466.015625,
+        "native_review_window_frames": [
+          5049,
+          5058
+        ],
+        "evidence_indices": [
+          "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-5049-5058-step1-index.json"
+        ],
+        "note": "Far player serves. This rally is incomplete at the clip tail and is excluded from complete segments."
+      },
+      "end_ms": null,
+      "review_status": "needs_review",
+      "note": "Far player serves around 168.4 s. At the last frame the near player is still following through an overhead attack. No landing or other terminal event is visible. Clip end is not a rally end.",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-5049-5058-step1-index.json",
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/C2/frames-5390-5399-step1-index.json"
+      ]
+    }
+  ],
+  "observation_log": [
+    {
+      "range_ms": [
+        0,
+        2000.0
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Opening is serve preparation, not a cut-in rally."
+    },
+    {
+      "range_ms": [
+        2000.0,
+        5800.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 1,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        5800.0,
+        14333.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Retrieval, failed-serve/return candidate, then preparation."
+    },
+    {
+      "range_ms": [
+        14333.333333,
+        17900.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 2,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        17900.0,
+        24433.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Retrieval and return to serving position."
+    },
+    {
+      "range_ms": [
+        24433.333333,
+        42500.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 3,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        42500.0,
+        49433.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Retrieval, shuttle return, and preparation."
+    },
+    {
+      "range_ms": [
+        49433.333333,
+        68600.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 4,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        68600.0,
+        76133.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Net-front retrieval and walk back."
+    },
+    {
+      "range_ms": [
+        76133.333333,
+        84800.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 5,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        84800.0,
+        94566.666667
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Net-front retrieval/return and repositioning."
+    },
+    {
+      "range_ms": [
+        94566.666667,
+        103433.333333
+      ],
+      "type": "rally_candidate",
+      "rally_id": 6,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        103433.333333,
+        111100.0
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Retrieval, shuttle return, and far-player preparation."
+    },
+    {
+      "range_ms": [
+        111100.0,
+        114433.333333
+      ],
+      "type": "rally_candidate",
+      "rally_id": 7,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        114433.333333,
+        120833.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Failed-return aftermath, scoop/return, and preparation."
+    },
+    {
+      "range_ms": [
+        120833.333333,
+        128700.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 8,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        128700.0,
+        146266.666667
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Long break after retrieval, then far-player preparation."
+    },
+    {
+      "range_ms": [
+        146266.666667,
+        151100.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 9,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        151100.0,
+        157733.333333
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Near-court retrieval and walk back."
+    },
+    {
+      "range_ms": [
+        157733.333333,
+        161600.0
+      ],
+      "type": "rally_candidate",
+      "rally_id": 10,
+      "review_status": "needs_review"
+    },
+    {
+      "range_ms": [
+        161600.0,
+        168400
+      ],
+      "type": "non_rally_observation",
+      "review_status": "needs_review",
+      "note": "Right-edge retrieval, shuttle return, and far-player preparation."
+    },
+    {
+      "range_ms": [
+        168400,
+        180000
+      ],
+      "type": "tail_incomplete_rally",
+      "event_id": "C2-I01",
+      "review_status": "needs_review"
+    }
+  ],
+  "uncertain_windows": [
+    {
+      "rally_id": 1,
+      "boundary": "end",
+      "range_ms": [
+        5166.666667,
+        5800.0
+      ],
+      "note": "Far black player serves. Final shuttle is small and occluded by the near player/net; near player then retrieves it. Landing remains uncertain.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 2,
+      "boundary": "end",
+      "range_ms": [
+        17333.333333,
+        17900.0
+      ],
+      "note": "Near red player serves; far player attacks after returns. Right near-court landing is partly occluded. Retain this normal short rally.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 3,
+      "boundary": "end",
+      "range_ms": [
+        42066.666667,
+        42500.0
+      ],
+      "note": "Near player serves, followed by multiple exchanges. Shuttle is still airborne at 41.8 s after the players relax, then descends to the left near floor around 42.1-42.5 s. Do not end at the earlier stop.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 4,
+      "boundary": "end",
+      "range_ms": [
+        67800.0,
+        68600.0
+      ],
+      "note": "Near player serves, followed by a long rally. Final shuttle disappears at the right front behind the near player/net; retain a wide landing window.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 5,
+      "boundary": "end",
+      "range_ms": [
+        84600.0,
+        84800.0
+      ],
+      "note": "Near player serves. Final shuttle continues flying left after both players relax at 83 s, descending toward the floor around 84.6-84.8 s. Do not end at player relaxation.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 6,
+      "boundary": "end",
+      "range_ms": [
+        103233.333333,
+        103433.333333
+      ],
+      "note": "Far black player serves; after exchanges, final shuttle travels toward the left near court and lands without a return.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 7,
+      "boundary": "end",
+      "range_ms": [
+        114100.0,
+        114433.333333
+      ],
+      "note": "Far player serves; near player attacks; far player fails a low front-court return. Retain this normal short rally. Subsequent scoop/return motions are break candidates.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 8,
+      "boundary": "end",
+      "range_ms": [
+        128266.666667,
+        128700.0
+      ],
+      "note": "Near player serves, followed by exchanges and a final right-front lunge. Final shuttle is occluded by the net/body near the floor.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 9,
+      "boundary": "end",
+      "range_ms": [
+        150800.0,
+        151100.0
+      ],
+      "note": "Far player serves; near player chases the final shuttle into the left front court. Retain this normal short rally.",
+      "review_status": "needs_review"
+    },
+    {
+      "rally_id": 10,
+      "boundary": "end",
+      "range_ms": [
+        160800.0,
+        161600.0
+      ],
+      "note": "Near player serves and exchanges several shots. Final chase and shuttle leave the right image edge. Actual landing is not visible; this wide uncertain ending needs a human keep/reject decision.",
+      "review_status": "needs_review"
+    }
+  ]
+}

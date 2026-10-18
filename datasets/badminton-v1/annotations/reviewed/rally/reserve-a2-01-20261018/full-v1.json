@@ -1,0 +1,306 @@
+{
+  "schema_version": 1,
+  "review_status": "needs_review",
+  "sample_id": "reserve-a2-01-20261018",
+  "category": "A",
+  "video": "models/SoloShuttlePose/.runtime/a2-current-algorithm-20261018/clean-windows/A2-01.mp4",
+  "video_sha256": "21b287fa8c9ca9f48f5249aa4422f1c5688461ffb6e06d0baa0a1f414b2d8d53",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_clean_clip_video_frame",
+    "first_decoded_clip_pts_ms": 0.0,
+    "native_fps": 25,
+    "frame_count": 2421,
+    "stream_time_base": "1/12800",
+    "clip_pts_rule": "clip_pts_ms = timestamp_ms",
+    "parent_reserved_clip_origin_ms": 0,
+    "parent_reserved_clip_time_rule": "parent_reserved_clip_ms = parent_reserved_clip_origin_ms + timestamp_ms",
+    "parent_reserved_clip_range_ms": [
+      0,
+      96840
+    ]
+  },
+  "main_court": "固定转播主球场；近端黑/深绿色上衣，远端浅色上衣、紫色短裤。",
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01",
+    "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/overview/frame-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json",
+    "original_frame_retention": "selected JPEG frames decoded at native 1920x1080, actual PTS recorded; contact sheets crop only for inspection"
+  },
+  "incomplete_rallies": [],
+  "unresolved_regions": [
+    {
+      "range_ms": [
+        0,
+        3000
+      ],
+      "review_status": "needs_review",
+      "type": "opening_break",
+      "note": "片头处于上一分后的走位/捡球；未见正在进行的对打。不补造片头以前的发球或结束边界。"
+    }
+  ],
+  "type": "rally_segment_annotation",
+  "status": "human_reviewed_listed_items",
+  "generation": {
+    "method": "apply_saved_human_review",
+    "date": "2026-10-18",
+    "requires_human_review": false,
+    "original_proposal": "datasets/badminton-v1/annotations/proposed/rally/reserve-a2-01-20261018/full-v1.json",
+    "original_proposal_sha256": "fe5310125d93fac04281eb9d91941a7abaef9fa6be6baa5d7c6067e24864ff45",
+    "human_decisions": "datasets/badminton-v1/annotations/reviewed/rally/reserve-a2-01-20261018/review-progress-20261018.json",
+    "human_decisions_sha256": "9d0d6986136d530b58a18bad5af59463ae5605818ec46dc6963c4a61fda04805",
+    "used_segmentation_predictions_for_corrections": false,
+    "note": "初稿独立于分割输出；C2第2回合终点由用户选择已有算法终点，其余更正及确认见人审记录。"
+  },
+  "coverage": {
+    "human_scope": "A2第一段所列4个回合和4项候选事件已逐项核对；第1个正常短回合及4项非回合事件均获同意排除。仅确认所列条目，不另外宣告整片不存在漏标。",
+    "listed_items_review_complete": true,
+    "whole_clip_review_complete": false,
+    "negative_time_is_not_verified": true
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "start_ms": 15920.0,
+      "end_ms": 17600.0,
+      "review_status": "excluded",
+      "human_review": {
+        "rally_id": 1,
+        "start_ms": 15920.0,
+        "end_ms": 17600.0,
+        "start_range_ms": [
+          15920.0,
+          16080.0
+        ],
+        "end_range_ms": [
+          17320.0,
+          17600.0
+        ],
+        "user_message": "A2-1-1 你标注的对的，下一个",
+        "evaluation_disposition": "human_approved_optional_exclusion",
+        "exclusion_decision_user_message": "我更正一下，这个是个短回合对抗，15.5-17.5，同意可以排除"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-a2-01-20261018/full-v1.json",
+        "rally_id": 1
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 15920.0,
+          "review_window_ms": [
+            15920.0,
+            16080.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 17600.0,
+          "review_window_ms": [
+            17320.0,
+            17600.0
+          ]
+        }
+      },
+      "start_frame": 398,
+      "end_frame": 440,
+      "evaluation_disposition": "human_approved_optional_exclusion"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 28120.0,
+      "end_ms": 32400.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 2,
+        "start_ms": 28120.0,
+        "end_ms": 32400.0,
+        "start_range_ms": [
+          28120.0,
+          28280.0
+        ],
+        "end_range_ms": [
+          32160.0,
+          32400.0
+        ],
+        "user_message": "A2-1-2也对的"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-a2-01-20261018/full-v1.json",
+        "rally_id": 2
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 28120.0,
+          "review_window_ms": [
+            28120.0,
+            28280.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 32400.0,
+          "review_window_ms": [
+            32160.0,
+            32400.0
+          ]
+        }
+      },
+      "start_frame": 703,
+      "end_frame": 810
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 48640.0,
+      "end_ms": 53760.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 3,
+        "start_ms": 48640.0,
+        "end_ms": 53760.0,
+        "start_range_ms": [
+          48640.0,
+          48800.0
+        ],
+        "end_range_ms": [
+          53440.0,
+          53760.0
+        ],
+        "user_message": "合适，确实有反弹，但这不重要，算不算在回合里都行",
+        "end_event_acceptance": "本回合包含或不包含末球反弹均可接受；保留原结束代表值53.760秒。"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-a2-01-20261018/full-v1.json",
+        "rally_id": 3
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 48640.0,
+          "review_window_ms": [
+            48640.0,
+            48800.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 53760.0,
+          "review_window_ms": [
+            53440.0,
+            53760.0
+          ]
+        }
+      },
+      "start_frame": 1216,
+      "end_frame": 1344
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 71440.0,
+      "end_ms": 88200.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 4,
+        "start_ms": 71440.0,
+        "end_ms": 88200.0,
+        "start_range_ms": [
+          71440.0,
+          71600.0
+        ],
+        "end_range_ms": [
+          88040.0,
+          88200.0
+        ],
+        "user_message": "确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-a2-01-20261018/full-v1.json",
+        "rally_id": 4
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 71440.0,
+          "review_window_ms": [
+            71440.0,
+            71600.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 88200.0,
+          "review_window_ms": [
+            88040.0,
+            88200.0
+          ]
+        }
+      },
+      "start_frame": 1786,
+      "end_frame": 2205
+    }
+  ],
+  "excluded_events": [
+    {
+      "event_id": "A2-01-R01-optional-short",
+      "source_rally_id": 1,
+      "range_ms": [
+        15500,
+        17500
+      ],
+      "type": "optional_short_normal_rally",
+      "review_status": "human_confirmed",
+      "user_message": "我更正一下，这个是个短回合对抗，15.5-17.5，同意可以排除",
+      "original_confirmed_rally_range_ms": [
+        15920,
+        17600
+      ],
+      "note": "保留正常短回合标注；用户明确允许从本轮目标回合及评估中排除。所给15.5–17.5秒范围单独记录，原草稿不改。"
+    },
+    {
+      "event_id": "A2-01-E01",
+      "range_ms": [
+        7000,
+        8000
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "这是一段还球，可以排除"
+    },
+    {
+      "event_id": "A2-01-E02",
+      "range_ms": [
+        39400,
+        40280
+      ],
+      "type": "shuttle_handling",
+      "review_status": "human_confirmed",
+      "user_message": "同意",
+      "confirmation_context": "确认39.400–40.280秒近端黑衣捡球后颠球并接住、远端等待，属于整理球，可排除。"
+    },
+    {
+      "event_id": "A2-01-E03",
+      "range_ms": [
+        58000,
+        61800
+      ],
+      "type": "shuttle_handling_or_return",
+      "review_status": "human_confirmed",
+      "user_message": "同意",
+      "confirmation_context": "确认58–61.8秒近端整理、颠球，随后远端捡球，无持续对打，可排除。"
+    },
+    {
+      "event_id": "A2-01-E04",
+      "range_ms": [
+        93240,
+        96400
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "同意",
+      "confirmation_context": "确认93.240–96.400秒近端轻拨球过网、远端网前捡球，是还球，可排除。"
+    }
+  ],
+  "incomplete_events": []
+}

@@ -1,0 +1,993 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-17",
+  "scope": "C1四段调试；不是独立验收；未更换正式算法；未改标注及计分规则",
+  "audit": {
+    "path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/all-C1-short-events.json",
+    "sha256": "ca028bf2f25a78e8f6235f11c274f4458d6dd04cf679b410007b76fe0bf051ef",
+    "status": "passed_origins_and_independent_counts_not_identity_or_generalization_proof",
+    "counts": {
+      "paths": 1045,
+      "flight_points": 19339,
+      "person_contacts": 3694,
+      "person_samples": 3427,
+      "reextracted_feature_frames": 100
+    }
+  },
+  "summaries": [
+    {
+      "name": "native-arc-linear-short-filter",
+      "truth_count": 18,
+      "prediction_count": 21,
+      "missed_rally_count": 0,
+      "false_positive_count": 3,
+      "false_split_count": 0,
+      "false_merge_count": 0,
+      "boundary_acceptance": {
+        "truth_count": 18,
+        "matched_count": 18,
+        "start_acceptable_count": 10,
+        "start_acceptable_rate": 0.5555555555555556,
+        "end_acceptable_count": 9,
+        "end_acceptable_rate": 0.5,
+        "both_acceptable_count": 7,
+        "both_acceptable_rate": 0.3888888888888889
+      },
+      "retained_time": {
+        "target_ms": 157966.0,
+        "retained_target_ms": 143322.0,
+        "non_target_ms": 527721.25,
+        "retained_non_target_ms": 28652.0,
+        "ignored_ms": 0.0
+      },
+      "start_error_ms": {
+        "count": 8,
+        "mean": 667.375,
+        "p50": 450.5,
+        "p95": 1887.5499999999993,
+        "max": 2401.0
+      },
+      "end_error_ms": {
+        "count": 9,
+        "mean": 1508.5555555555557,
+        "p50": 801.0,
+        "p95": 3902.4,
+        "max": 4036.0
+      }
+    },
+    {
+      "name": "shifted-arc-linear-short-filter",
+      "truth_count": 18,
+      "prediction_count": 20,
+      "missed_rally_count": 1,
+      "false_positive_count": 3,
+      "false_split_count": 0,
+      "false_merge_count": 0,
+      "boundary_acceptance": {
+        "truth_count": 18,
+        "matched_count": 17,
+        "start_acceptable_count": 7,
+        "start_acceptable_rate": 0.3888888888888889,
+        "end_acceptable_count": 10,
+        "end_acceptable_rate": 0.5555555555555556,
+        "both_acceptable_count": 6,
+        "both_acceptable_rate": 0.3333333333333333
+      },
+      "retained_time": {
+        "target_ms": 157966.0,
+        "retained_target_ms": 144924.0,
+        "non_target_ms": 527721.25,
+        "retained_non_target_ms": 20345.0,
+        "ignored_ms": 0.0
+      },
+      "start_error_ms": {
+        "count": 10,
+        "mean": 370.4,
+        "p50": 350.0,
+        "p95": 798.9999999999997,
+        "max": 934.0
+      },
+      "end_error_ms": {
+        "count": 7,
+        "mean": 1010.1428571428571,
+        "p50": 533.0,
+        "p95": 3008.5999999999976,
+        "max": 3869.0
+      }
+    },
+    {
+      "name": "union-motion-continue-arc-linear-short-filter",
+      "truth_count": 18,
+      "prediction_count": 25,
+      "missed_rally_count": 1,
+      "false_positive_count": 8,
+      "false_split_count": 0,
+      "false_merge_count": 0,
+      "boundary_acceptance": {
+        "truth_count": 18,
+        "matched_count": 17,
+        "start_acceptable_count": 9,
+        "start_acceptable_rate": 0.5,
+        "end_acceptable_count": 8,
+        "end_acceptable_rate": 0.4444444444444444,
+        "both_acceptable_count": 6,
+        "both_acceptable_rate": 0.3333333333333333
+      },
+      "retained_time": {
+        "target_ms": 157966.0,
+        "retained_target_ms": 151327.0,
+        "non_target_ms": 527721.25,
+        "retained_non_target_ms": 62472.0,
+        "ignored_ms": 0.0
+      },
+      "start_error_ms": {
+        "count": 8,
+        "mean": 288.125,
+        "p50": 150.5,
+        "p95": 828.9999999999998,
+        "max": 934.0
+      },
+      "end_error_ms": {
+        "count": 9,
+        "mean": 1179.0,
+        "p50": 467.0,
+        "p95": 3329.1999999999994,
+        "max": 4036.0
+      }
+    },
+    {
+      "name": "native-arc-quadratic-short-filter",
+      "truth_count": 18,
+      "prediction_count": 21,
+      "missed_rally_count": 0,
+      "false_positive_count": 3,
+      "false_split_count": 0,
+      "false_merge_count": 0,
+      "boundary_acceptance": {
+        "truth_count": 18,
+        "matched_count": 18,
+        "start_acceptable_count": 10,
+        "start_acceptable_rate": 0.5555555555555556,
+        "end_acceptable_count": 9,
+        "end_acceptable_rate": 0.5,
+        "both_acceptable_count": 7,
+        "both_acceptable_rate": 0.3888888888888889
+      },
+      "retained_time": {
+        "target_ms": 157966.0,
+        "retained_target_ms": 143322.0,
+        "non_target_ms": 527721.25,
+        "retained_non_target_ms": 28652.0,
+        "ignored_ms": 0.0
+      },
+      "start_error_ms": {
+        "count": 8,
+        "mean": 667.375,
+        "p50": 450.5,
+        "p95": 1887.5499999999993,
+        "max": 2401.0
+      },
+      "end_error_ms": {
+        "count": 9,
+        "mean": 1508.5555555555557,
+        "p50": 801.0,
+        "p95": 3902.4,
+        "max": 4036.0
+      }
+    },
+    {
+      "name": "shifted-arc-quadratic-short-filter",
+      "truth_count": 18,
+      "prediction_count": 21,
+      "missed_rally_count": 0,
+      "false_positive_count": 3,
+      "false_split_count": 0,
+      "false_merge_count": 0,
+      "boundary_acceptance": {
+        "truth_count": 18,
+        "matched_count": 18,
+        "start_acceptable_count": 8,
+        "start_acceptable_rate": 0.4444444444444444,
+        "end_acceptable_count": 10,
+        "end_acceptable_rate": 0.5555555555555556,
+        "both_acceptable_count": 6,
+        "both_acceptable_rate": 0.3333333333333333
+      },
+      "retained_time": {
+        "target_ms": 157966.0,
+        "retained_target_ms": 146492.0,
+        "non_target_ms": 527721.25,
+        "retained_non_target_ms": 20411.0,
+        "ignored_ms": 0.0
+      },
+      "start_error_ms": {
+        "count": 10,
+        "mean": 370.4,
+        "p50": 350.0,
+        "p95": 798.9999999999997,
+        "max": 934.0
+      },
+      "end_error_ms": {
+        "count": 8,
+        "mean": 971.375,
+        "p50": 616.5,
+        "p95": 2865.1999999999985,
+        "max": 3869.0
+      }
+    },
+    {
+      "name": "union-motion-continue-arc-quadratic-short-filter",
+      "truth_count": 18,
+      "prediction_count": 26,
+      "missed_rally_count": 0,
+      "false_positive_count": 8,
+      "false_split_count": 0,
+      "false_merge_count": 0,
+      "boundary_acceptance": {
+        "truth_count": 18,
+        "matched_count": 18,
+        "start_acceptable_count": 10,
+        "start_acceptable_rate": 0.5555555555555556,
+        "end_acceptable_count": 8,
+        "end_acceptable_rate": 0.4444444444444444,
+        "both_acceptable_count": 6,
+        "both_acceptable_rate": 0.3333333333333333
+      },
+      "retained_time": {
+        "target_ms": 157966.0,
+        "retained_target_ms": 152995.0,
+        "non_target_ms": 527721.25,
+        "retained_non_target_ms": 62538.0,
+        "ignored_ms": 0.0
+      },
+      "start_error_ms": {
+        "count": 8,
+        "mean": 288.125,
+        "p50": 150.5,
+        "p95": 828.9999999999998,
+        "max": 934.0
+      },
+      "end_error_ms": {
+        "count": 10,
+        "mean": 1121.1,
+        "p50": 533.5,
+        "p95": 3240.849999999998,
+        "max": 4036.0
+      }
+    }
+  ],
+  "results": [
+    {
+      "sample": {
+        "id": "C1-01",
+        "source_id": "C1",
+        "split_group_id": "C1-same-recording",
+        "split": "diagnostic",
+        "video": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4",
+        "video_sha256": "2aec0dc53ecb1e436b916c5d615252cdfd64a9ed03741f02073eea175662d481",
+        "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-01-20261015/full-v2.json",
+        "annotation_sha256": "cbd71b5cad1bbd4a892041cd9f19f893542c147fb98d16967815e028cdda8c9e",
+        "validation": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/validation.json",
+        "validation_sha256": "3e3a765e2ddd7b5a59b733c63d117abe0d58baaa19ed55dc5d659b9b736ddc48",
+        "duration_ms": 165101.3125,
+        "native_frame_count": 4950,
+        "source_origin_ms": 120073.0,
+        "run_subdirectory": "01-01-clip",
+        "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+        "truth_count": 6,
+        "excluded_count": 0
+      },
+      "person_source": {
+        "path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/players-appearance-floor.jsonl",
+        "sha256": "2a99e3f30c24c6a1f39498da42a9abc0bc577fa4049296cb94730c4a957353f2",
+        "source_audit": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/source-audit.json"
+      },
+      "report_path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/short-events/C1-01/comparison.json",
+      "report_sha256": "b985b264079a7cdb2ec720b1d15a155e725a2c076f263ebb23e467509fc628d4",
+      "variants": [
+        {
+          "name": "native-arc-linear-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 7,
+                "start_ms": 160065.0,
+                "end_ms": 163500.0,
+                "emitted_at_ms": 165068.0
+              },
+              "short_ms": 3435.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 18,
+              "contact_span_ms": 1868.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                103,
+                144,
+                174
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shifted-arc-linear-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 7,
+                "start_ms": 160098.0,
+                "end_ms": 162900.0,
+                "emitted_at_ms": 165068.0
+              },
+              "short_ms": 2802.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 18,
+              "contact_span_ms": 1868.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                103,
+                144,
+                174
+              ]
+            }
+          ]
+        },
+        {
+          "name": "union-motion-continue-arc-linear-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 7,
+                "start_ms": 160065.0,
+                "end_ms": 163534.0,
+                "emitted_at_ms": 165068.0
+              },
+              "short_ms": 3469.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 18,
+              "contact_span_ms": 1868.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                103,
+                144,
+                174
+              ]
+            }
+          ]
+        },
+        {
+          "name": "native-arc-quadratic-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 7,
+                "start_ms": 160065.0,
+                "end_ms": 163500.0,
+                "emitted_at_ms": 165068.0
+              },
+              "short_ms": 3435.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 18,
+              "contact_span_ms": 1868.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                95,
+                137,
+                169
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shifted-arc-quadratic-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 7,
+                "start_ms": 160098.0,
+                "end_ms": 162900.0,
+                "emitted_at_ms": 165068.0
+              },
+              "short_ms": 2802.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 18,
+              "contact_span_ms": 1868.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                95,
+                137,
+                169
+              ]
+            }
+          ]
+        },
+        {
+          "name": "union-motion-continue-arc-quadratic-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 7,
+                "start_ms": 160065.0,
+                "end_ms": 163534.0,
+                "emitted_at_ms": 165068.0
+              },
+              "short_ms": 3469.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 18,
+              "contact_span_ms": 1868.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                95,
+                137,
+                169
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sample": {
+        "id": "C1-02",
+        "source_id": "C1",
+        "split_group_id": "C1-same-recording",
+        "split": "diagnostic",
+        "video": "datasets/badminton-v1/local/rally/m1-short-c1-02-20261015/clip.mp4",
+        "video_sha256": "6f5856f7bcb304019d76eadc9bbc352055ada8e6a7f8eb71783ac2ff324fb4cb",
+        "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-02-20261015/full-v1.json",
+        "annotation_sha256": "bbcfd22e0217b903e1b4a0eda6795470ef34bb3d62ac3c9466f67fc2cacfb53b",
+        "validation": "datasets/badminton-v1/local/rally/m1-short-c1-02-20261015/validation.json",
+        "validation_sha256": "6fd0d21e7a2c54193173cebecefe39b9cb19e5627456b1e195352e9b492a5eeb",
+        "duration_ms": 180110.3125,
+        "native_frame_count": 5400,
+        "source_origin_ms": 1200550.0,
+        "run_subdirectory": "01-02-clip",
+        "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+        "truth_count": 3,
+        "excluded_count": 0
+      },
+      "person_source": {
+        "path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/short-events/C1-02/players.jsonl",
+        "sha256": "422d363219a5593e8832d1bcf3aead89f846e2e433fe2bbeba79189e2dbd3966",
+        "source_path": "models/yolo11n/.runtime/c1-region-support-20261017/C1-02/people.jsonl",
+        "source_sha256": "1c1927eca707110d82a424a2e87a2a214b6abe84839293c7b0397b71ea4d9be9",
+        "source_result_sha256": "8e2cd7b650416eaef90ec843013c0c2219bf47dff5e50199f67e2f5681ca6758",
+        "minimum_foot_y": 411.4463806152344,
+        "counts": {
+          "0": 59,
+          "1": 325,
+          "2": 516
+        }
+      },
+      "report_path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/short-events/C1-02/comparison.json",
+      "report_sha256": "cc7237f5effcb48a94da0eab5f91801609ea9476e392d0b07b3c712324a5c8e5",
+      "variants": [
+        {
+          "name": "native-arc-linear-short-filter",
+          "decisions": []
+        },
+        {
+          "name": "shifted-arc-linear-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 4,
+                "start_ms": 157763.0,
+                "end_ms": 159998.0,
+                "emitted_at_ms": 180077.0
+              },
+              "short_ms": 2235.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 8,
+              "contact_span_ms": 400.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                92
+              ]
+            }
+          ]
+        },
+        {
+          "name": "union-motion-continue-arc-linear-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 5,
+                "start_ms": 157763.0,
+                "end_ms": 159998.0,
+                "emitted_at_ms": 180077.0
+              },
+              "short_ms": 2235.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 8,
+              "contact_span_ms": 400.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                92
+              ]
+            }
+          ]
+        },
+        {
+          "name": "native-arc-quadratic-short-filter",
+          "decisions": []
+        },
+        {
+          "name": "shifted-arc-quadratic-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 4,
+                "start_ms": 157763.0,
+                "end_ms": 159998.0,
+                "emitted_at_ms": 180077.0
+              },
+              "short_ms": 2235.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 8,
+              "contact_span_ms": 400.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                87
+              ]
+            }
+          ]
+        },
+        {
+          "name": "union-motion-continue-arc-quadratic-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 5,
+                "start_ms": 157763.0,
+                "end_ms": 159998.0,
+                "emitted_at_ms": 180077.0
+              },
+              "short_ms": 2235.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 8,
+              "contact_span_ms": 400.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                87
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sample": {
+        "id": "C1-03",
+        "source_id": "C1",
+        "split_group_id": "C1-same-recording",
+        "split": "diagnostic",
+        "video": "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/clip.mp4",
+        "video_sha256": "697f072c28a6a6ac1a9f704149c8bacb87b217da9defc2f721145085cd9a6abd",
+        "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-03-20261015/full-v2.json",
+        "annotation_sha256": "da95bc49f48f7933f73f81cfa59ff6bd9f43fc3e947f13f79c04c3085d37275b",
+        "validation": "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/validation.json",
+        "validation_sha256": "00eb5104317b6bd13cacaa0e1ac0ff66ce35d7993a6d178c35297a989940eadc",
+        "duration_ms": 165369.3125,
+        "native_frame_count": 4958,
+        "source_origin_ms": 2400217.0,
+        "run_subdirectory": "01-03-clip",
+        "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+        "truth_count": 5,
+        "excluded_count": 0
+      },
+      "person_source": {
+        "path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/short-events/C1-03/players.jsonl",
+        "sha256": "d193e8dcd55c3c1fdeac913bcc903e980fc5e406dc6c98a94d53760648e9c6c9",
+        "source_path": "models/yolo11n/.runtime/c1-region-support-20261017/C1-03/people.jsonl",
+        "source_sha256": "35635c8b63be0c3952abf948d3b16d027d2c6766ea7e063c4b89c608c150c0f2",
+        "source_result_sha256": "59bcb2ade0059167d5d074b8130ed9d9b33c847b543e70ba3a85cbcd3cca6f4e",
+        "minimum_foot_y": 398.27801513671875,
+        "counts": {
+          "0": 0,
+          "1": 82,
+          "2": 745
+        }
+      },
+      "report_path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/short-events/C1-03/comparison.json",
+      "report_sha256": "0829b026617d60a8b89cc2eba23394fb8f58f8ef442a39b2542030933a869e8c",
+      "variants": [
+        {
+          "name": "native-arc-linear-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 1,
+                "start_ms": 800.0,
+                "end_ms": 4336.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 3536.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 16,
+              "contact_span_ms": 2368.0,
+              "player_ids": [
+                0
+              ],
+              "delete": true,
+              "flight_ids": [
+                1,
+                82,
+                125
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 5,
+                "start_ms": 101862.0,
+                "end_ms": 105631.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 3769.0,
+              "selected_both_people_fraction": 0.9473684210526315,
+              "contact_observation_count": 16,
+              "contact_span_ms": 501.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                21
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shifted-arc-linear-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 1,
+                "start_ms": 734.0,
+                "end_ms": 2601.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 1867.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 13,
+              "contact_span_ms": 1434.0,
+              "player_ids": [
+                0
+              ],
+              "delete": true,
+              "flight_ids": [
+                1,
+                82
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 2,
+                "start_ms": 43160.0,
+                "end_ms": 44794.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 1634.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 9,
+              "contact_span_ms": 1434.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                47,
+                49
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 5,
+                "start_ms": 101895.0,
+                "end_ms": 105064.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 3169.0,
+              "selected_both_people_fraction": 0.9375,
+              "contact_observation_count": 16,
+              "contact_span_ms": 501.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                21
+              ]
+            }
+          ]
+        },
+        {
+          "name": "union-motion-continue-arc-linear-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 1,
+                "start_ms": 734.0,
+                "end_ms": 4436.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 3702.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 16,
+              "contact_span_ms": 2368.0,
+              "player_ids": [
+                0
+              ],
+              "delete": true,
+              "flight_ids": [
+                1,
+                82,
+                125
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 2,
+                "start_ms": 43160.0,
+                "end_ms": 44894.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 1734.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 9,
+              "contact_span_ms": 1434.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                47,
+                49
+              ]
+            }
+          ]
+        },
+        {
+          "name": "native-arc-quadratic-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 1,
+                "start_ms": 800.0,
+                "end_ms": 4336.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 3536.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 19,
+              "contact_span_ms": 2468.0,
+              "player_ids": [
+                0
+              ],
+              "delete": true,
+              "flight_ids": [
+                2,
+                83,
+                126
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 5,
+                "start_ms": 101862.0,
+                "end_ms": 105631.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 3769.0,
+              "selected_both_people_fraction": 0.9473684210526315,
+              "contact_observation_count": 16,
+              "contact_span_ms": 501.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "shifted-arc-quadratic-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 1,
+                "start_ms": 734.0,
+                "end_ms": 2601.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 1867.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 16,
+              "contact_span_ms": 1534.0,
+              "player_ids": [
+                0
+              ],
+              "delete": true,
+              "flight_ids": [
+                2,
+                83
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 5,
+                "start_ms": 101895.0,
+                "end_ms": 105064.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 3169.0,
+              "selected_both_people_fraction": 0.9375,
+              "contact_observation_count": 16,
+              "contact_span_ms": 501.0,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                10
+              ]
+            }
+          ]
+        },
+        {
+          "name": "union-motion-continue-arc-quadratic-short-filter",
+          "decisions": [
+            {
+              "prediction": {
+                "rally_id": 1,
+                "start_ms": 734.0,
+                "end_ms": 4436.0,
+                "emitted_at_ms": 165336.0
+              },
+              "short_ms": 3702.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 19,
+              "contact_span_ms": 2468.0,
+              "player_ids": [
+                0
+              ],
+              "delete": true,
+              "flight_ids": [
+                2,
+                83,
+                126
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "sample": {
+        "id": "C1-04",
+        "source_id": "C1",
+        "split_group_id": "C1-same-recording",
+        "split": "diagnostic",
+        "video": "datasets/badminton-v1/local/rally/m1-short-c1-04-20261015/clip.mp4",
+        "video_sha256": "ed67141233e7be9122c511c12db8315cd00047df41576819ff4b7d8f25e5b44e",
+        "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-04-20261015/full-v1.json",
+        "annotation_sha256": "a63c56098b66887fd17177cb8a4aa56a73104dd24c239f902b61367fecc00e5b",
+        "validation": "datasets/badminton-v1/local/rally/m1-short-c1-04-20261015/validation.json",
+        "validation_sha256": "92d711fd95b1c0891e24e2e76f677c1af56a6fd69919ff07fe2a025de3711946",
+        "duration_ms": 175106.3125,
+        "native_frame_count": 5250,
+        "source_origin_ms": 3600152.0,
+        "run_subdirectory": "01-04-clip",
+        "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+        "truth_count": 4,
+        "excluded_count": 0
+      },
+      "person_source": {
+        "path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/short-events/C1-04/players.jsonl",
+        "sha256": "eb27acc60e15c00585ee0712bcdf2f5916286d3d636ebf9453041d6602b631d7",
+        "source_path": "models/yolo11n/.runtime/c1-region-support-20261017/C1-04/people.jsonl",
+        "source_sha256": "a3c8c9656e2ec15e7554298df9d3fc72f1cc5c936174c880e88f14a2eba4517d",
+        "source_result_sha256": "02a040cb3ebb5654dde441fcae31b0fe115fcefa0e4510b0fd605fbd86a5c960",
+        "minimum_foot_y": 388.0991516113281,
+        "counts": {
+          "0": 9,
+          "1": 148,
+          "2": 718
+        }
+      },
+      "report_path": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/short-events/C1-04/comparison.json",
+      "report_sha256": "3c593f0ce1c56ad7fa31cea56b2df0bd57a119c3892200a740b68319b077ecbd",
+      "variants": [
+        {
+          "name": "native-arc-linear-short-filter",
+          "decisions": []
+        },
+        {
+          "name": "shifted-arc-linear-short-filter",
+          "decisions": []
+        },
+        {
+          "name": "union-motion-continue-arc-linear-short-filter",
+          "decisions": []
+        },
+        {
+          "name": "native-arc-quadratic-short-filter",
+          "decisions": []
+        },
+        {
+          "name": "shifted-arc-quadratic-short-filter",
+          "decisions": []
+        },
+        {
+          "name": "union-motion-continue-arc-quadratic-short-filter",
+          "decisions": []
+        }
+      ]
+    }
+  ],
+  "counterexamples": [
+    {
+      "sample": "C1-03",
+      "variant": "shifted-arc-linear-short-filter",
+      "retained_target_ms": 25084.0,
+      "retained_non_target_ms": 4469.0,
+      "false_positive_count": 0,
+      "missed_rally_count": 1,
+      "deleted_overlapping_normal_targets": [
+        {
+          "rally_id": 2,
+          "start_ms": 43160.0,
+          "end_ms": 44794.0,
+          "emitted_at_ms": 165336.0
+        }
+      ]
+    },
+    {
+      "sample": "C1-03",
+      "variant": "union-motion-continue-arc-linear-short-filter",
+      "retained_target_ms": 25084.0,
+      "retained_non_target_ms": 21213.0,
+      "false_positive_count": 2,
+      "missed_rally_count": 1,
+      "deleted_overlapping_normal_targets": [
+        {
+          "rally_id": 2,
+          "start_ms": 43160.0,
+          "end_ms": 44894.0,
+          "emitted_at_ms": 165336.0
+        }
+      ]
+    }
+  ]
+}

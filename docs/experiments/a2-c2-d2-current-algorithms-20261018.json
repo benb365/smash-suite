@@ -1,0 +1,927 @@
+{
+  "date": "2026-10-18",
+  "status": "unlabelled_reserve_video_checks_and_approved_C_person_selector_change",
+  "source_candidates": "docs/experiments/four-view-video-candidates-20261015.json",
+  "source_usage_limits": "A2/C2 had earlier algorithm diagnostics; C2 was modified during this check. These are not independent acceptance results.",
+  "annotation_status": "unlabelled_no_accuracy_metrics",
+  "A2": {
+    "status": "frozen_A1_rules_on_two_clean_continuous_A2_windows_no_human_rally_labels",
+    "config": {
+      "confidence": 0.6,
+      "motion_window_ms": 200,
+      "min_motion_window_ms": 80,
+      "min_speed_px_s": 100,
+      "max_speed_px_s": 4000,
+      "quiet_ms": 1600,
+      "min_flight_span_ms": 2200,
+      "field": [
+        0,
+        0,
+        1,
+        1
+      ],
+      "direction_window_ms": 160,
+      "direction_min_span_ms": 40,
+      "direction_max_residual_px": 80,
+      "top_fraction": 0.15,
+      "exit_max_y_fraction": 0.4,
+      "exit_horizon_ms": 250,
+      "high_clear_gap_ms": 2800,
+      "reentry_x_fraction": 0.2,
+      "turn_jump_px_s": 1100,
+      "track_gap_ms": 120,
+      "return_support_ms": 320,
+      "return_travel_px": 120,
+      "short_event_ms": 5000,
+      "filter_single_flight": true,
+      "filter_uncertain_short": true
+    },
+    "source_video": "/Users/bytedance/workspace/test/smash-suite/datasets/badminton-v1/local/rally/official-india-2026-court3/clip.mp4",
+    "source_video_sha256": "4d4868f17475f573b2805bd7ea2eae8549a190a811da702c54b4dc058292ea27",
+    "source_window_original_s": [
+      600,
+      780
+    ],
+    "removed_clip_range_ms": [
+      96840,
+      98880
+    ],
+    "media_note": "Two H264 browser views preserve exact source-frame count and 40ms spacing. They are display derivatives; algorithm input is the exact original source cache, not new encoded pixels.",
+    "total_valid_duration_ms": 177960,
+    "prediction_count": 3,
+    "retained_ms": 39080.0,
+    "annotation_note": "No human rally labels or exclusions exist for these windows; retained time is output duration, not accuracy.",
+    "windows": [
+      {
+        "id": "A2-01",
+        "video": "/Users/bytedance/workspace/test/smash-suite/models/SoloShuttlePose/.runtime/a2-current-algorithm-20261018/clean-windows/A2-01.mp4",
+        "duration_ms": 96840,
+        "native_frame_count": 2421,
+        "media_offset_ms": 0,
+        "source_original_window_ms": [
+          600000,
+          696840
+        ],
+        "predictions": [
+          {
+            "rally_id": 3,
+            "start_ms": 48800.0,
+            "end_ms": 53920.0,
+            "emitted_at_ms": 55640.0
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 71040.0,
+            "end_ms": 89760.0,
+            "emitted_at_ms": 91400.0
+          }
+        ],
+        "retained_ms": 23840.0
+      },
+      {
+        "id": "A2-02",
+        "video": "/Users/bytedance/workspace/test/smash-suite/models/SoloShuttlePose/.runtime/a2-current-algorithm-20261018/clean-windows/A2-02.mp4",
+        "duration_ms": 81120,
+        "native_frame_count": 2028,
+        "media_offset_ms": 0,
+        "source_original_window_ms": [
+          698880,
+          780000
+        ],
+        "predictions": [
+          {
+            "rally_id": 3,
+            "start_ms": 48560.0,
+            "end_ms": 63800.0,
+            "emitted_at_ms": 65480.0
+          }
+        ],
+        "retained_ms": 15240.0
+      }
+    ]
+  },
+  "C2": {
+    "status": "completed",
+    "sample": {
+      "id": "C2",
+      "source_id": "C2",
+      "video": "datasets/badminton-v1/local/rally/personal-qianfoshan-singles/clip.mp4",
+      "video_sha256": "7215d4acf604834d44a5073f8c9a504642322c7528d8077688db932ab8292d74",
+      "duration_ms": 180000,
+      "native_frame_count": 5400,
+      "media_time_offset_ms": 66.015625,
+      "source_window_s": [
+        120.0,
+        300.0
+      ]
+    },
+    "predictions": [
+      {
+        "rally_id": 1,
+        "start_ms": 7700.0,
+        "end_ms": 11200.0,
+        "emitted_at_ms": 179966.66666666666
+      },
+      {
+        "rally_id": 2,
+        "start_ms": 14133.333333333334,
+        "end_ms": 20033.333333333332,
+        "emitted_at_ms": 179966.66666666666
+      },
+      {
+        "rally_id": 3,
+        "start_ms": 24133.333333333332,
+        "end_ms": 88033.33333333333,
+        "emitted_at_ms": 179966.66666666666
+      },
+      {
+        "rally_id": 4,
+        "start_ms": 92000.0,
+        "end_ms": 103000.0,
+        "emitted_at_ms": 179966.66666666666
+      },
+      {
+        "rally_id": 5,
+        "start_ms": 120933.33333333333,
+        "end_ms": 133600.0,
+        "emitted_at_ms": 179966.66666666666
+      },
+      {
+        "rally_id": 6,
+        "start_ms": 170266.66666666666,
+        "end_ms": 178466.66666666666,
+        "emitted_at_ms": 179966.66666666666
+      }
+    ],
+    "stages": [
+      {
+        "name": "grouped",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 7700.0,
+            "end_ms": 11200.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14133.333333333334,
+            "end_ms": 20033.333333333332,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24133.333333333332,
+            "end_ms": 88033.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 91466.66666666667,
+            "end_ms": 102666.66666666667,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 105533.33333333333,
+            "end_ms": 108433.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 113200.0,
+            "end_ms": 115700.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 120933.33333333333,
+            "end_ms": 133600.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 149233.33333333334,
+            "end_ms": 153533.33333333334,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 157433.33333333334,
+            "end_ms": 160000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 163666.66666666666,
+            "end_ms": 165300.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 11,
+            "start_ms": 170266.66666666666,
+            "end_ms": 178466.66666666666,
+            "emitted_at_ms": 179966.66666666666
+          }
+        ],
+        "prediction_count": 11,
+        "selected_duration_ms": 119266.66666666667
+      },
+      {
+        "name": "single_arc_filter",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 7700.0,
+            "end_ms": 11200.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14133.333333333334,
+            "end_ms": 20033.333333333332,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24133.333333333332,
+            "end_ms": 88033.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 91466.66666666667,
+            "end_ms": 102666.66666666667,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 113200.0,
+            "end_ms": 115700.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 120933.33333333333,
+            "end_ms": 133600.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 149233.33333333334,
+            "end_ms": 153533.33333333334,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 157433.33333333334,
+            "end_ms": 160000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 163666.66666666666,
+            "end_ms": 165300.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 170266.66666666666,
+            "end_ms": 178466.66666666666,
+            "emitted_at_ms": 179966.66666666666
+          }
+        ],
+        "prediction_count": 10,
+        "selected_duration_ms": 116366.66666666667
+      },
+      {
+        "name": "person_short_filter",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 7700.0,
+            "end_ms": 11200.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14133.333333333334,
+            "end_ms": 20033.333333333332,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24133.333333333332,
+            "end_ms": 88033.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 91466.66666666667,
+            "end_ms": 102666.66666666667,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 113200.0,
+            "end_ms": 115700.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 120933.33333333333,
+            "end_ms": 133600.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 157433.33333333334,
+            "end_ms": 160000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 170266.66666666666,
+            "end_ms": 178466.66666666666,
+            "emitted_at_ms": 179966.66666666666
+          }
+        ],
+        "prediction_count": 8,
+        "selected_duration_ms": 110433.33333333333
+      },
+      {
+        "name": "observed_end_continuation",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 7700.0,
+            "end_ms": 11200.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14133.333333333334,
+            "end_ms": 20033.333333333332,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24133.333333333332,
+            "end_ms": 88033.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 91466.66666666667,
+            "end_ms": 103000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 113200.0,
+            "end_ms": 115700.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 120933.33333333333,
+            "end_ms": 133600.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 157433.33333333334,
+            "end_ms": 160000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 170266.66666666666,
+            "end_ms": 178466.66666666666,
+            "emitted_at_ms": 179966.66666666666
+          }
+        ],
+        "prediction_count": 8,
+        "selected_duration_ms": 110766.66666666666
+      },
+      {
+        "name": "remove_outputs_at_most_3s",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 7700.0,
+            "end_ms": 11200.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14133.333333333334,
+            "end_ms": 20033.333333333332,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24133.333333333332,
+            "end_ms": 88033.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 91466.66666666667,
+            "end_ms": 103000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 120933.33333333333,
+            "end_ms": 133600.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 170266.66666666666,
+            "end_ms": 178466.66666666666,
+            "emitted_at_ms": 179966.66666666666
+          }
+        ],
+        "prediction_count": 6,
+        "selected_duration_ms": 105700.0
+      },
+      {
+        "name": "connected_return_filter",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 7700.0,
+            "end_ms": 11200.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14133.333333333334,
+            "end_ms": 20033.333333333332,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24133.333333333332,
+            "end_ms": 88033.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 91466.66666666667,
+            "end_ms": 103000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 120933.33333333333,
+            "end_ms": 133600.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 170266.66666666666,
+            "end_ms": 178466.66666666666,
+            "emitted_at_ms": 179966.66666666666
+          }
+        ],
+        "prediction_count": 6,
+        "selected_duration_ms": 105700.0
+      },
+      {
+        "name": "supported_start_adjustment",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 7700.0,
+            "end_ms": 11200.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14133.333333333334,
+            "end_ms": 20033.333333333332,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24133.333333333332,
+            "end_ms": 88033.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 92000.0,
+            "end_ms": 103000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 120933.33333333333,
+            "end_ms": 133600.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 170266.66666666666,
+            "end_ms": 178466.66666666666,
+            "emitted_at_ms": 179966.66666666666
+          }
+        ],
+        "prediction_count": 6,
+        "selected_duration_ms": 105166.66666666667
+      }
+    ],
+    "initialization": {
+      "selected": [
+        {
+          "x1": 934.3758544921875,
+          "y1": 642.274169921875,
+          "x2": 995.3319091796875,
+          "y2": 876.95068359375,
+          "confidence": 0.5858350992202759
+        },
+        {
+          "x1": 789.385498046875,
+          "y1": 398.9942626953125,
+          "x2": 1000.80029296875,
+          "y2": 965.630859375,
+          "confidence": 0.8872522711753845
+        }
+      ],
+      "selected_indices": [
+        7,
+        0
+      ],
+      "old_selected": [
+        {
+          "x1": 789.385498046875,
+          "y1": 398.9942626953125,
+          "x2": 1000.80029296875,
+          "y2": 965.630859375,
+          "confidence": 0.8872522711753845
+        }
+      ],
+      "old_selected_indices": [
+        0
+      ],
+      "all_boxes": [
+        {
+          "x1": 789.385498046875,
+          "y1": 398.9942626953125,
+          "x2": 1000.80029296875,
+          "y2": 965.630859375,
+          "confidence": 0.8872522711753845
+        },
+        {
+          "x1": 393.96368408203125,
+          "y1": 663.0819091796875,
+          "x2": 483.962890625,
+          "y2": 851.5177001953125,
+          "confidence": 0.8654528856277466
+        },
+        {
+          "x1": 504.4945983886719,
+          "y1": 685.8238525390625,
+          "x2": 559.854248046875,
+          "y2": 844.1007080078125,
+          "confidence": 0.8044679164886475
+        },
+        {
+          "x1": 0.29331207275390625,
+          "y1": 672.9732055664062,
+          "x2": 37.35700225830078,
+          "y2": 836.0285034179688,
+          "confidence": 0.7649446725845337
+        },
+        {
+          "x1": 1201.587890625,
+          "y1": 750.4405517578125,
+          "x2": 1233.68505859375,
+          "y2": 844.5601806640625,
+          "confidence": 0.6090391278266907
+        },
+        {
+          "x1": 732.18017578125,
+          "y1": 732.3277587890625,
+          "x2": 777.2877197265625,
+          "y2": 840.6954345703125,
+          "confidence": 0.6051297187805176
+        },
+        {
+          "x1": 1324.991943359375,
+          "y1": 752.2247924804688,
+          "x2": 1370.50390625,
+          "y2": 845.9990844726562,
+          "confidence": 0.6024324297904968
+        },
+        {
+          "x1": 934.3758544921875,
+          "y1": 642.274169921875,
+          "x2": 995.3319091796875,
+          "y2": 876.95068359375,
+          "confidence": 0.5858350992202759
+        },
+        {
+          "x1": 199.59864807128906,
+          "y1": 728.7269287109375,
+          "x2": 239.79234313964844,
+          "y2": 822.7379150390625,
+          "confidence": 0.5341951251029968
+        },
+        {
+          "x1": 1708.0634765625,
+          "y1": 686.7357177734375,
+          "x2": 1766.17626953125,
+          "y2": 891.5074462890625,
+          "confidence": 0.43882158398628235
+        },
+        {
+          "x1": 105.21393585205078,
+          "y1": 694.3477783203125,
+          "x2": 163.16033935546875,
+          "y2": 824.9622802734375,
+          "confidence": 0.3181432783603668
+        },
+        {
+          "x1": 124.01947021484375,
+          "y1": 697.1226806640625,
+          "x2": 164.39901733398438,
+          "y2": 818.2623291015625,
+          "confidence": 0.26995062828063965
+        },
+        {
+          "x1": 1708.27880859375,
+          "y1": 687.7735595703125,
+          "x2": 1798.98095703125,
+          "y2": 886.705810546875,
+          "confidence": 0.2426682859659195
+        }
+      ],
+      "selection_changed": true,
+      "minimum_foot_y": 682.3125610351562,
+      "eligible_rule": "box height >= 60; foot inside unchanged C1 COURT polygon",
+      "ranking_rule": "two tallest eligible boxes, then ascending foot y for identity order",
+      "no_fixed_foot_y_split": true,
+      "no_fallback": true,
+      "no_manual_indices": true,
+      "selected_counts": {
+        "0": 5,
+        "1": 207,
+        "2": 688
+      }
+    },
+    "selected_duration_ms": 105166.66666666667,
+    "prediction_count": 6,
+    "media_time_offset_ms": 66.015625,
+    "human_rally_annotation": null,
+    "accuracy_metrics": null
+  },
+  "D2": {
+    "status": "completed_frozen_D1_algorithm_on_unlabelled_D2",
+    "sample": {
+      "id": "D2-01",
+      "source_id": "D2",
+      "split": "diagnostic",
+      "video": "datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+      "video_sha256": "19d57eefda7817a5940c674468b16df9de9236eb91b522c1d45404d1794a67e8",
+      "duration_ms": 250900.3125,
+      "native_frame_count": 7527,
+      "source_origin_ms": 0,
+      "media_offset_ms": 0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 29.999962641,
+      "annotation_status": "unlabelled",
+      "status": "verified_native_prefix",
+      "source_video": "datasets/badminton-v1/local/source-videos/D2/source.mp4",
+      "source_sha256": "dad16660ba60635c2bfade7ddd3c839ddcef5d55112d4368f0b9d7d4f7e58332",
+      "full_video_decode_passed": true,
+      "decoded_video_frame_count": 7527,
+      "video_packet_count": 7527,
+      "source_prefix_packet_match_count": 7527,
+      "compressed_video_packets_identical_to_source_prefix": true,
+      "native_pts_comparison": {
+        "reference": "datasets/badminton-v1/local/source-videos/D2/native-timing.npz:pts_ms",
+        "compared_frame_count": 7527,
+        "clip_first_pts_ms": 0,
+        "clip_last_pts_ms": 250867,
+        "source_origin_ms": 0,
+        "max_absolute_pts_error_ms": 0,
+        "tolerance_ms": 0.001,
+        "passed": true
+      },
+      "duration_basis": {
+        "first_clip_pts_ms": 0,
+        "last_clip_pts_ms": 250867,
+        "last_packet_duration_ms": 33.3125,
+        "formula": "last_clip_pts_ms - first_clip_pts_ms + last_packet_duration_ms"
+      },
+      "media": {
+        "codec": "h264",
+        "time_base": "1/16000",
+        "video_streams": 1,
+        "audio_streams": 0,
+        "container_duration_ms": 250900.313
+      },
+      "excluded_source_tail_ms": [
+        250900,
+        255700
+      ],
+      "limits": "Media decoding, native PTS alignment, and packet identity were checked; this does not constitute human rally labels or human continuity review.",
+      "validation": "datasets/badminton-v1/local/rally/d2-check-20261018/validation.json",
+      "validation_sha256": "ef3d24702ef9ca629fded6174d8ea6c6045754cfc67e20110488797338a2c6e3",
+      "source_window_s": [
+        0,
+        250.9003125
+      ],
+      "media_time_offset_ms": 0
+    },
+    "algorithm": "D1 event_and_group_checks",
+    "config": {
+      "arm_speed": 0.7,
+      "opponent_arm_speed": 0.35,
+      "opponent_body_speed": 0.6,
+      "opponent_window_ms": 1000,
+      "action_gap_ms": 3600,
+      "minimum_actions": 2,
+      "supported_boundary_search_ms": 1200,
+      "before_ms": 1500,
+      "after_ms": 800,
+      "join_gap_ms": 1000
+    },
+    "options": {
+      "ball_only_high": true,
+      "min_ball_events": 2,
+      "min_high_events": 1
+    },
+    "predictions": [
+      {
+        "rally_id": 1,
+        "start_ms": 0,
+        "end_ms": 6800.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 2,
+        "start_ms": 18900.0,
+        "end_ms": 27000.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 3,
+        "start_ms": 29700.0,
+        "end_ms": 42000.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 4,
+        "start_ms": 48100.0,
+        "end_ms": 55800.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 5,
+        "start_ms": 63500.0,
+        "end_ms": 68600.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 6,
+        "start_ms": 77500.0,
+        "end_ms": 95000.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 7,
+        "start_ms": 101300.0,
+        "end_ms": 108400.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 8,
+        "start_ms": 115500.0,
+        "end_ms": 129600.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 9,
+        "start_ms": 137100.0,
+        "end_ms": 145000.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 10,
+        "start_ms": 153300.0,
+        "end_ms": 176400.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 11,
+        "start_ms": 198700.0,
+        "end_ms": 203600.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 12,
+        "start_ms": 215700.0,
+        "end_ms": 227400.0,
+        "emitted_at_ms": 250900.3125
+      },
+      {
+        "rally_id": 13,
+        "start_ms": 229300.0,
+        "end_ms": 237600.0,
+        "emitted_at_ms": 250900.3125
+      }
+    ],
+    "prediction_count": 13,
+    "retained_ms": 134600.0,
+    "retained_fraction": 0.5364680444549068,
+    "diagnostics": {
+      "person_pose_observations": 1255,
+      "present_player_observations": [
+        1179,
+        1234
+      ],
+      "valid_local_arm_motion_observations": [
+        1121,
+        1136
+      ],
+      "strong_arm_observations": [
+        96,
+        130
+      ],
+      "near_player_ball_samples": 184,
+      "single_player_action_groups": 3,
+      "accepted_action_groups": 14
+    },
+    "human_rally_annotations": null,
+    "accuracy_metrics": null,
+    "no_tuning": true,
+    "limits": [
+      "No D2 human rally annotations: no accuracy, recall or false-positive scores.",
+      "Exact D1 camera-dependent thresholds reused without adapting to D2.",
+      "Automatic person selection reads the full clip; arm flow reads future native frames.",
+      "Observed arm motion is not a recognized racket hit.",
+      "Native final one/two frames, if any, are unobserved by TrackNet as in frozen D1."
+    ]
+  },
+  "C1_control_summary": {
+    "truth_count": 18,
+    "prediction_count": 15,
+    "target_ms": 157966.0,
+    "retained_target_ms": 145256.0,
+    "retained_non_target_ms": 8272.0,
+    "missed_rally_count": 3,
+    "false_positive_count": 0,
+    "false_split_count": 0,
+    "false_merge_count": 0,
+    "both_acceptable_count": 6,
+    "subsets": {
+      "3000": {
+        "truth_count": 14,
+        "target_ms": 147292.0,
+        "retained_target_ms": 142287.0,
+        "target_retention": 0.9660198788800478,
+        "missed_rally_count": 0,
+        "both_acceptable_count": 5
+      },
+      "5000": {
+        "truth_count": 12,
+        "target_ms": 139786.0,
+        "retained_target_ms": 135181.0,
+        "target_retention": 0.9670567868026841,
+        "missed_rally_count": 0,
+        "both_acceptable_count": 4
+      }
+    },
+    "target_retention": 0.9195396477723055
+  },
+  "C1_person_tracks_and_predictions_unchanged": true,
+  "C2_old_full_result": {
+    "status": "failed_C1_person_initialization",
+    "predictions": null,
+    "record": "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/replay/result.json"
+  },
+  "evidence_sha256": {
+    "models/SoloShuttlePose/.runtime/a2-current-algorithm-20261018/clean-windows/comparison.json": "c4d56cf591f8584f7c3be387e3afaf00ba8e4abda9b24fbe8c053c232e666b3f",
+    "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/comparison.json": "cc0894cc44c177d13e847c5e2a187544da80ad310e62f57ec30ea3c7f8b2a105",
+    "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/C2/result.json": "44ccc9c64e2ea689b4c6d4ca5be6946b43ad0cd5872deb0d80aff24332554f63",
+    "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/selector.py": "d68c7f988e5706fe21e9232288edb28bbb4a6a5a608ad93bdf676e7cab804950",
+    "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/frozen.json": "6d9808ce8875f2f5ef61d05e2200309af7624ed4aed5537f02bbd978e7565fd2",
+    "models/SoloShuttlePose/.runtime/d2-current-algorithm-20261018/result.json": "84cd494e13883715e9121268ec85d98d4f0579ef17c6a1ce38bfae42a6950c45",
+    "models/SoloShuttlePose/.runtime/d2-current-algorithm-20261018/frozen.json": "0162b32a77db73cbeb170ddec03b624af13aa511f703156e29a5d9bacc71d93c",
+    "models/SoloShuttlePose/.runtime/d2-current-algorithm-20261018/audit.json": "baf96ba1db3b3582322bca498c49f63cc1d9b0f7102959860897d317bf26b6f2",
+    "models/SoloShuttlePose/.runtime/reserve-check-20261018/review.json": "7e81c109f586109dc078d1b9d72ade35b652f476dc4c7e5bb961d63d68456244",
+    "datasets/badminton-v1/local/rally/d2-check-20261018/validation.json": "ef3d24702ef9ca629fded6174d8ea6c6045754cfc67e20110488797338a2c6e3",
+    "models/SoloShuttlePose/.runtime/a2-current-algorithm-20261018/audit.json": "a7ebda65e4b4986ce6a8785d29c0a1d3572f7c64ff02e1a4ddc16ba3cb54c77d",
+    "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/audit.json": "5bd9b4f77bee12a6e201b740fa65da78a3275f3c3f63d24f40677836fc7fbd1d",
+    "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/media.json": "bbd729235287a4d1ebbcbe26b156104e94f270d4a08023d2d4530cd0a9b3eef0",
+    "datasets/badminton-v1/local/source-videos/D2/verification.json": "81c7f196ed1df2bd21b8738635ddb1aab779b2e64d9dbe9e3fc69f542d53523f"
+  },
+  "review_data": "models/SoloShuttlePose/.runtime/reserve-check-20261018/review.json",
+  "review_url": "http://127.0.0.1:58954/"
+}

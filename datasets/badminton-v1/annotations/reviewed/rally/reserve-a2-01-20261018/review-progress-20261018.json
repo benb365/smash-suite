@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "type": "rally_annotation_review_progress",
+  "date": "2026-10-18",
+  "reviewer": "user",
+  "proposal": "datasets/badminton-v1/annotations/proposed/rally/reserve-a2-01-20261018/full-v1.json",
+  "proposal_sha256": "fe5310125d93fac04281eb9d91941a7abaef9fa6be6baa5d7c6067e24864ff45",
+  "scope": "A2第一段所列4个回合和4项候选事件已逐项核对；第1个正常短回合及4项非回合事件均获同意排除。仅确认所列条目，不另外宣告整片不存在漏标。",
+  "confirmed_rallies": [
+    {
+      "rally_id": 1,
+      "start_ms": 15920.0,
+      "end_ms": 17600.0,
+      "start_range_ms": [
+        15920.0,
+        16080.0
+      ],
+      "end_range_ms": [
+        17320.0,
+        17600.0
+      ],
+      "user_message": "A2-1-1 你标注的对的，下一个",
+      "evaluation_disposition": "human_approved_optional_exclusion",
+      "exclusion_decision_user_message": "我更正一下，这个是个短回合对抗，15.5-17.5，同意可以排除"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 28120.0,
+      "end_ms": 32400.0,
+      "start_range_ms": [
+        28120.0,
+        28280.0
+      ],
+      "end_range_ms": [
+        32160.0,
+        32400.0
+      ],
+      "user_message": "A2-1-2也对的"
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 48640.0,
+      "end_ms": 53760.0,
+      "start_range_ms": [
+        48640.0,
+        48800.0
+      ],
+      "end_range_ms": [
+        53440.0,
+        53760.0
+      ],
+      "user_message": "合适，确实有反弹，但这不重要，算不算在回合里都行",
+      "end_event_acceptance": "本回合包含或不包含末球反弹均可接受；保留原结束代表值53.760秒。"
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 71440.0,
+      "end_ms": 88200.0,
+      "start_range_ms": [
+        71440.0,
+        71600.0
+      ],
+      "end_range_ms": [
+        88040.0,
+        88200.0
+      ],
+      "user_message": "确认"
+    }
+  ],
+  "remaining_rally_ids": [],
+  "whole_clip_review_complete": false,
+  "rally_review_complete": true,
+  "remaining_event_ids": [],
+  "rejected_exclusions": [
+    {
+      "event_id": "A2-01-E01",
+      "original_candidate_range_ms": [
+        7000,
+        8000
+      ],
+      "decision": "reject_exclusion",
+      "confirmed_classification": "normal_rally",
+      "approximate_duration_ms": 3000,
+      "start_ms": null,
+      "end_ms": null,
+      "boundary_review_status": "needs_review",
+      "user_message": "有对抗，大概3s，不能排除",
+      "status": "superseded_by_user_correction",
+      "superseding_user_message": "我更正一下，这个是个短回合对抗，15.5-17.5，同意可以排除",
+      "correction_note": "用户更正所指时间为15.5–17.5秒，对应已确认第1回合；该决定不用于7–8秒候选事件。"
+    }
+  ],
+  "confirmed_excluded_events": [
+    {
+      "event_id": "A2-01-R01-optional-short",
+      "source_rally_id": 1,
+      "range_ms": [
+        15500,
+        17500
+      ],
+      "type": "optional_short_normal_rally",
+      "review_status": "human_confirmed",
+      "user_message": "我更正一下，这个是个短回合对抗，15.5-17.5，同意可以排除",
+      "original_confirmed_rally_range_ms": [
+        15920,
+        17600
+      ],
+      "note": "保留正常短回合标注；用户明确允许从本轮目标回合及评估中排除。所给15.5–17.5秒范围单独记录，原草稿不改。"
+    },
+    {
+      "event_id": "A2-01-E01",
+      "range_ms": [
+        7000,
+        8000
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "这是一段还球，可以排除"
+    },
+    {
+      "event_id": "A2-01-E02",
+      "range_ms": [
+        39400,
+        40280
+      ],
+      "type": "shuttle_handling",
+      "review_status": "human_confirmed",
+      "user_message": "同意",
+      "confirmation_context": "确认39.400–40.280秒近端黑衣捡球后颠球并接住、远端等待，属于整理球，可排除。"
+    },
+    {
+      "event_id": "A2-01-E03",
+      "range_ms": [
+        58000,
+        61800
+      ],
+      "type": "shuttle_handling_or_return",
+      "review_status": "human_confirmed",
+      "user_message": "同意",
+      "confirmation_context": "确认58–61.8秒近端整理、颠球，随后远端捡球，无持续对打，可排除。"
+    },
+    {
+      "event_id": "A2-01-E04",
+      "range_ms": [
+        93240,
+        96400
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "同意",
+      "confirmation_context": "确认93.240–96.400秒近端轻拨球过网、远端网前捡球，是还球，可排除。"
+    }
+  ],
+  "listed_items_review_complete": true
+}

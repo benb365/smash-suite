@@ -1,0 +1,1128 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_annotation_proposal",
+  "status": "draft_full_clip",
+  "review_status": "needs_review",
+  "sample_id": "reserve-d2-20261018",
+  "category": "D",
+  "video": "datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+  "video_sha256": "19d57eefda7817a5940c674468b16df9de9236eb91b522c1d45404d1794a67e8",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 0.0,
+    "clip_pts_rule": "clip_pts_ms = timestamp_ms",
+    "source_time_rule": null,
+    "source_time_note": "本草稿仅对经过尾部裁剪的输入文件标注，不推测相对原完整视频的源时间偏移。",
+    "video_frame_count": 7527,
+    "last_decoded_frame": 7526,
+    "last_decoded_clip_pts_ms": 250867.0,
+    "container_duration_ms": 250900.3125,
+    "timestamp_source": "decoded_frame.pts * decoded_frame.time_base * 1000",
+    "native_pts_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/pts-index.json"
+  },
+  "coverage": {
+    "partial": false,
+    "review_status": "needs_review",
+    "reviewed_range_ms": [
+      0.0,
+      250867.0
+    ],
+    "reviewed_frame_range": [
+      0,
+      7526
+    ],
+    "completeness": "agent_draft_whole_clip_sampled_review",
+    "method": "全片0–250秒每秒原帧视觉筛查；28个候选边界先100ms抽帧、再保存并复核连续原帧；未读算法预测或模型输出。R6结束的宽区间右端另用100ms原帧补查。",
+    "human_confirmation_complete": false,
+    "negative_time_is_not_verified": true,
+    "limits": "逐秒筛查可能漏掉超短事件；起止事件的遮挡、球体模糊和画面边缘不确定性保留在区间内。完整覆盖仅表示代理抽帧审查覆盖全片，不代表逐帧观看整段或人类确认。"
+  },
+  "main_court": "固定主场单打：近侧白上衣、黑长裤、红鞋；远侧灰/黑上衣、深色下装、红鞋。",
+  "main_court_review_status": "needs_review",
+  "generation": {
+    "method": "agent_independent_visual_sampling_with_native_pts",
+    "producer": "Codex",
+    "date": "2026-10-18",
+    "requires_human_review": true,
+    "used_segmentation_predictions": false,
+    "used_model_outputs": false,
+    "boundary_policy": "start_left_end_right",
+    "boundary_policy_authorization": "沿用用户已确认的保守端点规则；所有素材内容和边界仍待人审。"
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2",
+    "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json",
+    "native_pts_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/pts-index.json",
+    "boundary_indices": [
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start-index.json"
+    ]
+  },
+  "boundary_observations": {
+    "review_status": "needs_review",
+    "clip_head": {
+      "range_ms": [
+        0,
+        1600
+      ],
+      "state": "serve_preparation_visible_before_first_rally",
+      "note": "首帧近端持球准备，随后可见发球挥拍及远端接球；未将0当作回合开始。",
+      "evidence_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/r01-start-index.json"
+    },
+    "clip_tail": {
+      "range_ms": [
+        247000,
+        250867.0
+      ],
+      "state": "between_rallies_after_last_end",
+      "note": "末回合结束后双方走向网前；尾部裁剪前的最后可解码帧未见新的未完回合。",
+      "evidence_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+    }
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "review_status": "needs_review",
+      "start_ms": 533.0,
+      "start_frame": 16,
+      "end_ms": 5800.0,
+      "end_frame": 174,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            16,
+            23
+          ],
+          "review_window_ms": [
+            533.0,
+            767.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 533.0,
+          "selected_frame": 16,
+          "selected_clip_pts_ms": 533.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start/f000016.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start/f000023.jpg"
+          ],
+          "uncertainty_ms": 234.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            164,
+            174
+          ],
+          "review_window_ms": [
+            5467.0,
+            5800.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 5800.0,
+          "selected_frame": 174,
+          "selected_clip_pts_ms": 5800.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end/f000164.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end/f000174.jpg"
+          ],
+          "uncertainty_ms": 333.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球，片头保留准备过程；远端前场追球后落地事件较小，末球需人审。"
+    },
+    {
+      "rally_id": 2,
+      "review_status": "needs_review",
+      "start_ms": 19633.0,
+      "start_frame": 589,
+      "end_ms": 22700.0,
+      "end_frame": 681,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            589,
+            593
+          ],
+          "review_window_ms": [
+            19633.0,
+            19767.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 19633.0,
+          "selected_frame": 589,
+          "selected_clip_pts_ms": 19633.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start/f000589.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start/f000593.jpg"
+          ],
+          "uncertainty_ms": 134.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            667,
+            681
+          ],
+          "review_window_ms": [
+            22233.0,
+            22700.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 22700.0,
+          "selected_frame": 681,
+          "selected_clip_pts_ms": 22700.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end/f000667.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end/f000681.jpg"
+          ],
+          "uncertainty_ms": 467.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球后有连续对打；远端前场救球未延续，结束窗口保留球体模糊不确定性。"
+    },
+    {
+      "rally_id": 3,
+      "review_status": "needs_review",
+      "start_ms": 30367.0,
+      "start_frame": 911,
+      "end_ms": 39433.0,
+      "end_frame": 1183,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            911,
+            917
+          ],
+          "review_window_ms": [
+            30367.0,
+            30567.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 30367.0,
+          "selected_frame": 911,
+          "selected_clip_pts_ms": 30367.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start/f000911.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start/f000917.jpg"
+          ],
+          "uncertainty_ms": 200.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            1172,
+            1183
+          ],
+          "review_window_ms": [
+            39067.0,
+            39433.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 39433.0,
+          "selected_frame": 1183,
+          "selected_clip_pts_ms": 39433.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end/f001172.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end/f001183.jpg"
+          ],
+          "uncertainty_ms": 366.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球，远端前场追球结束。"
+    },
+    {
+      "rally_id": 4,
+      "review_status": "needs_review",
+      "start_ms": 49467.0,
+      "start_frame": 1484,
+      "end_ms": 55300.0,
+      "end_frame": 1659,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            1484,
+            1490
+          ],
+          "review_window_ms": [
+            49467.0,
+            49667.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 49467.0,
+          "selected_frame": 1484,
+          "selected_clip_pts_ms": 49467.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start/f001484.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start/f001490.jpg"
+          ],
+          "uncertainty_ms": 200.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            1648,
+            1659
+          ],
+          "review_window_ms": [
+            54933.0,
+            55300.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 55300.0,
+          "selected_frame": 1659,
+          "selected_clip_pts_ms": 55300.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end/f001648.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end/f001659.jpg"
+          ],
+          "uncertainty_ms": 367.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球；末球在近端前场，近端前移后转为捡球。"
+    },
+    {
+      "rally_id": 5,
+      "review_status": "needs_review",
+      "start_ms": 62667.0,
+      "start_frame": 1880,
+      "end_ms": 66967.0,
+      "end_frame": 2009,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            1880,
+            1886
+          ],
+          "review_window_ms": [
+            62667.0,
+            62867.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 62667.0,
+          "selected_frame": 1880,
+          "selected_clip_pts_ms": 62667.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start/f001880.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start/f001886.jpg"
+          ],
+          "uncertainty_ms": 200.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            1998,
+            2009
+          ],
+          "review_window_ms": [
+            66600.0,
+            66967.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 66967.0,
+          "selected_frame": 2009,
+          "selected_clip_pts_ms": 66967.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end/f001998.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end/f002009.jpg"
+          ],
+          "uncertainty_ms": 367.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "远端发球；远端右前场大步救球后球落地，身体和球拍局部遮挡末球。"
+    },
+    {
+      "rally_id": 6,
+      "review_status": "needs_review",
+      "start_ms": 77733.0,
+      "start_frame": 2332,
+      "end_ms": 88700.0,
+      "end_frame": 2661,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            2332,
+            2339
+          ],
+          "review_window_ms": [
+            77733.0,
+            77967.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 77733.0,
+          "selected_frame": 2332,
+          "selected_clip_pts_ms": 77733.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start/f002332.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start/f002339.jpg"
+          ],
+          "uncertainty_ms": 234.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            2637,
+            2661
+          ],
+          "review_window_ms": [
+            87900.0,
+            88700.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 88700.0,
+          "selected_frame": 2661,
+          "selected_clip_pts_ms": 88700.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-end-index.json",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/r06-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-end/f002637.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/r06-end/007.jpg"
+          ],
+          "uncertainty_ms": 800.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球；末球向画面右侧、近端球员与网柱方向运动，球体模糊且视野边缘，结束保留宽区间重点复核。"
+    },
+    {
+      "rally_id": 7,
+      "review_status": "needs_review",
+      "start_ms": 102300.0,
+      "start_frame": 3069,
+      "end_ms": 108267.0,
+      "end_frame": 3248,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            3069,
+            3075
+          ],
+          "review_window_ms": [
+            102300.0,
+            102500.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 102300.0,
+          "selected_frame": 3069,
+          "selected_clip_pts_ms": 102300.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start/f003069.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start/f003075.jpg"
+          ],
+          "uncertainty_ms": 200.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            3245,
+            3248
+          ],
+          "review_window_ms": [
+            108167.0,
+            108267.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 108267.0,
+          "selected_frame": 3248,
+          "selected_clip_pts_ms": 108267.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end/f003245.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end/f003248.jpg"
+          ],
+          "uncertainty_ms": 100.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球；远端末球飞到近端后场，原帧能见球继续下落，不能用近端提前停步代替结束。"
+    },
+    {
+      "rally_id": 8,
+      "review_status": "needs_review",
+      "start_ms": 116333.0,
+      "start_frame": 3490,
+      "end_ms": 130067.0,
+      "end_frame": 3902,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            3490,
+            3496
+          ],
+          "review_window_ms": [
+            116333.0,
+            116533.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 116333.0,
+          "selected_frame": 3490,
+          "selected_clip_pts_ms": 116333.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start/f003490.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start/f003496.jpg"
+          ],
+          "uncertainty_ms": 200.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            3891,
+            3902
+          ],
+          "review_window_ms": [
+            129700.0,
+            130067.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 130067.0,
+          "selected_frame": 3902,
+          "selected_clip_pts_ms": 130067.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end/f003891.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end/f003902.jpg"
+          ],
+          "uncertainty_ms": 367.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球；末球在右侧网前，远端身体、球网和网柱附近使落点不够清楚。"
+    },
+    {
+      "rally_id": 9,
+      "review_status": "needs_review",
+      "start_ms": 138467.0,
+      "start_frame": 4154,
+      "end_ms": 144367.0,
+      "end_frame": 4331,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            4154,
+            4161
+          ],
+          "review_window_ms": [
+            138467.0,
+            138700.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 138467.0,
+          "selected_frame": 4154,
+          "selected_clip_pts_ms": 138467.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start/f004154.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start/f004161.jpg"
+          ],
+          "uncertainty_ms": 233.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            4323,
+            4331
+          ],
+          "review_window_ms": [
+            144100.0,
+            144367.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 144367.0,
+          "selected_frame": 4331,
+          "selected_clip_pts_ms": 144367.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end/f004323.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end/f004331.jpg"
+          ],
+          "uncertainty_ms": 267.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "远端发球；远端前场末球落地，球体较小。"
+    },
+    {
+      "rally_id": 10,
+      "review_status": "needs_review",
+      "start_ms": 153467.0,
+      "start_frame": 4604,
+      "end_ms": 172700.0,
+      "end_frame": 5181,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            4604,
+            4610
+          ],
+          "review_window_ms": [
+            153467.0,
+            153667.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 153467.0,
+          "selected_frame": 4604,
+          "selected_clip_pts_ms": 153467.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start/f004604.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start/f004610.jpg"
+          ],
+          "uncertainty_ms": 200.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            5168,
+            5181
+          ],
+          "review_window_ms": [
+            172267.0,
+            172700.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 172700.0,
+          "selected_frame": 5181,
+          "selected_clip_pts_ms": 172700.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end/f005168.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end/f005181.jpg"
+          ],
+          "uncertainty_ms": 433.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球后长回合；末球在近端前场，保留触网/下落至落地的不确定性。"
+    },
+    {
+      "rally_id": 11,
+      "review_status": "needs_review",
+      "start_ms": 186567.0,
+      "start_frame": 5597,
+      "end_ms": 190900.0,
+      "end_frame": 5727,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            5597,
+            5604
+          ],
+          "review_window_ms": [
+            186567.0,
+            186800.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 186567.0,
+          "selected_frame": 5597,
+          "selected_clip_pts_ms": 186567.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start/f005597.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start/f005604.jpg"
+          ],
+          "uncertainty_ms": 233.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            5715,
+            5727
+          ],
+          "review_window_ms": [
+            190500.0,
+            190900.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 190900.0,
+          "selected_frame": 5727,
+          "selected_clip_pts_ms": 190900.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end/f005715.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end/f005727.jpg"
+          ],
+          "uncertainty_ms": 400.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "远端发球；远端右前场扑救后球落地，末球与身体局部重合。"
+    },
+    {
+      "rally_id": 12,
+      "review_status": "needs_review",
+      "start_ms": 200067.0,
+      "start_frame": 6002,
+      "end_ms": 207233.0,
+      "end_frame": 6217,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            6002,
+            6009
+          ],
+          "review_window_ms": [
+            200067.0,
+            200300.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 200067.0,
+          "selected_frame": 6002,
+          "selected_clip_pts_ms": 200067.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start/f006002.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start/f006009.jpg"
+          ],
+          "uncertainty_ms": 233.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            6208,
+            6217
+          ],
+          "review_window_ms": [
+            206933.0,
+            207233.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 207233.0,
+          "selected_frame": 6217,
+          "selected_clip_pts_ms": 207233.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end/f006208.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end/f006217.jpg"
+          ],
+          "uncertainty_ms": 300.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球；末球飞向近端左后场，近端让球后仍需等到下落落地，结束有身体遮挡。"
+    },
+    {
+      "rally_id": 13,
+      "review_status": "needs_review",
+      "start_ms": 216500.0,
+      "start_frame": 6495,
+      "end_ms": 232000.0,
+      "end_frame": 6960,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            6495,
+            6502
+          ],
+          "review_window_ms": [
+            216500.0,
+            216733.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 216500.0,
+          "selected_frame": 6495,
+          "selected_clip_pts_ms": 216500.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start/f006495.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start/f006502.jpg"
+          ],
+          "uncertainty_ms": 233.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            6945,
+            6960
+          ],
+          "review_window_ms": [
+            231500.0,
+            232000.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 232000.0,
+          "selected_frame": 6960,
+          "selected_clip_pts_ms": 232000.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end/f006945.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end/f006960.jpg"
+          ],
+          "uncertainty_ms": 500.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球；末球飞向近端左后场，球在近端身体附近下落，结束保留约半秒区间。"
+    },
+    {
+      "rally_id": 14,
+      "review_status": "needs_review",
+      "start_ms": 242467.0,
+      "start_frame": 7274,
+      "end_ms": 245967.0,
+      "end_frame": 7379,
+      "boundary_review": {
+        "start": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            7274,
+            7281
+          ],
+          "review_window_ms": [
+            242467.0,
+            242700.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 242467.0,
+          "selected_frame": 7274,
+          "selected_clip_pts_ms": 242467.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start/f007274.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start/f007281.jpg"
+          ],
+          "uncertainty_ms": 233.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        },
+        "end": {
+          "review_status": "needs_review",
+          "status": "agent_proposed_interval",
+          "review_window_frames": [
+            7365,
+            7379
+          ],
+          "review_window_ms": [
+            245500.0,
+            245967.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 245967.0,
+          "selected_frame": 7379,
+          "selected_clip_pts_ms": 245967.0,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end-index.json"
+          ],
+          "endpoint_frame_paths": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end/f007365.jpg",
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end/f007379.jpg"
+          ],
+          "uncertainty_ms": 467.0,
+          "note": "真实源PTS；区间代表视觉不确定范围。start取左端、end取右端，不声称为精确触球/落地帧。"
+        }
+      },
+      "note": "近端发球；有往返击球的短回合，远端前场结束，按短回合保留。"
+    }
+  ],
+  "incomplete_events": [],
+  "excluded_events": [
+    {
+      "event_id": "d2-event-01",
+      "range_ms": [
+        7000,
+        18000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "首回合后远端捡球/还球与双方准备；未见新的连续对打。还球动作作为排除候选，待人审。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-02",
+      "range_ms": [
+        25000,
+        29000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "近端弯身处理地面球、网前还球/整理候选；随后重新准备发球，不作为新增回合。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-03",
+      "range_ms": [
+        40000,
+        48000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "回合后近端退到左侧拾球、走回发球位置；其间零散挥拍不作为新回合。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-04",
+      "range_ms": [
+        56000,
+        62000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "近端前场拾球、交换球与准备候选；对打在后续远端发球后开始。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-05",
+      "range_ms": [
+        93000,
+        101000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "前一回合后球员回位，近端弯身拾球；无新增正式回合。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-06",
+      "range_ms": [
+        109000,
+        115000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "近端后场拾球并走回发球位，零散颠/还球候选。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-07",
+      "range_ms": [
+        132000,
+        138000
+      ],
+      "type": "shuttle_return_and_preparation_candidate",
+      "note": "前一回合后还球与双方准备候选，随后由远端发球。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-08",
+      "range_ms": [
+        175000,
+        186000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "回合后近端走回、远端到右侧拾球并准备发球；中间给球/整理球候选。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-09",
+      "range_ms": [
+        208000,
+        215000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "近端左后场拾球和返回，零散球拍动作不作为新回合。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    },
+    {
+      "event_id": "d2-event-10",
+      "range_ms": [
+        233000,
+        241000
+      ],
+      "type": "pickup_and_shuttle_return_candidate",
+      "note": "近端左后场出画边缘拾球、回到场内并准备发球。",
+      "review_status": "needs_review",
+      "proposed_include_in_target_rallies": false,
+      "evaluation_disposition": "pending_human_review_do_not_ignore_automatically",
+      "evidence_indices": [
+        "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+      ]
+    }
+  ],
+  "evaluation_eligibility": {
+    "formal_benchmark_ready": false,
+    "blockers": [
+      "human_annotation_review_pending",
+      "all_boundary_intervals_pending_review",
+      "exclusion_candidates_pending_review"
+    ]
+  }
+}

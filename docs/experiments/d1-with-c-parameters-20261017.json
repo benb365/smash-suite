@@ -1,0 +1,3941 @@
+{
+  "status": "partial_D_transfer_three_clips_fail_unchanged_C_initialization",
+  "scope": "Only unchanged final C algorithm; no blur, D tuning, label changes, training or model downloads.",
+  "full_D_scores": null,
+  "initialization": {
+    "status": "unchanged_C_first_frame_initialization_check",
+    "results": [
+      {
+        "sample": {
+          "id": "D1-01",
+          "source_id": "D1",
+          "split_group_id": "D1-same-recording",
+          "split": "diagnostic",
+          "video": "datasets/badminton-v1/local/rally/m1-short-d1-01-20261015/clip.mp4",
+          "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-01-20261015/full-v1.json",
+          "validation": "datasets/badminton-v1/local/rally/m1-short-d1-01-20261015/validation.json",
+          "duration_ms": 150989.125,
+          "native_frame_count": 4528,
+          "source_origin_ms": 0.0,
+          "run_subdirectory": "01-05-clip",
+          "main_court": "Human-confirmed single main court; no numeric ROI.",
+          "truth_count": 7,
+          "excluded_count": 2,
+          "video_sha256": "8254de0fdbed330b3049215c00ce67679771e40eb4bd9dc448186aa139766f2f",
+          "annotation_sha256": "8c77fef9f6b4e0ada6dbf0545bffba5b9e03f8315ec33e0e6101b12c7fa3bb72",
+          "validation_sha256": "82fe99cec0cb1b756e82b7f04d05422f87fea3c3f6395f390e832c7abfc6b51e"
+        },
+        "first_pts_ms": 133.0,
+        "boxes": [
+          {
+            "x1": 1088.0859375,
+            "y1": 329.4716796875,
+            "x2": 1159.9111328125,
+            "y2": 579.0810546875,
+            "confidence": 0.8114780187606812
+          },
+          {
+            "x1": 1697.15380859375,
+            "y1": 422.9639892578125,
+            "x2": 1862.724853515625,
+            "y2": 575.2198486328125,
+            "confidence": 0.6780003309249878
+          },
+          {
+            "x1": 1568.0797119140625,
+            "y1": 325.1341247558594,
+            "x2": 1611.8939208984375,
+            "y2": 410.2555847167969,
+            "confidence": 0.569665253162384
+          },
+          {
+            "x1": 1615.244873046875,
+            "y1": 325.0585632324219,
+            "x2": 1655.641845703125,
+            "y2": 406.6024475097656,
+            "confidence": 0.42826852202415466
+          },
+          {
+            "x1": 1865.12548828125,
+            "y1": 325.75457763671875,
+            "x2": 1919.5478515625,
+            "y2": 430.01788330078125,
+            "confidence": 0.39982524514198303
+          },
+          {
+            "x1": 1755.865234375,
+            "y1": 325.23193359375,
+            "x2": 1805.08984375,
+            "y2": 421.17138671875,
+            "confidence": 0.38364624977111816
+          },
+          {
+            "x1": 1805.654052734375,
+            "y1": 323.3382568359375,
+            "x2": 1863.772705078125,
+            "y2": 425.288330078125,
+            "confidence": 0.36883941292762756
+          },
+          {
+            "x1": 1486.5958251953125,
+            "y1": 325.8282470703125,
+            "x2": 1530.2100830078125,
+            "y2": 407.2369384765625,
+            "confidence": 0.35286441445350647
+          },
+          {
+            "x1": 1657.81689453125,
+            "y1": 325.5726623535156,
+            "x2": 1702.75244140625,
+            "y2": 420.5708312988281,
+            "confidence": 0.34136301279067993
+          },
+          {
+            "x1": 1529.803466796875,
+            "y1": 323.5908508300781,
+            "x2": 1565.635009765625,
+            "y2": 409.1432189941406,
+            "confidence": 0.3389310836791992
+          },
+          {
+            "x1": 1707.7154541015625,
+            "y1": 324.83306884765625,
+            "x2": 1754.3668212890625,
+            "y2": 417.42059326171875,
+            "confidence": 0.2878885269165039
+          }
+        ],
+        "selected": [
+          {
+            "x1": 1088.0859375,
+            "y1": 329.4716796875,
+            "x2": 1159.9111328125,
+            "y2": 579.0810546875,
+            "confidence": 0.8114780187606812
+          }
+        ],
+        "initializes": false
+      },
+      {
+        "sample": {
+          "id": "D1-02",
+          "source_id": "D1",
+          "split_group_id": "D1-same-recording",
+          "split": "diagnostic",
+          "video": "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/clip.mp4",
+          "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-02-20261015/full-v1.json",
+          "validation": "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/validation.json",
+          "duration_ms": 154989.125,
+          "native_frame_count": 4648,
+          "source_origin_ms": 150989.125,
+          "run_subdirectory": "01-06-clip",
+          "main_court": "Human-confirmed single main court; no numeric ROI.",
+          "truth_count": 9,
+          "excluded_count": 2,
+          "video_sha256": "82d29f3f431cd3ba386af88dc77daaf8e5496ff520ace229e24b8a51f19851b5",
+          "annotation_sha256": "aef30591e01a6853e9a8e3b40e7eb4b85e846cd432bdd78cff6c41cb8c09b102",
+          "validation_sha256": "3d06ab8e473dcf5fd6a1157925e7acf3c5292f0a21271907c81c03379fd96cfa"
+        },
+        "first_pts_ms": 141.0,
+        "boxes": [
+          {
+            "x1": 980.7284545898438,
+            "y1": 280.5357666015625,
+            "x2": 1121.53369140625,
+            "y2": 715.834228515625,
+            "confidence": 0.9120295643806458
+          },
+          {
+            "x1": 654.2896728515625,
+            "y1": 326.80755615234375,
+            "x2": 745.2608642578125,
+            "y2": 508.14642333984375,
+            "confidence": 0.7602244019508362
+          },
+          {
+            "x1": 1741.1387939453125,
+            "y1": 420.29345703125,
+            "x2": 1850.5601806640625,
+            "y2": 546.4736328125,
+            "confidence": 0.5869486927986145
+          },
+          {
+            "x1": 1752.8536376953125,
+            "y1": 318.7340087890625,
+            "x2": 1803.2923583984375,
+            "y2": 414.3465576171875,
+            "confidence": 0.5246365666389465
+          },
+          {
+            "x1": 1805.55908203125,
+            "y1": 316.15020751953125,
+            "x2": 1862.347900390625,
+            "y2": 418.77789306640625,
+            "confidence": 0.49811503291130066
+          },
+          {
+            "x1": 1859.4345703125,
+            "y1": 318.0006103515625,
+            "x2": 1919.63134765625,
+            "y2": 420.255615234375,
+            "confidence": 0.47699350118637085
+          },
+          {
+            "x1": 1703.191650390625,
+            "y1": 317.21087646484375,
+            "x2": 1753.609619140625,
+            "y2": 407.846923828125,
+            "confidence": 0.4476654529571533
+          },
+          {
+            "x1": 1613.4576416015625,
+            "y1": 316.80548095703125,
+            "x2": 1653.9002685546875,
+            "y2": 406.12969970703125,
+            "confidence": 0.3476525843143463
+          },
+          {
+            "x1": 1483.5145263671875,
+            "y1": 317.01617431640625,
+            "x2": 1527.9149169921875,
+            "y2": 400.03387451171875,
+            "confidence": 0.30273953080177307
+          },
+          {
+            "x1": 1655.285400390625,
+            "y1": 316.95751953125,
+            "x2": 1700.68310546875,
+            "y2": 410.753662109375,
+            "confidence": 0.278097927570343
+          },
+          {
+            "x1": 1570.14404296875,
+            "y1": 316.363525390625,
+            "x2": 1608.82666015625,
+            "y2": 405.140869140625,
+            "confidence": 0.24417856335639954
+          }
+        ],
+        "selected": [
+          {
+            "x1": 654.2896728515625,
+            "y1": 326.80755615234375,
+            "x2": 745.2608642578125,
+            "y2": 508.14642333984375,
+            "confidence": 0.7602244019508362
+          },
+          {
+            "x1": 980.7284545898438,
+            "y1": 280.5357666015625,
+            "x2": 1121.53369140625,
+            "y2": 715.834228515625,
+            "confidence": 0.9120295643806458
+          }
+        ],
+        "initializes": true
+      },
+      {
+        "sample": {
+          "id": "D1-03",
+          "source_id": "D1",
+          "split_group_id": "D1-same-recording",
+          "split": "diagnostic",
+          "video": "datasets/badminton-v1/local/rally/m1-short-d1-03-20261015/clip.mp4",
+          "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-03-20261015/full-v1.json",
+          "validation": "datasets/badminton-v1/local/rally/m1-short-d1-03-20261015/validation.json",
+          "duration_ms": 149989.1875,
+          "native_frame_count": 4498,
+          "source_origin_ms": 305978.25,
+          "run_subdirectory": "01-07-clip",
+          "main_court": "Human-confirmed single main court; no numeric ROI.",
+          "truth_count": 8,
+          "excluded_count": 2,
+          "video_sha256": "45c77879af8c7ef14b70515ae7409410e6433f480da572505cb0032a42bbdf36",
+          "annotation_sha256": "b94ea7d190521fdcc840aae7b1aaa8477fbb57baec74c312c556e5f15e1c6762",
+          "validation_sha256": "10d466d16a048c3f38a2534c68cd5f2f5a28d47ec1ff737e8d56a6087c251020"
+        },
+        "first_pts_ms": 143.0,
+        "boxes": [
+          {
+            "x1": 206.49343872070312,
+            "y1": 284.25079345703125,
+            "x2": 295.8549499511719,
+            "y2": 504.74700927734375,
+            "confidence": 0.85247802734375
+          },
+          {
+            "x1": 1568.365966796875,
+            "y1": 316.6474304199219,
+            "x2": 1704.493896484375,
+            "y2": 705.17919921875,
+            "confidence": 0.8332051634788513
+          },
+          {
+            "x1": 1740.393798828125,
+            "y1": 422.82293701171875,
+            "x2": 1852.093994140625,
+            "y2": 554.1709594726562,
+            "confidence": 0.6303521990776062
+          },
+          {
+            "x1": 1804.5302734375,
+            "y1": 314.99383544921875,
+            "x2": 1861.58251953125,
+            "y2": 418.8885498046875,
+            "confidence": 0.5930183529853821
+          },
+          {
+            "x1": 1861.2919921875,
+            "y1": 317.3418884277344,
+            "x2": 1919.6435546875,
+            "y2": 419.7688903808594,
+            "confidence": 0.4728785455226898
+          },
+          {
+            "x1": 1704.239501953125,
+            "y1": 314.2896728515625,
+            "x2": 1751.15966796875,
+            "y2": 407.8863525390625,
+            "confidence": 0.470958948135376
+          },
+          {
+            "x1": 1755.5601806640625,
+            "y1": 315.97869873046875,
+            "x2": 1808.7381591796875,
+            "y2": 411.6241455078125,
+            "confidence": 0.37345555424690247
+          },
+          {
+            "x1": 1482.8974609375,
+            "y1": 317.1944580078125,
+            "x2": 1528.270751953125,
+            "y2": 399.7646484375,
+            "confidence": 0.34224599599838257
+          },
+          {
+            "x1": 1525.954833984375,
+            "y1": 315.6910400390625,
+            "x2": 1566.269287109375,
+            "y2": 398.991455078125,
+            "confidence": 0.25236594676971436
+          },
+          {
+            "x1": 1564.46142578125,
+            "y1": 316.551513671875,
+            "x2": 1608.583984375,
+            "y2": 401.217529296875,
+            "confidence": 0.21826231479644775
+          }
+        ],
+        "selected": [],
+        "initializes": false
+      },
+      {
+        "sample": {
+          "id": "D1-04",
+          "source_id": "D1",
+          "split_group_id": "D1-same-recording",
+          "split": "diagnostic",
+          "video": "datasets/badminton-v1/local/rally/m1-short-d1-04-20261015/clip.mp4",
+          "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-04-20261015/full-v1.json",
+          "validation": "datasets/badminton-v1/local/rally/m1-short-d1-04-20261015/validation.json",
+          "duration_ms": 154978.375,
+          "native_frame_count": 4646,
+          "source_origin_ms": 455967.4375,
+          "run_subdirectory": "01-08-clip",
+          "main_court": "Human-confirmed single main court; no numeric ROI.",
+          "truth_count": 8,
+          "excluded_count": 2,
+          "video_sha256": "b5ef8d3a78389fd5a81af42564684a41c57b46cca2f97202a0f069ccdeee5606",
+          "annotation_sha256": "3b733ca29784ff9dcfab03b84633e948adb04a94125339ca2ef22d56eb7b675b",
+          "validation_sha256": "3e9714a5797656b833e67a5f95aaafb6147c21b9a20b32d689679c0641af71e3"
+        },
+        "first_pts_ms": 138.0,
+        "boxes": [
+          {
+            "x1": 1073.608642578125,
+            "y1": 307.1637878417969,
+            "x2": 1231.316650390625,
+            "y2": 727.36572265625,
+            "confidence": 0.9020900130271912
+          },
+          {
+            "x1": 513.642822265625,
+            "y1": 318.03662109375,
+            "x2": 588.9129638671875,
+            "y2": 540.1229248046875,
+            "confidence": 0.8202574253082275
+          },
+          {
+            "x1": 1762.14990234375,
+            "y1": 430.16497802734375,
+            "x2": 1845.5087890625,
+            "y2": 541.3179931640625,
+            "confidence": 0.6176543235778809
+          },
+          {
+            "x1": 1805.15380859375,
+            "y1": 315.21954345703125,
+            "x2": 1861.8974609375,
+            "y2": 417.63690185546875,
+            "confidence": 0.574449896812439
+          },
+          {
+            "x1": 1702.86669921875,
+            "y1": 316.5167236328125,
+            "x2": 1752.630859375,
+            "y2": 405.96044921875,
+            "confidence": 0.491225928068161
+          },
+          {
+            "x1": 1859.744873046875,
+            "y1": 317.22509765625,
+            "x2": 1919.629638671875,
+            "y2": 419.35760498046875,
+            "confidence": 0.4761330485343933
+          },
+          {
+            "x1": 1755.3638916015625,
+            "y1": 316.91796875,
+            "x2": 1805.2691650390625,
+            "y2": 412.3931884765625,
+            "confidence": 0.40017154812812805
+          },
+          {
+            "x1": 1485.702880859375,
+            "y1": 316.44915771484375,
+            "x2": 1527.427978515625,
+            "y2": 398.36907958984375,
+            "confidence": 0.39315006136894226
+          },
+          {
+            "x1": 1610.450439453125,
+            "y1": 317.2943115234375,
+            "x2": 1653.344482421875,
+            "y2": 405.1982421875,
+            "confidence": 0.3517991304397583
+          },
+          {
+            "x1": 1566.474853515625,
+            "y1": 316.21038818359375,
+            "x2": 1610.115966796875,
+            "y2": 403.06329345703125,
+            "confidence": 0.31151336431503296
+          },
+          {
+            "x1": 1652.707275390625,
+            "y1": 315.32867431640625,
+            "x2": 1700.700439453125,
+            "y2": 414.17376708984375,
+            "confidence": 0.27079617977142334
+          },
+          {
+            "x1": 1525.7332763671875,
+            "y1": 315.526123046875,
+            "x2": 1565.0479736328125,
+            "y2": 399.4566650390625,
+            "confidence": 0.2683270275592804
+          }
+        ],
+        "selected": [
+          {
+            "x1": 1073.608642578125,
+            "y1": 307.1637878417969,
+            "x2": 1231.316650390625,
+            "y2": 727.36572265625,
+            "confidence": 0.9020900130271912
+          }
+        ],
+        "initializes": false
+      }
+    ],
+    "weights_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+    "script_sha256": "49fe720aef80cffcd1c1ea9de70d27203a28767d4ce05147468d5e5d249fe435",
+    "settings": {
+      "classes": [
+        0
+      ],
+      "confidence": 0.2,
+      "image_size": 960,
+      "device": "mps"
+    }
+  },
+  "completed": {
+    "status": "D1_unchanged_C_pipeline_no_D_tuning",
+    "manifest": "datasets/badminton-v1/manifests/m1-cd-coordinate-trial-20261017.json",
+    "manifest_sha256": "9a806c806b1d768028db7d56b52eaa40bb8a52b13aa3bd2ffb99c13d14818934",
+    "frozen": {
+      "config": {
+        "confidence": 0.5,
+        "static_fraction": 0.1,
+        "center_weight": 2,
+        "max_step_error_px": 48,
+        "min_track_points": 3,
+        "min_track_ms": 60,
+        "min_track_travel_px": 80,
+        "max_gap_ms": 2400,
+        "min_span_ms": 1600,
+        "min_observations": 18,
+        "min_motion_fraction": 0.45,
+        "min_motion_ms": 0
+      },
+      "selected_body_distance": 0.2,
+      "minimum_output_ms": 3000,
+      "region_polygon": [
+        [
+          600,
+          250
+        ],
+        [
+          1450,
+          250
+        ],
+        [
+          1920,
+          1080
+        ],
+        [
+          0,
+          1080
+        ]
+      ],
+      "region_near_ms": 1600,
+      "region_min_points": 8,
+      "association_method": "quadratic",
+      "association_gap_ms": 300,
+      "copied_C_report_sha256": "b1901e6cccad954e0d2957a1edf0af98e5d18317f551943da000f7bb24b4c62b",
+      "source_config_sha256": "a94f33fae2525c4e9986314c2e5ad3782a3535773f7b38a51013e7ab02f614bf",
+      "helpers_sha256": {
+        "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/replay.py": "054511e043693ea63edbf73b5dc421f0485721f6d205c919806485e40d8bc03b",
+        "models/SoloShuttlePose/.runtime/c1-player-path-20261017/player_paths.py": "f78cc53ca13658cabadf7e1924dc315397b3f105ad4ec23c533deabe9f9589fe",
+        "models/SoloShuttlePose/.runtime/c1-player-path-20261017/shuttle_paths.py": "17eeda14f4e144d0dc8c6c62d05857a69a09046be49eeb1ccd4b049a6fa620e1",
+        "models/SoloShuttlePose/.runtime/c1-player-path-20261017/coherent_flights.py": "42377c09d4d6f5652f1d0c657a93fa8caf14c5bb5175dffc744dbfef97b4f371",
+        "models/SoloShuttlePose/.runtime/c1-player-path-20261017/check_short_events.py": "5417d59c8bdaf10718269d36f81a1a9cb134886d2ec91b1e021485e9157d811a",
+        "models/SoloShuttlePose/.runtime/c1-weak-tracks-20261017/evaluate_full_context.py": "ccfc90695dfb59ad6711188af057b0d36afa940c43c425b2ceea50de7c733fb1",
+        "models/SoloShuttlePose/.runtime/c1-region-smoothing-20261017/region_gate.py": "7b0628f26eea65d78440924359e7fa03a3479bd7134ced79bd5b059f3da69381",
+        "models/SoloShuttlePose/.runtime/c1-region-smoothing-20261017/person_gate.py": "d8aa8354b9ef162b254e4c4240edb33a3f122a1447b6f195cf17e33199f621af",
+        "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/high_return.py": "6e751220c72a580602fab610c89ddd9bc6aa000ecaf1001da10d6fe1694b60ed",
+        "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/connected_flight_filter.py": "2d63adc7277320704ab2b68e8dbc2451022d6065fc862d6be5f18eefcd654a80",
+        "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/supported_start.py": "8207d0d6579968df5408420b41fd1086374a4cef205ff68a198b1226183464ca",
+        "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/duration_profiles.py": "98327e2bfcf3700cf107d2640352066ac3850af6a6e330ff035f95b6bee9f0b7",
+        "backend/app/vision/candidate_rally.py": "d534d65af7f16fb5feef99f2dff2011b5d8435cbce9a2c978f28164f66723b71",
+        "backend/app/vision/rally_eval.py": "26b1931830e3f30677ca4c06cd905f2733d909d18e5c855948f391aef0b414f2",
+        "models/SoloShuttlePose/.runtime/c1-region-smoothing-20261017/seeded_source.py": "2b96b39e0be0698733f86e5a35f832996e88d6f1ebbf993578d062af4ae4396e",
+        "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc_features.py": "c36cfa4b14c5cc5e43dea3af7335b988ec2fc9449d260ebeca25dff12d319c5a",
+        "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/attached_motion.py": "5c9aa2c5ef34b8ba0a3db9b034060da46169176ed126da3459f680c05ad98df0"
+      }
+    },
+    "results": [
+      {
+        "sample": {
+          "id": "D1-02",
+          "source_id": "D1",
+          "split_group_id": "D1-same-recording",
+          "split": "diagnostic",
+          "video": "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/clip.mp4",
+          "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-02-20261015/full-v1.json",
+          "validation": "datasets/badminton-v1/local/rally/m1-short-d1-02-20261015/validation.json",
+          "duration_ms": 154989.125,
+          "native_frame_count": 4648,
+          "source_origin_ms": 150989.125,
+          "run_subdirectory": "01-06-clip",
+          "main_court": "Human-confirmed single main court; no numeric ROI.",
+          "truth_count": 9,
+          "excluded_count": 2,
+          "video_sha256": "82d29f3f431cd3ba386af88dc77daaf8e5496ff520ace229e24b8a51f19851b5",
+          "annotation_sha256": "aef30591e01a6853e9a8e3b40e7eb4b85e846cd432bdd78cff6c41cb8c09b102",
+          "validation_sha256": "3d06ab8e473dcf5fd6a1157925e7acf3c5292f0a21271907c81c03379fd96cfa"
+        },
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 19333.3125,
+            "end_ms": 26466.6875,
+            "emitted_at_ms": 154955.8125
+          }
+        ],
+        "full_metrics": {
+          "evaluator_version": "rally-iou-v3",
+          "boundary_policy": {
+            "outward_tolerance_ms": 1500.0,
+            "start_offset_range_ms": [
+              -1500.0,
+              0.0
+            ],
+            "end_offset_range_ms": [
+              0.0,
+              1500.0
+            ],
+            "error_summary_population": "matched_boundaries_outside_acceptable_range",
+            "acceptance_denominator": "all_verified_truth"
+          },
+          "boundary_acceptance": {
+            "truth_count": 9,
+            "matched_count": 1,
+            "start_acceptable_count": 0,
+            "start_acceptable_rate": 0.0,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "truth_count": 9,
+          "prediction_count": 1,
+          "input_prediction_count": 1,
+          "exclusion_policy": "fully_contained_without_truth_overlap",
+          "excluded_events": [
+            {
+              "event_id": "d1-02-event-1",
+              "range_ms": [
+                54867.0,
+                57633.0
+              ],
+              "source_range_ms": [
+                205856.125,
+                208622.125
+              ],
+              "classification": "failed_receive",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            },
+            {
+              "event_id": "d1-02-event-2",
+              "range_ms": [
+                93989.0,
+                98500.0
+              ],
+              "source_range_ms": [
+                244978.125,
+                249489.125
+              ],
+              "classification": "shuttle_return",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            }
+          ],
+          "ignored_predictions": [],
+          "excluded_annotation_ids": [],
+          "matches": [
+            {
+              "prediction_id": 1,
+              "truth_id": 2,
+              "temporal_iou": 0.420558291131477,
+              "start_offset_ms": -1533.375,
+              "end_offset_ms": 2600.0,
+              "start_error_ms": 33.375,
+              "end_error_ms": 1100.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 128489.125
+            }
+          ],
+          "missed_rally_count": 8,
+          "false_positive_count": 0,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "start_error_ms": {
+            "count": 1,
+            "mean": 33.375,
+            "p50": 33.375,
+            "p95": 33.375,
+            "max": 33.375
+          },
+          "end_error_ms": {
+            "count": 1,
+            "mean": 1100.0,
+            "p50": 1100.0,
+            "p95": 1100.0,
+            "max": 1100.0
+          },
+          "output_latency_ms": {
+            "count": 1,
+            "mean": 128489.125,
+            "p50": 128489.125,
+            "p95": 128489.125,
+            "max": 128489.125
+          },
+          "unmatched_prediction_ids": [],
+          "unmatched_truth_ids": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            9,
+            10,
+            11
+          ],
+          "prediction_overlaps": {
+            "1": [
+              2
+            ]
+          },
+          "truth_overlaps": {
+            "1": [],
+            "2": [
+              1
+            ],
+            "3": [],
+            "4": [],
+            "6": [],
+            "7": [],
+            "9": [],
+            "10": [],
+            "11": []
+          },
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 19333.3125,
+              "end_ms": 26466.6875,
+              "emitted_at_ms": 154955.8125
+            }
+          ],
+          "annotations": [
+            {
+              "rally_id": 1,
+              "start_ms": 7866.6875,
+              "end_ms": 11066.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 20866.6875,
+              "end_ms": 23866.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 34366.6875,
+              "end_ms": 38566.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 42366.6875,
+              "end_ms": 47800.0,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 65866.6875,
+              "end_ms": 71133.3125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 82133.3125,
+              "end_ms": 90855.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 107289.125,
+              "end_ms": 115422.4375,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 10,
+              "start_ms": 128555.8125,
+              "end_ms": 132555.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 11,
+              "start_ms": 144855.8125,
+              "end_ms": 150555.8125,
+              "review_status": "verified"
+            }
+          ]
+        },
+        "retained_time": {
+          "target_ms": 47655.75,
+          "retained_target_ms": 3000.0,
+          "non_target_ms": 100056.375,
+          "retained_non_target_ms": 4133.375,
+          "ignored_ms": 7277.0,
+          "target_retention": 0.06295148014667695,
+          "non_target_retention": 0.041310461227483004
+        },
+        "subsets": {
+          "3000": {
+            "threshold_ms": 3000,
+            "truth_count": 8,
+            "target_ms": 44655.75,
+            "retained_target_ms": 0,
+            "target_retention": 0.0,
+            "missed_ids": [
+              1,
+              3,
+              4,
+              6,
+              7,
+              9,
+              10,
+              11
+            ],
+            "both_acceptable_count": 0
+          },
+          "5000": {
+            "threshold_ms": 5000,
+            "truth_count": 5,
+            "target_ms": 33255.75,
+            "retained_target_ms": 0,
+            "target_retention": 0.0,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9,
+              11
+            ],
+            "both_acceptable_count": 0
+          }
+        },
+        "decisions": {
+          "grouped": [
+            {
+              "rally_id": 1,
+              "start_ms": 8900.0,
+              "end_ms": 10633.3125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 19333.3125,
+              "end_ms": 26366.6875,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 36300.0,
+              "end_ms": 38200.0,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 55200.0,
+              "end_ms": 56933.3125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 5,
+              "start_ms": 73100.0,
+              "end_ms": 75800.0,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 128989.125,
+              "end_ms": 131155.8125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 144722.4375,
+              "end_ms": 146389.125,
+              "emitted_at_ms": 154955.8125
+            }
+          ],
+          "arc": [
+            {
+              "prediction": {
+                "rally_id": 1,
+                "start_ms": 8900.0,
+                "end_ms": 10633.3125,
+                "emitted_at_ms": 154955.8125
+              },
+              "features": {
+                "count": 18,
+                "start_ms": 10033.3125,
+                "end_ms": 10600.0,
+                "span_ms": 566.6875,
+                "max_gap_ms": 33.375,
+                "extent_px": 178.2729648600707,
+                "fit": {
+                  "rms_px": 10.840196651807677,
+                  "max_px": 24.82279656205551,
+                  "strict_rms_px": 12.004948646642596,
+                  "acceleration_px_s2": [
+                    -387.46237998529216,
+                    -2156.739561980235
+                  ],
+                  "coefficients": [
+                    [
+                      568.0857540397207,
+                      553.0850772665385
+                    ],
+                    [
+                      107.85566771376064,
+                      231.49930385171962
+                    ],
+                    [
+                      -193.73118999264608,
+                      -1078.3697809901175
+                    ]
+                  ]
+                }
+              },
+              "delete": false
+            },
+            {
+              "prediction": {
+                "rally_id": 2,
+                "start_ms": 19333.3125,
+                "end_ms": 26366.6875,
+                "emitted_at_ms": 154955.8125
+              },
+              "features": {
+                "count": 53,
+                "start_ms": 19466.6875,
+                "end_ms": 25933.3125,
+                "span_ms": 6466.625,
+                "max_gap_ms": 1966.6875,
+                "extent_px": 490.56249601860105,
+                "fit": {
+                  "rms_px": 100.25362235781319,
+                  "max_px": 189.4027288407591,
+                  "strict_rms_px": 115.78518292925743,
+                  "acceleration_px_s2": [
+                    -27.965831639714594,
+                    -8.429020533243428
+                  ],
+                  "coefficients": [
+                    [
+                      801.269057871523,
+                      462.0591110504204
+                    ],
+                    [
+                      -46.15075673224251,
+                      6.7123931167552024
+                    ],
+                    [
+                      -13.982915819857297,
+                      -4.214510266621714
+                    ]
+                  ]
+                }
+              },
+              "delete": false
+            },
+            {
+              "prediction": {
+                "rally_id": 3,
+                "start_ms": 36300.0,
+                "end_ms": 38200.0,
+                "emitted_at_ms": 154955.8125
+              },
+              "features": {
+                "count": 15,
+                "start_ms": 36333.3125,
+                "end_ms": 36866.6875,
+                "span_ms": 533.375,
+                "max_gap_ms": 66.6875,
+                "extent_px": 507.4707503886308,
+                "fit": {
+                  "rms_px": 30.82979554548986,
+                  "max_px": 78.3665047955219,
+                  "strict_rms_px": 32.82930925703299,
+                  "acceleration_px_s2": [
+                    973.1095152232881,
+                    3462.015330438363
+                  ],
+                  "coefficients": [
+                    [
+                      966.2503850698508,
+                      265.89090972819776
+                    ],
+                    [
+                      680.9639568626127,
+                      217.84305799921978
+                    ],
+                    [
+                      486.55475761164405,
+                      1731.0076652191815
+                    ]
+                  ]
+                }
+              },
+              "delete": false
+            },
+            {
+              "prediction": {
+                "rally_id": 4,
+                "start_ms": 55200.0,
+                "end_ms": 56933.3125,
+                "emitted_at_ms": 154955.8125
+              },
+              "features": {
+                "count": 37,
+                "start_ms": 55266.6875,
+                "end_ms": 56900.0,
+                "span_ms": 1633.3125,
+                "max_gap_ms": 400.0,
+                "extent_px": 419.4974672152384,
+                "fit": {
+                  "rms_px": 70.55602625635454,
+                  "max_px": 165.0926462993815,
+                  "strict_rms_px": 71.02000315807793,
+                  "acceleration_px_s2": [
+                    73.95726084752488,
+                    46.29842745138171
+                  ],
+                  "coefficients": [
+                    [
+                      856.0841323800202,
+                      445.3721611236598
+                    ],
+                    [
+                      -107.48900915344647,
+                      181.47417762183687
+                    ],
+                    [
+                      36.97863042376244,
+                      23.149213725690856
+                    ]
+                  ]
+                }
+              },
+              "delete": false
+            },
+            {
+              "prediction": {
+                "rally_id": 5,
+                "start_ms": 73100.0,
+                "end_ms": 75800.0,
+                "emitted_at_ms": 154955.8125
+              },
+              "features": {
+                "count": 25,
+                "start_ms": 74700.0,
+                "end_ms": 75600.0,
+                "span_ms": 900.0,
+                "max_gap_ms": 100.0,
+                "extent_px": 381.41389919613573,
+                "fit": {
+                  "rms_px": 32.6172767329781,
+                  "max_px": 65.49778430860019,
+                  "strict_rms_px": 34.791044740650975,
+                  "acceleration_px_s2": [
+                    -394.67227202348687,
+                    -1568.8899285992247
+                  ],
+                  "coefficients": [
+                    [
+                      908.1081306863719,
+                      618.0269291068454
+                    ],
+                    [
+                      207.43434712115788,
+                      359.89480917203264
+                    ],
+                    [
+                      -197.33613601174343,
+                      -784.4449642996124
+                    ]
+                  ]
+                }
+              },
+              "delete": false
+            },
+            {
+              "prediction": {
+                "rally_id": 6,
+                "start_ms": 128989.125,
+                "end_ms": 131155.8125,
+                "emitted_at_ms": 154955.8125
+              },
+              "features": {
+                "count": 15,
+                "start_ms": 130589.125,
+                "end_ms": 131122.4375,
+                "span_ms": 533.3125,
+                "max_gap_ms": 66.6875,
+                "extent_px": 325.5596143565722,
+                "fit": {
+                  "rms_px": 63.99781148925334,
+                  "max_px": 156.13271560027835,
+                  "strict_rms_px": 92.87495346782855,
+                  "acceleration_px_s2": [
+                    5415.7234573005935,
+                    -234.42360913727217
+                  ],
+                  "coefficients": [
+                    [
+                      818.0877508209293,
+                      474.71016799535056
+                    ],
+                    [
+                      -69.94819268991559,
+                      93.95974592595762
+                    ],
+                    [
+                      2707.8617286502968,
+                      -117.21180456863608
+                    ]
+                  ]
+                }
+              },
+              "delete": false
+            },
+            {
+              "prediction": {
+                "rally_id": 7,
+                "start_ms": 144722.4375,
+                "end_ms": 146389.125,
+                "emitted_at_ms": 154955.8125
+              },
+              "features": {
+                "count": 8,
+                "start_ms": 145255.8125,
+                "end_ms": 145489.125,
+                "span_ms": 233.3125,
+                "max_gap_ms": 33.375,
+                "extent_px": 164.35955250608345,
+                "fit": {
+                  "rms_px": 6.035352266808813,
+                  "max_px": 13.328171319052618,
+                  "strict_rms_px": 6.2813286235013965,
+                  "acceleration_px_s2": [
+                    -683.7846999190042,
+                    603.9836548559354
+                  ],
+                  "coefficients": [
+                    [
+                      830.2755330973899,
+                      325.8947095705027
+                    ],
+                    [
+                      373.67379649440574,
+                      -590.6409461627516
+                    ],
+                    [
+                      -341.8923499595021,
+                      301.9918274279677
+                    ]
+                  ]
+                }
+              },
+              "delete": false
+            }
+          ],
+          "person_short": [
+            {
+              "prediction": {
+                "rally_id": 1,
+                "start_ms": 8900.0,
+                "end_ms": 10633.3125,
+                "emitted_at_ms": 154955.8125
+              },
+              "short_ms": 1733.3125,
+              "selected_both_people_fraction": 0.4444444444444444,
+              "contact_observation_count": 25,
+              "contact_span_ms": 1333.3125,
+              "player_ids": [
+                1
+              ],
+              "delete": false,
+              "flight_ids": [
+                10,
+                18,
+                19
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 2,
+                "start_ms": 19333.3125,
+                "end_ms": 26366.6875,
+                "emitted_at_ms": 154955.8125
+              },
+              "short_ms": 7033.375,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 56,
+              "contact_span_ms": 7033.375,
+              "player_ids": [
+                0,
+                1
+              ],
+              "delete": false,
+              "flight_ids": [
+                3,
+                6,
+                25,
+                30,
+                42,
+                66,
+                68,
+                77
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 3,
+                "start_ms": 36300.0,
+                "end_ms": 38200.0,
+                "emitted_at_ms": 154955.8125
+              },
+              "short_ms": 1900.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 25,
+              "contact_span_ms": 1766.6875,
+              "player_ids": [
+                0,
+                1
+              ],
+              "delete": false,
+              "flight_ids": [
+                4,
+                5,
+                36
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 4,
+                "start_ms": 55200.0,
+                "end_ms": 56933.3125,
+                "emitted_at_ms": 154955.8125
+              },
+              "short_ms": 1733.3125,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 15,
+              "contact_span_ms": 666.6875,
+              "player_ids": [
+                1
+              ],
+              "delete": true,
+              "flight_ids": [
+                1,
+                38
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 5,
+                "start_ms": 73100.0,
+                "end_ms": 75800.0,
+                "emitted_at_ms": 154955.8125
+              },
+              "short_ms": 2700.0,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 20,
+              "contact_span_ms": 1033.3125,
+              "player_ids": [
+                0
+              ],
+              "delete": true,
+              "flight_ids": [
+                0,
+                17
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 6,
+                "start_ms": 128989.125,
+                "end_ms": 131155.8125,
+                "emitted_at_ms": 154955.8125
+              },
+              "short_ms": 2166.6875,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 36,
+              "contact_span_ms": 2100.0,
+              "player_ids": [
+                0,
+                1
+              ],
+              "delete": false,
+              "flight_ids": [
+                7,
+                27,
+                44,
+                54,
+                57
+              ]
+            },
+            {
+              "prediction": {
+                "rally_id": 7,
+                "start_ms": 144722.4375,
+                "end_ms": 146389.125,
+                "emitted_at_ms": 154955.8125
+              },
+              "short_ms": 1666.6875,
+              "selected_both_people_fraction": 1.0,
+              "contact_observation_count": 27,
+              "contact_span_ms": 1566.6875,
+              "player_ids": [
+                0,
+                1
+              ],
+              "delete": false,
+              "flight_ids": [
+                11,
+                12,
+                59,
+                87,
+                88
+              ]
+            }
+          ],
+          "high_return": [
+            {
+              "original": {
+                "rally_id": 1,
+                "start_ms": 8900.0,
+                "end_ms": 10633.3125,
+                "emitted_at_ms": 154955.8125
+              },
+              "new_end_ms": 10633.3125,
+              "links": []
+            },
+            {
+              "original": {
+                "rally_id": 2,
+                "start_ms": 19333.3125,
+                "end_ms": 26366.6875,
+                "emitted_at_ms": 154955.8125
+              },
+              "new_end_ms": 26466.6875,
+              "links": [
+                {
+                  "type": "same_observed_flight",
+                  "flight_id": 6,
+                  "end_ms": 26466.6875
+                },
+                {
+                  "type": "same_observed_flight",
+                  "flight_id": 77,
+                  "end_ms": 26400.0
+                }
+              ]
+            },
+            {
+              "original": {
+                "rally_id": 3,
+                "start_ms": 36300.0,
+                "end_ms": 38200.0,
+                "emitted_at_ms": 154955.8125
+              },
+              "new_end_ms": 38200.0,
+              "links": []
+            },
+            {
+              "original": {
+                "rally_id": 6,
+                "start_ms": 128989.125,
+                "end_ms": 131155.8125,
+                "emitted_at_ms": 154955.8125
+              },
+              "new_end_ms": 131155.8125,
+              "links": []
+            },
+            {
+              "original": {
+                "rally_id": 7,
+                "start_ms": 144722.4375,
+                "end_ms": 146389.125,
+                "emitted_at_ms": 154955.8125
+              },
+              "new_end_ms": 146389.125,
+              "links": []
+            }
+          ],
+          "short_flight": [
+            {
+              "prediction": {
+                "rally_id": 2,
+                "start_ms": 19333.3125,
+                "end_ms": 26466.6875,
+                "emitted_at_ms": 154955.8125
+              },
+              "strong_flight_ids": [
+                3,
+                6,
+                30
+              ],
+              "single_flight_candidate": false,
+              "connected_flight_veto": [],
+              "delete": false
+            }
+          ],
+          "start": [
+            {
+              "original": {
+                "rally_id": 2,
+                "start_ms": 19333.3125,
+                "end_ms": 26466.6875,
+                "emitted_at_ms": 154955.8125
+              },
+              "new_start_ms": 19333.3125,
+              "first_supported_ms": 19333.3125
+            }
+          ]
+        },
+        "person_source": {
+          "path": "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/replay-valid/D1-02/players.jsonl",
+          "sha256": "52725128a946447d684b3824b53fbe7b7127edc532689a79f2c1f674578ebcf1",
+          "source_path": "models/yolo11n/.runtime/d1-c-parameters-20261017/D1-02/people.jsonl",
+          "source_sha256": "7846316a391f8676978a449a2f25b2352049ff4b954656da09c4ad3a3948a665",
+          "minimum_foot_y": 417.4770202636719,
+          "selected_counts": {
+            "0": 2,
+            "1": 85,
+            "2": 688
+          }
+        },
+        "source_hashes": {
+          "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/D1-02/native.jsonl": "6fd9fd2e3b88eb1b3dcd7e690b5312106cc13901e65dcc665e080b5f2548cef8",
+          "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/D1-02/shifted.jsonl": "29910b30f37b8e748909cd9206863a11c4483915093aaa4cd6ac9dcd4696e815"
+        }
+      }
+    ],
+    "summary": {
+      "group": "D",
+      "target_ms": 47655.75,
+      "retained_target_ms": 3000.0,
+      "retained_non_target_ms": 4133.375,
+      "truth_count": 9,
+      "prediction_count": 1,
+      "missed_rally_count": 8,
+      "false_positive_count": 0,
+      "false_split_count": 0,
+      "false_merge_count": 0,
+      "both_acceptable_count": 0,
+      "subsets": {
+        "3000": {
+          "truth_count": 8,
+          "target_ms": 44655.75,
+          "retained_target_ms": 0,
+          "target_retention": 0.0,
+          "missed_rally_count": 8,
+          "both_acceptable_count": 0
+        },
+        "5000": {
+          "truth_count": 5,
+          "target_ms": 33255.75,
+          "retained_target_ms": 0,
+          "target_retention": 0.0,
+          "missed_rally_count": 5,
+          "both_acceptable_count": 0
+        }
+      },
+      "target_retention": 0.06295148014667695
+    }
+  },
+  "previous_same_clip": [
+    {
+      "sample_id": "D1-02",
+      "previous_metrics": {
+        "evaluator_version": "rally-iou-v3",
+        "boundary_policy": {
+          "outward_tolerance_ms": 1500.0,
+          "start_offset_range_ms": [
+            -1500.0,
+            0.0
+          ],
+          "end_offset_range_ms": [
+            0.0,
+            1500.0
+          ],
+          "error_summary_population": "matched_boundaries_outside_acceptable_range",
+          "acceptance_denominator": "all_verified_truth"
+        },
+        "boundary_acceptance": {
+          "truth_count": 9,
+          "matched_count": 9,
+          "start_acceptable_count": 2,
+          "start_acceptable_rate": 0.2222222222222222,
+          "end_acceptable_count": 0,
+          "end_acceptable_rate": 0.0,
+          "both_acceptable_count": 0,
+          "both_acceptable_rate": 0.0
+        },
+        "truth_count": 9,
+        "prediction_count": 10,
+        "input_prediction_count": 10,
+        "exclusion_policy": "fully_contained_without_truth_overlap",
+        "excluded_events": [
+          {
+            "event_id": "d1-02-event-1",
+            "range_ms": [
+              54867.0,
+              57633.0
+            ],
+            "source_range_ms": [
+              205856.125,
+              208622.125
+            ],
+            "classification": "failed_receive",
+            "review_status": "human_confirmed",
+            "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+            "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。",
+            "include_in_target_rallies": false,
+            "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+          },
+          {
+            "event_id": "d1-02-event-2",
+            "range_ms": [
+              93989.0,
+              98500.0
+            ],
+            "source_range_ms": [
+              244978.125,
+              249489.125
+            ],
+            "classification": "shuttle_return",
+            "review_status": "human_confirmed",
+            "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+            "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。",
+            "include_in_target_rallies": false,
+            "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+          }
+        ],
+        "ignored_predictions": [],
+        "excluded_annotation_ids": [],
+        "matches": [
+          {
+            "prediction_id": 1,
+            "truth_id": 1,
+            "temporal_iou": 0.26643872499724264,
+            "start_offset_ms": 633.3125,
+            "end_offset_ms": 6433.3125,
+            "start_error_ms": 633.3125,
+            "end_error_ms": 4933.3125,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 137455.8125
+          },
+          {
+            "prediction_id": 2,
+            "truth_id": 2,
+            "temporal_iou": 0.3055598958333333,
+            "start_offset_ms": 66.625,
+            "end_offset_ms": 6600.0,
+            "start_error_ms": 66.625,
+            "end_error_ms": 5100.0,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 124489.125
+          },
+          {
+            "prediction_id": 3,
+            "truth_id": 3,
+            "temporal_iou": 0.3631902985074627,
+            "start_offset_ms": 1766.625,
+            "end_offset_ms": 2500.0,
+            "start_error_ms": 1766.625,
+            "end_error_ms": 1000.0,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 113889.125
+          },
+          {
+            "prediction_id": 4,
+            "truth_id": 4,
+            "temporal_iou": 0.24909803496849045,
+            "start_offset_ms": 3133.3125,
+            "end_offset_ms": 3800.0,
+            "start_error_ms": 3133.3125,
+            "end_error_ms": 2300.0,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 103355.8125
+          },
+          {
+            "prediction_id": 6,
+            "truth_id": 6,
+            "temporal_iou": 0.4146948818897638,
+            "start_offset_ms": -133.375,
+            "end_offset_ms": 7300.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 5800.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 76522.5
+          },
+          {
+            "prediction_id": 7,
+            "truth_id": 7,
+            "temporal_iou": 0.5437686118486358,
+            "start_offset_ms": 300.0,
+            "end_offset_ms": 6766.625,
+            "start_error_ms": 300.0,
+            "end_error_ms": 5266.625,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 57333.375
+          },
+          {
+            "prediction_id": 8,
+            "truth_id": 9,
+            "temporal_iou": 0.6508356334420975,
+            "start_offset_ms": 366.6875,
+            "end_offset_ms": 3800.0,
+            "start_error_ms": 366.6875,
+            "end_error_ms": 2300.0,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 35733.375
+          },
+          {
+            "prediction_id": 9,
+            "truth_id": 10,
+            "temporal_iou": 0.2690590500533914,
+            "start_offset_ms": -2600.0,
+            "end_offset_ms": 8266.625,
+            "start_error_ms": 1100.0,
+            "end_error_ms": 6766.625,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 14133.375
+          },
+          {
+            "prediction_id": 10,
+            "truth_id": 11,
+            "temporal_iou": 0.6218210082773103,
+            "start_offset_ms": -200.0,
+            "end_offset_ms": 3266.625,
+            "start_error_ms": 0.0,
+            "end_error_ms": 1766.625,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 1133.375
+          }
+        ],
+        "missed_rally_count": 0,
+        "false_positive_count": 1,
+        "false_split_count": 0,
+        "false_merge_count": 0,
+        "start_error_ms": {
+          "count": 7,
+          "mean": 1052.3660714285713,
+          "p50": 633.3125,
+          "p95": 2723.306249999999,
+          "max": 3133.3125
+        },
+        "end_error_ms": {
+          "count": 9,
+          "mean": 3914.7986111111113,
+          "p50": 4933.3125,
+          "p95": 6379.974999999999,
+          "max": 6766.625
+        },
+        "output_latency_ms": {
+          "count": 10,
+          "mean": 75703.5,
+          "p50": 84755.8125,
+          "p95": 131620.80312499998,
+          "max": 137455.8125
+        },
+        "unmatched_prediction_ids": [
+          5
+        ],
+        "unmatched_truth_ids": [],
+        "prediction_overlaps": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            3
+          ],
+          "4": [
+            4
+          ],
+          "5": [],
+          "6": [
+            6
+          ],
+          "7": [
+            7
+          ],
+          "8": [
+            9
+          ],
+          "9": [
+            10
+          ],
+          "10": [
+            11
+          ]
+        },
+        "truth_overlaps": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            3
+          ],
+          "4": [
+            4
+          ],
+          "6": [
+            6
+          ],
+          "7": [
+            7
+          ],
+          "9": [
+            8
+          ],
+          "10": [
+            9
+          ],
+          "11": [
+            10
+          ]
+        },
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 8500.0,
+            "end_ms": 17500.0,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 20933.3125,
+            "end_ms": 30466.6875,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 36133.3125,
+            "end_ms": 41066.6875,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 45500.0,
+            "end_ms": 51600.0,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 55100.0,
+            "end_ms": 61966.6875,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 65733.3125,
+            "end_ms": 78433.3125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 82433.3125,
+            "end_ms": 97622.4375,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 107655.8125,
+            "end_ms": 119222.4375,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 125955.8125,
+            "end_ms": 140822.4375,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 144655.8125,
+            "end_ms": 153822.4375,
+            "emitted_at_ms": 154955.8125
+          }
+        ],
+        "annotations": [
+          {
+            "rally_id": 1,
+            "start_ms": 7866.6875,
+            "end_ms": 11066.6875,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 20866.6875,
+            "end_ms": 23866.6875,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 34366.6875,
+            "end_ms": 38566.6875,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 42366.6875,
+            "end_ms": 47800.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 65866.6875,
+            "end_ms": 71133.3125,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 82133.3125,
+            "end_ms": 90855.8125,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 107289.125,
+            "end_ms": 115422.4375,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 128555.8125,
+            "end_ms": 132555.8125,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 11,
+            "start_ms": 144855.8125,
+            "end_ms": 150555.8125,
+            "review_status": "verified"
+          }
+        ]
+      },
+      "previous_retained_time": {
+        "target_ms": 47655.75,
+        "retained_target_ms": 41389.1875,
+        "non_target_ms": 100056.375,
+        "retained_non_target_ms": 52366.8125,
+        "ignored_ms": 7277.0,
+        "target_retention": 0.8685035383977799,
+        "non_target_retention": 0.523373073429854
+      },
+      "previous_subsets": {
+        "3000": {
+          "threshold_ms": 3000,
+          "truth_count": 8,
+          "target_ms": 44655.75,
+          "retained_target_ms": 38455.8125,
+          "target_retention": 0.8611614965597936,
+          "missed_ids": [],
+          "both_acceptable_count": 0
+        },
+        "5000": {
+          "threshold_ms": 5000,
+          "truth_count": 5,
+          "target_ms": 33255.75,
+          "retained_target_ms": 29455.75,
+          "target_retention": 0.8857340459920465,
+          "missed_ids": [],
+          "both_acceptable_count": 0
+        }
+      }
+    }
+  ],
+  "verification": {
+    "status": "passed",
+    "source_sha256": "81f05744b9d5598ee7784cc947ca2399e7652f157a68ff9062a0731e4b10ac2c",
+    "script_sha256": "ed32002d46ce4776b9e511b97746547bba845a93d5aff8ccceda7068c21a4de6",
+    "checks": [
+      {
+        "sample": "D1-02",
+        "native_frames": 4647,
+        "shifted_frames": 4648,
+        "old_native_points_match": true,
+        "probe_frames": 24,
+        "observed_flight_points": 1179,
+        "person_box_provenance_passed": true,
+        "predictions_reproduced": true,
+        "independent_counts_passed": true,
+        "retained_target_ms": 3000.0,
+        "retained_non_target_ms": 4133.375
+      }
+    ]
+  },
+  "stage_diagnostics": {
+    "status": "unchanged_pipeline_stage_diagnostics_not_new_algorithms",
+    "results": [
+      {
+        "stage": "初步分组",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 8900.0,
+            "end_ms": 10633.3125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 19333.3125,
+            "end_ms": 26366.6875,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 36300.0,
+            "end_ms": 38200.0,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 55200.0,
+            "end_ms": 56933.3125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 73100.0,
+            "end_ms": 75800.0,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 128989.125,
+            "end_ms": 131155.8125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 144722.4375,
+            "end_ms": 146389.125,
+            "emitted_at_ms": 154955.8125
+          }
+        ],
+        "full_metrics": {
+          "evaluator_version": "rally-iou-v3",
+          "boundary_policy": {
+            "outward_tolerance_ms": 1500.0,
+            "start_offset_range_ms": [
+              -1500.0,
+              0.0
+            ],
+            "end_offset_range_ms": [
+              0.0,
+              1500.0
+            ],
+            "error_summary_population": "matched_boundaries_outside_acceptable_range",
+            "acceptance_denominator": "all_verified_truth"
+          },
+          "boundary_acceptance": {
+            "truth_count": 9,
+            "matched_count": 5,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.1111111111111111,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "truth_count": 9,
+          "prediction_count": 6,
+          "input_prediction_count": 7,
+          "exclusion_policy": "fully_contained_without_truth_overlap",
+          "excluded_events": [
+            {
+              "event_id": "d1-02-event-1",
+              "range_ms": [
+                54867.0,
+                57633.0
+              ],
+              "source_range_ms": [
+                205856.125,
+                208622.125
+              ],
+              "classification": "failed_receive",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            },
+            {
+              "event_id": "d1-02-event-2",
+              "range_ms": [
+                93989.0,
+                98500.0
+              ],
+              "source_range_ms": [
+                244978.125,
+                249489.125
+              ],
+              "classification": "shuttle_return",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            }
+          ],
+          "ignored_predictions": [
+            {
+              "prediction": {
+                "rally_id": 4,
+                "start_ms": 55200.0,
+                "end_ms": 56933.3125,
+                "emitted_at_ms": 154955.8125
+              },
+              "event_ids": [
+                "d1-02-event-1"
+              ]
+            }
+          ],
+          "excluded_annotation_ids": [],
+          "matches": [
+            {
+              "prediction_id": 1,
+              "truth_id": 1,
+              "temporal_iou": 0.54166015625,
+              "start_offset_ms": 1033.3125,
+              "end_offset_ms": -433.375,
+              "start_error_ms": 1033.3125,
+              "end_error_ms": 433.375,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 144322.5
+            },
+            {
+              "prediction_id": 2,
+              "truth_id": 2,
+              "temporal_iou": 0.4265377574777401,
+              "start_offset_ms": -1533.375,
+              "end_offset_ms": 2500.0,
+              "start_error_ms": 33.375,
+              "end_error_ms": 1000.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 128589.125
+            },
+            {
+              "prediction_id": 3,
+              "truth_id": 3,
+              "temporal_iou": 0.4523809523809524,
+              "start_offset_ms": 1933.3125,
+              "end_offset_ms": -366.6875,
+              "start_error_ms": 1933.3125,
+              "end_error_ms": 366.6875,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 116755.8125
+            },
+            {
+              "prediction_id": 6,
+              "truth_id": 10,
+              "temporal_iou": 0.541671875,
+              "start_offset_ms": 433.3125,
+              "end_offset_ms": -1400.0,
+              "start_error_ms": 433.3125,
+              "end_error_ms": 1400.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 23800.0
+            },
+            {
+              "prediction_id": 7,
+              "truth_id": 11,
+              "temporal_iou": 0.262851693916472,
+              "start_offset_ms": -133.375,
+              "end_offset_ms": -4166.6875,
+              "start_error_ms": 0.0,
+              "end_error_ms": 4166.6875,
+              "start_acceptable": true,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 8566.6875
+            }
+          ],
+          "missed_rally_count": 4,
+          "false_positive_count": 1,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "start_error_ms": {
+            "count": 4,
+            "mean": 858.328125,
+            "p50": 733.3125,
+            "p95": 1798.3124999999995,
+            "max": 1933.3125
+          },
+          "end_error_ms": {
+            "count": 5,
+            "mean": 1473.35,
+            "p50": 1000.0,
+            "p95": 3613.3499999999995,
+            "max": 4166.6875
+          },
+          "output_latency_ms": {
+            "count": 6,
+            "mean": 83531.65625,
+            "p50": 97955.8125,
+            "p95": 140389.15625,
+            "max": 144322.5
+          },
+          "unmatched_prediction_ids": [
+            5
+          ],
+          "unmatched_truth_ids": [
+            4,
+            6,
+            7,
+            9
+          ],
+          "prediction_overlaps": {
+            "1": [
+              1
+            ],
+            "2": [
+              2
+            ],
+            "3": [
+              3
+            ],
+            "5": [],
+            "6": [
+              10
+            ],
+            "7": [
+              11
+            ]
+          },
+          "truth_overlaps": {
+            "1": [
+              1
+            ],
+            "2": [
+              2
+            ],
+            "3": [
+              3
+            ],
+            "4": [],
+            "6": [],
+            "7": [],
+            "9": [],
+            "10": [
+              6
+            ],
+            "11": [
+              7
+            ]
+          },
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 8900.0,
+              "end_ms": 10633.3125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 19333.3125,
+              "end_ms": 26366.6875,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 36300.0,
+              "end_ms": 38200.0,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 5,
+              "start_ms": 73100.0,
+              "end_ms": 75800.0,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 128989.125,
+              "end_ms": 131155.8125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 144722.4375,
+              "end_ms": 146389.125,
+              "emitted_at_ms": 154955.8125
+            }
+          ],
+          "annotations": [
+            {
+              "rally_id": 1,
+              "start_ms": 7866.6875,
+              "end_ms": 11066.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 20866.6875,
+              "end_ms": 23866.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 34366.6875,
+              "end_ms": 38566.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 42366.6875,
+              "end_ms": 47800.0,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 65866.6875,
+              "end_ms": 71133.3125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 82133.3125,
+              "end_ms": 90855.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 107289.125,
+              "end_ms": 115422.4375,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 10,
+              "start_ms": 128555.8125,
+              "end_ms": 132555.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 11,
+              "start_ms": 144855.8125,
+              "end_ms": 150555.8125,
+              "review_status": "verified"
+            }
+          ]
+        },
+        "retained_time": {
+          "target_ms": 47655.75,
+          "retained_target_ms": 10333.3125,
+          "non_target_ms": 100056.375,
+          "retained_non_target_ms": 6866.75,
+          "ignored_ms": 7277.0,
+          "target_retention": 0.21683243889771958,
+          "non_target_retention": 0.06862881050807607
+        },
+        "subsets": {
+          "3000": {
+            "threshold_ms": 3000,
+            "truth_count": 8,
+            "target_ms": 44655.75,
+            "retained_target_ms": 7333.3125,
+            "target_retention": 0.16421877361817908,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9
+            ],
+            "both_acceptable_count": 0
+          },
+          "5000": {
+            "threshold_ms": 5000,
+            "truth_count": 5,
+            "target_ms": 33255.75,
+            "retained_target_ms": 1533.3125,
+            "target_retention": 0.04610668831705795,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9
+            ],
+            "both_acceptable_count": 0
+          }
+        }
+      },
+      {
+        "stage": "单次弧线过滤后",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 8900.0,
+            "end_ms": 10633.3125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 19333.3125,
+            "end_ms": 26366.6875,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 36300.0,
+            "end_ms": 38200.0,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 55200.0,
+            "end_ms": 56933.3125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 73100.0,
+            "end_ms": 75800.0,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 128989.125,
+            "end_ms": 131155.8125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 144722.4375,
+            "end_ms": 146389.125,
+            "emitted_at_ms": 154955.8125
+          }
+        ],
+        "full_metrics": {
+          "evaluator_version": "rally-iou-v3",
+          "boundary_policy": {
+            "outward_tolerance_ms": 1500.0,
+            "start_offset_range_ms": [
+              -1500.0,
+              0.0
+            ],
+            "end_offset_range_ms": [
+              0.0,
+              1500.0
+            ],
+            "error_summary_population": "matched_boundaries_outside_acceptable_range",
+            "acceptance_denominator": "all_verified_truth"
+          },
+          "boundary_acceptance": {
+            "truth_count": 9,
+            "matched_count": 5,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.1111111111111111,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "truth_count": 9,
+          "prediction_count": 6,
+          "input_prediction_count": 7,
+          "exclusion_policy": "fully_contained_without_truth_overlap",
+          "excluded_events": [
+            {
+              "event_id": "d1-02-event-1",
+              "range_ms": [
+                54867.0,
+                57633.0
+              ],
+              "source_range_ms": [
+                205856.125,
+                208622.125
+              ],
+              "classification": "failed_receive",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            },
+            {
+              "event_id": "d1-02-event-2",
+              "range_ms": [
+                93989.0,
+                98500.0
+              ],
+              "source_range_ms": [
+                244978.125,
+                249489.125
+              ],
+              "classification": "shuttle_return",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            }
+          ],
+          "ignored_predictions": [
+            {
+              "prediction": {
+                "rally_id": 4,
+                "start_ms": 55200.0,
+                "end_ms": 56933.3125,
+                "emitted_at_ms": 154955.8125
+              },
+              "event_ids": [
+                "d1-02-event-1"
+              ]
+            }
+          ],
+          "excluded_annotation_ids": [],
+          "matches": [
+            {
+              "prediction_id": 1,
+              "truth_id": 1,
+              "temporal_iou": 0.54166015625,
+              "start_offset_ms": 1033.3125,
+              "end_offset_ms": -433.375,
+              "start_error_ms": 1033.3125,
+              "end_error_ms": 433.375,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 144322.5
+            },
+            {
+              "prediction_id": 2,
+              "truth_id": 2,
+              "temporal_iou": 0.4265377574777401,
+              "start_offset_ms": -1533.375,
+              "end_offset_ms": 2500.0,
+              "start_error_ms": 33.375,
+              "end_error_ms": 1000.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 128589.125
+            },
+            {
+              "prediction_id": 3,
+              "truth_id": 3,
+              "temporal_iou": 0.4523809523809524,
+              "start_offset_ms": 1933.3125,
+              "end_offset_ms": -366.6875,
+              "start_error_ms": 1933.3125,
+              "end_error_ms": 366.6875,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 116755.8125
+            },
+            {
+              "prediction_id": 6,
+              "truth_id": 10,
+              "temporal_iou": 0.541671875,
+              "start_offset_ms": 433.3125,
+              "end_offset_ms": -1400.0,
+              "start_error_ms": 433.3125,
+              "end_error_ms": 1400.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 23800.0
+            },
+            {
+              "prediction_id": 7,
+              "truth_id": 11,
+              "temporal_iou": 0.262851693916472,
+              "start_offset_ms": -133.375,
+              "end_offset_ms": -4166.6875,
+              "start_error_ms": 0.0,
+              "end_error_ms": 4166.6875,
+              "start_acceptable": true,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 8566.6875
+            }
+          ],
+          "missed_rally_count": 4,
+          "false_positive_count": 1,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "start_error_ms": {
+            "count": 4,
+            "mean": 858.328125,
+            "p50": 733.3125,
+            "p95": 1798.3124999999995,
+            "max": 1933.3125
+          },
+          "end_error_ms": {
+            "count": 5,
+            "mean": 1473.35,
+            "p50": 1000.0,
+            "p95": 3613.3499999999995,
+            "max": 4166.6875
+          },
+          "output_latency_ms": {
+            "count": 6,
+            "mean": 83531.65625,
+            "p50": 97955.8125,
+            "p95": 140389.15625,
+            "max": 144322.5
+          },
+          "unmatched_prediction_ids": [
+            5
+          ],
+          "unmatched_truth_ids": [
+            4,
+            6,
+            7,
+            9
+          ],
+          "prediction_overlaps": {
+            "1": [
+              1
+            ],
+            "2": [
+              2
+            ],
+            "3": [
+              3
+            ],
+            "5": [],
+            "6": [
+              10
+            ],
+            "7": [
+              11
+            ]
+          },
+          "truth_overlaps": {
+            "1": [
+              1
+            ],
+            "2": [
+              2
+            ],
+            "3": [
+              3
+            ],
+            "4": [],
+            "6": [],
+            "7": [],
+            "9": [],
+            "10": [
+              6
+            ],
+            "11": [
+              7
+            ]
+          },
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 8900.0,
+              "end_ms": 10633.3125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 19333.3125,
+              "end_ms": 26366.6875,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 36300.0,
+              "end_ms": 38200.0,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 5,
+              "start_ms": 73100.0,
+              "end_ms": 75800.0,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 128989.125,
+              "end_ms": 131155.8125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 144722.4375,
+              "end_ms": 146389.125,
+              "emitted_at_ms": 154955.8125
+            }
+          ],
+          "annotations": [
+            {
+              "rally_id": 1,
+              "start_ms": 7866.6875,
+              "end_ms": 11066.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 20866.6875,
+              "end_ms": 23866.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 34366.6875,
+              "end_ms": 38566.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 42366.6875,
+              "end_ms": 47800.0,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 65866.6875,
+              "end_ms": 71133.3125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 82133.3125,
+              "end_ms": 90855.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 107289.125,
+              "end_ms": 115422.4375,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 10,
+              "start_ms": 128555.8125,
+              "end_ms": 132555.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 11,
+              "start_ms": 144855.8125,
+              "end_ms": 150555.8125,
+              "review_status": "verified"
+            }
+          ]
+        },
+        "retained_time": {
+          "target_ms": 47655.75,
+          "retained_target_ms": 10333.3125,
+          "non_target_ms": 100056.375,
+          "retained_non_target_ms": 6866.75,
+          "ignored_ms": 7277.0,
+          "target_retention": 0.21683243889771958,
+          "non_target_retention": 0.06862881050807607
+        },
+        "subsets": {
+          "3000": {
+            "threshold_ms": 3000,
+            "truth_count": 8,
+            "target_ms": 44655.75,
+            "retained_target_ms": 7333.3125,
+            "target_retention": 0.16421877361817908,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9
+            ],
+            "both_acceptable_count": 0
+          },
+          "5000": {
+            "threshold_ms": 5000,
+            "truth_count": 5,
+            "target_ms": 33255.75,
+            "retained_target_ms": 1533.3125,
+            "target_retention": 0.04610668831705795,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9
+            ],
+            "both_acceptable_count": 0
+          }
+        }
+      },
+      {
+        "stage": "人物短事件过滤后",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 8900.0,
+            "end_ms": 10633.3125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 19333.3125,
+            "end_ms": 26366.6875,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 36300.0,
+            "end_ms": 38200.0,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 128989.125,
+            "end_ms": 131155.8125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 144722.4375,
+            "end_ms": 146389.125,
+            "emitted_at_ms": 154955.8125
+          }
+        ],
+        "full_metrics": {
+          "evaluator_version": "rally-iou-v3",
+          "boundary_policy": {
+            "outward_tolerance_ms": 1500.0,
+            "start_offset_range_ms": [
+              -1500.0,
+              0.0
+            ],
+            "end_offset_range_ms": [
+              0.0,
+              1500.0
+            ],
+            "error_summary_population": "matched_boundaries_outside_acceptable_range",
+            "acceptance_denominator": "all_verified_truth"
+          },
+          "boundary_acceptance": {
+            "truth_count": 9,
+            "matched_count": 5,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.1111111111111111,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "truth_count": 9,
+          "prediction_count": 5,
+          "input_prediction_count": 5,
+          "exclusion_policy": "fully_contained_without_truth_overlap",
+          "excluded_events": [
+            {
+              "event_id": "d1-02-event-1",
+              "range_ms": [
+                54867.0,
+                57633.0
+              ],
+              "source_range_ms": [
+                205856.125,
+                208622.125
+              ],
+              "classification": "failed_receive",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            },
+            {
+              "event_id": "d1-02-event-2",
+              "range_ms": [
+                93989.0,
+                98500.0
+              ],
+              "source_range_ms": [
+                244978.125,
+                249489.125
+              ],
+              "classification": "shuttle_return",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            }
+          ],
+          "ignored_predictions": [],
+          "excluded_annotation_ids": [],
+          "matches": [
+            {
+              "prediction_id": 1,
+              "truth_id": 1,
+              "temporal_iou": 0.54166015625,
+              "start_offset_ms": 1033.3125,
+              "end_offset_ms": -433.375,
+              "start_error_ms": 1033.3125,
+              "end_error_ms": 433.375,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 144322.5
+            },
+            {
+              "prediction_id": 2,
+              "truth_id": 2,
+              "temporal_iou": 0.4265377574777401,
+              "start_offset_ms": -1533.375,
+              "end_offset_ms": 2500.0,
+              "start_error_ms": 33.375,
+              "end_error_ms": 1000.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 128589.125
+            },
+            {
+              "prediction_id": 3,
+              "truth_id": 3,
+              "temporal_iou": 0.4523809523809524,
+              "start_offset_ms": 1933.3125,
+              "end_offset_ms": -366.6875,
+              "start_error_ms": 1933.3125,
+              "end_error_ms": 366.6875,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 116755.8125
+            },
+            {
+              "prediction_id": 4,
+              "truth_id": 10,
+              "temporal_iou": 0.541671875,
+              "start_offset_ms": 433.3125,
+              "end_offset_ms": -1400.0,
+              "start_error_ms": 433.3125,
+              "end_error_ms": 1400.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 23800.0
+            },
+            {
+              "prediction_id": 5,
+              "truth_id": 11,
+              "temporal_iou": 0.262851693916472,
+              "start_offset_ms": -133.375,
+              "end_offset_ms": -4166.6875,
+              "start_error_ms": 0.0,
+              "end_error_ms": 4166.6875,
+              "start_acceptable": true,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 8566.6875
+            }
+          ],
+          "missed_rally_count": 4,
+          "false_positive_count": 0,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "start_error_ms": {
+            "count": 4,
+            "mean": 858.328125,
+            "p50": 733.3125,
+            "p95": 1798.3124999999995,
+            "max": 1933.3125
+          },
+          "end_error_ms": {
+            "count": 5,
+            "mean": 1473.35,
+            "p50": 1000.0,
+            "p95": 3613.3499999999995,
+            "max": 4166.6875
+          },
+          "output_latency_ms": {
+            "count": 5,
+            "mean": 84406.825,
+            "p50": 116755.8125,
+            "p95": 141175.825,
+            "max": 144322.5
+          },
+          "unmatched_prediction_ids": [],
+          "unmatched_truth_ids": [
+            4,
+            6,
+            7,
+            9
+          ],
+          "prediction_overlaps": {
+            "1": [
+              1
+            ],
+            "2": [
+              2
+            ],
+            "3": [
+              3
+            ],
+            "4": [
+              10
+            ],
+            "5": [
+              11
+            ]
+          },
+          "truth_overlaps": {
+            "1": [
+              1
+            ],
+            "2": [
+              2
+            ],
+            "3": [
+              3
+            ],
+            "4": [],
+            "6": [],
+            "7": [],
+            "9": [],
+            "10": [
+              4
+            ],
+            "11": [
+              5
+            ]
+          },
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 8900.0,
+              "end_ms": 10633.3125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 19333.3125,
+              "end_ms": 26366.6875,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 36300.0,
+              "end_ms": 38200.0,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 128989.125,
+              "end_ms": 131155.8125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 5,
+              "start_ms": 144722.4375,
+              "end_ms": 146389.125,
+              "emitted_at_ms": 154955.8125
+            }
+          ],
+          "annotations": [
+            {
+              "rally_id": 1,
+              "start_ms": 7866.6875,
+              "end_ms": 11066.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 20866.6875,
+              "end_ms": 23866.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 34366.6875,
+              "end_ms": 38566.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 42366.6875,
+              "end_ms": 47800.0,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 65866.6875,
+              "end_ms": 71133.3125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 82133.3125,
+              "end_ms": 90855.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 107289.125,
+              "end_ms": 115422.4375,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 10,
+              "start_ms": 128555.8125,
+              "end_ms": 132555.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 11,
+              "start_ms": 144855.8125,
+              "end_ms": 150555.8125,
+              "review_status": "verified"
+            }
+          ]
+        },
+        "retained_time": {
+          "target_ms": 47655.75,
+          "retained_target_ms": 10333.3125,
+          "non_target_ms": 100056.375,
+          "retained_non_target_ms": 4166.75,
+          "ignored_ms": 7277.0,
+          "target_retention": 0.21683243889771958,
+          "non_target_retention": 0.04164402318193119
+        },
+        "subsets": {
+          "3000": {
+            "threshold_ms": 3000,
+            "truth_count": 8,
+            "target_ms": 44655.75,
+            "retained_target_ms": 7333.3125,
+            "target_retention": 0.16421877361817908,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9
+            ],
+            "both_acceptable_count": 0
+          },
+          "5000": {
+            "threshold_ms": 5000,
+            "truth_count": 5,
+            "target_ms": 33255.75,
+            "retained_target_ms": 1533.3125,
+            "target_retention": 0.04610668831705795,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9
+            ],
+            "both_acceptable_count": 0
+          }
+        }
+      },
+      {
+        "stage": "末段连接后",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 8900.0,
+            "end_ms": 10633.3125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 19333.3125,
+            "end_ms": 26466.6875,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 36300.0,
+            "end_ms": 38200.0,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 128989.125,
+            "end_ms": 131155.8125,
+            "emitted_at_ms": 154955.8125
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 144722.4375,
+            "end_ms": 146389.125,
+            "emitted_at_ms": 154955.8125
+          }
+        ],
+        "full_metrics": {
+          "evaluator_version": "rally-iou-v3",
+          "boundary_policy": {
+            "outward_tolerance_ms": 1500.0,
+            "start_offset_range_ms": [
+              -1500.0,
+              0.0
+            ],
+            "end_offset_range_ms": [
+              0.0,
+              1500.0
+            ],
+            "error_summary_population": "matched_boundaries_outside_acceptable_range",
+            "acceptance_denominator": "all_verified_truth"
+          },
+          "boundary_acceptance": {
+            "truth_count": 9,
+            "matched_count": 5,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.1111111111111111,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "truth_count": 9,
+          "prediction_count": 5,
+          "input_prediction_count": 5,
+          "exclusion_policy": "fully_contained_without_truth_overlap",
+          "excluded_events": [
+            {
+              "event_id": "d1-02-event-1",
+              "range_ms": [
+                54867.0,
+                57633.0
+              ],
+              "source_range_ms": [
+                205856.125,
+                208622.125
+              ],
+              "classification": "failed_receive",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            },
+            {
+              "event_id": "d1-02-event-2",
+              "range_ms": [
+                93989.0,
+                98500.0
+              ],
+              "source_range_ms": [
+                244978.125,
+                249489.125
+              ],
+              "classification": "shuttle_return",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            }
+          ],
+          "ignored_predictions": [],
+          "excluded_annotation_ids": [],
+          "matches": [
+            {
+              "prediction_id": 1,
+              "truth_id": 1,
+              "temporal_iou": 0.54166015625,
+              "start_offset_ms": 1033.3125,
+              "end_offset_ms": -433.375,
+              "start_error_ms": 1033.3125,
+              "end_error_ms": 433.375,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 144322.5
+            },
+            {
+              "prediction_id": 2,
+              "truth_id": 2,
+              "temporal_iou": 0.420558291131477,
+              "start_offset_ms": -1533.375,
+              "end_offset_ms": 2600.0,
+              "start_error_ms": 33.375,
+              "end_error_ms": 1100.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 128489.125
+            },
+            {
+              "prediction_id": 3,
+              "truth_id": 3,
+              "temporal_iou": 0.4523809523809524,
+              "start_offset_ms": 1933.3125,
+              "end_offset_ms": -366.6875,
+              "start_error_ms": 1933.3125,
+              "end_error_ms": 366.6875,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 116755.8125
+            },
+            {
+              "prediction_id": 4,
+              "truth_id": 10,
+              "temporal_iou": 0.541671875,
+              "start_offset_ms": 433.3125,
+              "end_offset_ms": -1400.0,
+              "start_error_ms": 433.3125,
+              "end_error_ms": 1400.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 23800.0
+            },
+            {
+              "prediction_id": 5,
+              "truth_id": 11,
+              "temporal_iou": 0.262851693916472,
+              "start_offset_ms": -133.375,
+              "end_offset_ms": -4166.6875,
+              "start_error_ms": 0.0,
+              "end_error_ms": 4166.6875,
+              "start_acceptable": true,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 8566.6875
+            }
+          ],
+          "missed_rally_count": 4,
+          "false_positive_count": 0,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "start_error_ms": {
+            "count": 4,
+            "mean": 858.328125,
+            "p50": 733.3125,
+            "p95": 1798.3124999999995,
+            "max": 1933.3125
+          },
+          "end_error_ms": {
+            "count": 5,
+            "mean": 1493.35,
+            "p50": 1100.0,
+            "p95": 3613.3499999999995,
+            "max": 4166.6875
+          },
+          "output_latency_ms": {
+            "count": 5,
+            "mean": 84386.825,
+            "p50": 116755.8125,
+            "p95": 141155.825,
+            "max": 144322.5
+          },
+          "unmatched_prediction_ids": [],
+          "unmatched_truth_ids": [
+            4,
+            6,
+            7,
+            9
+          ],
+          "prediction_overlaps": {
+            "1": [
+              1
+            ],
+            "2": [
+              2
+            ],
+            "3": [
+              3
+            ],
+            "4": [
+              10
+            ],
+            "5": [
+              11
+            ]
+          },
+          "truth_overlaps": {
+            "1": [
+              1
+            ],
+            "2": [
+              2
+            ],
+            "3": [
+              3
+            ],
+            "4": [],
+            "6": [],
+            "7": [],
+            "9": [],
+            "10": [
+              4
+            ],
+            "11": [
+              5
+            ]
+          },
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 8900.0,
+              "end_ms": 10633.3125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 19333.3125,
+              "end_ms": 26466.6875,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 36300.0,
+              "end_ms": 38200.0,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 128989.125,
+              "end_ms": 131155.8125,
+              "emitted_at_ms": 154955.8125
+            },
+            {
+              "rally_id": 5,
+              "start_ms": 144722.4375,
+              "end_ms": 146389.125,
+              "emitted_at_ms": 154955.8125
+            }
+          ],
+          "annotations": [
+            {
+              "rally_id": 1,
+              "start_ms": 7866.6875,
+              "end_ms": 11066.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 20866.6875,
+              "end_ms": 23866.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 34366.6875,
+              "end_ms": 38566.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 42366.6875,
+              "end_ms": 47800.0,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 65866.6875,
+              "end_ms": 71133.3125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 82133.3125,
+              "end_ms": 90855.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 107289.125,
+              "end_ms": 115422.4375,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 10,
+              "start_ms": 128555.8125,
+              "end_ms": 132555.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 11,
+              "start_ms": 144855.8125,
+              "end_ms": 150555.8125,
+              "review_status": "verified"
+            }
+          ]
+        },
+        "retained_time": {
+          "target_ms": 47655.75,
+          "retained_target_ms": 10333.3125,
+          "non_target_ms": 100056.375,
+          "retained_non_target_ms": 4266.75,
+          "ignored_ms": 7277.0,
+          "target_retention": 0.21683243889771958,
+          "non_target_retention": 0.04264345974956618
+        },
+        "subsets": {
+          "3000": {
+            "threshold_ms": 3000,
+            "truth_count": 8,
+            "target_ms": 44655.75,
+            "retained_target_ms": 7333.3125,
+            "target_retention": 0.16421877361817908,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9
+            ],
+            "both_acceptable_count": 0
+          },
+          "5000": {
+            "threshold_ms": 5000,
+            "truth_count": 5,
+            "target_ms": 33255.75,
+            "retained_target_ms": 1533.3125,
+            "target_retention": 0.04610668831705795,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9
+            ],
+            "both_acceptable_count": 0
+          }
+        }
+      },
+      {
+        "stage": "删除不超过3秒输出后",
+        "predictions": [
+          {
+            "rally_id": 2,
+            "start_ms": 19333.3125,
+            "end_ms": 26466.6875,
+            "emitted_at_ms": 154955.8125
+          }
+        ],
+        "full_metrics": {
+          "evaluator_version": "rally-iou-v3",
+          "boundary_policy": {
+            "outward_tolerance_ms": 1500.0,
+            "start_offset_range_ms": [
+              -1500.0,
+              0.0
+            ],
+            "end_offset_range_ms": [
+              0.0,
+              1500.0
+            ],
+            "error_summary_population": "matched_boundaries_outside_acceptable_range",
+            "acceptance_denominator": "all_verified_truth"
+          },
+          "boundary_acceptance": {
+            "truth_count": 9,
+            "matched_count": 1,
+            "start_acceptable_count": 0,
+            "start_acceptable_rate": 0.0,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "truth_count": 9,
+          "prediction_count": 1,
+          "input_prediction_count": 1,
+          "exclusion_policy": "fully_contained_without_truth_overlap",
+          "excluded_events": [
+            {
+              "event_id": "d1-02-event-1",
+              "range_ms": [
+                54867.0,
+                57633.0
+              ],
+              "source_range_ms": [
+                205856.125,
+                208622.125
+              ],
+              "classification": "failed_receive",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            },
+            {
+              "event_id": "d1-02-event-2",
+              "range_ms": [
+                93989.0,
+                98500.0
+              ],
+              "source_range_ms": [
+                244978.125,
+                249489.125
+              ],
+              "classification": "shuttle_return",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            }
+          ],
+          "ignored_predictions": [],
+          "excluded_annotation_ids": [],
+          "matches": [
+            {
+              "prediction_id": 1,
+              "truth_id": 2,
+              "temporal_iou": 0.420558291131477,
+              "start_offset_ms": -1533.375,
+              "end_offset_ms": 2600.0,
+              "start_error_ms": 33.375,
+              "end_error_ms": 1100.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 128489.125
+            }
+          ],
+          "missed_rally_count": 8,
+          "false_positive_count": 0,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "start_error_ms": {
+            "count": 1,
+            "mean": 33.375,
+            "p50": 33.375,
+            "p95": 33.375,
+            "max": 33.375
+          },
+          "end_error_ms": {
+            "count": 1,
+            "mean": 1100.0,
+            "p50": 1100.0,
+            "p95": 1100.0,
+            "max": 1100.0
+          },
+          "output_latency_ms": {
+            "count": 1,
+            "mean": 128489.125,
+            "p50": 128489.125,
+            "p95": 128489.125,
+            "max": 128489.125
+          },
+          "unmatched_prediction_ids": [],
+          "unmatched_truth_ids": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            9,
+            10,
+            11
+          ],
+          "prediction_overlaps": {
+            "1": [
+              2
+            ]
+          },
+          "truth_overlaps": {
+            "1": [],
+            "2": [
+              1
+            ],
+            "3": [],
+            "4": [],
+            "6": [],
+            "7": [],
+            "9": [],
+            "10": [],
+            "11": []
+          },
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 19333.3125,
+              "end_ms": 26466.6875,
+              "emitted_at_ms": 154955.8125
+            }
+          ],
+          "annotations": [
+            {
+              "rally_id": 1,
+              "start_ms": 7866.6875,
+              "end_ms": 11066.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 20866.6875,
+              "end_ms": 23866.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 34366.6875,
+              "end_ms": 38566.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 42366.6875,
+              "end_ms": 47800.0,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 65866.6875,
+              "end_ms": 71133.3125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 82133.3125,
+              "end_ms": 90855.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 107289.125,
+              "end_ms": 115422.4375,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 10,
+              "start_ms": 128555.8125,
+              "end_ms": 132555.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 11,
+              "start_ms": 144855.8125,
+              "end_ms": 150555.8125,
+              "review_status": "verified"
+            }
+          ]
+        },
+        "retained_time": {
+          "target_ms": 47655.75,
+          "retained_target_ms": 3000.0,
+          "non_target_ms": 100056.375,
+          "retained_non_target_ms": 4133.375,
+          "ignored_ms": 7277.0,
+          "target_retention": 0.06295148014667695,
+          "non_target_retention": 0.041310461227483004
+        },
+        "subsets": {
+          "3000": {
+            "threshold_ms": 3000,
+            "truth_count": 8,
+            "target_ms": 44655.75,
+            "retained_target_ms": 0,
+            "target_retention": 0.0,
+            "missed_ids": [
+              1,
+              3,
+              4,
+              6,
+              7,
+              9,
+              10,
+              11
+            ],
+            "both_acceptable_count": 0
+          },
+          "5000": {
+            "threshold_ms": 5000,
+            "truth_count": 5,
+            "target_ms": 33255.75,
+            "retained_target_ms": 0,
+            "target_retention": 0.0,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9,
+              11
+            ],
+            "both_acceptable_count": 0
+          }
+        }
+      },
+      {
+        "stage": "最终结果",
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 19333.3125,
+            "end_ms": 26466.6875,
+            "emitted_at_ms": 154955.8125
+          }
+        ],
+        "full_metrics": {
+          "evaluator_version": "rally-iou-v3",
+          "boundary_policy": {
+            "outward_tolerance_ms": 1500.0,
+            "start_offset_range_ms": [
+              -1500.0,
+              0.0
+            ],
+            "end_offset_range_ms": [
+              0.0,
+              1500.0
+            ],
+            "error_summary_population": "matched_boundaries_outside_acceptable_range",
+            "acceptance_denominator": "all_verified_truth"
+          },
+          "boundary_acceptance": {
+            "truth_count": 9,
+            "matched_count": 1,
+            "start_acceptable_count": 0,
+            "start_acceptable_rate": 0.0,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "truth_count": 9,
+          "prediction_count": 1,
+          "input_prediction_count": 1,
+          "exclusion_policy": "fully_contained_without_truth_overlap",
+          "excluded_events": [
+            {
+              "event_id": "d1-02-event-1",
+              "range_ms": [
+                54867.0,
+                57633.0
+              ],
+              "source_range_ms": [
+                205856.125,
+                208622.125
+              ],
+              "classification": "failed_receive",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "疑似接发失败：发球后近端一次接球，球落近端，未形成持续对打。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            },
+            {
+              "event_id": "d1-02-event-2",
+              "range_ms": [
+                93989.0,
+                98500.0
+              ],
+              "source_range_ms": [
+                244978.125,
+                249489.125
+              ],
+              "classification": "shuttle_return",
+              "review_status": "human_confirmed",
+              "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+              "reason": "近端走动接还球，未进入接发对打姿态，球落近端脚旁。",
+              "include_in_target_rallies": false,
+              "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+            }
+          ],
+          "ignored_predictions": [],
+          "excluded_annotation_ids": [],
+          "matches": [
+            {
+              "prediction_id": 1,
+              "truth_id": 2,
+              "temporal_iou": 0.420558291131477,
+              "start_offset_ms": -1533.375,
+              "end_offset_ms": 2600.0,
+              "start_error_ms": 33.375,
+              "end_error_ms": 1100.0,
+              "start_acceptable": false,
+              "end_acceptable": false,
+              "both_acceptable": false,
+              "output_latency_ms": 128489.125
+            }
+          ],
+          "missed_rally_count": 8,
+          "false_positive_count": 0,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "start_error_ms": {
+            "count": 1,
+            "mean": 33.375,
+            "p50": 33.375,
+            "p95": 33.375,
+            "max": 33.375
+          },
+          "end_error_ms": {
+            "count": 1,
+            "mean": 1100.0,
+            "p50": 1100.0,
+            "p95": 1100.0,
+            "max": 1100.0
+          },
+          "output_latency_ms": {
+            "count": 1,
+            "mean": 128489.125,
+            "p50": 128489.125,
+            "p95": 128489.125,
+            "max": 128489.125
+          },
+          "unmatched_prediction_ids": [],
+          "unmatched_truth_ids": [
+            1,
+            3,
+            4,
+            6,
+            7,
+            9,
+            10,
+            11
+          ],
+          "prediction_overlaps": {
+            "1": [
+              2
+            ]
+          },
+          "truth_overlaps": {
+            "1": [],
+            "2": [
+              1
+            ],
+            "3": [],
+            "4": [],
+            "6": [],
+            "7": [],
+            "9": [],
+            "10": [],
+            "11": []
+          },
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 19333.3125,
+              "end_ms": 26466.6875,
+              "emitted_at_ms": 154955.8125
+            }
+          ],
+          "annotations": [
+            {
+              "rally_id": 1,
+              "start_ms": 7866.6875,
+              "end_ms": 11066.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 20866.6875,
+              "end_ms": 23866.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 34366.6875,
+              "end_ms": 38566.6875,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 42366.6875,
+              "end_ms": 47800.0,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 65866.6875,
+              "end_ms": 71133.3125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 82133.3125,
+              "end_ms": 90855.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 107289.125,
+              "end_ms": 115422.4375,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 10,
+              "start_ms": 128555.8125,
+              "end_ms": 132555.8125,
+              "review_status": "verified"
+            },
+            {
+              "rally_id": 11,
+              "start_ms": 144855.8125,
+              "end_ms": 150555.8125,
+              "review_status": "verified"
+            }
+          ]
+        },
+        "retained_time": {
+          "target_ms": 47655.75,
+          "retained_target_ms": 3000.0,
+          "non_target_ms": 100056.375,
+          "retained_non_target_ms": 4133.375,
+          "ignored_ms": 7277.0,
+          "target_retention": 0.06295148014667695,
+          "non_target_retention": 0.041310461227483004
+        },
+        "subsets": {
+          "3000": {
+            "threshold_ms": 3000,
+            "truth_count": 8,
+            "target_ms": 44655.75,
+            "retained_target_ms": 0,
+            "target_retention": 0.0,
+            "missed_ids": [
+              1,
+              3,
+              4,
+              6,
+              7,
+              9,
+              10,
+              11
+            ],
+            "both_acceptable_count": 0
+          },
+          "5000": {
+            "threshold_ms": 5000,
+            "truth_count": 5,
+            "target_ms": 33255.75,
+            "retained_target_ms": 0,
+            "target_retention": 0.0,
+            "missed_ids": [
+              4,
+              6,
+              7,
+              9,
+              11
+            ],
+            "both_acceptable_count": 0
+          }
+        }
+      }
+    ]
+  },
+  "source_hashes": {
+    "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/replay-valid/comparison.json": "81f05744b9d5598ee7784cc947ca2399e7652f157a68ff9062a0731e4b10ac2c",
+    "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/first-frame-check/comparison.json": "f958975b67c3d7efe10c0e1263ee75d24b0892ec1d28533727eb36130bea1d33",
+    "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/source-provenance.json": "31763a787b5d1bae05fbe25fbb32f8b944fb191cf8335f8883d51ffe798f6e01",
+    "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/audit.json": "cacefe27cece53b90d3352feb81072cea1b05b626c873b8b37ee92edc63f2e88",
+    "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/publish.py": "203d5533bd07e5d115e1f7789da3291fcd63d0801c109cf5199133845474a257",
+    "docs/experiments/m1-cd-coordinate-20261017.json": "11159cde48ad9329783707b0f978a25e037014dcfae2b576d55ab7a90ef342b0",
+    "models/SoloShuttlePose/.runtime/d1-c-parameters-20261017/stage-diagnostics.json": "c3595fa66ed4eda345f3ec5b36ac84c0ea0128b46ec6e9857c423fa6f17b2f0d"
+  }
+}

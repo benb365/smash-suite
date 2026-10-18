@@ -1,0 +1,407 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_annotation_proposal",
+  "status": "draft_full_clip",
+  "review_status": "needs_review",
+  "sample_id": "reserve-a2-01-20261018",
+  "category": "A",
+  "video": "models/SoloShuttlePose/.runtime/a2-current-algorithm-20261018/clean-windows/A2-01.mp4",
+  "video_sha256": "21b287fa8c9ca9f48f5249aa4422f1c5688461ffb6e06d0baa0a1f414b2d8d53",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_clean_clip_video_frame",
+    "first_decoded_clip_pts_ms": 0.0,
+    "native_fps": 25,
+    "frame_count": 2421,
+    "stream_time_base": "1/12800",
+    "clip_pts_rule": "clip_pts_ms = timestamp_ms",
+    "parent_reserved_clip_origin_ms": 0,
+    "parent_reserved_clip_time_rule": "parent_reserved_clip_ms = parent_reserved_clip_origin_ms + timestamp_ms",
+    "parent_reserved_clip_range_ms": [
+      0,
+      96840
+    ]
+  },
+  "coverage": {
+    "partial": false,
+    "reviewed_range_ms": [
+      0,
+      96840
+    ],
+    "completeness": "agent_draft_whole_clip_sampled_review",
+    "method": "全片每1秒抽帧筛查，候选发球/末球及落地附近先0.16–0.20秒抽帧，再以25fps连续原帧核查边界。未读取任何模型分割预测或评估报告。",
+    "human_confirmation_complete": false,
+    "negative_time_is_not_verified": true,
+    "limits": "全片抽帧草稿可能漏掉极短或遮挡事件；补集不是已验证无回合区间。模糊边界保留区间，尚不能用作正式verified真值。"
+  },
+  "main_court": "固定转播主球场；近端黑/深绿色上衣，远端浅色上衣、紫色短裤。",
+  "main_court_review_status": "needs_review",
+  "generation": {
+    "method": "agent_visual_sampled_frames_with_native_pts",
+    "producer": "Codex",
+    "date": "2026-10-18",
+    "requires_human_review": true,
+    "used_segmentation_predictions": false,
+    "boundary_policy": "start_left_end_right",
+    "boundary_policy_authorization": "按主任务转述的用户授权先自助标记A2/C2/D2再交用户校验；仅沿用start区间左端、end区间右端，不代表内容已获人工确认。"
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01",
+    "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/overview/frame-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json",
+    "original_frame_retention": "selected JPEG frames decoded at native 1920x1080, actual PTS recorded; contact sheets crop only for inspection"
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "start_ms": 15920.0,
+      "end_ms": 17600.0,
+      "start_frame": 398,
+      "end_frame": 440,
+      "review_status": "needs_review",
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "review_status": "needs_review",
+          "review_window_frames": [
+            398,
+            402
+          ],
+          "review_window_ms": [
+            15920.0,
+            16080.0
+          ],
+          "review_window_clip_pts_ms": [
+            15920.0,
+            16080.0
+          ],
+          "parent_reserved_clip_review_window_ms": [
+            15920.0,
+            16080.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 15920.0,
+          "selected_frame": 398,
+          "selected_clip_pts_ms": 15920.0,
+          "candidate_frame": null,
+          "native_contiguous_frame_evidence": true,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+          ],
+          "note": "远端白衣持球释放、拍面前后及离拍的球可见；25fps和运动模糊不能确认唯一触球帧。"
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "review_status": "needs_review",
+          "review_window_frames": [
+            433,
+            440
+          ],
+          "review_window_ms": [
+            17320.0,
+            17600.0
+          ],
+          "review_window_clip_pts_ms": [
+            17320.0,
+            17600.0
+          ],
+          "parent_reserved_clip_review_window_ms": [
+            17320.0,
+            17600.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 17600.0,
+          "selected_frame": 440,
+          "selected_clip_pts_ms": 17600.0,
+          "candidate_frame": null,
+          "native_contiguous_frame_evidence": true,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+          ],
+          "note": "远端左侧网前救球后球下落至地面并停留；低球与网线接近，保留触地/停留间隔。"
+        }
+      },
+      "duration_ms": 1680.0,
+      "short_rally_le_3s": true,
+      "note": "远端白衣发球，近端黑衣成功回击后远端网前未能救起；正常短回合，保留在segments。"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 28120.0,
+      "end_ms": 32400.0,
+      "start_frame": 703,
+      "end_frame": 810,
+      "review_status": "needs_review",
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "review_status": "needs_review",
+          "review_window_frames": [
+            703,
+            707
+          ],
+          "review_window_ms": [
+            28120.0,
+            28280.0
+          ],
+          "review_window_clip_pts_ms": [
+            28120.0,
+            28280.0
+          ],
+          "parent_reserved_clip_review_window_ms": [
+            28120.0,
+            28280.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 28120.0,
+          "selected_frame": 703,
+          "selected_clip_pts_ms": 28120.0,
+          "candidate_frame": null,
+          "native_contiguous_frame_evidence": true,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+          ],
+          "note": "远端白衣发球，球由持球手附近移到拍前再飞向近端，保留相邻帧区间。"
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "review_status": "needs_review",
+          "review_window_frames": [
+            804,
+            810
+          ],
+          "review_window_ms": [
+            32160.0,
+            32400.0
+          ],
+          "review_window_clip_pts_ms": [
+            32160.0,
+            32400.0
+          ],
+          "parent_reserved_clip_review_window_ms": [
+            32160.0,
+            32400.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 32400.0,
+          "selected_frame": 810,
+          "selected_clip_pts_ms": 32400.0,
+          "candidate_frame": null,
+          "native_contiguous_frame_evidence": true,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+          ],
+          "note": "近端黑衣向右伸拍后球落到右侧线边；初次触地与小反弹受拍杆/鞋/边线混叠影响。"
+        }
+      },
+      "duration_ms": 4280.0,
+      "short_rally_le_3s": false,
+      "note": "远端白衣发球，多拍后球落到近端右侧边线附近；分数变化只作为分段辅助证据。"
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 48640.0,
+      "end_ms": 53760.0,
+      "start_frame": 1216,
+      "end_frame": 1344,
+      "review_status": "needs_review",
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "review_status": "needs_review",
+          "review_window_frames": [
+            1216,
+            1220
+          ],
+          "review_window_ms": [
+            48640.0,
+            48800.0
+          ],
+          "review_window_clip_pts_ms": [
+            48640.0,
+            48800.0
+          ],
+          "parent_reserved_clip_review_window_ms": [
+            48640.0,
+            48800.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 48640.0,
+          "selected_frame": 1216,
+          "selected_clip_pts_ms": 48640.0,
+          "candidate_frame": null,
+          "native_contiguous_frame_evidence": true,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+          ],
+          "note": "近端黑衣短发球，手释放与球过网可见，球拍触球附近有拖影。"
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "review_status": "needs_review",
+          "review_window_frames": [
+            1336,
+            1344
+          ],
+          "review_window_ms": [
+            53440.0,
+            53760.0
+          ],
+          "review_window_clip_pts_ms": [
+            53440.0,
+            53760.0
+          ],
+          "parent_reserved_clip_review_window_ms": [
+            53440.0,
+            53760.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 53760.0,
+          "selected_frame": 1344,
+          "selected_clip_pts_ms": 53760.0,
+          "candidate_frame": null,
+          "native_contiguous_frame_evidence": true,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+          ],
+          "note": "连续原帧可见球沿近端左侧快速下落、在底线附近转为低位/反弹，首个触地帧有透视歧义。"
+        }
+      },
+      "duration_ms": 5120.0,
+      "short_rally_le_3s": false,
+      "note": "近端黑衣发球，末球近端左后侧未能回击；球落地后沿底线外继续小幅移动。"
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 71440.0,
+      "end_ms": 88200.0,
+      "start_frame": 1786,
+      "end_frame": 2205,
+      "review_status": "needs_review",
+      "boundary_review": {
+        "start": {
+          "status": "agent_proposed_interval",
+          "review_status": "needs_review",
+          "review_window_frames": [
+            1786,
+            1790
+          ],
+          "review_window_ms": [
+            71440.0,
+            71600.0
+          ],
+          "review_window_clip_pts_ms": [
+            71440.0,
+            71600.0
+          ],
+          "parent_reserved_clip_review_window_ms": [
+            71440.0,
+            71600.0
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 71440.0,
+          "selected_frame": 1786,
+          "selected_clip_pts_ms": 71440.0,
+          "candidate_frame": null,
+          "native_contiguous_frame_evidence": true,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+          ],
+          "note": "远端白衣发球后球向近端飞来，保留拍前至离拍区间。"
+        },
+        "end": {
+          "status": "agent_proposed_interval",
+          "review_status": "needs_review",
+          "review_window_frames": [
+            2201,
+            2205
+          ],
+          "review_window_ms": [
+            88040.0,
+            88200.0
+          ],
+          "review_window_clip_pts_ms": [
+            88040.0,
+            88200.0
+          ],
+          "parent_reserved_clip_review_window_ms": [
+            88040.0,
+            88200.0
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 88200.0,
+          "selected_frame": 2205,
+          "selected_clip_pts_ms": 88200.0,
+          "candidate_frame": null,
+          "native_contiguous_frame_evidence": true,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/A2/A2-01/boundary-index.json"
+          ],
+          "note": "末球在近端右后场继续下降至底线附近并反弹；以球事件保留结束区间。"
+        }
+      },
+      "duration_ms": 16760.0,
+      "short_rally_le_3s": false,
+      "note": "远端白衣发球后长回合，末球飞向近端右后侧并落地；不把球员先停步算作结束。"
+    }
+  ],
+  "excluded_events": [
+    {
+      "event_id": "A2-01-E01",
+      "range_ms": [
+        7000,
+        8000
+      ],
+      "review_status": "needs_review",
+      "type": "shuttle_return_candidate",
+      "exclusion_status": "candidate_only",
+      "note": "近端黑衣在非发球站位轻拨球；远端白衣仍弯腰整理，未形成接发/连续对打，建议作为还球候选排除。"
+    },
+    {
+      "event_id": "A2-01-E02",
+      "range_ms": [
+        39400,
+        40280
+      ],
+      "review_status": "needs_review",
+      "type": "shuttle_handling",
+      "exclusion_status": "candidate_only",
+      "note": "近端黑衣捡起球后向上颠球并接住，远端静候；不是正式发球，建议排除。"
+    },
+    {
+      "event_id": "A2-01-E03",
+      "range_ms": [
+        58000,
+        61800
+      ],
+      "review_status": "needs_review",
+      "type": "shuttle_handling_or_return_candidate",
+      "exclusion_status": "candidate_only",
+      "note": "近端黑衣在后场整理/颠球，后续远端白衣捡球。跨网还球的精确时刻未收窄，保留宽事件窗待核查。"
+    },
+    {
+      "event_id": "A2-01-E04",
+      "range_ms": [
+        93240,
+        96400
+      ],
+      "review_status": "needs_review",
+      "type": "shuttle_return_candidate",
+      "exclusion_status": "candidate_only",
+      "note": "近端黑衣轻拨球过网给远端白衣；球落在远端网前，白衣随后捡起，建议作为还球排除。"
+    }
+  ],
+  "incomplete_rallies": [],
+  "unresolved_regions": [
+    {
+      "range_ms": [
+        0,
+        3000
+      ],
+      "review_status": "needs_review",
+      "type": "opening_break",
+      "note": "片头处于上一分后的走位/捡球；未见正在进行的对打。不补造片头以前的发球或结束边界。"
+    }
+  ]
+}

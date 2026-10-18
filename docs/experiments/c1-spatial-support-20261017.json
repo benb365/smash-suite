@@ -1,0 +1,1027 @@
+{
+  "scope": "C1 only; diagnostic deletion and native/crop complementarity; not a selected algorithm",
+  "manifest": {
+    "path": "datasets/badminton-v1/manifests/m1-cd-coordinate-trial-20261017.json",
+    "sha256": "9a806c806b1d768028db7d56b52eaa40bb8a52b13aa3bd2ffb99c13d14818934"
+  },
+  "samples": [
+    {
+      "id": "C1-01",
+      "source_id": "C1",
+      "split_group_id": "C1-same-recording",
+      "split": "diagnostic",
+      "video": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4",
+      "video_sha256": "2aec0dc53ecb1e436b916c5d615252cdfd64a9ed03741f02073eea175662d481",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-01-20261015/full-v1.json",
+      "annotation_sha256": "fb54d62bd53eb4d9c26ef555b1f883b325ea955d4aeebd17602c757594ec9867",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/validation.json",
+      "validation_sha256": "3e3a765e2ddd7b5a59b733c63d117abe0d58baaa19ed55dc5d659b9b736ddc48",
+      "duration_ms": 165101.3125,
+      "native_frame_count": 4950,
+      "source_origin_ms": 120073.0,
+      "run_subdirectory": "01-01-clip",
+      "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+      "truth_count": 6,
+      "excluded_count": 0
+    },
+    {
+      "id": "C1-02",
+      "source_id": "C1",
+      "split_group_id": "C1-same-recording",
+      "split": "diagnostic",
+      "video": "datasets/badminton-v1/local/rally/m1-short-c1-02-20261015/clip.mp4",
+      "video_sha256": "6f5856f7bcb304019d76eadc9bbc352055ada8e6a7f8eb71783ac2ff324fb4cb",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-02-20261015/full-v1.json",
+      "annotation_sha256": "bbcfd22e0217b903e1b4a0eda6795470ef34bb3d62ac3c9466f67fc2cacfb53b",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-c1-02-20261015/validation.json",
+      "validation_sha256": "6fd0d21e7a2c54193173cebecefe39b9cb19e5627456b1e195352e9b492a5eeb",
+      "duration_ms": 180110.3125,
+      "native_frame_count": 5400,
+      "source_origin_ms": 1200550.0,
+      "run_subdirectory": "01-02-clip",
+      "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+      "truth_count": 3,
+      "excluded_count": 0
+    },
+    {
+      "id": "C1-03",
+      "source_id": "C1",
+      "split_group_id": "C1-same-recording",
+      "split": "diagnostic",
+      "video": "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/clip.mp4",
+      "video_sha256": "697f072c28a6a6ac1a9f704149c8bacb87b217da9defc2f721145085cd9a6abd",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-03-20261015/full-v1.json",
+      "annotation_sha256": "64dc9847bc30a86bc5f5bfe6272c4c7a7b10e91d19b71c7b9a8df233ce5434de",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/validation.json",
+      "validation_sha256": "00eb5104317b6bd13cacaa0e1ac0ff66ce35d7993a6d178c35297a989940eadc",
+      "duration_ms": 165369.3125,
+      "native_frame_count": 4958,
+      "source_origin_ms": 2400217.0,
+      "run_subdirectory": "01-03-clip",
+      "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+      "truth_count": 5,
+      "excluded_count": 0
+    },
+    {
+      "id": "C1-04",
+      "source_id": "C1",
+      "split_group_id": "C1-same-recording",
+      "split": "diagnostic",
+      "video": "datasets/badminton-v1/local/rally/m1-short-c1-04-20261015/clip.mp4",
+      "video_sha256": "ed67141233e7be9122c511c12db8315cd00047df41576819ff4b7d8f25e5b44e",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-04-20261015/full-v1.json",
+      "annotation_sha256": "a63c56098b66887fd17177cb8a4aa56a73104dd24c239f902b61367fecc00e5b",
+      "validation": "datasets/badminton-v1/local/rally/m1-short-c1-04-20261015/validation.json",
+      "validation_sha256": "92d711fd95b1c0891e24e2e76f677c1af56a6fd69919ff07fe2a025de3711946",
+      "duration_ms": 175106.3125,
+      "native_frame_count": 5250,
+      "source_origin_ms": 3600152.0,
+      "run_subdirectory": "01-04-clip",
+      "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+      "truth_count": 4,
+      "excluded_count": 0
+    }
+  ],
+  "stages": [
+    {
+      "name": "arc-filter",
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc-filter/comparison.json",
+      "sha256": "08aa310847e211f39f0bd965b0a588c38fa6896ff6b7b754a67cbd833eb03cfc",
+      "sample_ids": [
+        "C1-01",
+        "C1-02",
+        "C1-03",
+        "C1-04"
+      ],
+      "summaries": [
+        {
+          "name": "single-arc-error0",
+          "truth_count": 18,
+          "prediction_count": 26,
+          "missed_rally_count": 0,
+          "false_positive_count": 8,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 18,
+            "matched_count": 18,
+            "start_acceptable_count": 9,
+            "start_acceptable_rate": 0.5,
+            "end_acceptable_count": 10,
+            "end_acceptable_rate": 0.5555555555555556,
+            "both_acceptable_count": 7,
+            "both_acceptable_rate": 0.3888888888888889
+          },
+          "retained_time": {
+            "target_ms": 166538.0,
+            "retained_target_ms": 147891.0,
+            "non_target_ms": 519149.25,
+            "retained_non_target_ms": 44096.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 9,
+            "mean": 1038.0,
+            "p50": 634.0,
+            "p95": 3362.1999999999994,
+            "max": 4003.0
+          },
+          "end_error_ms": {
+            "count": 8,
+            "mean": 1192.625,
+            "p50": 700.5,
+            "p95": 3456.9999999999995,
+            "max": 3702.0
+          }
+        },
+        {
+          "name": "single-arc-error24",
+          "truth_count": 18,
+          "prediction_count": 25,
+          "missed_rally_count": 0,
+          "false_positive_count": 7,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 18,
+            "matched_count": 18,
+            "start_acceptable_count": 9,
+            "start_acceptable_rate": 0.5,
+            "end_acceptable_count": 10,
+            "end_acceptable_rate": 0.5555555555555556,
+            "both_acceptable_count": 7,
+            "both_acceptable_rate": 0.3888888888888889
+          },
+          "retained_time": {
+            "target_ms": 166538.0,
+            "retained_target_ms": 147891.0,
+            "non_target_ms": 519149.25,
+            "retained_non_target_ms": 38359.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 9,
+            "mean": 1038.0,
+            "p50": 634.0,
+            "p95": 3362.1999999999994,
+            "max": 4003.0
+          },
+          "end_error_ms": {
+            "count": 8,
+            "mean": 1192.625,
+            "p50": 700.5,
+            "p95": 3456.9999999999995,
+            "max": 3702.0
+          }
+        },
+        {
+          "name": "single-arc-error48",
+          "truth_count": 18,
+          "prediction_count": 24,
+          "missed_rally_count": 0,
+          "false_positive_count": 6,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 18,
+            "matched_count": 18,
+            "start_acceptable_count": 9,
+            "start_acceptable_rate": 0.5,
+            "end_acceptable_count": 10,
+            "end_acceptable_rate": 0.5555555555555556,
+            "both_acceptable_count": 7,
+            "both_acceptable_rate": 0.3888888888888889
+          },
+          "retained_time": {
+            "target_ms": 166538.0,
+            "retained_target_ms": 147891.0,
+            "non_target_ms": 519149.25,
+            "retained_non_target_ms": 34823.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 9,
+            "mean": 1038.0,
+            "p50": 634.0,
+            "p95": 3362.1999999999994,
+            "max": 4003.0
+          },
+          "end_error_ms": {
+            "count": 8,
+            "mean": 1192.625,
+            "p50": 700.5,
+            "p95": 3456.9999999999995,
+            "max": 3702.0
+          }
+        }
+      ],
+      "script_sha256": "7f29713916406a7a966057b7ab9c2bb16f9d74023fbf723e68cf51eee283c2a4",
+      "audit": {
+        "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc-filter/score-audit.json",
+        "sha256": "192e363e1ae73af44b86820aa14955625a1d43240d909fbb4bb1cd6d3349872c",
+        "result": {
+          "status": "passed",
+          "comparisons": 12,
+          "report_sha256": "08aa310847e211f39f0bd965b0a588c38fa6896ff6b7b754a67cbd833eb03cfc",
+          "script_sha256": "57fac53f609070b612b67a03e755dce0f9f23d82a1bc0066edeb9dae35b437be",
+          "annotation_hashes_unchanged": true,
+          "all_saved_predictions_rescored": true,
+          "all_time_unions_rescored": true,
+          "summaries_recomputed": true
+        }
+      }
+    },
+    {
+      "name": "scale-fusion",
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/scale-fusion/comparison.json",
+      "sha256": "6989b683ed2c83ebbfdc18ee99b7bf39588faba7088b4486780a7ad475336c10",
+      "sample_ids": [
+        "C1-01"
+      ],
+      "summaries": [
+        {
+          "name": "native-region0",
+          "truth_count": 6,
+          "prediction_count": 6,
+          "missed_rally_count": 0,
+          "false_positive_count": 0,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 6,
+            "matched_count": 6,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.16666666666666666,
+            "end_acceptable_count": 1,
+            "end_acceptable_rate": 0.16666666666666666,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "retained_time": {
+            "target_ms": 54633.0,
+            "retained_target_ms": 50397.0,
+            "non_target_ms": 110468.3125,
+            "retained_non_target_ms": 35822.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 5,
+            "mean": 4483.4,
+            "p50": 2469.0,
+            "p95": 11268.199999999999,
+            "max": 12976.0
+          },
+          "end_error_ms": {
+            "count": 5,
+            "mean": 1808.2,
+            "p50": 200.0,
+            "p95": 6071.399999999999,
+            "max": 7239.0
+          }
+        },
+        {
+          "name": "native-region1",
+          "truth_count": 6,
+          "prediction_count": 8,
+          "missed_rally_count": 0,
+          "false_positive_count": 2,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 6,
+            "matched_count": 6,
+            "start_acceptable_count": 3,
+            "start_acceptable_rate": 0.5,
+            "end_acceptable_count": 3,
+            "end_acceptable_rate": 0.5,
+            "both_acceptable_count": 3,
+            "both_acceptable_rate": 0.5
+          },
+          "retained_time": {
+            "target_ms": 54633.0,
+            "retained_target_ms": 47396.0,
+            "non_target_ms": 110468.3125,
+            "retained_non_target_ms": 14410.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 3,
+            "mean": 1101.0,
+            "p50": 834.0,
+            "p95": 2244.3,
+            "max": 2401.0
+          },
+          "end_error_ms": {
+            "count": 3,
+            "mean": 1334.0,
+            "p50": 200.0,
+            "p95": 3351.7999999999997,
+            "max": 3702.0
+          }
+        },
+        {
+          "name": "crop-region0",
+          "truth_count": 6,
+          "prediction_count": 6,
+          "missed_rally_count": 1,
+          "false_positive_count": 1,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 6,
+            "matched_count": 5,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.16666666666666666,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "retained_time": {
+            "target_ms": 54633.0,
+            "retained_target_ms": 41158.0,
+            "non_target_ms": 110468.3125,
+            "retained_non_target_ms": 44395.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 4,
+            "mean": 7597.25,
+            "p50": 7455.0,
+            "p95": 12897.8,
+            "max": 13043.0
+          },
+          "end_error_ms": {
+            "count": 5,
+            "mean": 3122.4,
+            "p50": 3135.0,
+            "p95": 6698.599999999999,
+            "max": 7239.0
+          }
+        },
+        {
+          "name": "crop-region1",
+          "truth_count": 6,
+          "prediction_count": 7,
+          "missed_rally_count": 1,
+          "false_positive_count": 2,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 6,
+            "matched_count": 5,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.16666666666666666,
+            "end_acceptable_count": 2,
+            "end_acceptable_rate": 0.3333333333333333,
+            "both_acceptable_count": 1,
+            "both_acceptable_rate": 0.16666666666666666
+          },
+          "retained_time": {
+            "target_ms": 54633.0,
+            "retained_target_ms": 32753.0,
+            "non_target_ms": 110468.3125,
+            "retained_non_target_ms": 7272.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 4,
+            "mean": 1851.0,
+            "p50": 2268.0,
+            "p95": 2835.0,
+            "max": 2835.0
+          },
+          "end_error_ms": {
+            "count": 3,
+            "mean": 3969.3333333333335,
+            "p50": 4236.0,
+            "p95": 4506.9,
+            "max": 4537.0
+          }
+        },
+        {
+          "name": "joint-region0",
+          "truth_count": 6,
+          "prediction_count": 6,
+          "missed_rally_count": 1,
+          "false_positive_count": 1,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 6,
+            "matched_count": 5,
+            "start_acceptable_count": 0,
+            "start_acceptable_rate": 0.0,
+            "end_acceptable_count": 0,
+            "end_acceptable_rate": 0.0,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "retained_time": {
+            "target_ms": 54633.0,
+            "retained_target_ms": 37256.0,
+            "non_target_ms": 110468.3125,
+            "retained_non_target_ms": 32788.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 5,
+            "mean": 4036.4,
+            "p50": 2401.0,
+            "p95": 11315.199999999999,
+            "max": 13043.0
+          },
+          "end_error_ms": {
+            "count": 5,
+            "mean": 2308.4,
+            "p50": 667.0,
+            "p95": 6418.199999999999,
+            "max": 7239.0
+          }
+        },
+        {
+          "name": "joint-region1",
+          "truth_count": 6,
+          "prediction_count": 8,
+          "missed_rally_count": 0,
+          "false_positive_count": 2,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 6,
+            "matched_count": 6,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.16666666666666666,
+            "end_acceptable_count": 2,
+            "end_acceptable_rate": 0.3333333333333333,
+            "both_acceptable_count": 1,
+            "both_acceptable_rate": 0.16666666666666666
+          },
+          "retained_time": {
+            "target_ms": 54633.0,
+            "retained_target_ms": 38857.0,
+            "non_target_ms": 110468.3125,
+            "retained_non_target_ms": 7773.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 5,
+            "mean": 1407.4,
+            "p50": 1734.0,
+            "p95": 2641.8,
+            "max": 2702.0
+          },
+          "end_error_ms": {
+            "count": 4,
+            "mean": 2184.75,
+            "p50": 1934.5,
+            "p95": 4042.7999999999997,
+            "max": 4203.0
+          }
+        },
+        {
+          "name": "union-motion-region0",
+          "truth_count": 6,
+          "prediction_count": 7,
+          "missed_rally_count": 0,
+          "false_positive_count": 1,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 6,
+            "matched_count": 6,
+            "start_acceptable_count": 1,
+            "start_acceptable_rate": 0.16666666666666666,
+            "end_acceptable_count": 2,
+            "end_acceptable_rate": 0.3333333333333333,
+            "both_acceptable_count": 0,
+            "both_acceptable_rate": 0.0
+          },
+          "retained_time": {
+            "target_ms": 54633.0,
+            "retained_target_ms": 51898.0,
+            "non_target_ms": 110468.3125,
+            "retained_non_target_ms": 46795.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 5,
+            "mean": 6004.4,
+            "p50": 2469.0,
+            "p95": 12849.4,
+            "max": 13043.0
+          },
+          "end_error_ms": {
+            "count": 4,
+            "mean": 1960.0,
+            "p50": 250.5,
+            "p95": 6198.299999999997,
+            "max": 7239.0
+          }
+        },
+        {
+          "name": "union-motion-region1",
+          "truth_count": 6,
+          "prediction_count": 10,
+          "missed_rally_count": 0,
+          "false_positive_count": 4,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 6,
+            "matched_count": 6,
+            "start_acceptable_count": 3,
+            "start_acceptable_rate": 0.5,
+            "end_acceptable_count": 3,
+            "end_acceptable_rate": 0.5,
+            "both_acceptable_count": 3,
+            "both_acceptable_rate": 0.5
+          },
+          "retained_time": {
+            "target_ms": 54633.0,
+            "retained_target_ms": 48763.0,
+            "non_target_ms": 110468.3125,
+            "retained_non_target_ms": 22881.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 3,
+            "mean": 1923.6666666666667,
+            "p50": 2401.0,
+            "p95": 3242.5,
+            "max": 3336.0
+          },
+          "end_error_ms": {
+            "count": 3,
+            "mean": 1145.0,
+            "p50": 200.0,
+            "p95": 2841.4999999999995,
+            "max": 3135.0
+          }
+        }
+      ],
+      "script_sha256": "49285e4d99d7171dbda03fac909077619d3f4961a26b9f2f35b01f6cd8af2b12",
+      "audit": {
+        "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/scale-fusion/score-audit.json",
+        "sha256": "8e5bbc98bd58d4a13e3a97fc2d00c7be63543a03cd0273f32a3fd8aa7cc3fa81",
+        "result": {
+          "status": "passed",
+          "comparisons": 8,
+          "report_sha256": "6989b683ed2c83ebbfdc18ee99b7bf39588faba7088b4486780a7ad475336c10",
+          "script_sha256": "57fac53f609070b612b67a03e755dce0f9f23d82a1bc0066edeb9dae35b437be",
+          "annotation_hashes_unchanged": true,
+          "all_saved_predictions_rescored": true,
+          "all_time_unions_rescored": true,
+          "summaries_recomputed": true
+        }
+      }
+    },
+    {
+      "name": "arc-all-main",
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc-all-main/comparison.json",
+      "sha256": "e1af3c3f32b16974a48392199a8180e16e82073d65aee573ae38240b5251a1ba",
+      "sample_ids": [
+        "C1-01",
+        "C1-02",
+        "C1-03",
+        "C1-04"
+      ],
+      "summaries": [
+        {
+          "name": "single-arc-error0",
+          "truth_count": 18,
+          "prediction_count": 26,
+          "missed_rally_count": 0,
+          "false_positive_count": 8,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 18,
+            "matched_count": 18,
+            "start_acceptable_count": 9,
+            "start_acceptable_rate": 0.5,
+            "end_acceptable_count": 10,
+            "end_acceptable_rate": 0.5555555555555556,
+            "both_acceptable_count": 7,
+            "both_acceptable_rate": 0.3888888888888889
+          },
+          "retained_time": {
+            "target_ms": 166538.0,
+            "retained_target_ms": 147891.0,
+            "non_target_ms": 519149.25,
+            "retained_non_target_ms": 44096.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 9,
+            "mean": 1038.0,
+            "p50": 634.0,
+            "p95": 3362.1999999999994,
+            "max": 4003.0
+          },
+          "end_error_ms": {
+            "count": 8,
+            "mean": 1192.625,
+            "p50": 700.5,
+            "p95": 3456.9999999999995,
+            "max": 3702.0
+          }
+        },
+        {
+          "name": "single-arc-error24",
+          "truth_count": 18,
+          "prediction_count": 26,
+          "missed_rally_count": 0,
+          "false_positive_count": 8,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 18,
+            "matched_count": 18,
+            "start_acceptable_count": 9,
+            "start_acceptable_rate": 0.5,
+            "end_acceptable_count": 10,
+            "end_acceptable_rate": 0.5555555555555556,
+            "both_acceptable_count": 7,
+            "both_acceptable_rate": 0.3888888888888889
+          },
+          "retained_time": {
+            "target_ms": 166538.0,
+            "retained_target_ms": 147891.0,
+            "non_target_ms": 519149.25,
+            "retained_non_target_ms": 44096.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 9,
+            "mean": 1038.0,
+            "p50": 634.0,
+            "p95": 3362.1999999999994,
+            "max": 4003.0
+          },
+          "end_error_ms": {
+            "count": 8,
+            "mean": 1192.625,
+            "p50": 700.5,
+            "p95": 3456.9999999999995,
+            "max": 3702.0
+          }
+        },
+        {
+          "name": "single-arc-error48",
+          "truth_count": 18,
+          "prediction_count": 23,
+          "missed_rally_count": 1,
+          "false_positive_count": 6,
+          "false_split_count": 0,
+          "false_merge_count": 0,
+          "boundary_acceptance": {
+            "truth_count": 18,
+            "matched_count": 17,
+            "start_acceptable_count": 9,
+            "start_acceptable_rate": 0.5,
+            "end_acceptable_count": 10,
+            "end_acceptable_rate": 0.5555555555555556,
+            "both_acceptable_count": 7,
+            "both_acceptable_rate": 0.3888888888888889
+          },
+          "retained_time": {
+            "target_ms": 166538.0,
+            "retained_target_ms": 146257.0,
+            "non_target_ms": 519149.25,
+            "retained_non_target_ms": 34823.0,
+            "ignored_ms": 0.0
+          },
+          "start_error_ms": {
+            "count": 8,
+            "mean": 1063.5,
+            "p50": 450.5,
+            "p95": 3442.2999999999993,
+            "max": 4003.0
+          },
+          "end_error_ms": {
+            "count": 7,
+            "mean": 1348.7142857142858,
+            "p50": 801.0,
+            "p95": 3491.9999999999995,
+            "max": 3702.0
+          }
+        }
+      ],
+      "script_sha256": "b4161559955bf30a5f4240bd38c275c85acaa7f530a47178dc9b0fdb5e3b264b",
+      "audit": {
+        "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc-all-main/score-audit.json",
+        "sha256": "d7d16b4e527e3d8f9ceefc79994055ab86579d8b27704f27e2d825983c3d06aa",
+        "result": {
+          "status": "passed",
+          "comparisons": 12,
+          "report_sha256": "e1af3c3f32b16974a48392199a8180e16e82073d65aee573ae38240b5251a1ba",
+          "script_sha256": "57fac53f609070b612b67a03e755dce0f9f23d82a1bc0066edeb9dae35b437be",
+          "annotation_hashes_unchanged": true,
+          "all_saved_predictions_rescored": true,
+          "all_time_unions_rescored": true,
+          "summaries_recomputed": true
+        }
+      }
+    }
+  ],
+  "low_response": {
+    "status": "targeted_native_heatmap_diagnostic_not_full_clip_score",
+    "script_sha256": "ab714dd146328a511d22aebfef8e4ce151539ac191117730f91f60589fd2cd72",
+    "manifest_sha256": "9a806c806b1d768028db7d56b52eaa40bb8a52b13aa3bd2ffb99c13d14818934",
+    "source_hashes": {
+      "backend/app/vision/tracknet_rally.py": "6d0faa161a440b71b825513d9fc6d42a280b00ae8c8f02cfdcada5c75e7d5fb5",
+      "backend/app/vision/trajectory_rally.py": "2772b5f3f90e439904a9036b46aa31117669dad48cdfff582e74b44c61b17cfe",
+      "backend/app/vision/rally_eval.py": "26b1931830e3f30677ca4c06cd905f2733d909d18e5c855948f391aef0b414f2",
+      "backend/app/vision/rally_stream.py": "48586d5b70b9252c26bb7053ba6d14ef7188e21c04f8d0a9b8f27c6e9c74a2e3",
+      "backend/app/vision/video_input.py": "dbbf7475e58e0204e3004f3bcf24b5036f4e196e16b3a05e8e0418c2af21d898",
+      "backend/tests/rally_benchmark/run_live_tracknet.py": "32b79ebabb7740d189d276cc67342222e8149cde79d391349a1e5009b7c341c1",
+      "models/SoloShuttlePose/src/models/TrackNet.py": "3db5d0cd25a923b317126aa8f9a472b08bb5719eb7317d250ba838e7fd0c10a0",
+      "models/SoloShuttlePose/src/models/weights/ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+    },
+    "results": [
+      {
+        "sample": {
+          "id": "C1-01",
+          "source_id": "C1",
+          "split_group_id": "C1-same-recording",
+          "split": "diagnostic",
+          "video": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4",
+          "video_sha256": "2aec0dc53ecb1e436b916c5d615252cdfd64a9ed03741f02073eea175662d481",
+          "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-01-20261015/full-v1.json",
+          "annotation_sha256": "fb54d62bd53eb4d9c26ef555b1f883b325ea955d4aeebd17602c757594ec9867",
+          "validation": "datasets/badminton-v1/local/rally/m1-short-c1-01-20261015/validation.json",
+          "validation_sha256": "3e3a765e2ddd7b5a59b733c63d117abe0d58baaa19ed55dc5d659b9b736ddc48",
+          "duration_ms": 165101.3125,
+          "native_frame_count": 4950,
+          "source_origin_ms": 120073.0,
+          "run_subdirectory": "01-01-clip",
+          "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+          "truth_count": 6,
+          "excluded_count": 0
+        },
+        "window_ms": [
+          39000,
+          45000
+        ],
+        "decoded_frames": 4950,
+        "verified_original_frames": 180,
+        "wall_s": 24.676654458999998,
+        "native_candidates_sha256": "a5e3e5ac1074d26e37c1150449f0f4eb1755eeadab33b9752b5ebd9bd38c556e",
+        "new_candidates_sha256": "c53d4c9a8c4f255c10d512cbfb9ea528c5e77feb504db45bbb140736c430ea5e"
+      },
+      {
+        "sample": {
+          "id": "C1-03",
+          "source_id": "C1",
+          "split_group_id": "C1-same-recording",
+          "split": "diagnostic",
+          "video": "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/clip.mp4",
+          "video_sha256": "697f072c28a6a6ac1a9f704149c8bacb87b217da9defc2f721145085cd9a6abd",
+          "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-c1-03-20261015/full-v1.json",
+          "annotation_sha256": "64dc9847bc30a86bc5f5bfe6272c4c7a7b10e91d19b71c7b9a8df233ce5434de",
+          "validation": "datasets/badminton-v1/local/rally/m1-short-c1-03-20261015/validation.json",
+          "validation_sha256": "00eb5104317b6bd13cacaa0e1ac0ff66ce35d7993a6d178c35297a989940eadc",
+          "duration_ms": 165369.3125,
+          "native_frame_count": 4958,
+          "source_origin_ms": 2400217.0,
+          "run_subdirectory": "01-03-clip",
+          "main_court": "画面中央主球场（黄色网柱3与4之间），只标本场两名球员；C1-02中途换边。",
+          "truth_count": 5,
+          "excluded_count": 0
+        },
+        "window_ms": [
+          59000,
+          65000
+        ],
+        "decoded_frames": 4958,
+        "verified_original_frames": 183,
+        "wall_s": 24.660284375,
+        "native_candidates_sha256": "1b13abeb755ed3974e8a95314daf0327c2853d3f75c0fdac4e83e8db8edd3a45",
+        "new_candidates_sha256": "1153aa5628d6a26177099a6c6ce62566a0a7b0485f097a25250676b47ee3ea65"
+      }
+    ]
+  },
+  "low_response_audit_checks": [
+    {
+      "sample": "C1-01",
+      "frames": 180,
+      "candidate_count": 14126,
+      "new_below_01_count": 13184
+    },
+    {
+      "sample": "C1-03",
+      "frames": 183,
+      "candidate_count": 12546,
+      "new_below_01_count": 11805
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/inspect_anchors.py",
+      "sha256": "4c686f4b49599fc0d7509f4796d554f7db349a2f6fdadcf102375659867b739d"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/frame-index.json",
+      "sha256": "545222d3901f8f241cfe066658902022e56c643bc32509813020dd72ff273d71"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc_features.py",
+      "sha256": "c36cfa4b14c5cc5e43dea3af7335b988ec2fc9449d260ebeca25dff12d319c5a"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc-features.json",
+      "sha256": "c894798593485a6b5e0a941171aad3a645134c9ea0bdc3d7244d1b01cf96ef34"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc_filter.py",
+      "sha256": "7f29713916406a7a966057b7ab9c2bb16f9d74023fbf723e68cf51eee283c2a4"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/scale_fusion.py",
+      "sha256": "49285e4d99d7171dbda03fac909077619d3f4961a26b9f2f35b01f6cd8af2b12"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/flight_counts.py",
+      "sha256": "703749bd4adfb31e82b5f42e3cdc5001aa80ad2901454a9dfd350f7d048d2345"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/flight-counts.json",
+      "sha256": "09b9936b8688b13aaf5cdfda1eae50806010a9d17407da7088f68aea1d54a12b"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/all_main_features.py",
+      "sha256": "1ce2606a9673c8f6208ddf6ccf3654bbd074381ee7b54ba64969211986a57b5d"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/all-main-features.json",
+      "sha256": "7d3e75ecc7e4dc7f56c385a9a63a27fc0aabea0029432c3e180c5821227bf6b7"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc_all_main.py",
+      "sha256": "b4161559955bf30a5f4240bd38c275c85acaa7f530a47178dc9b0fdb5e3b264b"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/build_review.py",
+      "sha256": "157b9a4baaaa28a05f61ffacc8fe01cf4832b479b8c7acf6d3055506c8422b82"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/review-page.png",
+      "sha256": "e54cd01a4daa7861865f83bb2fd515fb83213733634677b317177a660aa5786c"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/write_index.py",
+      "sha256": "d86a930973ef3b050505051ecd91fefd211c9a2ea4bb79873fad5917613ea208"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/low_response.py",
+      "sha256": "ab714dd146328a511d22aebfef8e4ce151539ac191117730f91f60589fd2cd72"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/audit_low_response.py",
+      "sha256": "f9831d2be6ab3af8076e939a7d77a9606807b9e2a33958f4441d1279c16d1cfa"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/low-response/heatmap-audit.json",
+      "sha256": "30ce894d947113bef9452ee99807c0ce01b5abbea2fea404dc6993024ceb0b41"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01196-raw.jpg",
+      "sha256": "f86ed2db03a601e90561f36a12b8f7f320bef677c3ffea7de98fe040ed397409"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01196-points.jpg",
+      "sha256": "894f64eb1422b8542cd0ccb822a898d252205008ba25f6884dabfdbcc3e41477"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01211-raw.jpg",
+      "sha256": "fa150ee73e290e32987b116ae6f791adf79500d83523674ac603e67ff79e2c9e"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01211-points.jpg",
+      "sha256": "9302888fdd43ce1a53c3c7c6aae68d68a7c3ae7516f89b4238f830dd2f092ace"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01232-raw.jpg",
+      "sha256": "c9b22fa50a7be6fbd96b159edfca245c1b848a4cd1096b0f28230a1cdf4cea64"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01232-points.jpg",
+      "sha256": "575276ee45d835ad1cdc8d1813518d620359826bfab98e6f11495079f9028f0e"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01268-raw.jpg",
+      "sha256": "20452aa2fa9d578897f63c743f720766aef87a2c2099462846be577fe0537e44"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01268-points.jpg",
+      "sha256": "a4f49b446b4430653b69b8831848e81b2eecdf9953a1f7c5478f2e75216b8921"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01298-raw.jpg",
+      "sha256": "c10c7e29e9a14a288a4e51c93253903f1eb271297f58c36899307d11e4c97f61"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f01298-points.jpg",
+      "sha256": "e9802ba856a5e66906b253708a4f5e1c4c8d19953bea61184259a1558e2a3162"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04255-raw.jpg",
+      "sha256": "17c5cead1f3f2d8b4adb4185d82186cebee64f0c9af09ed2961ee967eb55126b"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04255-points.jpg",
+      "sha256": "9fd88727688d4d3aa1d3b248cd45f1eecd6feaf108c749c3e8bf01f33736d404"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04263-raw.jpg",
+      "sha256": "6ca2d86494d812d6e67f145e33b003a9b62c2aeb27358d7fa24467a4969f5cfd"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04263-points.jpg",
+      "sha256": "ed6a055fbaa826bb08801b7bd89d9b1821acb0dba3eff59a6948e0ee1d9f8672"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04327-raw.jpg",
+      "sha256": "20496bd055db4d5471fd95900e4c2ad9c2c35a8ac07bf0e41f81181dd117aae9"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04327-points.jpg",
+      "sha256": "ed22031d087f2a593b0f97bdc17f074457b654e5f606d82af434663a61f00ac7"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04333-raw.jpg",
+      "sha256": "5b68b818754fca649070646aaa53542cfaa3b977b0119f3202d05281c7bc05fb"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04333-points.jpg",
+      "sha256": "3aa3b9ec45f9685c2919428c4c7a5c5ed24fb5e0a757a7e74a05d69dfec453ff"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04561-raw.jpg",
+      "sha256": "054958902c7f79cd513cb638318b4d9faacc695ef7c98c47054ce5e7ebd987ed"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04561-points.jpg",
+      "sha256": "24ad167d18a6730a4fd8d5c7dbcd0c6c39ab3745d2e6ce61165eaeb93919c26c"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04652-raw.jpg",
+      "sha256": "458610eb52d4a56c3c1d9571cf09b145cda5bbc50db5bd834f1be4adbcaca792"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04652-points.jpg",
+      "sha256": "d324bc5c1c855d0a6c397c00f628a63161c2d9c1470e7cff383211f280be3482"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04846-raw.jpg",
+      "sha256": "cf0ffe6617cd31c648480873731599b762abe94e8c31fa1e67084b0d2cd4d283"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04846-points.jpg",
+      "sha256": "d6c7946f7da9b1980ce06579d65ad06f580e4ddb219bec9e1df3b4c46d07153a"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04855-raw.jpg",
+      "sha256": "b29013426bef4e8ddc16d01b17e3c45285977617a2e893edd0152d820bca1e0f"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/f04855-points.jpg",
+      "sha256": "fa0027aa98159a3ee0df54c6605defda52b2c53557f8c78d501c04f8d3b98a0c"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-region-smoothing-20261017/human-review/arc-review.html",
+      "sha256": "590c3e18d0ea19110b5a9730de5bc5a9df229ab7ba1227bb67fca1811923dd40"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-region-smoothing-20261017/human-review/arc-review-data.json",
+      "sha256": "b3643a9bcf3cf87ecec8df15c89db7f46269b3d20f2512e5c44c1fc7775bf198"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/low-response/result.json",
+      "sha256": "91b9c2da929b4b38496c922c5ff51becb55df1ea4adda5215569796e7ca72ac9"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/low-response/C1-01/candidates.jsonl",
+      "sha256": "c53d4c9a8c4f255c10d512cbfb9ea528c5e77feb504db45bbb140736c430ea5e"
+    },
+    {
+      "path": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/low-response/C1-03/candidates.jsonl",
+      "sha256": "1153aa5628d6a26177099a6c6ce62566a0a7b0485f097a25250676b47ee3ea65"
+    }
+  ],
+  "rules": {
+    "annotations_changed": false,
+    "exclusions_changed": false,
+    "metric": "rally-iou-v3",
+    "A2_used": false,
+    "D1_extended": false,
+    "weights_downloaded": false,
+    "training": false,
+    "product_defaults_changed": false,
+    "offline": true,
+    "low_response_windows_are_not_full_clip_scores": true
+  },
+  "human_review_pending": "C1-01 rally 4 original end104865ms; prior review request remains pending",
+  "review_url": "http://127.0.0.1:18769/arc-review.html"
+}

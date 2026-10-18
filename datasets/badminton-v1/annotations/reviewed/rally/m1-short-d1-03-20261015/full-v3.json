@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "type": "rally_segment_reviewed_annotation",
+  "status": "verified_full_clip",
+  "sample_id": "m1-short-d1-03-20261015",
+  "category": "D",
+  "video": "datasets/badminton-v1/local/rally/m1-short-d1-03-20261015/clip.mp4",
+  "video_sha256": "45c77879af8c7ef14b70515ae7409410e6433f480da572505cb0032a42bbdf36",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 143.0,
+    "source_origin_ms": 305978.25,
+    "source_time_rule": "source_ms = source_origin_ms + timestamp_ms",
+    "clip_pts_rule": "clip_pts_ms = first_decoded_clip_pts_ms + timestamp_ms"
+  },
+  "coverage": {
+    "partial": false,
+    "reviewed_range_ms": [
+      0,
+      149989.1875
+    ],
+    "completeness": "human_confirmed_whole_clip_rally_annotations",
+    "method": "全片约1秒抽帧筛查；候选边界每窗8帧细查（通常约0.29秒），3个补查窗口约0.12秒；未参考分割预测。",
+    "human_confirmation_complete": true,
+    "negative_time_is_not_verified": true,
+    "limits": "用户已确认D组全部回合及单列排除事件；保留原区间和原帧，不宣称精确物理时间。来源用途和正式评测资格另行确认。"
+  },
+  "main_court": "画面主球场的两名单打球员：近端黑衣、远端白衣酒红短裤；不标左侧邻场或前景行人。",
+  "main_court_review_status": "human_confirmed",
+  "generation": {
+    "method": "agent_visual_sampled_frames_with_native_pts",
+    "producer": "Codex",
+    "date": "2026-10-16",
+    "requires_human_review": false,
+    "used_segmentation_predictions": false,
+    "boundary_policy": "start_left_end_right",
+    "boundary_policy_authorization": "沿用用户已确认的保守端点规则；规则确认不代表D组内容已确认。",
+    "human_confirmed_date": "2026-10-16"
+  },
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03",
+    "overview_index": "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/frame-index.json",
+    "boundary_index": "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            311,
+            319
+          ],
+          "review_window_ms": [
+            10366.6875,
+            10633.3125
+          ],
+          "source_review_window_ms": [
+            316344.9375,
+            316611.5625
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 10366.6875,
+          "selected_frame": 311,
+          "selected_clip_pts_ms": 10509.6875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            396,
+            409
+          ],
+          "review_window_ms": [
+            13200.0,
+            13633.3125
+          ],
+          "source_review_window_ms": [
+            319178.25,
+            319611.5625
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 13633.3125,
+          "selected_frame": 409,
+          "selected_clip_pts_ms": 13776.3125,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        }
+      },
+      "note": "发球及末球结束事件见原帧区间，待人工复核。",
+      "start_ms": 10366.6875,
+      "start_frame": 311,
+      "end_ms": 13633.3125,
+      "end_frame": 409
+    },
+    {
+      "rally_id": 2,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            784,
+            793
+          ],
+          "review_window_ms": [
+            26133.3125,
+            26433.3125
+          ],
+          "source_review_window_ms": [
+            332111.5625,
+            332411.5625
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 26133.3125,
+          "selected_frame": 784,
+          "selected_clip_pts_ms": 26276.3125,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            909,
+            926
+          ],
+          "review_window_ms": [
+            30300.0,
+            30866.6875
+          ],
+          "source_review_window_ms": [
+            336278.25,
+            336844.9375
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 30866.6875,
+          "selected_frame": 926,
+          "selected_clip_pts_ms": 31009.6875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        }
+      },
+      "note": "发球及末球结束事件见原帧区间，待人工复核。",
+      "start_ms": 26133.3125,
+      "start_frame": 784,
+      "end_ms": 30866.6875,
+      "end_frame": 926
+    },
+    {
+      "rally_id": 3,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_timestamp",
+          "selected_ms": 42300.0,
+          "selected_frame": 1269,
+          "selected_clip_pts_ms": 42443.0,
+          "selected_source_ms": 348278.25,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/corrections-20261017/r3-start/confirmed-point.json"
+          ],
+          "note": "用户明确确认采用当前新方案的42.300秒起点。 这是具体时间点确认，不补造复核不确定区间；原区间保留在第1版。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            1470,
+            1481
+          ],
+          "review_window_ms": [
+            49000.0,
+            49366.6875
+          ],
+          "source_review_window_ms": [
+            354978.25,
+            355344.9375
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 49366.6875,
+          "selected_frame": 1481,
+          "selected_clip_pts_ms": 49509.6875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/frame-index.json",
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/expanded-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        }
+      },
+      "note": "用户2026-10-17复看后更正发球起点；终点及其原人审依据保持不变。",
+      "start_ms": 42300.0,
+      "start_frame": 1269,
+      "end_ms": 49366.6875,
+      "end_frame": 1481
+    },
+    {
+      "rally_id": 4,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            1725,
+            1743
+          ],
+          "review_window_ms": [
+            57555.875,
+            58155.875
+          ],
+          "source_review_window_ms": [
+            363534.125,
+            364134.125
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 57555.875,
+          "selected_frame": 1725,
+          "selected_clip_pts_ms": 57698.875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            1888,
+            1905
+          ],
+          "review_window_ms": [
+            62989.1875,
+            63555.875
+          ],
+          "source_review_window_ms": [
+            368967.4375,
+            369534.125
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 63555.875,
+          "selected_frame": 1905,
+          "selected_clip_pts_ms": 63698.875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        }
+      },
+      "note": "发球及末球结束事件见原帧区间，待人工复核。",
+      "start_ms": 57555.875,
+      "start_frame": 1725,
+      "end_ms": 63555.875,
+      "end_frame": 1905
+    },
+    {
+      "rally_id": 5,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_timestamp",
+          "selected_ms": 74955.875,
+          "selected_frame": 2247,
+          "selected_clip_pts_ms": 75098.875,
+          "selected_source_ms": 380934.125,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/corrections-20261017/r5-start/confirmed-point.json"
+          ],
+          "note": "用户沿用刚确认的按当前新方案起点更正处理，采用保存的74955.875毫秒起点。 这是具体时间点确认，不补造复核不确定区间；原区间保留在第1版。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            2368,
+            2403
+          ],
+          "review_window_ms": [
+            78989.1875,
+            80155.875
+          ],
+          "source_review_window_ms": [
+            384967.4375,
+            386134.125
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 80155.875,
+          "selected_frame": 2403,
+          "selected_clip_pts_ms": 80298.875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        }
+      },
+      "note": "用户2026-10-17复看后更正发球起点；终点及其原人审依据保持不变。",
+      "start_ms": 74955.875,
+      "start_frame": 2247,
+      "end_ms": 80155.875,
+      "end_frame": 2403
+    },
+    {
+      "rally_id": 6,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            2651,
+            2668
+          ],
+          "review_window_ms": [
+            88422.5625,
+            88989.1875
+          ],
+          "source_review_window_ms": [
+            394400.8125,
+            394967.4375
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 88422.5625,
+          "selected_frame": 2651,
+          "selected_clip_pts_ms": 88565.5625,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            2758,
+            2767
+          ],
+          "review_window_ms": [
+            91989.1875,
+            92289.1875
+          ],
+          "source_review_window_ms": [
+            397967.4375,
+            398267.4375
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 92289.1875,
+          "selected_frame": 2767,
+          "selected_clip_pts_ms": 92432.1875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        }
+      },
+      "note": "前景遮挡，远端末球与捡球仍可见。",
+      "start_ms": 88422.5625,
+      "start_frame": 2651,
+      "end_ms": 92289.1875,
+      "end_frame": 2767
+    },
+    {
+      "rally_id": 8,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            3573,
+            3581
+          ],
+          "review_window_ms": [
+            119155.875,
+            119422.5625
+          ],
+          "source_review_window_ms": [
+            425134.125,
+            425400.8125
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 119155.875,
+          "selected_frame": 3573,
+          "selected_clip_pts_ms": 119298.875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            3721,
+            3732
+          ],
+          "review_window_ms": [
+            124089.1875,
+            124455.875
+          ],
+          "source_review_window_ms": [
+            430067.4375,
+            430434.125
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 124455.875,
+          "selected_frame": 3732,
+          "selected_clip_pts_ms": 124598.875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/expanded-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        }
+      },
+      "note": "发球及末球结束事件见原帧区间，待人工复核。",
+      "start_ms": 119155.875,
+      "start_frame": 3573,
+      "end_ms": 124455.875,
+      "end_frame": 3732
+    },
+    {
+      "rally_id": 9,
+      "review_status": "verified",
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            4035,
+            4037
+          ],
+          "review_window_ms": [
+            134555.875,
+            134622.5625
+          ],
+          "source_review_window_ms": [
+            440534.125,
+            440600.8125
+          ],
+          "selected_endpoint": "left",
+          "selected_ms": 134555.875,
+          "selected_frame": 4035,
+          "selected_clip_pts_ms": 134698.875,
+          "selected_source_ms": 440534.125,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/corrections-20261018/r9-start/confirmed-interval.json"
+          ],
+          "note": "近端黑衣发球，原标注处仍准备；身体遮住触球点，按动作变化给保守区间。 用户确认采用左边界，保留上述复核范围；不是无遮挡的精确接触时刻。"
+        },
+        "end": {
+          "status": "human_confirmed_interval",
+          "review_window_frames": [
+            4123,
+            4140
+          ],
+          "review_window_ms": [
+            137489.1875,
+            138055.875
+          ],
+          "source_review_window_ms": [
+            443467.4375,
+            444034.125
+          ],
+          "selected_endpoint": "right",
+          "selected_ms": 138055.875,
+          "selected_frame": 4140,
+          "selected_clip_pts_ms": 138198.875,
+          "evidence_indices": [
+            "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/detail-index.json"
+          ],
+          "note": "原视觉区间获用户复核确认，采用start左端/end右端；原帧证据保留。"
+        }
+      },
+      "note": "用户2026-10-18确认更正起点；终点保留，其他边界仍按本轮复核记录处理。",
+      "start_ms": 134555.875,
+      "start_frame": 4035,
+      "end_ms": 138055.875,
+      "end_frame": 4140
+    }
+  ],
+  "excluded_events": [
+    {
+      "event_id": "d1-03-event-1",
+      "range_ms": [
+        103000,
+        109000
+      ],
+      "source_range_ms": [
+        408978.25,
+        414978.25
+      ],
+      "classification": "ambiguous_short_event",
+      "review_status": "human_confirmed",
+      "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+      "reason": "前景遮挡下疑似失败发球或接发失败；事件性质不明确，单列重点复核。",
+      "include_in_target_rallies": false,
+      "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+    },
+    {
+      "event_id": "d1-03-event-2",
+      "range_ms": [
+        141989.0,
+        145423.0
+      ],
+      "source_range_ms": [
+        447967.25,
+        451401.25
+      ],
+      "classification": "shuttle_return",
+      "review_status": "human_confirmed",
+      "evaluation_disposition": "exclude_from_main_success_and_failure_counts",
+      "reason": "近端捡球后还球，远端等待；随后才恢复发球准备。",
+      "include_in_target_rallies": false,
+      "human_confirmation_note": "用户明确通过所有单列事件的排除决定；若原类别含ambiguous，保留类别不确定性，不据此断言具体动作。"
+    }
+  ],
+  "evaluation_eligibility": {
+    "formal_benchmark_ready": false,
+    "blockers": [
+      "D_source_usage_not_locked",
+      "benchmark_registration_pending"
+    ],
+    "notes": "已具备已确认回合与排除事件，但不自动加入本轮A组调试或独立验收。"
+  },
+  "human_review": {
+    "reviewer": "user",
+    "date": "2026-10-16",
+    "instruction": "刚刚D组的标注全部符合通过，包括单独审批事件",
+    "scope": "D组四段32个回合及8项单列事件全部通过；8项事件确认排除。",
+    "proposal": "datasets/badminton-v1/annotations/proposed/rally/m1-short-d1-03-20261015/full-v1.json",
+    "proposal_sha256": "937347cf18664fc9098ef819adecc29bfd09d03da46b73d2a93fff24a99785ac",
+    "boundary_selection": {
+      "start": "left_endpoint_of_review_window",
+      "end": "right_endpoint_of_review_window"
+    },
+    "amendments": [
+      {
+        "date": "2026-10-17",
+        "reviewer": "user",
+        "rally_id": 3,
+        "new_start_ms": 42300.0,
+        "frame_id": 1269,
+        "instruction": "起点改为42.300秒",
+        "source": "d103-third-start-review",
+        "interpretation": "用户明确确认采用当前新方案的42.300秒起点。",
+        "old_start_ms": 38366.6875,
+        "evidence_index": "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/corrections-20261017/r3-start/confirmed-point.json",
+        "evidence_index_sha256": "769f1d9c118733641571fd9e0b6a822d43151e35ba54d171d06ebd83f79c6322",
+        "review_context": "根据算法对照页复看后更正人工标注；评分变化不是算法改进，不是独立验收"
+      },
+      {
+        "date": "2026-10-17",
+        "reviewer": "user",
+        "rally_id": 5,
+        "new_start_ms": 74955.875,
+        "frame_id": 2247,
+        "instruction": "第三段第五个回合也是",
+        "source": "d103-fifth-start-review",
+        "interpretation": "用户沿用刚确认的按当前新方案起点更正处理，采用保存的74955.875毫秒起点。",
+        "old_start_ms": 72289.1875,
+        "evidence_index": "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/corrections-20261017/r5-start/confirmed-point.json",
+        "evidence_index_sha256": "2b8686931e1d6d4c5aa0f94b4d865749a968cf3ad113518a037d9ced46c1090e",
+        "review_context": "根据算法对照页复看后更正人工标注；评分变化不是算法改进，不是独立验收"
+      },
+      {
+        "date": "2026-10-18",
+        "reviewer": "user",
+        "clip": "D1-03",
+        "rally_id": 9,
+        "boundary": "start",
+        "old_ms": 132289.1875,
+        "proposed_window_ms": [
+          134555.875,
+          134622.5625
+        ],
+        "proposed_selected_ms": 134555.875,
+        "reason": "近端黑衣发球，原标注处仍准备；身体遮住触球点，按动作变化给保守区间。",
+        "evidence": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/annotation-first-differences-20261017/targeted/D1-03/r9-fine/index.json",
+        "status": "human_confirmed_applied",
+        "evidence_sha256": "14740f842b04fe04cd60a613b366a4e4ddd85383ca56db51796f845c8a16099f",
+        "human_instruction": "采用134.556秒并记录不确定区间",
+        "stored_native_start_ms": 134555.875,
+        "selected_frame": 4035,
+        "evidence_index": "datasets/badminton-v1/local/rally/m1-d-annotation-review-20261016/D1-03/corrections-20261018/r9-start/confirmed-interval.json",
+        "evidence_index_sha256": "a8a22d87a8da5d84188e831d35b228ba566fcb1dcb6de26684fc93f18c7ca68d"
+      }
+    ]
+  },
+  "annotation_revision": 3,
+  "supersedes": {
+    "annotation": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-d1-03-20261015/full-v2.json",
+    "sha256": "50be7cf908366d168ca773d89ea485f5d688125c4162a429f3cbb9976d8909b3"
+  }
+}

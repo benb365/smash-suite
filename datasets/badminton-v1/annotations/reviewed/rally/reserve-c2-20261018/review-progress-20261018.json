@@ -1,0 +1,283 @@
+{
+  "schema_version": 1,
+  "type": "rally_annotation_review_progress",
+  "date": "2026-10-18",
+  "reviewer": "user",
+  "proposal": "datasets/badminton-v1/annotations/proposed/rally/reserve-c2-20261018/full-v1.json",
+  "proposal_sha256": "f12a3f271a5f52b56322177c5eff5a6b3aea19d2c61e294c800164a29a09f743",
+  "scope": "C2所列10个完整回合、7项排除事件及片尾未完回合均已核对。第1回合终点5.167秒、第2回合终点20.033333秒；未完回合168.400秒开始，真实结束点未知。仅确认所列条目，不另外宣告整片无漏标。",
+  "confirmed_rallies": [
+    {
+      "rally_id": 1,
+      "start_ms": 2000.0,
+      "end_ms": 5167.0,
+      "start_range_ms": [
+        2000.0,
+        2133.333333
+      ],
+      "original_proposal_end_ms": 5800.0,
+      "original_proposal_end_range_ms": [
+        5166.666667,
+        5800.0
+      ],
+      "confirmation_scope": "rally_with_user_corrected_end",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "note": "起点沿用所示2.000秒，用户将终点改为5.167秒；按用户给定时间记录，不猜新帧号或把旧终点区间当作已接受范围。"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 14333.333333,
+      "end_ms": 20033.333333333332,
+      "start_range_ms": [
+        14333.333333,
+        14433.333333
+      ],
+      "original_proposal_end_ms": 17900.0,
+      "original_proposal_end_range_ms": [
+        17333.333333,
+        17900.0
+      ],
+      "confirmation_scope": "rally_with_user_selected_algorithm_end",
+      "user_message": "第二回合算法保留的终点更合适",
+      "reference_prediction": {
+        "file": "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/C2/result.json",
+        "sha256": "44ccc9c64e2ea689b4c6d4ca5be6946b43ad0cd5872deb0d80aff24332554f63",
+        "rally_id": 2,
+        "end_ms": 20033.333333333332
+      },
+      "note": "用户认可该回合已有算法保留终点，故终点改为20.033333秒；起点沿用14.333333秒。原草稿和算法输出不改。"
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 24433.333333,
+      "end_ms": 42500.0,
+      "start_range_ms": [
+        24433.333333,
+        24533.333333
+      ],
+      "end_range_ms": [
+        42066.666667,
+        42500.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "3/4/5/6 这几个回合的草稿都确认"
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 49433.333333,
+      "end_ms": 68600.0,
+      "start_range_ms": [
+        49433.333333,
+        49533.333333
+      ],
+      "end_range_ms": [
+        67800.0,
+        68600.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "3/4/5/6 这几个回合的草稿都确认"
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 76133.333333,
+      "end_ms": 84800.0,
+      "start_range_ms": [
+        76133.333333,
+        76233.333333
+      ],
+      "end_range_ms": [
+        84600.0,
+        84800.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "3/4/5/6 这几个回合的草稿都确认"
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 94566.666667,
+      "end_ms": 103433.333333,
+      "start_range_ms": [
+        94566.666667,
+        94700.0
+      ],
+      "end_range_ms": [
+        103233.333333,
+        103433.333333
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "3/4/5/6 这几个回合的草稿都确认"
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 111100.0,
+      "end_ms": 114433.333333,
+      "start_range_ms": [
+        111100.0,
+        111233.333333
+      ],
+      "end_range_ms": [
+        114100.0,
+        114433.333333
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段"
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 120833.333333,
+      "end_ms": 128700.0,
+      "start_range_ms": [
+        120833.333333,
+        120933.333333
+      ],
+      "end_range_ms": [
+        128266.666667,
+        128700.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段"
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 146266.666667,
+      "end_ms": 151100.0,
+      "start_range_ms": [
+        146266.666667,
+        146433.333333
+      ],
+      "end_range_ms": [
+        150800.0,
+        151100.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段"
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 157733.333333,
+      "end_ms": 161600.0,
+      "start_range_ms": [
+        157733.333333,
+        157833.333333
+      ],
+      "end_range_ms": [
+        160800.0,
+        161600.0
+      ],
+      "confirmation_scope": "rally_and_boundaries",
+      "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段"
+    }
+  ],
+  "remaining_rally_ids": [],
+  "remaining_boundary_review_ids": [],
+  "remaining_event_ids": [],
+  "remaining_incomplete_event_ids": [],
+  "confirmed_excluded_events": [
+    {
+      "event_id": "C2-E01",
+      "range_ms": [
+        8700.0,
+        10300.0
+      ],
+      "type": "failed_serve_or_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E02",
+      "range_ms": [
+        44000.0,
+        45000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E03",
+      "range_ms": [
+        86000.0,
+        88000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E04",
+      "range_ms": [
+        105800.0,
+        107800.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E05",
+      "range_ms": [
+        114600.0,
+        116000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E06",
+      "range_ms": [
+        132700.0,
+        134000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E07",
+      "range_ms": [
+        164800.0,
+        166000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    }
+  ],
+  "whole_clip_review_complete": false,
+  "rally_review_complete": true,
+  "incomplete_rally_review": {
+    "event_id": "C2-I01",
+    "rally_presence_confirmed": true,
+    "user_reference_ms": 168000,
+    "proposed_start_ms": 168400,
+    "start_review_status": "human_confirmed",
+    "end_ms": null,
+    "user_message": "7 8 9 10 都确认，但是2：48开始漏了一段",
+    "note": "片尾未完回合已获用户确认：168.400秒开始、可见对打持续到视频结束，真实结束点未知。",
+    "start_ms": 168400,
+    "end_state": "still_playing_at_clip_end",
+    "review_status": "human_confirmed",
+    "visible_range_ms": [
+      168400,
+      180000
+    ],
+    "confirmation_user_message": "ok，我没注意有未完回合",
+    "confirmation_context": "确认所提起点168.400秒，视频结束时仍在对打；片尾180秒仅为可见范围边界，不作为真实回合终点。"
+  },
+  "listed_items_review_complete": true
+}

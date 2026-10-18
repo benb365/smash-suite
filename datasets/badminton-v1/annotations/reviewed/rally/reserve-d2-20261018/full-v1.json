@@ -1,0 +1,842 @@
+{
+  "schema_version": 1,
+  "review_status": "needs_review",
+  "sample_id": "reserve-d2-20261018",
+  "category": "D",
+  "video": "datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+  "video_sha256": "19d57eefda7817a5940c674468b16df9de9236eb91b522c1d45404d1794a67e8",
+  "time_unit": "ms",
+  "frame_index_base": 0,
+  "timebase": {
+    "origin": "first_decoded_video_frame",
+    "first_decoded_clip_pts_ms": 0.0,
+    "clip_pts_rule": "clip_pts_ms = timestamp_ms",
+    "source_time_rule": null,
+    "source_time_note": "本草稿仅对经过尾部裁剪的输入文件标注，不推测相对原完整视频的源时间偏移。",
+    "video_frame_count": 7527,
+    "last_decoded_frame": 7526,
+    "last_decoded_clip_pts_ms": 250867.0,
+    "container_duration_ms": 250900.3125,
+    "timestamp_source": "decoded_frame.pts * decoded_frame.time_base * 1000",
+    "native_pts_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/pts-index.json"
+  },
+  "main_court": "固定主场单打：近侧白上衣、黑长裤、红鞋；远侧灰/黑上衣、深色下装、红鞋。",
+  "evidence": {
+    "directory": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2",
+    "overview_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json",
+    "native_pts_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/pts-index.json",
+    "boundary_indices": [
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r01-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r02-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r03-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r04-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r05-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r06-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r07-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r08-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r09-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r10-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r11-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r12-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r13-start-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-end-index.json",
+      "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/native-r14-start-index.json"
+    ]
+  },
+  "boundary_observations": {
+    "review_status": "needs_review",
+    "clip_head": {
+      "range_ms": [
+        0,
+        1600
+      ],
+      "state": "serve_preparation_visible_before_first_rally",
+      "note": "首帧近端持球准备，随后可见发球挥拍及远端接球；未将0当作回合开始。",
+      "evidence_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/r01-start-index.json"
+    },
+    "clip_tail": {
+      "range_ms": [
+        247000,
+        250867.0
+      ],
+      "state": "between_rallies_after_last_end",
+      "note": "末回合结束后双方走向网前；尾部裁剪前的最后可解码帧未见新的未完回合。",
+      "evidence_index": "datasets/badminton-v1/local/rally/reserve-annotation-review-20261018/D2/overview-index.json"
+    }
+  },
+  "evaluation_eligibility": {
+    "formal_benchmark_ready": false,
+    "blockers": [
+      "human_annotation_review_pending",
+      "all_boundary_intervals_pending_review",
+      "exclusion_candidates_pending_review"
+    ]
+  },
+  "type": "rally_segment_annotation",
+  "status": "human_reviewed_listed_items",
+  "generation": {
+    "method": "apply_saved_human_review",
+    "date": "2026-10-18",
+    "requires_human_review": false,
+    "original_proposal": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+    "original_proposal_sha256": "5f575233a533c19e3e3fb947b20cc994ba5cb6fe6629df345b9cceb398438dee",
+    "human_decisions": "datasets/badminton-v1/annotations/reviewed/rally/reserve-d2-20261018/review-progress-20261018.json",
+    "human_decisions_sha256": "751a3a37d045b7975d2fe26e1ab6b5f7066ddeaeb77bd98a3af6e798e0109e85",
+    "used_segmentation_predictions_for_corrections": false,
+    "note": "初稿独立于分割输出；C2第2回合终点由用户选择已有算法终点，其余更正及确认见人审记录。"
+  },
+  "coverage": {
+    "human_scope": "用户确认D2整片所列完整回合与排除事件；不改变算法、权重和视频。",
+    "listed_items_review_complete": true,
+    "whole_clip_review_complete": true,
+    "negative_time_is_not_verified": false
+  },
+  "segments": [
+    {
+      "rally_id": 1,
+      "start_ms": 533.0,
+      "end_ms": 5800.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 1,
+        "start_ms": 533.0,
+        "end_ms": 5800.0,
+        "start_range_ms": [
+          533.0,
+          767.0
+        ],
+        "end_range_ms": [
+          5467.0,
+          5800.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 1
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 533.0,
+          "review_window_ms": [
+            533.0,
+            767.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 5800.0,
+          "review_window_ms": [
+            5467.0,
+            5800.0
+          ]
+        }
+      },
+      "start_frame": 16,
+      "end_frame": 174
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 19633.0,
+      "end_ms": 22700.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 2,
+        "start_ms": 19633.0,
+        "end_ms": 22700.0,
+        "start_range_ms": [
+          19633.0,
+          19767.0
+        ],
+        "end_range_ms": [
+          22233.0,
+          22700.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 2
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 19633.0,
+          "review_window_ms": [
+            19633.0,
+            19767.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 22700.0,
+          "review_window_ms": [
+            22233.0,
+            22700.0
+          ]
+        }
+      },
+      "start_frame": 589,
+      "end_frame": 681
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 30367.0,
+      "end_ms": 39433.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 3,
+        "start_ms": 30367.0,
+        "end_ms": 39433.0,
+        "start_range_ms": [
+          30367.0,
+          30567.0
+        ],
+        "end_range_ms": [
+          39067.0,
+          39433.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 3
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 30367.0,
+          "review_window_ms": [
+            30367.0,
+            30567.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 39433.0,
+          "review_window_ms": [
+            39067.0,
+            39433.0
+          ]
+        }
+      },
+      "start_frame": 911,
+      "end_frame": 1183
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 49467.0,
+      "end_ms": 55300.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 4,
+        "start_ms": 49467.0,
+        "end_ms": 55300.0,
+        "start_range_ms": [
+          49467.0,
+          49667.0
+        ],
+        "end_range_ms": [
+          54933.0,
+          55300.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 4
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 49467.0,
+          "review_window_ms": [
+            49467.0,
+            49667.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 55300.0,
+          "review_window_ms": [
+            54933.0,
+            55300.0
+          ]
+        }
+      },
+      "start_frame": 1484,
+      "end_frame": 1659
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 62667.0,
+      "end_ms": 66967.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 5,
+        "start_ms": 62667.0,
+        "end_ms": 66967.0,
+        "start_range_ms": [
+          62667.0,
+          62867.0
+        ],
+        "end_range_ms": [
+          66600.0,
+          66967.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 5
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 62667.0,
+          "review_window_ms": [
+            62667.0,
+            62867.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 66967.0,
+          "review_window_ms": [
+            66600.0,
+            66967.0
+          ]
+        }
+      },
+      "start_frame": 1880,
+      "end_frame": 2009
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 77733.0,
+      "end_ms": 88700.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 6,
+        "start_ms": 77733.0,
+        "end_ms": 88700.0,
+        "start_range_ms": [
+          77733.0,
+          77967.0
+        ],
+        "end_range_ms": [
+          87900.0,
+          88700.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 6
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 77733.0,
+          "review_window_ms": [
+            77733.0,
+            77967.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 88700.0,
+          "review_window_ms": [
+            87900.0,
+            88700.0
+          ]
+        }
+      },
+      "start_frame": 2332,
+      "end_frame": 2661
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 102300.0,
+      "end_ms": 108267.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 7,
+        "start_ms": 102300.0,
+        "end_ms": 108267.0,
+        "start_range_ms": [
+          102300.0,
+          102500.0
+        ],
+        "end_range_ms": [
+          108167.0,
+          108267.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 7
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 102300.0,
+          "review_window_ms": [
+            102300.0,
+            102500.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 108267.0,
+          "review_window_ms": [
+            108167.0,
+            108267.0
+          ]
+        }
+      },
+      "start_frame": 3069,
+      "end_frame": 3248
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 116333.0,
+      "end_ms": 130067.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 8,
+        "start_ms": 116333.0,
+        "end_ms": 130067.0,
+        "start_range_ms": [
+          116333.0,
+          116533.0
+        ],
+        "end_range_ms": [
+          129700.0,
+          130067.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 8
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 116333.0,
+          "review_window_ms": [
+            116333.0,
+            116533.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 130067.0,
+          "review_window_ms": [
+            129700.0,
+            130067.0
+          ]
+        }
+      },
+      "start_frame": 3490,
+      "end_frame": 3902
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 138467.0,
+      "end_ms": 144367.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 9,
+        "start_ms": 138467.0,
+        "end_ms": 144367.0,
+        "start_range_ms": [
+          138467.0,
+          138700.0
+        ],
+        "end_range_ms": [
+          144100.0,
+          144367.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 9
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 138467.0,
+          "review_window_ms": [
+            138467.0,
+            138700.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 144367.0,
+          "review_window_ms": [
+            144100.0,
+            144367.0
+          ]
+        }
+      },
+      "start_frame": 4154,
+      "end_frame": 4331
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 153467.0,
+      "end_ms": 172700.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 10,
+        "start_ms": 153467.0,
+        "end_ms": 172700.0,
+        "start_range_ms": [
+          153467.0,
+          153667.0
+        ],
+        "end_range_ms": [
+          172267.0,
+          172700.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 10
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 153467.0,
+          "review_window_ms": [
+            153467.0,
+            153667.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 172700.0,
+          "review_window_ms": [
+            172267.0,
+            172700.0
+          ]
+        }
+      },
+      "start_frame": 4604,
+      "end_frame": 5181
+    },
+    {
+      "rally_id": 11,
+      "start_ms": 186567.0,
+      "end_ms": 190900.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 11,
+        "start_ms": 186567.0,
+        "end_ms": 190900.0,
+        "start_range_ms": [
+          186567.0,
+          186800.0
+        ],
+        "end_range_ms": [
+          190500.0,
+          190900.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 11
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 186567.0,
+          "review_window_ms": [
+            186567.0,
+            186800.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 190900.0,
+          "review_window_ms": [
+            190500.0,
+            190900.0
+          ]
+        }
+      },
+      "start_frame": 5597,
+      "end_frame": 5727
+    },
+    {
+      "rally_id": 12,
+      "start_ms": 200067.0,
+      "end_ms": 207233.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 12,
+        "start_ms": 200067.0,
+        "end_ms": 207233.0,
+        "start_range_ms": [
+          200067.0,
+          200300.0
+        ],
+        "end_range_ms": [
+          206933.0,
+          207233.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 12
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 200067.0,
+          "review_window_ms": [
+            200067.0,
+            200300.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 207233.0,
+          "review_window_ms": [
+            206933.0,
+            207233.0
+          ]
+        }
+      },
+      "start_frame": 6002,
+      "end_frame": 6217
+    },
+    {
+      "rally_id": 13,
+      "start_ms": 216500.0,
+      "end_ms": 232000.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 13,
+        "start_ms": 216500.0,
+        "end_ms": 232000.0,
+        "start_range_ms": [
+          216500.0,
+          216733.0
+        ],
+        "end_range_ms": [
+          231500.0,
+          232000.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 13
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 216500.0,
+          "review_window_ms": [
+            216500.0,
+            216733.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 232000.0,
+          "review_window_ms": [
+            231500.0,
+            232000.0
+          ]
+        }
+      },
+      "start_frame": 6495,
+      "end_frame": 6960
+    },
+    {
+      "rally_id": 14,
+      "start_ms": 242467.0,
+      "end_ms": 245967.0,
+      "review_status": "verified",
+      "human_review": {
+        "rally_id": 14,
+        "start_ms": 242467.0,
+        "end_ms": 245967.0,
+        "start_range_ms": [
+          242467.0,
+          242700.0
+        ],
+        "end_range_ms": [
+          245500.0,
+          245967.0
+        ],
+        "confirmation_scope": "rally_and_boundaries",
+        "user_message": "整个视频我都确认"
+      },
+      "original_proposal_reference": {
+        "path": "datasets/badminton-v1/annotations/proposed/rally/reserve-d2-20261018/full-v1.json",
+        "rally_id": 14
+      },
+      "boundary_review": {
+        "start": {
+          "status": "human_confirmed",
+          "selected_ms": 242467.0,
+          "review_window_ms": [
+            242467.0,
+            242700.0
+          ]
+        },
+        "end": {
+          "status": "human_confirmed",
+          "selected_ms": 245967.0,
+          "review_window_ms": [
+            245500.0,
+            245967.0
+          ]
+        }
+      },
+      "start_frame": 7274,
+      "end_frame": 7379
+    }
+  ],
+  "excluded_events": [
+    {
+      "event_id": "d2-event-01",
+      "range_ms": [
+        7000,
+        18000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-02",
+      "range_ms": [
+        25000,
+        29000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-03",
+      "range_ms": [
+        40000,
+        48000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-04",
+      "range_ms": [
+        56000,
+        62000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-05",
+      "range_ms": [
+        93000,
+        101000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-06",
+      "range_ms": [
+        109000,
+        115000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-07",
+      "range_ms": [
+        132000,
+        138000
+      ],
+      "type": "shuttle_return_and_preparation",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-08",
+      "range_ms": [
+        175000,
+        186000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-09",
+      "range_ms": [
+        208000,
+        215000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-10",
+      "range_ms": [
+        233000,
+        241000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    }
+  ],
+  "incomplete_events": []
+}

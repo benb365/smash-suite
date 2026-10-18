@@ -1,0 +1,2053 @@
+{
+  "date": "2026-10-18",
+  "status": "human_review_applied_saved_predictions_rescored",
+  "algorithm_changed": false,
+  "source_frozen_report": "docs/experiments/a2-c2-d2-current-algorithms-20261018.json",
+  "source_frozen_sha256": "78beaeb40bea11b29b55a85e785941e329d86d56edd4a9541118ae04eb565e49",
+  "original_draft_report": "docs/experiments/a2-c2-d2-draft-review-20261018.json",
+  "policy": {
+    "boundary": "开始允许提前0–1.5秒，结束允许延后0–1.5秒；向内裁切不合格。",
+    "incomplete": "C2片尾真实结束点未知；可见时间单列，不计入完整回合数。完全落在此范围的输出单列，不计作完整回合评估的误报。",
+    "exclusions": "只有预测完全落在一个已确认排除区间内，且不重叠正式回合，才忽略；跨界仍计。",
+    "coverage": "A2/C2仅确认所列条目，标注外保留与误报数字用于诊断；D2已整片确认。",
+    "timing": "沿用保存输出的真实emitted_at_ms；离线记账时间不代表推理速度或实时能力。",
+    "acceptance": "A2/C2此前用于诊断且C2选人条件已调整；本报告不宣告独立验收通过。"
+  },
+  "review_data": "models/SoloShuttlePose/.runtime/reserve-human-reviewed-20261018/review.json",
+  "results": [
+    {
+      "clip_id": "A2-01",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/reserve-a2-01-20261018/full-v1.json",
+      "annotation_sha256": "09513900ec94566109042c908f310081802fb18124de47ba84275c1b0e740788",
+      "human_decisions": "datasets/badminton-v1/annotations/reviewed/rally/reserve-a2-01-20261018/review-progress-20261018.json",
+      "human_decisions_sha256": "9d0d6986136d530b58a18bad5af59463ae5605818ec46dc6963c4a61fda04805",
+      "coverage": {
+        "human_scope": "A2第一段所列4个回合和4项候选事件已逐项核对；第1个正常短回合及4项非回合事件均获同意排除。仅确认所列条目，不另外宣告整片不存在漏标。",
+        "listed_items_review_complete": true,
+        "whole_clip_review_complete": false,
+        "negative_time_is_not_verified": true
+      },
+      "predictions": [
+        {
+          "rally_id": 3,
+          "start_ms": 48800.0,
+          "end_ms": 53920.0,
+          "emitted_at_ms": 55640.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 71040.0,
+          "end_ms": 89760.0,
+          "emitted_at_ms": 91400.0
+        }
+      ],
+      "complete_rally_evaluation": {
+        "evaluator_version": "rally-iou-v3",
+        "boundary_policy": {
+          "outward_tolerance_ms": 1500.0,
+          "start_offset_range_ms": [
+            -1500.0,
+            0.0
+          ],
+          "end_offset_range_ms": [
+            0.0,
+            1500.0
+          ],
+          "error_summary_population": "matched_boundaries_outside_acceptable_range",
+          "acceptance_denominator": "all_verified_truth"
+        },
+        "boundary_acceptance": {
+          "truth_count": 3,
+          "matched_count": 2,
+          "start_acceptable_count": 1,
+          "start_acceptable_rate": 0.3333333333333333,
+          "end_acceptable_count": 1,
+          "end_acceptable_rate": 0.3333333333333333,
+          "both_acceptable_count": 0,
+          "both_acceptable_rate": 0.0
+        },
+        "truth_count": 3,
+        "prediction_count": 2,
+        "input_prediction_count": 2,
+        "exclusion_policy": "fully_contained_without_truth_overlap",
+        "excluded_events": [
+          {
+            "event_id": "A2-01-R01-optional-short",
+            "source_rally_id": 1,
+            "range_ms": [
+              15500,
+              17500
+            ],
+            "type": "optional_short_normal_rally",
+            "review_status": "human_confirmed",
+            "user_message": "我更正一下，这个是个短回合对抗，15.5-17.5，同意可以排除",
+            "original_confirmed_rally_range_ms": [
+              15920,
+              17600
+            ],
+            "note": "保留正常短回合标注；用户明确允许从本轮目标回合及评估中排除。所给15.5–17.5秒范围单独记录，原草稿不改。"
+          },
+          {
+            "event_id": "A2-01-E01",
+            "range_ms": [
+              7000,
+              8000
+            ],
+            "type": "shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "这是一段还球，可以排除"
+          },
+          {
+            "event_id": "A2-01-E02",
+            "range_ms": [
+              39400,
+              40280
+            ],
+            "type": "shuttle_handling",
+            "review_status": "human_confirmed",
+            "user_message": "同意",
+            "confirmation_context": "确认39.400–40.280秒近端黑衣捡球后颠球并接住、远端等待，属于整理球，可排除。"
+          },
+          {
+            "event_id": "A2-01-E03",
+            "range_ms": [
+              58000,
+              61800
+            ],
+            "type": "shuttle_handling_or_return",
+            "review_status": "human_confirmed",
+            "user_message": "同意",
+            "confirmation_context": "确认58–61.8秒近端整理、颠球，随后远端捡球，无持续对打，可排除。"
+          },
+          {
+            "event_id": "A2-01-E04",
+            "range_ms": [
+              93240,
+              96400
+            ],
+            "type": "shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "同意",
+            "confirmation_context": "确认93.240–96.400秒近端轻拨球过网、远端网前捡球，是还球，可排除。"
+          }
+        ],
+        "ignored_predictions": [],
+        "excluded_annotation_ids": [
+          1
+        ],
+        "matches": [
+          {
+            "prediction_id": 3,
+            "truth_id": 3,
+            "temporal_iou": 0.9393939393939394,
+            "start_offset_ms": 160.0,
+            "end_offset_ms": 160.0,
+            "start_error_ms": 160.0,
+            "end_error_ms": 0.0,
+            "start_acceptable": false,
+            "end_acceptable": true,
+            "both_acceptable": false,
+            "output_latency_ms": 1720.0
+          },
+          {
+            "prediction_id": 5,
+            "truth_id": 4,
+            "temporal_iou": 0.8952991452991453,
+            "start_offset_ms": -400.0,
+            "end_offset_ms": 1560.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 60.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 1640.0
+          }
+        ],
+        "missed_rally_count": 1,
+        "false_positive_count": 0,
+        "false_split_count": 0,
+        "false_merge_count": 0,
+        "start_error_ms": {
+          "count": 1,
+          "mean": 160.0,
+          "p50": 160.0,
+          "p95": 160.0,
+          "max": 160.0
+        },
+        "end_error_ms": {
+          "count": 1,
+          "mean": 60.0,
+          "p50": 60.0,
+          "p95": 60.0,
+          "max": 60.0
+        },
+        "output_latency_ms": {
+          "count": 2,
+          "mean": 1680.0,
+          "p50": 1680.0,
+          "p95": 1716.0,
+          "max": 1720.0
+        },
+        "unmatched_prediction_ids": [],
+        "unmatched_truth_ids": [
+          2
+        ],
+        "prediction_overlaps": {
+          "3": [
+            3
+          ],
+          "5": [
+            4
+          ]
+        },
+        "truth_overlaps": {
+          "2": [],
+          "3": [
+            3
+          ],
+          "4": [
+            5
+          ]
+        },
+        "predictions": [
+          {
+            "rally_id": 3,
+            "start_ms": 48800.0,
+            "end_ms": 53920.0,
+            "emitted_at_ms": 55640.0
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 71040.0,
+            "end_ms": 89760.0,
+            "emitted_at_ms": 91400.0
+          }
+        ],
+        "annotations": [
+          {
+            "rally_id": 2,
+            "start_ms": 28120.0,
+            "end_ms": 32400.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 48640.0,
+            "end_ms": 53760.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 71440.0,
+            "end_ms": 88200.0,
+            "review_status": "verified"
+          }
+        ]
+      },
+      "time": {
+        "target_ms": 26160.0,
+        "retained_target_ms": 21720.0,
+        "non_target_ms": 59840.0,
+        "retained_non_target_ms": 2120.0,
+        "ignored_ms": 10840.0,
+        "target_retention": 0.8302752293577982,
+        "non_target_retention": 0.03542780748663102
+      },
+      "groups": {
+        "all_complete": {
+          "target_count": 3,
+          "target_ms": 26160.0,
+          "retained_ms": 21720.0,
+          "retained_fraction": 0.8302752293577982,
+          "wholly_missed_ids": [
+            2
+          ]
+        },
+        "over_3_seconds": {
+          "target_count": 3,
+          "target_ms": 26160.0,
+          "retained_ms": 21720.0,
+          "retained_fraction": 0.8302752293577982,
+          "wholly_missed_ids": [
+            2
+          ]
+        },
+        "over_5_seconds": {
+          "target_count": 2,
+          "target_ms": 21880.0,
+          "retained_ms": 21720.0,
+          "retained_fraction": 0.9926873857404022,
+          "wholly_missed_ids": []
+        }
+      },
+      "rally_details": [
+        {
+          "rally_id": 2,
+          "start_ms": 28120.0,
+          "end_ms": 32400.0,
+          "retained_ms": 0,
+          "missing_ms": 4280.0,
+          "overlapping_prediction_ids": []
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 48640.0,
+          "end_ms": 53760.0,
+          "retained_ms": 4960.0,
+          "missing_ms": 160.0,
+          "overlapping_prediction_ids": [
+            3
+          ]
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 71440.0,
+          "end_ms": 88200.0,
+          "retained_ms": 16760.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            5
+          ]
+        }
+      ],
+      "incomplete_rallies": [],
+      "partial_only_prediction_ids": [],
+      "selected_ms": 23840.0,
+      "retained_excluded_ms": 0,
+      "retained_outside_confirmed_play_ms": 2120.0
+    },
+    {
+      "clip_id": "A2-02",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/reserve-a2-02-20261018/full-v1.json",
+      "annotation_sha256": "99d767f8bd91673b169fbd2ac1beb1475e0d15c6d24fad4c9bc93f99b86504fb",
+      "human_decisions": "datasets/badminton-v1/annotations/reviewed/rally/reserve-a2-02-20261018/review-progress-20261018.json",
+      "human_decisions_sha256": "f0e4426ffc6f92ad9efc66811cbad67060a196c509130516c6b147082f461d57",
+      "coverage": {
+        "human_scope": "A2第二段所列3个回合及3个排除事件已逐项确认；第3回合起点修正为48.244秒、终点64.200秒，第1回合7.080–10.200秒保留为正常短回合。仅确认所列条目，不另行宣告整片无漏标。",
+        "listed_items_review_complete": true,
+        "whole_clip_review_complete": false,
+        "negative_time_is_not_verified": true
+      },
+      "predictions": [
+        {
+          "rally_id": 3,
+          "start_ms": 48560.0,
+          "end_ms": 63800.0,
+          "emitted_at_ms": 65480.0
+        }
+      ],
+      "complete_rally_evaluation": {
+        "evaluator_version": "rally-iou-v3",
+        "boundary_policy": {
+          "outward_tolerance_ms": 1500.0,
+          "start_offset_range_ms": [
+            -1500.0,
+            0.0
+          ],
+          "end_offset_range_ms": [
+            0.0,
+            1500.0
+          ],
+          "error_summary_population": "matched_boundaries_outside_acceptable_range",
+          "acceptance_denominator": "all_verified_truth"
+        },
+        "boundary_acceptance": {
+          "truth_count": 3,
+          "matched_count": 1,
+          "start_acceptable_count": 0,
+          "start_acceptable_rate": 0.0,
+          "end_acceptable_count": 0,
+          "end_acceptable_rate": 0.0,
+          "both_acceptable_count": 0,
+          "both_acceptable_rate": 0.0
+        },
+        "truth_count": 3,
+        "prediction_count": 1,
+        "input_prediction_count": 1,
+        "exclusion_policy": "fully_contained_without_truth_overlap",
+        "excluded_events": [
+          {
+            "event_id": "A2-02-E01",
+            "range_ms": [
+              18000,
+              19000
+            ],
+            "type": "shuttle_handling",
+            "review_status": "human_confirmed",
+            "user_message": "合适，此外这个视频的三个排除事件也确认",
+            "confirmation_context": "用户同时确认A2第二段所列三个排除事件。"
+          },
+          {
+            "event_id": "A2-02-E02",
+            "range_ms": [
+              34200,
+              38600
+            ],
+            "type": "shuttle_return_or_pickup",
+            "review_status": "human_confirmed",
+            "user_message": "合适，此外这个视频的三个排除事件也确认",
+            "confirmation_context": "用户同时确认A2第二段所列三个排除事件。"
+          },
+          {
+            "event_id": "A2-02-E03",
+            "range_ms": [
+              71000,
+              73600
+            ],
+            "type": "shuttle_handling",
+            "review_status": "human_confirmed",
+            "user_message": "合适，此外这个视频的三个排除事件也确认",
+            "confirmation_context": "用户同时确认A2第二段所列三个排除事件。"
+          }
+        ],
+        "ignored_predictions": [],
+        "excluded_annotation_ids": [],
+        "matches": [
+          {
+            "prediction_id": 3,
+            "truth_id": 3,
+            "temporal_iou": 0.9551265981448984,
+            "start_offset_ms": 316.0,
+            "end_offset_ms": -400.0,
+            "start_error_ms": 316.0,
+            "end_error_ms": 400.0,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 1680.0
+          }
+        ],
+        "missed_rally_count": 2,
+        "false_positive_count": 0,
+        "false_split_count": 0,
+        "false_merge_count": 0,
+        "start_error_ms": {
+          "count": 1,
+          "mean": 316.0,
+          "p50": 316.0,
+          "p95": 316.0,
+          "max": 316.0
+        },
+        "end_error_ms": {
+          "count": 1,
+          "mean": 400.0,
+          "p50": 400.0,
+          "p95": 400.0,
+          "max": 400.0
+        },
+        "output_latency_ms": {
+          "count": 1,
+          "mean": 1680.0,
+          "p50": 1680.0,
+          "p95": 1680.0,
+          "max": 1680.0
+        },
+        "unmatched_prediction_ids": [],
+        "unmatched_truth_ids": [
+          1,
+          2
+        ],
+        "prediction_overlaps": {
+          "3": [
+            3
+          ]
+        },
+        "truth_overlaps": {
+          "1": [],
+          "2": [],
+          "3": [
+            3
+          ]
+        },
+        "predictions": [
+          {
+            "rally_id": 3,
+            "start_ms": 48560.0,
+            "end_ms": 63800.0,
+            "emitted_at_ms": 65480.0
+          }
+        ],
+        "annotations": [
+          {
+            "rally_id": 1,
+            "start_ms": 7080.0,
+            "end_ms": 10200.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 27640.0,
+            "end_ms": 33120.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 48244.0,
+            "end_ms": 64200.0,
+            "review_status": "verified"
+          }
+        ]
+      },
+      "time": {
+        "target_ms": 24556.0,
+        "retained_target_ms": 15240.0,
+        "non_target_ms": 48564.0,
+        "retained_non_target_ms": 0.0,
+        "ignored_ms": 8000.0,
+        "target_retention": 0.6206222511809741,
+        "non_target_retention": 0.0
+      },
+      "groups": {
+        "all_complete": {
+          "target_count": 3,
+          "target_ms": 24556.0,
+          "retained_ms": 15240.0,
+          "retained_fraction": 0.6206222511809741,
+          "wholly_missed_ids": [
+            1,
+            2
+          ]
+        },
+        "over_3_seconds": {
+          "target_count": 3,
+          "target_ms": 24556.0,
+          "retained_ms": 15240.0,
+          "retained_fraction": 0.6206222511809741,
+          "wholly_missed_ids": [
+            1,
+            2
+          ]
+        },
+        "over_5_seconds": {
+          "target_count": 2,
+          "target_ms": 21436.0,
+          "retained_ms": 15240.0,
+          "retained_fraction": 0.7109535361074827,
+          "wholly_missed_ids": [
+            2
+          ]
+        }
+      },
+      "rally_details": [
+        {
+          "rally_id": 1,
+          "start_ms": 7080.0,
+          "end_ms": 10200.0,
+          "retained_ms": 0,
+          "missing_ms": 3120.0,
+          "overlapping_prediction_ids": []
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 27640.0,
+          "end_ms": 33120.0,
+          "retained_ms": 0,
+          "missing_ms": 5480.0,
+          "overlapping_prediction_ids": []
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 48244.0,
+          "end_ms": 64200.0,
+          "retained_ms": 15240.0,
+          "missing_ms": 716.0,
+          "overlapping_prediction_ids": [
+            3
+          ]
+        }
+      ],
+      "incomplete_rallies": [],
+      "partial_only_prediction_ids": [],
+      "selected_ms": 15240.0,
+      "retained_excluded_ms": 0,
+      "retained_outside_confirmed_play_ms": 0.0
+    },
+    {
+      "clip_id": "C2",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/reserve-c2-20261018/full-v1.json",
+      "annotation_sha256": "2bb2971f72b3f9ac1c8036df62906e5d054ef58b3bbe2b31c0dcbaf618fe8a3e",
+      "human_decisions": "datasets/badminton-v1/annotations/reviewed/rally/reserve-c2-20261018/review-progress-20261018.json",
+      "human_decisions_sha256": "e0ecbfd1f4c394fd7e929d19035718b3edcccdea9d96e8b637b1585d23a23699",
+      "coverage": {
+        "human_scope": "C2所列10个完整回合、7项排除事件及片尾未完回合均已核对。第1回合终点5.167秒、第2回合终点20.033333秒；未完回合168.400秒开始，真实结束点未知。仅确认所列条目，不另外宣告整片无漏标。",
+        "listed_items_review_complete": true,
+        "whole_clip_review_complete": false,
+        "negative_time_is_not_verified": true
+      },
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 7700.0,
+          "end_ms": 11200.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 14133.333333333334,
+          "end_ms": 20033.333333333332,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24133.333333333332,
+          "end_ms": 88033.33333333333,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 92000.0,
+          "end_ms": 103000.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 120933.33333333333,
+          "end_ms": 133600.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 170266.66666666666,
+          "end_ms": 178466.66666666666,
+          "emitted_at_ms": 179966.66666666666
+        }
+      ],
+      "complete_rally_evaluation": {
+        "evaluator_version": "rally-iou-v3",
+        "boundary_policy": {
+          "outward_tolerance_ms": 1500.0,
+          "start_offset_range_ms": [
+            -1500.0,
+            0.0
+          ],
+          "end_offset_range_ms": [
+            0.0,
+            1500.0
+          ],
+          "error_summary_population": "matched_boundaries_outside_acceptable_range",
+          "acceptance_denominator": "all_verified_truth"
+        },
+        "boundary_acceptance": {
+          "truth_count": 10,
+          "matched_count": 4,
+          "start_acceptable_count": 1,
+          "start_acceptable_rate": 0.1,
+          "end_acceptable_count": 1,
+          "end_acceptable_rate": 0.1,
+          "both_acceptable_count": 1,
+          "both_acceptable_rate": 0.1
+        },
+        "truth_count": 10,
+        "prediction_count": 5,
+        "input_prediction_count": 5,
+        "exclusion_policy": "fully_contained_without_truth_overlap",
+        "excluded_events": [
+          {
+            "event_id": "C2-E01",
+            "range_ms": [
+              8700.0,
+              10300.0
+            ],
+            "type": "failed_serve_or_return",
+            "review_status": "human_confirmed",
+            "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+            "confirmation_scope": "outside_normal_rallies",
+            "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+          },
+          {
+            "event_id": "C2-E02",
+            "range_ms": [
+              44000.0,
+              45000.0
+            ],
+            "type": "shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+            "confirmation_scope": "outside_normal_rallies",
+            "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+          },
+          {
+            "event_id": "C2-E03",
+            "range_ms": [
+              86000.0,
+              88000.0
+            ],
+            "type": "shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+            "confirmation_scope": "outside_normal_rallies",
+            "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+          },
+          {
+            "event_id": "C2-E04",
+            "range_ms": [
+              105800.0,
+              107800.0
+            ],
+            "type": "shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+            "confirmation_scope": "outside_normal_rallies",
+            "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+          },
+          {
+            "event_id": "C2-E05",
+            "range_ms": [
+              114600.0,
+              116000.0
+            ],
+            "type": "shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+            "confirmation_scope": "outside_normal_rallies",
+            "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+          },
+          {
+            "event_id": "C2-E06",
+            "range_ms": [
+              132700.0,
+              134000.0
+            ],
+            "type": "shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+            "confirmation_scope": "outside_normal_rallies",
+            "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+          },
+          {
+            "event_id": "C2-E07",
+            "range_ms": [
+              164800.0,
+              166000.0
+            ],
+            "type": "shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+            "confirmation_scope": "outside_normal_rallies",
+            "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+          }
+        ],
+        "ignored_predictions": [],
+        "excluded_annotation_ids": [],
+        "matches": [
+          {
+            "prediction_id": 2,
+            "truth_id": 2,
+            "temporal_iou": 0.9661016949717515,
+            "start_offset_ms": -199.99999966666655,
+            "end_offset_ms": 0.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 0.0,
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "output_latency_ms": 159933.3333333333
+          },
+          {
+            "prediction_id": 3,
+            "truth_id": 4,
+            "temporal_iou": 0.2999478351643192,
+            "start_offset_ms": -25299.99999966667,
+            "end_offset_ms": 19433.33333333333,
+            "start_error_ms": 23799.99999966667,
+            "end_error_ms": 17933.33333333333,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 91933.33333333333
+          },
+          {
+            "prediction_id": 4,
+            "truth_id": 6,
+            "temporal_iou": 0.7376093294384143,
+            "start_offset_ms": -2566.6666669999977,
+            "end_offset_ms": -433.3333330000023,
+            "start_error_ms": 1066.6666669999977,
+            "end_error_ms": 433.3333330000023,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 76966.66666666666
+          },
+          {
+            "prediction_id": 5,
+            "truth_id": 8,
+            "temporal_iou": 0.6083550913679285,
+            "start_offset_ms": 100.00000033332617,
+            "end_offset_ms": 4900.0,
+            "start_error_ms": 100.00000033332617,
+            "end_error_ms": 3400.0,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 46366.66666666666
+          }
+        ],
+        "missed_rally_count": 4,
+        "false_positive_count": 1,
+        "false_split_count": 0,
+        "false_merge_count": 2,
+        "start_error_ms": {
+          "count": 3,
+          "mean": 8322.222222333332,
+          "p50": 1066.6666669999977,
+          "p95": 21526.6666664,
+          "max": 23799.99999966667
+        },
+        "end_error_ms": {
+          "count": 3,
+          "mean": 7255.555555444444,
+          "p50": 3400.0,
+          "p95": 16479.999999999993,
+          "max": 17933.33333333333
+        },
+        "output_latency_ms": {
+          "count": 5,
+          "mean": 108793.33333333333,
+          "p50": 91933.33333333333,
+          "p95": 167000.0,
+          "max": 168766.66666666666
+        },
+        "unmatched_prediction_ids": [
+          1
+        ],
+        "unmatched_truth_ids": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          10
+        ],
+        "prediction_overlaps": {
+          "1": [],
+          "2": [
+            2
+          ],
+          "3": [
+            3,
+            4,
+            5
+          ],
+          "4": [
+            6
+          ],
+          "5": [
+            8
+          ]
+        },
+        "truth_overlaps": {
+          "1": [],
+          "2": [
+            2
+          ],
+          "3": [
+            3
+          ],
+          "4": [
+            3
+          ],
+          "5": [
+            3
+          ],
+          "6": [
+            4
+          ],
+          "7": [],
+          "8": [
+            5
+          ],
+          "9": [],
+          "10": []
+        },
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 7700.0,
+            "end_ms": 11200.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14133.333333333334,
+            "end_ms": 20033.333333333332,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24133.333333333332,
+            "end_ms": 88033.33333333333,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 92000.0,
+            "end_ms": 103000.0,
+            "emitted_at_ms": 179966.66666666666
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 120933.33333333333,
+            "end_ms": 133600.0,
+            "emitted_at_ms": 179966.66666666666
+          }
+        ],
+        "annotations": [
+          {
+            "rally_id": 1,
+            "start_ms": 2000.0,
+            "end_ms": 5167.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 14333.333333,
+            "end_ms": 20033.333333333332,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 24433.333333,
+            "end_ms": 42500.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 49433.333333,
+            "end_ms": 68600.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 76133.333333,
+            "end_ms": 84800.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 94566.666667,
+            "end_ms": 103433.333333,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 111100.0,
+            "end_ms": 114433.333333,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 120833.333333,
+            "end_ms": 128700.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 146266.666667,
+            "end_ms": 151100.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 157733.333333,
+            "end_ms": 161600.0,
+            "review_status": "verified"
+          }
+        ]
+      },
+      "time": {
+        "target_ms": 83533.66666733332,
+        "retained_target_ms": 67800.00000100001,
+        "non_target_ms": 74366.33333266666,
+        "retained_non_target_ms": 23666.666665666664,
+        "ignored_ms": 10500.0,
+        "target_retention": 0.8116487962992037,
+        "non_target_retention": 0.31824436683999696
+      },
+      "groups": {
+        "all_complete": {
+          "target_count": 10,
+          "target_ms": 83533.66666733332,
+          "retained_ms": 67800.00000100001,
+          "retained_fraction": 0.8116487962992037,
+          "wholly_missed_ids": [
+            1,
+            7,
+            9,
+            10
+          ]
+        },
+        "over_3_seconds": {
+          "target_count": 10,
+          "target_ms": 83533.66666733332,
+          "retained_ms": 67800.00000100001,
+          "retained_fraction": 0.8116487962992037,
+          "wholly_missed_ids": [
+            1,
+            7,
+            9,
+            10
+          ]
+        },
+        "over_5_seconds": {
+          "target_count": 6,
+          "target_ms": 68333.33333433332,
+          "retained_ms": 67800.00000100001,
+          "retained_fraction": 0.992195121951334,
+          "wholly_missed_ids": []
+        }
+      },
+      "rally_details": [
+        {
+          "rally_id": 1,
+          "start_ms": 2000.0,
+          "end_ms": 5167.0,
+          "retained_ms": 0,
+          "missing_ms": 3167.0,
+          "overlapping_prediction_ids": []
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 14333.333333,
+          "end_ms": 20033.333333333332,
+          "retained_ms": 5700.000000333332,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            2
+          ]
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24433.333333,
+          "end_ms": 42500.0,
+          "retained_ms": 18066.666667,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            3
+          ]
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 49433.333333,
+          "end_ms": 68600.0,
+          "retained_ms": 19166.666666999998,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            3
+          ]
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 76133.333333,
+          "end_ms": 84800.0,
+          "retained_ms": 8666.666666999998,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            3
+          ]
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 94566.666667,
+          "end_ms": 103433.333333,
+          "retained_ms": 8433.333333000002,
+          "missing_ms": 433.3333330000023,
+          "overlapping_prediction_ids": [
+            4
+          ]
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 111100.0,
+          "end_ms": 114433.333333,
+          "retained_ms": 0,
+          "missing_ms": 3333.3333330000023,
+          "overlapping_prediction_ids": []
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 120833.333333,
+          "end_ms": 128700.0,
+          "retained_ms": 7766.6666666666715,
+          "missing_ms": 100.00000033332617,
+          "overlapping_prediction_ids": [
+            5
+          ]
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 146266.666667,
+          "end_ms": 151100.0,
+          "retained_ms": 0,
+          "missing_ms": 4833.333332999988,
+          "overlapping_prediction_ids": []
+        },
+        {
+          "rally_id": 10,
+          "start_ms": 157733.333333,
+          "end_ms": 161600.0,
+          "retained_ms": 0,
+          "missing_ms": 3866.6666670000122,
+          "overlapping_prediction_ids": []
+        }
+      ],
+      "incomplete_rallies": [
+        {
+          "event_id": "C2-I01",
+          "start_ms": 168400,
+          "end_ms": null,
+          "visible_range_ms": [
+            168400,
+            180000
+          ],
+          "visible_ms": 11600,
+          "retained_ms": 8200.0,
+          "overlapping_predictions": [
+            {
+              "rally_id": 6,
+              "start_ms": 170266.66666666666,
+              "end_ms": 178466.66666666666,
+              "emitted_at_ms": 179966.66666666666
+            }
+          ]
+        }
+      ],
+      "partial_only_prediction_ids": [
+        6
+      ],
+      "selected_ms": 105166.66666666667,
+      "retained_excluded_ms": 5500.0,
+      "retained_outside_confirmed_play_ms": 29166.666665666664
+    },
+    {
+      "clip_id": "D2",
+      "annotation": "datasets/badminton-v1/annotations/reviewed/rally/reserve-d2-20261018/full-v1.json",
+      "annotation_sha256": "f7b0fc9372efedfadf5457db7d586de3ce083f21c89784a8350365d32d25d0f6",
+      "human_decisions": "datasets/badminton-v1/annotations/reviewed/rally/reserve-d2-20261018/review-progress-20261018.json",
+      "human_decisions_sha256": "751a3a37d045b7975d2fe26e1ab6b5f7066ddeaeb77bd98a3af6e798e0109e85",
+      "coverage": {
+        "human_scope": "用户确认D2整片所列完整回合与排除事件；不改变算法、权重和视频。",
+        "listed_items_review_complete": true,
+        "whole_clip_review_complete": true,
+        "negative_time_is_not_verified": false
+      },
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 0,
+          "end_ms": 6800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 18900.0,
+          "end_ms": 27000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 29700.0,
+          "end_ms": 42000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 48100.0,
+          "end_ms": 55800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 63500.0,
+          "end_ms": 68600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 77500.0,
+          "end_ms": 95000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 101300.0,
+          "end_ms": 108400.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 115500.0,
+          "end_ms": 129600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 137100.0,
+          "end_ms": 145000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 10,
+          "start_ms": 153300.0,
+          "end_ms": 176400.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 11,
+          "start_ms": 198700.0,
+          "end_ms": 203600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 12,
+          "start_ms": 215700.0,
+          "end_ms": 227400.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 13,
+          "start_ms": 229300.0,
+          "end_ms": 237600.0,
+          "emitted_at_ms": 250900.3125
+        }
+      ],
+      "complete_rally_evaluation": {
+        "evaluator_version": "rally-iou-v3",
+        "boundary_policy": {
+          "outward_tolerance_ms": 1500.0,
+          "start_offset_range_ms": [
+            -1500.0,
+            0.0
+          ],
+          "end_offset_range_ms": [
+            0.0,
+            1500.0
+          ],
+          "error_summary_population": "matched_boundaries_outside_acceptable_range",
+          "acceptance_denominator": "all_verified_truth"
+        },
+        "boundary_acceptance": {
+          "truth_count": 14,
+          "matched_count": 12,
+          "start_acceptable_count": 11,
+          "start_acceptable_rate": 0.7857142857142857,
+          "end_acceptable_count": 4,
+          "end_acceptable_rate": 0.2857142857142857,
+          "both_acceptable_count": 4,
+          "both_acceptable_rate": 0.2857142857142857
+        },
+        "truth_count": 14,
+        "prediction_count": 13,
+        "input_prediction_count": 13,
+        "exclusion_policy": "fully_contained_without_truth_overlap",
+        "excluded_events": [
+          {
+            "event_id": "d2-event-01",
+            "range_ms": [
+              7000,
+              18000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-02",
+            "range_ms": [
+              25000,
+              29000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-03",
+            "range_ms": [
+              40000,
+              48000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-04",
+            "range_ms": [
+              56000,
+              62000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-05",
+            "range_ms": [
+              93000,
+              101000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-06",
+            "range_ms": [
+              109000,
+              115000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-07",
+            "range_ms": [
+              132000,
+              138000
+            ],
+            "type": "shuttle_return_and_preparation",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-08",
+            "range_ms": [
+              175000,
+              186000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-09",
+            "range_ms": [
+              208000,
+              215000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          },
+          {
+            "event_id": "d2-event-10",
+            "range_ms": [
+              233000,
+              241000
+            ],
+            "type": "pickup_and_shuttle_return",
+            "review_status": "human_confirmed",
+            "user_message": "整个视频我都确认"
+          }
+        ],
+        "ignored_predictions": [],
+        "excluded_annotation_ids": [],
+        "matches": [
+          {
+            "prediction_id": 1,
+            "truth_id": 1,
+            "temporal_iou": 0.7745588235294117,
+            "start_offset_ms": -533.0,
+            "end_offset_ms": 1000.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 0.0,
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "output_latency_ms": 244100.3125
+          },
+          {
+            "prediction_id": 2,
+            "truth_id": 2,
+            "temporal_iou": 0.37864197530864196,
+            "start_offset_ms": -733.0,
+            "end_offset_ms": 4300.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 2800.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 223900.3125
+          },
+          {
+            "prediction_id": 3,
+            "truth_id": 3,
+            "temporal_iou": 0.7370731707317073,
+            "start_offset_ms": -667.0,
+            "end_offset_ms": 2567.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 1067.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 208900.3125
+          },
+          {
+            "prediction_id": 4,
+            "truth_id": 4,
+            "temporal_iou": 0.7575324675324675,
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": 500.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 0.0,
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "output_latency_ms": 195100.3125
+          },
+          {
+            "prediction_id": 5,
+            "truth_id": 5,
+            "temporal_iou": 0.5843586718354964,
+            "start_offset_ms": 833.0,
+            "end_offset_ms": 1633.0,
+            "start_error_ms": 833.0,
+            "end_error_ms": 133.0,
+            "start_acceptable": false,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 182300.3125
+          },
+          {
+            "prediction_id": 6,
+            "truth_id": 6,
+            "temporal_iou": 0.6266857142857143,
+            "start_offset_ms": -233.0,
+            "end_offset_ms": 6300.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 4800.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 155900.3125
+          },
+          {
+            "prediction_id": 7,
+            "truth_id": 7,
+            "temporal_iou": 0.8404225352112676,
+            "start_offset_ms": -1000.0,
+            "end_offset_ms": 133.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 0.0,
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "output_latency_ms": 142500.3125
+          },
+          {
+            "prediction_id": 8,
+            "truth_id": 8,
+            "temporal_iou": 0.9107571909109632,
+            "start_offset_ms": -833.0,
+            "end_offset_ms": -467.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 467.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 121300.3125
+          },
+          {
+            "prediction_id": 9,
+            "truth_id": 9,
+            "temporal_iou": 0.7468354430379747,
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": 633.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 0.0,
+            "start_acceptable": true,
+            "end_acceptable": true,
+            "both_acceptable": true,
+            "output_latency_ms": 105900.3125
+          },
+          {
+            "prediction_id": 10,
+            "truth_id": 10,
+            "temporal_iou": 0.8325974025974026,
+            "start_offset_ms": -167.0,
+            "end_offset_ms": 3700.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 2200.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 74500.3125
+          },
+          {
+            "prediction_id": 11,
+            "truth_id": 12,
+            "temporal_iou": 0.4140396109223016,
+            "start_offset_ms": -1367.0,
+            "end_offset_ms": -3633.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 3633.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 47300.3125
+          },
+          {
+            "prediction_id": 12,
+            "truth_id": 13,
+            "temporal_iou": 0.6687116564417178,
+            "start_offset_ms": -800.0,
+            "end_offset_ms": -4600.0,
+            "start_error_ms": 0.0,
+            "end_error_ms": 4600.0,
+            "start_acceptable": true,
+            "end_acceptable": false,
+            "both_acceptable": false,
+            "output_latency_ms": 23500.3125
+          }
+        ],
+        "missed_rally_count": 2,
+        "false_positive_count": 0,
+        "false_split_count": 1,
+        "false_merge_count": 0,
+        "start_error_ms": {
+          "count": 1,
+          "mean": 833.0,
+          "p50": 833.0,
+          "p95": 833.0,
+          "max": 833.0
+        },
+        "end_error_ms": {
+          "count": 8,
+          "mean": 2462.5,
+          "p50": 2500.0,
+          "p95": 4730.0,
+          "max": 4800.0
+        },
+        "output_latency_ms": {
+          "count": 13,
+          "mean": 133731.08173076922,
+          "p50": 142500.3125,
+          "p95": 231980.31249999997,
+          "max": 244100.3125
+        },
+        "unmatched_prediction_ids": [
+          13
+        ],
+        "unmatched_truth_ids": [
+          11,
+          14
+        ],
+        "prediction_overlaps": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            3
+          ],
+          "4": [
+            4
+          ],
+          "5": [
+            5
+          ],
+          "6": [
+            6
+          ],
+          "7": [
+            7
+          ],
+          "8": [
+            8
+          ],
+          "9": [
+            9
+          ],
+          "10": [
+            10
+          ],
+          "11": [
+            12
+          ],
+          "12": [
+            13
+          ],
+          "13": [
+            13
+          ]
+        },
+        "truth_overlaps": {
+          "1": [
+            1
+          ],
+          "2": [
+            2
+          ],
+          "3": [
+            3
+          ],
+          "4": [
+            4
+          ],
+          "5": [
+            5
+          ],
+          "6": [
+            6
+          ],
+          "7": [
+            7
+          ],
+          "8": [
+            8
+          ],
+          "9": [
+            9
+          ],
+          "10": [
+            10
+          ],
+          "11": [],
+          "12": [
+            11
+          ],
+          "13": [
+            12,
+            13
+          ],
+          "14": []
+        },
+        "predictions": [
+          {
+            "rally_id": 1,
+            "start_ms": 0,
+            "end_ms": 6800.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 18900.0,
+            "end_ms": 27000.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 29700.0,
+            "end_ms": 42000.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 48100.0,
+            "end_ms": 55800.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 63500.0,
+            "end_ms": 68600.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 77500.0,
+            "end_ms": 95000.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 101300.0,
+            "end_ms": 108400.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 115500.0,
+            "end_ms": 129600.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 137100.0,
+            "end_ms": 145000.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 153300.0,
+            "end_ms": 176400.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 11,
+            "start_ms": 198700.0,
+            "end_ms": 203600.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 12,
+            "start_ms": 215700.0,
+            "end_ms": 227400.0,
+            "emitted_at_ms": 250900.3125
+          },
+          {
+            "rally_id": 13,
+            "start_ms": 229300.0,
+            "end_ms": 237600.0,
+            "emitted_at_ms": 250900.3125
+          }
+        ],
+        "annotations": [
+          {
+            "rally_id": 1,
+            "start_ms": 533.0,
+            "end_ms": 5800.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 2,
+            "start_ms": 19633.0,
+            "end_ms": 22700.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 3,
+            "start_ms": 30367.0,
+            "end_ms": 39433.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 4,
+            "start_ms": 49467.0,
+            "end_ms": 55300.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 5,
+            "start_ms": 62667.0,
+            "end_ms": 66967.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 6,
+            "start_ms": 77733.0,
+            "end_ms": 88700.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 7,
+            "start_ms": 102300.0,
+            "end_ms": 108267.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 8,
+            "start_ms": 116333.0,
+            "end_ms": 130067.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 9,
+            "start_ms": 138467.0,
+            "end_ms": 144367.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 10,
+            "start_ms": 153467.0,
+            "end_ms": 172700.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 11,
+            "start_ms": 186567.0,
+            "end_ms": 190900.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 12,
+            "start_ms": 200067.0,
+            "end_ms": 207233.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 13,
+            "start_ms": 216500.0,
+            "end_ms": 232000.0,
+            "review_status": "verified"
+          },
+          {
+            "rally_id": 14,
+            "start_ms": 242467.0,
+            "end_ms": 245967.0,
+            "review_status": "verified"
+          }
+        ]
+      },
+      "time": {
+        "target_ms": 113833.0,
+        "retained_target_ms": 99167.0,
+        "non_target_ms": 62067.3125,
+        "retained_non_target_ms": 22533.0,
+        "ignored_ms": 75000.0,
+        "target_retention": 0.8711621410311596,
+        "non_target_retention": 0.36304133516333575
+      },
+      "groups": {
+        "all_complete": {
+          "target_count": 14,
+          "target_ms": 113833.0,
+          "retained_ms": 99167.0,
+          "retained_fraction": 0.8711621410311596,
+          "wholly_missed_ids": [
+            11,
+            14
+          ]
+        },
+        "over_3_seconds": {
+          "target_count": 14,
+          "target_ms": 113833.0,
+          "retained_ms": 99167.0,
+          "retained_fraction": 0.8711621410311596,
+          "wholly_missed_ids": [
+            11,
+            14
+          ]
+        },
+        "over_5_seconds": {
+          "target_count": 10,
+          "target_ms": 98633.0,
+          "retained_ms": 92633.0,
+          "retained_fraction": 0.9391684324718907,
+          "wholly_missed_ids": []
+        }
+      },
+      "rally_details": [
+        {
+          "rally_id": 1,
+          "start_ms": 533.0,
+          "end_ms": 5800.0,
+          "retained_ms": 5267.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            1
+          ]
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 19633.0,
+          "end_ms": 22700.0,
+          "retained_ms": 3067.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            2
+          ]
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 30367.0,
+          "end_ms": 39433.0,
+          "retained_ms": 9066.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            3
+          ]
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 49467.0,
+          "end_ms": 55300.0,
+          "retained_ms": 5833.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            4
+          ]
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 62667.0,
+          "end_ms": 66967.0,
+          "retained_ms": 3467.0,
+          "missing_ms": 833.0,
+          "overlapping_prediction_ids": [
+            5
+          ]
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 77733.0,
+          "end_ms": 88700.0,
+          "retained_ms": 10967.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            6
+          ]
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 102300.0,
+          "end_ms": 108267.0,
+          "retained_ms": 5967.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            7
+          ]
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 116333.0,
+          "end_ms": 130067.0,
+          "retained_ms": 13267.0,
+          "missing_ms": 467.0,
+          "overlapping_prediction_ids": [
+            8
+          ]
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 138467.0,
+          "end_ms": 144367.0,
+          "retained_ms": 5900.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            9
+          ]
+        },
+        {
+          "rally_id": 10,
+          "start_ms": 153467.0,
+          "end_ms": 172700.0,
+          "retained_ms": 19233.0,
+          "missing_ms": 0.0,
+          "overlapping_prediction_ids": [
+            10
+          ]
+        },
+        {
+          "rally_id": 11,
+          "start_ms": 186567.0,
+          "end_ms": 190900.0,
+          "retained_ms": 0,
+          "missing_ms": 4333.0,
+          "overlapping_prediction_ids": []
+        },
+        {
+          "rally_id": 12,
+          "start_ms": 200067.0,
+          "end_ms": 207233.0,
+          "retained_ms": 3533.0,
+          "missing_ms": 3633.0,
+          "overlapping_prediction_ids": [
+            11
+          ]
+        },
+        {
+          "rally_id": 13,
+          "start_ms": 216500.0,
+          "end_ms": 232000.0,
+          "retained_ms": 13600.0,
+          "missing_ms": 1900.0,
+          "overlapping_prediction_ids": [
+            12,
+            13
+          ]
+        },
+        {
+          "rally_id": 14,
+          "start_ms": 242467.0,
+          "end_ms": 245967.0,
+          "retained_ms": 0,
+          "missing_ms": 3500.0,
+          "overlapping_prediction_ids": []
+        }
+      ],
+      "incomplete_rallies": [],
+      "partial_only_prediction_ids": [],
+      "selected_ms": 134600.0,
+      "retained_excluded_ms": 12900.0,
+      "retained_outside_confirmed_play_ms": 35433.0
+    }
+  ],
+  "aggregates": {
+    "A2": {
+      "all_complete": {
+        "target_count": 6,
+        "target_ms": 50716.0,
+        "retained_ms": 36960.0,
+        "retained_fraction": 0.7287640981149933,
+        "wholly_missed_count": 3
+      },
+      "over_3_seconds": {
+        "target_count": 6,
+        "target_ms": 50716.0,
+        "retained_ms": 36960.0,
+        "retained_fraction": 0.7287640981149933,
+        "wholly_missed_count": 3
+      },
+      "over_5_seconds": {
+        "target_count": 4,
+        "target_ms": 43316.0,
+        "retained_ms": 36960.0,
+        "retained_fraction": 0.8532643826761473,
+        "wholly_missed_count": 1
+      },
+      "both_acceptable_count": 0,
+      "selected_ms": 39080.0,
+      "retained_outside_confirmed_play_ms": 2120.0,
+      "retained_non_target_ms": 2120.0
+    },
+    "C2": {
+      "all_complete": {
+        "target_count": 10,
+        "target_ms": 83533.66666733332,
+        "retained_ms": 67800.00000100001,
+        "retained_fraction": 0.8116487962992037,
+        "wholly_missed_count": 4
+      },
+      "over_3_seconds": {
+        "target_count": 10,
+        "target_ms": 83533.66666733332,
+        "retained_ms": 67800.00000100001,
+        "retained_fraction": 0.8116487962992037,
+        "wholly_missed_count": 4
+      },
+      "over_5_seconds": {
+        "target_count": 6,
+        "target_ms": 68333.33333433332,
+        "retained_ms": 67800.00000100001,
+        "retained_fraction": 0.992195121951334,
+        "wholly_missed_count": 0
+      },
+      "both_acceptable_count": 1,
+      "selected_ms": 105166.66666666667,
+      "retained_outside_confirmed_play_ms": 29166.666665666664,
+      "retained_non_target_ms": 23666.666665666664
+    },
+    "D2": {
+      "all_complete": {
+        "target_count": 14,
+        "target_ms": 113833.0,
+        "retained_ms": 99167.0,
+        "retained_fraction": 0.8711621410311596,
+        "wholly_missed_count": 2
+      },
+      "over_3_seconds": {
+        "target_count": 14,
+        "target_ms": 113833.0,
+        "retained_ms": 99167.0,
+        "retained_fraction": 0.8711621410311596,
+        "wholly_missed_count": 2
+      },
+      "over_5_seconds": {
+        "target_count": 10,
+        "target_ms": 98633.0,
+        "retained_ms": 92633.0,
+        "retained_fraction": 0.9391684324718907,
+        "wholly_missed_count": 0
+      },
+      "both_acceptable_count": 4,
+      "selected_ms": 134600.0,
+      "retained_outside_confirmed_play_ms": 35433.0,
+      "retained_non_target_ms": 22533.0
+    }
+  }
+}
