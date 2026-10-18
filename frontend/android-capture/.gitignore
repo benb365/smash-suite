@@ -1,0 +1,9 @@
+ui/node_modules/
+ui/dist/
+android/.gradle/
+android/.gradle-home/
+android/.android-home/
+android/local.properties
+android/**/build/
+.runtime/
+dist/
