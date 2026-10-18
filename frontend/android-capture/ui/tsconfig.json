@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+    "jsxImportSource": "@lynx-js/react",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "types": ["@lynx-js/types", "@lynx-js/rspeedy/client"]
+  },
+  "include": ["src", "lynx.config.ts"]
+}

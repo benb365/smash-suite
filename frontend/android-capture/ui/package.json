@@ -1,0 +1,23 @@
+{
+  "name": "smash-android-capture-ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "rspeedy dev",
+    "build": "rspeedy build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@lynx-js/react": "0.128.0"
+  },
+  "devDependencies": {
+    "@rsbuild/core": "2.0.0",
+    "@lynx-js/react-rsbuild-plugin": "0.21.0",
+    "@lynx-js/rspeedy": "0.18.2",
+    "@lynx-js/types": "4.3.0",
+    "@types/react": "19.0.10",
+    "typescript": "5.8.3"
+  },
+  "engines": { "node": "^20.19.0 || >=22.12.0" }
+}

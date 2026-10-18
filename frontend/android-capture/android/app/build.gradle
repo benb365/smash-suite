@@ -1,0 +1,56 @@
+plugins { id 'com.android.application' }
+
+android {
+    namespace 'dev.smash.capture'
+    compileSdk 35
+    buildToolsVersion '35.0.0'
+    useLibrary 'android.test.runner', false
+    useLibrary 'android.test.base', false
+    defaultConfig {
+        applicationId 'dev.smash.capture'
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName '0.1.0'
+        ndk { abiFilters 'arm64-v8a' }
+        testInstrumentationRunner 'android.test.InstrumentationTestRunner'
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // Installable test artifact; replace this signing config for distribution.
+            signingConfig signingConfigs.debug
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    sourceSets.main.assets.srcDir '../../ui/dist'
+    // Compress native libraries in the APK; Android extracts them at installation.
+    packaging { jniLibs { useLegacyPackaging true } }
+    signingConfigs.debug.storeFile = file("$rootDir/.android-home/debug.keystore")
+}
+
+dependencies {
+    implementation 'androidx.annotation:annotation:1.0.0'
+    // LynxUIRenderer uses androidx.core.util.Consumer at runtime.
+    implementation 'androidx.core:core:1.13.1'
+    // LynxEnv.initFSPConfig references Gson; the SDK POM does not declare it.
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'org.lynxsdk.lynx:lynx:4.0.3'
+    implementation 'org.lynxsdk.lynx:lynx-jssdk:4.0.3'
+    implementation 'org.lynxsdk.lynx:lynx-trace:4.0.3'
+    implementation 'org.lynxsdk.lynx:primjs:4.0.0'
+}
+
+tasks.register('buildLynx', Exec) {
+    workingDir '../../ui'
+    commandLine 'npm', 'run', 'build'
+    inputs.dir '../../ui/src'
+    inputs.files '../../ui/package.json', '../../ui/lynx.config.ts'
+    outputs.dir '../../ui/dist'
+}
+tasks.named('preBuild').configure { dependsOn 'buildLynx' }
