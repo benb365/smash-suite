@@ -3,10 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smash Suite</title>
+    <title>Smash Suite · 羽毛球视频剪辑</title>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="shell">
+      <aside><lynx-view id="controls"></lynx-view></aside>
+      <main class="viewer">
+        <div id="welcome" class="welcome">
+          <div class="court-art"><i></i><b></b><span></span></div>
+          <h1>羽毛球视频剪辑</h1>
+          <p>导入录像，自动识别并剪辑。</p>
+          <div class="features"><span>MP4 输入与输出</span><span>单打 · 固定机位</span><span>原声保留</span></div>
+        </div>
+        <div id="court-panel" class="court-panel" hidden>
+          <div class="frame-wrap"><img id="court-image" alt="录像首帧，用于选择主球场" /><svg id="court-overlay" viewBox="0 0 1000 1000" preserveAspectRatio="none"></svg></div>
+          <p id="court-hint">确认录像画面。邻场干扰明显时，可在左侧选择“圈选主球场”。</p>
+        </div>
+        <div id="result-panel" class="result-panel" hidden>
+          <video id="result-video" controls playsinline preload="metadata"></video>
+        </div>
+      </main>
+    </div>
+    <input id="file-picker" type="file" accept="video/mp4,.mp4" hidden />
+    <script id="native-bridge" type="application/json">{}</script>
   </body>
 </html>

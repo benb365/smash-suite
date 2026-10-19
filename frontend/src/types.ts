@@ -1,92 +1,39 @@
-export type SessionStatus =
-  | "created"
-  | "calibrated"
-  | "running"
-  | "completed"
-  | "failed"
-  | "stopped";
-
-export type SourceType = "video_file" | "camera";
-
-export interface Point2D {
-  x: number;
-  y: number;
+export type CameraType = 'high' | 'courtside' | 'personal';
+export type Quality = 'high' | 'balanced' | 'small';
+export type Point = [number, number];
+export interface JobState {
+  status: 'empty' | 'uploading' | 'ready' | 'running' | 'completed' | 'failed' | 'cancelled';
+  stage: string;
+  progress: number;
+  video: { name: string; duration_ms: number; width: number; height: number; has_audio: boolean } | null;
+  output_url: string | null;
+  output_bytes: number | null;
+  output_duration_ms: number | null;
+  rally_count: number;
+  elapsed_s: number | null;
+  timings: { preparation_s: number; recognition_s: number; rendering_s: number } | null;
+  error: string | null;
+  warnings: string[];
 }
-
-export interface CalibrationConfig {
-  image_points: Point2D[];
-  world_points?: Point2D[];
-  fps?: number;
-  court_profile?: string;
-  court_width_m?: number;
-  court_length_m?: number;
+export interface ScreenState {
+  job: JobState;
+  online: boolean;
+  uploadProgress: number;
+  saving: boolean;
+  camera: CameraType;
+  quality: Quality;
+  court: Point[];
+  selectingCourt: boolean;
+  notice: string;
+  error: string;
+  canSave: boolean;
 }
-
-export interface SourceConfig {
-  source_type: SourceType;
-  path?: string;
-  camera_index?: number;
-  fps?: number;
-}
-
-export interface RunRequest {
-  source: SourceConfig;
-  max_frames?: number;
-  sample_stride: number;
-  save_keyframes: boolean;
-}
-
-export interface SessionState {
-  id: string;
-  name: string;
-  status: SessionStatus;
-  created_at: string;
-  updated_at: string;
-  calibration?: CalibrationConfig | null;
-  source?: SourceConfig | null;
-  latest_speed_kmh?: number | null;
-  result_count: number;
-  error?: string | null;
-}
-
-export interface TrajectoryPoint {
-  frame_id: number;
-  time_ms: number;
-  pixel: Point2D;
-  world?: Point2D | null;
-  confidence: number;
-  source: string;
-}
-
-export interface SpeedSample {
-  time_ms: number;
-  speed_kmh: number;
-  confidence: number;
-  frame_start: number;
-  frame_end: number;
-}
-
-export interface KeyframeEvent {
-  time_ms: number;
-  frame_id: number;
-  reason: string;
-  confidence: number;
-  clip_path?: string | null;
-}
-
-export interface AnalysisResults {
-  session_id: string;
-  trajectory_points: TrajectoryPoint[];
-  speed_samples: SpeedSample[];
-  keyframes: KeyframeEvent[];
-  exports: Record<string, string>;
-}
-
-export type SocketEvent =
-  | { type: "session_status"; payload: SessionState }
-  | { type: "analysis_results"; payload: AnalysisResults }
-  | { type: "analysis_complete"; payload: AnalysisResults }
-  | { type: "trajectory_point"; payload: TrajectoryPoint }
-  | { type: "speed_sample"; payload: SpeedSample }
-  | { type: "keyframe_event"; payload: KeyframeEvent }
-  | { type: "analysis_error"; payload: { message: string } };
+export const emptyJob: JobState = {
+  status: 'empty', stage: '选择一份 MP4 录像开始', progress: 0, video: null,
+  output_url: null, output_bytes: null, output_duration_ms: null, rally_count: 0,
+  elapsed_s: null, timings: null, error: null, warnings: [],
+};
+export const initialScreen: ScreenState = {
+  job: emptyJob, online: false, uploadProgress: 0, saving: false, camera: 'high',
+  quality: 'balanced', court: [], selectingCourt: false, notice: '', error: '', canSave: true,
+};

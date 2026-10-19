@@ -1,401 +1,76 @@
-import { Activity, Camera, Crosshair, Gauge, Play, Radio, Save, Video } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
-import { createSession, fetchResults, runAnalysis, saveCalibration, socketUrl } from "./api";
-import type {
-  AnalysisResults,
-  KeyframeEvent,
-  Point2D,
-  SessionState,
-  SocketEvent,
-  SourceType,
-  SpeedSample,
-  TrajectoryPoint
-} from "./types";
+import { useEffect, useState } from '@lynx-js/react';
+import { action } from './bridge';
+import { initialScreen, type CameraType, type Quality, type ScreenState } from './types';
+import './styles.css';
 
-const defaultImagePoints: Point2D[] = [
-  { x: 120, y: 90 },
-  { x: 980, y: 110 },
-  { x: 1030, y: 650 },
-  { x: 80, y: 640 }
+const cameras: { key: CameraType; title: string; hint: string; mark: string }[] = [
+  { key: 'high', title: '比赛高视角', hint: '从高处俯看，球场完整入镜', mark: '01' },
+  { key: 'courtside', title: '场边低视角', hint: '靠近底线，基本正对球场', mark: '02' },
+  { key: 'personal', title: '个人斜侧方', hint: '从球场角落或侧面拍摄', mark: '03' },
+];
+const qualities: { key: Quality; title: string }[] = [
+  { key: 'high', title: '高画质' }, { key: 'balanced', title: '均衡' }, { key: 'small', title: '小体积' },
 ];
 
-function optionalNumber(value: string): number | undefined {
-  if (!value.trim()) {
-    return undefined;
-  }
-  const parsed = Number(value);
-  return Number.isFinite(parsed) ? parsed : undefined;
+function duration(ms: number) {
+  const seconds = Math.round(ms / 1000);
+  return `${Math.floor(seconds / 60)}分${seconds % 60}秒`;
 }
 
-export default function App() {
-  const [session, setSession] = useState<SessionState | null>(null);
-  const [sourceType, setSourceType] = useState<SourceType>("video_file");
-  const [videoPath, setVideoPath] = useState("");
-  const [cameraIndex, setCameraIndex] = useState("0");
-  const [fps, setFps] = useState("240");
-  const [maxFrames, setMaxFrames] = useState("3000");
-  const [sampleStride, setSampleStride] = useState("1");
-  const [imagePoints, setImagePoints] = useState<Point2D[]>(defaultImagePoints);
-  const [speedSamples, setSpeedSamples] = useState<SpeedSample[]>([]);
-  const [trajectory, setTrajectory] = useState<TrajectoryPoint[]>([]);
-  const [keyframes, setKeyframes] = useState<KeyframeEvent[]>([]);
-  const [exports, setExports] = useState<Record<string, string>>({});
-  const [error, setError] = useState<string | null>(null);
-  const [socketState, setSocketState] = useState("offline");
+function elapsed(seconds: number) {
+  const tenths = Math.round(seconds * 10);
+  const minutes = Math.floor(tenths / 600);
+  const remainder = ((tenths % 600) / 10).toFixed(1);
+  return minutes ? `${minutes}分${remainder}秒` : `${remainder}秒`;
+}
 
+export function App() {
+  const [screen, setScreen] = useState<ScreenState>(initialScreen);
+  const [localError, setError] = useState('');
   useEffect(() => {
-    if (!session?.id) {
-      return;
-    }
-    const ws = new WebSocket(socketUrl(session.id));
-    ws.onopen = () => setSocketState("online");
-    ws.onclose = () => setSocketState("offline");
-    ws.onerror = () => setSocketState("error");
-    ws.onmessage = (message) => {
-      const event = JSON.parse(message.data) as SocketEvent;
-      handleSocketEvent(event);
-    };
-    return () => ws.close();
-  }, [session?.id]);
-
-  const latestSample = speedSamples.length > 0 ? speedSamples[speedSamples.length - 1] : undefined;
-  const latestSpeed = latestSample?.speed_kmh ?? session?.latest_speed_kmh ?? 0;
-  const peakSpeed = useMemo(
-    () => speedSamples.reduce((max, sample) => Math.max(max, sample.speed_kmh), 0),
-    [speedSamples]
-  );
-
-  function handleSocketEvent(event: SocketEvent) {
-    if (event.type === "session_status") {
-      setSession(event.payload);
-      if (event.payload.error) {
-        setError(event.payload.error);
-      }
-      return;
-    }
-    if (event.type === "analysis_results" || event.type === "analysis_complete") {
-      applyResults(event.payload);
-      return;
-    }
-    if (event.type === "trajectory_point") {
-      setTrajectory((items) => [...items.slice(-499), event.payload]);
-      return;
-    }
-    if (event.type === "speed_sample") {
-      setSpeedSamples((items) => [...items.slice(-399), event.payload]);
-      return;
-    }
-    if (event.type === "keyframe_event") {
-      setKeyframes((items) => [...items.slice(-49), event.payload]);
-      return;
-    }
-    if (event.type === "analysis_error") {
-      setError(event.payload.message);
-    }
+    const events = lynx.getJSModule('GlobalEventEmitter');
+    const receive = (next: unknown) => setScreen(JSON.parse(String(next)) as ScreenState);
+    events.addListener('product-state', receive);
+    action('ready').then(setScreen).catch((e) => setError(e.message));
+    return () => events.removeListener('product-state', receive);
+  }, []);
+  function invoke(name: string, data: unknown = {}) {
+    setError('');
+    action(name, data).then(setScreen).catch((e) => setError(e.message));
   }
-
-  function applyResults(results: AnalysisResults) {
-    setTrajectory(results.trajectory_points);
-    setSpeedSamples(results.speed_samples);
-    setKeyframes(results.keyframes);
-    setExports(results.exports);
-  }
-
-  async function ensureSession(): Promise<SessionState> {
-    if (session) {
-      return session;
-    }
-    const created = await createSession("court-demo");
-    setSession(created);
-    return created;
-  }
-
-  async function handleCreateSession() {
-    setError(null);
-    const created = await createSession("court-demo");
-    setSession(created);
-    setSpeedSamples([]);
-    setTrajectory([]);
-    setKeyframes([]);
-    setExports({});
-  }
-
-  async function handleSaveCalibration() {
-    setError(null);
-    const activeSession = await ensureSession();
-    const updated = await saveCalibration(activeSession.id, {
-      image_points: imagePoints,
-      fps: optionalNumber(fps),
-      court_profile: "badminton_doubles",
-      court_width_m: 6.1,
-      court_length_m: 13.4
-    });
-    setSession(updated);
-  }
-
-  async function handleRun() {
-    setError(null);
-    const activeSession = await ensureSession();
-    const calibrated = await saveCalibration(activeSession.id, {
-      image_points: imagePoints,
-      fps: optionalNumber(fps),
-      court_profile: "badminton_doubles",
-      court_width_m: 6.1,
-      court_length_m: 13.4
-    });
-    setSession(calibrated);
-    setSpeedSamples([]);
-    setTrajectory([]);
-    setKeyframes([]);
-    setExports({});
-
-    const source =
-      sourceType === "video_file"
-        ? {
-            source_type: "video_file" as const,
-            path: videoPath,
-            fps: optionalNumber(fps)
-          }
-        : {
-            source_type: "camera" as const,
-            camera_index: Number(cameraIndex) || 0,
-            fps: optionalNumber(fps)
-          };
-
-    const running = await runAnalysis(activeSession.id, {
-      source,
-      max_frames: optionalNumber(maxFrames),
-      sample_stride: Math.max(1, Number(sampleStride) || 1),
-      save_keyframes: true
-    });
-    setSession(running);
-  }
-
-  async function handleRefreshResults() {
-    if (!session) {
-      return;
-    }
-    const results = await fetchResults(session.id);
-    applyResults(results);
-  }
-
-  function updatePoint(index: number, axis: keyof Point2D, value: string) {
-    const next = imagePoints.map((point, pointIndex) =>
-      pointIndex === index ? { ...point, [axis]: Number(value) || 0 } : point
-    );
-    setImagePoints(next);
-  }
-
+  const { job } = screen;
+  const busy = job.status === 'running' || job.status === 'uploading';
+  const error = localError || screen.error || job.error;
+  const progress = job.status === 'uploading' ? screen.uploadProgress : job.progress;
+  const timings: [string, number][] = job.timings && job.elapsed_s !== null ? [
+    ['准备', job.timings.preparation_s], ['识别', job.timings.recognition_s],
+    ['生成成片', job.timings.rendering_s], ['总计', job.elapsed_s],
+  ] : [];
   return (
-    <div className="app-shell">
-      <header className="topbar">
-        <div>
-          <h1>Smash Suite</h1>
-          <span className="subtle">Badminton speed lab</span>
-        </div>
-        <div className={`connection ${socketState}`}>
-          <Radio size={16} />
-          <span>{socketState}</span>
-        </div>
-      </header>
-
-      <main className="workspace">
-        <section className="panel controls">
-          <div className="section-title">
-            <Gauge size={18} />
-            <h2>Session</h2>
-          </div>
-          <div className="session-row">
-            <button className="primary-button" onClick={handleCreateSession}>
-              <Crosshair size={16} />
-              <span>New</span>
-            </button>
-            <div className="status-block">
-              <span className="label">ID</span>
-              <strong>{session?.id ?? "none"}</strong>
-            </div>
-            <div className="status-block">
-              <span className="label">Status</span>
-              <strong>{session?.status ?? "idle"}</strong>
-            </div>
-          </div>
-
-          <div className="section-title">
-            <Video size={18} />
-            <h2>Source</h2>
-          </div>
-          <div className="segmented">
-            <button
-              className={sourceType === "video_file" ? "active" : ""}
-              onClick={() => setSourceType("video_file")}
-            >
-              <Video size={15} />
-              <span>File</span>
-            </button>
-            <button
-              className={sourceType === "camera" ? "active" : ""}
-              onClick={() => setSourceType("camera")}
-            >
-              <Camera size={15} />
-              <span>Camera</span>
-            </button>
-          </div>
-          {sourceType === "video_file" ? (
-            <label className="field">
-              <span>Local video path</span>
-              <input
-                value={videoPath}
-                onChange={(event) => setVideoPath(event.target.value)}
-                placeholder="/absolute/path/to/high-fps.mp4"
-              />
-            </label>
-          ) : (
-            <label className="field">
-              <span>Camera index</span>
-              <input value={cameraIndex} onChange={(event) => setCameraIndex(event.target.value)} />
-            </label>
-          )}
-          <div className="grid-two">
-            <label className="field">
-              <span>FPS</span>
-              <input value={fps} onChange={(event) => setFps(event.target.value)} />
-            </label>
-            <label className="field">
-              <span>Max frames</span>
-              <input value={maxFrames} onChange={(event) => setMaxFrames(event.target.value)} />
-            </label>
-          </div>
-          <label className="field">
-            <span>Sample stride</span>
-            <input value={sampleStride} onChange={(event) => setSampleStride(event.target.value)} />
-          </label>
-
-          <div className="section-title">
-            <Crosshair size={18} />
-            <h2>Calibration</h2>
-          </div>
-          <div className="point-grid">
-            {imagePoints.map((point, index) => (
-              <div className="point-row" key={index}>
-                <span>P{index + 1}</span>
-                <input
-                  aria-label={`P${index + 1} X`}
-                  value={point.x}
-                  onChange={(event) => updatePoint(index, "x", event.target.value)}
-                />
-                <input
-                  aria-label={`P${index + 1} Y`}
-                  value={point.y}
-                  onChange={(event) => updatePoint(index, "y", event.target.value)}
-                />
-              </div>
-            ))}
-          </div>
-          <div className="button-row">
-            <button onClick={handleSaveCalibration}>
-              <Save size={16} />
-              <span>Save</span>
-            </button>
-            <button className="primary-button" onClick={handleRun}>
-              <Play size={16} />
-              <span>Run</span>
-            </button>
-            <button onClick={handleRefreshResults}>
-              <Activity size={16} />
-              <span>Results</span>
-            </button>
-          </div>
-          {error && <div className="error-box">{error}</div>}
-        </section>
-
-        <section className="panel monitor">
-          <div className="readout-grid">
-            <Metric label="Current" value={latestSpeed.toFixed(1)} unit="km/h" />
-            <Metric label="Peak" value={peakSpeed.toFixed(1)} unit="km/h" />
-            <Metric label="Samples" value={String(speedSamples.length)} unit="" />
-            <Metric label="Points" value={String(trajectory.length)} unit="" />
-          </div>
-
-          <div className="chart-panel">
-            <div className="section-title">
-              <Activity size={18} />
-              <h2>Speed Curve</h2>
-            </div>
-            <SpeedChart samples={speedSamples} />
-          </div>
-
-          <div className="tables">
-            <div>
-              <h3>Keyframes</h3>
-              <div className="table-list">
-                {keyframes.slice(-8).map((event) => (
-                  <div className="table-row" key={`${event.frame_id}-${event.time_ms}`}>
-                    <span>{event.frame_id}</span>
-                    <span>{event.reason}</span>
-                    <strong>{event.confidence.toFixed(2)}</strong>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h3>Exports</h3>
-              <div className="table-list">
-                {Object.entries(exports).map(([kind, path]) => (
-                  <div className="table-row" key={kind}>
-                    <span>{kind}</span>
-                    <strong className="path-text">{path}</strong>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-      </main>
-    </div>
-  );
-}
-
-function Metric({ label, value, unit }: { label: string; value: string; unit: string }) {
-  return (
-    <div className="metric">
-      <span>{label}</span>
-      <strong>{value}</strong>
-      {unit && <em>{unit}</em>}
-    </div>
-  );
-}
-
-function SpeedChart({ samples }: { samples: SpeedSample[] }) {
-  const width = 760;
-  const height = 260;
-  const padding = 32;
-  const maxSpeed = Math.max(120, ...samples.map((sample) => sample.speed_kmh));
-  const minTime = samples[0]?.time_ms ?? 0;
-  const latestSample = samples.length > 0 ? samples[samples.length - 1] : undefined;
-  const maxTime = latestSample?.time_ms ?? minTime + 1;
-  const points = samples
-    .map((sample) => {
-      const x =
-        padding +
-        ((sample.time_ms - minTime) / Math.max(1, maxTime - minTime)) * (width - padding * 2);
-      const y = height - padding - (sample.speed_kmh / maxSpeed) * (height - padding * 2);
-      return `${x},${y}`;
-    })
-    .join(" ");
-
-  return (
-    <svg className="speed-chart" viewBox={`0 0 ${width} ${height}`} role="img">
-      <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} />
-      <line x1={padding} y1={padding} x2={padding} y2={height - padding} />
-      <text x={padding} y={24}>{`${maxSpeed.toFixed(0)} km/h`}</text>
-      <text x={width - 128} y={height - 10}>{`${((maxTime - minTime) / 1000).toFixed(1)} s`}</text>
-      {samples.length > 1 ? (
-        <polyline points={points} />
-      ) : (
-        <text className="empty-chart" x={width / 2 - 54} y={height / 2}>
-          No samples
-        </text>
-      )}
-    </svg>
+    <scroll-view className="controls" scroll-y>
+      <view className="brand"><view className="brand-icon"><text className="brand-letter">S</text></view><view><text className="brand-name">Smash Suite</text><text className="brand-caption">羽毛球录像 · 自动剪辑</text></view></view>
+      <view className="intro"><text className="intro-title">开始一份新剪辑</text><text className="muted">只留下比赛中的对打时刻。</text></view>
+      <view className="section-label"><text className="step">01</text><text className="section-title">选择拍摄类型</text></view>
+      <view className="camera-list">{cameras.map((camera) => <view key={camera.key} className={`camera ${screen.camera === camera.key ? 'selected' : ''}`} bindtap={() => !busy && invoke('options', { camera: camera.key })}>
+        <view className="camera-mark"><text className="camera-number">{camera.mark}</text></view><view className="camera-copy"><text className="camera-title">{camera.title}</text><text className="camera-hint">{camera.hint}</text></view><view className={`radio ${screen.camera === camera.key ? 'checked' : ''}`} />
+      </view>)}</view>
+      <view className="section-label second"><text className="step">02</text><text className="section-title">导入录像</text></view>
+      <view className={`upload ${busy ? 'disabled' : ''}`} bindtap={() => !busy && invoke('pick')}>
+        <text className="upload-icon">＋</text><text className="upload-title">{job.video ? '更换 MP4 录像' : '选择 MP4 录像'}</text><text className="upload-hint">横屏 · 最高 1080p · 单打</text>
+      </view>
+      {job.video && <view className="file-info"><text className="file-name">{job.video.name}</text><text className="file-meta">{duration(job.video.duration_ms)} · {job.video.width} × {job.video.height}{job.video.has_audio ? ' · 有原声音' : ' · 无音轨'}</text></view>}
+      {job.video && screen.camera !== 'high' && !busy && job.status !== 'completed' && <view className="court-actions"><view bindtap={() => invoke('selectCourt')}><text className="link">{screen.selectingCourt ? `继续选角点（${screen.court.length}/4）` : '圈选主球场'}</text></view>{screen.court.length > 0 && <view bindtap={() => invoke('clearCourt')}><text className="muted small">清除</text></view>}</view>}
+      <view className="quality-heading"><text className="setting-title">成片质量</text><text className="muted small">前后各保留 0.5 秒</text></view>
+      <view className="quality-options">{qualities.map((quality) => <view key={quality.key} className={`quality ${screen.quality === quality.key ? 'active' : ''}`} bindtap={() => !busy && invoke('options', { quality: quality.key })}><text className="quality-text">{quality.title}</text></view>)}</view>
+      {busy && <view className="progress-panel"><view className="progress-label"><text className="progress-title">{job.stage}</text><text className="progress-number">{Math.round(progress * 100)}%</text></view><view className="progress-track"><view className="progress-fill" style={{ width: `${Math.max(2, progress * 100)}%` }} /></view><text className="muted small">处理需要一些时间，可以随时取消。</text></view>}
+      {job.status === 'completed' && <view className="complete"><text className="complete-title">✓ 成片已生成</text><text className="complete-info">{job.rally_count}段对打 · {duration(job.output_duration_ms ?? 0)} · {((job.output_bytes ?? 0) / 1048576).toFixed(1)} MB</text>{timings.length > 0 && <view className="timings">{timings.map(([label, seconds]) => <view key={label} className="timing-row"><text className="timing-label">{label}</text><text className="timing-value">{elapsed(seconds)}</text></view>)}</view>}</view>}
+      {error && <view className="error"><text className="error-text">{error}</text></view>}
+      {screen.notice && <view className="notice"><text className="notice-text">{screen.notice}</text></view>}
+      {job.warnings.map((warning) => <view key={warning} className="notice"><text className="notice-text">{warning}</text></view>)}
+      {busy ? <view className="button secondary" bindtap={() => invoke('cancel')}><text className="button-text dark">取消处理</text></view> : job.status === 'completed' ? <view className={`button ${screen.saving ? 'disabled' : ''}`} bindtap={() => !screen.saving && invoke('save')}><text className="button-text">{screen.saving ? '正在保存…' : '保存 MP4　↗'}</text></view> : <view className={`button ${!job.video || !screen.online ? 'disabled' : ''}`} bindtap={() => job.video && screen.online && invoke('run')}><text className="button-text">开始自动剪辑　→</text></view>}
+      {job.status === 'completed' && <view className="restart" bindtap={() => invoke('pick')}><text className="link">再处理一份录像</text></view>}
+      {!screen.canSave && <view className="notice"><text className="notice-text">请使用 Chrome 或 Edge，以选择成片保存位置。</text></view>}
+      <text className="session-note">关闭页面 60 秒后清理本次临时内容。已保存的成片不会删除。</text>
+    </scroll-view>
   );
 }
