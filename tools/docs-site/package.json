@@ -1,0 +1,17 @@
+{
+  "name": "@smash-suite/docs-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev --host 127.0.0.1 --port 5173 --open",
+    "build": "vitepress build",
+    "preview": "node preview.mjs"
+  },
+  "devDependencies": {
+    "mermaid": "11.17.2",
+    "vite": "5.4.21",
+    "vitepress": "1.6.4",
+    "vitepress-plugin-mermaid": "2.0.17",
+    "vue": "3.5.44"
+  }
+}

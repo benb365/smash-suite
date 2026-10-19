@@ -61,4 +61,15 @@ pnpm install --frozen-lockfile
 
 某些模块的独立环境请参考对应目录的说明文档。例如 [Android 场边采集](apps/android-capture/README.md) 中 Android 应用构建。
 
-项目文档见[文档目录](docs/README.md)。
+## 查看项目文档
+
+各目录的 README 和项目文档可以在本地文档站中连续阅读。在仓库根目录执行：
+
+```sh
+pnpm install --frozen-lockfile
+pnpm run docs:dev
+```
+
+浏览器会自动打开文档站，默认地址为 `http://127.0.0.1:5173/`；端口占用时以终端显示的网址为准。通过侧栏查看模块、产品、路线图和实验报告，也可以搜索内容。修改文档后页面自动刷新，按 `Ctrl-C` 停止服务。
+
+构建、预览和导航配置见[文档站工具](tools/docs-site/README.md)。直接阅读 Markdown 可从[文档目录](docs/README.md)开始。

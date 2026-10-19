@@ -8,7 +8,10 @@
     "dev:backend": "cd apps/video-clipper/backend && ../../../.venv/bin/python -m app",
     "build:product": ".venv/bin/python apps/video-clipper/packaging/build.py",
     "test:backend": ".venv/bin/python -m pytest",
-    "typecheck:frontend": "pnpm -C apps/video-clipper/frontend exec tsc --noEmit"
+    "typecheck:frontend": "pnpm -C apps/video-clipper/frontend exec tsc --noEmit",
+    "docs:dev": "pnpm -C tools/docs-site dev",
+    "docs:build": "pnpm -C tools/docs-site build",
+    "docs:preview": "pnpm -C tools/docs-site preview"
   },
   "engines": {
     "node": ">=20.19",

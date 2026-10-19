@@ -1,0 +1,16 @@
+.vp-doc .mermaid {
+  overflow-x: auto;
+  margin: 24px 0;
+  padding: 8px 0;
+}
+
+.vp-doc .mermaid > svg {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Mermaid measures labels at 1.5 lines; the prose theme uses a taller line. */
+.vp-doc .mermaid p {
+  margin: 0;
+  line-height: 1.5;
+}

@@ -14,6 +14,7 @@
 | 比较算法效果与评分 | [评估规范](../modules/rally/evaluation.md) · [实验与回放](../modules/rally/experiments/README.md) |
 | 准备测试素材和人工标注 | [数据集](../datasets/README.md) · [数据规范](../datasets/requirements.md) |
 | 从视频平台采集录像 | [录像采集插件](../tools/ysp-recorder/README.md) |
+| 启动或构建本地文档站 | [文档站工具](../tools/docs-site/README.md) |
 
 ## 查看结果
 
