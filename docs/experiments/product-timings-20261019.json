@@ -1,0 +1,209 @@
+{
+  "date": "2026-10-19",
+  "changes": {
+    "preview": "Removed right-side SMASH SUITE, YOUR CUT, title and repeated save hint; kept video, warnings and left-side product name.",
+    "welcome": {
+      "title": "羽毛球视频剪辑",
+      "description": "导入录像，自动识别并剪辑。"
+    },
+    "timings": {
+      "labels": [
+        "准备",
+        "识别",
+        "生成成片",
+        "总计"
+      ],
+      "location": "under completed summary in left panel",
+      "precision": "one decimal second",
+      "scope": "task startup to output readiness; excludes import and manual save",
+      "method": "single server monotonic clock at explicit worker phase transitions",
+      "preparation_includes": "worker startup, resource validation/download and preparation imports",
+      "retained_across_reconnect": true,
+      "cleared_on_new_import_or_run": true,
+      "existing_progress_bar_retained": true
+    }
+  },
+  "verification": {
+    "backend_tests_passed": 111,
+    "frontend_typecheck": "passed",
+    "production_build": "passed",
+    "diff_check": "passed",
+    "unchanged_build_source_files": 57,
+    "logs": "/private/tmp/smash-timings-20261019"
+  },
+  "package_check": {
+    "archive": {
+      "path": "/Users/bytedance/workspace/test/smash-suite/dist/SmashSuite-macos-arm64.zip",
+      "bytes": 391918923,
+      "sha256": "1850a8046ca1906ab1c20def9a5bef8bacfe0524012d54063bca0f4f96a209d1"
+    },
+    "extracted_dir": "/private/tmp/smash-final-18784-wpEwim/smash-suite",
+    "checks": {
+      "packaged_web_matches_frontend_dist": true,
+      "usage_instructions_match": true,
+      "third_party_declarations_match": true
+    },
+    "launch": {
+      "requested_command": "env -i PATH=/usr/bin:/bin HOME=/Users/bytedance SMASH_SUITE_DATA_DIR=/private/tmp/smash-standalone-final-data /private/tmp/smash-final-18784-wpEwim/smash-suite/smash-suite --no-browser --port 18784",
+      "status": "running",
+      "pid": 83205,
+      "session_id": 19710,
+      "cwd": "/private/tmp/smash-final-18784-wpEwim/smash-suite",
+      "health": {
+        "url": "http://127.0.0.1:18784/api/health",
+        "http_status": 200,
+        "body": {
+          "status": "ok",
+          "version": "0.2.0"
+        }
+      },
+      "blocker": null,
+      "launch_method": "require_escalated; original command as recorded",
+      "prior_capacity_failure": "Resolved by approved infrastructure retry; initial command was not executed."
+    },
+    "browser_check": {
+      "url": "http://127.0.0.1:18784/",
+      "user_confirmed_manual_open": true,
+      "tab_inventory": {
+        "id": "6",
+        "title": "Smash Suite · 羽毛球视频剪辑"
+      },
+      "status": "visual_review_pending",
+      "reason": "CUA origin approval and subsequent AX-read reviews timed out repeatedly; no unsafe determination. No browser screenshot or completed timing layout was observed."
+    }
+  },
+  "source_hash_manifests": {
+    "source-hashes-before.json": "1a658b6f3ba622c271200de5b2b991f82d8ed06742478f59643af23f1028fbe8",
+    "source-hashes-after.json": "909b46f65d45a533b00983ddbdc56af925e03d53b55921e68179d14d057d001b"
+  },
+  "scope_notes": [
+    "No changes to recognition rules, model parameters, source video, media trimming or encoding.",
+    "Existing three-view and thirty-minute media acceptance refers to the previous package.",
+    "Browser layout and actual timing display were not observed because automatic browser review repeatedly timed out, including after the user manually opened the page.",
+    "Default sandbox reported MPS unavailable; this real packaged-worker check used CPU. Its times are not a new normal-performance baseline or a browser JobState observation."
+  ],
+  "offline_packaged_worker": {
+    "scope": "Offline packaged worker in default sandbox; observed stdout timing boundaries, not browser or HTTP JobState validation.",
+    "exit_code": 0,
+    "phase_events": [
+      {
+        "phase": "recognition",
+        "elapsed_s": 14.991506458
+      },
+      {
+        "phase": "rendering",
+        "elapsed_s": 552.5922575
+      }
+    ],
+    "observed_timings": {
+      "preparation_s": 14.991506458,
+      "recognition_s": 537.600751042,
+      "rendering_s": 12.708095916000048
+    },
+    "observed_total_s": 565.300353416,
+    "phase_sum_matches_total": true,
+    "predictions": [
+      {
+        "rally_id": 1,
+        "start_ms": 3640.0,
+        "end_ms": 9600.0,
+        "emitted_at_ms": 11240.0
+      },
+      {
+        "rally_id": 3,
+        "start_ms": 24480.0,
+        "end_ms": 31400.0,
+        "emitted_at_ms": 33080.0
+      },
+      {
+        "rally_id": 4,
+        "start_ms": 47280.0,
+        "end_ms": 56720.0,
+        "emitted_at_ms": 58400.0
+      },
+      {
+        "rally_id": 6,
+        "start_ms": 101080.0,
+        "end_ms": 108800.0,
+        "emitted_at_ms": 110480.0
+      },
+      {
+        "rally_id": 7,
+        "start_ms": 142440.0,
+        "end_ms": 153840.0,
+        "emitted_at_ms": 155480.0
+      }
+    ],
+    "recognition": {
+      "algorithm": "high-trajectory-frozen-20261018",
+      "config": {
+        "confidence": 0.6,
+        "motion_window_ms": 200,
+        "min_motion_window_ms": 80,
+        "min_speed_px_s": 100,
+        "max_speed_px_s": 4000,
+        "quiet_ms": 1600,
+        "min_flight_span_ms": 2200,
+        "field": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "direction_window_ms": 160,
+        "direction_min_span_ms": 40,
+        "direction_max_residual_px": 80,
+        "top_fraction": 0.15,
+        "exit_max_y_fraction": 0.4,
+        "exit_horizon_ms": 250,
+        "high_clear_gap_ms": 2800,
+        "reentry_x_fraction": 0.2,
+        "turn_jump_px_s": 1100,
+        "track_gap_ms": 120,
+        "return_support_ms": 320,
+        "return_travel_px": 120,
+        "short_event_ms": 5000,
+        "filter_single_flight": true,
+        "filter_uncertain_short": true
+      },
+      "decoded_frames": 4200
+    },
+    "recognition_wall_s": 532.788252041,
+    "device": "cpu",
+    "output_bytes": 16834404,
+    "output_sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+    "previous_output_sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+    "error": null,
+    "output_matches_previous": true,
+    "source_report": "/private/tmp/smash-timings-20261019/offline-worker-check.json",
+    "source_report_sha256": "e3034c5e10a2a2d4634691c92a73b2b4cb29f1662429de64a9f8f9b341d71da3"
+  },
+  "copy_revision": {
+    "description": "Only shortened the welcome description as explicitly requested.",
+    "report": {
+      "non_index_asset_mismatch_count": 0,
+      "package_index_sentence_verified": true,
+      "active_index_sentence_verified": true,
+      "zip_index_sentence_verified": true,
+      "zip_path": "/Users/bytedance/workspace/test/smash-suite/dist/SmashSuite-macos-arm64.zip",
+      "zip_bytes": 391918923,
+      "zip_sha256": "1850a8046ca1906ab1c20def9a5bef8bacfe0524012d54063bca0f4f96a209d1",
+      "changed_paths": [
+        "/Users/bytedance/workspace/test/smash-suite/dist/smash-suite/_internal/web/index.html",
+        "/private/tmp/smash-final-18784-wpEwim/smash-suite/_internal/web/index.html",
+        "/Users/bytedance/workspace/test/smash-suite/dist/SmashSuite-macos-arm64.zip"
+      ],
+      "content_changed_paths": [
+        "/Users/bytedance/workspace/test/smash-suite/frontend/dist/index.html",
+        "/Users/bytedance/workspace/test/smash-suite/dist/smash-suite/_internal/web/index.html",
+        "/private/tmp/smash-final-18784-wpEwim/smash-suite/_internal/web/index.html",
+        "/Users/bytedance/workspace/test/smash-suite/dist/SmashSuite-macos-arm64.zip"
+      ],
+      "support_files": [
+        "/private/tmp/smash-copy-20261019/frontend-build.log",
+        "/private/tmp/smash-copy-20261019/assets-before.json",
+        "/private/tmp/smash-copy-20261019/report.json"
+      ]
+    }
+  }
+}

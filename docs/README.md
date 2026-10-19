@@ -20,6 +20,8 @@
 6. `docs/plan/README.md`：计划文档维护规则。
 7. [视频结果展示入口](video-result-review.md)：指向仓库内 `review-video-results` skill；固定查看器、数据格式和展示约定均由 skill 维护。
 
+用户指定开发首个视频剪辑产品时，在 roadmap 之后读取[产品开发任务说明](plan/video-clipping-product-task.md)，其中记录独立本机服务、浏览器界面和自动成片的实施约定。算法与产品可并行；不将算法尚未完成当作产品任务的通用阻塞。
+
 `backup/docs/` 不属于主动阅读路径。旧代码和归档文档都不能作为当前架构、当前需求或完成状态的证据；明确进行历史追溯时，引用必须标注为“历史假设”。
 
 ## 文档职责
@@ -35,6 +37,7 @@
 | `.agents/skills/review-video-results/` | 固定播放器与时间轴、运行脚本、输入格式和维护检查 |
 | `docs/plan/roadmap.md` | 当前优先级、状态、证据、阻塞和下一步 |
 | `docs/plan/rally-segmentation-requirement.md` | benchmark 数据、标注和指标定义 |
+| `docs/plan/video-clipping-product-task.md` | 产品会话任务范围、已有格式复用、实施顺序和交付要求 |
 | `docs/plan/README.md` | 计划文档的维护方法 |
 | `backup/docs/README.md` | 历史快照的隔离与引用规则 |
 

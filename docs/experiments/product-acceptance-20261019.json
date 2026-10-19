@@ -1,0 +1,603 @@
+{
+  "created_at_utc": "2026-10-19T03:50:19.492+00:00",
+  "environment": {
+    "machine": "Apple M3 Pro",
+    "cpu_cores": 12,
+    "gpu_cores": 18,
+    "memory_gb": 36,
+    "os": "macOS 26.6.2"
+  },
+  "source_reports": {
+    "a1_repaired_video_qa": {
+      "path": "a1/qa-report-fixed.json",
+      "sha256": "ea7fb2f7f689049def60511c7fd25922e04321082a56d5b5dc107694dd655d56"
+    },
+    "c2_repaired_video_qa": {
+      "path": "c2/qa-report-fixed.json",
+      "sha256": "138d1d89d3d6dade68b3c96eb7bde11af2c1d32b633429077974b5df238fc2d5"
+    },
+    "d2_repaired_video_qa": {
+      "path": "d2/fixed-qa-report.json",
+      "sha256": "2ed40ff382603b7d0fa768053356f218f9def644825f856fead1cb97d1e04fc6"
+    },
+    "a1_audio_alignment_continuous_pcm": {
+      "path": "a1/audio-alignment-fixed-continuous-pcm.json",
+      "sha256": "d1a1edcd92f72fce9e414c2aeb869eec8c0da0c7d056849148bb403b3015ad11"
+    },
+    "a1_pts_reconstruction_diagnostic_reference": {
+      "path": "a1/audio-alignment-pts-reconstruction-diagnostic.json",
+      "sha256": "ed8123ae485bf391c3c082596f5628b06c6733619a53cede88df115fded7cade"
+    },
+    "long_audio_qa": {
+      "path": "long-audio-qa-report.json",
+      "sha256": "8d065428f27de3b9181a90b5a634e9c3422fa9282c77802d5fceae61dba23fa6"
+    },
+    "long_video_qa": {
+      "path": "long-video-qa-report.json",
+      "sha256": "090b3f702b6cdcc98892d69c4af8d8d95557e2dffe1fe25634f15932c0473a43"
+    },
+    "long_final_resources": {
+      "path": "long-final-resources.jsonl",
+      "sha256": "b696b9dfc9a9d257e5a06d5d4414e0a05605562a7245ee041c072d5c739dc56b"
+    },
+    "long_final_request": {
+      "path": "long-final/R64qy8ochS4NkbVDDbdiAhCi/request.json",
+      "sha256": "3cf12381376e978833631e23aab9bdad929e04b90b01bcdfa00054434c5645d2"
+    },
+    "long_final_result": {
+      "path": "long-final/R64qy8ochS4NkbVDDbdiAhCi/result.json",
+      "sha256": "c410d88685347a3cbac30c1f7bf6a172ae4a9bee598e7d7860ed7f7a09a0ed89"
+    },
+    "saved_export_check": {
+      "path": "saved/d2-save-check.json",
+      "sha256": "4aca872110dab410bc4f8f9a4b624f5793e71461dc4347cb7eb01752bbdf8de1"
+    },
+    "saved_cleanup_check": {
+      "path": "saved/cleanup-check.json",
+      "sha256": "b2dea6b0b3fd334de1d2ce8553466be2998603ecee37139189b2e50b5277bed1"
+    }
+  },
+  "repaired_video_qa": {
+    "a1": {
+      "source_bytes": 70417188,
+      "selected_frames": 1161,
+      "range_count": 5,
+      "expected_duration_ms": 46440.0,
+      "outputs": {
+        "balanced": {
+          "bytes": 16834404,
+          "decoded_frames": 1161,
+          "frame_count_matches": true,
+          "duration_s": 46.44,
+          "max_abs_pts_error_ms": 0.0,
+          "mean_image_correlation_gray": 0.9999766255328616,
+          "has_audio": true
+        },
+        "high": {
+          "bytes": 29198054,
+          "decoded_frames": 1161,
+          "frame_count_matches": true,
+          "duration_s": 46.44,
+          "max_abs_pts_error_ms": 0.0,
+          "mean_image_correlation_gray": 0.9999871001892517,
+          "has_audio": true
+        },
+        "small": {
+          "bytes": 7514424,
+          "decoded_frames": 1161,
+          "frame_count_matches": true,
+          "duration_s": 46.44,
+          "max_abs_pts_error_ms": 0.0,
+          "mean_image_correlation_gray": 0.9999585096226182,
+          "has_audio": true
+        }
+      }
+    },
+    "c2": {
+      "source_bytes": 59794531,
+      "source_decoded_frames": 5400,
+      "selected_frames": 3335,
+      "output_decoded_frames": 3335,
+      "frame_count_matches": true,
+      "max_abs_nominal_pts_error_ms": 1.4210854715202004e-11,
+      "mean_image_correlation_gray": 0.9999410089524253,
+      "output_has_audio": false
+    },
+    "d2": {
+      "source_decoded_frames": 7527,
+      "expected_selected_frames": 4413,
+      "actual_output_frames": 4413,
+      "all_selected_frame_count_and_order_match": true,
+      "output_bytes": 17121348,
+      "output_sha256": "e6961725931c163304cec726a96ec41f8d619e63eb406f87cd2e3e22538447be",
+      "output_decoded_frames": 4413,
+      "max_abs_output_pts_error_ms": 0.0,
+      "video_streams": 1,
+      "audio_streams": 0
+    }
+  },
+  "a1_audio_alignment": {
+    "method_report": "a1/audio-alignment-fixed-continuous-pcm.json",
+    "method": "continuous PCM decode; no timestamp-based audio placement/overwrite",
+    "source_first_video_pts_ms": 91.0,
+    "sample_rate": 44100,
+    "expected_concat_samples": 2048004,
+    "outputs": {
+      "balanced": {
+        "global_best_shift_ms": 0.0,
+        "global_pearson_r": 0.9931023135484192,
+        "edge_windows_count": 10,
+        "edge_best_shift_ms_min": 0.0,
+        "edge_best_shift_ms_max": 0.0,
+        "edge_pearson_r_min": 0.861321172785099,
+        "edge_pearson_r_max": 0.9998321575182226,
+        "expected_samples": 2048004,
+        "decoded_samples": 2049024
+      },
+      "high": {
+        "global_best_shift_ms": 0.0,
+        "global_pearson_r": 0.9931023135484192,
+        "edge_windows_count": 10,
+        "edge_best_shift_ms_min": 0.0,
+        "edge_best_shift_ms_max": 0.0,
+        "edge_pearson_r_min": 0.861321172785099,
+        "edge_pearson_r_max": 0.9998321575182226,
+        "expected_samples": 2048004,
+        "decoded_samples": 2049024
+      },
+      "small": {
+        "global_best_shift_ms": 0.0,
+        "global_pearson_r": 0.9931023135484192,
+        "edge_windows_count": 10,
+        "edge_best_shift_ms_min": 0.0,
+        "edge_best_shift_ms_max": 0.0,
+        "edge_pearson_r_min": 0.861321172785099,
+        "edge_pearson_r_max": 0.9998321575182226,
+        "expected_samples": 2048004,
+        "decoded_samples": 2049024
+      }
+    },
+    "diagnostic_note": "PTS reconstruction diagnostic is referenced for history only; its scores are excluded from these continuous-PCM metrics.",
+    "audio_report_outputs_match_repaired_video_qa_outputs": {
+      "balanced": true,
+      "high": true,
+      "small": true
+    }
+  },
+  "long_audio_qa": {
+    "source_bytes": 742277065,
+    "output_bytes": 197744655,
+    "range_count": 49,
+    "expected_duration_s": 563.34,
+    "output_duration_s": 563.3625396825397,
+    "output_tail_extra_ms": 22.53968253968254,
+    "output_minus_expected_samples": 994,
+    "full_timeline_zero_lag_pearson_r": 0.9956588332830583,
+    "range_start_end_checks": 98,
+    "range_start_end_best_lag_ms_min": 0.0,
+    "range_start_end_best_lag_ms_max": 0.0,
+    "range_start_end_correlation_min": 0.8144528468058954,
+    "range_start_end_low_correlation_windows": [
+      {
+        "range_index": 10,
+        "edge": "start",
+        "best_shift_ms": 0.0,
+        "pearson_r": 0.8144528468058954
+      },
+      {
+        "range_index": 12,
+        "edge": "start",
+        "best_shift_ms": 0.0,
+        "pearson_r": 0.8234440333068012
+      }
+    ],
+    "inter_range_join_checks": 48,
+    "join_best_lag_ms_min": 0.0,
+    "join_best_lag_ms_max": 0.0,
+    "join_correlation_min": 0.7718258041283185
+  },
+  "long_video_qa": {
+    "source_bytes": 742277065,
+    "source_sha256": "c577ee64cb8295034bb0b544ecd9f4b883a0d8d46109e84327ce8aabfb4a133e",
+    "source_decoded_frames": 45002,
+    "source_resolution": [
+      1920,
+      1080
+    ],
+    "output_bytes": 197744655,
+    "output_sha256": "90e518011f49de873aef3136660861e29407d8d4b0b198286aa4b9f91cb033d6",
+    "output_sha256_matches_reported_file": true,
+    "output_resolution": [
+      1920,
+      1080
+    ],
+    "output_streams": {
+      "video": 1,
+      "audio": 1
+    },
+    "output_decoded_frames": 14084,
+    "output_duration_ms": 563340.0,
+    "segments": 49,
+    "expected_selected_frames": 14084,
+    "actual_output_frames": 14084,
+    "full_frame_order_maps_to_selected_source_ids": true,
+    "max_abs_output_pts_error_ms": 0.0,
+    "all_segment_boundaries_match": true,
+    "result_predictions": 49,
+    "result_device": "mps",
+    "recognition_wall_s": 1518.361139791,
+    "result_warnings": [
+      "片尾剩余 2 帧不足一个模型输入组，未补造帧。"
+    ]
+  },
+  "long_run_resources": {
+    "server_pid": 43755,
+    "monitor_started_at_utc": "2026-10-19T03:14:40.636+00:00",
+    "request_mtime_utc": "2026-10-19T03:15:25.600+00:00",
+    "result_mtime_utc": "2026-10-19T03:43:26.123+00:00",
+    "request_to_result_seconds": 1680.523,
+    "monitor_end_at_utc": "2026-10-19T03:43:30.438+00:00",
+    "monitor_elapsed_seconds": 1729.802,
+    "source_bytes": 742277065,
+    "output_bytes": 197744655,
+    "output_sha256": "90e518011f49de873aef3136660861e29407d8d4b0b198286aa4b9f91cb033d6",
+    "max_sampled_total_rss_kb": 910704,
+    "max_sampled_total_cpu_percent": 593.2,
+    "rss_scope_note": "Server + recursive worker/FFmpeg process RSS samples; excludes browser and is not precise GPU peak.",
+    "cpu_scope_note": "Summed process CPU percentages; can exceed 100% on a multi-core system.",
+    "max_work_directory_bytes": 940426947,
+    "max_work_bytes_excluding_source": 198149882,
+    "minimum_sampled_disk_free_bytes": 1744429056,
+    "sample_count": 334,
+    "sample_interval_seconds": 5,
+    "monitor_resume_times_utc": [
+      "2026-10-19T03:42:49.658+00:00"
+    ],
+    "sampling_gaps_over_10_seconds": [
+      {
+        "from_utc": "2026-10-19T03:42:04.235+00:00",
+        "to_utc": "2026-10-19T03:42:49.658+00:00",
+        "seconds": 45.423
+      }
+    ],
+    "evidence_directory": "/private/tmp/smash-acceptance-20261019/long-final"
+  },
+  "saved_export_validation": {
+    "report_claims_saved_file_exists": true,
+    "actual_file_exists": true,
+    "path": "/private/tmp/smash-acceptance-20261019/saved/D2-Chrome-验收.mp4",
+    "bytes_reported": 17121348,
+    "bytes_actual": 17121348,
+    "sha256_reported": "e6961725931c163304cec726a96ec41f8d619e63eb406f87cd2e3e22538447be",
+    "sha256_actual": "e6961725931c163304cec726a96ec41f8d619e63eb406f87cd2e3e22538447be",
+    "saved_matches_output": true,
+    "cancel_then_retry": true,
+    "cleanup_check": {
+      "old_work_exists": false,
+      "long_source_exists": true,
+      "models_present": {
+        "yolo11n.pt": true,
+        "ball_track.pt": true,
+        "pose_kpRCNN.pth": true
+      },
+      "saved_exists": true,
+      "saved_sha256": "e6961725931c163304cec726a96ec41f8d619e63eb406f87cd2e3e22538447be"
+    },
+    "evidence_basis": "Filesystem save-check and cleanup JSON reports plus actual saved-file size/hash; browser UI prompts are not treated as persistence evidence."
+  },
+  "cross_report_consistency": {
+    "long_source_size_matches_audio_qa": true,
+    "long_output_size_matches_audio_qa": true,
+    "long_output_sha256_matches_resource_and_actual_file": true,
+    "long_result_prediction_count_matches_video_segments_and_audio_ranges": true,
+    "long_output_duration_matches_audio_expected_and_result": true,
+    "d2_saved_file_hash_matches_d2_render_and_actual_file": true
+  },
+  "notes": [
+    "Long-video report was summarized without copying frame_mapping or other per-frame arrays.",
+    "QA metrics are measurements as recorded by the source reports; low-correlation audio edge windows are explicitly retained."
+  ],
+  "scope": "macOS Apple Silicon local test distribution; functional acceptance is separate from algorithm accuracy.",
+  "evidence_root": "/private/tmp/smash-acceptance-20261019",
+  "real_model_runs": {
+    "A1-01": {
+      "camera": "high",
+      "decoded_frames": 4200,
+      "recognition_wall_s": 108.142491,
+      "predictions": 5,
+      "frozen_predictions_match": true,
+      "device": "mps"
+    },
+    "C2": {
+      "camera": "courtside",
+      "decoded_frames": 5400,
+      "recognition_wall_s": 366.030441,
+      "predictions": 6,
+      "frozen_predictions_and_decisions_match": true,
+      "device": "mps"
+    },
+    "D2": {
+      "camera": "personal",
+      "decoded_frames": 7527,
+      "person_observations": 1255,
+      "recognition_wall_s": 688.09,
+      "predictions": 13,
+      "frozen_predictions_and_trace_match": true,
+      "device": "mps"
+    }
+  },
+  "browser_checks": {
+    "native_chrome": [
+      "authorized D2 file picker import",
+      "cancel real processing and restart without orphan worker",
+      "system save picker cancel then retry",
+      "saved MP4 bytes and SHA256 match service output",
+      "busy job rejection shows Chinese error",
+      "court selection continues from 2 points and survives reload"
+    ],
+    "in_app_browser": [
+      "actual A1/C2 imports in independent tabs",
+      "A1 processing reload recovery",
+      "A1 and long output playback at 1920x1080 readyState=4",
+      "long result duration 563.34 s"
+    ],
+    "persistence_evidence": "Only native Chrome D2 save is counted as filesystem save proof; IAB success text is excluded.",
+    "edge": "Not separately tested."
+  },
+  "lifecycle_checks": {
+    "source_report": "/private/tmp/smash-package-lifecycle-20261019/report.json",
+    "source_sha256": "938e93ada4d10baf1cd994321aec14cd0d590ce5b3ac2a429dd537d7fbb6ef43",
+    "wrong_session_http": 404,
+    "wrong_websocket_token": 4404,
+    "duplicate_websocket": 4409,
+    "expired_after_seconds": 66,
+    "expired_directories_removed": true,
+    "normal_exit_cleans_work": true,
+    "sigkill_work_pruned_on_next_start": true,
+    "model_cache_and_saved_export_retained": true,
+    "real_video_tab_close_cleanup": true,
+    "note": "Lifecycle report used an earlier package with SIGINT exit code 1; graceful exit was subsequently corrected and checked."
+  },
+  "model_cache_checks": {
+    "empty_cache_download_seconds_approx": 35,
+    "all_three_asset_sizes_and_sha256_verified": true,
+    "evidence_root": "/private/tmp/smash-package-first-use-koyd2pup",
+    "offline_long_run": "Full real long-video processing under inherited macOS sandbox-exec deny network-outbound, after local HTTP and outbound EPERM probe were checked."
+  },
+  "distribution": {
+    "path": "/Users/bytedance/workspace/test/smash-suite/dist/SmashSuite-macos-arm64.zip",
+    "bytes": 391918923,
+    "sha256": "1850a8046ca1906ab1c20def9a5bef8bacfe0524012d54063bca0f4f96a209d1",
+    "version": "0.2.0",
+    "target": "macOS arm64",
+    "signed_and_notarized": false
+  },
+  "verification": {
+    "backend_tests_passed": 111,
+    "frontend_typecheck": "passed",
+    "frontend_production_build": "passed",
+    "git_diff_check": "passed",
+    "build_log": "/private/tmp/smash-timings-20261019/build.log",
+    "source_files_unchanged_during_build": 57
+  },
+  "limitations": [
+    "Algorithm output quality is not independently accepted by these functional checks; no labels, model parameters, or new A/C/D experiments were changed for this product task.",
+    "Thirty-minute input is the lossless prefix of the existing A1 source, not repeated short clips; it has not been fully human-annotated for accuracy scoring.",
+    "Server-side RSS is sampled, excludes browser and exact GPU peak, and includes one 45.423-second sampling gap; upload time is excluded from request-to-result timing.",
+    "Two final source frames could not form a complete three-frame model group and were reported rather than fabricated.",
+    "AAC output has approximately 22.54 ms decoded tail padding; edge correlation values are retained above.",
+    "Standalone runtime validation was performed on this macOS Apple Silicon machine; signing, notarization and public-distribution license review are outside this local test scope."
+  ],
+  "final_distribution_check": {
+    "archive": {
+      "path": "/Users/bytedance/workspace/test/smash-suite/dist/SmashSuite-macos-arm64.zip",
+      "bytes": 391918923,
+      "sha256": "1850a8046ca1906ab1c20def9a5bef8bacfe0524012d54063bca0f4f96a209d1"
+    },
+    "extracted_dir": "/private/tmp/smash-final-18784-wpEwim/smash-suite",
+    "checks": {
+      "packaged_web_matches_frontend_dist": true,
+      "usage_instructions_match": true,
+      "third_party_declarations_match": true
+    },
+    "launch": {
+      "requested_command": "env -i PATH=/usr/bin:/bin HOME=/Users/bytedance SMASH_SUITE_DATA_DIR=/private/tmp/smash-standalone-final-data /private/tmp/smash-final-18784-wpEwim/smash-suite/smash-suite --no-browser --port 18784",
+      "status": "running",
+      "pid": 83205,
+      "session_id": 19710,
+      "cwd": "/private/tmp/smash-final-18784-wpEwim/smash-suite",
+      "health": {
+        "url": "http://127.0.0.1:18784/api/health",
+        "http_status": 200,
+        "body": {
+          "status": "ok",
+          "version": "0.2.0"
+        }
+      },
+      "blocker": null,
+      "launch_method": "require_escalated; original command as recorded",
+      "prior_capacity_failure": "Resolved by approved infrastructure retry; initial command was not executed."
+    },
+    "browser_check": {
+      "url": "http://127.0.0.1:18784/",
+      "user_confirmed_manual_open": true,
+      "tab_inventory": {
+        "id": "6",
+        "title": "Smash Suite · 羽毛球视频剪辑"
+      },
+      "status": "visual_review_pending",
+      "reason": "CUA origin approval and subsequent AX-read reviews timed out repeatedly; no unsafe determination. No browser screenshot or completed timing layout was observed."
+    }
+  },
+  "frozen_algorithm_sources": {
+    "profiles.json": "bcc2af9497124984d6d5e8a23188108d7a56915ae62babd518814280a8974afb",
+    "provenance.json": "0045fcd6edacee9df8c01ff984b9c096cc8b76c6fda4529565613f5186815ea5"
+  },
+  "baseline_distribution": {
+    "path": "dist/SmashSuite-macos-arm64.zip",
+    "bytes": 391910936,
+    "sha256": "74a0fc252eb9b15ccd8a8ee02db27edc01aaff854ef33e035b7f30111080dff3",
+    "version": "0.2.0",
+    "target": "macOS arm64",
+    "signed_and_notarized": false
+  },
+  "baseline_distribution_check": {
+    "archive": {
+      "path": "/Users/bytedance/workspace/test/smash-suite/dist/SmashSuite-macos-arm64.zip",
+      "bytes": 391910936,
+      "sha256": "74a0fc252eb9b15ccd8a8ee02db27edc01aaff854ef33e035b7f30111080dff3"
+    },
+    "extracted": {
+      "path": "/private/tmp/smash-final-bundle-audit-HN07ZM/smash-suite",
+      "size_kib": 1200500
+    },
+    "checks": {
+      "frontend_dist_matches_packaged_web": true,
+      "usage_instructions_match": true,
+      "third_party_declarations_match": true,
+      "mach_o_files_scanned": 549,
+      "non_system_absolute_dependencies": 0
+    },
+    "binary_audit": {
+      "source_report": "/private/tmp/smash-acceptance-20261019/bundle-source-audit.json",
+      "sha256": "315e3a8863a643b0b7ac35e1fbdd4d5f1f2162bc6fcf84c7eefa3948cb719cbd",
+      "matched_modules": 36,
+      "matched_module_names": [
+        "app",
+        "app.__main__",
+        "app.algorithms",
+        "app.algorithms.arc_features",
+        "app.algorithms.attached_motion",
+        "app.algorithms.body_features",
+        "app.algorithms.buffer_actions",
+        "app.algorithms.check_short_events",
+        "app.algorithms.coherent_flights",
+        "app.algorithms.connected_flight_filter",
+        "app.algorithms.court_pipeline",
+        "app.algorithms.court_rules",
+        "app.algorithms.high_return",
+        "app.algorithms.player_paths",
+        "app.algorithms.players_v2",
+        "app.algorithms.pose_context",
+        "app.algorithms.pose_lk_motion_count",
+        "app.algorithms.refined_person",
+        "app.algorithms.region_gate",
+        "app.algorithms.seeded_source",
+        "app.algorithms.selected_algorithm",
+        "app.algorithms.shuttle_paths",
+        "app.algorithms.supported_start",
+        "app.algorithms.tracknet_model",
+        "app.algorithms.trials",
+        "app.main",
+        "app.media",
+        "app.product_types",
+        "app.runtime",
+        "app.vision",
+        "app.vision.candidate_rally",
+        "app.vision.rally_stream",
+        "app.vision.tracknet_rally",
+        "app.vision.trajectory_rally",
+        "app.vision.video_input",
+        "app.worker"
+      ],
+      "different_modules": [
+        {
+          "module": "app.model_assets",
+          "file": "backend/app/model_assets.py",
+          "removed_strings": [
+            " MB",
+            " · ",
+            ".1f",
+            "/",
+            "label",
+            "下载失败，请检查网络后重新开始：",
+            "校验",
+            "首次下载"
+          ],
+          "added_strings": [
+            "准备处理失败，请稍后重试。",
+            "正在准备处理"
+          ]
+        },
+        {
+          "module": "app.recognize",
+          "file": "backend/app/recognize.py",
+          "removed_strings": [
+            "模型已加载，开始读取录像"
+          ],
+          "added_strings": [
+            "正在读取录像"
+          ]
+        },
+        {
+          "module": "app.sessions",
+          "file": "backend/app/sessions.py",
+          "removed_strings": [
+            "准备识别模型",
+            "本机正在处理一份录像，请完成或取消后重试。"
+          ],
+          "added_strings": [
+            "已有录像正在处理，请完成或取消后重试。",
+            "正在准备处理"
+          ]
+        }
+      ]
+    },
+    "launch": {
+      "pid": 70323,
+      "exec_session_id": 48286,
+      "path": "/private/tmp/smash-final-bundle-audit-HN07ZM/smash-suite/smash-suite",
+      "env": {
+        "PATH": "/usr/bin:/bin",
+        "HOME": "/Users/bytedance",
+        "SMASH_SUITE_DATA_DIR": "/private/tmp/smash-final-launch-check-data"
+      },
+      "port": 18780,
+      "auto_browser": true,
+      "health_http_status": 200,
+      "health_body": {
+        "status": "ok",
+        "version": "0.2.0"
+      },
+      "home_http_status": 200,
+      "home_bytes": 2035,
+      "shutdown": {
+        "signal": "SIGINT",
+        "exit_code": 0,
+        "process_exited": true,
+        "port_18780_released": true,
+        "runtime_work_directory_empty": true,
+        "verification": "exec session 48286 exited with code 0; no process or listener remained on PID 70323/TCP 18780; SMASH_SUITE_DATA_DIR/work exists but is empty"
+      }
+    },
+    "ui_acceptance": {
+      "screenshot": "/private/tmp/smash-acceptance-20261019/final-package-chrome.png",
+      "verified_by_parent": "Chrome showed ReactLynx options, import, three quality levels, and start button"
+    },
+    "source_report_sha256": "1e3f07a468c128c733862d6c71c37aaade911cef739c7495faded3a6622e5c80",
+    "browser_observation": "CUA observed native Chrome at 127.0.0.1:18780 with the complete ReactLynx product controls; the temporary launch-check tab was closed after capture."
+  },
+  "latest_revision_evidence": "docs/experiments/product-timings-20261019.json",
+  "latest_revision_offline_worker": {
+    "exit_code": 0,
+    "device": "cpu",
+    "source_frames": 4200,
+    "phase_events": [
+      "recognition",
+      "rendering"
+    ],
+    "phase_sum_matches_total": true,
+    "output_sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+    "output_matches_previous": true,
+    "scope": "Offline packaged worker in default sandbox; observed stdout timing boundaries, not browser or HTTP JobState validation."
+  },
+  "previous_timings_distribution": {
+    "path": "/Users/bytedance/workspace/test/smash-suite/dist/SmashSuite-macos-arm64.zip",
+    "bytes": 391918933,
+    "sha256": "307a669a61db76122a3a499ef46b86e7350fb9d63de2a8f2a2fcca7c06524f4a",
+    "version": "0.2.0",
+    "target": "macOS arm64",
+    "signed_and_notarized": false
+  },
+  "copy_revision_evidence": "/private/tmp/smash-copy-20261019/report.json"
+}

@@ -6,6 +6,7 @@
 
 - `roadmap.md`：有序执行计划和里程碑状态。
 - `rally-segmentation-requirement.md`：输入输出要求、seed 数据、标注与统一指标。
+- `video-clipping-product-task.md`：首个视频剪辑产品的会话分工、复用格式、实施顺序及交付要求；实时进度仍只写入 `roadmap.md`。
 - `../architecture.md`：已接受的系统边界；只有完成 benchmark 和选型记录后，才写入正式内部架构。
 - `../features.md`：稳定产品范围与非目标。
 - `../../backup/docs/`：历史快照，不参与任务选择或当前设计判断。

@@ -1,0 +1,20 @@
+Smash Suite 本机测试包使用的主要第三方组件
+
+ReactLynx / Lynx for Web: Apache-2.0，https://github.com/lynx-family/lynx-stack
+FastAPI: MIT，https://github.com/fastapi/fastapi
+PyTorch / Torchvision: BSD-style，https://github.com/pytorch/pytorch
+NumPy / SciPy: BSD-style，https://numpy.org / https://scipy.org
+Matplotlib: PSF-based license，https://matplotlib.org/stable/project/license.html
+PyAV: BSD-3-Clause，https://github.com/PyAV-Org/PyAV
+OpenCV: Apache-2.0，https://opencv.org
+SoloShuttlePose TrackNet架构及公开权重来源: https://github.com/sunwuzhou03/SoloShuttlePose
+SoloShuttlePose 的 MIT 代码许可证随程序提供；权重来源与SHA256在模型清单中固定。
+Ultralytics YOLO11: AGPL-3.0 / Enterprise，https://www.ultralytics.com/license
+FFmpeg: 随包静态版本启用GPL与libx264，版本和构建参数可通过内部bin/ffmpeg -version查询；https://ffmpeg.org/legal.html
+FFmpeg发行来源: imageio-ffmpeg 0.6.0，https://github.com/imageio/imageio-ffmpeg
+Requests: Apache-2.0，https://requests.readthedocs.io
+PyInstaller: GPL-2.0 with bootloader exception，https://pyinstaller.org
+
+本文件用于记录本机测试包依赖与来源，不代表已经完成公开分发的许可审查。
+公开发行前需核实代码、模型、数据和FFmpeg具体发行构建的许可证义务，提供必要的完整许可证、源码获取方式及署名。
+公开可下载不等于允许任意闭源分发；下载模型不会消除上游授权条件。
