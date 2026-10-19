@@ -1,0 +1,46 @@
+{
+  "high": {
+    "confidence": 0.6,
+    "motion_window_ms": 200,
+    "min_motion_window_ms": 80,
+    "min_speed_px_s": 100,
+    "max_speed_px_s": 4000,
+    "quiet_ms": 1600,
+    "min_flight_span_ms": 2200,
+    "field": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "direction_window_ms": 160,
+    "direction_min_span_ms": 40,
+    "direction_max_residual_px": 80,
+    "top_fraction": 0.15,
+    "exit_max_y_fraction": 0.4,
+    "exit_horizon_ms": 250,
+    "high_clear_gap_ms": 2800,
+    "reentry_x_fraction": 0.2,
+    "turn_jump_px_s": 1100,
+    "track_gap_ms": 120,
+    "return_support_ms": 320,
+    "return_travel_px": 120,
+    "short_event_ms": 5000,
+    "filter_single_flight": true,
+    "filter_uncertain_short": true
+  },
+  "personal_ball": {
+    "confidence": 0.5,
+    "static_fraction": null,
+    "center_weight": 0,
+    "max_step_error_px": 24,
+    "min_track_points": 3,
+    "min_track_ms": 60,
+    "min_track_travel_px": 20,
+    "max_gap_ms": 3200,
+    "min_span_ms": 600,
+    "min_observations": 18,
+    "min_motion_fraction": 0,
+    "min_motion_ms": 1200
+  }
+}

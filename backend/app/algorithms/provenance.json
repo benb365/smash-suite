@@ -1,0 +1,245 @@
+{
+  "court_pipeline": {
+    "source": "models/SoloShuttlePose/.runtime/a1-c-parameters-20261017/replay.py",
+    "source_sha256": "d12f1ccd0b694cb1c350487660b9fc4559e5bec7ff4b28fd600b7a1cbbb2060f",
+    "symbols": [
+      "CONFIG",
+      "CandidateRallyConfig",
+      "RallyInterval",
+      "arc_delete",
+      "asdict",
+      "candidate_intervals",
+      "candidate_motion",
+      "continuation",
+      "decision",
+      "decisions",
+      "gate",
+      "pipeline",
+      "trim"
+    ]
+  },
+  "court_rules": {
+    "source": "models/SoloShuttlePose/.runtime/c1-weak-tracks-20261017/evaluate_full_context.py",
+    "source_sha256": "ccfc90695dfb59ad6711188af057b0d36afa940c43c425b2ceea50de7c733fb1",
+    "symbols": [
+      "CandidateRallyConfig",
+      "RallyInterval",
+      "arc_delete",
+      "asdict",
+      "candidate_intervals",
+      "candidate_motion",
+      "cv2",
+      "features",
+      "gate",
+      "np"
+    ]
+  },
+  "region_gate": {
+    "source": "models/SoloShuttlePose/.runtime/c1-region-smoothing-20261017/region_gate.py",
+    "source_sha256": "7b0628f26eea65d78440924359e7fa03a3479bd7134ced79bd5b059f3da69381",
+    "symbols": [
+      "cv2",
+      "gate",
+      "np"
+    ]
+  },
+  "arc_features": {
+    "source": "models/SoloShuttlePose/.runtime/c1-spatial-support-20261017/arc_features.py",
+    "source_sha256": "c36cfa4b14c5cc5e43dea3af7335b988ec2fc9449d260ebeca25dff12d319c5a",
+    "symbols": [
+      "features",
+      "np"
+    ]
+  },
+  "check_short_events": {
+    "source": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/check_short_events.py",
+    "source_sha256": "5417d59c8bdaf10718269d36f81a1a9cb134886d2ec91b1e021485e9157d811a",
+    "symbols": [
+      "decisions"
+    ]
+  },
+  "high_return": {
+    "source": "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/high_return.py",
+    "source_sha256": "6e751220c72a580602fab610c89ddd9bc6aa000ecaf1001da10d6fe1694b60ed",
+    "symbols": [
+      "bodies",
+      "continuation",
+      "math",
+      "mean_velocity",
+      "near_top"
+    ]
+  },
+  "attached_motion": {
+    "source": "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/attached_motion.py",
+    "source_sha256": "5c9aa2c5ef34b8ba0a3db9b034060da46169176ed126da3459f680c05ad98df0",
+    "symbols": [
+      "bodies",
+      "np"
+    ]
+  },
+  "connected_flight_filter": {
+    "source": "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/connected_flight_filter.py",
+    "source_sha256": "2d63adc7277320704ab2b68e8dbc2451022d6065fc862d6be5f18eefcd654a80",
+    "symbols": [
+      "decision",
+      "math"
+    ]
+  },
+  "supported_start": {
+    "source": "models/SoloShuttlePose/.runtime/c1-flight-identity-20261017/supported_start.py",
+    "source_sha256": "8207d0d6579968df5408420b41fd1086374a4cef205ff68a198b1226183464ca",
+    "symbols": [
+      "trim"
+    ]
+  },
+  "player_paths": {
+    "source": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/player_paths.py",
+    "source_sha256": "f78cc53ca13658cabadf7e1924dc315397b3f105ad4ec23c533deabe9f9589fe",
+    "symbols": [
+      "COURT",
+      "appearance",
+      "cv2",
+      "descriptor",
+      "foot",
+      "height",
+      "itertools",
+      "main_players",
+      "math",
+      "np",
+      "tracks"
+    ],
+    "main_players_override": {
+      "source": "models/SoloShuttlePose/.runtime/c2-current-algorithm-20261018/relaxed-selection/selector.py",
+      "source_sha256": "d68c7f988e5706fe21e9232288edb28bbb4a6a5a608ad93bdf676e7cab804950"
+    }
+  },
+  "shuttle_paths": {
+    "source": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/shuttle_paths.py",
+    "source_sha256": "17eeda14f4e144d0dc8c6c62d05857a69a09046be49eeb1ccd4b049a6fa620e1",
+    "symbols": [
+      "Counter",
+      "associate",
+      "math",
+      "moving",
+      "np",
+      "observed_candidates",
+      "predict",
+      "quality"
+    ]
+  },
+  "seeded_source": {
+    "source": "models/SoloShuttlePose/.runtime/c1-region-smoothing-20261017/seeded_source.py",
+    "source_sha256": "2b96b39e0be0698733f86e5a35f832996e88d6f1ebbf993578d062af4ae4396e",
+    "symbols": [
+      "np",
+      "predict"
+    ]
+  },
+  "coherent_flights": {
+    "source": "models/SoloShuttlePose/.runtime/c1-player-path-20261017/coherent_flights.py",
+    "source_sha256": "42377c09d4d6f5652f1d0c657a93fa8caf14c5bb5175dffc744dbfef97b4f371",
+    "symbols": [
+      "contact_points",
+      "fit",
+      "math",
+      "moving_points",
+      "np",
+      "split"
+    ]
+  },
+  "players_v2": {
+    "source": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/players_v2.py",
+    "source_sha256": "9ace91fff1a566dcca3e5cfd5d9283b40a1724d5248f930cd2af584131cffbd4",
+    "symbols": [
+      "appearance",
+      "follow",
+      "foot",
+      "height",
+      "itertools",
+      "linear_sum_assignment",
+      "math",
+      "np",
+      "select",
+      "track_all"
+    ]
+  },
+  "body_features": {
+    "source": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/features.py",
+    "source_sha256": "af90ad77b6e3ca33b70bc705c02fabf8ba0cdaea7c41ff52393b94ceaeedceaf",
+    "symbols": [
+      "body_motion",
+      "np"
+    ]
+  },
+  "pose_context": {
+    "source": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/pose_context.py",
+    "source_sha256": "9bb67f268631710a4adada673d12f977f78e961d29b0b720cf009e8dc73e6304",
+    "symbols": [
+      "angle",
+      "extract",
+      "height",
+      "np",
+      "series"
+    ]
+  },
+  "trials": {
+    "source": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/trials.py",
+    "source_sha256": "47cc6f74baa82b80d806d34dea0f91b04ecb8ec511c5fc20cf6e9c16ad47ebde",
+    "symbols": [
+      "RallyInterval",
+      "foot",
+      "height",
+      "math",
+      "median_filter",
+      "np",
+      "series"
+    ]
+  },
+  "refined_person": {
+    "source": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/d1-refined-person-20261018/refine.py",
+    "source_sha256": "c5dfff422a3fca7c53f025993173608a11a6b8525b564bd0931500dfef333bde",
+    "symbols": [
+      "CONFIG",
+      "RallyInterval",
+      "asdict",
+      "group_actions",
+      "maximum_filter1d",
+      "median_filter",
+      "np",
+      "padded",
+      "predict"
+    ]
+  },
+  "pose_lk_motion_count": {
+    "source": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/pose_lk_motion_count.py",
+    "source_sha256": "ea05ffbc4e7b800b4e2ffc4682818d714487a5d04c6a3abdb2041bcae61632cd",
+    "symbols": [
+      "RallyInterval",
+      "np",
+      "predict"
+    ]
+  },
+  "buffer_actions": {
+    "source": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/buffer_actions.py",
+    "source_sha256": "e8d3936fbadd65ec4173cc2d5d3c0fc29ca96ec2098d0a40e3be2c414b9004dc",
+    "symbols": [
+      "RallyInterval",
+      "padded"
+    ]
+  },
+  "selected_algorithm": {
+    "source": "models/SoloShuttlePose/.runtime/d1-person-motion-20261017/selected_algorithm.py",
+    "source_sha256": "f4f3fbc95f65fb30c22e39d8d67a8a6ec3099130da763985897a901e5507f847",
+    "symbols": [
+      "CONFIG"
+    ]
+  },
+  "tracknet_model": {
+    "source": "models/SoloShuttlePose/src/models/TrackNet.py",
+    "source_sha256": "3db5d0cd25a923b317126aa8f9a472b08bb5719eb7317d250ba838e7fd0c10a0",
+    "symbols": [
+      "Conv",
+      "TrackNet"
+    ]
+  }
+}
