@@ -42,7 +42,7 @@ Read [schema](references/schema.md) before changing manifests, labels, imports o
 
 ## Rally test clips
 
-Use the [current requirements](../../../docs/plan/rally-segmentation-requirement.md#回合算法测试视频)
+Use the [current requirements](../../../modules/rally/evaluation.md#回合算法测试视频)
 and [roadmap](../../../docs/plan/roadmap.md), not counts copied into this skill.
 Confirm sources/categories with the human, then choose continuous play-and-break
 windows. Keep related sources/capture sessions together when separating tuning

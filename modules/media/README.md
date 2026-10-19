@@ -1,0 +1,49 @@
+# 媒体读写
+
+读取视频信息和带时间戳的图像帧，或按给定时间区间生成连续音视频。不负责判断回合，也不依赖产品后端。
+
+## 调用
+
+先按[项目首页](../../README.md#开发工作流)安装共同环境。以下示例在仓库根目录执行：
+
+```python
+from pathlib import Path
+from modules.media.video import probe, render, selected_ranges
+from modules.media.video_input import FileFrameSource
+
+source = Path("input.mp4")
+info = probe(source, source.name)
+with FileFrameSource(source, mode="offline") as frames:
+    for frame in frames:
+        # frame_id、timestamp_ms、image（BGR 图像）
+        pass
+
+ranges = selected_ranges([{"start_ms": 1000, "end_ms": 5000}], info.duration_ms)
+render(source, Path("output.mp4"), ranges, info, "balanced", lambda fraction: None)
+```
+
+`selected_ranges` 默认不补时；调用方可传 `padding_ms`。导出保留源画面尺寸和原音画相对偏移，支持 `high`、`balanced`、`small` 三档质量。调用者负责输出目录和工作文件的生命周期。
+
+## 帧与时间
+
+`TimestampedFrame` 和 `VideoInfo` 定义在 `types.py`。帧包含递增且流内唯一的整数 `frame_id`、源时间轴上的毫秒时间戳 `timestamp_ms` 和当前图像 `image`。时间戳必须有限且严格递增，图像像素格式由输入适配器统一。
+
+`FileFrameSource` 用 PyAV 解码原始 BGR 图像，以首帧 PTS（视频帧的显示时间戳）为零点保留实际帧时间间隔；缺失、重复或回退的时间戳会报错，不按估计帧率伪造时间或补帧。源分辨率和帧率保持不变。
+
+`offline` 尽快读取；`realtime` 按单调时钟的启动时刻加源时间调度，模拟文件原速输入。一个解码线程与一个消费者之间最多排队六帧；实时模式下，最旧排队、待提交或正在处理帧落后计划时刻超过默认五秒，终止分析并保留诊断，可用 `max_lag_s` 调整。离线模式只施加有界阻塞，不使用实时超时。
+
+固定帧率诊断适配器 `iter_cfr_video_frames` 仅用于数据清单明确声明恒定帧率的文件：时间戳为零起点帧号除以清单帧率，抽样不重编号。可变帧率或真实采集源应提供实际源时间戳。
+
+文件模拟的墙钟延迟与回合结果的源时间分别记录，不包含真实设备在采集、编码或网络传输中的耗时。当前没有摄像头或网络接入适配器；这些来源可以沿用同一帧输入约定。
+
+## 实验记录
+
+文件输入、实时模拟、持续运行和分辨率对照的历史实测见[输入模块实验](experiments/realtime-input.md)。记录对应当时的环境和代码，当前验证状态以路线图为准。
+
+## 测试
+
+```sh
+.venv/bin/python -m pytest modules/media/tests
+```
+
+依赖 PyAV、OpenCV、NumPy、Pydantic；编码使用系统 FFmpeg 或 `imageio-ffmpeg`，也可通过 `SMASH_SUITE_FFMPEG` 指定程序。迁移后的运行测试尚未执行，见[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。

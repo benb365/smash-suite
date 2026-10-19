@@ -3,7 +3,7 @@
   "purpose": "new_source_filter_check_not_final_acceptance",
   "created_at_utc": "2026-10-16T15:40:41.915181+00:00",
   "human_authorization": "用户确认先检查C1四段；保持参数不动，D1和A2留后续验证。",
-  "parameter_selection_report": "docs/experiments/m1-a-return-threshold-20261016.json",
+  "parameter_selection_report": "modules/rally/experiments/reports/m1-a-return-threshold-20261016.json",
   "parameter_selection_report_sha256": "c28f3d81a4243c8dbb78493dcc78d041fe0f8b75883a2ef7f43195377bb3a603",
   "inference_config": {
     "confidence": 0.6,

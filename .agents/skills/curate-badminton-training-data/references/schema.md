@@ -42,7 +42,7 @@ only singles count toward the current collection target. Phone confirmation
 is an evidence field, not a requirement of the current four-view duration
 target. The existing official/personal group is not the four-view category
 classification; category confirmation and duration accounting follow the
-[Rally test-video requirements](../../../../docs/plan/rally-segmentation-requirement.md#回合算法测试视频).
+[Rally test-video requirements](../../../../modules/rally/evaluation.md#回合算法测试视频).
 
 ## Court data
 

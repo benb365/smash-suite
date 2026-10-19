@@ -1,0 +1,18 @@
+{
+  "docs/plan/README.md": {
+    "snapshot": "before-README.md",
+    "sha256": "c1efe3fe392e75083f3ea58d9871485b1afb715ecfb70c9d822ef10f51b853aa"
+  },
+  "docs/plan/roadmap.md": {
+    "snapshot": "before-roadmap.md",
+    "sha256": "21beb79b135e1732ed1b6429368d4f230afd31286d376e3741e66f874d972805"
+  },
+  "docs/plan/rally-segmentation-requirement.md": {
+    "snapshot": "before-rally-segmentation-requirement.md",
+    "sha256": "cac2e11f32d95fa2d5ee95c30c59c3288f864f726dc44558204787a5ca5c6fa0"
+  },
+  "docs/plan/video-clipping-product-task.md": {
+    "snapshot": "before-video-clipping-product-task.md",
+    "sha256": "17911099d2d7850e22964faf100a62ac0441c3608f1b5dbd702c0b791c7d7baf"
+  }
+}

@@ -8,7 +8,7 @@ importers:
 
   .: {}
 
-  frontend:
+  apps/video-clipper/frontend:
     dependencies:
       '@lynx-js/lynx-core':
         specifier: 0.1.4

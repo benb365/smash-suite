@@ -1,51 +1,26 @@
-# 文档与 Agent 入口
+# 项目文档
 
-## Agent 入口
+[项目介绍与架构](../README.md) · [开发环境](../README.md#开发工作流) · [当前进展与计划](plan/roadmap.md)
 
-仓库规则只维护一份：
+## 按任务查阅
 
-- Codex、OpenAI Codex 兼容客户端和读取 `AGENTS.md` 的 Agent：从根目录 `AGENTS.md` 开始。
-- Claude Code：从根目录 `CLAUDE.md` 开始；该文件只导入 `AGENTS.md`。
-- 其他 Agent：若不会自动识别上述入口，应显式读取 `AGENTS.md`，不要复制规则。
-
-## 主动阅读路径
-
-按任务只读取必要文档：
-
-1. `README.md`：目标、范围、当前状态和入口。
-2. `docs/plan/roadmap.md`：当前优先级、状态、证据、阻塞和下一项工作。
-3. `docs/features.md`：稳定产品范围与非目标。
-4. `docs/architecture.md`：已接受的系统边界和契约；当前内部算法尚未选型。
-5. `docs/plan/rally-segmentation-requirement.md`：数据、标注和评估口径。
-6. `docs/plan/README.md`：计划文档维护规则。
-7. [视频结果展示入口](video-result-review.md)：指向仓库内 `review-video-results` skill；固定查看器、数据格式和展示约定均由 skill 维护。
-
-用户指定开发首个视频剪辑产品时，在 roadmap 之后读取[产品开发任务说明](plan/video-clipping-product-task.md)，其中记录独立本机服务、浏览器界面和自动成片的实施约定。算法与产品可并行；不将算法尚未完成当作产品任务的通用阻塞。
-
-`backup/docs/` 不属于主动阅读路径。旧代码和归档文档都不能作为当前架构、当前需求或完成状态的证据；明确进行历史追溯时，引用必须标注为“历史假设”。
-
-## 文档职责
-
-| 文档 | 唯一职责 |
+| 想做什么 | 阅读入口 |
 | --- | --- |
-| `README.md` | 仓库目标、范围、当前状态和导航 |
-| `AGENTS.md` | 跨 Agent 的共享执行规则 |
-| `CLAUDE.md` | Claude Code 的薄入口 |
-| `docs/features.md` | 稳定产品边界与非目标 |
-| `docs/architecture.md` | 已接受的系统边界、契约和正式架构 |
-| `docs/video-result-review.md` | 视频结果查看 skill 的发现入口 |
-| `.agents/skills/review-video-results/` | 固定播放器与时间轴、运行脚本、输入格式和维护检查 |
-| `docs/plan/roadmap.md` | 当前优先级、状态、证据、阻塞和下一步 |
-| `docs/plan/rally-segmentation-requirement.md` | benchmark 数据、标注和指标定义 |
-| `docs/plan/video-clipping-product-task.md` | 产品会话任务范围、已有格式复用、实施顺序和交付要求 |
-| `docs/plan/README.md` | 计划文档的维护方法 |
-| `backup/docs/README.md` | 历史快照的隔离与引用规则 |
+| 使用或开发自动剪辑 | [应用说明](../apps/video-clipper/README.md) · [产品需求](../apps/video-clipper/requirements.md) |
+| 录制并上传场边视频 | [Android 采集](../apps/android-capture/README.md) · [接收端](../apps/android-capture/receiver/README.md) |
+| 读取、处理或导出视频 | [媒体模块](../modules/media/README.md) |
+| 调用找球、人物检测和姿态模型 | [模型模块](../modules/models/README.md) |
+| 运行或改进回合识别 | [回合模块](../modules/rally/README.md) · [识别需求](../modules/rally/requirements.md) |
+| 比较算法效果与评分 | [评估规范](../modules/rally/evaluation.md) · [实验与回放](../modules/rally/experiments/README.md) |
+| 准备测试素材和人工标注 | [数据集](../datasets/README.md) · [数据规范](../datasets/requirements.md) |
+| 从视频平台采集录像 | [录像采集插件](../tools/ysp-recorder/README.md) |
 
-## 更新原则
+## 查看结果
 
-- 产品边界变化时更新 `docs/features.md`。
-- 输入输出契约或被接受的正式架构变化时更新 `docs/architecture.md`。
-- 数据、标注或指标口径变化时更新 requirement。
-- 视频检查的脚本、模板、输入格式及交互约定只更新 `review-video-results` skill；项目文档保留入口，不复制规则正文。
-- 优先级、状态、证据或阻塞变化时更新 roadmap。
-- 不把实时状态复制进稳定文档，也不把历史假设重新提升为当前事实。
+| 想了解什么 | 阅读入口 |
+| --- | --- |
+| A/C/D 算法选择与取舍 | [算法确认记录](../modules/rally/experiments/reports/algorithm-decisions-20261019.md) |
+| 对照视频、人工标注和算法区间 | [结果查看](../modules/rally/experiments/README.md#查看视频与结果) |
+| 媒体输入与实时模拟结果 | [输入实验](../modules/media/experiments/realtime-input.md) |
+| 剪辑产品验收与耗时 | [产品验证记录](../apps/video-clipper/README.md#验证记录) |
+| 素材筛选与标注审核 | [素材记录](../datasets/README.md#审核与整理记录) |

@@ -3,7 +3,7 @@
   "purpose": "pre_optimization_baseline_not_acceptance",
   "created_at_utc": "2026-10-16T16:13:16.256033+00:00",
   "human_authorization": "按照A1的方法，在C1/D1上都得到尽力的最优结果",
-  "parameter_selection_report": "docs/experiments/m1-a-return-threshold-20261016.json",
+  "parameter_selection_report": "modules/rally/experiments/reports/m1-a-return-threshold-20261016.json",
   "parameter_selection_report_sha256": "c28f3d81a4243c8dbb78493dcc78d041fe0f8b75883a2ef7f43195377bb3a603",
   "inference_config": {
     "confidence": 0.6,

@@ -1,0 +1,27 @@
+{
+  "status": "integrated_pending_validation",
+  "date": "2026-10-19",
+  "scenarios": {
+    "high": {
+      "selection": "original",
+      "source_report": "modules/rally/experiments/reports/a1-a2-short-filter-20261018.json",
+      "variant": "current"
+    },
+    "courtside": {
+      "selection": "tail_gap800_growth300",
+      "source_report": "modules/rally/experiments/reports/c-pause-boundaries-20261019.json",
+      "source_functions": [
+        "compare_c_recovery.c_predict",
+        "refine_c_pause_boundaries.recover_end"
+      ]
+    },
+    "personal": {
+      "selection": "candidate",
+      "source_report": "modules/rally/experiments/reports/d-person-context-20261018.json",
+      "source_functions": [
+        "compare_d_person_context.predict_candidate",
+        "compare_d_person_context.add_feet"
+      ]
+    }
+  }
+}

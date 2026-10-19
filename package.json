@@ -2,16 +2,16 @@
   "name": "smash-suite",
   "version": "0.1.0",
   "private": true,
-  "description": "Standalone local badminton video clipping application.",
+  "description": "Local badminton video modules and applications.",
   "scripts": {
-    "dev:frontend": "pnpm -C frontend build",
-    "dev:backend": "cd backend && ../.venv/bin/python -m app",
-    "build:product": ".venv/bin/python tools/package/build.py",
-    "test:backend": "cd backend && python3 -m pytest",
-    "typecheck:frontend": "pnpm -C frontend exec tsc --noEmit"
+    "dev:frontend": "pnpm -C apps/video-clipper/frontend build",
+    "dev:backend": "cd apps/video-clipper/backend && ../../../.venv/bin/python -m app",
+    "build:product": ".venv/bin/python apps/video-clipper/packaging/build.py",
+    "test:backend": ".venv/bin/python -m pytest",
+    "typecheck:frontend": "pnpm -C apps/video-clipper/frontend exec tsc --noEmit"
   },
   "engines": {
-    "node": ">=20",
+    "node": ">=20.19",
     "pnpm": ">=9"
   }
 }

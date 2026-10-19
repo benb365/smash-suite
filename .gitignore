@@ -4,10 +4,7 @@
 CLAUDE.local.md
 
 node_modules/
-frontend/node_modules/
-frontend/dist/
 dist/
-frontend/.vite/
 
 __pycache__/
 *.py[cod]
@@ -18,11 +15,13 @@ __pycache__/
 venv/
 
 .runtime/
-models/*
 datasets/badminton-v1/local/
 
-!models/.gitkeep
-!models/README.md
-!models/SoloShuttlePose/
-models/SoloShuttlePose/*
-!models/SoloShuttlePose/configs/
+
+modules/models/*/weights/
+backup/module-reorganization-20261019/models/*
+!backup/module-reorganization-20261019/models/.gitkeep
+!backup/module-reorganization-20261019/models/README.md
+!backup/module-reorganization-20261019/models/SoloShuttlePose/
+backup/module-reorganization-20261019/models/SoloShuttlePose/*
+!backup/module-reorganization-20261019/models/SoloShuttlePose/configs/

@@ -1,0 +1,133 @@
+Smash Suite architecture image
+Generated with the built-in imagegen tool on 2026-10-19.
+
+Initial generation prompt:
+
+Use case: infographic-diagram
+Asset type: architecture image for a Chinese software project's README and local documentation site.
+Primary request: Create a polished, colorful, exceptionally readable architecture infographic for Smash Suite, a local-first badminton video toolkit. Flat editorial information design, precise Chinese typography, white background, generous whitespace, restrained rounded cards, thin orthogonal arrows. Portrait 4:5 composition, high resolution. This is a finished technical diagram, not a website mockup.
+Title: "Smash Suite" with subtitle "羽毛球视频处理套件".
+Main architecture: four horizontal layers stacked vertically; capabilities compose upward. The top product layer is warm coral, the Rally layer is lavender/violet, model cards are soft blue, media card is turquoise, environment is cool gray-blue. Small simple line icons can help recognition. Dark navy text, strong contrast, no gradients or 3D.
+Exact content and structure:
+1. TOP large group heading "自动剪辑". Within it, two equal cards:
+left "前端" / "ReactLynx · Lynx for Web" / "操作 · 预览 · 保存";
+right "后端" / "Python · FastAPI" / "任务管理 · 识别 · 导出".
+A thin double-headed horizontal connection between these cards labeled "HTTP / WebSocket".
+2. Next large violet group heading "Rally · 回合识别", containing three equal cards:
+"A · 比赛高视角" / "球轨迹";
+"C · 场边低视角" / "球轨迹 + 球员信息";
+"D · 个人斜侧方" / "人物动作 + 球与对手活动".
+One arrow from this group UP to the backend card only, labeled "回合区间".
+3. Next capability row: left turquoise card "媒体读写" / "PyAV · OpenCV · FFmpeg"; right blue group heading "模型能力", containing three clearly separated small cards:
+"TrackNet" / "找球";
+"YOLO11n" / "人物检测";
+"Keypoint R-CNN" / "人物姿态".
+An upward arrow from models to Rally labeled "识别结果"; another upward arrow from media to Rally labeled "带时间戳的视频帧". A separate thin turquoise line routed in the outer right margin from media UP to backend labeled "音视频导出", without crossing cards, labels or other arrows.
+4. Lowest main layer full-width pale gray-blue card:
+"共同开发环境" / "Python 3.11 · PyTorch · Node.js · pnpm · TypeScript".
+Two simple upward arrows to media and model capabilities, showing foundation.
+Below the main stack, leave a generous gap and add a visually separate pale amber panel, heading "Android 场边采集 · 独立应用", with small note "尚未接入自动剪辑". No connector between this panel and the main architecture. Within it two cards connected left-to-right with arrow labeled "分段上传":
+"手机应用" / "Lynx 界面 · Android 录像服务"
+then "接收端" / "Python 保存片段 · FFmpeg 提供 HLS".
+Small footer in that panel "构建环境：JDK · Android SDK".
+Constraints: Text must be accurate, legible simplified Chinese, exact Latin product names and versions. Keep every listed component. Arrows must match the specified relationships. Product backend composes Rally and media; do not connect frontend directly to models. No extra modules or B scenario. No cloud infrastructure, database, training pipeline, legend, watermark, decorative sports photography, complex illustrations, or invented functionality. Use clean uniform typography with clear hierarchy. Fit all content safely inside the image with comfortable margins.
+
+Correction prompt (using the initial image as reference):
+
+Edit this architecture infographic with one correction: in the capabilities row, move the wide blue "模型能力" group with its TrackNet, YOLO11n and Keypoint R-CNN cards to the LEFT, and move the turquoise "媒体读写" card with PyAV · OpenCV · FFmpeg to the RIGHT. Keep each card's original contents and colors intact, resizing widths modestly only as needed. Route the turquoise "音视频导出" connector so that it clearly begins at the RIGHT EDGE OF THE TURQUOISE MEDIA CARD, goes up in the right margin, and ends at the backend card. It must not touch or originate from the blue models group. The blue "识别结果" arrow goes upward from the model group on the left to Rally. The turquoise "带时间戳的视频帧" arrow goes upward from media on the right to Rally. Update the two environment foundation arrows to point to the moved groups. This fixes the meaning of one connector; the media module provides export, not the models. Preserve all other text, icons, colors, title, layer positions, product connections, Chinese characters, Android independent panel, whitespace, and overall design. No new components or additional text.
+
+Revision: explicit architecture layers and a separate Android diagram
+
+Main architecture edit prompt:
+
+Use case: infographic-diagram
+Edit the supplied Smash Suite architecture infographic.
+Make a compact, professional architecture diagram, approximately landscape 4:3, high resolution. Keep the existing restrained coral, violet, blue, turquoise and slate color palette, white background, flat rounded cards, dark navy text and legible Chinese typography.
+Required changes:
+- REMOVE the entire global title area: no Smash Suite title, no shuttlecock logo, no subtitle, no replacement global title. The diagram starts directly with the top architecture layer.
+- REMOVE the entire Android panel and everything in it. This image contains ONLY the auto-clipping architecture and its foundations.
+- Explicitly name the architecture layers using prominent bold labels. Top coral container heading MUST read "应用层 · 自动剪辑". Second violet container heading MUST read "算法层 · Rally 回合识别". Third-row left blue container heading MUST read "模型层 · 推理能力". Third-row right turquoise container heading MUST read "媒体能力 · 音视频读写". Bottom slate container heading MUST read "开发环境层". The layer names should be immediately obvious, with consistent size, alignment and weight. Small icons are optional and subordinate to the labels.
+- Reflow the canvas to remove the deleted title and Android panel's whitespace. Increase label and text readability.
+Keep all these exact components and relationships:
+TOP coral application layer: left card "前端" / "ReactLynx · Lynx for Web" / "操作 · 预览 · 保存"; right card "后端" / "Python · FastAPI" / "任务管理 · 识别 · 导出"; horizontal bidirectional connection "HTTP / WebSocket".
+VIOLET algorithm layer: three cards "A · 比赛高视角" / "球轨迹"; "C · 场边低视角" / "球轨迹 + 球员信息"; "D · 个人斜侧方" / "人物动作 + 球与对手活动". Arrow UP from this layer to backend only, label "回合区间".
+BLUE models box on LEFT: three cards "TrackNet" / "找球"; "YOLO11n" / "人物检测"; "Keypoint R-CNN" / "人物姿态". UP arrow to algorithm layer, label "识别结果".
+TURQUOISE media box on RIGHT: "PyAV · OpenCV · FFmpeg". UP arrow to algorithm layer labeled "带时间戳的视频帧". Another turquoise line must originate visibly at right edge of THIS MEDIA BOX, travel up the outer right margin and enter backend, labeled "音视频导出". No crossing cards or text.
+BOTTOM environment layer text: "Python 3.11 · PyTorch · Node.js · pnpm · TypeScript". Two UP arrows to models and media.
+No extra content, no B scenario, no Android, no global heading, no watermark. Preserve the real module boundaries and clear arrow routing.
+
+Android generation prompt:
+
+Use case: infographic-diagram
+Asset type: a separate, concise Android capture technical architecture image for a Chinese README.
+Create a clean, professional flat architecture diagram on white, landscape approximately 3:2, high resolution. There is NO overall title, logo, subtitle or footer. Use two large side-by-side rounded containers, very readable large simplified Chinese text, dark navy typography, generous whitespace, restrained amber for phone side and teal for receiver side. Simple line icons only; no photography, 3D or decorative illustration.
+The LEFT container heading is exactly "手机端 · 前端". It has two stacked cards:
+Top card heading "操作界面", technology line "ReactLynx · TypeScript", small role line "Lynx 页面 · 开始 / 停止 · 状态".
+Bottom card heading "Android 原生服务", technology lines "Java · Camera2" and "MediaCodec · MediaMuxer", small role line "录像 · MP4 分片 · 上传队列".
+A thin downward connection between the two cards is labeled "Lynx 原生桥接".
+The RIGHT container heading is exactly "接收端 · 后端". It has two stacked cards:
+Top card heading "接收与存储", technology line "Python 标准库 · SQLite", small role line "接收 MP4 · 校验 · 保存".
+Bottom card heading "观看预览", technology line "FFmpeg · HLS", small role line "重封装 · 浏览器播放".
+A thin downward arrow inside the right container from storage to preview is labeled "已保存片段".
+One clear horizontal arrow from the LEFT BOTTOM native-service card to RIGHT TOP receive-storage card, routed through the gap without crossing any box or text, is labeled "tus 1.0 / HTTP(S)" and "分段上传". Make the center gap wide enough for this two-line label. The arrow MUST begin at the native service, not at the UI.
+The image is only these two technical architecture groups and their connections. Keep all required labels exact, especially ReactLynx, MediaCodec, MediaMuxer, SQLite, FFmpeg and HLS. No other components, no FastAPI, no AI models, no Rally, no video clipper integration, no cloud or database services beyond SQLite. No overall title. Strong layout and typography hierarchy; compact, clear and factual.
+
+Android connector correction prompt:
+
+Edit ONLY the upload connector in this Android architecture image. It currently wrongly enters the bottom-right "观看预览" card. Remove that entire horizontal upload arrow. Replace it with a thin diagonal arrow that starts at the upper part of the RIGHT EDGE of the bottom-left "Android 原生服务" card, travels diagonally UP and RIGHT through the central white gap, and terminates clearly at the LEFT EDGE of the TOP-RIGHT "接收与存储" card. The arrowhead must touch the receive-storage card, absolutely not the preview card. Put the existing exact two-line label "tus 1.0 / HTTP(S)" / "分段上传" beside that diagonal connector in the white gap, without overlapping any text or cards. Keep the independent vertical arrow from "接收与存储" DOWN to "观看预览". Keep the independent vertical arrow from "操作界面" DOWN to "Android 原生服务". Preserve every other label, Chinese character, card, color, icon, size and position. Do not invent new text. The data flow must visibly be native-service → receive-storage → preview.
+
+
+Revision: more spacious card interiors and layer spacing
+
+Main architecture spacing edit:
+
+Edit the supplied architecture image. The user's correction is that the LAYOUT is too tightly packed. Change the SPACING and CANVAS PROPORTIONS, preserving the reference's typography hierarchy, bold headings, palette, technical content, small icons and all arrow relationships. Do not solve this by shrinking the text or simply deleting icons.
+Make the layout visibly, substantially more spacious:
+- Use a taller, nearly portrait 4:5 canvas. Keep the content width and text sizes generous, and add canvas height to make room.
+- The gaps between the four horizontal levels should be at least twice the reference gaps, with comfortable space dedicated to connector labels. Arrows must travel through open whitespace, not squeezed against card borders.
+- Increase the height and internal padding of each layer and card by roughly 40–50%. Leave at least one full text-line's height between each card heading, technology line, and role line.
+- Increase gutters between the three scenario cards and between the model and media groups. Give long labels safe internal margins. Allow the D role description "人物动作 + 球与对手活动" to wrap naturally into two centered lines, and Keypoint R-CNN to wrap if needed, instead of squeezing.
+- Keep icons modest and secondary, with plenty of space between each icon and its text. They may be about half the reference size, but the primary improvement must come from increased padding and gaps.
+- Keep the environment panel spacious, with its heading clearly separated from its technology line.
+- Align related cards neatly and balance empty space throughout. No text should approach a border; no layer title should feel wedged above its cards.
+Preserve EXACTLY these architecture labels and contents from the reference:
+"应用层 · 自动剪辑", "前端", "ReactLynx · Lynx for Web", "操作 · 预览 · 保存", "后端", "Python · FastAPI", "任务管理 · 识别 · 导出", "HTTP / WebSocket".
+"算法层 · Rally 回合识别": "A · 比赛高视角", "球轨迹"; "C · 场边低视角", "球轨迹 + 球员信息"; "D · 个人斜侧方", "人物动作 + 球与对手活动".
+"模型层 · 推理能力": "TrackNet", "找球"; "YOLO11n", "人物检测"; "Keypoint R-CNN", "人物姿态".
+"媒体能力 · 音视频读写", "PyAV · OpenCV · FFmpeg".
+"开发环境层", "Python 3.11 · PyTorch · Node.js · pnpm · TypeScript".
+Arrow relationships must remain: environment UP to models and media; models UP to algorithm ("识别结果"); media UP to algorithm ("带时间戳的视频帧"); algorithm UP to backend ("回合区间"); media's right edge UP around the outer right margin into backend ("音视频导出"); frontend and backend linked horizontally in both directions ("HTTP / WebSocket"). Keep models left and media right.
+No overall title, Android content, new modules or new explanations. This should be recognizably the same architecture and visual language, now with a generous open layout rather than compact stacking.
+
+Main architecture card-layout edit:
+
+Edit this architecture diagram's layout only. All technical words, arrow relationships, colors and clear heading weights must remain accurate.
+The current tall image has improved vertical gaps, but the content inside the scenario and model cards is STILL horizontally cramped. Correct that decisively.
+Use a wider nearly-square 5:4 LANDSCAPE canvas with plenty of height. Do not compress fonts to fit. Allocate the bottom capabilities row approximately TWO THIRDS width to the models group and ONE THIRD to media, with a generous gutter.
+MOST IMPORTANT: inside EVERY small scenario and model card, stop placing an icon to the left of a long label. Instead use a relaxed CENTERED VERTICAL STACK: a SMALL 32px icon near the top; then ample blank space; then the component name; then a generous blank gap; then its description. Names and descriptions get the FULL card width. Increase the small cards' height substantially to fit this layout. Keep all three scenario cards equal in width and height, with large horizontal gutters. Keep all three model cards equal in width and height, with large gutters.
+For the D description use two comfortable lines: "人物动作 +" then "球与对手活动". For C description, two lines "球轨迹 +" then "球员信息" are allowed. For Keypoint R-CNN, wrapping into "Keypoint" then "R-CNN" is allowed. There must be at least 40px equivalent padding on every side of every text block. No characters squeezed against a border. Regular-sized role text, never tiny compressed text.
+Application cards: use small icons above the text or at a corner, not large icons occupying text width. Separate the card title, technology line and role line with visibly generous blank space. Maintain the HTTP / WebSocket connection in the center gutter.
+Media panel: the heading may wrap into two lines "媒体能力" and "音视频读写" to keep generous side padding. Put the three technologies below with ample spacing, allowed to wrap. Environment heading and technologies should be clearly separated with padding.
+Keep the already larger vertical layer gaps for labeled arrows. Keep the overall layout balanced, adding height rather than packing. Keep all outer layer headers aligned on the left.
+Architecture remains: top application frontend and backend; next Rally with A/C/D scenarios; next models on LEFT and media on RIGHT; environment bottom. Environment arrows UP to models and media; models UP to Rally ("识别结果"); media UP to Rally ("带时间戳的视频帧"); Rally UP to BACKEND ("回合区间"); media's right edge UP along outer right margin into backend ("音视频导出"). Frontend/backend bidirectional HTTP / WebSocket. Do not make the export connector originate at models.
+No overall title, Android, new content, deleted content, decorative additions, or altered technical facts. This is the same diagram with genuinely roomy CARD INTERIORS and not merely more whitespace between tight boxes.
+
+Android spacing edit (original Android diagram as content reference; lighter main draft as visual reference):
+
+Use case: infographic-diagram
+Input image 1 is the Android architecture diagram to edit. Input image 2 is a style reference for lighter typography and icon-free architecture cards.
+Restyle ONLY image 1 as a spacious, calm, readable technical diagram. Return just the revised Android diagram. Preserve all its technical content and three directional relationships. Do not import components or text from image 2.
+Remove ALL decorative icons: smartphone, gear, database cylinder, monitor and play symbols. Reclaim that room for comfortable text padding and whitespace.
+Use clean regular-weight sans serif for body text (weight 400), and modest medium-weight headings (500 maximum), not bold, heavy, black-weight or condensed. Headings only moderately larger than body text. Make all labels left aligned, line spacing generous, the gaps between heading/technology/role lines clearly larger. Make the two outer container headings smaller and less dominant. Increase gaps between cards and preserve a wide clear connector gutter. Spend the whitespace inside panels and between modules rather than in huge empty outer margins. Landscape 3:2 high-resolution composition.
+White canvas, almost-white cards, extremely pale amber and teal container fills, delicate thin colored outlines and slim arrows, dark slate text; no gradients, shadows, saturation, thick borders or icons. Match the restrained visual weight of image 2.
+Exact preserved text and structure:
+LEFT outer heading "手机端 · 前端".
+Upper card: "操作界面"; "ReactLynx · TypeScript"; "Lynx 页面 · 开始 / 停止 · 状态".
+Lower card: "Android 原生服务"; "Java · Camera2"; "MediaCodec · MediaMuxer"; "录像 · MP4 分片 · 上传队列".
+A thin DOWN arrow from upper UI card to lower native card labeled "Lynx 原生桥接".
+RIGHT outer heading "接收端 · 后端".
+Upper card: "接收与存储"; "Python 标准库 · SQLite"; "接收 MP4 · 校验 · 保存".
+Lower card: "观看预览"; "FFmpeg · HLS"; "重封装 · 浏览器播放".
+A thin DOWN arrow from upper receive-storage card to lower preview card labeled "已保存片段".
+One thin diagonal arrow starts at the RIGHT EDGE of the LEFT LOWER native-service card and goes UP AND RIGHT through the central white gutter into the LEFT EDGE of the RIGHT UPPER receive-storage card. Its label is "tus 1.0 / HTTP(S)" and "分段上传". The arrow MUST terminate at receive-storage, never at preview. Keep labels clear of cards and lines.
+No overall title, logo, footer, global caption, new components, video clipper integration, or other architectural changes. Keep the image simple and open.

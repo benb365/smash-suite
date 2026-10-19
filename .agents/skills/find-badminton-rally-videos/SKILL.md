@@ -6,7 +6,7 @@ description: Find public badminton recordings through platform searches and uplo
 # Find Badminton Rally Videos
 
 Find original recordings and inspect candidate windows. Use the
-[test-video requirements](../../../docs/plan/rally-segmentation-requirement.md#回合算法测试视频)
+[test-video requirements](../../../modules/rally/evaluation.md#回合算法测试视频)
 for coverage and [roadmap](../../../docs/plan/roadmap.md) for gaps.
 
 ## Reuse before searching

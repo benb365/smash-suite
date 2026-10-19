@@ -1,94 +1,76 @@
-# Repository Agent Instructions
+# 仓库智能体指引
 
-This file is the shared repository instruction source for coding agents. Keep
-tool-specific adapters thin: they may import this file or add behavior that is
-truly specific to one client, but must not copy these rules.
+本文件是仓库内编码智能体的共享指引。各工具的适配文件应保持精简：可以引用本文件，或补充仅适用于特定客户端的行为，但不得复制这些规则。
 
-## Start With the User's Task
+## 从用户任务出发
 
-- An explicit user request takes precedence over autonomous task selection.
-- For an open-ended request such as "continue the project", use
-  `docs/plan/roadmap.md` as the only source of truth for current priority,
-  milestone status, evidence, blockers, and next work.
-- Before editing, run `git status --short` and preserve existing user or agent
-  changes. Do not revert, delete, stage, commit, or push them unless requested.
+- 用户的明确请求优先于自主选择任务。
+- 对于“继续项目”等开放式请求，以 `docs/plan/roadmap.md` 了解当前重点、进展、证据、阻塞项和下一步工作。
+- 编辑前运行 `git status --short`，保留用户或其他智能体已有的修改。除非用户要求，否则不得回退、删除、暂存、提交或推送这些修改。
 
-## Read Only What the Task Needs
+## 只阅读任务所需的文档
 
-1. Read `README.md` for the product goal, scope, current status, and repository
-   entry points.
-2. Read `docs/plan/roadmap.md`, starting with `Current Focus`, when selecting or
-   continuing roadmap work.
-3. Read `docs/features.md` when product scope, feature boundaries, or non-goals
-   affect the task.
-4. Read `docs/architecture.md` when accepted system boundaries, input/output
-   contracts, or a formally selected architecture affect the task.
-5. Read `docs/plan/rally-segmentation-requirement.md` when benchmark data,
-   annotations, metrics, or acceptance evidence affect the task.
-6. Read `docs/README.md` when document ownership or repository workflow affects
-   the task.
-7. Read `docs/plan/README.md` when changing roadmap status, evidence, blockers,
-   or maintenance rules.
-8. Before displaying video annotations or comparing algorithm intervals, read
-   `.agents/skills/review-video-results/SKILL.md` and run its fixed viewer with
-   saved data. Its scripts, template, data format, and display conventions are
-   canonical; do not create another per-experiment HTML generator.
+1. 阅读 `README.md`，了解项目目标、整体模块关系和开发环境。
+2. 选择或继续路线图工作时，阅读 `docs/plan/roadmap.md`，从“当前重点”开始。
+3. 处理模块或应用任务时，阅读 `modules/` 或 `apps/` 下对应的 README，了解功能范围、实现边界、输入输出约定、使用和测试方式。
+4. 涉及多个模块时，按实际依赖阅读相关模块文档。
+5. 涉及回合定义时阅读 `modules/rally/requirements.md`；涉及指标或验收时阅读 `modules/rally/evaluation.md`；涉及数据清单或标注时阅读 `datasets/requirements.md`。剪辑产品范围与验收要求见 `apps/video-clipper/requirements.md`。
+6. 文档职责归属或仓库工作流影响任务时，阅读 `docs/README.md`。
+7. 展示视频标注或比较算法区间前，阅读 `.agents/skills/review-video-results/SKILL.md`，并使用已保存的数据运行其中规定的查看器。该技能的脚本、模板、数据格式和展示约定是统一标准，不得为每个实验另建 HTML 生成器。
 
-Do not preload every document. If a document appears stale or contradicts the
-code, inspect the implementation and then correct the owning document.
+不要预先加载所有文档。如果文档似乎已经过时或与代码矛盾，先检查实现，再修正负责该信息的文档。
 
-`backup/docs/` is not part of the active reading path. Existing implementation
-code and archived documents are legacy evidence, not the current architecture,
-requirements, roadmap, or proof of completion. Use them only for an explicitly
-historical investigation and label any conclusion from them as a historical
-hypothesis.
+模块或应用的范围、接口和行为说明维护在对应目录；跨模块关系维护在根 README。修改相关行为时，同步更新负责该内容的文档，避免多处重复维护。
 
-## Repository Skill Routing
+实验结论报告与配套证据随所属模块、应用或数据集维护。Agent 执行流水、逐次尝试、校验明细和繁琐进度历史放在 `docs/ai/`，不加入人类文档站的侧栏、页面或搜索。既有历史归档继续保留在 `backup/`。迁移文件时同步更新活动引用，不另建旧网址跳转。
 
-- Before searching, downloading, reviewing, sampling, or annotating badminton
-  training media, read
-  `.agents/skills/curate-badminton-training-data/SKILL.md`.
-- `.agents/skills/curate-badminton-training-data/` is the canonical repository
-  skill. Agents must read it in place; do not copy or symlink it into
-  client-specific directories.
-- Run the skill's `status` command before any search or download so cached
-  candidates and permanent human decisions are reused.
+`backup/` 中的归档代码和文档仅用于历史追溯，不作为当前设计和完成证据。当前行为应结合有效需求、对应目录文档和实际实现核实；代码存在不等于验收完成。
 
-## Work From First Principles
+## 编写给人类阅读的文档
 
-- Verify the actual code path, data shape, and failure before choosing a fix.
-- Prefer the smallest complete change. Do not add unnecessary compatibility,
-  abstractions, wrappers, or intermediate states.
-- When unknown runtime details require a temporary compatibility assumption,
-  leave observable diagnostics and a clear comment. Replace the assumption with
-  the verified structure after debugging.
-- Search with `rg` or `rg --files` when available and follow existing project
-  patterns before introducing a new one.
-- Keep product state in `docs/plan/roadmap.md`; do not copy current task status
-  into this file, `docs/architecture.md`, or stable product documents.
+- 所有人类文档必须结构化：按读者要完成的任务组织，一节只讲一个主题，让读者能集中注意力。
+- 先给目标、结论或操作入口，再补必要细节。使用短段落、明确的小标题；并列信息用列表或表格，避免把多个主题散落在长篇文字中。
+- 流程、框架和模块关系优先用图示说明。图中标清步骤、层次和箭头含义，留足间距，配套文字只解释必要信息。
+- 使用日常语言。首次出现的必要术语就地解释，实验编号、内部代号、哈希和统计明细放到对应报告或数据中。
+- README 保留目标、稳定说明、运行或开发方法及阅读入口；独立需求和评估规范按主题展开，精确公式与少用细节可折叠呈现。
+- 当前结论、适用范围和待验证事项分开写。逐次尝试、操作日志和长进度记录写入 `docs/ai/`，不堆入人类入口或需求文档。
+- 维护文档时同步所属入口与链接，避免多份正文重复描述同一规则。
 
-## Select and Complete Roadmap Work
+## 仓库技能使用规则
 
-When the user has not selected a task:
+`.agents/skills/` 是仓库级技能入口。任务涉及已有技能时，先阅读对应的 `SKILL.md`，并按技能指引执行。
 
-- Start with the lowest-numbered priority in `Current Focus` or the priority
-  table.
-- At the same priority, prefer `In Progress` over `Next`, then `Todo`.
-- If the top-priority item is `Blocked`, only remove or document that blocker;
-  do not silently switch to lower-priority feature work.
-- If completion standards or evidence are missing, tighten the roadmap before
-  implementing.
+- 搜索、下载、审阅、采样或标注羽毛球训练素材前，阅读 `.agents/skills/curate-badminton-training-data/SKILL.md`。
+- 每次搜索或下载前，运行该技能的 `status` 命令，以复用已缓存的候选素材和长期有效的人工决策。
 
-When a change alters progress, blockers, scope, or contracts, update the
-document that owns that information in the same task.
+## 遵循第一性原理
 
-## Verify in Proportion to the Change
+- 选择修复方案前，核实实际代码路径、数据结构和故障。
+- 优先采用最小且完整的修改。不添加非必要的兼容逻辑、抽象、封装或中间状态。
+- 运行时细节未知、需要临时作出兼容性假设时，留下可观察的诊断信息和清晰注释。调试后，用已验证的数据结构替换假设。
+- 可用时使用 `rg` 或 `rg --files` 搜索，先遵循项目已有模式，再考虑引入新模式。
+- 当前重点、进展、证据和阻塞项维护在 `docs/plan/roadmap.md`；详细历史放 `docs/ai/`，不把旧流水当作当前任务来源。
 
-- Backend behavior: `pnpm run test:backend`
-- Frontend types or shared contracts: `pnpm run typecheck:frontend`
-- Every change: `git diff --check`
-- Documentation-only changes do not require product tests unless they change a
-  documented command that should be exercised.
+## 选择并完成路线图工作
 
-Before handing off, inspect the focused diff and report changed files,
-verification performed, and any unverified assumptions or remaining blockers.
+当用户未指定任务时：
+
+- 从“当前重点”开始，再按“近期待办”的顺序推进。
+- 同一优先级下，优先处理进行中的事项，再处理下一项和待办。
+- 如果最高优先级事项阻塞，只处理或记录该阻塞及解除条件；不得擅自转向较低优先级的功能开发。
+- 如果缺少完成标准或证据，先完善路线图，再实施。
+
+修改影响进展、阻塞项、范围或契约时，在同一任务中更新负责该信息的文档。
+
+状态使用“待办、下一项、进行中、阻塞、完成”，同时更新证据、剩余缺口和解除条件。记录应区分检查完成、仅确认启动和未执行，完成判断以该任务约定的范围为准。
+
+候选比较使用相同输入、标注与评估口径，保留版本、配置、逐回合结果和失败案例。指标变化同步评估规范并保留旧证据；历史结果不自动证明当前版本完成验收。
+
+## 按改动范围验证
+
+- 后端行为：`pnpm run test:backend`
+- 前端类型或共享契约：`pnpm run typecheck:frontend`
+- 每次修改：`git diff --check`
+- 仅修改文档时，无需运行产品测试；但如果修改了文档中应实际执行验证的命令，则需验证该命令。
+
+交付前，检查本次改动的差异，并报告修改文件、已执行的验证，以及未经验证的假设或尚未解决的阻塞项。

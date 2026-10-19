@@ -9,12 +9,12 @@ description: Display saved video annotations and algorithm intervals in a local 
 
 ## 使用
 
-1. 按 [数据格式](references/data-format.md) 准备一份 JSON，放在对应模型的运行目录。复用已保存的实际视频、标注和算法输出；不要为展示修改区间或补造人工确认。
+1. 按 [数据格式](references/data-format.md) 准备一份 JSON，放在所属模块的运行目录。复用已保存的实际视频、标注和算法输出；不要为展示修改区间或补造人工确认。
 2. 从仓库根目录启动（仅需 Python 3.9+ 标准库）：
 
    ```sh
    python3 .agents/skills/review-video-results/scripts/review.py \
-     --data models/模型目录/.runtime/本次实验/review.json --port 18770
+     --data modules/rally/.runtime/本次实验/review.json --port 18770
    ```
 
    直接使用终端打印的本机网址。端口已占用时保留现有服务，改用 `--port 0` 自动分配空闲端口。Ctrl-C 停止；数据更新后重启命令并刷新网页。
@@ -36,4 +36,4 @@ description: Display saved video annotations and algorithm intervals in a local 
 
 只在修改本 skill 的脚本、模板或数据契约时运行 [维护检查](references/maintenance.md)。不要回到历史实验目录复制旧模板或新增一次性页面生成脚本。
 
-独立脚本位于 [scripts/review.py](scripts/review.py)，固定页面位于 [assets/index.html](assets/index.html)。原项目文档 `docs/video-result-review.md` 只保留发现入口，不另维护一套规则。
+独立脚本位于 [scripts/review.py](scripts/review.py)，固定页面位于 [assets/index.html](assets/index.html)。[回合实验文档](../../../modules/rally/experiments/README.md#查看视频与结果)提供发现入口，不另维护一套规则。
