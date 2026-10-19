@@ -54,18 +54,22 @@
 
 供后续会话复查，以下标识只用于在保存的数据中精确定位，不是另一个算法名称。
 
-| 版本 | 执行入口 | 保存的精确配置与输出 |
+| 版本 | 原始试验入口（已归档） | 保存的精确配置与输出 |
 | --- | --- | --- |
 | A原方案及待确认短过滤候选 | [A组对照脚本](../../../../backup/module-reorganization-20261019/backend/tests/rally_benchmark/compare_a_short_recovery.py) | [A结果JSON](a1-a2-short-filter-20261018.json)：`current`为原方案；`quality_80_480`为待确认候选，不因字段写有candidate就视为用户已接受 |
 | C已接受改进版 | [C组修复脚本](../../../../backup/module-reorganization-20261019/backend/tests/rally_benchmark/refine_c_pause_boundaries.py) | [C结果JSON](c-pause-boundaries-20261019.json)：`selected_variant = tail_gap800_growth300`，C1共15段、C2共8段输出 |
 | D已接受改进版 | [D组对照脚本](../../../../backup/module-reorganization-20261019/backend/tests/rally_benchmark/compare_d_person_context.py) | [D结果JSON](d-person-context-20261018.json)：`selected = candidate`，使用记录的基础配置、选项及候选配置；D1共32段、D2共14段输出 |
 
-上述脚本依赖本机已有观测及模型运行目录中的历史辅助代码，缓存重放不代表从原视频完成了全部模型推理。JSON保存输入、源码校验值及逐片预测，人工标注保持原版本；C2片尾未完回合单列，不当作完整回合计分。
+上述脚本用于追溯原试验，不是当前产品调用入口。当前实现位于[回合识别模块](../../README.md)，配置及来源见[算法选择清单](../../scenarios/selection.json)。上述脚本依赖本机已有观测及模型运行目录中的历史辅助代码，缓存重放不代表从原视频完成了全部模型推理。JSON保存输入、源码校验值及逐片预测，人工标注保持原版本；C2片尾未完回合单列，不当作完整回合计分。
 
 表中是原始输出段数，不是成功回合数；输出还可能包含非回合或未完回合内容，不能用段数相等代替准确性评分。
 
 ## 与产品和性能记录的关系
 
-截至本次记录，产品的三类冻结算法尚未同步上述新C/D改进。实际产品入口为[recognize.py](../../../../backup/module-reorganization-20261019/backend/app/recognize.py)，来源见[算法来源清单](../../../../backup/module-reorganization-20261019/backend/app/algorithms/provenance.json)：C仍调用原`court_pipeline`，D仍调用较早的`refined_person`。产品中的C2是6段、D2是13段；实验接受版分别为8段、14段。要接入产品，需要另做迁移、逐条结果及完整流程核验，不能只改文档便称产品已更新。
+**2026-10-19 目录整理后补记：上述 C/D 已接受的改进版已接入剪辑应用源码。** 剪辑任务由[应用 worker](../../../../apps/video-clipper/backend/app/worker.py)调用[回合识别入口](../../recognize.py)，C 使用[拆开间歇并恢复尾部的方案](../../scenarios/courtside.py)，D 使用[人物动作结合对手活动和脚点移动的方案](../../scenarios/personal.py)。具体版本对应上表的 C `tail_gap800_growth300` 和 D `candidate`；A 仍保留原方案。
+
+迁移后，使用保存的球坐标、人物和动作观测检查 A/C/D 共16个用例，输出与已确认记录逐条一致，见[检查结果](../../.runtime/migration-replay-20261019.json)。其中改进版 C2 为8段、D2为14段。这是已有观测到回合区间的检查，不是从视频重新运行全部模型或完成剪辑导出。
+
+**已有 ZIP 安装包仍是旧版，尚未重新打包。** 此前产品验收中 C2为6段、D2为13段，描述的是旧包结果；不能用于说明当前源码仍未接入改进。新版源码的真实视频识别、成片导出及重新打包后的完整验证仍待完成，后续进度以[路线图](../../../../docs/plan/roadmap.md)为准。
 
 A组新候选仍需确认“补回对打但增加还球”的取舍。性能测量按用户本次要求暂不启动：D组已有479.703秒分阶段合计及产品688.09秒识别记录都对应旧方案，不能作为最新14段方案的完整耗时。C/D的已接受版本也未因此获得新的内存峰值或最低硬件结论。
