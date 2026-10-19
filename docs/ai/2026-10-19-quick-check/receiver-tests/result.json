@@ -1,0 +1,11 @@
+{
+  "python39_receiver_tests": {
+    "command": ".venv/bin/python apps/android-capture/receiver/test_server.py -v",
+    "sandbox_attempt_exit_code": 1,
+    "sandbox_failure": "PermissionError binding loopback socket",
+    "retry_exit_code": 0,
+    "retry_summary": "Ran 8 tests in 6.891s; OK",
+    "synthetic_media_only": true,
+    "ffmpeg_integration_test_ran": true
+  }
+}

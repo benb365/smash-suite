@@ -1,0 +1,45 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.9/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+:app:buildLynx SKIPPED
+:app:preBuild SKIPPED
+:app:preDebugBuild SKIPPED
+:app:mergeDebugNativeDebugMetadata SKIPPED
+:app:javaPreCompileDebug SKIPPED
+:app:checkDebugAarMetadata SKIPPED
+:app:generateDebugResValues SKIPPED
+:app:mapDebugSourceSetPaths SKIPPED
+:app:generateDebugResources SKIPPED
+:app:mergeDebugResources SKIPPED
+:app:packageDebugResources SKIPPED
+:app:parseDebugLocalResources SKIPPED
+:app:createDebugCompatibleScreenManifests SKIPPED
+:app:extractDeepLinksDebug SKIPPED
+:app:processDebugMainManifest SKIPPED
+:app:processDebugManifest SKIPPED
+:app:processDebugManifestForPackage SKIPPED
+:app:processDebugResources SKIPPED
+:app:compileDebugJavaWithJavac SKIPPED
+:app:mergeDebugShaders SKIPPED
+:app:compileDebugShaders SKIPPED
+:app:generateDebugAssets SKIPPED
+:app:mergeDebugAssets SKIPPED
+:app:compressDebugAssets SKIPPED
+:app:processDebugJavaRes SKIPPED
+:app:mergeDebugJavaResource SKIPPED
+:app:checkDebugDuplicateClasses SKIPPED
+:app:desugarDebugFileDependencies SKIPPED
+:app:mergeExtDexDebug SKIPPED
+:app:mergeLibDexDebug SKIPPED
+:app:dexBuilderDebug SKIPPED
+:app:mergeProjectDexDebug SKIPPED
+:app:mergeDebugJniLibFolders SKIPPED
+:app:mergeDebugNativeLibs SKIPPED
+:app:stripDebugDebugSymbols SKIPPED
+:app:validateSigningDebug SKIPPED
+:app:writeDebugAppMetadata SKIPPED
+:app:writeDebugSigningConfigVersions SKIPPED
+:app:packageDebug SKIPPED
+:app:createDebugApkListingFileRedirect SKIPPED
+:app:assembleDebug SKIPPED
+
+BUILD SUCCESSFUL in 4s

@@ -1,6 +1,6 @@
 # 回合识别实验入口
 
-在仓库根目录、共同 Python 3.11 环境中使用。
+在仓库根目录、共同 Python 3.9+ 环境中使用。
 
 - `python -m modules.rally`：从视频运行当前场景方案，详见[模块说明](../README.md)。
 - `python -m modules.rally.experiments.replay --output modules/rally/.runtime/replay.json`：重放保留的 A/C/D 观测，对照确认记录中的原始区间。用 `--scene` 或 `--sample` 选择范围。

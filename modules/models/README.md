@@ -22,4 +22,4 @@
 .venv/bin/python -m pytest modules/models
 ```
 
-模型运行与共同 Python 3.11 环境测试留待[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。上述命令本轮未执行。
+共同环境要求 Python 3.9+。模块导入、自动测试和真实模型推理的验证范围及当前进度见[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。

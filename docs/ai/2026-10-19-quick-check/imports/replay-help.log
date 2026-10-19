@@ -1,0 +1,11 @@
+usage: replay.py [-h] [--scene {high,courtside,personal}] [--sample SAMPLE]
+                 --output OUTPUT
+
+Replay retained observations through the selected scenarios, without running
+models.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --scene {high,courtside,personal}
+  --sample SAMPLE
+  --output OUTPUT

@@ -1,0 +1,7 @@
+{
+  "command": "env -u PYTHONPATH ../../../.venv/bin/python -c import importlib, importlib.metadata, json, os\nnames=['modules','app.main']\nout={'python':__import__('sys').version,'PYTHONPATH_present':bool(os.environ.get('PYTHONPATH')),'imports':[]}\nfor name in names:\n try:\n  m=importlib.import_module(name); out['imports'].append({'module':name,'ok':True,'file':getattr(m,'__file__',None)})\n except Exception as e: out['imports'].append({'module':name,'ok':False,'exception':type(e).__name__,'message':str(e)})\ntry:\n d=importlib.metadata.distribution('smash-suite'); out['distribution']={'installed':True,'version':d.version,'requires_python':d.metadata.get('Requires-Python'),'root':str(d.locate_file(''))}\nexcept Exception as e: out['distribution']={'installed':False,'exception':type(e).__name__,'message':str(e)}\nprint(json.dumps(out,ensure_ascii=False))\n",
+  "cwd": "/Users/bytedance/workspace/test/smash-suite/apps/video-clipper/backend",
+  "exit_code": 0,
+  "stdout": "{\"python\": \"3.9.6 (default, Dec  2 2025, 07:27:58) \\n[Clang 17.0.0 (clang-1700.6.3.2)]\", \"PYTHONPATH_present\": false, \"imports\": [{\"module\": \"modules\", \"ok\": false, \"exception\": \"ModuleNotFoundError\", \"message\": \"No module named 'modules'\"}, {\"module\": \"app.main\", \"ok\": false, \"exception\": \"ModuleNotFoundError\", \"message\": \"No module named 'modules'\"}], \"distribution\": {\"installed\": false, \"exception\": \"PackageNotFoundError\", \"message\": \"smash-suite\"}}\n",
+  "stderr": ""
+}

@@ -1,6 +1,6 @@
 # 视频接收端
 
-Python 3.10+，仅使用标准库。tus 1.0 core + creation 接收 MP4，SQLite 保存上传状态；
+Python 3.9+，仅使用标准库，可使用项目共同环境。tus 1.0 core + creation 接收 MP4，SQLite 保存上传状态；
 FFmpeg 只负责无损重封装为 MPEG-TS，原 MP4 校验成功后立即可供分析，不等待 HLS。
 这是独立验证接收端，本次不运行回合识别或精彩片段剪辑。
 

@@ -12,6 +12,12 @@ badminton-v1/
 └── local/         清单与标注关联的本地文件，以及素材整理工作文件
 ```
 
+## 素材采集环境
+
+训练素材采集工具 `curate-badminton-training-data` 需要 **Python 3.10+**，其中的 yt-dlp 不支持 Python 3.9。它使用技能目录内独立的 `.venv`，不安装到主项目的共同环境中。
+
+工具创建环境时会查找可用的 Python 3.10+；也可用 `CURATE_PYTHON` 指定解释器路径。准备和调用方法见[素材采集工具说明](../.agents/skills/curate-badminton-training-data/SKILL.md)。主项目使用 Python 3.9 时，这个独立环境仍需保留。
+
 ## 获取现用模型测试视频
 
 下表对应[算法回放清单](../modules/rally/experiments/cases.json)的 16 个样本编号，

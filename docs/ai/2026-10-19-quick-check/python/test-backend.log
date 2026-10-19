@@ -1,0 +1,32 @@
+
+> smash-suite@0.1.0 test:backend /Users/bytedance/workspace/test/smash-suite
+> .venv/bin/python -m pytest
+
+============================= test session starts ==============================
+platform darwin -- Python 3.9.6, pytest-8.4.2, pluggy-1.6.0
+rootdir: /Users/bytedance/workspace/test/smash-suite
+configfile: pyproject.toml
+testpaths: modules, apps/video-clipper/backend/tests
+plugins: anyio-4.12.1
+collected 92 items
+
+modules/media/tests/test_cfr.py .                                        [  1%]
+modules/media/tests/test_video_input.py .............                    [ 15%]
+modules/models/tests/test_model_assets.py ..                             [ 17%]
+modules/models/tracknet/tests/test_points.py ..                          [ 19%]
+modules/rally/tests/test_candidate_rally.py .......                      [ 27%]
+modules/rally/tests/test_m1_comparison.py ...                            [ 30%]
+modules/rally/tests/test_rally_eval.py ..............                    [ 45%]
+modules/rally/tests/test_rally_stream.py .........                       [ 55%]
+modules/rally/tests/test_real_video_input.py ....                        [ 59%]
+modules/rally/tests/test_tracknet_rally.py ....                          [ 64%]
+modules/rally/tests/test_trajectory_rally.py ....................        [ 85%]
+apps/video-clipper/backend/tests/test_product.py .............           [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.9/site-packages/urllib3/__init__.py:35
+  /Users/bytedance/workspace/test/smash-suite/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+    warnings.warn(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 92 passed, 1 warning in 7.20s =========================

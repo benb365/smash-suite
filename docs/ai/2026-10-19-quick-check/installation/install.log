@@ -1,0 +1,3 @@
+WARNING: The directory '/Users/bytedance/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+ERROR: File "setup.py" or "setup.cfg" not found. Directory cannot be installed in editable mode: /Users/bytedance/workspace/test/smash-suite
+(A "pyproject.toml" file was found, but editable mode currently requires a setuptools-based build.)

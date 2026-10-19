@@ -1,0 +1,1229 @@
+{
+  "results": [
+    {
+      "sample_id": "A1-01",
+      "scene": "high",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 3640.0,
+          "end_ms": 9600.0,
+          "emitted_at_ms": 11240.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24480.0,
+          "end_ms": 31400.0,
+          "emitted_at_ms": 33080.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 47280.0,
+          "end_ms": 56720.0,
+          "emitted_at_ms": 58400.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 101080.0,
+          "end_ms": 108800.0,
+          "emitted_at_ms": 110480.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 142440.0,
+          "end_ms": 153840.0,
+          "emitted_at_ms": 155480.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 3640.0,
+          "end_ms": 9600.0,
+          "emitted_at_ms": 11240.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24480.0,
+          "end_ms": 31400.0,
+          "emitted_at_ms": 33080.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 47280.0,
+          "end_ms": 56720.0,
+          "emitted_at_ms": 58400.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 101080.0,
+          "end_ms": 108800.0,
+          "emitted_at_ms": 110480.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 142440.0,
+          "end_ms": 153840.0,
+          "emitted_at_ms": 155480.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "A1-02",
+      "scene": "high",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 18840.0,
+          "end_ms": 37280.0,
+          "emitted_at_ms": 38960.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 61920.0,
+          "end_ms": 72080.0,
+          "emitted_at_ms": 73760.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 101680.0,
+          "end_ms": 125400.0,
+          "emitted_at_ms": 127040.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 18840.0,
+          "end_ms": 37280.0,
+          "emitted_at_ms": 38960.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 61920.0,
+          "end_ms": 72080.0,
+          "emitted_at_ms": 73760.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 101680.0,
+          "end_ms": 125400.0,
+          "emitted_at_ms": 127040.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "A1-03",
+      "scene": "high",
+      "predictions": [
+        {
+          "rally_id": 2,
+          "start_ms": 20160.0,
+          "end_ms": 28960.0,
+          "emitted_at_ms": 30680.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 48120.0,
+          "end_ms": 52760.0,
+          "emitted_at_ms": 54440.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 70720.0,
+          "end_ms": 74720.0,
+          "emitted_at_ms": 76400.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 97160.0,
+          "end_ms": 106480.0,
+          "emitted_at_ms": 108200.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 130440.0,
+          "end_ms": 135400.0,
+          "emitted_at_ms": 137120.0
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 157560.0,
+          "end_ms": 171120.0,
+          "emitted_at_ms": 172760.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 2,
+          "start_ms": 20160.0,
+          "end_ms": 28960.0,
+          "emitted_at_ms": 30680.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 48120.0,
+          "end_ms": 52760.0,
+          "emitted_at_ms": 54440.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 70720.0,
+          "end_ms": 74720.0,
+          "emitted_at_ms": 76400.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 97160.0,
+          "end_ms": 106480.0,
+          "emitted_at_ms": 108200.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 130440.0,
+          "end_ms": 135400.0,
+          "emitted_at_ms": 137120.0
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 157560.0,
+          "end_ms": 171120.0,
+          "emitted_at_ms": 172760.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "A1-04",
+      "scene": "high",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 7080.0,
+          "end_ms": 35360.0,
+          "emitted_at_ms": 37040.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 60120.0,
+          "end_ms": 64440.0,
+          "emitted_at_ms": 66080.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 80760.0,
+          "end_ms": 97760.0,
+          "emitted_at_ms": 99440.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 128280.0,
+          "end_ms": 141800.0,
+          "emitted_at_ms": 143480.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 7080.0,
+          "end_ms": 35360.0,
+          "emitted_at_ms": 37040.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 60120.0,
+          "end_ms": 64440.0,
+          "emitted_at_ms": 66080.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 80760.0,
+          "end_ms": 97760.0,
+          "emitted_at_ms": 99440.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 128280.0,
+          "end_ms": 141800.0,
+          "emitted_at_ms": 143480.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "A2-01",
+      "scene": "high",
+      "predictions": [
+        {
+          "rally_id": 3,
+          "start_ms": 48800.0,
+          "end_ms": 53920.0,
+          "emitted_at_ms": 55640.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 71040.0,
+          "end_ms": 89760.0,
+          "emitted_at_ms": 91400.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 3,
+          "start_ms": 48800.0,
+          "end_ms": 53920.0,
+          "emitted_at_ms": 55640.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 71040.0,
+          "end_ms": 89760.0,
+          "emitted_at_ms": 91400.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "A2-02",
+      "scene": "high",
+      "predictions": [
+        {
+          "rally_id": 3,
+          "start_ms": 48560.0,
+          "end_ms": 63800.0,
+          "emitted_at_ms": 65480.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 3,
+          "start_ms": 48560.0,
+          "end_ms": 63800.0,
+          "emitted_at_ms": 65480.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "C1-01",
+      "scene": "courtside",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 28451.0,
+          "end_ms": 43427.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 66875.0,
+          "end_ms": 77448.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 94091.0,
+          "end_ms": 101396.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 123242.0,
+          "end_ms": 134649.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 152227.0,
+          "end_ms": 156730.0,
+          "emitted_at_ms": 165068.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 28451.0,
+          "end_ms": 43427.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 66875.0,
+          "end_ms": 77448.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 94091.0,
+          "end_ms": 101396.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 123242.0,
+          "end_ms": 134649.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 152227.0,
+          "end_ms": 156730.0,
+          "emitted_at_ms": 165068.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "C1-02",
+      "scene": "courtside",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 4970.0,
+          "end_ms": 22947.0,
+          "emitted_at_ms": 180077.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 164367.0,
+          "end_ms": 175607.0,
+          "emitted_at_ms": 180077.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 4970.0,
+          "end_ms": 22947.0,
+          "emitted_at_ms": 180077.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 164367.0,
+          "end_ms": 175607.0,
+          "emitted_at_ms": 180077.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "C1-03",
+      "scene": "courtside",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 64106.0,
+          "end_ms": 67675.0,
+          "emitted_at_ms": 165336.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 85586.0,
+          "end_ms": 95258.0,
+          "emitted_at_ms": 165336.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 117905.0,
+          "end_ms": 122576.0,
+          "emitted_at_ms": 165336.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 141254.0,
+          "end_ms": 151961.0,
+          "emitted_at_ms": 165336.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 64106.0,
+          "end_ms": 67675.0,
+          "emitted_at_ms": 165336.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 85586.0,
+          "end_ms": 95258.0,
+          "emitted_at_ms": 165336.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 117905.0,
+          "end_ms": 122576.0,
+          "emitted_at_ms": 165336.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 141254.0,
+          "end_ms": 151961.0,
+          "emitted_at_ms": 165336.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "C1-04",
+      "scene": "courtside",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 6103.0,
+          "end_ms": 14108.0,
+          "emitted_at_ms": 175073.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 36622.0,
+          "end_ms": 42492.0,
+          "emitted_at_ms": 175073.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 74679.0,
+          "end_ms": 86586.0,
+          "emitted_at_ms": 175073.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 114003.0,
+          "end_ms": 135149.0,
+          "emitted_at_ms": 175073.0
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 6103.0,
+          "end_ms": 14108.0,
+          "emitted_at_ms": 175073.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 36622.0,
+          "end_ms": 42492.0,
+          "emitted_at_ms": 175073.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 74679.0,
+          "end_ms": 86586.0,
+          "emitted_at_ms": 175073.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 114003.0,
+          "end_ms": 135149.0,
+          "emitted_at_ms": 175073.0
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "C2",
+      "scene": "courtside",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 7700.0,
+          "end_ms": 11200.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 14133.333333333334,
+          "end_ms": 20033.333333333332,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24133.333333333332,
+          "end_ms": 44833.333333333336,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 49566.666666666664,
+          "end_ms": 68933.33333333333,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 75900.0,
+          "end_ms": 88033.33333333333,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 92000.0,
+          "end_ms": 103000.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 120933.33333333333,
+          "end_ms": 133600.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 170266.66666666666,
+          "end_ms": 178466.66666666666,
+          "emitted_at_ms": 179966.66666666666
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 7700.0,
+          "end_ms": 11200.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 14133.333333333334,
+          "end_ms": 20033.333333333332,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24133.333333333332,
+          "end_ms": 44833.333333333336,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 49566.666666666664,
+          "end_ms": 68933.33333333333,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 75900.0,
+          "end_ms": 88033.33333333333,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 92000.0,
+          "end_ms": 103000.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 120933.33333333333,
+          "end_ms": 133600.0,
+          "emitted_at_ms": 179966.66666666666
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 170266.66666666666,
+          "end_ms": 178466.66666666666,
+          "emitted_at_ms": 179966.66666666666
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "D1-01",
+      "scene": "personal",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 40500.0,
+          "end_ms": 57000.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 68300.0,
+          "end_ms": 74200.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 83500.0,
+          "end_ms": 92200.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 98900.0,
+          "end_ms": 103200.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 111300.0,
+          "end_ms": 120800.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 128355.8125,
+          "end_ms": 142855.8125,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 146755.8125,
+          "end_ms": 150455.8125,
+          "emitted_at_ms": 150989.125
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 40500.0,
+          "end_ms": 57000.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 68300.0,
+          "end_ms": 74200.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 83500.0,
+          "end_ms": 92200.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 98900.0,
+          "end_ms": 103200.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 111300.0,
+          "end_ms": 120800.0,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 128355.8125,
+          "end_ms": 142855.8125,
+          "emitted_at_ms": 150989.125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 146755.8125,
+          "end_ms": 150455.8125,
+          "emitted_at_ms": 150989.125
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "D1-02",
+      "scene": "personal",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 6900.0,
+          "end_ms": 14600.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 34700.0,
+          "end_ms": 41800.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 44100.0,
+          "end_ms": 51600.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 53900.0,
+          "end_ms": 58600.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 66100.0,
+          "end_ms": 70800.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 81300.0,
+          "end_ms": 90855.8125,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 106155.8125,
+          "end_ms": 114855.8125,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 127955.8125,
+          "end_ms": 140455.8125,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 143155.8125,
+          "end_ms": 154989.125,
+          "emitted_at_ms": 154989.125
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 6900.0,
+          "end_ms": 14600.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 34700.0,
+          "end_ms": 41800.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 44100.0,
+          "end_ms": 51600.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 53900.0,
+          "end_ms": 58600.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 66100.0,
+          "end_ms": 70800.0,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 81300.0,
+          "end_ms": 90855.8125,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 106155.8125,
+          "end_ms": 114855.8125,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 127955.8125,
+          "end_ms": 140455.8125,
+          "emitted_at_ms": 154989.125
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 143155.8125,
+          "end_ms": 154989.125,
+          "emitted_at_ms": 154989.125
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "D1-03",
+      "scene": "personal",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 9100.0,
+          "end_ms": 14200.0,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 24500.0,
+          "end_ms": 35000.0,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 42300.0,
+          "end_ms": 54800.0,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 57955.875,
+          "end_ms": 65655.875,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 74955.875,
+          "end_ms": 84855.875,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 89355.875,
+          "end_ms": 94455.875,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 118155.875,
+          "end_ms": 129655.875,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 134555.875,
+          "end_ms": 142655.875,
+          "emitted_at_ms": 149989.1875
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 9100.0,
+          "end_ms": 14200.0,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 24500.0,
+          "end_ms": 35000.0,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 42300.0,
+          "end_ms": 54800.0,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 57955.875,
+          "end_ms": 65655.875,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 74955.875,
+          "end_ms": 84855.875,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 89355.875,
+          "end_ms": 94455.875,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 118155.875,
+          "end_ms": 129655.875,
+          "emitted_at_ms": 149989.1875
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 134555.875,
+          "end_ms": 142655.875,
+          "emitted_at_ms": 149989.1875
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "D1-04",
+      "scene": "personal",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 2300.0,
+          "end_ms": 9200.0,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 18100.0,
+          "end_ms": 26455.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 38955.875,
+          "end_ms": 47655.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 63155.875,
+          "end_ms": 69855.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 82755.875,
+          "end_ms": 88255.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 98155.875,
+          "end_ms": 108255.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 121155.875,
+          "end_ms": 125855.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 134155.875,
+          "end_ms": 141655.875,
+          "emitted_at_ms": 154978.375
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 2300.0,
+          "end_ms": 9200.0,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 18100.0,
+          "end_ms": 26455.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 38955.875,
+          "end_ms": 47655.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 63155.875,
+          "end_ms": 69855.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 82755.875,
+          "end_ms": 88255.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 98155.875,
+          "end_ms": 108255.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 121155.875,
+          "end_ms": 125855.875,
+          "emitted_at_ms": 154978.375
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 134155.875,
+          "end_ms": 141655.875,
+          "emitted_at_ms": 154978.375
+        }
+      ],
+      "exact": true
+    },
+    {
+      "sample_id": "D2-01",
+      "scene": "personal",
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 0,
+          "end_ms": 6800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 18900.0,
+          "end_ms": 23200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 29700.0,
+          "end_ms": 42000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 48100.0,
+          "end_ms": 55800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 63500.0,
+          "end_ms": 68600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 77500.0,
+          "end_ms": 90000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 101300.0,
+          "end_ms": 108600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 115500.0,
+          "end_ms": 129600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 137100.0,
+          "end_ms": 145600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 10,
+          "start_ms": 153300.0,
+          "end_ms": 174200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 11,
+          "start_ms": 186300.0,
+          "end_ms": 191600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 12,
+          "start_ms": 198700.0,
+          "end_ms": 207800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 13,
+          "start_ms": 215700.0,
+          "end_ms": 233000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 14,
+          "start_ms": 241300.0,
+          "end_ms": 246200.0,
+          "emitted_at_ms": 250900.3125
+        }
+      ],
+      "expected": [
+        {
+          "rally_id": 1,
+          "start_ms": 0,
+          "end_ms": 6800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 18900.0,
+          "end_ms": 23200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 29700.0,
+          "end_ms": 42000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 48100.0,
+          "end_ms": 55800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 63500.0,
+          "end_ms": 68600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 77500.0,
+          "end_ms": 90000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 101300.0,
+          "end_ms": 108600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 115500.0,
+          "end_ms": 129600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 137100.0,
+          "end_ms": 145600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 10,
+          "start_ms": 153300.0,
+          "end_ms": 174200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 11,
+          "start_ms": 186300.0,
+          "end_ms": 191600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 12,
+          "start_ms": 198700.0,
+          "end_ms": 207800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 13,
+          "start_ms": 215700.0,
+          "end_ms": 233000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 14,
+          "start_ms": 241300.0,
+          "end_ms": 246200.0,
+          "emitted_at_ms": 250900.3125
+        }
+      ],
+      "exact": true
+    }
+  ],
+  "exact": true
+}

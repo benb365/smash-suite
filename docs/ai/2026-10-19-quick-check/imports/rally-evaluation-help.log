@@ -1,0 +1,11 @@
+usage: __main__.py [-h] --predictions PREDICTIONS --annotations ANNOTATIONS
+                   --output OUTPUT
+
+Evaluate saved rally predictions against reviewed annotations.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --predictions PREDICTIONS
+                        result.json containing predictions
+  --annotations ANNOTATIONS
+  --output OUTPUT

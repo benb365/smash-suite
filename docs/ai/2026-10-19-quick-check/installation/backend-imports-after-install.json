@@ -1,0 +1,7 @@
+{
+  "command": "env -u PYTHONPATH ../../../.venv/bin/python -c <import probe>",
+  "cwd": "/Users/bytedance/workspace/test/smash-suite/apps/video-clipper/backend",
+  "exit_code": 0,
+  "stdout": "{\"python\": \"3.9.6 (default, Dec  2 2025, 07:27:58) \\n[Clang 17.0.0 (clang-1700.6.3.2)]\", \"imports\": [{\"module\": \"modules\", \"ok\": true, \"file\": \"/Users/bytedance/workspace/test/smash-suite/modules/__init__.py\"}, {\"module\": \"app.main\", \"ok\": true, \"file\": \"/Users/bytedance/workspace/test/smash-suite/apps/video-clipper/backend/app/main.py\"}], \"distribution\": {\"installed\": true, \"version\": \"0.2.0\", \"requires_python\": \">=3.9\", \"root\": \"/Users/bytedance/workspace/test/smash-suite/.venv/lib/python3.9/site-packages\"}}\n",
+  "stderr": ""
+}

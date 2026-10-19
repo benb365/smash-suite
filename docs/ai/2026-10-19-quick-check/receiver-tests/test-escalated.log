@@ -1,0 +1,83 @@
+test_auth_version_and_validation (__main__.ReceiverTests) ... 127.0.0.1 - - [19/Oct/2026 20:34:59] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "GET /sessions HTTP/1.1" 401 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 401 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "OPTIONS /files HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 412 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "POST /files HTTP/1.1" 413 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "GET /sessions/%2e%2e/segments HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:34:59] "GET /hls/../../etc/passwd HTTP/1.1" 400 -
+ok
+test_browser_cookie_does_not_authorize_uploads (__main__.ReceiverTests) ... 127.0.0.1 - - [19/Oct/2026 20:35:00] "POST /auth HTTP/1.1" 401 -
+127.0.0.1 - - [19/Oct/2026 20:35:00] "POST /auth HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:00] "GET /sessions HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:00] "POST /files HTTP/1.1" 401 -
+127.0.0.1 - - [19/Oct/2026 20:35:00] "GET /sessions HTTP/1.1" 401 -
+ok
+test_file_offset_recovers_commit_window (__main__.ReceiverTests) ... 127.0.0.1 - - [19/Oct/2026 20:35:00] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:01] "HEAD /files/6c65f0cf6de84bb9b8e679710082e1f1 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:01] "GET /files/6c65f0cf6de84bb9b8e679710082e1f1 HTTP/1.1" 200 -
+ok
+test_hash_mismatch_resets_without_confirmation (__main__.ReceiverTests) ... 127.0.0.1 - - [19/Oct/2026 20:35:01] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:01] "PATCH /files/2bd2728898ef4aae80cd3a82783b44cc HTTP/1.1" 460 -
+127.0.0.1 - - [19/Oct/2026 20:35:01] "HEAD /files/2bd2728898ef4aae80cd3a82783b44cc HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:01] "GET /files/2bd2728898ef4aae80cd3a82783b44cc HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:01] "PATCH /files/2bd2728898ef4aae80cd3a82783b44cc HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:35:01] "GET /files/2bd2728898ef4aae80cd3a82783b44cc HTTP/1.1" 200 -
+ok
+test_idempotent_creation_and_contiguous_analysis (__main__.ReceiverTests) ... 127.0.0.1 - - [19/Oct/2026 20:35:02] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "PATCH /files/257b1ebfa7a54df3b1497eff8b5e7a82 HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "GET /sessions/25805ca6-d62d-407b-b374-eac64d6826ea/segments HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "POST /files HTTP/1.1" 409 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "POST /files HTTP/1.1" 409 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "PATCH /files/a07270fde51747eeb0a66c04170e7385 HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "GET /sessions/25805ca6-d62d-407b-b374-eac64d6826ea/segments HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "GET /sessions/25805ca6-d62d-407b-b374-eac64d6826ea/segments.jsonl HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "GET /sessions HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:02] "GET /sessions/25805ca6-d62d-407b-b374-eac64d6826ea/index.m3u8 HTTP/1.1" 503 -
+ok
+test_real_continuous_audio_video_hls_and_remux_retry (__main__.ReceiverTests) ... 127.0.0.1 - - [19/Oct/2026 20:35:03] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "PATCH /files/1b06c51858654c34a624d84acccc43f3 HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "PATCH /files/b857548d16514cccb03074cd03043682 HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "GET /sessions/0d225fd0-db82-4d38-b123-21f2654edb70/segments HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "GET /sessions/0d225fd0-db82-4d38-b123-21f2654edb70/index.m3u8 HTTP/1.1" 503 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "GET /sessions/0d225fd0-db82-4d38-b123-21f2654edb70/index.m3u8 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "GET /sessions/0d225fd0-db82-4d38-b123-21f2654edb70/index.m3u8 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "GET /hls/1b06c51858654c34a624d84acccc43f3.ts HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "GET /hls/b857548d16514cccb03074cd03043682.ts HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:03] "GET /sessions/0d225fd0-db82-4d38-b123-21f2654edb70/index.m3u8 HTTP/1.1" 200 -
+ok
+test_resume_offsets_hash_and_restart (__main__.ReceiverTests) ... 127.0.0.1 - - [19/Oct/2026 20:35:04] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "PATCH /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "PATCH /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 409 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "HEAD /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "PATCH /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 413 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "GET /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "GET /files/7bbdfff53d3a4e0dbc23028a15f08507/raw.mp4 HTTP/1.1" 409 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "HEAD /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "PATCH /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "GET /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:04] "GET /files/7bbdfff53d3a4e0dbc23028a15f08507/raw.mp4 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:05] "GET /files/7bbdfff53d3a4e0dbc23028a15f08507 HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:05] "GET /files/7bbdfff53d3a4e0dbc23028a15f08507/raw.mp4 HTTP/1.1" 200 -
+ok
+test_socket_disconnect_retains_received_bytes (__main__.ReceiverTests) ... 127.0.0.1 - - [19/Oct/2026 20:35:05] "POST /files HTTP/1.1" 201 -
+127.0.0.1 - - [19/Oct/2026 20:35:05] "PATCH /files/cea42a9b15bb490b8627362566df205b HTTP/1.1" 400 -
+127.0.0.1 - - [19/Oct/2026 20:35:05] "HEAD /files/cea42a9b15bb490b8627362566df205b HTTP/1.1" 200 -
+127.0.0.1 - - [19/Oct/2026 20:35:06] "PATCH /files/cea42a9b15bb490b8627362566df205b HTTP/1.1" 204 -
+127.0.0.1 - - [19/Oct/2026 20:35:06] "GET /files/cea42a9b15bb490b8627362566df205b HTTP/1.1" 200 -
+ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 6.891s
+
+OK

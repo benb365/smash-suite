@@ -1,0 +1,8 @@
+usage: __main__.py [-h] [--port PORT] [--no-browser]
+
+Smash Suite 本机羽毛球录像剪辑
+
+optional arguments:
+  -h, --help    show this help message and exit
+  --port PORT
+  --no-browser

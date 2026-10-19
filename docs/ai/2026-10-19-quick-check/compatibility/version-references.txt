@@ -1,0 +1,16 @@
+./README.md:54:仓库内所有模型和应用共用开发环境，使用 Python 3.11、Node.js 20.19+ 和 pnpm 9+。在仓库根目录执行：
+./README.md:57:python3.11 -m venv .venv
+./pyproject.toml:9:requires-python = "==3.11.*"
+./pyproject.toml:41:target-version = "py311"
+./docs/assets/architecture-prompt.txt:27:"共同开发环境" / "Python 3.11 · PyTorch · Node.js · pnpm · TypeScript".
+./docs/assets/architecture-prompt.txt:56:BOTTOM environment layer text: "Python 3.11 · PyTorch · Node.js · pnpm · TypeScript". Two UP arrows to models and media.
+./docs/assets/architecture-prompt.txt:98:"开发环境层", "Python 3.11 · PyTorch · Node.js · pnpm · TypeScript".
+./datasets/reports/fixed-camera-rally-samples.md:75:- 依赖：Python 3.10+、yt-dlp 2026.8.19及curl-cffi、FFmpeg、imageio-ffmpeg；使用skill自有虚拟环境。
+./apps/android-capture/receiver/README.md:3:Python 3.10+，仅使用标准库。tus 1.0 core + creation 接收 MP4，SQLite 保存上传状态；
+./apps/android-capture/receiver/server.py:2:"""Small authenticated tus 1.0 receiver. Python 3.10+, optional FFmpeg for HLS."""
+./.agents/skills/curate-badminton-training-data/SKILL.md:9:CLI; it manages its ignored Python 3.10+ environment.
+./.agents/skills/curate-badminton-training-data/scripts/run.py:27:    candidates += [sys.executable, "python3.13", "python3.12", "python3.11", "python3.10"]
+./.agents/skills/curate-badminton-training-data/scripts/run.py:41:        "Python 3.10+ is required. Set CURATE_PYTHON to a compatible Python executable."
+./apps/android-capture/README.md:47:需要 Python 3.10+。接收与分析索引仅用标准库；HLS 还需要 FFmpeg。
+./modules/rally/experiments/README.md:3:在仓库根目录、共同 Python 3.11 环境中使用。
+./modules/models/README.md:25:模型运行与共同 Python 3.11 环境测试留待[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。上述命令本轮未执行。

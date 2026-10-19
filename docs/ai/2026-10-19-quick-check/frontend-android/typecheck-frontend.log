@@ -1,0 +1,3 @@
+
+> smash-suite@0.1.0 typecheck:frontend /Users/bytedance/workspace/test/smash-suite
+> pnpm -C apps/video-clipper/frontend exec tsc --noEmi

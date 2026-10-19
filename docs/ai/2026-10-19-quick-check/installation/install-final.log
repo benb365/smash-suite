@@ -1,0 +1,91 @@
+Obtaining file:///Users/bytedance/workspace/test/smash-suite
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: fastapi>=0.110 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (0.128.8)
+Requirement already satisfied: uvicorn>=0.27 in ./.venv/lib/python3.9/site-packages (from uvicorn[standard]>=0.27->smash-suite==0.2.0) (0.39.0)
+Requirement already satisfied: pydantic>=2.6 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (2.13.3)
+Requirement already satisfied: opencv-python>=4.9 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (4.13.0.92)
+Requirement already satisfied: numpy>=1.26 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (2.0.2)
+Requirement already satisfied: av==14.2.0 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (14.2.0)
+Requirement already satisfied: torch==2.8.0 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (2.8.0)
+Requirement already satisfied: torchvision==0.23.0 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (0.23.0)
+Requirement already satisfied: scipy==1.13.1 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (1.13.1)
+Requirement already satisfied: ultralytics==8.4.56 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (8.4.56)
+Requirement already satisfied: filelock>=3.12 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (3.19.1)
+Requirement already satisfied: requests==2.32.5 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (2.32.5)
+Requirement already satisfied: imageio-ffmpeg==0.6.0 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (0.6.0)
+Requirement already satisfied: lap>=0.5.12 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (0.5.13)
+Requirement already satisfied: pytest>=8.0 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (8.4.2)
+Requirement already satisfied: httpx>=0.27 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (0.28.1)
+Collecting ruff>=0.4 (from smash-suite==0.2.0)
+  Downloading ruff-0.17.1-py3-none-macosx_11_0_arm64.whl.metadata (20 kB)
+Requirement already satisfied: pyinstaller==6.16.0 in ./.venv/lib/python3.9/site-packages (from smash-suite==0.2.0) (6.16.0)
+Requirement already satisfied: altgraph in ./.venv/lib/python3.9/site-packages (from pyinstaller==6.16.0->smash-suite==0.2.0) (0.17.5)
+Requirement already satisfied: importlib-metadata>=4.6 in ./.venv/lib/python3.9/site-packages (from pyinstaller==6.16.0->smash-suite==0.2.0) (8.7.1)
+Requirement already satisfied: macholib>=1.8 in ./.venv/lib/python3.9/site-packages (from pyinstaller==6.16.0->smash-suite==0.2.0) (1.16.4)
+Requirement already satisfied: packaging>=22.0 in ./.venv/lib/python3.9/site-packages (from pyinstaller==6.16.0->smash-suite==0.2.0) (26.2)
+Requirement already satisfied: pyinstaller-hooks-contrib>=2025.8 in ./.venv/lib/python3.9/site-packages (from pyinstaller==6.16.0->smash-suite==0.2.0) (2026.8)
+Requirement already satisfied: setuptools>=42.0.0 in ./.venv/lib/python3.9/site-packages (from pyinstaller==6.16.0->smash-suite==0.2.0) (58.0.4)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./.venv/lib/python3.9/site-packages (from requests==2.32.5->smash-suite==0.2.0) (3.4.7)
+Requirement already satisfied: idna<4,>=2.5 in ./.venv/lib/python3.9/site-packages (from requests==2.32.5->smash-suite==0.2.0) (3.13)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./.venv/lib/python3.9/site-packages (from requests==2.32.5->smash-suite==0.2.0) (2.6.3)
+Requirement already satisfied: certifi>=2017.4.17 in ./.venv/lib/python3.9/site-packages (from requests==2.32.5->smash-suite==0.2.0) (2026.4.22)
+Requirement already satisfied: typing-extensions>=4.10.0 in ./.venv/lib/python3.9/site-packages (from torch==2.8.0->smash-suite==0.2.0) (4.15.0)
+Requirement already satisfied: sympy>=1.13.3 in ./.venv/lib/python3.9/site-packages (from torch==2.8.0->smash-suite==0.2.0) (1.14.0)
+Requirement already satisfied: networkx in ./.venv/lib/python3.9/site-packages (from torch==2.8.0->smash-suite==0.2.0) (3.2.1)
+Requirement already satisfied: jinja2 in ./.venv/lib/python3.9/site-packages (from torch==2.8.0->smash-suite==0.2.0) (3.1.6)
+Requirement already satisfied: fsspec in ./.venv/lib/python3.9/site-packages (from torch==2.8.0->smash-suite==0.2.0) (2025.10.0)
+Requirement already satisfied: pillow!=8.3.*,>=5.3.0 in ./.venv/lib/python3.9/site-packages (from torchvision==0.23.0->smash-suite==0.2.0) (11.3.0)
+Requirement already satisfied: matplotlib>=3.3.0 in ./.venv/lib/python3.9/site-packages (from ultralytics==8.4.56->smash-suite==0.2.0) (3.9.4)
+Requirement already satisfied: pyyaml>=5.3.1 in ./.venv/lib/python3.9/site-packages (from ultralytics==8.4.56->smash-suite==0.2.0) (6.0.3)
+Requirement already satisfied: psutil>=5.8.0 in ./.venv/lib/python3.9/site-packages (from ultralytics==8.4.56->smash-suite==0.2.0) (7.2.2)
+Requirement already satisfied: polars>=0.20.0 in ./.venv/lib/python3.9/site-packages (from ultralytics==8.4.56->smash-suite==0.2.0) (1.36.1)
+Requirement already satisfied: ultralytics-thop>=2.0.18 in ./.venv/lib/python3.9/site-packages (from ultralytics==8.4.56->smash-suite==0.2.0) (2.0.19)
+Requirement already satisfied: starlette<1.0.0,>=0.40.0 in ./.venv/lib/python3.9/site-packages (from fastapi>=0.110->smash-suite==0.2.0) (0.49.3)
+Requirement already satisfied: typing-inspection>=0.4.2 in ./.venv/lib/python3.9/site-packages (from fastapi>=0.110->smash-suite==0.2.0) (0.4.2)
+Requirement already satisfied: annotated-doc>=0.0.2 in ./.venv/lib/python3.9/site-packages (from fastapi>=0.110->smash-suite==0.2.0) (0.0.4)
+Requirement already satisfied: anyio<5,>=3.6.2 in ./.venv/lib/python3.9/site-packages (from starlette<1.0.0,>=0.40.0->fastapi>=0.110->smash-suite==0.2.0) (4.12.1)
+Requirement already satisfied: exceptiongroup>=1.0.2 in ./.venv/lib/python3.9/site-packages (from anyio<5,>=3.6.2->starlette<1.0.0,>=0.40.0->fastapi>=0.110->smash-suite==0.2.0) (1.3.1)
+Requirement already satisfied: httpcore==1.* in ./.venv/lib/python3.9/site-packages (from httpx>=0.27->smash-suite==0.2.0) (1.0.9)
+Requirement already satisfied: h11>=0.16 in ./.venv/lib/python3.9/site-packages (from httpcore==1.*->httpx>=0.27->smash-suite==0.2.0) (0.16.0)
+Requirement already satisfied: zipp>=3.20 in ./.venv/lib/python3.9/site-packages (from importlib-metadata>=4.6->pyinstaller==6.16.0->smash-suite==0.2.0) (3.23.1)
+Requirement already satisfied: contourpy>=1.0.1 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.3.0->ultralytics==8.4.56->smash-suite==0.2.0) (1.3.0)
+Requirement already satisfied: cycler>=0.10 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.3.0->ultralytics==8.4.56->smash-suite==0.2.0) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.3.0->ultralytics==8.4.56->smash-suite==0.2.0) (4.60.2)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.3.0->ultralytics==8.4.56->smash-suite==0.2.0) (1.4.7)
+Requirement already satisfied: pyparsing>=2.3.1 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.3.0->ultralytics==8.4.56->smash-suite==0.2.0) (3.3.2)
+Requirement already satisfied: python-dateutil>=2.7 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.3.0->ultralytics==8.4.56->smash-suite==0.2.0) (2.9.0.post0)
+Requirement already satisfied: importlib-resources>=3.2.0 in ./.venv/lib/python3.9/site-packages (from matplotlib>=3.3.0->ultralytics==8.4.56->smash-suite==0.2.0) (6.5.2)
+Requirement already satisfied: polars-runtime-32==1.36.1 in ./.venv/lib/python3.9/site-packages (from polars>=0.20.0->ultralytics==8.4.56->smash-suite==0.2.0) (1.36.1)
+Requirement already satisfied: annotated-types>=0.6.0 in ./.venv/lib/python3.9/site-packages (from pydantic>=2.6->smash-suite==0.2.0) (0.7.0)
+Requirement already satisfied: pydantic-core==2.46.3 in ./.venv/lib/python3.9/site-packages (from pydantic>=2.6->smash-suite==0.2.0) (2.46.3)
+Requirement already satisfied: iniconfig>=1 in ./.venv/lib/python3.9/site-packages (from pytest>=8.0->smash-suite==0.2.0) (2.1.0)
+Requirement already satisfied: pluggy<2,>=1.5 in ./.venv/lib/python3.9/site-packages (from pytest>=8.0->smash-suite==0.2.0) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in ./.venv/lib/python3.9/site-packages (from pytest>=8.0->smash-suite==0.2.0) (2.20.0)
+Requirement already satisfied: tomli>=1 in ./.venv/lib/python3.9/site-packages (from pytest>=8.0->smash-suite==0.2.0) (2.4.1)
+Requirement already satisfied: six>=1.5 in ./.venv/lib/python3.9/site-packages (from python-dateutil>=2.7->matplotlib>=3.3.0->ultralytics==8.4.56->smash-suite==0.2.0) (1.17.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./.venv/lib/python3.9/site-packages (from sympy>=1.13.3->torch==2.8.0->smash-suite==0.2.0) (1.3.0)
+Requirement already satisfied: click>=7.0 in ./.venv/lib/python3.9/site-packages (from uvicorn>=0.27->uvicorn[standard]>=0.27->smash-suite==0.2.0) (8.1.8)
+Requirement already satisfied: httptools>=0.6.3 in ./.venv/lib/python3.9/site-packages (from uvicorn[standard]>=0.27->smash-suite==0.2.0) (0.7.1)
+Requirement already satisfied: python-dotenv>=0.13 in ./.venv/lib/python3.9/site-packages (from uvicorn[standard]>=0.27->smash-suite==0.2.0) (1.2.1)
+Requirement already satisfied: uvloop>=0.15.1 in ./.venv/lib/python3.9/site-packages (from uvicorn[standard]>=0.27->smash-suite==0.2.0) (0.22.1)
+Requirement already satisfied: watchfiles>=0.13 in ./.venv/lib/python3.9/site-packages (from uvicorn[standard]>=0.27->smash-suite==0.2.0) (1.1.1)
+Requirement already satisfied: websockets>=10.4 in ./.venv/lib/python3.9/site-packages (from uvicorn[standard]>=0.27->smash-suite==0.2.0) (15.0.1)
+Requirement already satisfied: MarkupSafe>=2.0 in ./.venv/lib/python3.9/site-packages (from jinja2->torch==2.8.0->smash-suite==0.2.0) (3.0.3)
+Downloading ruff-0.17.1-py3-none-macosx_11_0_arm64.whl (9.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 6.1 MB/s  0:00:01
+Building wheels for collected packages: smash-suite
+  Building editable for smash-suite (pyproject.toml): started
+  Building editable for smash-suite (pyproject.toml): finished with status 'done'
+  Created wheel for smash-suite: filename=smash_suite-0.2.0-0.editable-py3-none-any.whl size=2977 sha256=100c7b1ce0bbd4eeccc72ac04af0286cbe9c493ce5f098f87349eab4349eb99d
+  Stored in directory: /private/var/folders/y9/xsm_c4nn54nczg4cjt2ckk200000gn/T/pip-ephem-wheel-cache-jwpcyhyv/wheels/2b/c4/30/7513977d314569f43c239282f3a00d4725545b353d769da226
+Successfully built smash-suite
+Installing collected packages: ruff, smash-suite
+
+Successfully installed ruff-0.17.1 smash-suite-0.2.0

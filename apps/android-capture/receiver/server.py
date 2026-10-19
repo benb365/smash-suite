@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Small authenticated tus 1.0 receiver. Python 3.10+, optional FFmpeg for HLS."""
+"""Small authenticated tus 1.0 receiver. Python 3.9+, optional FFmpeg for HLS."""
 
 import argparse
 import base64

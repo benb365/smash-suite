@@ -1,0 +1,9 @@
+{
+  "before_count": 73,
+  "after_count": 74,
+  "changed_existing": {},
+  "removed_existing": [],
+  "added": {
+    "ruff": "0.17.1"
+  }
+}

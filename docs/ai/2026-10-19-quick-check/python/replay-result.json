@@ -1,0 +1,8 @@
+{
+  "command": ".venv/bin/python -m modules.rally.experiments.replay --output /private/tmp/smash-quick-check-20261019-replay.json",
+  "exit_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 5.0,
+  "log": "/private/tmp/smash-quick-python-20261019/replay.log",
+  "output_exists": true
+}

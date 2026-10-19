@@ -44,7 +44,7 @@ adb install -r dist/smash-capture-0.1.0-arm64-release.apk
 
 ## 启动接收端
 
-需要 Python 3.10+。接收与分析索引仅用标准库；HLS 还需要 FFmpeg。
+需要 Python 3.9+，可使用项目共同环境。接收与分析索引仅用标准库；HLS 还需要 FFmpeg。
 从本目录执行，电脑和手机处于可互通网络：
 
 ```sh

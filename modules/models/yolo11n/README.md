@@ -23,4 +23,4 @@ boxes_per_image = model([image], confidence=.2, image_size=960)
   --output modules/models/yolo11n/.runtime/sample.jsonl
 ```
 
-输出逐帧时间与人物框。权重获取规则见[模型模块](../README.md)，迁移后的运行测试尚未执行。
+输出逐帧时间与人物框。权重获取规则及验证进度见[模型模块](../README.md)。

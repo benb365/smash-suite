@@ -1,0 +1,12 @@
+usage: __main__.py [-h] --video VIDEO --scene {high,courtside,personal}
+                   --output OUTPUT [--court COURT]
+
+Run a selected rally scenario on a local video; export remains a product
+choice.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --video VIDEO
+  --scene {high,courtside,personal}
+  --output OUTPUT
+  --court COURT         Four normalized [x,y] corners as JSON

@@ -53,4 +53,4 @@ pnpm run typecheck:frontend
 pnpm run build:product
 ```
 
-打包仅支持在 macOS Apple 芯片上执行，输出到根目录 `dist/`。源码已接入新版 C/D；整理后的源码尚未完整验证，下一步是[入口快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。已安装产品的模型与工作目录仍位于自己的用户数据目录。
+打包仅支持在 macOS Apple 芯片上执行，输出到根目录 `dist/`。源码已接入新版 C/D；入口检查与完整产品验证分别记录，当前进度见[路线图](../../docs/plan/roadmap.md#整理后的快速检查)。已安装产品的模型与工作目录仍位于自己的用户数据目录。

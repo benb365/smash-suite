@@ -51,15 +51,21 @@ Smash Suite 是一个本地优先的羽毛球视频处理套件。
 
 ## 开发工作流
 
-仓库内所有模型和应用共用开发环境，使用 Python 3.11、Node.js 20.19+ 和 pnpm 9+。在仓库根目录执行：
+主项目的模型、算法和应用后端共用开发环境，需要 Python 3.9+（建议使用 3.11）、pip 21.3+、Node.js 20.19+ 和 pnpm 9+。在仓库根目录执行：
 
 ```sh
-python3.11 -m venv .venv
+python3 -m venv .venv
+.venv/bin/python -m pip install 'pip>=21.3'
 .venv/bin/python -m pip install -e '.[dev]'
 pnpm install --frozen-lockfile
 ```
 
-某些模块的独立环境请参考对应目录的说明文档。例如 [Android 场边采集](apps/android-capture/README.md) 中 Android 应用构建。
+以下工具另有环境要求：
+
+| 工具 | 环境 |
+| --- | --- |
+| 训练素材采集工具（`curate-badminton-training-data`） | Python 3.10+，由工具管理独立虚拟环境；其中的 yt-dlp 不支持 Python 3.9，详见[素材采集环境](datasets/README.md#素材采集环境) |
+| Android 原生应用构建 | JDK 与 Android SDK，详见[Android 场边采集](apps/android-capture/README.md#构建与安装) |
 
 ## 查看项目文档
 

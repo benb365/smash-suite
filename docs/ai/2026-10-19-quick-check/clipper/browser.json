@@ -1,0 +1,11 @@
+{
+  "ax": "Browser tab: 5, Title: \"Smash Suite · 羽毛球视频剪辑\", URL: \"http://127.0.0.1:59043/\".\nThere has been no change in the accessibility tree.\nThe focused UI element is 0 AXWebArea Smash Suite · 羽毛球视频剪辑, URL: 127.0.0.1:59043/",
+  "logs": [
+    {
+      "level": "warn",
+      "message": "using deprecated parameters for the initialization function; pass a single object instead",
+      "timestamp": "2026-10-19T12:50:47.503Z",
+      "url": "http://127.0.0.1:59043/static/js/9.bed35b7257.js"
+    }
+  ]
+}

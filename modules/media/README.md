@@ -46,4 +46,4 @@ render(source, Path("output.mp4"), ranges, info, "balanced", lambda fraction: No
 .venv/bin/python -m pytest modules/media/tests
 ```
 
-依赖 PyAV、OpenCV、NumPy、Pydantic；编码使用系统 FFmpeg 或 `imageio-ffmpeg`，也可通过 `SMASH_SUITE_FFMPEG` 指定程序。迁移后的运行测试尚未执行，见[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。
+依赖 PyAV、OpenCV、NumPy、Pydantic；编码使用系统 FFmpeg 或 `imageio-ffmpeg`，也可通过 `SMASH_SUITE_FFMPEG` 指定程序。验证范围及当前进度见[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。

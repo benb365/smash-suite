@@ -1,0 +1,157 @@
+test_auth_version_and_validation (__main__.ReceiverTests) ... ERROR
+test_browser_cookie_does_not_authorize_uploads (__main__.ReceiverTests) ... ERROR
+test_file_offset_recovers_commit_window (__main__.ReceiverTests) ... ERROR
+test_hash_mismatch_resets_without_confirmation (__main__.ReceiverTests) ... ERROR
+test_idempotent_creation_and_contiguous_analysis (__main__.ReceiverTests) ... ERROR
+test_real_continuous_audio_video_hls_and_remux_retry (__main__.ReceiverTests) ... ERROR
+test_resume_offsets_hash_and_restart (__main__.ReceiverTests) ... ERROR
+test_socket_disconnect_retains_received_bytes (__main__.ReceiverTests) ... ERROR
+
+======================================================================
+ERROR: test_auth_version_and_validation (__main__.ReceiverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 30, in setUp
+    self.start_server()
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 33, in start_server
+    self.server = Server(("127.0.0.1", 0), self.store, TOKEN)
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/server.py", line 378, in __init__
+    super().__init__(address, Handler)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_browser_cookie_does_not_authorize_uploads (__main__.ReceiverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 30, in setUp
+    self.start_server()
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 33, in start_server
+    self.server = Server(("127.0.0.1", 0), self.store, TOKEN)
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/server.py", line 378, in __init__
+    super().__init__(address, Handler)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_file_offset_recovers_commit_window (__main__.ReceiverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 30, in setUp
+    self.start_server()
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 33, in start_server
+    self.server = Server(("127.0.0.1", 0), self.store, TOKEN)
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/server.py", line 378, in __init__
+    super().__init__(address, Handler)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_hash_mismatch_resets_without_confirmation (__main__.ReceiverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 30, in setUp
+    self.start_server()
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 33, in start_server
+    self.server = Server(("127.0.0.1", 0), self.store, TOKEN)
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/server.py", line 378, in __init__
+    super().__init__(address, Handler)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_idempotent_creation_and_contiguous_analysis (__main__.ReceiverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 30, in setUp
+    self.start_server()
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 33, in start_server
+    self.server = Server(("127.0.0.1", 0), self.store, TOKEN)
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/server.py", line 378, in __init__
+    super().__init__(address, Handler)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_real_continuous_audio_video_hls_and_remux_retry (__main__.ReceiverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 30, in setUp
+    self.start_server()
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 33, in start_server
+    self.server = Server(("127.0.0.1", 0), self.store, TOKEN)
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/server.py", line 378, in __init__
+    super().__init__(address, Handler)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_resume_offsets_hash_and_restart (__main__.ReceiverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 30, in setUp
+    self.start_server()
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 33, in start_server
+    self.server = Server(("127.0.0.1", 0), self.store, TOKEN)
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/server.py", line 378, in __init__
+    super().__init__(address, Handler)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+======================================================================
+ERROR: test_socket_disconnect_retains_received_bytes (__main__.ReceiverTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 30, in setUp
+    self.start_server()
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/test_server.py", line 33, in start_server
+    self.server = Server(("127.0.0.1", 0), self.store, TOKEN)
+  File "/Users/bytedance/workspace/test/smash-suite/apps/android-capture/receiver/server.py", line 378, in __init__
+    super().__init__(address, Handler)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 452, in __init__
+    self.server_bind()
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 138, in server_bind
+    socketserver.TCPServer.server_bind(self)
+  File "/Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 466, in server_bind
+    self.socket.bind(self.server_address)
+PermissionError: [Errno 1] Operation not permitted
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.060s
+
+FAILED (errors=8)

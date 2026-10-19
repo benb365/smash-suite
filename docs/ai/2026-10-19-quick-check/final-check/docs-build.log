@@ -1,0 +1,23 @@
+
+> smash-suite@0.1.0 docs:build /Users/bytedance/workspace/test/smash-suite
+> pnpm -C tools/docs-site build
+
+
+> @smash-suite/docs-site@ build /Users/bytedance/workspace/test/smash-suite/tools/docs-site
+> vitepress build
+
+
+  vitepress v1.6.4
+
+- building client + server bundles...
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+[32m✓[0m building client + server bundles...
+- rendering pages...
+[32m✓[0m rendering pages...
+build complete in 10.99s.
+
+exit_code=0

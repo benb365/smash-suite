@@ -1,6 +1,9 @@
 Smash Suite architecture image
 Generated with the built-in imagegen tool on 2026-10-19.
 
+Current maintenance edit (2026-10-19):
+Use case: text-localization. Edit target: the existing architecture.png. Replace only the bottom development environment text "Python 3.11" with "Python 3.9+". The complete line is "Python 3.9+ · PyTorch · Node.js · pnpm · TypeScript". Preserve the canvas, layout, typography, colors, icons, all other text and all arrow relationships. The prompts below record the historical generations.
+
 Initial generation prompt:
 
 Use case: infographic-diagram

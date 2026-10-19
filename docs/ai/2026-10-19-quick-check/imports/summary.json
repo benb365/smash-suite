@@ -1,0 +1,249 @@
+{
+  "python_version": "Python 3.9.6",
+  "cache_dirs": {
+    "YOLO_CONFIG_DIR": "/private/tmp/smash-quick-imports-20261019/yolo-config",
+    "MPLCONFIGDIR": "/private/tmp/smash-quick-imports-20261019/matplotlib",
+    "XDG_CACHE_HOME": "/private/tmp/smash-quick-imports-20261019/xdg-cache"
+  },
+  "imports": [
+    {
+      "module": "torch",
+      "ok": true,
+      "version": "2.8.0",
+      "exit_code": 0,
+      "elapsed_seconds": 1.88
+    },
+    {
+      "module": "torchvision",
+      "ok": true,
+      "version": "0.23.0",
+      "exit_code": 0,
+      "elapsed_seconds": 4.29
+    },
+    {
+      "module": "ultralytics",
+      "ok": true,
+      "version": "8.4.56",
+      "exit_code": 0,
+      "elapsed_seconds": 2.12
+    },
+    {
+      "module": "av",
+      "ok": true,
+      "version": "14.2.0",
+      "exit_code": 0,
+      "elapsed_seconds": 0.27
+    },
+    {
+      "module": "cv2",
+      "ok": true,
+      "version": "4.13.0",
+      "exit_code": 0,
+      "elapsed_seconds": 0.32
+    },
+    {
+      "module": "numpy",
+      "ok": true,
+      "version": "2.0.2",
+      "exit_code": 0,
+      "elapsed_seconds": 0.16
+    },
+    {
+      "module": "scipy",
+      "ok": true,
+      "version": "1.13.1",
+      "exit_code": 0,
+      "elapsed_seconds": 0.12
+    },
+    {
+      "module": "fastapi",
+      "ok": true,
+      "version": "0.128.8",
+      "exit_code": 0,
+      "elapsed_seconds": 0.44
+    },
+    {
+      "module": "uvicorn",
+      "ok": true,
+      "version": "0.39.0",
+      "exit_code": 0,
+      "elapsed_seconds": 0.28
+    },
+    {
+      "module": "modules.media",
+      "ok": true,
+      "version": null,
+      "exit_code": 0,
+      "elapsed_seconds": 0.09
+    },
+    {
+      "module": "modules.models.tracknet",
+      "ok": true,
+      "version": null,
+      "exit_code": 0,
+      "elapsed_seconds": 0.09
+    },
+    {
+      "module": "modules.models.yolo11n",
+      "ok": true,
+      "version": null,
+      "exit_code": 0,
+      "elapsed_seconds": 0.05
+    },
+    {
+      "module": "modules.models.keypoint_rcnn",
+      "ok": true,
+      "version": null,
+      "exit_code": 0,
+      "elapsed_seconds": 0.05
+    },
+    {
+      "module": "modules.rally.scenarios",
+      "ok": true,
+      "version": null,
+      "exit_code": 0,
+      "elapsed_seconds": 0.05
+    },
+    {
+      "module": "modules.rally.recognize",
+      "ok": true,
+      "version": null,
+      "exit_code": 0,
+      "elapsed_seconds": 0.5
+    }
+  ],
+  "help_commands": [
+    {
+      "name": "models-help",
+      "command": "/Users/bytedance/workspace/test/smash-suite/.venv/bin/python -m modules.models --help",
+      "cwd": "/Users/bytedance/workspace/test/smash-suite",
+      "exit_code": 0,
+      "timeout": false,
+      "log": "/private/tmp/smash-quick-imports-20261019/models-help.log",
+      "elapsed_seconds": 0.24,
+      "first_lines": [
+        "usage: __main__.py [-h] --model {tracknet,yolo11n,keypoint_rcnn} --video VIDEO",
+        "                   --output OUTPUT [--limit-s LIMIT_S] [--device DEVICE]",
+        "",
+        "Run one model on actual timestamped video frames, without rally segmentation."
+      ]
+    },
+    {
+      "name": "rally-help",
+      "command": "/Users/bytedance/workspace/test/smash-suite/.venv/bin/python -m modules.rally --help",
+      "cwd": "/Users/bytedance/workspace/test/smash-suite",
+      "exit_code": 0,
+      "timeout": false,
+      "log": "/private/tmp/smash-quick-imports-20261019/rally-help.log",
+      "elapsed_seconds": 0.46,
+      "first_lines": [
+        "usage: __main__.py [-h] --video VIDEO --scene {high,courtside,personal}",
+        "                   --output OUTPUT [--court COURT]",
+        "",
+        "Run a selected rally scenario on a local video; export remains a product"
+      ]
+    },
+    {
+      "name": "rally-evaluation-help",
+      "command": "/Users/bytedance/workspace/test/smash-suite/.venv/bin/python -m modules.rally.evaluation --help",
+      "cwd": "/Users/bytedance/workspace/test/smash-suite",
+      "exit_code": 0,
+      "timeout": false,
+      "log": "/private/tmp/smash-quick-imports-20261019/rally-evaluation-help.log",
+      "elapsed_seconds": 0.07,
+      "first_lines": [
+        "usage: __main__.py [-h] --predictions PREDICTIONS --annotations ANNOTATIONS",
+        "                   --output OUTPUT",
+        "",
+        "Evaluate saved rally predictions against reviewed annotations."
+      ]
+    },
+    {
+      "name": "replay-help",
+      "command": "/Users/bytedance/workspace/test/smash-suite/.venv/bin/python -m modules.rally.experiments.replay --help",
+      "cwd": "/Users/bytedance/workspace/test/smash-suite",
+      "exit_code": 0,
+      "timeout": false,
+      "log": "/private/tmp/smash-quick-imports-20261019/replay-help.log",
+      "elapsed_seconds": 0.07,
+      "first_lines": [
+        "usage: replay.py [-h] [--scene {high,courtside,personal}] [--sample SAMPLE]",
+        "                 --output OUTPUT",
+        "",
+        "Replay retained observations through the selected scenarios, without running"
+      ]
+    },
+    {
+      "name": "video-clipper-app-help",
+      "command": "/Users/bytedance/workspace/test/smash-suite/.venv/bin/python -m app --help",
+      "cwd": "/Users/bytedance/workspace/test/smash-suite/apps/video-clipper/backend",
+      "exit_code": 0,
+      "timeout": false,
+      "log": "/private/tmp/smash-quick-imports-20261019/video-clipper-app-help.log",
+      "elapsed_seconds": 0.08,
+      "first_lines": [
+        "usage: __main__.py [-h] [--port PORT] [--no-browser]",
+        "",
+        "Smash Suite 本机羽毛球录像剪辑",
+        ""
+      ]
+    }
+  ],
+  "configs_and_weights": [
+    {
+      "file": "modules/rally/scenarios/selection.json",
+      "valid_json": true,
+      "scenarios": [
+        "high",
+        "courtside",
+        "personal"
+      ]
+    },
+    {
+      "file": "modules/rally/experiments/reports/a1-a2-short-filter-20261018.json",
+      "referenced_by": "selection.json:high",
+      "exists": true
+    },
+    {
+      "file": "modules/rally/experiments/reports/c-pause-boundaries-20261019.json",
+      "referenced_by": "selection.json:courtside",
+      "exists": true
+    },
+    {
+      "file": "modules/rally/experiments/reports/d-person-context-20261018.json",
+      "referenced_by": "selection.json:personal",
+      "exists": true
+    },
+    {
+      "file": "modules/rally/scenarios/profiles.json",
+      "valid_json": true,
+      "profiles": [
+        "high",
+        "personal_ball",
+        "courtside",
+        "personal",
+        "personal_base",
+        "personal_options",
+        "courtside_base"
+      ]
+    },
+    {
+      "file": "modules/models/tracknet/weights/ball_track.pt",
+      "required_by": "TrackNet README",
+      "exists": true,
+      "bytes": 45400030
+    },
+    {
+      "file": "modules/models/yolo11n/weights/yolo11n.pt",
+      "required_by": "YOLO11n README",
+      "exists": true,
+      "bytes": 5613764
+    },
+    {
+      "file": "modules/models/keypoint_rcnn/weights/pose_kpRCNN.pth",
+      "required_by": "Keypoint R-CNN README",
+      "exists": true,
+      "bytes": 237101765
+    }
+  ]
+}

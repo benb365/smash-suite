@@ -25,4 +25,4 @@ result = model(person_crop)
   --output modules/models/keypoint_rcnn/.runtime/sample.jsonl
 ```
 
-这个入口对整帧运行模型；回合识别内部使用人物裁剪图。权重获取规则见[模型模块](../README.md)，迁移后的运行测试尚未执行。
+这个入口对整帧运行模型；回合识别内部使用人物裁剪图。权重获取规则及验证进度见[模型模块](../README.md)。

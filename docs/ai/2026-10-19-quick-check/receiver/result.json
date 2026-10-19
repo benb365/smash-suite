@@ -1,0 +1,26 @@
+{
+  "startup_announced": true,
+  "health": {
+    "status": 200,
+    "payload": {
+      "status": "ok",
+      "tus": "1.0.0",
+      "hlsEnabled": true,
+      "serverEpochMs": 1792412786590
+    }
+  },
+  "home": {
+    "status": 200,
+    "has_html": true,
+    "bytes": 1542
+  },
+  "ffmpeg_path": "/Users/bytedance/workspace/test/smash-suite/.venv/lib/python3.9/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+  "ffmpeg_exists": true,
+  "hls_enabled": true,
+  "exit_code": 0,
+  "sigint_clean_exit": true,
+  "elapsed_seconds": 0.15,
+  "log": "/private/tmp/smash-quick-receiver-20261019/receiver.log",
+  "data_dir": "/private/tmp/smash-quick-receiver-20261019/data",
+  "errors": []
+}

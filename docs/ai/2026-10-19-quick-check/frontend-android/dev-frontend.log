@@ -1,0 +1,46 @@
+
+> smash-suite@0.1.0 dev:frontend /Users/bytedance/workspace/test/smash-suite
+> pnpm -C apps/video-clipper/frontend build
+
+
+> smash-suite-web@0.2.0 build /Users/bytedance/workspace/test/smash-suite/apps/video-clipper/frontend
+> tsc --noEmit && rspeedy build && rsbuild build --config host.config.ts
+
+  Rspeedy v0.18.2 (Rsbuild v2.2.9, Rspack v2.2.9)
+
+info    build started...
+Browserslist: browsers data (caniuse-lite) is 6 months old. Please run:
+  npx update-browserslist-db@lates
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ready   built in 0.78s
+
+File (web)                  Size
+dist/lynx/main.web.bundle   120.9 kB
+
+ObjectRef is not unref, it considered as a memory leak
+ObjectRef is not unref, it considered as a memory leak
+ObjectRef is not unref, it considered as a memory leak
+Rsbuild v2.2.9
+
+info    build started...
+ready   built in 0.13s
+
+File (web)                                                           Size        Gzip
+dist/index.html                                                      1.7 kB      0.90 kB
+dist/static/css/index.6be02a7e27.css                                 4.9 kB      1.5 kB
+dist/static/js/index.621c601b3a.js                                   11.3 kB     5.3 kB
+dist/static/js/async/web-core-template-loader-thread.09ca044817.js   16.0 kB     6.0 kB
+dist/static/js/async/web-core-worker-chunk.08f4caead8.js             16.3 kB     6.3 kB
+dist/static/js/m.b7368b2392.js                                       20.8 kB     7.3 kB
+dist/static/js/9.bed35b7257.js                                       21.1 kB     5.6 kB
+dist/static/js/async/legacy-wasm-js.f1b138e30e.js                    24.6 kB     5.8 kB
+dist/static/js/async/lynx-core-chunk.661acf46c9.js                   48.4 kB     13.3 kB
+dist/static/js/async/web-core-main-chunk.5d05f6acc9.js               89.4 kB     22.1 kB
+dist/static/js/async/xmarkdown-deps.5a0a4c3d43.js                    127.6 kB    51.5 kB
+dist/static/js/async/web-elements.ca2101c41b.js                      150.2 kB    35.4 kB
+dist/static/wasm/468284eada.module.wasm                              180.9 kB    57.9 kB
+dist/static/wasm/6ad54531ae.module.wasm                              186.4 kB    76.3 kB
+dist/static/js/async/web-core-markup-encoder.9832ee9b68.js           228.3 kB    65.3 kB
+dist/static/wasm/849acde13b.module.wasm                              231.0 kB    84.6 kB
+
+                                                            Total:   1359.0 kB   445.2 kB

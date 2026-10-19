@@ -1,12 +1,12 @@
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "smash-suite"
 version = "0.2.0"
 description = "Local badminton video modules and applications."
-requires-python = "==3.11.*"
+requires-python = ">=3.9"
 dependencies = [
   "fastapi>=0.110",
   "uvicorn[standard]>=0.27",
@@ -38,7 +38,7 @@ testpaths = ["modules", "apps/video-clipper/backend/tests"]
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py39"
 
 [tool.setuptools.packages.find]
 include = ["modules*"]

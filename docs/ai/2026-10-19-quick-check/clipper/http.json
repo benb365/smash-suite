@@ -1,0 +1,21 @@
+{
+  "command": "env -u PYTHONPATH SMASH_SUITE_DATA_DIR=<temporary directory> pnpm run dev:backend --no-browser --port 0",
+  "pythonpath_override": false,
+  "url": "http://127.0.0.1:59043/",
+  "requests": {
+    "/api/health": {
+      "status": 200,
+      "content_type": "application/json",
+      "bytes": 33,
+      "body": {
+        "status": "ok",
+        "version": "0.2.0"
+      }
+    },
+    "/": {
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 1652
+    }
+  }
+}

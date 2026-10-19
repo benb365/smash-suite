@@ -1,0 +1,12 @@
+usage: __main__.py [-h] --model {tracknet,yolo11n,keypoint_rcnn} --video VIDEO
+                   --output OUTPUT [--limit-s LIMIT_S] [--device DEVICE]
+
+Run one model on actual timestamped video frames, without rally segmentation.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --model {tracknet,yolo11n,keypoint_rcnn}
+  --video VIDEO
+  --output OUTPUT
+  --limit-s LIMIT_S
+  --device DEVICE
