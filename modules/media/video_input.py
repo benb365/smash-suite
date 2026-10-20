@@ -15,6 +15,64 @@ class InputOverload(RuntimeError):
     pass
 
 
+def _verified_edit_list_frames(path: Path, declared_frames: int, decoded_frames: int):
+    """Certify MP4 edit-list omissions without accepting a truncated media table.
+
+    AVStream.frames can count compressed samples hidden by the MP4 edit list.
+    FFmpeg's normal demuxer already omits some preroll samples, so neither
+    packet.is_discard nor negative presentation timestamps identify them. On a
+    count mismatch, compare the normal and ignore_editlist packet tables. The
+    complete raw table must still match the declared count; every presented
+    sample must match the same file position with a constant PTS translation;
+    all omitted samples must be outside the presentation window.
+    """
+    import av
+    if not path.is_file() or not 0 < decoded_frames < declared_frames:
+        return None
+
+    def table(ignore_edits):
+        with av.open(str(path), options={"ignore_editlist": "1"} if ignore_edits else {}) as container:
+            stream = container.streams.video[0]
+            if "mov" not in container.format.name.split(",") or stream.codec_context.name not in ("h264", "hevc"):
+                return None
+            packets = [(packet.pos, packet.pts, packet.size) for packet in container.demux(stream)
+                       if packet.size and (ignore_edits or not packet.is_discard)]
+            if any(pos is None or pos < 0 or pts is None for pos, pts, size in packets):
+                return None
+            return dict(packets=packets, time_base=stream.time_base,
+                        start=stream.start_time, duration=stream.duration)
+
+    try:
+        presented, raw = table(False), table(True)
+        if presented is None or raw is None or presented["time_base"] != raw["time_base"]:
+            return None
+        visible, complete = presented["packets"], raw["packets"]
+        if len(visible) != decoded_frames or len(complete) != declared_frames:
+            return None
+        original = {pos: (pts, size) for pos, pts, size in complete}
+        if len(original) != len(complete) or len({p[0] for p in visible}) != len(visible):
+            return None
+        if any(pos not in original or original[pos][1] != size for pos, pts, size in visible):
+            return None
+        offsets = {original[pos][0] - pts for pos, pts, size in visible}
+        if len(offsets) != 1 or presented["duration"] is None:
+            return None
+        offset = offsets.pop()
+        start = presented["start"] if presented["start"] is not None else min(p[1] for p in visible)
+        end = start + presented["duration"]
+        selected = {p[0] for p in visible}
+        omitted = [(pos, pts) for pos, pts, size in complete if pos not in selected]
+        if not omitted or any(start <= pts - offset < end for pos, pts in omitted):
+            return None
+        if any(not start <= pts < end for pos, pts, size in visible):
+            return None
+        return dict(declared_media_samples=declared_frames, presented_frames=decoded_frames,
+                    edit_list_omitted_samples=len(omitted), pts_translation_ms=float(offset * raw["time_base"] * 1000),
+                    verification="complete_media_table_and_presented_packet_positions_pts")
+    except (av.error.FFmpegError, OSError, ValueError, IndexError, KeyError):
+        return None
+
+
 class FileFrameSource:
     """One decoder thread, at most six queued original BGR frames.
 
@@ -130,7 +188,10 @@ class FileFrameSource:
                         except queue.Full:
                             continue
                 if reached_eof and stream.frames and self.stats["frames_decoded"] != stream.frames:
-                    raise RuntimeError(f"Premature EOF: decoded {self.stats['frames_decoded']} of {stream.frames} frames")
+                    edits = _verified_edit_list_frames(self.path, stream.frames, self.stats["frames_decoded"])
+                    if edits is None:
+                        raise RuntimeError(f"Premature EOF: decoded {self.stats['frames_decoded']} of {stream.frames} frames")
+                    self.stats.update(expected_frames=edits["presented_frames"], edit_list_verification=edits)
                 if reached_eof and self.stats["frames_decoded"] == 0:
                     raise ValueError("Input contains no decodable video frames")
         except Exception as exc:
