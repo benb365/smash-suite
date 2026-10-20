@@ -5,6 +5,10 @@ description: Download confirmed badminton sources, extract and validate native-r
 
 # Curate Badminton Training Data
 
+Specific sources, samples, windows and per-sample extraction parameters belong
+in the dataset documentation. This skill maintains reusable acquisition and
+verification workflows without duplicating sample lists.
+
 Keep this directory as the canonical skill. Use `scripts/run.py` for the existing
 CLI; it manages its ignored Python 3.10+ environment.
 
@@ -33,28 +37,12 @@ Read [schema](references/schema.md) before changing manifests, labels, imports o
 
 - **Find candidates:** use [source finding](../find-badminton-rally-videos/SKILL.md)
   for searches, uploader expansion and continuity inspection.
-- **Download complete originals / MP4:** follow [video acquisition](references/video-acquisition.md)
-  when requested. Reuse existing verified files; preserve audio and native timing.
-- **Get existing Rally test videos:** use [existing test videos](#existing-rally-test-videos).
+- **Download or extract existing media:** follow [video acquisition](references/video-acquisition.md)
+  when requested. Reuse verified files; preserve source timing and the recorded audio policy.
 - **Collect new Rally test clips:** follow the workflow below. Court geometry, people
   annotations and phone proof are not prerequisites.
 - **Court/people annotations:** read [annotation workflow](references/annotations.md)
   only for that task.
-
-## Existing Rally test videos
-
-Read the [current video table](../../../datasets/README.md#获取现用模型测试视频)
-for sample IDs, source URLs, source-time windows and existing clip paths.
-Reuse a verified clip first; otherwise cut a verified original, downloading that
-source once if needed. Follow [acquisition and checks](references/video-acquisition.md)
-for command templates and the linked historical extraction recipes.
-
-Keep sample IDs and time mappings intact. Table windows describe footage, not
-necessarily FFmpeg seek/duration arguments. Do not route existing test videos
-through `sample-rally` by default: it re-encodes and removes audio. Check the
-recipe's audio and timing requirements; mark incomplete provenance instead of
-claiming exact reconstruction. Video acquisition does not restore saved model
-observations; replay inputs remain defined by `modules/rally/experiments/cases.json`.
 
 ## Rally test clips
 

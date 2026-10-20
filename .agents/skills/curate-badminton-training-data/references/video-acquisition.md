@@ -1,16 +1,12 @@
 # Video acquisition and MP4 checks
 
-Use after the collector's preflight. Resolve URL, video/part ID and duration
-before transferring media; reuse a verified local original or an already
-resolved public format list. Bilibili cards may combine parts, and the current
-collector normalizes away `?p=`: verify the actual selected part and time axis.
-
-For existing tests, take the sample ID, source URL, source-time window and clip
-path from the [current video table](../../../../datasets/README.md#获取现用模型测试视频).
-Reuse a verified clip first. If it is missing, cut a verified local original;
-download the original only if needed, once per source shared by several clips.
-The table identifies footage; it does not claim every historical file can be
-reconstructed exactly. Model observations used for replay are separate inputs.
+Use after the collector's preflight. Resolve source ID, URL, part, source-time
+window and local paths from the user request or a confirmed dataset record.
+Reuse verified local originals or clips first; if missing, download an original
+only once per source and cut it using the confirmed parameters. Preserve the
+recorded audio policy and source-time mapping. Bilibili cards may combine parts,
+and the current collector normalizes away `?p=`: verify the actual selected part
+and time axis. Do not overwrite a different source or clip under an existing ID.
 
 ## Choose the transfer
 
@@ -18,9 +14,8 @@ reconstructed exactly. Model observations used for replay are separate inputs.
   fallback for a failed preview.
 - **Complete source:** when requested, download the selected original to
   `local/source-videos/<source-or-review-id>/source.mp4`, retaining audio.
-- **Existing test window:** follow [clip recipes](#existing-test-clip-recipes)
-  and [local extraction](#extract-from-a-local-original), preserving the recorded
-  audio policy and time mapping.
+- **Existing source window:** use [local extraction](#extract-from-a-local-original)
+  with confirmed parameters, preserving the recorded audio policy and time mapping.
 - **New sampled window:** use `sample-rally`, preferably with `--input` pointing
   to the verified original. It removes audio and accepts 60–300 seconds.
 
@@ -41,7 +36,7 @@ substituting the confirmed ID and URL:
 ```bash
 CURATOR_PY=.agents/skills/curate-badminton-training-data/.venv/bin/python
 FFMPEG_PATH="$("$CURATOR_PY" -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')"
-SOURCE_ID=SOURCE_ID_FROM_TABLE
+SOURCE_ID=CONFIRMED_SOURCE_ID
 VIDEO_URL='CONFIRMED_SOURCE_URL'
 MEDIA_DIR="datasets/badminton-v1/local/source-videos/$SOURCE_ID"
 mkdir -p "$MEDIA_DIR"
@@ -64,36 +59,17 @@ Keep raw info JSON and transfer logs local; record source identity/part, selecte
 format, duration, dimensions, fps, audio, bytes, SHA256 and stable local path in
 the linked source record. Do not overwrite a different source under the same ID.
 
-## Existing test clip recipes
-
-Read the linked records before selecting extraction arguments:
-
-| Footage | Existing evidence and reconstruction limit |
-| --- | --- |
-| A1/C1/D1 | The [12-clip record](../../../../datasets/reports/m1-short-clips-20261015.json) has `extraction_argv`, source/clip hashes and `actual_source_window_s`. These clips copy compressed streams and preserve audio. Reuse the recorded arguments, replacing the FFmpeg binary path with `$FFMPEG_PATH` and the output with a candidate path. |
-| A2 | The [supplementary report](../../../../modules/rally/experiments/reports/a2-c2-d2-current-algorithms-20261018.md#a2复用真实观测先排除花屏再分别运行) verifies two ranges within an existing 180-second cache. Original-video times are nominal. The separate H264 files are display derivatives, not the pixels used for model inference; their extraction commands and independent hashes are not recorded. |
-| C2 | The [supplementary record](../../../../modules/rally/experiments/reports/a2-c2-d2-current-algorithms-20261018.json) identifies the 180-second clip, its hash and source window. A complete-original hash and exact sampling command are missing; do not assume stream copy. |
-| D2 | The supplementary record verifies a silent clip as an identical compressed-packet prefix of the original, with matching frame timestamps. A direct duration cut previously failed near the tail; the exact final command is missing. The general template below alone does not establish an equivalent D2 clip. |
-
-The table's ranges describe actual footage. Do not calculate historical `-t`
-arguments by subtracting their endpoints: packet decoding order and audio can
-make the extracted span differ from the requested duration. A2's cache ranges
-must remain separate; never stitch across excluded footage. Where a recipe is
-missing, preserve the verified cached input and report the gap. A new extraction
-needs its own checks before replacing an input or reusing its annotations/cache.
-
 ## Extract from a local original
 
 Use the variables above for the interpreter and FFmpeg. Set the input and target
-from the video table; keep the existing clip intact while checking a candidate.
-This example uses the recorded A1-01 seek and duration parameters:
+from the dataset entry; keep the existing clip intact while checking a candidate.
 
 ```bash
-SOURCE_VIDEO=datasets/badminton-v1/local/source-videos/A1/source.mp4
-CLIP_DIR=datasets/badminton-v1/local/rally/m1-short-a1-01-20261015
+SOURCE_VIDEO=INPUT_VIDEO_PATH
+CLIP_DIR=CANDIDATE_CLIP_DIR
 CLIP_VIDEO="$CLIP_DIR/clip.candidate.mp4"
-START_S=599.96
-CUT_DURATION_S=167.92
+START_S=START_FROM_DATASET
+CUT_DURATION_S=DURATION_FROM_DATASET
 mkdir -p "$CLIP_DIR"
 "$FFMPEG_PATH" -hide_banner -nostdin -v error \
   -ss "$START_S" -i "$SOURCE_VIDEO" -t "$CUT_DURATION_S" \
@@ -131,6 +107,12 @@ derivative separate from the established test input until its mapping is checked
 
 ## Verify media
 
+Before using a new or changed clip for model inference, also run the media module's
+[complete input preflight](../../../../modules/media/README.md#输入预检).
+It consumes the application's actual `FileFrameSource` to EOF and checks its
+frame-count and timestamp contract. This video-only check supplements, rather
+than replaces, the video/audio and source-mapping checks below.
+
 Inspect actual container streams and compare duration with the resolved source,
 allowing metadata rounding. Check for skipped fragments/truncation. Decode the
 entire file and retain errors/exit status; metadata or a thumbnail alone is not
@@ -146,10 +128,9 @@ timestamps to the nominal frame duration:
 shasum -a 256 "$MEDIA_DIR/source.mp4"
 ```
 
-The C1 trial produced false non-monotonic-DTS errors in the null output when it
-used nominal-frame timing; passthrough plus demux time base decoded cleanly,
-with the source hash unchanged. Investigate output time precision before
-altering source timestamps or dropping frames; preserve failed diagnostics.
+For timestamp-sensitive media, use passthrough frame timing and the demuxer time
+base in null-output checks. Investigate output time precision before altering
+source timestamps or dropping frames; preserve failed diagnostics.
 
 Successful decoding does not establish fixed framing or editorial continuity.
 Those require visual review before test clips or durations are approved.
