@@ -1,0 +1,8 @@
+{
+  "baseline": "2ccf5f60b7638774aded138a8af00801501a72f2",
+  "sha256": {
+    "AGENTS.md": "f52767088a6bda8b804e366ef64a325f29891377a85da45facb2304a70ca6b7f",
+    "docs/plan/roadmap.md": "89abb3f965656ecd6ba65adec73da9ad6b5a8fad8b0b769b176a97e86f4cb2db",
+    ".agents/skills/run-task-workflow/SKILL.md": "1669a98f801ad2141076967a8e2f0380b8d48ad4e994982935e4a91a07ddf06c"
+  }
+}

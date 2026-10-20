@@ -1,0 +1,29 @@
+{
+  "round": 2,
+  "test": "minimal actual startup; not independent acceptance success",
+  "runner": {
+    "name": "round2_startup",
+    "fork_turns": "none",
+    "model": "gpt-6-luna",
+    "reasoning_effort": "high"
+  },
+  "task": {
+    "path": "/private/tmp/smash-workflow-fixture-w_o8v2za/readme-validation",
+    "head": "20d43d12837c912a1b88ca190d2f0d80d06af897",
+    "branch": "codex/readme-validation",
+    "status": "",
+    "ai_task_dirs": [
+      "range-workflow"
+    ]
+  },
+  "primary": {
+    "path": "/private/tmp/smash-workflow-fixture-w_o8v2za/primary",
+    "head": "4310f4d9ffbe81b601c451a6cd6dc274e209d822",
+    "status": " M user-note.txt\n?? outputs/\n",
+    "remotes": ""
+  },
+  "preserved_user_files_sha256": {
+    "user-note.txt": "c8e5b381c926b15513e4ef898ccc3a44d7e07912b46835971a81fec22f3d2f22",
+    "outputs/keep.txt": "9fca64a39dac5edfc719f6257084fe604a1335669c873a047e3df3d363cca844"
+  }
+}

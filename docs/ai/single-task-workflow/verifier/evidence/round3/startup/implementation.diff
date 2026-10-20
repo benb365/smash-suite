@@ -1,0 +1,9 @@
+diff --git a/README.md b/README.md
+index 7917d2a..866bf05 100644
+--- a/README.md
++++ b/README.md
+@@ -13,1 +13,3 @@ from ranges import compact_ranges
+-运行验证：`python3 -m unittest -v`。
++## 验证
++
++运行 `python3 -m unittest -v`。

@@ -1,0 +1,7 @@
+diff --git a/docs/plan/roadmap.md b/docs/plan/roadmap.md
+index 1d4adff..9bb1257 100644
+--- a/docs/plan/roadmap.md
++++ b/docs/plan/roadmap.md
+@@ -89,1 +89,1 @@ flowchart BT
+-| 自动协作 workflow | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
++| 自动协作 workflow | benb365 + `codex/single-task-workflow` | 独立验收已通过，交付保留在本地任务分支，待人工确认 |

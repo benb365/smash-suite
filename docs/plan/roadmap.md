@@ -51,7 +51,7 @@ flowchart BT
     subgraph engineeringRow[" "]
     direction LR
     maintenance["仓库维护<br/><small>维护 skill 待引入</small>"]
-    workflow["自动协作<br/><small>长期协作与验收<br/>流程开发中</small>"]
+    workflow["自动协作<br/><small>单任务流程已验证<br/>人工验收已通过</small>"]
     performance["性能与部署<br/><small>基线测量推进中<br/>优化与选型待做</small>"]
     maintenance ~~~ workflow ~~~ performance
     end
@@ -61,12 +61,14 @@ flowchart BT
   foundation -->|帧与模型观测| algorithms
   algorithms -->|回合与内容结果| products
 
+  classDef complete fill:#dcfce7,stroke:#16a34a,color:#166534
   classDef partial fill:#fff4d6,stroke:#b7791f,color:#713f12
   classDef pending fill:#f1f5f9,stroke:#94a3b8,color:#475569
   classDef active fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
   class clip,capture,rally,stream,models,media,data partial
   class live,content,speed,maintenance pending
-  class workflow,performance active
+  class workflow complete
+  class performance active
   style products fill:#f8fafc,stroke:#94a3b8,color:#334155
   style algorithms fill:#f8fafc,stroke:#94a3b8,color:#334155
   style foundation fill:#f8fafc,stroke:#94a3b8,color:#334155
@@ -84,9 +86,10 @@ flowchart BT
 
 ## 进行中的任务
 
+采用单任务持续开发 skill 时，任务分支可在独立验收后标为“已完成，待人工确认”；develop 保持“进行中”，直到人工确认交付并集成后再标为“已完成”。
+
 | 任务 | 负责人 + 分支 | 当前进展 |
 | --- | --- | --- |
-| 自动协作 workflow | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
 | 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
 | Windows 后端适配 | cjfranklin1 + [codex/windows-runtime](https://github.com/benb365/smash-suite/tree/codex/windows-runtime) | 已开始推进，适配与验证结果待同步 |
 
@@ -131,7 +134,7 @@ P0：重要且紧急；P1：重要但不紧急；P2：当前阶段不重要且�
 
 | 任务 | 目标与范围 | 优先级 | 状态 |
 | --- | --- | --- | --- |
-| 自动协作 workflow | 建立 agents 长期协作流程，由独立的校验与检查 agents 验收，记录证据并更新进度 | P0-0 | 进行中 |
+| 自动协作 workflow | 建立已确认单任务的持续开发流程，经过独立功能、代码和文档验收；人工确认后再集成 develop | P0-0 | 已完成 |
 | 性能基线 | 固定当前版本和代表性输入，测量完整耗时、处理速度及内存等资源开销 | P1-0 | 进行中 |
 | 回合效果与场景适应 | 改善漏回合、边界缺失、间歇残留与主场选人，使用独立来源验证效果与适用范围 | P1-0 | 待办 |
 | 事件识别与内容评价 | 提供高光、全场最佳等剪辑所需的内容判别能力，含义与标准在需求中明确 | P1-0 | 待办 |

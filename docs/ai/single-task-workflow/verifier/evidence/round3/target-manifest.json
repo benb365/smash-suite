@@ -1,0 +1,9 @@
+{
+  "round": 3,
+  "head": "2ccf5f60b7638774aded138a8af00801501a72f2",
+  "sha256": {
+    ".agents/skills/run-task-workflow/SKILL.md": "ae20fba1d0df31cc4d2521b416d7c9eeb7bc991b5581740c0c22a1100e33133b",
+    "AGENTS.md": "609ccb96e791596d6c0dfa4187797ec0e1b5f85de05a9df50f67ea02229e6568",
+    "docs/plan/roadmap.md": "98a212bbb3e51956931c7f9a45a241fc3b965ed993a33fe0c2c0ea9b252465c7"
+  }
+}
