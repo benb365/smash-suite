@@ -54,8 +54,12 @@ def thumbnail(path: Path, destination: Path):
     import cv2
     with av.open(str(path)) as container:
         frame = next(container.decode(video=0))
-        if not cv2.imwrite(str(destination), frame.to_ndarray(format="bgr24")):
+        # OpenCV's narrow-path imwrite cannot open Chinese filenames on Windows.
+        # Let Python own the Unicode path and use OpenCV only for image encoding.
+        ok, encoded = cv2.imencode(destination.suffix or ".jpg", frame.to_ndarray(format="bgr24"))
+        if not ok:
             raise RuntimeError("无法生成球场选择画面。")
+        destination.write_bytes(encoded.tobytes())
 
 
 def selected_ranges(predictions, duration_ms: float, padding_ms: float = 0) -> list[list[float]]:
@@ -126,14 +130,17 @@ def render(source: Path, output: Path, ranges: list[list[float]], info: VideoInf
     command += ["-bsf:v", duration_bsf, "-movflags", "+faststart", "-progress", "pipe:1", "-nostats", str(temporary)]
     error_path = output.with_suffix(".ffmpeg.log")
     try:
-        with error_path.open("w") as errors, subprocess.Popen(command, stdout=subprocess.PIPE, stderr=errors, text=True) as process:
+        with error_path.open("w", encoding="utf-8") as errors, subprocess.Popen(
+                command, stdout=subprocess.PIPE, stderr=errors, text=True,
+                encoding="utf-8", errors="replace",
+                creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0) as process:
             for line in process.stdout:
                 if line.startswith("out_time_us="):
                     value = line.partition("=")[2].strip()
                     if value.isdigit():
                         progress(min(1, int(value) / 1000 / total_ms))
             if process.wait() != 0:
-                details = error_path.read_text()[-2000:]
+                details = error_path.read_text(encoding="utf-8", errors="replace")[-2000:]
                 raise RuntimeError(f"视频导出失败：{details}")
         # Decode the result before publishing it. A created file alone is not
         # evidence that the encoder finished or its output can be played.

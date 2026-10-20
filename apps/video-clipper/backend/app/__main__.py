@@ -21,7 +21,12 @@ def main():
     if not web_dir().is_dir():
         parser.error("缺少网页资源；开发时请先构建 frontend，安装版请重新安装。")
     with socket.socket() as listener:
-        listener.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+        if sys.platform == "win32":
+            # Windows SO_REUSEADDR can attach another live listener to this
+            # endpoint. Each app instance must exclusively own its local port.
+            listener.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+        else:
+            listener.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         try:
             listener.bind(("127.0.0.1", args.port))
         except OSError:

@@ -85,22 +85,26 @@ def test_runner_flushes_logs_keeps_pending_frames_and_limits_label_coverage(vfr_
 
 
 def test_runner_overload_and_invalid_media_save_explicit_failures(vfr_video, tmp_path, monkeypatch):
+    # Allow decoder startup before testing inference overload. Keep a margin
+    # for the coarse monotonic clock used by Windows Python 3.11.
+    lag_budget_s, inference_delay_s = .5, .6
+
     class SlowPredictor(Predictor):
         def __call__(self, frames):
-            time.sleep(.15)
+            time.sleep(inference_delay_s)
             return super().__call__(frames)
 
     runner = runner_module()
     monkeypatch.setattr(runner, "memory_sample", lambda predictor: dict(rss_mib=0))
     result = runner.run_file(vfr_video, tmp_path / "overload", SlowPredictor(), mode="realtime",
-                             config=FlightConfig(), limit_s=None, max_lag_s=.08, annotations=None)
+                             config=FlightConfig(), limit_s=None, max_lag_s=lag_budget_s, annotations=None)
     assert result["status"] == "failed"
     assert result["error"]["type"] == "InputOverload"
     assert result["predictions"] == []
-    assert result["totals"]["process_s"] >= .15
+    assert result["totals"]["process_s"] >= lag_budget_s
     performance = [json.loads(line) for line in (tmp_path / "overload" / "performance.jsonl").read_text().splitlines()]
     assert performance[-1]["frame_id"] == 2
-    assert performance[-1]["process_s"] >= .15
+    assert performance[-1]["process_s"] >= lag_budget_s
     broken = tmp_path / "broken.mp4"
     broken.write_bytes(b"not a video")
     result = runner.run_file(broken, tmp_path / "invalid", Predictor(), mode="offline",

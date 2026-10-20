@@ -3,8 +3,10 @@ from __future__ import annotations
 
 import asyncio
 import json
+import logging
 import os
 import secrets
+import subprocess
 import shutil
 import signal
 import sys
@@ -16,6 +18,9 @@ from fastapi import WebSocket
 
 from app.product_types import JobState, ProcessingTimings, ProcessRequest
 from app.runtime import Runtime
+
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -85,6 +90,21 @@ class Sessions:
             try:
                 if os.name == "posix":
                     os.killpg(process.pid, signal.SIGTERM)
+                elif os.name == "nt":
+                    # _run assigns this handle only after spawning our own
+                    # worker. Include its FFmpeg children, never other jobs.
+                    taskkill = (Path(os.environ.get("SystemRoot") or r"C:\Windows")
+                                / "System32" / "taskkill.exe")
+                    try:
+                        await asyncio.to_thread(
+                            subprocess.run, [str(taskkill), "/PID", str(process.pid), "/T", "/F"],
+                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                            creationflags=subprocess.CREATE_NO_WINDOW, check=True, timeout=5)
+                    except (OSError, subprocess.SubprocessError) as exc:
+                        logger.warning(
+                            "Could not terminate owned worker tree %s with %s: %s; "
+                            "terminating worker directly", process.pid, taskkill, exc)
+                        process.terminate()
                 else:
                     process.terminate()
             except ProcessLookupError:
@@ -153,16 +173,18 @@ class Sessions:
             command = ([sys.executable, "--worker"] if getattr(sys, "frozen", False)
                        else [sys.executable, "-m", "app.worker"])
             command.append(str(session.directory / "request.json"))
-            with (session.directory / "worker.log").open("w") as errors:
+            with (session.directory / "worker.log").open("w", encoding="utf-8") as errors:
                 session.process = await asyncio.create_subprocess_exec(
                     *command, stdout=asyncio.subprocess.PIPE, stderr=errors,
+                    env={**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8"},
+                    creationflags=subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0,
                     start_new_session=os.name == "posix")
                 session.spawned.set()
                 while line := await session.process.stdout.readline():
                     try:
                         event = json.loads(line)
                     except (ValueError, UnicodeDecodeError):
-                        errors.write(line.decode(errors="replace"))
+                        errors.write(line.decode("utf-8", errors="replace"))
                         continue
                     if event.get("type") == "progress":
                         if next_phase := event.get("phase"):
@@ -174,7 +196,7 @@ class Sessions:
             result_path = session.directory / "result.json"
             if not result_path.is_file():
                 raise RuntimeError(f"处理程序意外退出（{code}）。请重新开始。")
-            result = json.loads(result_path.read_text())
+            result = json.loads(result_path.read_text(encoding="utf-8"))
             if code != 0 or result.get("error"):
                 raise RuntimeError(result.get("error") or "视频处理失败。")
             output = session.directory / "output.mp4"

@@ -19,7 +19,7 @@ def main(request_path: str):
     # create an unbounded CPU thread pool alongside the GPU workload.
     for name in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS"):
         os.environ[name] = "1"
-    spec = json.loads(Path(request_path).read_text())
+    spec = json.loads(Path(request_path).read_text(encoding="utf-8"))
     directory = Path(spec["directory"])
     try:
         # Third-party imports otherwise write settings outside the workspace.

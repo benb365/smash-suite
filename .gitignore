@@ -13,9 +13,11 @@ __pycache__/
 .ruff_cache/
 *.egg-info/
 .venv/
+.venv-clip/
 venv/
 
 .runtime/
+ouputs/
 datasets/badminton-v1/local/
 
 

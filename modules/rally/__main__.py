@@ -23,7 +23,7 @@ def main():
     weights = ensure_models(required_models(args.scene))
     predictions, details = recognize(args.video, info, args.scene, weights,
         lambda stage, fraction: print(f"{fraction:.0%} {stage}", flush=True), args.output, court=court)
-    (args.output/"result.json").write_text(json.dumps(dict(predictions=predictions, **details), ensure_ascii=False, indent=2)+"\n")
+    (args.output/"result.json").write_text(json.dumps(dict(predictions=predictions, **details), ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

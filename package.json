@@ -5,9 +5,9 @@
   "description": "Local badminton video modules and applications.",
   "scripts": {
     "dev:frontend": "pnpm -C apps/video-clipper/frontend build",
-    "dev:backend": "cd apps/video-clipper/backend && ../../../.venv/bin/python -m app",
-    "build:product": ".venv/bin/python apps/video-clipper/packaging/build.py",
-    "test:backend": ".venv/bin/python -m pytest",
+    "dev:backend": "node scripts/python.mjs -m app",
+    "build:product": "node scripts/python.mjs apps/video-clipper/packaging/build.py",
+    "test:backend": "node scripts/python.mjs -m pytest",
     "typecheck:frontend": "pnpm -C apps/video-clipper/frontend exec tsc --noEmit",
     "docs:dev": "pnpm -C tools/docs-site dev",
     "docs:build": "pnpm -C tools/docs-site build",

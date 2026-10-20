@@ -39,7 +39,7 @@ def recognize(source: Path, info: VideoInfo, camera_type: str, weights: dict, pr
     started = time.monotonic()
     predictor = TrackNetPredictor(weights["ball_track.pt"], device=device, record_candidates=camera_type != "high")
     profile_path = Path(__file__).with_name("scenarios") / "profiles.json"
-    profiles = json.loads(profile_path.read_text())
+    profiles = json.loads(profile_path.read_text(encoding="utf-8"))
     warnings = []
     if (info.width, info.height) != (1920, 1080):
         warnings.append("识别按 1080p 参考画面计算，成片保持原尺寸；该尺寸的识别效果仍需检查。")

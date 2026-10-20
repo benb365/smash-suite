@@ -205,7 +205,8 @@ async function save() {
 }
 
 const initialized = initialize();
-view.nativeModulesMap = { Product: `${location.origin}/product-module.mjs` };
+// Windows can register .mjs as text/plain, which blocks browser ES imports.
+view.nativeModulesMap = { Product: `${location.origin}/product-module.js` };
 view.onNativeModulesCall = async (name: string, data: Record<string, unknown>) => {
   try {
     screen.error = '';

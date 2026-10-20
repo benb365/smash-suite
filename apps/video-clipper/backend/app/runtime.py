@@ -8,6 +8,34 @@ import tempfile
 from pathlib import Path
 
 
+def process_alive(pid: int) -> bool:
+    if os.name == "nt":
+        # os.kill(pid, 0) can terminate the target process on Windows.
+        # Query an existing process handle instead; do not signal it.
+        import ctypes
+        from ctypes import wintypes
+        kernel = ctypes.WinDLL("kernel32", use_last_error=True)
+        kernel.OpenProcess.argtypes = (wintypes.DWORD, wintypes.BOOL, wintypes.DWORD)
+        kernel.OpenProcess.restype = wintypes.HANDLE
+        kernel.GetExitCodeProcess.argtypes = (wintypes.HANDLE, ctypes.POINTER(wintypes.DWORD))
+        kernel.CloseHandle.argtypes = (wintypes.HANDLE,)
+        handle = kernel.OpenProcess(0x1000, False, pid)
+        if not handle:
+            return ctypes.get_last_error() != 87  # Invalid PID; access denied stays live.
+        try:
+            code = wintypes.DWORD()
+            return not kernel.GetExitCodeProcess(handle, ctypes.byref(code)) or code.value == 259
+        finally:
+            kernel.CloseHandle(handle)
+    try:
+        os.kill(pid, 0)
+        return True
+    except ProcessLookupError:
+        return False
+    except PermissionError:
+        return True
+
+
 def app_home() -> Path:
     override = os.environ.get("SMASH_SUITE_DATA_DIR")
     if override:
@@ -37,9 +65,8 @@ class Runtime:
         for path in self.work_root.glob("process-*-*"):
             try:
                 pid = int(path.name.split("-")[1])
-                os.kill(pid, 0)
-            except ProcessLookupError:
-                shutil.rmtree(path, ignore_errors=True)
+                if not process_alive(pid):
+                    shutil.rmtree(path, ignore_errors=True)
             except (ValueError, PermissionError):
                 continue
         self.work = Path(tempfile.mkdtemp(prefix=f"process-{os.getpid()}-", dir=self.work_root))
