@@ -1,6 +1,6 @@
 # 项目文档
 
-[项目介绍与架构](../README.md) · [开发环境](../README.md#开发工作流) · [当前进展与计划](plan/roadmap.md)
+[项目介绍与架构](../README.md) · [开发环境](../README.md#开发工作流) · [当前进展与计划](plan/roadmap.md) · [想法与灵感](plan/ideas.md)
 
 ## 按任务查阅
 

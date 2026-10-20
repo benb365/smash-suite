@@ -105,6 +105,7 @@ export default withMermaid(defineConfig({
       ] },
       { text: '项目计划', items: [
         page('路线图', 'docs/plan/roadmap.md'),
+        page('想法与灵感', 'docs/plan/ideas.md'),
       ] },
     ],
     outline: { label: '本页目录', level: [2, 3] },
