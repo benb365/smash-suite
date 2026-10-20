@@ -51,8 +51,8 @@ flowchart BT
     subgraph engineeringRow[" "]
     direction LR
     maintenance["仓库维护<br/><small>维护 skill 待引入</small>"]
-    workflow["自动协作<br/><small>长期协作与验收<br/>流程待建立</small>"]
-    performance["性能与部署<br/><small>当前基线待测<br/>优化与选型待做</small>"]
+    workflow["自动协作<br/><small>长期协作与验收<br/>流程开发中</small>"]
+    performance["性能与部署<br/><small>基线测量推进中<br/>优化与选型待做</small>"]
     maintenance ~~~ workflow ~~~ performance
     end
   end
@@ -63,8 +63,10 @@ flowchart BT
 
   classDef partial fill:#fff4d6,stroke:#b7791f,color:#713f12
   classDef pending fill:#f1f5f9,stroke:#94a3b8,color:#475569
+  classDef active fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
   class clip,capture,rally,stream,models,media,data partial
-  class live,content,speed,maintenance,workflow,performance pending
+  class live,content,speed,maintenance pending
+  class workflow,performance active
   style products fill:#f8fafc,stroke:#94a3b8,color:#334155
   style algorithms fill:#f8fafc,stroke:#94a3b8,color:#334155
   style foundation fill:#f8fafc,stroke:#94a3b8,color:#334155
@@ -80,9 +82,13 @@ flowchart BT
 
 模块入口：[视频剪辑](../../apps/video-clipper/README.md) · [Android 采集](../../apps/android-capture/README.md) · [回合识别](../../modules/rally/README.md) · [模型推理](../../modules/models/README.md) · [媒体读写](../../modules/media/README.md) · [数据与评估](../../datasets/README.md)。详细进展与证据由各目录维护。
 
-## 当前重点
+## 进行中的任务
 
-暂无登记的进行中任务。
+| 任务 | 负责人 + 分支 | 当前进展 |
+| --- | --- | --- |
+| 自动协作 workflow | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
+| 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
+| Windows 后端适配 | cjfranklin1 + [codex/windows-runtime](https://github.com/benb365/smash-suite/tree/codex/windows-runtime) | 已开始推进，适配与验证结果待同步 |
 
 认领任务时在此登记**任务、负责人或可定位的会话、当前进展**，并同步任务表状态；结束后移除此处记录。待领取工作统一查看任务表。
 
@@ -92,14 +98,14 @@ flowchart BT
 
 ```mermaid
 flowchart TD
-  baseline["性能基线"] --> optimize["性能优化"]
-  optimize --> stream["流式回合识别"]
-  stream --> live["实时视频处理"]
-  baseline --> hardware["后端硬件选型"]
+  baseline["性能基线<br/><small>P1-0</small>"] --> optimize["性能优化<br/><small>P1-1</small>"]
+  optimize --> stream["流式回合识别<br/><small>P2-0</small>"]
+  stream --> live["实时视频处理<br/><small>P2-1</small>"]
+  baseline --> hardware["后端硬件选型<br/><small>P1-2</small>"]
   optimize --> hardware
   hardware -->|配置满足目标负载| live
 
-  content["事件识别与内容评价"] --> highlights["高光集锦与全场最佳"]
+  content["事件识别与内容评价<br/><small>P1-0</small>"] --> highlights["进阶视频剪辑<br/><small>高光集锦与全场最佳 · P1-1</small>"]
 
   style baseline fill:#f1f5f9,stroke:#94a3b8,color:#334155
   style optimize fill:#f1f5f9,stroke:#94a3b8,color:#334155
@@ -117,22 +123,27 @@ flowchart TD
 
 ## 项目任务与优先级
 
-P0：重要且紧急；P1：重要但不紧急；P2：当前阶段不重要且不紧急，排后推进；P3：已记录，近期不安排。同级任务按表格顺序和依赖就绪情况选择，避免重复认领。
+P0：重要且紧急；P1：重要但不紧急；P2：当前阶段不重要且不紧急，排后推进；P3：已记录，近期不安排。
+
+同一 P 档内，`-0` 表示没有同档前置任务；后续编号为同档依赖层，等于同档前置任务最大编号加一，不跨 P 档累计。编号帮助选择任务，不替代依赖检查。领取前须确认全部跨档和同档前置任务已完成，且任务未被他人认领。
+
+任务名称以斜体标注时，表示所需前置结果尚不可用，当前不能开始开发；前置结果可用后移除斜体。
 
 | 任务 | 目标与范围 | 优先级 | 状态 |
 | --- | --- | --- | --- |
-| 仓库维护 skill | 引入清理与重构 harness（辅助检查、清理和验证的机制），定期维护代码、架构和文档，保持简洁规范 | P0 | 待办 |
-| 自动协作 workflow | 建立 agents 长期协作流程，由独立的校验与检查 agents 验收，记录证据并更新进度 | P0 | 待办 |
-| 性能基线 | 固定当前版本和代表性输入，测量完整耗时、处理速度及内存等资源开销 | P1 | 待办 |
-| 性能优化 | 根据基线降低处理成本，验证速度收益及识别效果变化，为后续流式处理提供基础 | P1 | 待办 |
-| 后端硬件选型 | 依据实测、目标负载及优化结果比较硬件，确认适用的后端配置 | P1 | 待办 |
-| 回合效果与场景适应 | 改善漏回合、边界缺失、间歇残留与主场选人，使用独立来源验证效果与适用范围 | P1 | 待办 |
-| 视频剪辑 | 完成现有剪辑的完整验证与新版交付，支持对战集合、高光集锦、全场最佳等目的 | P1 | 待办 |
-| 事件识别与内容评价 | 提供高光、全场最佳等剪辑所需的内容判别能力，含义与标准在需求中明确 | P1 | 待办 |
-| 流式回合识别 | A/C/D 持续接收视频并输出回合；C/D 允许有限延迟，使用后续到达的画面确认结果 | P2 | 待办 |
-| 实时视频处理 | 连通真实拍摄、传输、持续分析与结果访问，含 Android 真机采集、上传可靠性和整体延迟验证 | P2 | 待办 |
-| 杀球球速侦测 | 识别杀球并输出球速，确认可测条件、准确性与适用范围 | P2 | 待办 |
-| 数据管理 | 管理素材、标注、分析结果和成片的组织、留存与清理，覆盖研发材料与产品数据 | P3 | 待办 |
-| 发行与商用 | 处理产品分发、签名公证、授权审查、商用交付与平台支持 | P3 | 待办 |
+| 自动协作 workflow | 建立 agents 长期协作流程，由独立的校验与检查 agents 验收，记录证据并更新进度 | P0-0 | 进行中 |
+| 性能基线 | 固定当前版本和代表性输入，测量完整耗时、处理速度及内存等资源开销 | P1-0 | 进行中 |
+| 回合效果与场景适应 | 改善漏回合、边界缺失、间歇残留与主场选人，使用独立来源验证效果与适用范围 | P1-0 | 待办 |
+| 事件识别与内容评价 | 提供高光、全场最佳等剪辑所需的内容判别能力，含义与标准在需求中明确 | P1-0 | 待办 |
+| *性能优化* | 根据基线降低处理成本，验证速度收益及识别效果变化，为后续流式处理提供基础 | P1-1 | 待办 |
+| *进阶视频剪辑* | 支持高光集锦、全场最佳等内容筛选与成片生成，具体范围与验收另行规划 | P1-1 | 待办 |
+| *后端硬件选型* | 依据实测、目标负载及优化结果比较硬件，确认适用的后端配置 | P1-2 | 待办 |
+| 仓库维护 skill | 引入清理与重构 harness（辅助检查、清理和验证的机制），定期维护代码、架构和文档，保持简洁规范 | P2-0 | 待办 |
+| *流式回合识别* | A/C/D 持续接收视频并输出回合；C/D 允许有限延迟，使用后续到达的画面确认结果 | P2-0 | 待办 |
+| 杀球球速侦测 | 识别杀球并输出球速，确认可测条件、准确性与适用范围 | P2-0 | 待办 |
+| Windows 后端适配 | LTE 工作：适配并验证 Windows 下的后端运行 | P2-0 | 进行中 |
+| *实时视频处理* | 连通真实拍摄、传输、持续分析与结果访问，含 Android 真机采集、上传可靠性和整体延迟验证 | P2-1 | 待办 |
+| 数据管理 | 管理素材、标注、分析结果和成片的组织、留存与清理，覆盖研发材料与产品数据 | P3-0 | 待办 |
+| 发行与商用 | 处理产品分发、签名公证、授权审查、商用交付与平台支持 | P3-0 | 待办 |
 
 必要的素材、标注、测试和评估随所属需求推进，不因数据管理排后而推迟。独立验收 agent 与开发 agent 分工，不能替代算法验收所需的独立来源数据。
