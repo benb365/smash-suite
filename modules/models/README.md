@@ -22,4 +22,8 @@
 .venv/bin/python -m pytest modules/models
 ```
 
-共同环境要求 Python 3.9+。模块导入、自动测试和真实模型推理的验证范围及当前进度见[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。
+共同环境要求 Python 3.9+。
+
+## 当前进展
+
+整理后模块导入和既有自动测试通过；真实模型推理尚未在迁移后的环境中复核。入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。

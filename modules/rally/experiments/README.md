@@ -11,7 +11,7 @@
 
 高视角用例若只使用完整缓存中的一段，需声明 `window`：`source_frame_start` 为起始帧，`source_frame_end_exclusive` 为不包含的结束帧，`clip_time_start_ms` 为片段在缓存中的起始时间。回放先校验完整缓存，再按窗口截取，将帧号、时间和观测可用时间归零；不修改原缓存。没有 `window` 时使用全部输入。A2-01 使用帧 `[0, 2421)`、起始时间 0 毫秒；A2-02 使用帧 `[2472, 4500)`、起始时间 98880 毫秒，沿用原试验的截取范围。
 
-验证进度见[路线图](../../../docs/plan/roadmap.md#整理后的快速检查)。历史试验脚本保留在 `backup/module-reorganization-20261019/backend/tests/rally_benchmark/`；旧路径与新位置的对应关系见[迁移记录](../../../backup/docs/records/module-reorganization-20261019.json)。
+模块当前进展见[回合识别说明](../README.md#当前进展)。历史试验脚本保留在 `backup/module-reorganization-20261019/backend/tests/rally_benchmark/`；旧路径与新位置的对应关系见[迁移记录](../../../backup/docs/records/module-reorganization-20261019.json)。
 
 ## 实验报告
 

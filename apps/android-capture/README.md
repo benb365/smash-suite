@@ -42,6 +42,10 @@ adb install -r dist/smash-capture-0.1.0-arm64-release.apk
 密钥和构建缓存保存在忽略管理的 `android/.android-home/`、`android/.gradle-home/`。
 需要可调试版本时运行 `./build.sh debug`。APK、缓存和依赖均不提交 Git。
 
+## 当前进展
+
+接收端启动与既有自动测试通过。Gradle 离线任务仅完成入口解析，未生成或安装 APK；Android 真机采集与上传验证尚未完成。入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
+
 ## 启动接收端
 
 需要 Python 3.9+，可使用项目共同环境。接收与分析索引仅用标准库；HLS 还需要 FFmpeg。

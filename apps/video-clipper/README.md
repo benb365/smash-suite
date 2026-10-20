@@ -32,7 +32,11 @@
 
 ## 验证记录
 
-产品验证证据保存在 `reports/`：[独立包验收](reports/product-acceptance-20261019.json)、[阶段耗时验证](reports/product-timings-20261019.json)。记录对应当时的包、算法与环境，不自动代表后续源码已验证；当前进度以[路线图](../../docs/plan/roadmap.md)为准。
+产品验证证据保存在 `reports/`：[独立包验收](reports/product-acceptance-20261019.json)、[阶段耗时验证](reports/product-timings-20261019.json)。记录对应当时的包、算法与环境，不自动代表后续源码已验证。
+
+## 当前进展
+
+旧测试包曾完成验收；整理后服务与首页入口检查通过。迁移后的源码尚未完成真实模型识别、成片导出、耗时显示的完整浏览器复核或重新打包验证。入口检查范围见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)，产品历史证据见上方报告。
 
 ## 开发
 
@@ -53,4 +57,4 @@ pnpm run typecheck:frontend
 pnpm run build:product
 ```
 
-打包仅支持在 macOS Apple 芯片上执行，输出到根目录 `dist/`。源码已接入新版 C/D；入口检查与完整产品验证分别记录，当前进度见[路线图](../../docs/plan/roadmap.md#整理后的快速检查)。已安装产品的模型与工作目录仍位于自己的用户数据目录。
+打包仅支持在 macOS Apple 芯片上执行，输出到根目录 `dist/`。源码已接入新版 C/D；入口检查与完整产品验证分别记录。已安装产品的模型与工作目录仍位于自己的用户数据目录。

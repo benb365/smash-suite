@@ -60,7 +60,11 @@ PY
 
 ## 实验记录
 
-文件输入、实时模拟、持续运行和分辨率对照的历史实测见[输入模块实验](experiments/realtime-input.md)。记录对应当时的环境和代码，当前验证状态以路线图为准。
+文件输入、实时模拟、持续运行和分辨率对照的历史实测见[输入模块实验](experiments/realtime-input.md)。记录对应当时的环境和代码。
+
+## 当前进展
+
+文件读写、逐帧输入和区间导出已实现；既有自动检查通过。真实摄像头或网络流适配尚未接入，目标负载下的长片性能仍待验证。整理后的入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
 
 ## 测试
 
@@ -68,4 +72,4 @@ PY
 .venv/bin/python -m pytest modules/media/tests
 ```
 
-依赖 PyAV、OpenCV、NumPy、Pydantic；编码使用系统 FFmpeg 或 `imageio-ffmpeg`，也可通过 `SMASH_SUITE_FFMPEG` 指定程序。验证范围及当前进度见[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。
+依赖 PyAV、OpenCV、NumPy、Pydantic；编码使用系统 FFmpeg 或 `imageio-ffmpeg`，也可通过 `SMASH_SUITE_FFMPEG` 指定程序。
