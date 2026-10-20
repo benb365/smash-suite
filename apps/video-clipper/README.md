@@ -38,6 +38,8 @@
 
 按[项目首页](../../README.md#开发工作流)安装共同环境后，在仓库根目录执行：
 
+Windows 的环境安装、CUDA 检查及启动方式见 [Windows 开发说明](windows.md)。当前 Windows 交付为源码运行，独立发行包仍按下文的平台要求构建。
+
 ```sh
 pnpm run dev:frontend
 pnpm run dev:backend
@@ -48,7 +50,7 @@ pnpm run dev:backend
 `frontend/` 是 ReactLynx 网页，`backend/app/` 管理接口、标签页会话和工作进程，`packaging/` 提供打包入口。识别调用[回合模块](../../modules/rally/README.md)，模型和音视频处理来自基础模块。
 
 ```sh
-.venv/bin/python -m pytest apps/video-clipper/backend/tests
+node scripts/python.mjs -m pytest apps/video-clipper/backend/tests
 pnpm run typecheck:frontend
 pnpm run build:product
 ```

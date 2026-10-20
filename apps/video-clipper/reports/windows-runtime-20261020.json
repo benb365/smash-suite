@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-20",
+  "repository": "benb365/smash-suite",
+  "branch": "codex/windows-runtime",
+  "upstream_base": "03a55421724056e23eb776503ad7e2337f9828cd",
+  "validated_code_commits": ["769c754", "7b40700"],
+  "environment": {
+    "os": "Windows AMD64, build 26300",
+    "python": "3.11.0",
+    "node": "26.4.0",
+    "pnpm": "9.15.9 (invoked through npx)",
+    "gpu": "NVIDIA GeForce RTX 3060 Ti, 8 GiB",
+    "torch": "2.8.0+cu126",
+    "torchvision": "0.23.0+cu126",
+    "cuda_runtime": "12.6",
+    "numpy": "1.26.4",
+    "opencv": "4.11.0.86",
+    "av": "14.2.0",
+    "scipy": "1.13.1",
+    "ultralytics": "8.4.56",
+    "imageio_ffmpeg": "0.6.0"
+  },
+  "environment_reuse": {
+    "interpreter": "Existing .venv-clip from the previous local integration run",
+    "editable_install": "Still points to the previous checkout; no reinstall or wheel download performed for this validation",
+    "import_isolation": "SMASH_SUITE_PYTHON selects the interpreter; scripts/python.mjs puts this checkout and its backend first on PYTHONPATH",
+    "verified_module_locations": [
+      "modules/rally/recognize.py",
+      "apps/video-clipper/backend/app/sessions.py",
+      "apps/video-clipper/backend/app/runtime.py",
+      "modules/media/types.py"
+    ],
+    "all_verified_imports_from_organized_checkout": true
+  },
+  "current_branch_checks": {
+    "backend": {
+      "command": "npx --yes pnpm@9.15.9 run test:backend",
+      "passed": 99,
+      "failed": 0,
+      "duration_s": 8.26,
+      "warnings": ["Starlette TestClient uses the deprecated anyio.abc.BlockingPortal alias"],
+      "earlier_attempts": [
+        "Initial suite: 98 passed, 1 failed. The existing realtime overload test exceeded its 80 ms budget before inference while dependencies were installing.",
+        "Isolated rerun: a 150 ms sleep was measured as 141 ms by the Windows Python 3.11 monotonic clock, failing an exact lower-bound assertion."
+      ],
+      "test_portability_fix": "The same overload test now allows 500 ms startup lag and injects 600 ms inference delay; recorded processing must still exceed the lag budget, fail with InputOverload, publish no predictions and retain the frame-2 performance log. Production timing and algorithms are unchanged."
+    },
+    "frontend": {
+      "frozen_install": "passed; all workspace packages retained",
+      "typecheck": "passed",
+      "static_build": "passed; Rspeedy and Rsbuild",
+      "warnings": [
+        "Node module.register deprecation",
+        "Browserslist dataset age",
+        "Lynx build emitted listener/ObjectRef warnings"
+      ]
+    },
+    "runtime": {
+      "pip_check": "No broken requirements found",
+      "windows_constraints": "NumPy 1.26.4 and OpenCV 4.11.0.86 record the pair used in these checks; common dependency pins remain in pyproject.toml",
+      "constraint_resolver_dry_run": "passed in the existing environment; pip would only install this checkout as smash-suite 0.2.0, with no dependency replacements. No environment mutation performed.",
+      "cuda_matrix_multiply": "passed on cuda:0",
+      "torchvision_cuda_nms": "passed on cuda:0",
+      "launcher": "Verified explicit interpreter, Unicode and spaced arguments, application imports and invalid-interpreter failure"
+    },
+    "http_smoke": {
+      "actual_app_entrypoint": "python -m app --no-browser --port 0",
+      "health": "passed; status ok, version 0.2.0",
+      "built_static_page": "HTTP 200",
+      "bridge_module": "HTTP 200; Content-Type application/javascript",
+      "exclusive_port": "A second SO_REUSEADDR socket cannot bind the live endpoint",
+      "duplicate_instance": "Rejected with exit code 2 and the port-in-use error",
+      "real_A1_upload": "passed; Chinese filename, 1920x1080, 168000 ms, original audio detected",
+      "thumbnail": "HTTP 200; valid JPEG",
+      "session_deletion": "HTTP 204",
+      "cleanup": "Only this smoke server's owned process tree was stopped"
+    },
+    "windows_processes": {
+      "owned_tree_cancel": "passed; venv redirector, actual worker and sleep descendants exited, including 6 owned processes",
+      "unrelated_process": "Preserved during both cancellation cases",
+      "missing_taskkill_fallback": "passed for a single actual Python worker; cancellation completed and busy was cleared",
+      "cleanup": "All manually created processes exited",
+      "scope": "Real Sessions.start/_run/cancel lifecycle; no model inference or encoding in this check"
+    },
+    "diff_check": "passed"
+  },
+  "previous_local_integration": {
+    "date": "2026-10-19",
+    "scope": "Historical Windows run in SoloShuttlePose with local sample UI, persistent output and extra diagnostics. Those additions are excluded from this branch; these are not new end-to-end results for the organized branch.",
+    "model_code": "All 15 tracked modules/models files were compared with upstream_base and are unchanged",
+    "execution": "TrackNet and YOLO use CUDA; personal-view pose estimation and libx264 encoding use CPU",
+    "samples": [
+      {"id": "A1", "scene": "high", "input_s": 168.0, "output_s": 46.44, "output_frames": 1161, "rallies": 5, "has_audio": true},
+      {"id": "C1", "scene": "courtside", "input_s": 165.102, "output_s": 54.231, "output_frames": 1625, "rallies": 5, "has_audio": true},
+      {"id": "D1", "scene": "personal", "input_s": 150.9890625, "output_s": 65.9558125, "output_frames": 1977, "rallies": 7, "has_audio": true}
+    ],
+    "known_recognition_limits": "One short C1 rally was missed; D1's first rally lost about 2.9 seconds. This compatibility change does not claim an accuracy improvement."
+  },
+  "limits": [
+    "Windows source runtime only; no Windows EXE or installer was built.",
+    "macOS and Linux were not executed in this validation.",
+    "The organized branch was not rerun through all three complete real-model clips; full-model results above are explicitly historical.",
+    "If the system taskkill tool cannot run, direct-worker termination is a fallback; cleanup of every venv-redirector descendant is not guaranteed or verified in that failure case.",
+    "MP4 edit-list certification is conservative, supports H.264/HEVC with a fixed PTS translation and scans both packet tables on a frame-count mismatch; complex edits remain errors."
+  ]
+}

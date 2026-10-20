@@ -1,0 +1,4 @@
+# Verified together on Windows AMD64 / Python 3.11.
+# Keep the native NumPy/OpenCV pair reproducible; other pins live in pyproject.toml.
+numpy==1.26.4
+opencv-python==4.11.0.86

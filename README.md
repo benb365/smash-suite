@@ -53,6 +53,8 @@ Smash Suite 是一个本地优先的羽毛球视频处理套件。
 
 主项目的模型、算法和应用后端共用开发环境，需要 Python 3.9+（建议使用 3.11）、pip 21.3+、Node.js 20.19+ 和 pnpm 9+。在仓库根目录执行：
 
+Windows 开发者请使用 [Windows 环境与启动说明](apps/video-clipper/windows.md)，其中包含 PowerShell 命令和已验证的 NVIDIA 环境。以下命令用于 macOS / Linux：
+
 ```sh
 python3 -m venv .venv
 .venv/bin/python -m pip install 'pip>=21.3'
