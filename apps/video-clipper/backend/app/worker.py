@@ -37,9 +37,15 @@ def main(request_path: str):
         weights = ensure_models(required_models(options.camera_type), Path(spec["models"]),
                                 lambda stage, fraction: event(stage, .08 * fraction))
         from modules.rally.recognize import recognize
+        pose_options = {}
+        if device := os.environ.get("SMASH_SUITE_POSE_DEVICE"):
+            pose_options["pose_device"] = device
+        if batch_size := os.environ.get("SMASH_SUITE_POSE_BATCH_SIZE"):
+            pose_options["pose_batch_size"] = int(batch_size)
         event("正在识别对打回合", .08, phase="recognition")
         predictions, details = recognize(directory / "source.mp4", info, options.camera_type, weights,
-                                         lambda stage, fraction: event(stage, .08 + .72 * fraction), directory, court=options.court)
+                                         lambda stage, fraction: event(stage, .08 + .72 * fraction), directory,
+                                         court=options.court, **pose_options)
         ranges = selected_ranges(predictions, info.duration_ms, padding_ms=500)
         event("正在生成带原声音的成片", .8, phase="rendering")
         duration_ms = render(directory / "source.mp4", directory / "output.mp4", ranges, info, options.quality,

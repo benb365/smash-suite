@@ -23,9 +23,9 @@ def main():
         model = PersonDetector(device=args.device)
     else:
         from .keypoint_rcnn import PoseEstimator
-        model = PoseEstimator()  # The recorded pose checkpoint runs on CPU.
+        model = PoseEstimator(device=args.device)
     pending = []
-    with FileFrameSource(args.video, limit_s=args.limit_s) as frames, args.output.open("w") as output:
+    with FileFrameSource(args.video, limit_s=args.limit_s) as frames, args.output.open("w", encoding="utf-8") as output:
         for frame in frames:
             if args.model == "tracknet":
                 pending.append(frame)

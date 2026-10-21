@@ -1,0 +1,349 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-21",
+  "scope": {
+    "source_id": "D1",
+    "scene": "personal",
+    "full_pipeline_pairs": 1,
+    "fresh_process_per_run": true,
+    "same_input_and_cached_models": true,
+    "quality": "balanced",
+    "padding_ms": 500,
+    "pose_batch_size": 1,
+    "preparation_comparable": false,
+    "reason": "Different drivers; baseline imports torch and processing modules before starting its timer. Single paired measurement, no distribution or independent accuracy acceptance.",
+    "http_default_cuda_worker_acceptance": "passed in original integrated workspace; recorded separately from paired benchmark"
+  },
+  "evidence": {
+    "baseline-D1/performance.json": {
+      "sha256": "bfdc8e43248b458bcb8293b9e819e8262265796d628396a56829bea05ac7d9c6"
+    },
+    "cuda-b1-D1/performance.json": {
+      "sha256": "8afe4982513940801e75b1b02fa977929c0dc5f3e998519f5f43bcae3ebb9adc"
+    },
+    "comparison.json": {
+      "sha256": "125cfc86cc0d65629dbce235eec76ecc343817f9a06f2d5eda5a6e2241634628"
+    },
+    "pose-probe/summary.json": {
+      "sha256": "805eca1332515daa5ef092196480ea6b03c28ba750a92f605e383c89d687f249"
+    },
+    "app-default-D1/verification.json": {
+      "sha256": "324f56e35c86754da01807d11ed80f3a5da0e1cf268084546ce91d804c608c3b"
+    },
+    "app-default-D1/final-state.json": {
+      "sha256": "1e7ee426f0737ca79f70fa3ea24c76d134900c6f04312f379862cce698fe7911"
+    }
+  },
+  "source": {
+    "relative_path": "datasets/badminton-v1/local/clip-app/D1/clip.mp4",
+    "sha256": "897858a17a3f8380f6baff726e6eff77fe0e891a49b4fa9fc6176f1e97de722b",
+    "bytes": 40052580,
+    "duration_ms": 150989.0625,
+    "width": 1920,
+    "height": 1080
+  },
+  "code_identity": {
+    "head": "f4601789d6135ffbbb103650d4696274e8d190d8",
+    "baseline": {
+      "source": "frozen clean f460178 checkout with passive timing wrappers",
+      "core_sha256_post_run": {
+        "modules/rally/recognize.py": "df06079b13903751a1763d1da05cbf80510d4632c30b699e3905c74615846b54",
+        "modules/models/keypoint_rcnn/__init__.py": "dea0a8b24abe44df315dd50da64b2868001c6ff88e7e135a449fb17852a47518",
+        "modules/models/tracknet/predictor.py": "b0315a8673575ab3c284a20ea4dffdb5c90ce5d61ab44e454966ccc50692c2db",
+        "modules/models/yolo11n/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "modules/media/video.py": "e1bf70a7ca42ef8e37136014ffd0efdb7dba9d647da8d730df12ddf99a644e24",
+        "modules/media/video_input.py": "91ac4b0a3f3fa67e08ef15f1646723e9ca60ef0e1c94d1d2c6642a91c16a9f60",
+        "modules/rally/scenarios/profiles.json": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23"
+      },
+      "runtime_start_end_hash_guard": false,
+      "driver": ".runtime/run_baseline.py",
+      "driver_sha256": "368d2bcda7ab3a1506a11375759422f2100bfac92becc7c1ad7afb8b8be63a3b"
+    },
+    "cuda": {
+      "source": "uncommitted working tree at recorded HEAD",
+      "core_sha256": {
+        "modules/rally/recognize.py": "3d6be9fadf0acda1bfce703b83afbfae269718c71ff2fbecff861e614ef5dd08",
+        "modules/models/keypoint_rcnn/__init__.py": "f3e5e0402bdedfa2b2068f4825b83020e141f874faceb8ae243eca2308a2d3fb",
+        "modules/models/tracknet/predictor.py": "b0315a8673575ab3c284a20ea4dffdb5c90ce5d61ab44e454966ccc50692c2db",
+        "modules/models/yolo11n/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "modules/media/video.py": "e1bf70a7ca42ef8e37136014ffd0efdb7dba9d647da8d730df12ddf99a644e24",
+        "modules/media/video_input.py": "91ac4b0a3f3fa67e08ef15f1646723e9ca60ef0e1c94d1d2c6642a91c16a9f60",
+        "modules/rally/scenarios/profiles.json": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23"
+      },
+      "core_sources_unchanged_during_run": true,
+      "tracked_changes_at_start": [
+        "M apps/video-clipper/backend/app/worker.py",
+        " M docs/plan/roadmap.md",
+        " M modules/models/__main__.py",
+        " M modules/models/keypoint_rcnn/README.md",
+        " M modules/models/keypoint_rcnn/__init__.py",
+        " M modules/rally/README.md",
+        " M modules/rally/__main__.py",
+        " M modules/rally/recognize.py"
+      ],
+      "driver": "scripts/benchmark_clipper.py",
+      "driver_sha256_during_run": "1b772735bc78060d9dc9fb53d1e05561346fdf1d450bde46c54befed36c6c92f"
+    },
+    "note": "Driver hash is the captured measured version; subsequent validation-only edits are not this measured snapshot."
+  },
+  "environment": {
+    "hardware": {
+      "platform": "Windows-10-10.0.26300-SP0",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+      "logical_cpu_count": 20,
+      "cuda_available": true,
+      "cuda_runtime": "12.6",
+      "threads_before": {
+        "torch_intraop": 1,
+        "torch_interop": 12,
+        "opencv": 20,
+        "environment": {
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1"
+        }
+      },
+      "gpus": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce RTX 3060 Ti",
+          "total_memory_bytes": 8589410304,
+          "compute_capability": [
+            8,
+            6
+          ]
+        }
+      ],
+      "threads_after_recognition": {
+        "torch_intraop": 4,
+        "torch_interop": 12,
+        "opencv": 1,
+        "environment": {
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1"
+        }
+      },
+      "cpu_name": "12th Gen Intel(R) Core(TM) i7-12700F",
+      "physical_core_count": 12,
+      "cpu_identity_source": "WMI, independently checked by primary agent"
+    },
+    "versions": {
+      "python": "3.11.0",
+      "torch": "2.8.0+cu126",
+      "torchvision": "0.23.0+cu126",
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "av": "14.2.0",
+      "scipy": "1.13.1",
+      "ultralytics": "8.4.56",
+      "imageio-ffmpeg": "0.6.0",
+      "ffmpeg": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers"
+    }
+  },
+  "models": {
+    "ball_track.pt": {
+      "bytes": 45400030,
+      "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+    },
+    "yolo11n.pt": {
+      "bytes": 5613764,
+      "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+    },
+    "pose_kpRCNN.pth": {
+      "bytes": 237101765,
+      "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+    }
+  },
+  "model_source_registry": "modules/models/assets.py (pinned public URLs and expected hashes)",
+  "timings_s": {
+    "cpu_pose_b1": {
+      "preparation_driver_specific": 8.27568110008724,
+      "recognition": 1385.8345434999792,
+      "render": 39.63914179999847,
+      "recognition_plus_render": 1425.4736852999777,
+      "pose_call_wall": 1001.5668173036538,
+      "pipeline_driver_specific": 1433.749366400065
+    },
+    "cuda_pose_b1": {
+      "preparation_driver_specific": 3.3800871000858024,
+      "recognition": 434.8225260999752,
+      "render": 35.360372700029984,
+      "recognition_plus_render": 470.1828988000052,
+      "pose_call_wall": 73.20033779845107,
+      "pipeline": 473.5632588000735,
+      "extra_validation_and_reference": 27.389105699956417,
+      "total_including_extra_validation": 500.9594913000474
+    },
+    "recognition_plus_render_speedup": 3.0317429428804266,
+    "pose_call_wall_speedup": 13.682543652480891,
+    "cuda_hotspots": {
+      "tracknet_wall": 162.38089710182976,
+      "tracknet_preprocess": 89.38419699843507,
+      "tracknet_inference_and_transfer": 65.23838910157792,
+      "tracknet_point_decode": 5.716263498645276,
+      "farneback_body_motion": 129.08436309883837,
+      "person_tracking": 6.4185971999540925
+    },
+    "hotspot_accounting": "Nested timers are not additive; TrackNet subphases are within TrackNet wall and decode producer timings overlap consumers."
+  },
+  "cuda_memory": {
+    "scope": "Dedicated-process PyTorch counters only; excludes CUDA context and other whole-card allocations. No memory-saving claim.",
+    "baseline_peak_allocated_bytes": 426849792,
+    "baseline_peak_reserved_bytes": 645922816,
+    "cuda_peak_allocated_bytes": 426849792,
+    "cuda_peak_reserved_bytes": 668991488
+  },
+  "result_comparison": {
+    "same_source_sha256": true,
+    "same_scene": true,
+    "reference_unchanged": true,
+    "raw_intervals": {
+      "current_count": 7,
+      "reference_count": 7,
+      "same_order_exact": true,
+      "max_abs_boundary_delta_ms": 0.0
+    },
+    "export_intervals": {
+      "current_count": 7,
+      "reference_count": 7,
+      "same_order_exact": true,
+      "max_abs_boundary_delta_ms": 0.0
+    },
+    "same_output_sha256": true,
+    "output_sha256": "88b2a65f68ef4a8b7562566f3fbd0d5013f81c90f830f615d2aabe2a30c1c2d4",
+    "changed_signal_fields": [
+      "arm",
+      "high",
+      "lk_valid",
+      "lkarm",
+      "lkhigh",
+      "speed"
+    ],
+    "all_intermediate_values_equal": false,
+    "validation_both_outputs": {
+      "passed": true,
+      "source_decoded_frames": 4528,
+      "video_corrupt_flags_checked": true,
+      "expected_output_frames": 1977,
+      "decoded": {
+        "video": 1977,
+        "audio": 3092,
+        "audio_samples": 3166208
+      },
+      "video_tracks": 1,
+      "audio_tracks": 1,
+      "width": 1920,
+      "height": 1080,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "video_duration_ms": 65955.8125,
+      "audio_duration_ms": 65956.0,
+      "audio_video_sync_verified": false
+    },
+    "audio_scope": "Complete exported audio decoding, nonempty samples when expected, and monotonic PTS; does not establish audio/video synchronization or waveform correspondence to the source.",
+    "annotation_diagnostic": {
+      "evaluator": "rally-iou-v3",
+      "same_metrics": true,
+      "boundary_acceptance": {
+        "truth_count": 7,
+        "matched_count": 7,
+        "start_acceptable_count": 3,
+        "start_acceptable_rate": 0.42857142857142855,
+        "end_acceptable_count": 5,
+        "end_acceptable_rate": 0.7142857142857143,
+        "both_acceptable_count": 2,
+        "both_acceptable_rate": 0.2857142857142857
+      },
+      "first_raw_start_late_ms": 3433.3125,
+      "first_export_start_late_ms": 2933.3125,
+      "independent_acceptance": false
+    }
+  },
+  "pose_batch_probe": {
+    "scope": "8 real crops from 4 anchors only; no full-video batch-2 run",
+    "anchor_frames": [
+      132,
+      138,
+      144,
+      150
+    ],
+    "tracks_sha256": "61f27f4b6decd35ed55cb3f5a8a10a103b2a80d6bc83046de255a27e38ff395a",
+    "max_selected_joint_l2_px": {
+      "cpu_batch1_vs_cuda_batch1": 2.3934430890504297,
+      "cpu_batch1_vs_cuda_batch2": 63.88905125054439,
+      "cuda_batch1_vs_cuda_batch2": 63.898561756047556
+    },
+    "threshold_crossing": {
+      "crop_index": 6,
+      "keypoint_index": 15,
+      "joint": "left ankle",
+      "threshold": 3,
+      "cuda_batch1_score": 3.0064752101898193,
+      "cuda_batch2_score": 2.989764928817749,
+      "ready_changed": true,
+      "crop_index_base": 0
+    },
+    "inference_and_transfer_s": {
+      "cpu_batch1": 5.84832940006163,
+      "cuda_batch1": 3.3308307997649536,
+      "cuda_batch2": 0.38852509995922446
+    },
+    "timing_limit": "Sequential variants; first CUDA run includes cold warmup. 3.330831 versus 0.388525 seconds is not a steady-state batch speed comparison.",
+    "default_batch_size": 1,
+    "batch2_status": "experimental"
+  },
+  "other_validation": {
+    "clean_worktree_backend_tests": {
+      "command": "npx --yes pnpm@9.15.9 run test:backend",
+      "passed": 122,
+      "warnings": 1,
+      "warning": "Starlette AnyIO deprecation",
+      "elapsed_s": 14.56,
+      "interpreter_selection": "SMASH_SUITE_PYTHON explicitly selected original workspace .venv-clip interpreter"
+    },
+    "original_workspace_rally_backend_tests": {
+      "passed": 88,
+      "elapsed_s": 10.63
+    },
+    "rerun_while_writing_report": false,
+    "windows": "source execution; no Windows EXE or installer",
+    "macos": "not re-tested in this change"
+  },
+  "reproduction": "Use the paired CPU/CUDA CLI in the Markdown report with identical source/cache, separate fresh outputs and the CPU result as reference. It uses one current driver for a new pair, not the historical baseline passive-wrapper driver.",
+  "http_default_cuda_worker": {
+    "workspace": "original integrated workspace",
+    "status": "completed",
+    "verification_passed": true,
+    "checks": {
+      "source_sha256_matches": true,
+      "core_sources_unchanged": true,
+      "default_pose_cuda": true,
+      "default_pose_batch1": true,
+      "predictions_exact": true,
+      "export_ranges_exact": true,
+      "output_sha256_exact": true,
+      "persistent_output_exists": true
+    },
+    "elapsed_product_s": 476.98499999998603,
+    "stage_timings_s": {
+      "preparation_s": 1.1410000000614673,
+      "recognition_s": 439.625,
+      "rendering_s": 36.21899999992456
+    },
+    "elapsed_including_import_and_http_s": 478.63070480001625,
+    "source_sha256": "897858a17a3f8380f6baff726e6eff77fe0e891a49b4fa9fc6176f1e97de722b",
+    "output_sha256": "88b2a65f68ef4a8b7562566f3fbd0d5013f81c90f830f615d2aabe2a30c1c2d4",
+    "rally_count": 7,
+    "output_bytes": 23228193,
+    "output_duration_ms": 65955.8125,
+    "core_sources": {
+      "count": 8,
+      "artifact": "app-default-D1/verification.json",
+      "recognize_sha256": "3da440d767feecfcaa13eedfaca6ca31d6a940091932eb2244547b1599541a8a",
+      "unchanged_during_run": true
+    },
+    "scope_note": "Original workspace keeps extra diagnostics, so recognize.py hash differs from the paired benchmark. This HTTP product run is separate evidence and is not included in the CPU/CUDA paired speedup."
+  }
+}

@@ -46,7 +46,17 @@ A 可以逐帧调用，确认结束后输出完整回合；C/D 会使用后续�
 
 其他场景使用 `--scene courtside` 或 `--scene personal`；必要时用 `--court '[[0,0],[1,0],[1,1],[0,1]]'` 传入四个归一化主场角点。输出 `result.json` 包含原始回合区间、识别说明和设备信息，不导出成片，不施加产品的前后补时。
 
-Python 调用入口是 `recognize(source, info, camera_type, weights, progress, directory, court=None)`：`info` 由媒体模块的 `probe` 提供，`weights` 可由模型模块的 `ensure_models(required_models(camera_type))` 获取，`directory` 为调用者已创建的工作目录。产品负责界面请求到这些参数的转换。
+Python 调用入口是 `recognize(source, info, camera_type, weights, progress, directory, court=None, *, pose_device=None, pose_batch_size=1)`：`info` 由媒体模块的 `probe` 提供，`weights` 可由模型模块的 `ensure_models(required_models(camera_type))` 获取，`directory` 为调用者已创建的工作目录。产品负责界面请求到这些参数的转换。
+
+个人斜侧方的姿态模型默认在当前识别设备为 CUDA 时使用该设备，其余情况使用 CPU，MPS 仍使用 CPU。可显式传入 `pose_device="cpu"` 或 `pose_device="cuda"` 比较同一输入；显式指定的设备不可用时直接报错。`pose_batch_size` 是正整数，默认 `1`；较大值仅合并同一观测帧内的人物裁剪，不跨帧，不改变帧采样、裁剪范围、关节筛选或后续光流判断顺序。
+
+返回的 `details["performance"]` 使用 `perf_counter` 记录 `model_setup_s`、`observe_s`、`person_tracking_s`、`candidate_motion_s`、`person_signals_s`、`scenario_decision_s` 和 `total_s`。模型构造计入 `model_setup_s`，从对应的观测和人物信号阶段扣除；YOLO 在首次预测时进行的设备初始化和预热仍计入观测阶段的 `yolo_wall_s`，该字段不代表纯前向耗时。总耗时还包含进度回调、导入及结果写入等开销。高视角的逐帧识别和决定交织进行，统一计入 `observe_s`，并由 `observe_includes_scenario_decision` 标明，不另外补造决定阶段的耗时。
+
+C/D 的 `performance["observe"]` 细分归一化图像准备 `frame_prepare_s`、人物检测 `yolo_wall_s`、外观描述 `descriptor_wall_s` 和灰度准备/Farneback 光流/身体活动 `farneback_body_motion_wall_s`。`tracknet` 累计每次模型的 `preprocess_s`、`inference_and_transfer_s`、`point_decode_s`，另记外层 `wall_s`、调用数、输入帧次数及 native/shifted/tail 调用数；重复输入的帧按实际调用计数，尾部调用同样计入。`input` 原样保留 `FileFrameSource.stats`，其中解码与像素转换发生在生产线程，可以和消费侧工作重叠；它们用于解释热点，不能加成互斥阶段或与外层总时钟重复相加。
+
+个人动作入口 `person_signals(source, info, people, ball, weight, progress, *, pose_device="cpu", pose_batch_size=1, metrics=None)` 保持原返回值，可将性能细项写入调用者传入的字典。该字典也由 `recognize` 放入 `performance["person_signals"]`：`decode_s` 记录容器打开与逐帧解码等待，`frame_prepare_s`、`crop_prepare_s` 记录图像准备，`pose_wall_s` 记录姿态批次调用，`pose_selection_s` 记录人物匹配，`flow_s` 记录后续 LK 光流与统计，`extract_s` 记录信号提取；另含帧数、设备、批大小和包含模型初始化的 `total_s`。`pose_model` 原样保留模型的 `initialization_s`、`tensor_preparation_s`、`inference_and_transfer_s`、`batch_count` 和 `crop_count`。这些嵌套项用于解释阶段内部成本，不能与外层阶段重复相加；输出已取回 CPU 后无需额外同步 CUDA。
+
+命令行可用 `--pose-device cpu` / `--pose-device cuda` 和 `--pose-batch-size 1` 选择个人视角的姿态执行方式。剪辑应用 worker 对应读取 `SMASH_SUITE_POSE_DEVICE`、`SMASH_SUITE_POSE_BATCH_SIZE`；未设置时使用上述默认值。
 
 ## 效果评估
 

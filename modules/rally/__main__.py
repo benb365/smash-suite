@@ -14,7 +14,11 @@ def main():
     parser.add_argument("--scene", choices=SCENARIOS, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--court", help="Four normalized [x,y] corners as JSON")
+    parser.add_argument("--pose-device", choices=("cpu", "cuda"), help="Personal-scene pose device; default follows CUDA when available")
+    parser.add_argument("--pose-batch-size", type=int, default=1, help="Maximum person crops per pose call within one anchor frame")
     args = parser.parse_args()
+    if args.pose_batch_size < 1:
+        parser.error("pose-batch-size must be positive")
     court = json.loads(args.court) if args.court else None
     if court is not None and (len(court)!=4 or any(len(p)!=2 or any(not 0<=v<=1 for v in p) for p in court)):
         parser.error("court must contain four normalized [x,y] corners")
@@ -22,7 +26,8 @@ def main():
     info = probe(args.video, args.video.name)
     weights = ensure_models(required_models(args.scene))
     predictions, details = recognize(args.video, info, args.scene, weights,
-        lambda stage, fraction: print(f"{fraction:.0%} {stage}", flush=True), args.output, court=court)
+        lambda stage, fraction: print(f"{fraction:.0%} {stage}", flush=True), args.output, court=court,
+        pose_device=args.pose_device, pose_batch_size=args.pose_batch_size)
     (args.output/"result.json").write_text(json.dumps(dict(predictions=predictions, **details), ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
 
 
