@@ -17,7 +17,7 @@ points = model([frame0, frame1, frame2])
 
 C 场边观测可传 `frame_ids=[id0, id1, id2]`，按同一视频的帧号复用最多3份CPU预处理张量。它只减少颜色转换、浮点及缩放的重复计算，每组模型仍照常推理。普通 `model(frames)` 调用不启用缓存。
 
-帧号必须对应同一视频中的同一幅图像。观测完成或失败后调用 `clear_preprocessed_cache()`；复用实例处理另一视频前也须清空，避免帧号重用串图。C识别入口已用清理逻辑保证此生命周期。[首轮阶段证据](../../../apps/video-clipper/reports/performance-first-round.md)记录张量、模型输出与完整剪辑对照。
+帧号必须对应同一视频中的同一幅图像。观测完成或失败后调用 `clear_preprocessed_cache()`；复用实例处理另一视频前也须清空，避免帧号重用串图。C识别入口已用清理逻辑保证此生命周期。[首轮阶段证据](../../../docs/features/performance-optimization/reports/first-round.md)记录张量、模型输出与完整剪辑对照。
 
 ## 用视频测试
 

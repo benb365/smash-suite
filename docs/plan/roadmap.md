@@ -91,7 +91,7 @@ flowchart BT
 | 任务 | 负责人 + 分支 | 当前进展 |
 | --- | --- | --- |
 | 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已完成（2026-10-21 基线），作为后续优化参考而非活跃认领；[性能报告](../../apps/video-clipper/reports/performance-baseline.md) |
-| 性能优化首轮小改 | benb365 + `codex/performance-first-round`（本地分支） | 已完成，待人工确认：独立验收通过；首轮保留01/03/04，02暂缓；尚未集成或推送；[阶段报告](../../apps/video-clipper/reports/performance-first-round.md)；[首轮方案](../features/performance-optimization/first-round.md) |
+| 性能优化首轮小改 | benb365 + `codex/performance-first-round`（本地分支） | 已完成，待人工确认：独立验收通过；首轮保留01/03/04，02暂缓；尚未集成或推送；[阶段报告](../features/performance-optimization/reports/first-round.md)；[首轮方案](../features/performance-optimization/first-round.md) |
 | Windows 后端适配 | cjfranklin1 + [codex/windows-runtime](https://github.com/benb365/smash-suite/tree/codex/windows-runtime) | 已开始推进，适配与验证结果待同步 |
 
 本轮性能报告按人工确认保留为已完成基线引用，作为“结束后移除此处记录”的明确例外。

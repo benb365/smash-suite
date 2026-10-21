@@ -19,7 +19,7 @@ result = model(person_crop)
 
 可传已有的 `Statistics` 对象：`model(person_crop, statistics=stats)`。启用统计时分别累积输入准备、模型调用和结果转换；模型调用包含内部缩放与网络，不能解释为纯Python或纯卷积耗时。这些子项嵌套于回合识别已有的姿态包装调用计时，不重复相加。
 
-回合识别当前在 CPU 上逐个人物裁剪调用模型。首轮同帧合批实验因提前截断有效回合未通过效果标准，本轮暂缓采用；首轮独立验收通过，当前等待人工确认集成。详见[阶段报告](../../../apps/video-clipper/reports/performance-first-round.md)。
+回合识别当前在 CPU 上逐个人物裁剪调用模型。首轮同帧批处理实验因提前截断有效回合未通过效果标准，本轮暂缓采用；首轮独立验收通过，当前等待人工确认集成。详见[阶段报告](../../../docs/features/performance-optimization/reports/first-round.md)。
 
 ## 用视频测试
 
