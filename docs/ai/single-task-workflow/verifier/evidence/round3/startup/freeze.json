@@ -1,0 +1,32 @@
+{
+  "round": 1,
+  "head": "20d43d12837c912a1b88ca190d2f0d80d06af897",
+  "baseline": "4310f4d9ffbe81b601c451a6cd6dc274e209d822",
+  "status": "?? docs/ai/readme-validation/\n",
+  "sha256": {
+    ".gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "AGENTS.md": "81c32051f32d5d4439e8c3706be6ca74292ba8fb6f214f8cd318c3d0dc66b662",
+    "README.md": "d41a400b317504e4047fe2963499f3ab981b61653b536bf47556b184e4b8d55a",
+    "docs/ai/range-workflow/controller/awaiting-human.md": "621fc506f864f98250f544c1bfdb66bcff67632a1257dc262b629d2e0bf50400",
+    "docs/ai/range-workflow/controller/injected-readme.md": "38d83c7794b2c5215b44ca62d8bd2bb2a25c63094784831322667b6144d160f1",
+    "docs/ai/range-workflow/controller/rework-developer.md": "5745c058db0bdc37ea2062b910cd5ad2148b857d663b2552b8526e5960fcc4ee",
+    "docs/ai/range-workflow/controller/rework-verifier.md": "e4bd2970afdc9853fec8e3aa12b5a9139659a6afbcf343ca8b1d66639b2b5788",
+    "docs/ai/range-workflow/controller/round1-developer.md": "23934487a344022d42a19a5f4e541ec1c77ea00c13d2e3d7de49f697e8629374",
+    "docs/ai/range-workflow/controller/round1-verifier.md": "3a7a05e67c2c3aa851197fa83a4d10fa89a6839c6b57376c3cb861be3d0cf9d8",
+    "docs/ai/range-workflow/controller/round1.diff": "5d713448dc7322791bdab132cdeab0afac4cf58525c3fd8593830e69623c911d",
+    "docs/ai/range-workflow/controller/round2-verifier.md": "8930b9f460f4f6d1b1efb3b7a1f3d0ccc920e727ba3c889624204fb378e31d9b",
+    "docs/ai/range-workflow/controller/simulated-human-approval.md": "17a796d992cd255ea579c2d8e48d15d9f661c214e19b32ac51d7aa26c14e88e6",
+    "docs/ai/range-workflow/controls/input.md": "2f0308e12417bba7371ea87a08483ff44717d6aae6b362433f309856f9521bff",
+    "docs/ai/range-workflow/controls/output.md": "c78d08442130d9346cfc380eb2014eda8265b346dbdebcbb0524d19c30dff562",
+    "docs/ai/range-workflow/developer/input.md": "2db7cd514c8aa9a3f143e42e0ca3c9e1659465138c31880a63355ee64d0a5f73",
+    "docs/ai/range-workflow/developer/output.md": "5745c058db0bdc37ea2062b910cd5ad2148b857d663b2552b8526e5960fcc4ee",
+    "docs/ai/range-workflow/task.md": "9e0d670861ece91c7e798de4d1b0c8d61b8c68b16555f2c1e331220440a42c28",
+    "docs/ai/range-workflow/verifier/input.md": "b64f4153738a072a35f9352d02faa8e419a38d9f04844624c99456369ec8c55f",
+    "docs/ai/range-workflow/verifier/output.md": "e4bd2970afdc9853fec8e3aa12b5a9139659a6afbcf343ca8b1d66639b2b5788",
+    "docs/plan/roadmap.md": "98e3b1eada6e3e323af83ad1da29309c203341e8af0da0b1f1c31477351ec162",
+    "ranges.py": "aaf5570f0013a6691c13fad818e3335a45051f10ca8c302cf482c703344ff1a3",
+    "requirements.md": "885c8d967a89d0a1e31404697e9add261e3124a57f1abcddc28b9a80a6fe3569",
+    "test_ranges.py": "0e8082fedb217ec5add1c43b100a7c3c8d864602e432f2f9c71f88bdbd8d4e70",
+    "user-note.txt": "1307776d8f077d734cf31132665304b20dc5691048ff52204a32119d2e0905bf"
+  }
+}

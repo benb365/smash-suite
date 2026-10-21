@@ -22,4 +22,8 @@
 .venv/bin/python -m pytest modules/models
 ```
 
-共同环境要求 Python 3.9+。模块导入、自动测试和真实模型推理的验证范围及当前进度见[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。
+共同环境要求 Python 3.9+。
+
+## 当前进展
+
+整理后模块导入和自动测试通过。Windows 本机已使用固定权重完整处理 D1，验证三类模型运行及 CPU/CUDA 姿态对照，见[实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)；其他平台本轮未复测。此前入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。

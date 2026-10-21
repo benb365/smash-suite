@@ -1,0 +1,24 @@
+{
+  "round": 3,
+  "task": {
+    "path": "/private/tmp/smash-workflow-fixture-w_o8v2za/readme-validation",
+    "branch": "codex/readme-validation",
+    "head": "d4c1bf1c6b0e3f32e792592d93b6d7b2bff526ed",
+    "status": ""
+  },
+  "primary": {
+    "head": "4310f4d9ffbe81b601c451a6cd6dc274e209d822",
+    "status": " M docs/plan/roadmap.md\n M user-note.txt\n?? outputs/\n",
+    "remotes": ""
+  },
+  "implementation_sha256": {
+    "README.md": "d41a400b317504e4047fe2963499f3ab981b61653b536bf47556b184e4b8d55a",
+    "ranges.py": "aaf5570f0013a6691c13fad818e3335a45051f10ca8c302cf482c703344ff1a3",
+    "requirements.md": "885c8d967a89d0a1e31404697e9add261e3124a57f1abcddc28b9a80a6fe3569",
+    "test_ranges.py": "0e8082fedb217ec5add1c43b100a7c3c8d864602e432f2f9c71f88bdbd8d4e70"
+  },
+  "preserved_user_files_sha256": {
+    "user-note.txt": "c8e5b381c926b15513e4ef898ccc3a44d7e07912b46835971a81fec22f3d2f22",
+    "outputs/keep.txt": "9fca64a39dac5edfc719f6257084fe604a1335669c873a047e3df3d363cca844"
+  }
+}

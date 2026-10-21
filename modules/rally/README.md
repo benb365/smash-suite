@@ -12,9 +12,15 @@
 | `courtside` | 场边低视角（C） | 原短段过滤、拆分内部间歇、尾部候选连接；`tail_gap800_growth300` |
 | `personal` | 个人斜侧方（D） | 人物动作结合球点、对手活动和脚点移动；确认记录中的 `candidate` |
 
-配置见 [profiles.json](scenarios/profiles.json)，来源见 [selection.json](scenarios/selection.json)。原确认结果见[算法记录](experiments/reports/algorithm-decisions-20261019.md)，整理后的入口检查见[路线图](../../docs/plan/roadmap.md#整理后的快速检查)。
+配置见 [profiles.json](scenarios/profiles.json)，来源见 [selection.json](scenarios/selection.json)。原确认结果见[算法记录](experiments/reports/algorithm-decisions-20261019.md)。
 
 A 可以逐帧调用，确认结束后输出完整回合；C/D 会使用后续信息，当前通过文件分析入口调用。
+
+## 当前进展
+
+A 保留原逐帧方案，C/D 已接入确认的改进并继续通过文件分析使用。当前评估纳入 A/C/D，B 继续暂缓。整理后 16 份保存观测回放与确认结果逐项一致；这不等于重新运行模型或验证真实视频效果。已知漏回合、边界和间歇问题仍待处理，独立来源验收未完成。记录见[算法确认报告](experiments/reports/algorithm-decisions-20261019.md)和[整理后快速检查](../../docs/ai/2026-10-19-quick-check/notes.md)。
+
+Windows 本机已对同一 D1 完成真实模型 CPU/CUDA 姿态性能对照，原始回合区间和成片保持相同；阶段计时、批次限制及原有边界缺陷见[实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)。该诊断素材结果不替代独立来源效果验收。
 
 ## 输入输出与职责
 
@@ -81,6 +87,6 @@ C/D 的 `performance["observe"]` 细分归一化图像准备 `frame_prepare_s`�
   --output modules/rally/.runtime/migration-replay.json
 ```
 
-回放入口使用 16 份保留的 A/C/D 观测，检查所选方案是否与确认记录逐条一致，不运行模型；它不能替代从视频运行的完整验证。共用缓存的片段按用例声明的窗口截取，并将帧号和时间归零，详见[实验入口说明](experiments/README.md)。入口检查安排见[路线图](../../docs/plan/roadmap.md#整理后的快速检查)。
+回放入口使用 16 份保留的 A/C/D 观测，检查所选方案是否与确认记录逐条一致，不运行模型；它不能替代从视频运行的完整验证。共用缓存的片段按用例声明的窗口截取，并将帧号和时间归零，详见[实验入口说明](experiments/README.md)。
 
 原文件输入诊断入口保留为 `modules.rally.experiments.run_live_tracknet`，支持 `offline/realtime`、固定重复和处理日志；`run_tracknet` 保留已确认恒定帧率素材的早期基线入口。

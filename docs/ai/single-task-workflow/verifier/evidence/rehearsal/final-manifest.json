@@ -1,0 +1,26 @@
+{
+  "base": "ab59130db48db6e7161f57fe5b277261f6d14aad",
+  "task": {
+    "path": "/private/tmp/smash-workflow-fixture-w_o8v2za/task",
+    "branch": "codex/range-workflow-acceptance",
+    "head": "2f3608eafdc1a6267033a7331b4e5e43e9d8ae92",
+    "status": ""
+  },
+  "primary": {
+    "path": "/private/tmp/smash-workflow-fixture-w_o8v2za/primary",
+    "branch": "develop",
+    "head": "4310f4d9ffbe81b601c451a6cd6dc274e209d822",
+    "status": " M user-note.txt\n?? outputs/\n",
+    "remotes": ""
+  },
+  "implementation_sha256": {
+    "ranges.py": "aaf5570f0013a6691c13fad818e3335a45051f10ca8c302cf482c703344ff1a3",
+    "README.md": "813b49a9d05b5135c47c1051fdee3f9a2da08e472fe346a238a033e7b8231717",
+    "test_ranges.py": "0e8082fedb217ec5add1c43b100a7c3c8d864602e432f2f9c71f88bdbd8d4e70",
+    "requirements.md": "885c8d967a89d0a1e31404697e9add261e3124a57f1abcddc28b9a80a6fe3569"
+  },
+  "preserved_user_files_sha256": {
+    "user-note.txt": "c8e5b381c926b15513e4ef898ccc3a44d7e07912b46835971a81fec22f3d2f22",
+    "outputs/keep.txt": "9fca64a39dac5edfc719f6257084fe604a1335669c873a047e3df3d363cca844"
+  }
+}

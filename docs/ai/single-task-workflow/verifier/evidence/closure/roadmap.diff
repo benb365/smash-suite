@@ -1,0 +1,16 @@
+diff --git a/docs/plan/roadmap.md b/docs/plan/roadmap.md
+index 1d4adff..55a90a5 100644
+--- a/docs/plan/roadmap.md
++++ b/docs/plan/roadmap.md
+@@ -54,1 +54,1 @@ flowchart BT
+-    workflow["自动协作<br/><small>长期协作与验收<br/>流程开发中</small>"]
++    workflow["自动协作<br/><small>单任务流程已验证<br/>等待人工确认</small>"]
+@@ -86,0 +87,2 @@ flowchart BT
++采用单任务持续开发 skill 时，任务分支可在独立验收后标为“已完成，待人工确认”；develop 保持“进行中”，直到人工确认交付并集成后再标为“已完成”。
++
+@@ -89,1 +91,1 @@ flowchart BT
+-| 自动协作 workflow | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
++| 自动协作 workflow | benb365 + `codex/single-task-workflow` | 单任务流程已通过独立功能、规则与文档验收，待人工确认 |
+@@ -134,1 +136,1 @@ P0：重要且紧急；P1：重要但不紧急；P2：当前阶段不重要且
+-| 自动协作 workflow | 建立 agents 长期协作流程，由独立的校验与检查 agents 验收，记录证据并更新进度 | P0-0 | 进行中 |
++| 自动协作 workflow | 建立已确认单任务的持续开发流程，经过独立功能、代码和文档验收；人工确认后再集成 develop | P0-0 | 已完成，待人工确认 |

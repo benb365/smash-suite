@@ -1,0 +1,181 @@
+{
+  "independent_check": "pass",
+  "files": [
+    {
+      "file": "closure/original-roadmap.diff",
+      "before_sha256": "d7b7e30e4bd5805a3edfd66fac53bffbb3a6be9970d22fb441512477b1e2656f",
+      "after_sha256": "f994aff7dd8f4a3de41d880d43d08b7c1f22c790b214424d81b58962e3495748",
+      "files": [
+        [
+          "a/docs/plan/roadmap.md",
+          "b/docs/plan/roadmap.md"
+        ]
+      ],
+      "deletions": 1,
+      "additions": 1,
+      "content_and_positions_sha256": "a49318fe40a665112d21239852a52b9bf3abab5475080e797cb63898ccbd76a3",
+      "old_hunks": 1,
+      "new_hunks": 1,
+      "removed_context_lines": 6,
+      "apply_results_identical": true,
+      "syntax_exit": 0,
+      "empty_file_check_exit": 1
+    },
+    {
+      "file": "closure/roadmap.diff",
+      "before_sha256": "8b7aad848288bfbbb29a55bb7d9ba87654c5a7b153224fff756166c05af7ab58",
+      "after_sha256": "e7d128ec1af12f7916534f47bbadb860494cca5c0e4a593e4ad154e466d18d25",
+      "files": [
+        [
+          "a/docs/plan/roadmap.md",
+          "b/docs/plan/roadmap.md"
+        ]
+      ],
+      "deletions": 3,
+      "additions": 5,
+      "content_and_positions_sha256": "ef0a6f0bf3d22ca9e7117cc80a92438eaa6f9604ed8211e69d3a5bfd7c90173c",
+      "old_hunks": 3,
+      "new_hunks": 4,
+      "removed_context_lines": 20,
+      "apply_results_identical": true,
+      "syntax_exit": 0,
+      "empty_file_check_exit": 1
+    },
+    {
+      "file": "rehearsal/accepted-implementation.diff",
+      "before_sha256": "5d713448dc7322791bdab132cdeab0afac4cf58525c3fd8593830e69623c911d",
+      "after_sha256": "2924f009df8715fe6c3e663317b0a37292ae344ec0205c5bf8a263d43fbaadc2",
+      "files": [
+        [
+          "a/README.md",
+          "b/README.md"
+        ],
+        [
+          "a/ranges.py",
+          "b/ranges.py"
+        ],
+        [
+          "a/test_ranges.py",
+          "b/test_ranges.py"
+        ]
+      ],
+      "deletions": 6,
+      "additions": 31,
+      "content_and_positions_sha256": "1f49a4710167a36335c6608a0e9fafd20ec52ddce016139eef9f27141b3b3e21",
+      "old_hunks": 3,
+      "new_hunks": 6,
+      "removed_context_lines": 14,
+      "apply_results_identical": true,
+      "syntax_exit": 0,
+      "empty_file_check_exit": 1
+    },
+    {
+      "file": "round2/startup.diff",
+      "before_sha256": "72b13e2f93f39944d7cd61797c9d44da3d41eee42c10f33cf142fe30a225b1f0",
+      "after_sha256": "f858e69d4bbbf6b955c761ac470c4484af46826985ea9f8274100380e44a4615",
+      "files": [
+        [
+          "a/README.md",
+          "b/README.md"
+        ]
+      ],
+      "deletions": 1,
+      "additions": 3,
+      "content_and_positions_sha256": "e0b693ec37b2cf819e526b08bfe90c13ee780ad9b8b9204cb7b74613688cbc58",
+      "old_hunks": 1,
+      "new_hunks": 1,
+      "removed_context_lines": 3,
+      "apply_results_identical": true,
+      "syntax_exit": 0,
+      "empty_file_check_exit": 1
+    },
+    {
+      "file": "round2/tracked.diff",
+      "before_sha256": "2f67d5ed107e2e02c52ec422b0151c69d5102924b2f6cbe4e780b0b81009eac1",
+      "after_sha256": "bfe5fc1f5b3ce870175e69bdf1dada84c88412aa9b1bff662eda1e901e1a7d86",
+      "files": [
+        [
+          "a/AGENTS.md",
+          "b/AGENTS.md"
+        ],
+        [
+          "a/docs/plan/roadmap.md",
+          "b/docs/plan/roadmap.md"
+        ]
+      ],
+      "deletions": 3,
+      "additions": 10,
+      "content_and_positions_sha256": "5d62ad369de98cc45a51cd22b2bb7eaf558abb65a79da1613198cd9f39c16c70",
+      "old_hunks": 4,
+      "new_hunks": 7,
+      "removed_context_lines": 32,
+      "apply_results_identical": true,
+      "syntax_exit": 0,
+      "empty_file_check_exit": 1
+    },
+    {
+      "file": "round3/change-from-round2.diff",
+      "before_sha256": "2d35af65f30a4fca5ecdfbacf1076c15a944b25db53a62f7d8f59326ed83639d",
+      "after_sha256": "b6cce8f3d3d5a211c303a7aed068eba0efc0d1f0e0f1fbc5739813e7ea25c540",
+      "files": [
+        [
+          "round2/SKILL.md",
+          "round3/SKILL.md"
+        ]
+      ],
+      "deletions": 1,
+      "additions": 1,
+      "content_and_positions_sha256": "338fe4833d59ecfa122ddaf462fe5fe8600d5192c2b6ced8de701f9ea18af2cb",
+      "old_hunks": 1,
+      "new_hunks": 1,
+      "removed_context_lines": 6,
+      "apply_results_identical": true,
+      "syntax_exit": 0,
+      "empty_file_check_exit": 1
+    },
+    {
+      "file": "round3/startup/implementation.diff",
+      "before_sha256": "72b13e2f93f39944d7cd61797c9d44da3d41eee42c10f33cf142fe30a225b1f0",
+      "after_sha256": "f858e69d4bbbf6b955c761ac470c4484af46826985ea9f8274100380e44a4615",
+      "files": [
+        [
+          "a/README.md",
+          "b/README.md"
+        ]
+      ],
+      "deletions": 1,
+      "additions": 3,
+      "content_and_positions_sha256": "e0b693ec37b2cf819e526b08bfe90c13ee780ad9b8b9204cb7b74613688cbc58",
+      "old_hunks": 1,
+      "new_hunks": 1,
+      "removed_context_lines": 3,
+      "apply_results_identical": true,
+      "syntax_exit": 0,
+      "empty_file_check_exit": 1
+    },
+    {
+      "file": "tracked.diff",
+      "before_sha256": "a38cb1b30c0f3c62e99c86192182e837ed129ab0ca1dbb520d72a071b7fa8e6a",
+      "after_sha256": "fbb1f9d18912c4702fc265df2b937f6ab63f373719af019c7fcfc83b844cb315",
+      "files": [
+        [
+          "a/AGENTS.md",
+          "b/AGENTS.md"
+        ],
+        [
+          "a/docs/plan/roadmap.md",
+          "b/docs/plan/roadmap.md"
+        ]
+      ],
+      "deletions": 2,
+      "additions": 7,
+      "content_and_positions_sha256": "319e8c7b845d93edfee9136dd87cfe0231c376bc84b8ad4893d4db08a75102db",
+      "old_hunks": 4,
+      "new_hunks": 6,
+      "removed_context_lines": 31,
+      "apply_results_identical": true,
+      "syntax_exit": 0,
+      "empty_file_check_exit": 1
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # 数据集目录
 
 `datasets/` 保存测试和标注使用的素材、来源清单及标注记录。当前数据根目录是
-`badminton-v1/`。顶层散放的种子输入已迁入本目录；local 内部清理和重整仍待完成。
+`badminton-v1/`。
 
 素材清单、人工标注和审核要求见[数据规范](requirements.md)。
 
@@ -12,60 +12,19 @@ badminton-v1/
 └── local/         清单与标注关联的本地文件，以及素材整理工作文件
 ```
 
+## 当前进展
+
+已有来源清单、人工标注和审核记录；独立来源效果验收及本地数据目录整理仍待完成。相关依据见[审核与整理记录](#审核与整理记录)。
+
 ## 素材采集环境
 
 训练素材采集工具 `curate-badminton-training-data` 需要 **Python 3.10+**，其中的 yt-dlp 不支持 Python 3.9。它使用技能目录内独立的 `.venv`，不安装到主项目的共同环境中。
 
 工具创建环境时会查找可用的 Python 3.10+；也可用 `CURATE_PYTHON` 指定解释器路径。准备和调用方法见[素材采集工具说明](../.agents/skills/curate-badminton-training-data/SKILL.md)。主项目使用 Python 3.9 时，这个独立环境仍需保留。
 
-## 获取现用模型测试视频
+## 现用测试视频
 
-下表对应[算法回放清单](../modules/rally/experiments/cases.json)的 16 个样本编号，
-用于找到回放观测所对应的视频素材；获取视频不会同时恢复模型观测缓存。
-已有文件优先复用，下载、剪切和校验方法见[素材整理技能](../.agents/skills/curate-badminton-training-data/SKILL.md#existing-rally-test-videos)。
-
-时间单位为秒，范围左含右不含，表示原视频中的位置。片段路径相对于
-`badminton-v1/local/rally/`；完整原片按来源编号保存在
-`badminton-v1/local/source-videos/<来源编号>/source.mp4`，A2、C2 尚无完整原片的已核验记录。
-
-| 样本编号 | 来源 URL | 原视频范围（秒） | 已有片段 |
-| --- | --- | --- | --- |
-| A1-01 | [A1][source-a1] | [599.96, 767.96) | [m1-short-a1-01-20261015/clip.mp4](badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4) |
-| A1-02 | [A1][source-a1] | [1200.04, 1374.04) | [m1-short-a1-02-20261015/clip.mp4](badminton-v1/local/rally/m1-short-a1-02-20261015/clip.mp4) |
-| A1-03 | [A1][source-a1] | [1800.12, 1974.12) | [m1-short-a1-03-20261015/clip.mp4](badminton-v1/local/rally/m1-short-a1-03-20261015/clip.mp4) |
-| A1-04 | [A1][source-a1] | [2346.16, 2514.2) | [m1-short-a1-04-20261015/clip.mp4](badminton-v1/local/rally/m1-short-a1-04-20261015/clip.mp4) |
-| A2-01 | [A2][source-a2] | [600, 696.84)，名义范围¹ | [official-india-2026-court3/clip.mp4](badminton-v1/local/rally/official-india-2026-court3/clip.mp4)，取缓存 [0, 96.84) 秒 |
-| A2-02 | [A2][source-a2] | [698.88, 780)，名义范围¹ | [official-india-2026-court3/clip.mp4](badminton-v1/local/rally/official-india-2026-court3/clip.mp4)，取缓存 [98.88, 180) 秒 |
-| C1-01 | [C1][source-c1] | [120.073, 285.1743125) | [m1-short-c1-01-20261015/clip.mp4](badminton-v1/local/rally/m1-short-c1-01-20261015/clip.mp4) |
-| C1-02 | [C1][source-c1] | [1200.55, 1380.6603125) | [m1-short-c1-02-20261015/clip.mp4](badminton-v1/local/rally/m1-short-c1-02-20261015/clip.mp4) |
-| C1-03 | [C1][source-c1] | [2400.217, 2565.5863125) | [m1-short-c1-03-20261015/clip.mp4](badminton-v1/local/rally/m1-short-c1-03-20261015/clip.mp4) |
-| C1-04 | [C1][source-c1] | [3600.152, 3775.2583125) | [m1-short-c1-04-20261015/clip.mp4](badminton-v1/local/rally/m1-short-c1-04-20261015/clip.mp4) |
-| C2 | [C2][source-c2] | [120, 300)，采集窗口 | [personal-qianfoshan-singles/clip.mp4](badminton-v1/local/rally/personal-qianfoshan-singles/clip.mp4) |
-| D1-01 | [D1][source-d1] | [0, 150.989125) | [m1-short-d1-01-20261015/clip.mp4](badminton-v1/local/rally/m1-short-d1-01-20261015/clip.mp4) |
-| D1-02 | [D1][source-d1] | [150.989125, 305.97825) | [m1-short-d1-02-20261015/clip.mp4](badminton-v1/local/rally/m1-short-d1-02-20261015/clip.mp4) |
-| D1-03 | [D1][source-d1] | [305.97825, 455.9674375) | [m1-short-d1-03-20261015/clip.mp4](badminton-v1/local/rally/m1-short-d1-03-20261015/clip.mp4) |
-| D1-04 | [D1][source-d1] | [455.9674375, 610.9458125) | [m1-short-d1-04-20261015/clip.mp4](badminton-v1/local/rally/m1-short-d1-04-20261015/clip.mp4) |
-| D2-01 | [D2][source-d2] | [0, 250.9003125) | [d2-check-20261018/clip.mp4](badminton-v1/local/rally/d2-check-20261018/clip.mp4) |
-
-[source-a1]: https://huya.com/video/play/1099925376.html
-[source-a2]: https://huya.com/video/play/1091949210.html
-[source-c1]: https://www.bilibili.com/video/BV12zPKzRE4v/
-[source-c2]: https://www.bilibili.com/video/BV17D4y147F6/
-[source-d1]: https://www.bilibili.com/video/BV1QPpz6pEJJ/
-[source-d2]: https://www.bilibili.com/video/BV1mz4y1J7DK/
-
-¹ A2 的原视频位置由旧采集窗口 600–780 秒换算而来；本轮核验的是缓存内帧和时间，
-未重新核验完整原片映射。两段之间的损坏区域已排除，不能拼接后当作连续素材。
-A2 两个另存的 H264 视频为展示副本，算法使用原缓存的对应观测。
-C2 范围沿用旧采集记录，尚缺完整原片的逐帧对应核验。
-
-来源、视频校验值和制作依据沿用现有记录：
-[A1/C1/D1 的 12 段](reports/m1-short-clips-20261015.json)、
-[A2/C2/D2](../modules/rally/experiments/reports/a2-c2-d2-current-algorithms-20261018.json)、
-[来源确认](reports/four-view-video-candidates-20261015.json)。
-表中的范围用于定位实际画面，不一定等于剪切命令参数；重建方法及历史记录缺口见
-[获取说明](../.agents/skills/curate-badminton-training-data/references/video-acquisition.md#existing-test-clip-recipes)。
-这些素材已有诊断用途，不因列入此表而成为独立验收集。
+16 个现用回合测试视频的来源、窗口、输入路径、制作参数与预检入口见[视频清单](test-videos.md)。
 
 ## local 的作用
 

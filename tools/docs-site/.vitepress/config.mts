@@ -97,6 +97,7 @@ export default withMermaid(defineConfig({
       { text: '数据与工具', items: [
         { ...page('数据集', 'datasets/README.md'), items: [
           page('数据规范', 'datasets/requirements.md'),
+          page('现用回合测试视频', 'datasets/test-videos.md'),
           ...reports('datasets/reports'),
         ] },
         page('录像采集插件', 'tools/ysp-recorder/README.md'),
@@ -104,6 +105,7 @@ export default withMermaid(defineConfig({
       ] },
       { text: '项目计划', items: [
         page('路线图', 'docs/plan/roadmap.md'),
+        page('想法与灵感', 'docs/plan/ideas.md'),
       ] },
     ],
     outline: { label: '本页目录', level: [2, 3] },

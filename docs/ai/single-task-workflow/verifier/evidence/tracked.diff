@@ -1,0 +1,23 @@
+diff --git a/AGENTS.md b/AGENTS.md
+index daf5bda..5fa4624 100644
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -44,0 +45,1 @@
++- 需要围绕一个已确认任务持续开发并独立验收时，可使用 `.agents/skills/run-task-workflow/SKILL.md`。启用前先征求用户确认；同时确认范围、实施方案和功能验收标准。用户已明确授权这些内容时不重复询问。
+@@ -48,0 +50,1 @@
++- 判断产品方案和指标时，先说明它服务的使用目的及错误代价；发现指标不能反映用户价值时，提供具体案例并请用户确认调整，不自行改变验收口径。
+@@ -62,0 +65,2 @@
++用户已指定并确认的单项任务按该任务范围推进；完成后等待用户决定下一项，不自动从路线图领取其他工作。
++
+@@ -65,0 +70,1 @@
++任务分支通过独立验收后可标记为“已完成，待人工确认”；develop 保持“进行中”，直到用户确认实际交付并完成集成后才标记“完成”。
+diff --git a/docs/plan/roadmap.md b/docs/plan/roadmap.md
+index 1d4adff..faaa07a 100644
+--- a/docs/plan/roadmap.md
++++ b/docs/plan/roadmap.md
+@@ -89,1 +89,1 @@ flowchart BT
+-| 自动协作 workflow | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
++| 自动协作 workflow | benb365 + `codex/single-task-workflow` | 本地任务分支已交付单任务流程初稿，独立验收待执行 |
+@@ -134,1 +134,1 @@ P0：重要且紧急；P1：重要但不紧急；P2：当前阶段不重要且
+-| 自动协作 workflow | 建立 agents 长期协作流程，由独立的校验与检查 agents 验收，记录证据并更新进度 | P0-0 | 进行中 |
++| 自动协作 workflow | 建立已确认单任务的持续开发流程，经过独立功能、代码和文档验收；人工确认后再集成 develop | P0-0 | 进行中 |

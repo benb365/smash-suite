@@ -24,6 +24,28 @@ render(source, Path("output.mp4"), ranges, info, "balanced", lambda fraction: No
 
 `selected_ranges` 默认不补时；调用方可传 `padding_ms`。导出保留源画面尺寸和原音画相对偏移，支持 `high`、`balanced`、`small` 三档质量。调用者负责输出目录和工作文件的生命周期。
 
+## 输入预检
+
+更换测试视频后，先用应用实际使用的 `FileFrameSource` 完整读到文件结尾，再运行模型。以下命令在仓库根目录执行；将示例路径替换为待检查文件，也可追加多个路径：
+
+```sh
+.venv/bin/python - input.mp4 <<'PY'
+import json
+import sys
+from modules.media.video_input import FileFrameSource
+
+for path in sys.argv[1:]:
+    with FileFrameSource(path, mode="offline") as frames:
+        for frame in frames:
+            pass
+    print(json.dumps({"path": path, "status": "passed", **frames.stats}, ensure_ascii=False))
+PY
+```
+
+必须无截断地迭代到结尾；不要设置 `limit_s`、提前退出，或把所有图像存入列表。所有文件都输出 `passed` 且命令退出码为 0，才算通过。输出记录实际解码数、交付数、容器声明帧数及首尾时间。容器声明了非零帧数时，完整解码数通常须与之相等；MP4 编辑列表隐藏预滚样本时，仅接受下节所述的严格核验例外，并在 `stats.edit_list_verification` 留证。截断、损坏帧、无效时间戳、尺寸变化及无法核实的帧数差异仍会导致失败。
+
+此命令只检查视频帧，不运行模型，也不验证音轨；音视频完整解码和来源对应检查仍按[素材获取说明](../../.agents/skills/curate-badminton-training-data/references/video-acquisition.md#verify-media)执行。
+
 ## 帧与时间
 
 `TimestampedFrame` 和 `VideoInfo` 定义在 `types.py`。帧包含递增且流内唯一的整数 `frame_id`、源时间轴上的毫秒时间戳 `timestamp_ms` 和当前图像 `image`。时间戳必须有限且严格递增，图像像素格式由输入适配器统一。
@@ -40,7 +62,11 @@ MP4 流复制片段可能通过编辑列表隐藏关键帧之前的预滚样本�
 
 ## 实验记录
 
-文件输入、实时模拟、持续运行和分辨率对照的历史实测见[输入模块实验](experiments/realtime-input.md)。记录对应当时的环境和代码，当前验证状态以路线图为准。
+文件输入、实时模拟、持续运行和分辨率对照的历史实测见[输入模块实验](experiments/realtime-input.md)。记录对应当时的环境和代码。
+
+## 当前进展
+
+文件读写、逐帧输入和区间导出已实现；既有自动检查通过。真实摄像头或网络流适配尚未接入，目标负载下的长片性能仍待验证。整理后的入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
 
 ## 测试
 
@@ -48,4 +74,4 @@ MP4 流复制片段可能通过编辑列表隐藏关键帧之前的预滚样本�
 .venv/bin/python -m pytest modules/media/tests
 ```
 
-依赖 PyAV、OpenCV、NumPy、Pydantic；编码使用系统 FFmpeg 或 `imageio-ffmpeg`，也可通过 `SMASH_SUITE_FFMPEG` 指定程序。验证范围及当前进度见[快速检查](../../docs/plan/roadmap.md#整理后的快速检查)。
+依赖 PyAV、OpenCV、NumPy、Pydantic；编码使用系统 FFmpeg 或 `imageio-ffmpeg`，也可通过 `SMASH_SUITE_FFMPEG` 指定程序。

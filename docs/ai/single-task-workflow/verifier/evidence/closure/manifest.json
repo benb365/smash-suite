@@ -1,0 +1,16 @@
+{
+  "kind": "third-round delivery metadata closure; not new development round",
+  "head": "2ccf5f60b7638774aded138a8af00801501a72f2",
+  "branch": "codex/single-task-workflow",
+  "sha256": {
+    ".agents/skills/run-task-workflow/SKILL.md": "ae20fba1d0df31cc4d2521b416d7c9eeb7bc991b5581740c0c22a1100e33133b",
+    "AGENTS.md": "609ccb96e791596d6c0dfa4187797ec0e1b5f85de05a9df50f67ea02229e6568",
+    "docs/plan/roadmap.md": "3306a42ab21ff8fa6d1ffb8c701aa32878a67293cf647deebacf22ad5f69e8e1",
+    "docs/ai/single-task-workflow/task.md": "063136d75cb5a917e91f07e0422414aead3b7758c80e3112119afab37e2a93b7"
+  },
+  "primary": {
+    "branch": "develop",
+    "head": "2ccf5f60b7638774aded138a8af00801501a72f2",
+    "status": " M docs/plan/roadmap.md\n?? outputs/\n"
+  }
+}
