@@ -38,7 +38,10 @@ class ShuttleRallySegmenter:
         width: float,
         height: float,
         config: FlightConfig | None = None,
+        statistics=None,
     ) -> None:
+        from .statistics import Statistics
+        self.statistics = statistics or Statistics()
         self.predict = predict
         self.width, self.height = width, height
         self.config = config or FlightConfig()
@@ -61,8 +64,9 @@ class ShuttleRallySegmenter:
         if len(points) != 3:
             raise ValueError("TrackNet must return one point for each of three frames.")
         intervals = []
-        for source, point in zip(self.pending, points):
-            intervals.extend(self._observe(source, point, frame.timestamp_ms))
+        with self.statistics.phase("rally_decision"):
+            for source, point in zip(self.pending, points):
+                intervals.extend(self._observe(source, point, frame.timestamp_ms))
         self.pending.clear()
         return intervals
 

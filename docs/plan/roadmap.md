@@ -52,7 +52,7 @@ flowchart BT
     direction LR
     maintenance["仓库维护<br/><small>维护 skill 待引入</small>"]
     workflow["自动协作<br/><small>单任务流程已验证<br/>人工验收已通过</small>"]
-    performance["性能与部署<br/><small>基线测量推进中<br/>优化与选型待做</small>"]
+    performance["性能与部署<br/><small>基线已验收待人工确认<br/>优化与选型待做</small>"]
     maintenance ~~~ workflow ~~~ performance
     end
   end
@@ -90,7 +90,7 @@ flowchart BT
 
 | 任务 | 负责人 + 分支 | 当前进展 |
 | --- | --- | --- |
-| 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
+| 性能基线 | benb365 + codex/performance-baseline（本任务分支） | 已完成，待人工确认：六正式实测、三短剖析、十份输出核对及独立验收完成，[性能报告](../../apps/video-clipper/reports/performance-baseline.md)；尚未集成 |
 | Windows 后端适配 | cjfranklin1 + [codex/windows-runtime](https://github.com/benb365/smash-suite/tree/codex/windows-runtime) | 已开始推进，适配与验证结果待同步 |
 
 认领任务时在此登记**任务、负责人或可定位的会话、当前进展**，并同步任务表状态；结束后移除此处记录。待领取工作统一查看任务表。
@@ -140,7 +140,7 @@ flowchart TD
 | 编号 | 任务 | 目标与范围 | 优先级 | 直接依赖 | 状态 |
 | --- | --- | --- | --- | --- | --- |
 | 1 | 自动协作 workflow | 建立已确认单任务的持续开发流程，经过独立功能、代码和文档验收；人工确认后再集成 develop | P0 | — | 已完成 |
-| 2 | 性能基线 | 固定当前版本和代表性输入，测量完整耗时、处理速度及内存等资源开销 | P1 | — | 进行中 |
+| 2 | 性能基线 | 固定当前版本和代表性输入，测量完整耗时、处理速度及内存等资源开销 | P1 | — | 已完成，待人工确认 |
 | 3 | 回合效果与场景适应 | 改善漏回合、边界缺失、间歇残留与主场选人，使用独立来源验证效果与适用范围 | P1 | — | 待办 |
 | 4 | 事件识别与内容评价 | 提供高光、全场最佳等剪辑所需的内容判别能力，含义与标准在需求中明确 | P1 | — | 待办 |
 | 5 | *性能优化* | 根据基线降低处理成本，验证速度收益及识别效果变化，为后续流式处理提供基础 | P1 | 2 | 待办 |

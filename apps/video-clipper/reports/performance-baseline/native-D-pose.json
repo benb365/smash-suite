@@ -1,0 +1,1040 @@
+{
+  "case_id": "D",
+  "window_name": "pose",
+  "status": "passed",
+  "errors": [],
+  "target_pid": 51087,
+  "target_uid": 501,
+  "stage": "正在分析球员动作",
+  "python_capture": {
+    "target_pid": 51087,
+    "case_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-D/D-short",
+    "flamegraph": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/python-flamegraph.svg"
+  },
+  "native_case_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-D/D-short",
+  "trace_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/pose.trace",
+  "window_mapping": {
+    "name": "pose",
+    "stage": "正在分析球员动作",
+    "trace_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/pose.trace",
+    "trace_duration_seconds": 8.95634,
+    "trace_start_date": "2026-10-21T10:37:08.248+08:00",
+    "trace_coverage_epoch_seconds": [
+      1792550228.248,
+      1792550237.20434
+    ],
+    "benchmark_recognition_epoch_seconds": [
+      1792550079.017273,
+      1792550403.4164054
+    ],
+    "ready_marker_monotonic_seconds": 1325365.673651708,
+    "ready_marker_epoch_seconds": 1792550229.2913342,
+    "ready_marker_trace_relative_seconds": 1.0433342456817627,
+    "ready_marker_in_trace": true,
+    "ready_marker_observation_interval_seconds": 0.1,
+    "ready_marker_timing_interpretation": "ready_monotonic_s is the observed marker on a 0.1 s polling loop; the actual transition may precede it by up to one polling interval. The deterministic analysis start uses the observed marker.",
+    "mapped_benchmark_start_trace_relative_seconds": -149.23072695732117,
+    "mapped_rendering_trace_relative_seconds": 175.1684055328369,
+    "analysis_window_trace_relative_seconds": [
+      1.0433342456817627,
+      8.956340074539185
+    ],
+    "analysis_window_epoch_seconds": [
+      1792550229.2913342,
+      1792550237.20434
+    ],
+    "analysis_window_duration_seconds": 7.913005828857422,
+    "pre_ready_trace_period_seconds": [
+      0.0,
+      1.0433342456817627
+    ],
+    "trace_covers_full_benchmark_interval": false,
+    "toc_start_date_precision_tolerance_seconds": 0.001,
+    "stage_clock_points": {
+      "trigger_observed_monotonic_s": {
+        "monotonic_seconds": 1325358.691671041,
+        "epoch_seconds": 1792550222.3093536,
+        "trace_relative_seconds": -5.93864631652832,
+        "covered_by_trace": false
+      },
+      "attach_requested_monotonic_s": {
+        "monotonic_seconds": 1325362.699784791,
+        "epoch_seconds": 1792550226.3174672,
+        "trace_relative_seconds": -1.930532693862915,
+        "covered_by_trace": false
+      },
+      "ready_monotonic_s": {
+        "monotonic_seconds": 1325365.673651708,
+        "epoch_seconds": 1792550229.2913342,
+        "trace_relative_seconds": 1.0433342456817627,
+        "covered_by_trace": true
+      },
+      "completed_monotonic_s": {
+        "monotonic_seconds": 1325380.115531291,
+        "epoch_seconds": 1792550243.7332137,
+        "trace_relative_seconds": 15.48521375656128,
+        "covered_by_trace": false
+      }
+    },
+    "mapping": "trace TOC start-date and duration define actual trace coverage; intersect that interval with benchmark_start-to-rendering after monotonic-to-epoch mapping"
+  },
+  "stage_validation": {
+    "events_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-events.jsonl",
+    "current_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-current.json",
+    "selected_stage": "正在分析球员动作",
+    "actual_stage_segments_over_trace": [
+      {
+        "start_monotonic_s": 1325364.6303174496,
+        "end_monotonic_s": 1325373.586657524,
+        "status": "running",
+        "stage": "正在分析球员动作",
+        "progress": 0.45624806465715345,
+        "closed_by_completed_job": true
+      }
+    ],
+    "actual_stage_segments_over_analysis_window": [
+      {
+        "start_monotonic_s": 1325365.6736516953,
+        "end_monotonic_s": 1325373.586657524,
+        "status": "running",
+        "stage": "正在分析球员动作",
+        "progress": 0.45624806465715345
+      }
+    ],
+    "observed_stages_in_analysis_window": [
+      "正在分析球员动作"
+    ],
+    "crosses_selected_stage_boundary": false,
+    "status": "stage-matches-window",
+    "policy": "Trace coverage is converted from epoch to monotonic using the recording offset; phase state comes only from stage-events/current evidence."
+  },
+  "full_toc_stage_validation": {
+    "events_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-events.jsonl",
+    "current_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-current.json",
+    "selected_stage": "正在分析球员动作",
+    "actual_stage_segments_over_trace": [
+      {
+        "start_monotonic_s": 1325364.6303174496,
+        "end_monotonic_s": 1325373.586657524,
+        "status": "running",
+        "stage": "正在分析球员动作",
+        "progress": 0.45624806465715345,
+        "closed_by_completed_job": true
+      }
+    ],
+    "actual_stage_segments_over_analysis_window": [
+      {
+        "start_monotonic_s": 1325364.6303174496,
+        "end_monotonic_s": 1325373.586657524,
+        "status": "running",
+        "stage": "正在分析球员动作",
+        "progress": 0.45624806465715345
+      }
+    ],
+    "observed_stages_in_analysis_window": [
+      "正在分析球员动作"
+    ],
+    "crosses_selected_stage_boundary": false,
+    "status": "stage-matches-window",
+    "policy": "Trace coverage is converted from epoch to monotonic using the recording offset; phase state comes only from stage-events/current evidence."
+  },
+  "trace_time_origin_validation": {
+    "status": "passed",
+    "tables": {
+      "time-profile": {
+        "target_time_range_s": [
+          0.241112583,
+          8.955807791
+        ],
+        "within_toc_trace_duration": true,
+        "overlaps_recognition_window": true
+      },
+      "metal-gpu-intervals": {
+        "target_time_range_s": null,
+        "within_toc_trace_duration": true,
+        "overlaps_recognition_window": false
+      },
+      "os-signpost": {
+        "target_time_range_s": [
+          5.378231791,
+          5.384273875
+        ],
+        "within_toc_trace_duration": true,
+        "overlaps_recognition_window": true
+      }
+    },
+    "os_signpost_tail": {
+      "classification": "none",
+      "raw_target_time_range_s": [
+        5.378231791,
+        5.384273875
+      ],
+      "toc_duration_seconds": 8.95634,
+      "tail_seconds": 0.0,
+      "outside_toc_event_type_subsystem_name_counts": [],
+      "full_event_list_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/signpost-boundary-events.json"
+    },
+    "errors": []
+  },
+  "gpu_mps_interpretation": "No GPU Active intervals or PyTorchMPS signposts in pose window; treat as CPU model path only if stage evidence confirms pose stage.",
+  "native_window_metadata": {
+    "name": "pose",
+    "stage": "正在分析球员动作",
+    "trace_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/pose.trace",
+    "trace_command": [
+      "xcrun",
+      "xctrace",
+      "record",
+      "--template",
+      "Time Profiler",
+      "--instrument",
+      "GPU",
+      "--instrument",
+      "os_signpost",
+      "--attach",
+      "51087",
+      "--time-limit",
+      "8s",
+      "--output",
+      "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/pose.trace"
+    ],
+    "trace_log_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/pose-xctrace.log",
+    "requested_duration_s": 8,
+    "trigger_observed_monotonic_s": 1325358.691671041,
+    "attach_requested_monotonic_s": 1325362.699784791,
+    "ready_monotonic_s": 1325365.673651708,
+    "completed_monotonic_s": 1325380.115531291,
+    "trace_returncode": 0,
+    "trigger_state": {
+      "monotonic_s": 1325358.691671041,
+      "status": "running",
+      "stage": "正在分析球员动作",
+      "progress": 0.45624806465715345
+    },
+    "attach_state": {
+      "monotonic_s": 1325362.517250166,
+      "status": "running",
+      "stage": "正在分析球员动作",
+      "progress": 0.46205626786535
+    },
+    "coverage_status": "pending_trace_TOC_and_phase_validation",
+    "trace_pid": 51483
+  },
+  "time_profile": {
+    "trace_relative_range_s": [
+      1.0433342456817627,
+      8.956340074539185
+    ],
+    "target_rows_in_window": 10245,
+    "target_rows_outside_window_or_without_timestamp": 1001,
+    "running_positive_weight_samples": 10245,
+    "running_positive_weight_seconds_cpu_estimate": 10.245,
+    "sample_time_range_s": [
+      1.043807625,
+      8.955807791
+    ],
+    "leaf_symbol_exclusive_top50": [
+      {
+        "value": "void at::native::(anonymous namespace)::unfolded2d_copy<float>(float const*, float*, long long, long long, long long, long long, long long, long long, long long, long long, long long, long long, long long)::'lambda'(long long, long long)::operator()(long long, long long) const",
+        "weight_seconds_estimate": 0.939
+      },
+      {
+        "value": "0x18a4dd2fc",
+        "weight_seconds_estimate": 0.865
+      },
+      {
+        "value": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool), &vision::ops::(anonymous namespace)::roi_align_forward_kernel(at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool>>, at::Tensor (at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool)",
+        "weight_seconds_estimate": 0.83
+      },
+      {
+        "value": "0x18a505d04",
+        "weight_seconds_estimate": 0.82
+      },
+      {
+        "value": "__psynch_cvwait",
+        "weight_seconds_estimate": 0.819
+      },
+      {
+        "value": "0x18a4df768",
+        "weight_seconds_estimate": 0.695
+      },
+      {
+        "value": "__psynch_cvsignal",
+        "weight_seconds_estimate": 0.527
+      },
+      {
+        "value": "0x18a416ea0",
+        "weight_seconds_estimate": 0.46
+      },
+      {
+        "value": "_platform_memmove",
+        "weight_seconds_estimate": 0.433
+      },
+      {
+        "value": "void at::native::(anonymous namespace)::cpu_max_pool<float, false>(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>)::'lambda'(long long, long long)::operator()(long long, long long) const",
+        "weight_seconds_estimate": 0.29
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::$_0::operator()() const::'lambda5'()::operator()() const::'lambda'(float, float), at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::$_0::operator()() const::'lambda5'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>, at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.272
+      },
+      {
+        "value": "0x136dee3dc",
+        "weight_seconds_estimate": 0.261
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::DEFAULT::direct_copy_kernel(at::TensorIteratorBase&)::$_6::operator()() const::'lambda13'()::operator()() const::'lambda'(float), at::native::DEFAULT::direct_copy_kernel(at::TensorIteratorBase&)::$_6::operator()() const::'lambda13'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.251
+      },
+      {
+        "value": "0x18a41f998",
+        "weight_seconds_estimate": 0.202
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic<float, 2, 4>(at::TensorIterator&)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic<float, 2, 4>(at::TensorIterator&)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.199
+      },
+      {
+        "value": "_platform_memset",
+        "weight_seconds_estimate": 0.159
+      },
+      {
+        "value": "0x18a418924",
+        "weight_seconds_estimate": 0.134
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::(anonymous namespace)::mul_kernel(at::TensorIteratorBase&)::$_5::operator()() const::'lambda12'()::operator()() const::'lambda'(float, float), at::native::(anonymous namespace)::mul_kernel(at::TensorIteratorBase&)::$_5::operator()() const::'lambda12'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>, at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.13
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::(anonymous namespace)::clamp_min_scalar_kernel_impl(at::TensorIteratorBase&, c10::Scalar)::$_11::operator()() const::'lambda5'()::operator()() const::'lambda'(float), at::native::(anonymous namespace)::clamp_min_scalar_kernel_impl(at::TensorIteratorBase&, c10::Scalar)::$_11::operator()() const::'lambda5'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.117
+      },
+      {
+        "value": "DYLD-STUB$$memcpy",
+        "weight_seconds_estimate": 0.093
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::cpu_index_kernel<float, at::native::(anonymous namespace)::index_put_kernel(at::TensorIterator&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool)::$_7::operator()() const::'lambda5'()::operator()() const::'lambda1'(char*, char*, long long)>(at::TensorIteratorBase&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, at::native::(anonymous namespace)::index_put_kernel(at::TensorIterator&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool)::$_7::operator()() const::'lambda5'()::operator()() const::'lambda1'(char*, char*, long long) const&, bool)::'lambda'(char**, long long const*, long long)>(void at::native::cpu_index_kernel<float, at::native::(anonymous namespace)::index_put_kernel(at::TensorIterator&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool)::$_7::operator()() const::'lambda5'()::operator()() const::'lambda1'(char*, char*, long long)>(at::TensorIteratorBase&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, at::native::(anonymous namespace)::index_put_kernel(at::TensorIterator&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool)::$_7::operator()() const::'lambda5'()::operator()() const::'lambda1'(char*, char*, long long) const&, bool)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.089
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::DEFAULT::binary_kernel_reduce_lastdim<at::native::(anonymous namespace)::argmax_kernel_impl(at::TensorIterator&)::$_17::operator()() const::'lambda5'()::operator()() const::'lambda'(char*, char*, long long)>(at::TensorIteratorBase&, at::native::(anonymous namespace)::argmax_kernel_impl(at::TensorIterator&)::$_17::operator()() const::'lambda5'()::operator()() const::'lambda'(char*, char*, long long))::'lambda'(char**, long long const*, long long)>(at::native::(anonymous namespace)::argmax_kernel_impl(at::TensorIterator&)::$_17::operator()() const::'lambda5'()::operator()() const::'lambda'(char*, char*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.077
+      },
+      {
+        "value": "kleidicv::neon::kleidicv_scharr_interleaved_stripe_s16_u8(unsigned char const*, unsigned long, unsigned long, unsigned long, unsigned long, short*, unsigned long, unsigned long, unsigned long)",
+        "weight_seconds_estimate": 0.061
+      },
+      {
+        "value": "mach_absolute_time",
+        "weight_seconds_estimate": 0.06
+      },
+      {
+        "value": "_PyEval_EvalFrameDefault",
+        "weight_seconds_estimate": 0.052
+      },
+      {
+        "value": "DYLD-STUB$$bzero",
+        "weight_seconds_estimate": 0.051
+      },
+      {
+        "value": "0x18a50e91c",
+        "weight_seconds_estimate": 0.048
+      },
+      {
+        "value": "0x13863786c",
+        "weight_seconds_estimate": 0.04
+      },
+      {
+        "value": "kleidicv_error_t kleidicv::neon::kleidicv_resize_generic_stripe_u8<3, 3>(unsigned char const*, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned char*, unsigned long, unsigned long, unsigned long)",
+        "weight_seconds_estimate": 0.039
+      },
+      {
+        "value": "0x18a50f368",
+        "weight_seconds_estimate": 0.038
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::(anonymous namespace)::fill_kernel(at::TensorIterator&, c10::Scalar const&)::$_2::operator()() const::'lambda5'()::operator()() const::'lambda'(), at::native::(anonymous namespace)::fill_kernel(at::TensorIterator&, c10::Scalar const&)::$_2::operator()() const::'lambda5'()::operator()() const::'lambda0'()>>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.037
+      },
+      {
+        "value": "0x138630078",
+        "weight_seconds_estimate": 0.034
+      },
+      {
+        "value": "0x138674838",
+        "weight_seconds_estimate": 0.03
+      },
+      {
+        "value": "kleidicv::neon::kleidicv_blur_and_downsample_stripe_u8(unsigned char const*, unsigned long, unsigned long, unsigned long, unsigned char*, unsigned long, unsigned long, unsigned long, unsigned long, kleidicv::FixedBorderType)",
+        "weight_seconds_estimate": 0.029
+      },
+      {
+        "value": "0x13864def0",
+        "weight_seconds_estimate": 0.027
+      },
+      {
+        "value": "0x1386649f8",
+        "weight_seconds_estimate": 0.023
+      },
+      {
+        "value": "_xzm_free",
+        "weight_seconds_estimate": 0.021
+      },
+      {
+        "value": "cv::PyrDownInvoker<cv::FixPtCast<unsigned char, 8>>::operator()(cv::Range const&) const",
+        "weight_seconds_estimate": 0.02
+      },
+      {
+        "value": "cv::copyMakeBorder(cv::_InputArray const&, cv::_OutputArray const&, int, int, int, int, int, cv::Scalar_<double> const&)",
+        "weight_seconds_estimate": 0.02
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic<float, 2, 2>(at::TensorIterator&)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic<float, 2, 2>(at::TensorIterator&)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.02
+      },
+      {
+        "value": "0x1383ee8ec",
+        "weight_seconds_estimate": 0.019
+      },
+      {
+        "value": "0x13865a198",
+        "weight_seconds_estimate": 0.018
+      },
+      {
+        "value": "0x138646c44",
+        "weight_seconds_estimate": 0.016
+      },
+      {
+        "value": "__psynch_mutexwait",
+        "weight_seconds_estimate": 0.016
+      },
+      {
+        "value": "PyObject_GenericGetAttr",
+        "weight_seconds_estimate": 0.016
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic<float, 2, 1>(at::TensorIterator&)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic<float, 2, 1>(at::TensorIterator&)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.015
+      },
+      {
+        "value": "void __kmp_suspend_64<false, true>(int, kmp_flag_64<false, true>*)",
+        "weight_seconds_estimate": 0.014
+      },
+      {
+        "value": "__bzero",
+        "weight_seconds_estimate": 0.014
+      },
+      {
+        "value": "kmp_flag_64<false, true>::wait(kmp_info*, int, void*)",
+        "weight_seconds_estimate": 0.014
+      },
+      {
+        "value": "kmp_flag_64<false, true>::release()",
+        "weight_seconds_estimate": 0.013
+      }
+    ],
+    "leaf_binary_exclusive_top50": [
+      {
+        "value": "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib",
+        "weight_seconds_estimate": 3.283
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.8
+      },
+      {
+        "value": "/usr/lib/system/libsystem_kernel.dylib",
+        "weight_seconds_estimate": 1.436
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torchvision/_C.so",
+        "weight_seconds_estimate": 0.838
+      },
+      {
+        "value": "/usr/lib/system/libsystem_platform.dylib",
+        "weight_seconds_estimate": 0.613
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libavcodec.61.19.100.dylib",
+        "weight_seconds_estimate": 0.293
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libswscale.8.3.100.dylib",
+        "weight_seconds_estimate": 0.266
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/cv2/cv2.abi3.so",
+        "weight_seconds_estimate": 0.199
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.runtime/uv-python/cpython-3.11.16-macos-aarch64-none/bin/python3.11",
+        "weight_seconds_estimate": 0.18
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libomp.dylib",
+        "weight_seconds_estimate": 0.106
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.dylib",
+        "weight_seconds_estimate": 0.07
+      },
+      {
+        "value": "/usr/lib/system/libsystem_malloc.dylib",
+        "weight_seconds_estimate": 0.066
+      },
+      {
+        "value": "/usr/lib/system/libsystem_pthread.dylib",
+        "weight_seconds_estimate": 0.036
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libc10.dylib",
+        "weight_seconds_estimate": 0.03
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/numpy/_core/_multiarray_umath.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.014
+      },
+      {
+        "value": "/usr/lib/system/libdyld.dylib",
+        "weight_seconds_estimate": 0.005
+      },
+      {
+        "value": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+        "weight_seconds_estimate": 0.003
+      },
+      {
+        "value": "/usr/lib/libc++.1.dylib",
+        "weight_seconds_estimate": 0.002
+      },
+      {
+        "value": "/usr/lib/libc++abi.dylib",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/dictionary.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/usr/lib/system/libsystem_trace.dylib",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/usr/lib/system/libsystem_c.dylib",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libavformat.61.7.100.dylib",
+        "weight_seconds_estimate": 0.001
+      }
+    ],
+    "all_leaf_binary_exclusive_weight_seconds_estimate": {
+      "/System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib": 3.283,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.dylib": 2.8,
+      "/usr/lib/system/libsystem_kernel.dylib": 1.436,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torchvision/_C.so": 0.838,
+      "/usr/lib/system/libsystem_platform.dylib": 0.613,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libavcodec.61.19.100.dylib": 0.293,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libswscale.8.3.100.dylib": 0.266,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/cv2/cv2.abi3.so": 0.199,
+      "/Users/bytedance/workspace/experiments/smash-suite/.runtime/uv-python/cpython-3.11.16-macos-aarch64-none/bin/python3.11": 0.18,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libomp.dylib": 0.106,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.dylib": 0.07,
+      "/usr/lib/system/libsystem_malloc.dylib": 0.066,
+      "/usr/lib/system/libsystem_pthread.dylib": 0.036,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libc10.dylib": 0.03,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/numpy/_core/_multiarray_umath.cpython-311-darwin.so": 0.014,
+      "/usr/lib/system/libdyld.dylib": 0.005,
+      "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation": 0.003,
+      "/usr/lib/libc++.1.dylib": 0.002,
+      "/usr/lib/libc++abi.dylib": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/dictionary.cpython-311-darwin.so": 0.001,
+      "/usr/lib/system/libsystem_trace.dylib": 0.001,
+      "/usr/lib/system/libsystem_c.dylib": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libavformat.61.7.100.dylib": 0.001
+    },
+    "inclusive_symbol_top50": [
+      {
+        "value": "_PyFunction_Vectorcall",
+        "weight_seconds_estimate": 5.592
+      },
+      {
+        "value": "_PyEval_EvalFrameDefault",
+        "weight_seconds_estimate": 5.592
+      },
+      {
+        "value": "builtin_exec",
+        "weight_seconds_estimate": 5.59
+      },
+      {
+        "value": "Py_RunMain",
+        "weight_seconds_estimate": 5.59
+      },
+      {
+        "value": "_PyEval_Vector",
+        "weight_seconds_estimate": 5.59
+      },
+      {
+        "value": "cfunction_vectorcall_FASTCALL_KEYWORDS",
+        "weight_seconds_estimate": 5.59
+      },
+      {
+        "value": "main",
+        "weight_seconds_estimate": 5.59
+      },
+      {
+        "value": "pymain_main",
+        "weight_seconds_estimate": 5.59
+      },
+      {
+        "value": "start",
+        "weight_seconds_estimate": 5.59
+      },
+      {
+        "value": "pymain_run_module",
+        "weight_seconds_estimate": 5.59
+      },
+      {
+        "value": "method_vectorcall",
+        "weight_seconds_estimate": 5.034
+      },
+      {
+        "value": "_PyObject_Call_Prepend",
+        "weight_seconds_estimate": 4.779
+      },
+      {
+        "value": "slot_tp_call",
+        "weight_seconds_estimate": 4.777
+      },
+      {
+        "value": "cfunction_call",
+        "weight_seconds_estimate": 4.434
+      },
+      {
+        "value": "__kmp_invoke_microtask",
+        "weight_seconds_estimate": 3.535
+      },
+      {
+        "value": "SGEMM",
+        "weight_seconds_estimate": 3.299
+      },
+      {
+        "value": "at::native::cpublas::gemm(at::native::TransposeType, at::native::TransposeType, long long, long long, long long, float, float const*, long long, float const*, long long, float, float*, long long)",
+        "weight_seconds_estimate": 3.299
+      },
+      {
+        "value": "APL_sgemm",
+        "weight_seconds_estimate": 3.294
+      },
+      {
+        "value": "0x189ff524c",
+        "weight_seconds_estimate": 3.292
+      },
+      {
+        "value": "0x1ff",
+        "weight_seconds_estimate": 2.951
+      },
+      {
+        "value": "0x726854207264",
+        "weight_seconds_estimate": 2.951
+      },
+      {
+        "value": "at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "weight_seconds_estimate": 2.671
+      },
+      {
+        "value": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "weight_seconds_estimate": 2.671
+      },
+      {
+        "value": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long)",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "value": "torch::autograd::THPVariable_conv2d(_object*, _object*, _object*)",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "value": "at::_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long, bool, bool, bool, bool)",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "value": "at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "value": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long, bool, bool, bool, bool)",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "value": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd___convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "value": "at::native::_convolution_nogroup_backend(at::Tensor const&, at::Tensor const&, at::Tensor const&, at::native::ConvBackend, at::native::ConvParams<long long> const&)",
+        "weight_seconds_estimate": 2.662
+      },
+      {
+        "value": "at::_ops::conv2d::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "weight_seconds_estimate": 2.659
+      },
+      {
+        "value": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv2d(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "weight_seconds_estimate": 2.659
+      },
+      {
+        "value": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "weight_seconds_estimate": 2.658
+      },
+      {
+        "value": "at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv2d(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "weight_seconds_estimate": 2.658
+      },
+      {
+        "value": "at::_ops::thnn_conv2d::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>)",
+        "weight_seconds_estimate": 2.647
+      },
+      {
+        "value": "at::native::thnn_conv2d(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>)",
+        "weight_seconds_estimate": 2.646
+      },
+      {
+        "value": "at::_ops::_slow_conv2d_forward::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>)",
+        "weight_seconds_estimate": 2.644
+      },
+      {
+        "value": "at::native::slow_conv2d_forward_cpu(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>)",
+        "weight_seconds_estimate": 2.642
+      },
+      {
+        "value": "at::native::slow_conv2d_forward_out_cpu(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, at::Tensor&)",
+        "weight_seconds_estimate": 2.639
+      },
+      {
+        "value": "void at::native::(anonymous namespace)::unfolded2d_copy<float>(float const*, float*, long long, long long, long long, long long, long long, long long, long long, long long, long long, long long, long long)::'lambda'(long long, long long)::operator()(long long, long long) const",
+        "weight_seconds_estimate": 1.655
+      },
+      {
+        "value": "0x35f",
+        "weight_seconds_estimate": 1.646
+      },
+      {
+        "value": "0x189ff7dcc",
+        "weight_seconds_estimate": 1.592
+      },
+      {
+        "value": ".omp_outlined..70",
+        "weight_seconds_estimate": 1.523
+      },
+      {
+        "value": "0x52f",
+        "weight_seconds_estimate": 1.305
+      },
+      {
+        "value": "at::TensorIteratorBase::serial_for_each(c10::function_ref<void (char**, long long const*, long long, long long)>, at::Range) const",
+        "weight_seconds_estimate": 1.267
+      },
+      {
+        "value": ".omp_outlined.",
+        "weight_seconds_estimate": 1.244
+      },
+      {
+        "value": "at::internal::serial_for_each(c10::ArrayRef<long long>, c10::ArrayRef<long long>, char**, unsigned long, c10::function_ref<void (char**, long long const*, long long, long long)>, at::Range)",
+        "weight_seconds_estimate": 1.198
+      },
+      {
+        "value": "thread_start",
+        "weight_seconds_estimate": 1.116
+      },
+      {
+        "value": "_pthread_start",
+        "weight_seconds_estimate": 1.116
+      },
+      {
+        "value": "__kmp_launch_worker(void*)",
+        "weight_seconds_estimate": 1.114
+      }
+    ],
+    "native_symbol_examples_top50": [
+      {
+        "symbol": "at::native::cpublas::gemm(at::native::TransposeType, at::native::TransposeType, long long, long long, long long, float, float const*, long long, float const*, long long, float, float*, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 3.299
+      },
+      {
+        "symbol": "at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.671
+      },
+      {
+        "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.671
+      },
+      {
+        "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd___convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "symbol": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long, bool, bool, bool, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "symbol": "at::_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long, bool, bool, bool, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "symbol": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "symbol": "at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "symbol": "torch::autograd::THPVariable_conv2d(_object*, _object*, _object*)",
+        "binary": "libtorch_python.dylib",
+        "weight_seconds_estimate": 2.669
+      },
+      {
+        "symbol": "at::native::_convolution_nogroup_backend(at::Tensor const&, at::Tensor const&, at::Tensor const&, at::native::ConvBackend, at::native::ConvParams<long long> const&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.662
+      },
+      {
+        "symbol": "at::_ops::conv2d::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.659
+      },
+      {
+        "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv2d(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.659
+      },
+      {
+        "symbol": "at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeImplicitAutograd__conv2d(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.658
+      },
+      {
+        "symbol": "at::native::conv2d_symint(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.658
+      },
+      {
+        "symbol": "at::_ops::thnn_conv2d::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.647
+      },
+      {
+        "symbol": "at::native::thnn_conv2d(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.646
+      },
+      {
+        "symbol": "at::_ops::_slow_conv2d_forward::call(at::Tensor const&, at::Tensor const&, c10::ArrayRef<c10::SymInt>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.644
+      },
+      {
+        "symbol": "at::native::slow_conv2d_forward_cpu(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.642
+      },
+      {
+        "symbol": "at::native::slow_conv2d_forward_out_cpu(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, at::Tensor&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 2.639
+      },
+      {
+        "symbol": "void at::native::(anonymous namespace)::unfolded2d_copy<float>(float const*, float*, long long, long long, long long, long long, long long, long long, long long, long long, long long, long long, long long)::'lambda'(long long, long long)::operator()(long long, long long) const",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 1.655
+      },
+      {
+        "symbol": "at::TensorIteratorBase::serial_for_each(c10::function_ref<void (char**, long long const*, long long, long long)>, at::Range) const",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 1.267
+      },
+      {
+        "symbol": "at::internal::serial_for_each(c10::ArrayRef<long long>, c10::ArrayRef<long long>, char**, unsigned long, c10::function_ref<void (char**, long long const*, long long, long long)>, at::Range)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 1.198
+      },
+      {
+        "symbol": "kmp_flag_64<false, true>::wait(kmp_info*, int, void*)",
+        "binary": "libomp.dylib",
+        "weight_seconds_estimate": 0.926
+      },
+      {
+        "symbol": "pybind11::cpp_function::dispatcher(_object*, _object*, _object*)",
+        "binary": "libtorch_python.dylib",
+        "weight_seconds_estimate": 0.87
+      },
+      {
+        "symbol": "torch::jit::_get_operation_for_overload_or_packet(std::__1::vector<std::__1::shared_ptr<torch::jit::Operator>, std::__1::allocator<std::__1::shared_ptr<torch::jit::Operator>>> const&, c10::Symbol, pybind11::args const&, pybind11::kwargs const&, bool, std::__1::optional<c10::DispatchKey>)",
+        "binary": "libtorch_python.dylib",
+        "weight_seconds_estimate": 0.853
+      },
+      {
+        "symbol": "void pybind11::cpp_function::initialize<torch::jit::initJITBindings(_object*)::$_224::operator()(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) const::'lambda'(pybind11::args const&, pybind11::kwargs const&), pybind11::object, pybind11::args const&, pybind11::kwargs const&, pybind11::name, pybind11::doc>(torch::jit::initJITBindings(_object*)::$_224::operator()(std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char>> const&) const::'lambda'(pybind11::args const&, pybind11::kwargs const&)&&, pybind11::object (*)(pybind11::args const&, pybind11::kwargs const&), pybind11::name const&, pybind11::doc const&)::'lambda'(pybind11::detail::function_call&)::__invoke(pybind11::detail::function_call&)",
+        "binary": "libtorch_python.dylib",
+        "weight_seconds_estimate": 0.853
+      },
+      {
+        "symbol": "torch::jit::invokeOperatorFromPython(std::__1::vector<std::__1::shared_ptr<torch::jit::Operator>, std::__1::allocator<std::__1::shared_ptr<torch::jit::Operator>>> const&, pybind11::args const&, pybind11::kwargs const&, std::__1::optional<c10::DispatchKey>)",
+        "binary": "libtorch_python.dylib",
+        "weight_seconds_estimate": 0.851
+      },
+      {
+        "symbol": "c10::Dispatcher::callBoxed(c10::OperatorHandle const&, std::__1::vector<c10::IValue, std::__1::allocator<c10::IValue>>*) const",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.849
+      },
+      {
+        "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool), &vision::ops::(anonymous namespace)::roi_align_forward_kernel(at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool>>, at::Tensor (at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool)",
+        "binary": "_C.so",
+        "weight_seconds_estimate": 0.84
+      },
+      {
+        "symbol": "c10::impl::make_boxed_from_unboxed_functor<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool), &vision::ops::(anonymous namespace)::roi_align_forward_kernel(at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, double, long long, long long, long long, bool>>, false>::call(c10::OperatorKernel*, c10::OperatorHandle const&, c10::DispatchKeySet, std::__1::vector<c10::IValue, std::__1::allocator<c10::IValue>>*)",
+        "binary": "_C.so",
+        "weight_seconds_estimate": 0.84
+      },
+      {
+        "symbol": "kmp_flag_64<false, true>::release()",
+        "binary": "libomp.dylib",
+        "weight_seconds_estimate": 0.566
+      },
+      {
+        "symbol": "torch::autograd::THPVariable_linear(_object*, _object*, _object*)",
+        "binary": "libtorch_python.dylib",
+        "weight_seconds_estimate": 0.464
+      },
+      {
+        "symbol": "at::native::linear(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.463
+      },
+      {
+        "symbol": "at::native::structured_addmm_out_cpu::impl(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::Scalar const&, c10::Scalar const&, at::Tensor const&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.463
+      },
+      {
+        "symbol": "at::_ops::linear::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.463
+      },
+      {
+        "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::Scalar const&, c10::Scalar const&), &at::(anonymous namespace)::wrapper_CPU_addmm(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::Scalar const&, c10::Scalar const&)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::Scalar const&, c10::Scalar const&>>, at::Tensor (at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::Scalar const&, c10::Scalar const&)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::Scalar const&, c10::Scalar const&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.463
+      },
+      {
+        "symbol": "at::_ops::addmm::call(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::Scalar const&, c10::Scalar const&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.463
+      },
+      {
+        "symbol": "at::native::addmm_impl_cpu_(at::Tensor&, at::Tensor const&, at::Tensor, at::Tensor, c10::Scalar const&, c10::Scalar const&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.461
+      },
+      {
+        "symbol": "at::TensorIteratorBase::for_each(c10::function_ref<void (char**, long long const*, long long, long long)>, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.35
+      },
+      {
+        "symbol": "at::native::slow_conv2d_forward_out_cpu(at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, at::Tensor&)::$_3::operator()() const::'lambda5'()::operator()() const::'lambda'(long long, long long)::operator()(long long, long long) const",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.328
+      },
+      {
+        "symbol": "void at::native::(anonymous namespace)::cpu_max_pool<float, false>(at::Tensor const&, at::Tensor const&, at::Tensor const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>)::'lambda'(long long, long long)::operator()(long long, long long) const",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.29
+      },
+      {
+        "symbol": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::$_0::operator()() const::'lambda5'()::operator()() const::'lambda'(float, float), at::native::(anonymous namespace)::add_kernel(at::TensorIteratorBase&, c10::Scalar const&)::$_0::operator()() const::'lambda5'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>, at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.272
+      },
+      {
+        "symbol": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::DEFAULT::direct_copy_kernel(at::TensorIteratorBase&)::$_6::operator()() const::'lambda13'()::operator()() const::'lambda'(float), at::native::DEFAULT::direct_copy_kernel(at::TensorIteratorBase&)::$_6::operator()() const::'lambda13'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.251
+      },
+      {
+        "symbol": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic<float, 2, 4>(at::TensorIterator&)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic<float, 2, 4>(at::TensorIterator&)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.2
+      },
+      {
+        "symbol": "at::native::(anonymous namespace)::unfolded2d_copy_kernel(c10::ScalarType, void*, void const*, long long, long long, long long, long long, long long, long long, long long, long long, long long, long long, long long, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.195
+      },
+      {
+        "symbol": "pyopencv_cv_calcOpticalFlowPyrLK(_object*, _object*, _object*)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.16
+      },
+      {
+        "symbol": "cv::calcOpticalFlowPyrLK(cv::_InputArray const&, cv::_InputArray const&, cv::_InputArray const&, cv::_InputOutputArray const&, cv::_OutputArray const&, cv::_OutputArray const&, cv::Size_<int>, int, cv::TermCriteria, int, double)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.158
+      },
+      {
+        "symbol": "cv::(anonymous namespace)::SparsePyrLKOpticalFlowImpl::calc(cv::_InputArray const&, cv::_InputArray const&, cv::_InputArray const&, cv::_InputOutputArray const&, cv::_OutputArray const&, cv::_OutputArray const&)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.158
+      },
+      {
+        "symbol": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::(anonymous namespace)::mul_kernel(at::TensorIteratorBase&)::$_5::operator()() const::'lambda12'()::operator()() const::'lambda'(float, float), at::native::(anonymous namespace)::mul_kernel(at::TensorIteratorBase&)::$_5::operator()() const::'lambda12'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>, at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.13
+      },
+      {
+        "symbol": "kleidicv::hal::parallel(kleidicv_error_t (*)(unsigned int, unsigned int, void*), void*, void*, unsigned int)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.13
+      }
+    ]
+  },
+  "metal_gpu_intervals": {
+    "trace_relative_range_s": [
+      1.0433342456817627,
+      8.956340074539185
+    ],
+    "target_rows_overlapping_window": 0,
+    "target_rows_outside_window": 0,
+    "state_counts": {},
+    "state_ranges_s": {},
+    "active_interval_count": 0,
+    "active_union_seconds": 0
+  },
+  "os_signpost": {
+    "pytorch_mps_event_type_counts": {},
+    "pytorch_mps_event_count": 0,
+    "pytorch_mps_paired_interval_count": 0,
+    "pytorch_mps_interval_union_seconds": 0
+  },
+  "source_summary": {
+    "path": "apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-final-v2/pose/summary.json",
+    "bytes": 564749,
+    "sha256": "f169396180168e541140d34a3112d1ad2ecdacd5f7e1914ffeadb4761a7e5b16"
+  },
+  "source_artifact_index": {
+    "path": "apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-final-v2/pose/artifact-index.json",
+    "bytes": 4822,
+    "sha256": "ea071bc1ac4f87c0208828e56d25dfc5c12bbb30e5ebba0698089e471b62e047"
+  }
+}

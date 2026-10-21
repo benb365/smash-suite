@@ -1,0 +1,568 @@
+{
+  "cases": [
+    {
+      "case_id": "A-short",
+      "scene": "high",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "court": null,
+      "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "status": "passed",
+      "metadata": {
+        "bytes": 70418255,
+        "container_duration_s": 168.091,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 25.0,
+        "container_frames": 4200,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "preflight": {
+        "file_frame_source": {
+          "status": "passed",
+          "stats": {
+            "frames_decoded": 4200,
+            "frames_delivered": 4200,
+            "queue_peak": 1,
+            "decode_s": 9.14761757152155,
+            "conversion_s": 5.563293573213741,
+            "max_lag_s": 0.0,
+            "fps": 25.0,
+            "expected_frames": 4200,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 91.0,
+            "last_timestamp_ms": 167960.0,
+            "last_delivered_timestamp_ms": 167960.0
+          }
+        },
+        "full_av_decode": {
+          "exit_code": 0,
+          "log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/A-short.decode.log"
+        },
+        "decode_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/A-short.decode.log"
+      },
+      "source": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+        "window_s": [
+          0,
+          168.091
+        ]
+      },
+      "continuity": {
+        "summary": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/summary.json",
+        "decision": "passed",
+        "reason": "约25秒接触表和实际最后解码帧保持同一高位固定机位及球场构图；未见切镜或场地变化。 结论仅适用于本轮性能输入的连续性抽样检查，不代表逐帧人审或回合效果验收。",
+        "evidence": [
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/A-short-contact.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-contact.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_contacts.py",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_endpoints.py"
+        ]
+      }
+    },
+    {
+      "case_id": "A-long",
+      "scene": "high",
+      "video": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/A-long.mp4",
+      "court": null,
+      "sha256": "60d2a03d28cc159653c8fd00febebf227306174983635469cea3f6b96d9dedf7",
+      "status": "passed",
+      "metadata": {
+        "bytes": 377924373,
+        "container_duration_s": 900.211,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 25.0,
+        "container_frames": 22503,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "preflight": {
+        "file_frame_source": {
+          "status": "passed",
+          "stats": {
+            "frames_decoded": 22503,
+            "frames_delivered": 22503,
+            "queue_peak": 1,
+            "decode_s": 48.32452793326229,
+            "conversion_s": 29.166530741611496,
+            "max_lag_s": 0.0,
+            "fps": 25.0,
+            "expected_frames": 22503,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 91.0,
+            "last_timestamp_ms": 900080.0,
+            "last_delivered_timestamp_ms": 900080.0
+          }
+        },
+        "full_av_decode": {
+          "exit_code": 0,
+          "log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/A-long.decode.log"
+        },
+        "decode_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/A-long.decode.log"
+      },
+      "source": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/A1/source.mp4",
+        "requested_window_s": [
+          600,
+          1500
+        ],
+        "actual_window_s": [
+          599.96,
+          1500.04
+        ],
+        "window_policy": "stream-copy; actual keyframe boundaries accepted by controller decision in media/input.md",
+        "video_packet_mapping": {
+          "source_packets_in_window": 22801,
+          "clip_packets": 22503,
+          "matched_contiguous_packets": 22503,
+          "all_packets_match": true,
+          "first_source_pts_s": 599.96,
+          "last_source_pts_s": 1500.04,
+          "first_clip_pts_s": 0.091,
+          "last_clip_pts_s": 900.171,
+          "pts_offset_min_s": 599.8689999999999,
+          "pts_offset_max_s": 599.8690000000001,
+          "dts_offset_min_s": 599.8689999999999,
+          "dts_offset_max_s": 599.8690000000001
+        },
+        "audio_packet_mapping": {
+          "source_packets_in_window": 39270,
+          "clip_packets": 38760,
+          "matched_contiguous_packets": 38760,
+          "all_packets_match": true,
+          "first_source_pts_s": 599.8682086167801,
+          "last_source_pts_s": 1499.988231292517,
+          "first_clip_pts_s": 0.0,
+          "last_clip_pts_s": 900.120022675737,
+          "pts_offset_min_s": 599.86820861678,
+          "pts_offset_max_s": 599.8682086167802,
+          "dts_offset_min_s": 599.86820861678,
+          "dts_offset_max_s": 599.8682086167802
+        },
+        "pixel_time_check": {
+          "case_id": "A-long",
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/A1/source.mp4",
+          "output": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/A-long.mp4",
+          "offset_s": 599.869,
+          "matched_frames": 22503,
+          "output_frames": 22503,
+          "first_matched_source_pts_s": 599.96,
+          "last_matched_source_pts_s": 1500.04,
+          "first_output_pts_s": 0.091,
+          "last_output_pts_s": 900.171,
+          "pts_offset_minmax_s": [
+            599.8689999999999,
+            599.8690000000001
+          ],
+          "mismatch_count_captured": 0,
+          "mismatches_first50": [],
+          "elapsed_s": 136.15
+        },
+        "source_mapping_evidence": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/source-frame-verification.json",
+        "decoded_frame_pts_s": [
+          599.96,
+          1500.04
+        ]
+      },
+      "continuity": {
+        "summary": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/summary.json",
+        "decision": "passed",
+        "reason": "约25秒接触表显示高位固定机位、主场地和边界构图持续一致；1Hz低分辨率扫描未出现达到阈值的候选点。接触表未见切镜、跳切或场地变化。 结论仅适用于本轮性能输入的连续性抽样检查，不代表逐帧人审或回合效果验收。",
+        "evidence": [
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/A-long-contact.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/A-long-candidates.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/scan.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/inspect_continuity.py",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/scan.log"
+        ]
+      }
+    },
+    {
+      "case_id": "C-short",
+      "scene": "courtside",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+      "court": null,
+      "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "status": "passed",
+      "metadata": {
+        "bytes": 66256451,
+        "container_duration_s": 180.000313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.99994791675709,
+        "container_frames": 5400,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "preflight": {
+        "file_frame_source": {
+          "status": "passed",
+          "stats": {
+            "frames_decoded": 5400,
+            "frames_delivered": 5400,
+            "queue_peak": 1,
+            "decode_s": 10.629853124264628,
+            "conversion_s": 6.938634269405156,
+            "max_lag_s": 0.0,
+            "fps": 29.99994791675709,
+            "expected_frames": 5400,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 0.0,
+            "last_timestamp_ms": 179967.0,
+            "last_delivered_timestamp_ms": 179967.0
+          }
+        },
+        "full_av_decode": {
+          "exit_code": 0,
+          "log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/C-short.decode.log"
+        },
+        "decode_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/C-short.decode.log"
+      },
+      "source": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+        "window_s": [
+          0,
+          180.000313
+        ]
+      },
+      "continuity": {
+        "summary": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/summary.json",
+        "decision": "passed",
+        "reason": "约25秒接触表和实际最后解码帧保持同一低位机位及场地；前景球员/人员活动属画面内容变化，未见切镜或场地变化。 结论仅适用于本轮性能输入的连续性抽样检查，不代表逐帧人审或回合效果验收。",
+        "evidence": [
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/C-short-contact.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-contact.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_contacts.py",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_endpoints.py"
+        ]
+      }
+    },
+    {
+      "case_id": "C-long",
+      "scene": "courtside",
+      "video": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/C-long.mp4",
+      "court": null,
+      "sha256": "4a732654d1326057a25f61b6c64d5afed7f283c6a9626367fa00d570b3d540c4",
+      "status": "passed",
+      "metadata": {
+        "bytes": 348207683,
+        "container_duration_s": 905.144313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.981117470355645,
+        "container_frames": 27134,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "preflight": {
+        "file_frame_source": {
+          "status": "passed",
+          "stats": {
+            "frames_decoded": 27134,
+            "frames_delivered": 27134,
+            "queue_peak": 1,
+            "decode_s": 50.74744359240867,
+            "conversion_s": 35.07947446312755,
+            "max_lag_s": 0.0,
+            "fps": 29.981117470355645,
+            "expected_frames": 27134,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 108.0,
+            "last_timestamp_ms": 905037.0,
+            "last_delivered_timestamp_ms": 905037.0
+          }
+        },
+        "full_av_decode": {
+          "exit_code": 0,
+          "log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/C-long.decode.log"
+        },
+        "decode_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/C-long.decode.log"
+      },
+      "source": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/C1/source.mp4",
+        "requested_window_s": [
+          120,
+          1020
+        ],
+        "actual_window_s": [
+          115.07,
+          1020.007
+        ],
+        "window_policy": "stream-copy; actual keyframe boundaries accepted by controller decision in media/input.md",
+        "video_packet_mapping": {
+          "source_packets_in_window": 27337,
+          "clip_packets": 27134,
+          "matched_contiguous_packets": 27134,
+          "all_packets_match": true,
+          "first_source_pts_s": 115.07,
+          "last_source_pts_s": 1020.007,
+          "first_clip_pts_s": 0.108,
+          "last_clip_pts_s": 905.045,
+          "pts_offset_min_s": 114.96199999999993,
+          "pts_offset_max_s": 114.9620000000001,
+          "dts_offset_min_s": 114.96199999999993,
+          "dts_offset_max_s": 114.9620000000001
+        },
+        "audio_packet_mapping": {
+          "source_packets_in_window": 39276,
+          "clip_packets": 38977,
+          "matched_contiguous_packets": 38977,
+          "all_packets_match": true,
+          "first_source_pts_s": 114.9619954648526,
+          "last_source_pts_s": 1019.982947845805,
+          "first_clip_pts_s": 0.0,
+          "last_clip_pts_s": 905.0209523809524,
+          "pts_offset_min_s": 114.96199546485252,
+          "pts_offset_max_s": 114.96199546485269,
+          "dts_offset_min_s": 114.96199546485252,
+          "dts_offset_max_s": 114.96199546485269
+        },
+        "pixel_time_check": {
+          "case_id": "C-long",
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/C1/source.mp4",
+          "output": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/C-long.mp4",
+          "offset_s": 114.962,
+          "matched_frames": 27134,
+          "output_frames": 27134,
+          "first_matched_source_pts_s": 115.07,
+          "last_matched_source_pts_s": 1020.107,
+          "first_output_pts_s": 0.108,
+          "last_output_pts_s": 905.145,
+          "pts_offset_minmax_s": [
+            114.96199999999993,
+            114.9620000000001
+          ],
+          "mismatch_count_captured": 0,
+          "mismatches_first50": [],
+          "elapsed_s": 155.95
+        },
+        "source_mapping_evidence": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/source-frame-verification.json",
+        "decoded_frame_pts_s": [
+          115.07,
+          1020.107
+        ]
+      },
+      "continuity": {
+        "summary": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/summary.json",
+        "decision": "passed",
+        "reason": "约25秒接触表和9个候选点邻帧均保留同一低位广角与主场地。候选变化对应前景人员走过、球员移动等画面内容变化，未见机位、主场或场地切换。 结论仅适用于本轮性能输入的连续性抽样检查，不代表逐帧人审或回合效果验收。",
+        "evidence": [
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/C-long-contact.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/C-long-candidates.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/scan.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/inspect_continuity.py",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/scan.log"
+        ]
+      }
+    },
+    {
+      "case_id": "D-short",
+      "scene": "personal",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+      "court": null,
+      "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "status": "passed",
+      "metadata": {
+        "bytes": 14278282,
+        "container_duration_s": 250.900313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.999962634562284,
+        "container_frames": 7527,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "preflight": {
+        "file_frame_source": {
+          "status": "passed",
+          "stats": {
+            "frames_decoded": 7527,
+            "frames_delivered": 7527,
+            "queue_peak": 1,
+            "decode_s": 7.75140193849802,
+            "conversion_s": 9.730292215244845,
+            "max_lag_s": 0.0,
+            "fps": 29.999962634562284,
+            "expected_frames": 7527,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 0.0,
+            "last_timestamp_ms": 250867.0,
+            "last_delivered_timestamp_ms": 250867.0
+          }
+        },
+        "full_av_decode": {
+          "exit_code": 0,
+          "log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/D-short.decode.log"
+        },
+        "decode_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/D-short.decode.log"
+      },
+      "source": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+        "window_s": [
+          0,
+          250.900313
+        ]
+      },
+      "continuity": {
+        "summary": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/summary.json",
+        "decision": "passed",
+        "reason": "约25秒接触表和实际最后解码帧保持同一侧边机位及场地；画面中的计分覆盖层出现/消失本身不作为切镜证据，未见构图或场地切换。 结论仅适用于本轮性能输入的连续性抽样检查，不代表逐帧人审或回合效果验收。",
+        "evidence": [
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/D-short-contact.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-contact.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_contacts.py",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_endpoints.py"
+        ]
+      }
+    },
+    {
+      "case_id": "D-long",
+      "scene": "personal",
+      "video": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/D-long.mp4",
+      "court": null,
+      "sha256": "e7b13cd65f96e7661a75f377401a9e35f205feef02c110797e4e1e9ad942d284",
+      "status": "passed",
+      "metadata": {
+        "bytes": 156376487,
+        "container_duration_s": 611.112438,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.98629855246564,
+        "container_frames": 18325,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "preflight": {
+        "file_frame_source": {
+          "status": "passed",
+          "stats": {
+            "frames_decoded": 18325,
+            "frames_delivered": 18325,
+            "queue_peak": 1,
+            "decode_s": 30.893564853118733,
+            "conversion_s": 23.644241203088313,
+            "max_lag_s": 0.0,
+            "fps": 29.98629855246564,
+            "expected_frames": 18325,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 133.0,
+            "last_timestamp_ms": 611112.5,
+            "last_delivered_timestamp_ms": 611112.5
+          }
+        },
+        "full_av_decode": {
+          "exit_code": 0,
+          "log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/D-long.decode.log"
+        },
+        "decode_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/D-long.decode.log"
+      },
+      "source": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/D1/source.mp4",
+        "requested_window_s": [
+          0,
+          610.946
+        ],
+        "actual_window_s": [
+          0.0,
+          610.9791875
+        ],
+        "window_policy": "stream-copy; actual keyframe boundaries accepted by controller decision in media/input.md",
+        "video_packet_mapping": {
+          "source_packets_in_window": 18381,
+          "clip_packets": 18325,
+          "matched_contiguous_packets": 18325,
+          "all_packets_match": true,
+          "first_source_pts_s": 0.0,
+          "last_source_pts_s": 610.9791875,
+          "first_clip_pts_s": 0.133,
+          "last_clip_pts_s": 611.1121875,
+          "pts_offset_min_s": -0.1330000000000382,
+          "pts_offset_max_s": -0.1329999999999245,
+          "dts_offset_min_s": -0.1330000000000382,
+          "dts_offset_max_s": -0.1329999999999245
+        },
+        "audio_packet_mapping": {
+          "source_packets_in_window": 28732,
+          "clip_packets": 28639,
+          "matched_contiguous_packets": 28639,
+          "all_packets_match": true,
+          "first_source_pts_s": 0.0,
+          "last_source_pts_s": 610.944,
+          "first_clip_pts_s": 0.133,
+          "last_clip_pts_s": 611.077,
+          "pts_offset_min_s": -0.1330000000000382,
+          "pts_offset_max_s": -0.1329999999999245,
+          "dts_offset_min_s": -0.1330000000000382,
+          "dts_offset_max_s": -0.1329999999999245
+        },
+        "pixel_time_check": {
+          "case_id": "D-long",
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/D1/source.mp4",
+          "output": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/D-long.mp4",
+          "offset_s": -0.133,
+          "matched_frames": 18325,
+          "output_frames": 18325,
+          "first_matched_source_pts_s": 0.0,
+          "last_matched_source_pts_s": 611.1125,
+          "first_output_pts_s": 0.133,
+          "last_output_pts_s": 611.2455,
+          "pts_offset_minmax_s": [
+            -0.1330000000000382,
+            -0.1329999999999245
+          ],
+          "mismatch_count_captured": 0,
+          "mismatches_first50": [],
+          "elapsed_s": 100.3
+        },
+        "source_mapping_evidence": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/source-frame-verification.json",
+        "decoded_frame_pts_s": [
+          0.0,
+          611.1125
+        ]
+      },
+      "continuity": {
+        "summary": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/summary.json",
+        "decision": "passed",
+        "reason": "约25秒接触表和9个候选点邻帧均保留同一侧边机位与球场构图。候选变化对应近景人员经过、球员活动，未见机位、主场或场地切换。 结论仅适用于本轮性能输入的连续性抽样检查，不代表逐帧人审或回合效果验收。",
+        "evidence": [
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/D-long-contact.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/D-long-candidates.jpg",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/scan.json",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/inspect_continuity.py",
+          "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/scan.log"
+        ]
+      }
+    }
+  ]
+}

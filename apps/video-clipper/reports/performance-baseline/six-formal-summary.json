@@ -1,0 +1,2099 @@
+{
+  "schema_version": 1,
+  "status": "report_preparation_not_final_acceptance",
+  "kind": "baseline",
+  "conventions": {
+    "cpu": "Percent of one logical CPU core; summed over sampled backend and recursive descendants. First process CPU-percent sample is unprimed and may be null.",
+    "rss": "Sum of process RSS; shared pages may be counted more than once. Observed peaks, not exact peaks.",
+    "mps": "allocated and driver are distinct worker counters during recognize only; do not add either to RSS or to each other.",
+    "workspace": "Logical file bytes in session work directories, with and without source.mp4; persistent models excluded.",
+    "sampling": "External and MPS intervals are separate. Nominal interval 1 s; report actual maxima and gaps >1.5 s; no interpolation of absent samples.",
+    "time": "Product monotonic clock, preparation includes worker startup, Python imports and normal weight verification/loading. Upload, cache preparation and archive excluded.",
+    "inputs": "Container duration and product video-stream duration are separate. fps and first PTS are separate fields. No source-media decoding was performed by this summarizer.",
+    "comparison": "Six formal runs only; profiling times excluded. One run per input; different short/long sources do not establish complexity, stability or 30-minute acceptance.",
+    "stage_accounting": "Primary recognition timers are exclusive. Nested model/decode subtimings include parallel work and must not be added to primary stages.",
+    "disk_free": "Volume-wide available disk space, affected by other system activity; not an application-only IO metric.",
+    "phase_sampling": "A phase with zero recorded samples has null resource aggregates; no CPU/RSS peak is invented for short preparation phases."
+  },
+  "evidence_root": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline",
+  "source_index": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/results.json",
+    "sha256": "1f0c00a3606ce3c65b743990c497398753d8d46c7395759f5dd4acdc6652fbbf"
+  },
+  "manifest": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/manifest.json",
+    "sha256": "ebbd672fd17951ff3def79b1bfa77a9a5924e227d2a5edd161bd809f58bf37a6",
+    "commit": "979caeb1cefedd78b2cebac52ca38f28a84d7563",
+    "manifest_tree_sha256": "b0dd82c61618c5b4b2f59a8011b0d43710e5383a9d811ccd1847ef40d0681adf",
+    "common_implementation_identity": "Frozen implementation file hashes must be compared across runs; whole tree hashes can include different report artifacts.",
+    "environment": {
+      "python": "3.11.16 (main, Sep 29 2026, 14:49:58) [Clang 22.1.3 ]",
+      "executable": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/.venv/bin/python",
+      "platform": "macOS-26.5.1-arm64-arm-64bit",
+      "machine": "arm64",
+      "dependencies": {
+        "uvicorn": "0.54.0",
+        "websockets": "17.2",
+        "filelock": "4.2.4",
+        "watchfiles": "1.3.0",
+        "kiwisolver": "1.5.1",
+        "requests": "2.32.5",
+        "numpy": "2.2.6",
+        "click": "8.5.0",
+        "ultralytics-thop": "2.2.2",
+        "packaging": "26.3",
+        "pyinstaller": "6.16.0",
+        "uvloop": "0.23.0",
+        "scipy": "1.13.1",
+        "starlette": "1.9.0",
+        "altgraph": "0.17.5",
+        "ultralytics": "8.4.56",
+        "Pygments": "2.21.0",
+        "httptools": "0.9.0",
+        "pip": "24.0",
+        "networkx": "3.6.1",
+        "torch": "2.8.0",
+        "contourpy": "1.3.3",
+        "polars-runtime-32": "2.0.0",
+        "polars": "2.0.0",
+        "fastapi": "0.148.0",
+        "opentelemetry-api": "1.45.1",
+        "pyinstaller-hooks-contrib": "2026.8",
+        "iniconfig": "2.3.1",
+        "httpcore": "1.0.9",
+        "lap": "0.5.13",
+        "pillow": "13.0.0",
+        "sympy": "1.14.0",
+        "smash-suite": "0.2.0",
+        "pluggy": "1.7.0",
+        "torchvision": "0.23.0",
+        "pytest": "9.1.1",
+        "setuptools": "84.0.0",
+        "urllib3": "2.8.0",
+        "h11": "0.16.0",
+        "pydantic_core": "2.50.1",
+        "python-dateutil": "2.9.0.post0",
+        "mpmath": "1.3.0",
+        "certifi": "2026.10.18",
+        "PyYAML": "6.0.3",
+        "macholib": "1.16.4",
+        "fsspec": "2026.9.0",
+        "opencv-python": "5.0.0.93",
+        "matplotlib": "3.11.2",
+        "python-dotenv": "1.2.4",
+        "imageio-ffmpeg": "0.6.0",
+        "cycler": "0.12.1",
+        "Jinja2": "3.1.6",
+        "annotated-types": "0.8.0",
+        "annotated-doc": "0.0.5",
+        "typing-inspection": "0.4.4",
+        "av": "14.2.0",
+        "httpx": "0.28.1",
+        "typing_extensions": "4.16.0",
+        "MarkupSafe": "3.0.4",
+        "pydantic": "2.14.1",
+        "psutil": "7.2.2",
+        "fonttools": "4.67.0",
+        "charset-normalizer": "3.5.2",
+        "anyio": "4.15.1",
+        "pyparsing": "3.3.3",
+        "six": "1.17.0",
+        "idna": "3.20"
+      },
+      "cpu_count": 18,
+      "mps_available": true,
+      "cuda_available": false,
+      "ffmpeg_executable": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/.venv/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+      "ffmpeg_sha256": "6d175a4743ca50256e89a8cdd731100f9cee33bd79aeea46894d209410dc6617",
+      "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers\nbuilt with Apple clang version 13.1.6 (clang-1316.0.21.2.5)\nconfiguration: --prefix=/Volumes/tempdisk/sw --extra-cflags=-fno-stack-check --arch=arm64 --cc=/usr/bin/clang --enable-gpl --enable-libvmaf --enable-libopenjpeg --enable-libopus --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libvpx --enable-libwebp --enable-libass --enable-libfreetype --enable-fontconfig --enable-libtheora --enable-libvorbis --enable-libsnappy --enable-libaom --enable-libvidstab --enable-libzimg --enable-libsvtav1 --enable-libharfbuzz --enable-libkvazaar --pkg-config-flags=--static --enable-ffplay --enable-postproc --enable-neon --enable-runtime-cpudetect --disable-indev=qtkit --disable-indev=x11grab_xcb\nlibavutil      59. 39.100 / 59. 39.100\nlibavcodec     61. 19.100 / 61. 19.100\nlibavformat    61.  7.100 / 61.  7.100\nlibavdevice    61.  3.100 / 61.  3.100\nlibavfilter    10.  4.100 / 10.  4.100\nlibswscale      8.  3.100 /  8.  3.100\nlibswresample   5.  3.100 /  5.  3.100\nlibpostproc    58.  3.100 / 58.  3.100\n",
+      "threads": {
+        "worker_env": {
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1"
+        },
+        "torch_intraop": 4,
+        "opencv": 1,
+        "pose_device": "cpu",
+        "model_device": "automatic"
+      }
+    },
+    "algorithm_profiles": {
+      "high": {
+        "confidence": 0.6,
+        "motion_window_ms": 200,
+        "min_motion_window_ms": 80,
+        "min_speed_px_s": 100,
+        "max_speed_px_s": 4000,
+        "quiet_ms": 1600,
+        "min_flight_span_ms": 2200,
+        "field": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "direction_window_ms": 160,
+        "direction_min_span_ms": 40,
+        "direction_max_residual_px": 80,
+        "top_fraction": 0.15,
+        "exit_max_y_fraction": 0.4,
+        "exit_horizon_ms": 250,
+        "high_clear_gap_ms": 2800,
+        "reentry_x_fraction": 0.2,
+        "turn_jump_px_s": 1100,
+        "track_gap_ms": 120,
+        "return_support_ms": 320,
+        "return_travel_px": 120,
+        "short_event_ms": 5000,
+        "filter_single_flight": true,
+        "filter_uncertain_short": true
+      },
+      "personal_ball": {
+        "confidence": 0.5,
+        "static_fraction": null,
+        "center_weight": 0,
+        "max_step_error_px": 24,
+        "min_track_points": 3,
+        "min_track_ms": 60,
+        "min_track_travel_px": 20,
+        "max_gap_ms": 3200,
+        "min_span_ms": 600,
+        "min_observations": 18,
+        "min_motion_fraction": 0,
+        "min_motion_ms": 1200
+      },
+      "courtside": {
+        "gap_ms": 2400,
+        "region_points": 8,
+        "span_ms": 1600,
+        "observations": 18,
+        "short": "old",
+        "density_window_ms": 2000,
+        "density": 0.4,
+        "internal_only": true,
+        "tail_gap_ms": 800,
+        "tail_error_growth_px_s": 300,
+        "tail_limit_ms": 1600
+      },
+      "personal": {
+        "context_ms": 1600,
+        "continue_arm": 0.3,
+        "phase_foot": 0.2,
+        "filter_context": true,
+        "recover": true,
+        "recover_foot": 0.12,
+        "extend_ms": 6000,
+        "support_gap_ms": 1000,
+        "bridge_ms": 3000,
+        "bridge_fraction": 0.5,
+        "recover_max_ms": 2000,
+        "recover_both_count": 3,
+        "recover_min_high": 1,
+        "stable_ms": 1400,
+        "minimum_missing_ms": 400,
+        "continue_single": true,
+        "continue_recovered": true,
+        "single_gap_ms": 2800,
+        "single_support_fraction": 0.65,
+        "single_ready_fraction": 0.3
+      },
+      "personal_base": {
+        "arm_speed": 0.7,
+        "opponent_arm_speed": 0.35,
+        "opponent_body_speed": 0.6,
+        "opponent_window_ms": 1000,
+        "action_gap_ms": 3600,
+        "minimum_actions": 2,
+        "supported_boundary_search_ms": 1200,
+        "before_ms": 1500,
+        "after_ms": 800,
+        "join_gap_ms": 1000
+      },
+      "personal_options": {
+        "ball_only_high": true,
+        "min_ball_events": 2,
+        "min_high_events": 1
+      },
+      "courtside_base": {
+        "confidence": 0.5,
+        "static_fraction": 0.1,
+        "center_weight": 2,
+        "max_step_error_px": 48,
+        "min_track_points": 3,
+        "min_track_ms": 60,
+        "min_track_travel_px": 80,
+        "max_gap_ms": 2400,
+        "min_span_ms": 1600,
+        "min_observations": 18,
+        "min_motion_fraction": 0.45,
+        "min_motion_ms": 0
+      }
+    },
+    "algorithm_selection": {
+      "status": "integrated_pending_validation",
+      "date": "2026-10-19",
+      "scenarios": {
+        "high": {
+          "selection": "original",
+          "source_report": "modules/rally/experiments/reports/a1-a2-short-filter-20261018.json",
+          "variant": "current"
+        },
+        "courtside": {
+          "selection": "tail_gap800_growth300",
+          "source_report": "modules/rally/experiments/reports/c-pause-boundaries-20261019.json",
+          "source_functions": [
+            "compare_c_recovery.c_predict",
+            "refine_c_pause_boundaries.recover_end"
+          ]
+        },
+        "personal": {
+          "selection": "candidate",
+          "source_report": "modules/rally/experiments/reports/d-person-context-20261018.json",
+          "source_functions": [
+            "compare_d_person_context.predict_candidate",
+            "compare_d_person_context.add_feet"
+          ]
+        }
+      }
+    }
+  },
+  "cases": [
+    {
+      "case_id": "A-short",
+      "status": "completed",
+      "kind": "baseline",
+      "statistics_enabled": true,
+      "input": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+        "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+        "scene": "high",
+        "court": null,
+        "container_duration_s": 168.091,
+        "product_video_stream_duration_s": 168.0,
+        "width": 1920,
+        "height": 1080,
+        "fps": 25.0,
+        "container_declared_frame_count": 4200,
+        "source_mapping": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+          "window_s": [
+            0,
+            168.091
+          ]
+        },
+        "first_pts_ms": 91.0,
+        "last_normalized_timestamp_ms": 167960.0
+      },
+      "timings": {
+        "preparation_s": 0.4612342908512801,
+        "recognition_s": 38.87834008410573,
+        "rendering_s": 8.714457500027493,
+        "total_s": 48.0540318749845
+      },
+      "clock": {
+        "worker_spawn_start": 1276755.03900475,
+        "benchmark_start": 1276755.411605708,
+        "recognition": 1276755.500239041,
+        "rendering": 1276794.378579125,
+        "completed": 1276803.093036625,
+        "finished": 1276803.093286666
+      },
+      "recognition": {
+        "primary_seconds": {
+          "model_initialization": 0.09501579101197422,
+          "video_observation": 37.82226169016212,
+          "people_and_trajectories": 0.0,
+          "action_analysis": 0.0,
+          "rally_decision": 0.10832493472844362,
+          "intermediate_writes": 0.0
+        },
+        "unassigned_to_primary_seconds": 0.85273766820319,
+        "nested_subtimings_seconds": {
+          "tracknet_preprocess_s": 9.277102617546916,
+          "tracknet_inference_and_transfer_s": 26.46296382904984,
+          "tracknet_point_decode_s": 0.4479050515219569
+        },
+        "counts": {
+          "tracknet_calls": 1400,
+          "tracknet_input_frames": 4200,
+          "candidate_peaks": 0,
+          "decode_passes": 1,
+          "frames_decoded": 4200
+        },
+        "decode_passes": [
+          {
+            "pass_name": "observation",
+            "frames_decoded": 4200,
+            "frames_delivered": 4200,
+            "queue_peak": 6,
+            "decode_s": 9.829219111939892,
+            "conversion_s": 5.884077293332666,
+            "max_lag_s": 0.0,
+            "fps": 25.0,
+            "expected_frames": 4200,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 91.0,
+            "last_timestamp_ms": 167960.0,
+            "last_delivered_timestamp_ms": 167960.0
+          }
+        ],
+        "device": "mps",
+        "algorithm": {
+          "algorithm": "high-trajectory-frozen-20261018",
+          "config": {
+            "confidence": 0.6,
+            "motion_window_ms": 200,
+            "min_motion_window_ms": 80,
+            "min_speed_px_s": 100,
+            "max_speed_px_s": 4000,
+            "quiet_ms": 1600,
+            "min_flight_span_ms": 2200,
+            "field": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "direction_window_ms": 160,
+            "direction_min_span_ms": 40,
+            "direction_max_residual_px": 80,
+            "top_fraction": 0.15,
+            "exit_max_y_fraction": 0.4,
+            "exit_horizon_ms": 250,
+            "high_clear_gap_ms": 2800,
+            "reentry_x_fraction": 0.2,
+            "turn_jump_px_s": 1100,
+            "track_gap_ms": 120,
+            "return_support_ms": 320,
+            "return_travel_px": 120,
+            "short_event_ms": 5000,
+            "filter_single_flight": true,
+            "filter_uncertain_short": true
+          },
+          "decoded_frames": 4200
+        },
+        "warnings": []
+      },
+      "output": {
+        "raw_prediction_count": 5,
+        "export_range_count": 5,
+        "output_duration_ms": 46440.0,
+        "output_bytes": 16834404,
+        "artifact_sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+        "inspection_status": "product_completed; independent output structure/frame-count inspection is outside this summarization"
+      },
+      "resources": {
+        "external": {
+          "sample_count": 49,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.0194410840049386,
+          "minimum_actual_interval_s": 0.3935558330267668,
+          "first_elapsed_s": -0.01154920901171863,
+          "last_elapsed_s": 48.178550832904875,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "recorded_interval_max_s": 1.0194410840049386,
+          "errors": [],
+          "process_coverage": [
+            {
+              "pid": 26736,
+              "parent_pid": 26724,
+              "name": "python3.11",
+              "created_at": 1792501617.735202,
+              "first_elapsed_s": -0.01154920901171863,
+              "last_elapsed_s": 48.178550832904875,
+              "observed_max_rss_bytes": 132317184,
+              "observed_max_cpu_percent": 0.7
+            },
+            {
+              "pid": 26738,
+              "parent_pid": 26736,
+              "name": "python3.11",
+              "created_at": 1792501618.639334,
+              "first_elapsed_s": 1.0048412079922855,
+              "last_elapsed_s": 47.78499499987811,
+              "observed_max_rss_bytes": 683474944,
+              "observed_max_cpu_percent": 152.6
+            },
+            {
+              "pid": 26964,
+              "parent_pid": 26738,
+              "name": "ffmpeg-macos-aarch64-v7.1",
+              "created_at": 1792501658.026707,
+              "first_elapsed_s": 39.64400229090825,
+              "last_elapsed_s": 47.78499499987811,
+              "observed_max_rss_bytes": 542670848,
+              "observed_max_cpu_percent": 546.2
+            }
+          ],
+          "observed_peak": {
+            "cpu_percent": 546.6,
+            "rss_bytes": 1358282752,
+            "work_logical_bytes": 87652127,
+            "work_without_source_logical_bytes": 17233872
+          },
+          "minimum_disk_free_bytes": 1617870467072,
+          "phase_samples": {
+            "before_product_start": {
+              "count": 1,
+              "median_cpu_percent": 0,
+              "observed_peak_rss_bytes": 132038656,
+              "first_rss_bytes": 132038656,
+              "last_rss_bytes": 132038656
+            },
+            "recognition": {
+              "count": 38,
+              "median_cpu_percent": 144.3,
+              "observed_peak_rss_bytes": 815742976,
+              "first_rss_bytes": 334626816,
+              "last_rss_bytes": 815742976
+            },
+            "rendering": {
+              "count": 9,
+              "median_cpu_percent": 474.7,
+              "observed_peak_rss_bytes": 1358282752,
+              "first_rss_bytes": 1330806784,
+              "last_rss_bytes": 1358282752
+            },
+            "after_product_completion": {
+              "count": 1,
+              "median_cpu_percent": 0.7,
+              "observed_peak_rss_bytes": 132317184,
+              "first_rss_bytes": 132317184,
+              "last_rss_bytes": 132317184
+            },
+            "preparation": {
+              "count": 0,
+              "median_cpu_percent": null,
+              "observed_peak_rss_bytes": null,
+              "first_rss_bytes": null,
+              "last_rss_bytes": null
+            }
+          }
+        },
+        "mps": {
+          "sample_count": 38,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.02114204200916,
+          "minimum_actual_interval_s": 1.0000636249314994,
+          "first_elapsed_s": 1.2958580409176648,
+          "last_elapsed_s": 38.46775029087439,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "coverage": "recognize_context_only",
+          "observed_peak_allocated_bytes": 220549632,
+          "observed_peak_driver_bytes": 1162313728,
+          "errors_or_unavailable": []
+        }
+      },
+      "weight_sha256": {
+        "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+      },
+      "evidence": {
+        "A-short/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-short/result.json",
+          "sha256": "bb7c72699ba2f07ee34b645d4e8fadc0ddac225dfd04d9ba1a7ac65294ba52cc"
+        },
+        "A-short/evidence/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-short/evidence/result.json",
+          "sha256": "3281f3684d2abb4f265f42e3b325f960ef9e18c7024d50951c810147de588f7a"
+        },
+        "A-short/evidence/statistics.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-short/evidence/statistics.json",
+          "sha256": "92899ba5061843556fa4a4626077848b82b98117b2a7e930cfd96eb36a3d1fc2"
+        },
+        "A-short/evidence/benchmark-clock.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-short/evidence/benchmark-clock.json",
+          "sha256": "f92f8737ebb8231503e1ba6f73050aa0477d9f87ca382573c9c662cf7a4fb3fd"
+        },
+        "A-short/resources.jsonl": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-short/resources.jsonl",
+          "sha256": "02a2b2c69ef4ba752b807616bf307edc055280da48e11c5871547ca94e83ae5c"
+        }
+      }
+    },
+    {
+      "case_id": "A-long",
+      "status": "completed",
+      "kind": "baseline",
+      "statistics_enabled": true,
+      "input": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/A-long.mp4",
+        "sha256": "60d2a03d28cc159653c8fd00febebf227306174983635469cea3f6b96d9dedf7",
+        "scene": "high",
+        "court": null,
+        "container_duration_s": 900.211,
+        "product_video_stream_duration_s": 900.12,
+        "width": 1920,
+        "height": 1080,
+        "fps": 25.0,
+        "container_declared_frame_count": 22503,
+        "source_mapping": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/A1/source.mp4",
+          "requested_window_s": [
+            600,
+            1500
+          ],
+          "actual_window_s": [
+            599.96,
+            1500.04
+          ],
+          "window_policy": "stream-copy; actual keyframe boundaries accepted by controller decision in media/input.md",
+          "video_packet_mapping": {
+            "source_packets_in_window": 22801,
+            "clip_packets": 22503,
+            "matched_contiguous_packets": 22503,
+            "all_packets_match": true,
+            "first_source_pts_s": 599.96,
+            "last_source_pts_s": 1500.04,
+            "first_clip_pts_s": 0.091,
+            "last_clip_pts_s": 900.171,
+            "pts_offset_min_s": 599.8689999999999,
+            "pts_offset_max_s": 599.8690000000001,
+            "dts_offset_min_s": 599.8689999999999,
+            "dts_offset_max_s": 599.8690000000001
+          },
+          "audio_packet_mapping": {
+            "source_packets_in_window": 39270,
+            "clip_packets": 38760,
+            "matched_contiguous_packets": 38760,
+            "all_packets_match": true,
+            "first_source_pts_s": 599.8682086167801,
+            "last_source_pts_s": 1499.988231292517,
+            "first_clip_pts_s": 0.0,
+            "last_clip_pts_s": 900.120022675737,
+            "pts_offset_min_s": 599.86820861678,
+            "pts_offset_max_s": 599.8682086167802,
+            "dts_offset_min_s": 599.86820861678,
+            "dts_offset_max_s": 599.8682086167802
+          },
+          "pixel_time_check": {
+            "case_id": "A-long",
+            "source": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/A1/source.mp4",
+            "output": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/A-long.mp4",
+            "offset_s": 599.869,
+            "matched_frames": 22503,
+            "output_frames": 22503,
+            "first_matched_source_pts_s": 599.96,
+            "last_matched_source_pts_s": 1500.04,
+            "first_output_pts_s": 0.091,
+            "last_output_pts_s": 900.171,
+            "pts_offset_minmax_s": [
+              599.8689999999999,
+              599.8690000000001
+            ],
+            "mismatch_count_captured": 0,
+            "mismatches_first50": [],
+            "elapsed_s": 136.15
+          },
+          "source_mapping_evidence": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/source-frame-verification.json",
+          "decoded_frame_pts_s": [
+            599.96,
+            1500.04
+          ]
+        },
+        "first_pts_ms": 91.0,
+        "last_normalized_timestamp_ms": 900080.0
+      },
+      "timings": {
+        "preparation_s": 0.48020375007763505,
+        "recognition_s": 202.19693879084662,
+        "rendering_s": 45.09507300006226,
+        "total_s": 247.7722155409865
+      },
+      "clock": {
+        "worker_spawn_start": 1276804.878912,
+        "benchmark_start": 1276805.266677541,
+        "recognition": 1276805.35911575,
+        "rendering": 1277007.556054541,
+        "completed": 1277052.651127541,
+        "finished": 1277052.651346
+      },
+      "recognition": {
+        "primary_seconds": {
+          "model_initialization": 0.07608416606672108,
+          "video_observation": 200.58452934282832,
+          "people_and_trajectories": 0.0,
+          "action_analysis": 0.0,
+          "rally_decision": 0.6809133652132004,
+          "intermediate_writes": 0.0
+        },
+        "unassigned_to_primary_seconds": 0.855411916738376,
+        "nested_subtimings_seconds": {
+          "tracknet_preprocess_s": 52.66374855488539,
+          "tracknet_inference_and_transfer_s": 143.53937308560126,
+          "tracknet_point_decode_s": 2.5934226578101516
+        },
+        "counts": {
+          "tracknet_calls": 7501,
+          "tracknet_input_frames": 22503,
+          "candidate_peaks": 0,
+          "decode_passes": 1,
+          "frames_decoded": 22503
+        },
+        "decode_passes": [
+          {
+            "pass_name": "observation",
+            "frames_decoded": 22503,
+            "frames_delivered": 22503,
+            "queue_peak": 6,
+            "decode_s": 55.99212086223997,
+            "conversion_s": 34.00677174539305,
+            "max_lag_s": 0.0,
+            "fps": 25.0,
+            "expected_frames": 22503,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 91.0,
+            "last_timestamp_ms": 900080.0,
+            "last_delivered_timestamp_ms": 900080.0
+          }
+        ],
+        "device": "mps",
+        "algorithm": {
+          "algorithm": "high-trajectory-frozen-20261018",
+          "config": {
+            "confidence": 0.6,
+            "motion_window_ms": 200,
+            "min_motion_window_ms": 80,
+            "min_speed_px_s": 100,
+            "max_speed_px_s": 4000,
+            "quiet_ms": 1600,
+            "min_flight_span_ms": 2200,
+            "field": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "direction_window_ms": 160,
+            "direction_min_span_ms": 40,
+            "direction_max_residual_px": 80,
+            "top_fraction": 0.15,
+            "exit_max_y_fraction": 0.4,
+            "exit_horizon_ms": 250,
+            "high_clear_gap_ms": 2800,
+            "reentry_x_fraction": 0.2,
+            "turn_jump_px_s": 1100,
+            "track_gap_ms": 120,
+            "return_support_ms": 320,
+            "return_travel_px": 120,
+            "short_event_ms": 5000,
+            "filter_single_flight": true,
+            "filter_uncertain_short": true
+          },
+          "decoded_frames": 22503
+        },
+        "warnings": [
+          "片尾存在未确认结束的候选对打，未将其伪造成完整回合。"
+        ]
+      },
+      "output": {
+        "raw_prediction_count": 21,
+        "export_range_count": 21,
+        "output_duration_ms": 257800.0,
+        "output_bytes": 92817434,
+        "artifact_sha256": "0e1a86992dff4f79e4aa09c13fd8f42cff47b4cbbf8bdd46db38e7aea1b2a432",
+        "inspection_status": "product_completed; independent output structure/frame-count inspection is outside this summarization"
+      },
+      "resources": {
+        "external": {
+          "sample_count": 245,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.0230426250491291,
+          "minimum_actual_interval_s": 0.7031542498152703,
+          "first_elapsed_s": -0.011509584030136466,
+          "last_elapsed_s": 248.0076843749266,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "recorded_interval_max_s": 1.0230426250491291,
+          "errors": [],
+          "process_coverage": [
+            {
+              "pid": 26975,
+              "parent_pid": 26724,
+              "name": "python3.11",
+              "created_at": 1792501667.2305,
+              "first_elapsed_s": -0.011509584030136466,
+              "last_elapsed_s": 248.0076843749266,
+              "observed_max_rss_bytes": 135888896,
+              "observed_max_cpu_percent": 0.6
+            },
+            {
+              "pid": 26994,
+              "parent_pid": 26975,
+              "name": "python3.11",
+              "created_at": 1792501668.47904,
+              "first_elapsed_s": 1.0048370829317719,
+              "last_elapsed_s": 247.30453012511134,
+              "observed_max_rss_bytes": 691863552,
+              "observed_max_cpu_percent": 167.5
+            },
+            {
+              "pid": 27203,
+              "parent_pid": 26994,
+              "name": "ffmpeg-macos-aarch64-v7.1",
+              "created_at": 1792501871.207146,
+              "first_elapsed_s": 203.55862795794383,
+              "last_elapsed_s": 247.30453012511134,
+              "observed_max_rss_bytes": 555171840,
+              "observed_max_cpu_percent": 706.6
+            }
+          ],
+          "observed_peak": {
+            "cpu_percent": 707.0,
+            "rss_bytes": 1376337920,
+            "work_logical_bytes": 471165562,
+            "work_without_source_logical_bytes": 93241189
+          },
+          "minimum_disk_free_bytes": 1617410727936,
+          "phase_samples": {
+            "before_product_start": {
+              "count": 1,
+              "median_cpu_percent": 0,
+              "observed_peak_rss_bytes": 135708672,
+              "first_rss_bytes": 135708672,
+              "last_rss_bytes": 135708672
+            },
+            "recognition": {
+              "count": 199,
+              "median_cpu_percent": 147.8,
+              "observed_peak_rss_bytes": 822525952,
+              "first_rss_bytes": 337575936,
+              "last_rss_bytes": 821182464
+            },
+            "rendering": {
+              "count": 44,
+              "median_cpu_percent": 461.85,
+              "observed_peak_rss_bytes": 1376337920,
+              "first_rss_bytes": 1342128128,
+              "last_rss_bytes": 1376337920
+            },
+            "after_product_completion": {
+              "count": 1,
+              "median_cpu_percent": 0.6,
+              "observed_peak_rss_bytes": 129712128,
+              "first_rss_bytes": 129712128,
+              "last_rss_bytes": 129712128
+            },
+            "preparation": {
+              "count": 0,
+              "median_cpu_percent": null,
+              "observed_peak_rss_bytes": null,
+              "first_rss_bytes": null,
+              "last_rss_bytes": null
+            }
+          }
+        },
+        "mps": {
+          "sample_count": 201,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.023308667121455,
+          "minimum_actual_interval_s": 1.0000839589629322,
+          "first_elapsed_s": 1.3156569579150528,
+          "last_elapsed_s": 202.17678570793942,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "coverage": "recognize_context_only",
+          "observed_peak_allocated_bytes": 305484800,
+          "observed_peak_driver_bytes": 1165852672,
+          "errors_or_unavailable": []
+        }
+      },
+      "weight_sha256": {
+        "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+      },
+      "evidence": {
+        "A-long/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-long/result.json",
+          "sha256": "0bd95dc34041489d4124c07c236702c059fa18dbbe336d908880dfe76687796e"
+        },
+        "A-long/evidence/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-long/evidence/result.json",
+          "sha256": "9e1d8f12ff642591bc0167d359897c94481f555e918b869c1b01d393d07db652"
+        },
+        "A-long/evidence/statistics.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-long/evidence/statistics.json",
+          "sha256": "71db349fd598636283b09b9b8e442804a33c115b4062f5a5f123414e29ac7af7"
+        },
+        "A-long/evidence/benchmark-clock.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-long/evidence/benchmark-clock.json",
+          "sha256": "adfee6d81f22221117162cbe4e9f15bd7a5fc47f0f26ee97e02e38a07062e6b6"
+        },
+        "A-long/resources.jsonl": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-long/resources.jsonl",
+          "sha256": "f63703f6d087d47cdc7184eb72233d244b7ae243eb9059e506f4fc0515e59d3d"
+        }
+      }
+    },
+    {
+      "case_id": "C-short",
+      "status": "completed",
+      "kind": "baseline",
+      "statistics_enabled": true,
+      "input": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+        "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+        "scene": "courtside",
+        "court": null,
+        "container_duration_s": 180.000313,
+        "product_video_stream_duration_s": 180.0003125,
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.99994791675709,
+        "container_declared_frame_count": 5400,
+        "source_mapping": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+          "window_s": [
+            0,
+            180.000313
+          ]
+        },
+        "first_pts_ms": 0.0,
+        "last_normalized_timestamp_ms": 179967.0
+      },
+      "timings": {
+        "preparation_s": 0.4953937081154436,
+        "recognition_s": 118.25195833295584,
+        "rendering_s": 18.41915558394976,
+        "total_s": 137.16650762502104
+      },
+      "clock": {
+        "worker_spawn_start": 1277054.259406375,
+        "benchmark_start": 1277054.655374666,
+        "recognition": 1277054.754800083,
+        "rendering": 1277173.006758416,
+        "completed": 1277191.425914,
+        "finished": 1277191.426111333
+      },
+      "recognition": {
+        "primary_seconds": {
+          "model_initialization": 11.647527458146214,
+          "video_observation": 99.33050116710365,
+          "people_and_trajectories": 5.389801375102252,
+          "action_analysis": 0.0,
+          "rally_decision": 0.6556629170663655,
+          "intermediate_writes": 0.0009190419223159552
+        },
+        "unassigned_to_primary_seconds": 1.2275463736150414,
+        "nested_subtimings_seconds": {
+          "tracknet_preprocess_s": 18.062640548916534,
+          "tracknet_inference_and_transfer_s": 65.39813562389463,
+          "tracknet_point_decode_s": 4.409368242369965,
+          "person_detector_s": 10.885832032887265
+        },
+        "counts": {
+          "tracknet_calls": 3599,
+          "tracknet_input_frames": 10797,
+          "candidate_peaks": 69821,
+          "person_detector_calls": 225,
+          "person_detector_images": 900,
+          "person_boxes": 7170,
+          "decode_passes": 1,
+          "frames_decoded": 5400,
+          "native_observations": 5400,
+          "shifted_observations": 5400,
+          "associated_tracks": 184,
+          "coherent_flights": 226
+        },
+        "decode_passes": [
+          {
+            "pass_name": "observation",
+            "frames_decoded": 5400,
+            "frames_delivered": 5400,
+            "queue_peak": 6,
+            "decode_s": 12.059422871563584,
+            "conversion_s": 7.781053428538144,
+            "max_lag_s": 0.0,
+            "fps": 29.99994791675709,
+            "expected_frames": 5400,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 0.0,
+            "last_timestamp_ms": 179967.0,
+            "last_delivered_timestamp_ms": 179967.0
+          }
+        ],
+        "device": "mps",
+        "algorithm": {
+          "algorithm": "courtside-tail_gap800_growth300",
+          "selected_people": [
+            {
+              "x1": 934.59228515625,
+              "y1": 643.3831787109375,
+              "x2": 995.131103515625,
+              "y2": 877.21337890625,
+              "confidence": 0.5861480236053467
+            },
+            {
+              "x1": 789.3871459960938,
+              "y1": 399.810546875,
+              "x2": 1000.7921752929688,
+              "y2": 965.6593017578125,
+              "confidence": 0.8823997974395752
+            }
+          ],
+          "native_frames": 5400,
+          "shifted_frames": 5400
+        },
+        "warnings": []
+      },
+      "output": {
+        "raw_prediction_count": 9,
+        "export_range_count": 9,
+        "output_duration_ms": 110867.0,
+        "output_bytes": 44465082,
+        "artifact_sha256": "4f16419abb135c1866e55f09b24e88fa35b586c2c60c780280bb79d9a2df0519",
+        "inspection_status": "product_completed; independent output structure/frame-count inspection is outside this summarization"
+      },
+      "resources": {
+        "external": {
+          "sample_count": 137,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.0263515419792384,
+          "minimum_actual_interval_s": 0.06539554102346301,
+          "first_elapsed_s": -0.010972416959702969,
+          "last_elapsed_s": 137.3882230410818,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "recorded_interval_max_s": 1.0263515419792384,
+          "errors": [],
+          "process_coverage": [
+            {
+              "pid": 27324,
+              "parent_pid": 26724,
+              "name": "python3.11",
+              "created_at": 1792501916.853942,
+              "first_elapsed_s": -0.010972416959702969,
+              "last_elapsed_s": 137.3882230410818,
+              "observed_max_rss_bytes": 140902400,
+              "observed_max_cpu_percent": 1.8
+            },
+            {
+              "pid": 27325,
+              "parent_pid": 27324,
+              "name": "python3.11",
+              "created_at": 1792501917.858216,
+              "first_elapsed_s": 1.0048684161156416,
+              "last_elapsed_s": 136.30419020797126,
+              "observed_max_rss_bytes": 1717436416,
+              "observed_max_cpu_percent": 151.1
+            },
+            {
+              "pid": 27327,
+              "parent_pid": 27325,
+              "name": "system_profiler",
+              "created_at": 1792501920.590888,
+              "first_elapsed_s": 3.0419139999430627,
+              "last_elapsed_s": 9.138972582994029,
+              "observed_max_rss_bytes": 7766016,
+              "observed_max_cpu_percent": 0.4
+            },
+            {
+              "pid": 27328,
+              "parent_pid": 27327,
+              "name": "system_profiler",
+              "created_at": 1792501920.604207,
+              "first_elapsed_s": 3.0419139999430627,
+              "last_elapsed_s": 9.138972582994029,
+              "observed_max_rss_bytes": 121044992,
+              "observed_max_cpu_percent": 100.6
+            },
+            {
+              "pid": 27495,
+              "parent_pid": 27325,
+              "name": "ffmpeg-macos-aarch64-v7.1",
+              "created_at": 1792502036.682473,
+              "first_elapsed_s": 119.00008508306928,
+              "last_elapsed_s": 136.30419020797126,
+              "observed_max_rss_bytes": 567803904,
+              "observed_max_cpu_percent": 507.5
+            }
+          ],
+          "observed_peak": {
+            "cpu_percent": 507.9,
+            "rss_bytes": 2419949568,
+            "work_logical_bytes": 111641071,
+            "work_without_source_logical_bytes": 45384620
+          },
+          "minimum_disk_free_bytes": 1617572012032,
+          "phase_samples": {
+            "before_product_start": {
+              "count": 1,
+              "median_cpu_percent": 0,
+              "observed_peak_rss_bytes": 140623872,
+              "first_rss_bytes": 140623872,
+              "last_rss_bytes": 140623872
+            },
+            "recognition": {
+              "count": 116,
+              "median_cpu_percent": 138.45,
+              "observed_peak_rss_bytes": 1831321600,
+              "first_rss_bytes": 340099072,
+              "last_rss_bytes": 1831321600
+            },
+            "rendering": {
+              "count": 18,
+              "median_cpu_percent": 425.44999999999993,
+              "observed_peak_rss_bytes": 2419949568,
+              "first_rss_bytes": 2301493248,
+              "last_rss_bytes": 2419949568
+            },
+            "after_product_completion": {
+              "count": 2,
+              "median_cpu_percent": 1.1,
+              "observed_peak_rss_bytes": 134725632,
+              "first_rss_bytes": 134725632,
+              "last_rss_bytes": 134725632
+            },
+            "preparation": {
+              "count": 0,
+              "median_cpu_percent": null,
+              "observed_peak_rss_bytes": null,
+              "first_rss_bytes": null,
+              "last_rss_bytes": null
+            }
+          }
+        },
+        "mps": {
+          "sample_count": 116,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.347639000043273,
+          "minimum_actual_interval_s": 1.000101750018075,
+          "first_elapsed_s": 1.401114166015759,
+          "last_elapsed_s": 117.99596520792693,
+          "count_intervals_gt_1_1_s": 3,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "coverage": "recognize_context_only",
+          "observed_peak_allocated_bytes": 318988800,
+          "observed_peak_driver_bytes": 1195999232,
+          "errors_or_unavailable": []
+        }
+      },
+      "weight_sha256": {
+        "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b",
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+      },
+      "evidence": {
+        "C-short/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-short/result.json",
+          "sha256": "a512e3f7f509006b6525171e82ba6f28f730693edaf5ad087e59dbc131775791"
+        },
+        "C-short/evidence/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-short/evidence/result.json",
+          "sha256": "e7b9a6d5193899e0666195acacdba68fe95d9dc5ba541d5618652f21e07214b3"
+        },
+        "C-short/evidence/statistics.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-short/evidence/statistics.json",
+          "sha256": "ca947e24643015a3ede2379a87e287ccc1e280fbb6e9e52fe7736f3db8397a01"
+        },
+        "C-short/evidence/benchmark-clock.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-short/evidence/benchmark-clock.json",
+          "sha256": "777203b5217c318a04309656597f429f5d6a4391355f56f95d7bae2f8779d155"
+        },
+        "C-short/resources.jsonl": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-short/resources.jsonl",
+          "sha256": "a3dfadb2ccef71343a7d0d8c035b9496fb1c3296b055b550c4930f1bf3f91ef7"
+        }
+      }
+    },
+    {
+      "case_id": "C-long",
+      "status": "completed",
+      "kind": "baseline",
+      "statistics_enabled": true,
+      "input": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/C-long.mp4",
+        "sha256": "4a732654d1326057a25f61b6c64d5afed7f283c6a9626367fa00d570b3d540c4",
+        "scene": "courtside",
+        "court": null,
+        "container_duration_s": 905.144313,
+        "product_video_stream_duration_s": 905.0363125,
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.981117470355645,
+        "container_declared_frame_count": 27134,
+        "source_mapping": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/C1/source.mp4",
+          "requested_window_s": [
+            120,
+            1020
+          ],
+          "actual_window_s": [
+            115.07,
+            1020.007
+          ],
+          "window_policy": "stream-copy; actual keyframe boundaries accepted by controller decision in media/input.md",
+          "video_packet_mapping": {
+            "source_packets_in_window": 27337,
+            "clip_packets": 27134,
+            "matched_contiguous_packets": 27134,
+            "all_packets_match": true,
+            "first_source_pts_s": 115.07,
+            "last_source_pts_s": 1020.007,
+            "first_clip_pts_s": 0.108,
+            "last_clip_pts_s": 905.045,
+            "pts_offset_min_s": 114.96199999999993,
+            "pts_offset_max_s": 114.9620000000001,
+            "dts_offset_min_s": 114.96199999999993,
+            "dts_offset_max_s": 114.9620000000001
+          },
+          "audio_packet_mapping": {
+            "source_packets_in_window": 39276,
+            "clip_packets": 38977,
+            "matched_contiguous_packets": 38977,
+            "all_packets_match": true,
+            "first_source_pts_s": 114.9619954648526,
+            "last_source_pts_s": 1019.982947845805,
+            "first_clip_pts_s": 0.0,
+            "last_clip_pts_s": 905.0209523809524,
+            "pts_offset_min_s": 114.96199546485252,
+            "pts_offset_max_s": 114.96199546485269,
+            "dts_offset_min_s": 114.96199546485252,
+            "dts_offset_max_s": 114.96199546485269
+          },
+          "pixel_time_check": {
+            "case_id": "C-long",
+            "source": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/C1/source.mp4",
+            "output": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/C-long.mp4",
+            "offset_s": 114.962,
+            "matched_frames": 27134,
+            "output_frames": 27134,
+            "first_matched_source_pts_s": 115.07,
+            "last_matched_source_pts_s": 1020.107,
+            "first_output_pts_s": 0.108,
+            "last_output_pts_s": 905.145,
+            "pts_offset_minmax_s": [
+              114.96199999999993,
+              114.9620000000001
+            ],
+            "mismatch_count_captured": 0,
+            "mismatches_first50": [],
+            "elapsed_s": 155.95
+          },
+          "source_mapping_evidence": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/source-frame-verification.json",
+          "decoded_frame_pts_s": [
+            115.07,
+            1020.107
+          ]
+        },
+        "first_pts_ms": 108.0,
+        "last_normalized_timestamp_ms": 905037.0
+      },
+      "timings": {
+        "preparation_s": 0.46840762509964406,
+        "recognition_s": 523.3668962919619,
+        "rendering_s": 61.978611041093245,
+        "total_s": 585.8139149581548
+      },
+      "clock": {
+        "worker_spawn_start": 1277193.221718083,
+        "benchmark_start": 1277193.595744541,
+        "recognition": 1277193.690125708,
+        "rendering": 1277717.057022,
+        "completed": 1277779.035633041,
+        "finished": 1277779.035854041
+      },
+      "recognition": {
+        "primary_seconds": {
+          "model_initialization": 8.780839373823255,
+          "video_observation": 491.3951360830106,
+          "people_and_trajectories": 20.8279753329698,
+          "action_analysis": 0.0,
+          "rally_decision": 1.377306125126779,
+          "intermediate_writes": 0.0035125419963151217
+        },
+        "unassigned_to_primary_seconds": 0.9821268350351602,
+        "nested_subtimings_seconds": {
+          "tracknet_preprocess_s": 90.68423302285373,
+          "tracknet_inference_and_transfer_s": 335.14911180827767,
+          "tracknet_point_decode_s": 21.922771371202543,
+          "person_detector_s": 41.19281973969191
+        },
+        "counts": {
+          "tracknet_calls": 18089,
+          "tracknet_input_frames": 54267,
+          "candidate_peaks": 254385,
+          "person_detector_calls": 1131,
+          "person_detector_images": 4523,
+          "person_boxes": 43385,
+          "decode_passes": 1,
+          "frames_decoded": 27134,
+          "native_observations": 27132,
+          "shifted_observations": 27134,
+          "associated_tracks": 798,
+          "coherent_flights": 911
+        },
+        "decode_passes": [
+          {
+            "pass_name": "observation",
+            "frames_decoded": 27134,
+            "frames_delivered": 27134,
+            "queue_peak": 6,
+            "decode_s": 57.00755725777708,
+            "conversion_s": 39.17878143279813,
+            "max_lag_s": 0.0,
+            "fps": 29.981117470355645,
+            "expected_frames": 27134,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 108.0,
+            "last_timestamp_ms": 905037.0,
+            "last_delivered_timestamp_ms": 905037.0
+          }
+        ],
+        "device": "mps",
+        "algorithm": {
+          "algorithm": "courtside-tail_gap800_growth300",
+          "selected_people": [
+            {
+              "x1": 926.9981689453125,
+              "y1": 301.86993408203125,
+              "x2": 987.3592529296875,
+              "y2": 463.24713134765625,
+              "confidence": 0.7211378812789917
+            },
+            {
+              "x1": 913.4141845703125,
+              "y1": 408.3035888671875,
+              "x2": 1067.0172119140625,
+              "y2": 796.4295654296875,
+              "confidence": 0.9115912914276123
+            }
+          ],
+          "native_frames": 27132,
+          "shifted_frames": 27134
+        },
+        "warnings": []
+      },
+      "output": {
+        "raw_prediction_count": 30,
+        "export_range_count": 30,
+        "output_duration_ms": 281623.0,
+        "output_bytes": 166063069,
+        "artifact_sha256": "1ac447c2b176996ada7fe3b07d88794ce64bf314c62ee4c9fd77f7ec60bf6ea2",
+        "inspection_status": "product_completed; independent output structure/frame-count inspection is outside this summarization"
+      },
+      "resources": {
+        "external": {
+          "sample_count": 578,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.0285644170362502,
+          "minimum_actual_interval_s": 0.1009447081014514,
+          "first_elapsed_s": -0.0109611249063164,
+          "last_elapsed_s": 586.0422107081395,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "recorded_interval_max_s": 1.0285644170362502,
+          "errors": [],
+          "process_coverage": [
+            {
+              "pid": 27541,
+              "parent_pid": 26724,
+              "name": "python3.11",
+              "created_at": 1792502055.684384,
+              "first_elapsed_s": -0.0109611249063164,
+              "last_elapsed_s": 586.0422107081395,
+              "observed_max_rss_bytes": 140394496,
+              "observed_max_cpu_percent": 0.6
+            },
+            {
+              "pid": 27549,
+              "parent_pid": 27541,
+              "name": "python3.11",
+              "created_at": 1792502056.819691,
+              "first_elapsed_s": 1.004774667089805,
+              "last_elapsed_s": 584.924654917093,
+              "observed_max_rss_bytes": 2192424960,
+              "observed_max_cpu_percent": 154.5
+            },
+            {
+              "pid": 27553,
+              "parent_pid": 27549,
+              "name": "system_profiler",
+              "created_at": 1792502058.508917,
+              "first_elapsed_s": 2.0296195421833545,
+              "last_elapsed_s": 8.127969542052597,
+              "observed_max_rss_bytes": 7782400,
+              "observed_max_cpu_percent": 0.4
+            },
+            {
+              "pid": 27554,
+              "parent_pid": 27553,
+              "name": "system_profiler",
+              "created_at": 1792502058.52104,
+              "first_elapsed_s": 2.0296195421833545,
+              "last_elapsed_s": 8.127969542052597,
+              "observed_max_rss_bytes": 141459456,
+              "observed_max_cpu_percent": 100.3
+            },
+            {
+              "pid": 30321,
+              "parent_pid": 27549,
+              "name": "ffmpeg-macos-aarch64-v7.1",
+              "created_at": 1792502580.755629,
+              "first_elapsed_s": 524.866984958062,
+              "last_elapsed_s": 584.924654917093,
+              "observed_max_rss_bytes": 559988736,
+              "observed_max_cpu_percent": 676.0
+            }
+          ],
+          "observed_peak": {
+            "cpu_percent": 676.4,
+            "rss_bytes": 2641133568,
+            "work_logical_bytes": 515347893,
+            "work_without_source_logical_bytes": 167140210
+          },
+          "minimum_disk_free_bytes": 1617040637952,
+          "phase_samples": {
+            "before_product_start": {
+              "count": 1,
+              "median_cpu_percent": 0,
+              "observed_peak_rss_bytes": 140230656,
+              "first_rss_bytes": 140230656,
+              "last_rss_bytes": 140230656
+            },
+            "recognition": {
+              "count": 514,
+              "median_cpu_percent": 136.35000000000002,
+              "observed_peak_rss_bytes": 2326691840,
+              "first_rss_bytes": 340426752,
+              "last_rss_bytes": 2326691840
+            },
+            "rendering": {
+              "count": 61,
+              "median_cpu_percent": 402.40000000000003,
+              "observed_peak_rss_bytes": 2641133568,
+              "first_rss_bytes": 2081112064,
+              "last_rss_bytes": 2641133568
+            },
+            "after_product_completion": {
+              "count": 2,
+              "median_cpu_percent": 0.5,
+              "observed_peak_rss_bytes": 134283264,
+              "first_rss_bytes": 134283264,
+              "last_rss_bytes": 134283264
+            },
+            "preparation": {
+              "count": 0,
+              "median_cpu_percent": null,
+              "observed_peak_rss_bytes": null,
+              "first_rss_bytes": null,
+              "last_rss_bytes": null
+            }
+          }
+        },
+        "mps": {
+          "sample_count": 517,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 2.4890760839916766,
+          "minimum_actual_interval_s": 1.0000402498990297,
+          "first_elapsed_s": 1.325897292001173,
+          "last_elapsed_s": 523.7580910001416,
+          "count_intervals_gt_1_1_s": 7,
+          "count_intervals_gt_1_5_s": 4,
+          "gaps_gt_1_5_s": [
+            {
+              "start_elapsed_s": 502.4939368329942,
+              "end_elapsed_s": 504.25377741712146,
+              "interval_s": 1.7598405841272324
+            },
+            {
+              "start_elapsed_s": 506.4193752920255,
+              "end_elapsed_s": 507.9388835420832,
+              "interval_s": 1.5195082500576973
+            },
+            {
+              "start_elapsed_s": 511.4167652921751,
+              "end_elapsed_s": 513.1432284580078,
+              "interval_s": 1.7264631658326834
+            },
+            {
+              "start_elapsed_s": 513.1432284580078,
+              "end_elapsed_s": 515.6323045419995,
+              "interval_s": 2.4890760839916766
+            }
+          ],
+          "coverage": "recognize_context_only",
+          "observed_peak_allocated_bytes": 318984704,
+          "observed_peak_driver_bytes": 1196556288,
+          "errors_or_unavailable": []
+        }
+      },
+      "weight_sha256": {
+        "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b",
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+      },
+      "evidence": {
+        "C-long/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-long/result.json",
+          "sha256": "ea6724497b3bb8bb4c28c965358afa4afa0e588bfcdaae077ab40eadb6c95314"
+        },
+        "C-long/evidence/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-long/evidence/result.json",
+          "sha256": "f595f8079b9f31418aed4fbb716dc76df7d64434a3c90f6f0f6636bbf0518502"
+        },
+        "C-long/evidence/statistics.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-long/evidence/statistics.json",
+          "sha256": "755a4a911a5fc0e7a42062f2deafbb7e8e0248c1199cea97b67d000b929cf6f9"
+        },
+        "C-long/evidence/benchmark-clock.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-long/evidence/benchmark-clock.json",
+          "sha256": "bb7142910ed84a710d4ef691607df4d654fe0ae7a12ecc7b95cf94468af40297"
+        },
+        "C-long/resources.jsonl": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-long/resources.jsonl",
+          "sha256": "cf914174643d6ce5fad36712f6813eec4e945179713bf63bb6d0d4193bfeabd0"
+        }
+      }
+    },
+    {
+      "case_id": "D-short",
+      "status": "completed",
+      "kind": "baseline",
+      "statistics_enabled": true,
+      "input": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+        "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+        "scene": "personal",
+        "court": null,
+        "container_duration_s": 250.900313,
+        "product_video_stream_duration_s": 250.9003125,
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.999962634562284,
+        "container_declared_frame_count": 7527,
+        "source_mapping": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+          "window_s": [
+            0,
+            250.900313
+          ]
+        },
+        "first_pts_ms": 0.0,
+        "last_normalized_timestamp_ms": 250867.0
+      },
+      "timings": {
+        "preparation_s": 0.4864694168791175,
+        "recognition_s": 321.1211133750621,
+        "rendering_s": 13.475518041057512,
+        "total_s": 335.08310083299875
+      },
+      "clock": {
+        "worker_spawn_start": 1277780.702551583,
+        "benchmark_start": 1277780.997885208,
+        "recognition": 1277781.189021,
+        "rendering": 1278102.310134375,
+        "completed": 1278115.785652416,
+        "finished": 1278115.7858975
+      },
+      "recognition": {
+        "primary_seconds": {
+          "model_initialization": 11.280287876259536,
+          "video_observation": 125.74773874995299,
+          "people_and_trajectories": 0.4454930000938475,
+          "action_analysis": 181.9854974169284,
+          "rally_decision": 0.0014170000795274973,
+          "intermediate_writes": 0.004694500006735325
+        },
+        "unassigned_to_primary_seconds": 1.6559848317410797,
+        "nested_subtimings_seconds": {
+          "tracknet_preprocess_s": 12.824357455829158,
+          "tracknet_inference_and_transfer_s": 51.42039980646223,
+          "tracknet_point_decode_s": 2.7312844975385815,
+          "person_detector_s": 11.845573333557695,
+          "pose_decode_s": 7.6128848204389215,
+          "pose_conversion_s": 6.4236598059069365,
+          "pose_inference_s": 162.02255797269754
+        },
+        "counts": {
+          "tracknet_calls": 2509,
+          "tracknet_input_frames": 7527,
+          "candidate_peaks": 18244,
+          "person_detector_calls": 314,
+          "person_detector_images": 1255,
+          "person_boxes": 3373,
+          "decode_passes": 2,
+          "frames_decoded": 15054,
+          "native_observations": 7527,
+          "shifted_observations": 1,
+          "pose_converted_frames": 5018,
+          "pose_calls": 2432,
+          "person_crops": 2432
+        },
+        "decode_passes": [
+          {
+            "pass_name": "observation",
+            "frames_decoded": 7527,
+            "frames_delivered": 7527,
+            "queue_peak": 6,
+            "decode_s": 8.553860581247136,
+            "conversion_s": 10.412200384074822,
+            "max_lag_s": 0.0,
+            "fps": 29.999962634562284,
+            "expected_frames": 7527,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 0.0,
+            "last_timestamp_ms": 250867.0,
+            "last_delivered_timestamp_ms": 250867.0
+          },
+          {
+            "pass_name": "pose",
+            "frames_decoded": 7527
+          }
+        ],
+        "device": "mps",
+        "algorithm": {
+          "algorithm": "personal-context-candidate-20261018",
+          "native_frames": 7527,
+          "person_observations": 1255,
+          "selected_track_ids": [
+            58,
+            40
+          ]
+        },
+        "warnings": []
+      },
+      "output": {
+        "raw_prediction_count": 13,
+        "export_range_count": 13,
+        "output_duration_ms": 147100.0,
+        "output_bytes": 20814940,
+        "artifact_sha256": "f97c720cda23768819373766cb49f5c3531179a879fdfa0dc043f497726d5eed",
+        "inspection_status": "product_completed; independent output structure/frame-count inspection is outside this summarization"
+      },
+      "resources": {
+        "external": {
+          "sample_count": 331,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.02494562510401,
+          "minimum_actual_interval_s": 0.617260083090514,
+          "first_elapsed_s": -0.011614208109676838,
+          "last_elapsed_s": 335.25970608298667,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "recorded_interval_max_s": 1.02494562510401,
+          "errors": [],
+          "process_coverage": [
+            {
+              "pid": 30859,
+              "parent_pid": 26724,
+              "name": "python3.11",
+              "created_at": 1792502643.397754,
+              "first_elapsed_s": -0.011614208109676838,
+              "last_elapsed_s": 335.25970608298667,
+              "observed_max_rss_bytes": 141131776,
+              "observed_max_cpu_percent": 0.6
+            },
+            {
+              "pid": 30860,
+              "parent_pid": 30859,
+              "name": "python3.11",
+              "created_at": 1792502644.297552,
+              "first_elapsed_s": 1.0047330828383565,
+              "last_elapsed_s": 334.64244599989615,
+              "observed_max_rss_bytes": 1707802624,
+              "observed_max_cpu_percent": 162.3
+            },
+            {
+              "pid": 30895,
+              "parent_pid": 30860,
+              "name": "system_profiler",
+              "created_at": 1792502646.048702,
+              "first_elapsed_s": 2.0225147078745067,
+              "last_elapsed_s": 8.125140374992043,
+              "observed_max_rss_bytes": 7897088,
+              "observed_max_cpu_percent": 0.5
+            },
+            {
+              "pid": 30896,
+              "parent_pid": 30895,
+              "name": "system_profiler",
+              "created_at": 1792502646.061319,
+              "first_elapsed_s": 2.0225147078745067,
+              "last_elapsed_s": 8.125140374992043,
+              "observed_max_rss_bytes": 120029184,
+              "observed_max_cpu_percent": 100.3
+            },
+            {
+              "pid": 34412,
+              "parent_pid": 30860,
+              "name": "ffmpeg-macos-aarch64-v7.1",
+              "created_at": 1792502965.964862,
+              "first_elapsed_s": 322.4095922498964,
+              "last_elapsed_s": 334.64244599989615,
+              "observed_max_rss_bytes": 546258944,
+              "observed_max_cpu_percent": 486.5
+            }
+          ],
+          "observed_peak": {
+            "cpu_percent": 486.9,
+            "rss_bytes": 2389065728,
+            "work_logical_bytes": 35943926,
+            "work_without_source_logical_bytes": 21665644
+          },
+          "minimum_disk_free_bytes": 1617013456896,
+          "phase_samples": {
+            "before_product_start": {
+              "count": 1,
+              "median_cpu_percent": 0,
+              "observed_peak_rss_bytes": 140902400,
+              "first_rss_bytes": 140902400,
+              "last_rss_bytes": 140902400
+            },
+            "recognition": {
+              "count": 316,
+              "median_cpu_percent": 143.5,
+              "observed_peak_rss_bytes": 1842675712,
+              "first_rss_bytes": 354025472,
+              "last_rss_bytes": 1842675712
+            },
+            "rendering": {
+              "count": 13,
+              "median_cpu_percent": 448.7,
+              "observed_peak_rss_bytes": 2389065728,
+              "first_rss_bytes": 2375090176,
+              "last_rss_bytes": 2389065728
+            },
+            "after_product_completion": {
+              "count": 1,
+              "median_cpu_percent": 0.6,
+              "observed_peak_rss_bytes": 135004160,
+              "first_rss_bytes": 135004160,
+              "last_rss_bytes": 135004160
+            },
+            "preparation": {
+              "count": 0,
+              "median_cpu_percent": null,
+              "observed_peak_rss_bytes": null,
+              "first_rss_bytes": null,
+              "last_rss_bytes": null
+            }
+          }
+        },
+        "mps": {
+          "sample_count": 319,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.2654482498764992,
+          "minimum_actual_interval_s": 1.000043542124331,
+          "first_elapsed_s": 1.1250837920233607,
+          "last_elapsed_s": 320.786373749841,
+          "count_intervals_gt_1_1_s": 1,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "coverage": "recognize_context_only",
+          "observed_peak_allocated_bytes": 243485696,
+          "observed_peak_driver_bytes": 1193721856,
+          "errors_or_unavailable": []
+        }
+      },
+      "weight_sha256": {
+        "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b",
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "pose_kpRCNN.pth": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+      },
+      "evidence": {
+        "D-short/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-short/result.json",
+          "sha256": "15bb0d720a3a938dc0984e656ee648bce0438e7c23d810a9a05a080a4a797591"
+        },
+        "D-short/evidence/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-short/evidence/result.json",
+          "sha256": "6f71315bf372f3d8ee13b6453a7a51a502bf66e32d1cfe14861ba80ba3284ebd"
+        },
+        "D-short/evidence/statistics.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-short/evidence/statistics.json",
+          "sha256": "43ef7d86dcc9b6759286fa244bc9523207739b1b81d40eff992d784f80deff1f"
+        },
+        "D-short/evidence/benchmark-clock.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-short/evidence/benchmark-clock.json",
+          "sha256": "a70c91e9f0b0a45b04817034e6c9d07c4c48326272286f725b310ceb4bfe0063"
+        },
+        "D-short/resources.jsonl": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-short/resources.jsonl",
+          "sha256": "029a57f4ecc7bef191f00ef7c5673b05f29217f902e42d6272d2efd2f8ac5da9"
+        }
+      }
+    },
+    {
+      "case_id": "D-long",
+      "status": "completed",
+      "kind": "baseline",
+      "statistics_enabled": true,
+      "input": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/D-long.mp4",
+        "sha256": "e7b13cd65f96e7661a75f377401a9e35f205feef02c110797e4e1e9ad942d284",
+        "scene": "personal",
+        "court": null,
+        "container_duration_s": 611.112438,
+        "product_video_stream_duration_s": 611.1124375,
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.98629855246564,
+        "container_declared_frame_count": 18325,
+        "source_mapping": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/D1/source.mp4",
+          "requested_window_s": [
+            0,
+            610.946
+          ],
+          "actual_window_s": [
+            0.0,
+            610.9791875
+          ],
+          "window_policy": "stream-copy; actual keyframe boundaries accepted by controller decision in media/input.md",
+          "video_packet_mapping": {
+            "source_packets_in_window": 18381,
+            "clip_packets": 18325,
+            "matched_contiguous_packets": 18325,
+            "all_packets_match": true,
+            "first_source_pts_s": 0.0,
+            "last_source_pts_s": 610.9791875,
+            "first_clip_pts_s": 0.133,
+            "last_clip_pts_s": 611.1121875,
+            "pts_offset_min_s": -0.1330000000000382,
+            "pts_offset_max_s": -0.1329999999999245,
+            "dts_offset_min_s": -0.1330000000000382,
+            "dts_offset_max_s": -0.1329999999999245
+          },
+          "audio_packet_mapping": {
+            "source_packets_in_window": 28732,
+            "clip_packets": 28639,
+            "matched_contiguous_packets": 28639,
+            "all_packets_match": true,
+            "first_source_pts_s": 0.0,
+            "last_source_pts_s": 610.944,
+            "first_clip_pts_s": 0.133,
+            "last_clip_pts_s": 611.077,
+            "pts_offset_min_s": -0.1330000000000382,
+            "pts_offset_max_s": -0.1329999999999245,
+            "dts_offset_min_s": -0.1330000000000382,
+            "dts_offset_max_s": -0.1329999999999245
+          },
+          "pixel_time_check": {
+            "case_id": "D-long",
+            "source": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/source-videos/D1/source.mp4",
+            "output": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/clips/D-long.mp4",
+            "offset_s": -0.133,
+            "matched_frames": 18325,
+            "output_frames": 18325,
+            "first_matched_source_pts_s": 0.0,
+            "last_matched_source_pts_s": 611.1125,
+            "first_output_pts_s": 0.133,
+            "last_output_pts_s": 611.2455,
+            "pts_offset_minmax_s": [
+              -0.1330000000000382,
+              -0.1329999999999245
+            ],
+            "mismatch_count_captured": 0,
+            "mismatches_first50": [],
+            "elapsed_s": 100.3
+          },
+          "source_mapping_evidence": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/source-frame-verification.json",
+          "decoded_frame_pts_s": [
+            0.0,
+            611.1125
+          ]
+        },
+        "first_pts_ms": 133.0,
+        "last_normalized_timestamp_ms": 611112.5
+      },
+      "timings": {
+        "preparation_s": 0.5848619581665844,
+        "recognition_s": 834.243910791818,
+        "rendering_s": 49.32862400007434,
+        "total_s": 884.157396750059
+      },
+      "clock": {
+        "worker_spawn_start": 1278117.586454833,
+        "benchmark_start": 1278117.981812666,
+        "recognition": 1278118.171316791,
+        "rendering": 1278952.415227583,
+        "completed": 1279001.743851583,
+        "finished": 1279001.744077625
+      },
+      "recognition": {
+        "primary_seconds": {
+          "model_initialization": 9.242461667163298,
+          "video_observation": 315.84510291717015,
+          "people_and_trajectories": 5.623456083005294,
+          "action_analysis": 501.89572054101154,
+          "rally_decision": 0.0028986248653382063,
+          "intermediate_writes": 0.009709583129733801
+        },
+        "unassigned_to_primary_seconds": 1.6245613754726946,
+        "nested_subtimings_seconds": {
+          "tracknet_preprocess_s": 30.923882527975366,
+          "tracknet_inference_and_transfer_s": 128.63344529434107,
+          "tracknet_point_decode_s": 6.797540099592879,
+          "person_detector_s": 30.954681088682264,
+          "pose_decode_s": 30.40697968378663,
+          "pose_conversion_s": 15.819336388725787,
+          "pose_inference_s": 441.1016660146415
+        },
+        "counts": {
+          "tracknet_calls": 6108,
+          "tracknet_input_frames": 18324,
+          "candidate_peaks": 69769,
+          "person_detector_calls": 764,
+          "person_detector_images": 3055,
+          "person_boxes": 34818,
+          "decode_passes": 2,
+          "frames_decoded": 36650,
+          "native_observations": 18324,
+          "shifted_observations": 1,
+          "pose_converted_frames": 12217,
+          "pose_calls": 5837,
+          "person_crops": 5837
+        },
+        "decode_passes": [
+          {
+            "pass_name": "observation",
+            "frames_decoded": 18325,
+            "frames_delivered": 18325,
+            "queue_peak": 6,
+            "decode_s": 33.75199576560408,
+            "conversion_s": 25.166805867571384,
+            "max_lag_s": 0.0,
+            "fps": 29.98629855246564,
+            "expected_frames": 18325,
+            "width": 1920,
+            "height": 1080,
+            "first_pts_ms": 133.0,
+            "last_timestamp_ms": 611112.5,
+            "last_delivered_timestamp_ms": 611112.5
+          },
+          {
+            "pass_name": "pose",
+            "frames_decoded": 18325
+          }
+        ],
+        "device": "mps",
+        "algorithm": {
+          "algorithm": "personal-context-candidate-20261018",
+          "native_frames": 18324,
+          "person_observations": 3055,
+          "selected_track_ids": [
+            157,
+            269
+          ]
+        },
+        "warnings": []
+      },
+      "output": {
+        "raw_prediction_count": 31,
+        "export_range_count": 31,
+        "output_duration_ms": 307211.625,
+        "output_bytes": 110496866,
+        "artifact_sha256": "ba055cb1cbdc0d0214bbf265a9ce461b5b3f27ab631becc699124a3ce63767a9",
+        "inspection_status": "product_completed; independent output structure/frame-count inspection is outside this summarization"
+      },
+      "resources": {
+        "external": {
+          "sample_count": 871,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.0270020000170916,
+          "minimum_actual_interval_s": 0.3947659581899643,
+          "first_elapsed_s": -0.01157545787282288,
+          "last_elapsed_s": 884.232309833169,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "recorded_interval_max_s": 1.0270020000170916,
+          "errors": [],
+          "process_coverage": [
+            {
+              "pid": 34567,
+              "parent_pid": 26724,
+              "name": "python3.11",
+              "created_at": 1792502980.101214,
+              "first_elapsed_s": -0.01157545787282288,
+              "last_elapsed_s": 884.232309833169,
+              "observed_max_rss_bytes": 141721600,
+              "observed_max_cpu_percent": 0.6
+            },
+            {
+              "pid": 34568,
+              "parent_pid": 34567,
+              "name": "python3.11",
+              "created_at": 1792502981.179851,
+              "first_elapsed_s": 1.0051573750097305,
+              "last_elapsed_s": 883.837543874979,
+              "observed_max_rss_bytes": 2485436416,
+              "observed_max_cpu_percent": 185.8
+            },
+            {
+              "pid": 34572,
+              "parent_pid": 34568,
+              "name": "system_profiler",
+              "created_at": 1792502983.095995,
+              "first_elapsed_s": 2.02559379208833,
+              "last_elapsed_s": 8.129785625031218,
+              "observed_max_rss_bytes": 7782400,
+              "observed_max_cpu_percent": 0.4
+            },
+            {
+              "pid": 34573,
+              "parent_pid": 34572,
+              "name": "system_profiler",
+              "created_at": 1792502983.107581,
+              "first_elapsed_s": 2.02559379208833,
+              "last_elapsed_s": 8.129785625031218,
+              "observed_max_rss_bytes": 119930880,
+              "observed_max_cpu_percent": 100.6
+            },
+            {
+              "pid": 38301,
+              "parent_pid": 34568,
+              "name": "ffmpeg-macos-aarch64-v7.1",
+              "created_at": 1792503816.094316,
+              "first_elapsed_s": 834.9771650000475,
+              "last_elapsed_s": 882.8197324580979,
+              "observed_max_rss_bytes": 596983808,
+              "observed_max_cpu_percent": 566.1
+            }
+          ],
+          "observed_peak": {
+            "cpu_percent": 566.4,
+            "rss_bytes": 2657173504,
+            "work_logical_bytes": 267991732,
+            "work_without_source_logical_bytes": 111615245
+          },
+          "minimum_disk_free_bytes": 1616502943744,
+          "phase_samples": {
+            "before_product_start": {
+              "count": 1,
+              "median_cpu_percent": 0,
+              "observed_peak_rss_bytes": 141508608,
+              "first_rss_bytes": 141508608,
+              "last_rss_bytes": 141508608
+            },
+            "recognition": {
+              "count": 820,
+              "median_cpu_percent": 146.25,
+              "observed_peak_rss_bytes": 2620964864,
+              "first_rss_bytes": 332808192,
+              "last_rss_bytes": 2620964864
+            },
+            "rendering": {
+              "count": 49,
+              "median_cpu_percent": 439.1,
+              "observed_peak_rss_bytes": 2657173504,
+              "first_rss_bytes": 2241150976,
+              "last_rss_bytes": 2060435456
+            },
+            "after_product_completion": {
+              "count": 1,
+              "median_cpu_percent": 0.6,
+              "observed_peak_rss_bytes": 135561216,
+              "first_rss_bytes": 135561216,
+              "last_rss_bytes": 135561216
+            },
+            "preparation": {
+              "count": 0,
+              "median_cpu_percent": null,
+              "observed_peak_rss_bytes": null,
+              "first_rss_bytes": null,
+              "last_rss_bytes": null
+            }
+          }
+        },
+        "mps": {
+          "sample_count": 830,
+          "nominal_interval_s": 1.0,
+          "maximum_actual_interval_s": 1.0239389159251004,
+          "minimum_actual_interval_s": 1.0000427919439971,
+          "first_elapsed_s": 1.550432417076081,
+          "last_elapsed_s": 834.1722332080826,
+          "count_intervals_gt_1_1_s": 0,
+          "count_intervals_gt_1_5_s": 0,
+          "gaps_gt_1_5_s": [],
+          "coverage": "recognize_context_only",
+          "observed_peak_allocated_bytes": 264455936,
+          "observed_peak_driver_bytes": 1196294144,
+          "errors_or_unavailable": []
+        }
+      },
+      "weight_sha256": {
+        "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b",
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "pose_kpRCNN.pth": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+      },
+      "evidence": {
+        "D-long/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-long/result.json",
+          "sha256": "0208a600bed3c7860ad31cfc5b8e4541679d0d11753db4375b8136773c7cfb94"
+        },
+        "D-long/evidence/result.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-long/evidence/result.json",
+          "sha256": "fdf1144a2782b4f3f116f46711ff7d6eb54b3bd1f34244237e645d2c0cc82ddf"
+        },
+        "D-long/evidence/statistics.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-long/evidence/statistics.json",
+          "sha256": "81704d39fecef84ba41024b07e224361eccbc1e0ae08b74c7ba248645221d814"
+        },
+        "D-long/evidence/benchmark-clock.json": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-long/evidence/benchmark-clock.json",
+          "sha256": "7bc4808374e3168b7b85e4021cb04632df8ab50fe3b9f3ee434e67dca561b756"
+        },
+        "D-long/resources.jsonl": {
+          "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-long/resources.jsonl",
+          "sha256": "3c7e693fe18d367e6aee2de739df5d1a041f1d822a2139b100dceb39f287fd6d"
+        }
+      }
+    }
+  ],
+  "generated_artifacts": {
+    "six-formal-summary.csv": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/report-preparation/six-formal-summary.csv",
+      "sha256": "18ceaf18ef4c7732f8ba227e829b84f63b58e7984e605376f0c5195dbabad647",
+      "bytes": 3566
+    },
+    "six-formal-timings.png": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/report-preparation/six-formal-timings.png",
+      "sha256": "df898959182e85c68a405ec64328cbfc8b8b1c7309dc5593b97b7b8e71948c54",
+      "bytes": 120758
+    },
+    "A-short-resources.png": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/report-preparation/A-short-resources.png",
+      "sha256": "bcb920743a2d8f3cfa5446e0535ff579b9342d8b2c55b67ffba2e45cdcde4c57",
+      "bytes": 223406
+    },
+    "A-long-resources.png": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/report-preparation/A-long-resources.png",
+      "sha256": "80e83decf844e05f1ad439c82fec4b5c2e1e3ae9600fc72e852024b9d9ea3516",
+      "bytes": 238962
+    },
+    "C-short-resources.png": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/report-preparation/C-short-resources.png",
+      "sha256": "882d40ef2925006b6eb0b4e947d0322b88a6d54742ed427fb4274a84e0eec1db",
+      "bytes": 242868
+    },
+    "C-long-resources.png": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/report-preparation/C-long-resources.png",
+      "sha256": "17006cdf05208d44fa959f8df15444ab057980d6cbb9f7cefab9f230b4f56425",
+      "bytes": 266751
+    },
+    "D-short-resources.png": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/report-preparation/D-short-resources.png",
+      "sha256": "6bbc5e47564020d34315f73b796012b4a043ef62f19e598a1de8a2928fed9584",
+      "bytes": 236332
+    },
+    "D-long-resources.png": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/report-preparation/D-long-resources.png",
+      "sha256": "f46955b5e1db21622419225e922676abf09627ea77ed9b4e20ca84b13515a26a",
+      "bytes": 250784
+    }
+  }
+}

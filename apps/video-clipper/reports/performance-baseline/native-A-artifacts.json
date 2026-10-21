@@ -1,0 +1,126 @@
+{
+  "case_id": "A",
+  "recording_metadata": {
+    "case_id": "A-short",
+    "capture_type": "native-only recovery",
+    "application_uid": 501,
+    "runner_command": [
+      "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/.venv/bin/python",
+      "-m",
+      "app.benchmark",
+      "--inputs",
+      "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/inputs.json",
+      "--cases",
+      "A-short",
+      "--models",
+      "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/prepared-models",
+      "--output",
+      "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-native-A",
+      "--report",
+      "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/native-A-report.json",
+      "--profile-wait",
+      "--profile-timeout",
+      "300",
+      "--mps-signposts",
+      "--no-statistics"
+    ],
+    "python_capture": {
+      "target_pid": 38406,
+      "recording_metadata": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/recording-python-pass.json",
+      "flamegraph": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/python-flamegraph.svg",
+      "case_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-A/A-short",
+      "note": "Separate completed Python capture of identical frozen source/input; includes attachment wait."
+    },
+    "target_pid": 42952,
+    "target_uid": 501,
+    "native_case_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-native-A/A-short",
+    "native_benchmark_clock_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-native-A/A-short/evidence/benchmark-clock.json",
+    "trace_command": [
+      "xcrun",
+      "xctrace",
+      "record",
+      "--template",
+      "Time Profiler",
+      "--instrument",
+      "GPU",
+      "--instrument",
+      "os_signpost",
+      "--attach",
+      "42952",
+      "--time-limit",
+      "21600s",
+      "--output",
+      "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/native.trace"
+    ],
+    "trace_pid": 42953,
+    "release_monotonic_s": 1280142.651724083,
+    "monotonic_to_epoch_offset_s": 1791224863.664109,
+    "release_epoch_s": 1792505006.315833,
+    "runner_returncode": 0,
+    "trace_returncode": 0
+  },
+  "trace_bundle": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/native.trace",
+    "file_count": 500,
+    "directory_sha256": "be02e8a9f21455de8bb0cec8962c684bbe08555739b596af7a7e078e7e803af5",
+    "manifest_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/artifact-index.json",
+    "manifest_sha256": "3aa4915c0835d9871b6ca6b9a5e2966fec3da33f5b7a89f06c46f586d1f73670"
+  },
+  "python_flamegraph": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/python-flamegraph.svg",
+    "size_bytes": 108520,
+    "sha256": "7619ac0cb1298c480a52193841c00a47d83bbe991482bdecdb94c81be29f7aa8"
+  },
+  "exports_and_logs": {
+    "source_artifact_index": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/artifact-index.json",
+    "files": [
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/toc.xml",
+        "size_bytes": 33895,
+        "sha256": "434863a2ee2b0bf73b307a6ad46a4edd3476349501117979a67417f71c68bbeb"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/toc.xml.log",
+        "size_bytes": 186,
+        "sha256": "50bb2ddf5cfbd776994005f20698081b40f41406d4243aa23299d78cc065f323"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/time-profile.xml",
+        "size_bytes": 23144715,
+        "sha256": "fb335284f9e29834a7acc7d894578774f4523689fa67ee40c6663315ebc68134"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/time-profile.xml.log",
+        "size_bytes": 195,
+        "sha256": "dc62a652f35fda8d40751483f0e566113eb3f0fb6e1b1a6b6fde94e88f6869f3"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/metal-gpu-intervals.xml",
+        "size_bytes": 104724003,
+        "sha256": "d1f4ccd5365c99e9a2866c084c6b32796fd162f162fb729802c7e77c5b88ca2f"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/metal-gpu-intervals.xml.log",
+        "size_bytes": 202,
+        "sha256": "2397b448fd69713c92f045fc99c9533a1184a304c63e7b299d20291642d74d67"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/os-signpost.xml",
+        "size_bytes": 150610913,
+        "sha256": "e633cd47e29ff0ed40310420e509172d09f889f0e3cc512150e84d46f7411058"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/os-signpost.xml.log",
+        "size_bytes": 194,
+        "sha256": "e708952a108000c293641b8b348205384875026d4320d605ac43480a0b8ca8ab"
+      }
+    ]
+  },
+  "export_status": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A/export-status.json",
+    "size_bytes": 3894,
+    "sha256": "8ad771e673b2338a769eb709071083762d98d11d420b107e4e2fb2a2053c6136"
+  },
+  "summary_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A-parse1/summary.json",
+  "summary_sha256": "33b4e112bdd77312d5de4be2b832d91fadb454bfa4699737f6b0a224d58310d7"
+}

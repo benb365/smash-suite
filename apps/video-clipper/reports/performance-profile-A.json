@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "kind": "profile",
+  "evidence_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-A",
+  "manifest_sha256": "613235e86d638caabc357dca176d74f0cd15c1c77b20a97c84800515cd91631d",
+  "inputs_sha256": "f2ba1868880a8caa836e7d75fa9f4fd09e69f554eccbc897ef9f34ba11ce418d",
+  "results": [
+    {
+      "case_id": "A-short",
+      "input": {
+        "case_id": "A-short",
+        "scene": "high",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+        "court": null,
+        "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+        "status": "passed",
+        "metadata": {
+          "bytes": 70418255,
+          "container_duration_s": 168.091,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 25.0,
+          "container_frames": 4200,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "preflight": {
+          "file_frame_source": {
+            "status": "passed",
+            "stats": {
+              "frames_decoded": 4200,
+              "frames_delivered": 4200,
+              "queue_peak": 1,
+              "decode_s": 9.14761757152155,
+              "conversion_s": 5.563293573213741,
+              "max_lag_s": 0.0,
+              "fps": 25.0,
+              "expected_frames": 4200,
+              "width": 1920,
+              "height": 1080,
+              "first_pts_ms": 91.0,
+              "last_timestamp_ms": 167960.0,
+              "last_delivered_timestamp_ms": 167960.0
+            }
+          },
+          "full_av_decode": {
+            "exit_code": 0,
+            "log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/A-short.decode.log"
+          },
+          "decode_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/A-short.decode.log"
+        },
+        "source": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+          "window_s": [
+            0,
+            168.091
+          ]
+        },
+        "continuity": {
+          "summary": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/summary.json",
+          "decision": "passed",
+          "reason": "约25秒接触表和实际最后解码帧保持同一高位固定机位及球场构图；未见切镜或场地变化。 结论仅适用于本轮性能输入的连续性抽样检查，不代表逐帧人审或回合效果验收。",
+          "evidence": [
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/A-short-contact.jpg",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-contact.json",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.jpg",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.json",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_contacts.py",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_endpoints.py"
+          ]
+        }
+      },
+      "kind": "profile",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/prepared-models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        }
+      },
+      "input_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "statistics_enabled": false,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 168000.0,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 91.0
+        },
+        "output_url": "/media/20SuTxkYIIols_tii7R6ek_NfvCw5L7JiHOHqSy6RTI/output.mp4",
+        "output_bytes": 16834404,
+        "output_duration_ms": 46440.0,
+        "rally_count": 5,
+        "elapsed_s": 187.50102670909837,
+        "timings": {
+          "preparation_s": 134.52176279202104,
+          "recognition_s": 42.91807070793584,
+          "rendering_s": 10.061193209141493
+        },
+        "error": null,
+        "camera_type": "high",
+        "quality": "balanced",
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 686,
+          "sha256": "15a0859acf2c23f93f7d975e88f20c26553c4395ca609d430e7dd3c7bf7f5f30"
+        },
+        "profile-ready.json": {
+          "bytes": 73,
+          "sha256": "5afe9709c9295e5e3a2f771b740dae608c771c9dba74b779e5327664e14e6d51"
+        },
+        "result.json": {
+          "bytes": 1394,
+          "sha256": "7c6532552d791987f0a2fb17f3e760df0f09f6729e13c7d33538ac5a57c6b4d7"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 935,
+          "sha256": "8464c05d493907a2980326f5189d7ac289487a7f635d60655c15edb2df7cac86"
+        },
+        "profile-release": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "worker.log": {
+          "bytes": 912,
+          "sha256": "3eeab0ec9cfc109355e50ef13bdf0720f2cb59b64b01b0a2b5c999b6e17ba5c7"
+        },
+        "output.mp4": {
+          "bytes": 16834404,
+          "sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa"
+        },
+        "frame.jpg": {
+          "bytes": 389375,
+          "sha256": "bcc68a44e809edf7cd612442eaf7ca1cd2508f68d56e4650be86e29f08fa6e79"
+        },
+        "benchmark-clock.json": {
+          "bytes": 244,
+          "sha256": "c030008103c86c22325549463937c18060af4d64f9e741eb8e1397a4236a48ce"
+        }
+      },
+      "timings": {
+        "preparation_s": 134.52176279202104,
+        "recognition_s": 42.91807070793584,
+        "rendering_s": 10.061193209141493,
+        "total_s": 187.50102670909837
+      },
+      "clock": {
+        "worker_spawn_start": 1279028.711043916,
+        "profile_ready": 1279029.096093916,
+        "benchmark_start": 1279163.148648208,
+        "recognition": 1279163.232806708,
+        "rendering": 1279206.150877416,
+        "completed": 1279216.212070625,
+        "finished": 1279216.212362416
+      },
+      "resources": {
+        "samples": 186,
+        "max_interval_s": 1.026973375119269,
+        "pids": [
+          38405,
+          38406,
+          39146
+        ],
+        "observed_peak": {
+          "cpu_percent": 600.8000000000001,
+          "rss_bytes": 1528381440,
+          "work_logical_bytes": 87646278,
+          "work_without_source_logical_bytes": 17228023
+        },
+        "minimum_disk_free_bytes": 1593330601984,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "6c1da6274de028bad798a6e76060808d310fb1cc4b3262dece39067df61024c4",
+      "lease_errors": [
+        "received 1001 (going away); then sent 1001 (going away)"
+      ]
+    }
+  ],
+  "limits": "One run per input, not a stability estimate or 30-minute acceptance. Profiling is separate from baseline."
+}
