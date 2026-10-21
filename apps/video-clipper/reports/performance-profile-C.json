@@ -1,0 +1,204 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "kind": "profile",
+  "evidence_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-C",
+  "manifest_sha256": "ff9b639306b8da42227b07369cd403b3f49b8100a4a37c9093b9b7f65df50e4f",
+  "inputs_sha256": "f2ba1868880a8caa836e7d75fa9f4fd09e69f554eccbc897ef9f34ba11ce418d",
+  "results": [
+    {
+      "case_id": "C-short",
+      "input": {
+        "case_id": "C-short",
+        "scene": "courtside",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+        "court": null,
+        "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+        "status": "passed",
+        "metadata": {
+          "bytes": 66256451,
+          "container_duration_s": 180.000313,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 29.99994791675709,
+          "container_frames": 5400,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "preflight": {
+          "file_frame_source": {
+            "status": "passed",
+            "stats": {
+              "frames_decoded": 5400,
+              "frames_delivered": 5400,
+              "queue_peak": 1,
+              "decode_s": 10.629853124264628,
+              "conversion_s": 6.938634269405156,
+              "max_lag_s": 0.0,
+              "fps": 29.99994791675709,
+              "expected_frames": 5400,
+              "width": 1920,
+              "height": 1080,
+              "first_pts_ms": 0.0,
+              "last_timestamp_ms": 179967.0,
+              "last_delivered_timestamp_ms": 179967.0
+            }
+          },
+          "full_av_decode": {
+            "exit_code": 0,
+            "log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/C-short.decode.log"
+          },
+          "decode_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/probes/C-short.decode.log"
+        },
+        "source": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+          "window_s": [
+            0,
+            180.000313
+          ]
+        },
+        "continuity": {
+          "summary": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/summary.json",
+          "decision": "passed",
+          "reason": "约25秒接触表和实际最后解码帧保持同一低位机位及场地；前景球员/人员活动属画面内容变化，未见切镜或场地变化。 结论仅适用于本轮性能输入的连续性抽样检查，不代表逐帧人审或回合效果验收。",
+          "evidence": [
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/C-short-contact.jpg",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-contact.json",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.jpg",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short-endpoints.json",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_contacts.py",
+            "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/media/continuity/short_endpoints.py"
+          ]
+        }
+      },
+      "kind": "profile",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/prepared-models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/prepared-models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        }
+      },
+      "input_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "statistics_enabled": false,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 180000.3125,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 0.0
+        },
+        "output_url": "/media/I4kjSEZmnT9p_qKfIng8wH1lKGQ8NrqktGRkezZo7uo/output.mp4",
+        "output_bytes": 44465082,
+        "output_duration_ms": 110867.0,
+        "rally_count": 9,
+        "elapsed_s": 167.86709587508813,
+        "timings": {
+          "preparation_s": 21.76113670808263,
+          "recognition_s": 124.45360929192975,
+          "rendering_s": 21.652349875075743
+        },
+        "error": null,
+        "camera_type": "courtside",
+        "quality": "balanced",
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 693,
+          "sha256": "0114ec834053ed735fd284a04ab5638d0be4278480ab48b69e39ec8ba182a8ea"
+        },
+        "profile-ready.json": {
+          "bytes": 73,
+          "sha256": "17f5ff55dc57abd6a415a3b9c0a92a1523d07c51745fc039e3fb41d7c096e8cc"
+        },
+        "result.json": {
+          "bytes": 1530,
+          "sha256": "08dc51b57bf3bc92030f652d825cbaacc68dc8c082f28feffe14a7e7805809b2"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 1587,
+          "sha256": "7897d1caaf5e88a906e0b6fdb39e9ee8ea190f5db8c2804cdfe8c53d1adcad9b"
+        },
+        "profile-release": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "worker.log": {
+          "bytes": 1466,
+          "sha256": "a0bada918039bc9ddd680705eed091e2fa890a6e987b3f2599a0b05c7c01da74"
+        },
+        "decisions.json": {
+          "bytes": 13634,
+          "sha256": "1be2326629b0a062c7b2f41fdb34a780ef2b5df3e3aa3f7dc23cb3afc2bfea24"
+        },
+        "output.mp4": {
+          "bytes": 44465082,
+          "sha256": "4f16419abb135c1866e55f09b24e88fa35b586c2c60c780280bb79d9a2df0519"
+        },
+        "frame.jpg": {
+          "bytes": 533749,
+          "sha256": "b4fd8e36ce2cf76908ff96656930542e935b616469152dae24be29460456775e"
+        },
+        "benchmark-clock.json": {
+          "bytes": 243,
+          "sha256": "d57f099bcb0f866aae0dc2e979f6e6802f6a99a702f75bcaa50aeb319c84e7dd"
+        }
+      },
+      "timings": {
+        "preparation_s": 21.76113670808263,
+        "recognition_s": 124.45360929192975,
+        "rendering_s": 21.652349875075743,
+        "total_s": 167.86709587508813
+      },
+      "clock": {
+        "worker_spawn_start": 1324927.749986708,
+        "profile_ready": 1324928.137260041,
+        "benchmark_start": 1324949.420598625,
+        "recognition": 1324949.511123416,
+        "rendering": 1325073.964732708,
+        "completed": 1325095.617082583,
+        "finished": 1325095.61736475
+      },
+      "resources": {
+        "samples": 167,
+        "max_interval_s": 1.0259833328891546,
+        "pids": [
+          50309,
+          50312,
+          50360,
+          50361,
+          50540
+        ],
+        "observed_peak": {
+          "cpu_percent": 509.0,
+          "rss_bytes": 2259271680,
+          "work_logical_bytes": 111625403,
+          "work_without_source_logical_bytes": 45368952
+        },
+        "minimum_disk_free_bytes": 1595256614912,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "4bf19ab335351d9b65bfa9067e26270a3e38d52398fd0fae6ffc14663524e950",
+      "lease_errors": []
+    }
+  ],
+  "limits": "One run per input, not a stability estimate or 30-minute acceptance. Profiling is separate from baseline."
+}

@@ -18,7 +18,7 @@ A 可以逐帧调用，确认结束后输出完整回合；C/D 会使用后续�
 
 ## 当前进展
 
-A 保留原逐帧方案，C/D 已接入确认的改进并继续通过文件分析使用。当前评估纳入 A/C/D，B 继续暂缓。整理后 16 份保存观测回放与确认结果逐项一致；这不等于重新运行模型或验证真实视频效果。已知漏回合、边界和间歇问题仍待处理，独立来源验收未完成。记录见[算法确认报告](experiments/reports/algorithm-decisions-20261019.md)和[整理后快速检查](../../docs/ai/2026-10-19-quick-check/notes.md)。
+A 保留原逐帧方案，C/D 已接入确认的改进并继续通过文件分析使用。当前评估纳入 A/C/D，B 继续暂缓。历史整理检查曾记录 16 份保存观测输出一致；其输入缓存现已缺失，旧检查入口已移除，不能作为当前可复验的证据。已知漏回合、边界和间歇问题仍待处理，独立来源验收未完成。记录见[算法确认报告](experiments/reports/algorithm-decisions-20261019.md)和[整理后快速检查](../../docs/ai/2026-10-19-quick-check/notes.md)。
 
 ## 输入输出与职责
 
@@ -67,14 +67,12 @@ Python 调用入口是 `recognize(source, info, camera_type, weights, progress, 
 
 ## 实验与自动测试
 
-`common/` 保存共用处理步骤，`scenarios/` 保存场景组合与参数，`evaluation/` 提供评分；`experiments/` 保存诊断及回放入口，运行文件放 `.runtime/`。历史试验源码归档到 `backup/`，不由产品动态导入。
+`common/` 保存共用处理步骤，`scenarios/` 保存场景组合与参数，`evaluation/` 提供评分；`experiments/` 保存诊断入口，运行文件放 `.runtime/`。历史试验源码归档到 `backup/`，不由产品动态导入。
 
 ```sh
 .venv/bin/python -m pytest modules/rally/tests
-.venv/bin/python -m modules.rally.experiments.replay \
-  --output modules/rally/.runtime/migration-replay.json
 ```
 
-回放入口使用 16 份保留的 A/C/D 观测，检查所选方案是否与确认记录逐条一致，不运行模型；它不能替代从视频运行的完整验证。共用缓存的片段按用例声明的窗口截取，并将帧号和时间归零，详见[实验入口说明](experiments/README.md)。
+当前自动测试使用合成输入校验流式契约和算法规则。真实视频须从上方场景入口重新推理，不能由旧缓存检查替代。本次性能任务另按[性能基线协议](../../apps/video-clipper/reports/performance-baseline.md)比较三份真实短片的统计开关输出；尚未完成。更多入口见[实验说明](experiments/README.md)。
 
 原文件输入诊断入口保留为 `modules.rally.experiments.run_live_tracknet`，支持 `offline/realtime`、固定重复和处理日志；`run_tracknet` 保留已确认恒定帧率素材的早期基线入口。

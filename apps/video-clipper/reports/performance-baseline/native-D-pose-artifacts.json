@@ -1,0 +1,76 @@
+{
+  "case_id": "D",
+  "window_name": "pose",
+  "stage": "正在分析球员动作",
+  "trace_bundle": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/pose.trace",
+    "file_count": 431,
+    "directory_sha256": "cd279d6c85e4fdb6dba5aaf864e42fc7b40e2b2eb50c589d17cd2abee0fb629c",
+    "manifest_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/artifact-index.json",
+    "manifest_sha256": "1250c150618b7c0715e5999240b6355e0634304fed3d3a6a0d62a447eeed5b82"
+  },
+  "exports_and_logs": {
+    "source_artifact_index": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/artifact-index.json",
+    "files": [
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/toc.xml",
+        "size_bytes": 33937,
+        "sha256": "c0b7a22a8fdfb251c5475a15a897751246a485bbcf4792d2fac97d0cebe36d72"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/toc.xml.log",
+        "size_bytes": 194,
+        "sha256": "b98b47e39b1d6fd86aa2174a29aed26e7a172a9eeac2e5ace15844710324d138"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/time-profile.xml",
+        "size_bytes": 5034181,
+        "sha256": "8443b4beff66c116ce09de89769cdf071839bf2b162a8489f42e19b29f1e0bf6"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/time-profile.xml.log",
+        "size_bytes": 203,
+        "sha256": "3e5837a541ae6359994a60b944a5d84d7bb4e387684a8bc69a546071197eac4a"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/metal-gpu-intervals.xml",
+        "size_bytes": 4430179,
+        "sha256": "558ac5017790b47032b328e31cb1b060c2b7c1261187d81db53f8dddf05f7488"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/metal-gpu-intervals.xml.log",
+        "size_bytes": 210,
+        "sha256": "b6d5eed07dcf1c5d66cc20b092823e6462549e4d2a7eb4d47f422255d67a8d1a"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/os-signpost.xml",
+        "size_bytes": 3807958,
+        "sha256": "35388ecce6abac3bdbf2d2249efa9dc62b66545889db8fb62dc9e63d514b683a"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/os-signpost.xml.log",
+        "size_bytes": 202,
+        "sha256": "8436834fef25215ad9d62b47f92e1e03e44cf0b2cda13b9634a92a3d2e962cb1"
+      }
+    ]
+  },
+  "export_status": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/pose/export-status.json",
+    "size_bytes": 3982,
+    "sha256": "db086193f9938a5199826da685282926a222a5f196243ea1299c13accbdc6205"
+  },
+  "stage_events": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-events.jsonl",
+    "size_bytes": 936,
+    "sha256": "a184db39ba171dffd48da7c24adc4c296b6136d14549280ee8b548a28ad88ac5"
+  },
+  "stage_current": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-current.json",
+    "size_bytes": 125,
+    "sha256": "36e4f67502b7d26e1cc5c784feeb850262cf321d6e9406d1d950c360c8d5119c"
+  },
+  "summary_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-final-v2/pose/summary.json",
+  "summary_sha256": "f169396180168e541140d34a3112d1ad2ecdacd5f7e1914ffeadb4761a7e5b16",
+  "controlled_stop_boundary_evidence": null,
+  "signpost_boundary_event_index": null
+}

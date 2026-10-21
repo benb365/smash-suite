@@ -207,8 +207,8 @@ def analyze_flight(rows: list[dict], *, width: float, config: TrajectoryConfig,
 
 
 class TrajectoryRallySegmenter(ShuttleRallySegmenter):
-    def __init__(self, predict, *, width, height, config=None):
-        super().__init__(predict, width=width, height=height, config=config or TrajectoryConfig())
+    def __init__(self, predict, *, width, height, config=None, statistics=None):
+        super().__init__(predict, width=width, height=height, config=config or TrajectoryConfig(), statistics=statistics)
         self.history: deque[dict] = deque()
         self.recent: list[tuple[float, ShuttlePoint]] = []
         self.direction: MotionDirection | None = None

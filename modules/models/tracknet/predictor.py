@@ -45,7 +45,7 @@ def heatmap_candidates(heatmap, *, width, height):
 
 class TrackNetPredictor:
     """TrackNet inference and the recorded point/candidate decoder."""
-    def __init__(self, weight=None, *, device="cpu", record_candidates=False):
+    def __init__(self, weight=None, *, device="cpu", record_candidates=False, statistics=None):
         import torch
         from .model import TrackNet
         from modules.models.assets import ensure_models
@@ -53,6 +53,7 @@ class TrackNetPredictor:
             weight = ensure_models(["ball_track.pt"])["ball_track.pt"]
         self.torch, self.device = torch, device
         self.record_candidates = record_candidates
+        self.statistics = statistics
         self.last_candidates = []
         torch.set_num_threads(4)
         self.model = TrackNet()
@@ -90,4 +91,10 @@ class TrackNetPredictor:
         self.last_timing = dict(preprocess_s=preprocessed - started,
                                 inference_and_transfer_s=inferred - preprocessed,
                                 point_decode_s=time.perf_counter() - inferred)
+        if self.statistics is not None:
+            self.statistics.add("tracknet_calls")
+            self.statistics.add("tracknet_input_frames", len(frames))
+            self.statistics.add("candidate_peaks", sum(len(row["peaks"]) for row in self.last_candidates))
+            for name, seconds in self.last_timing.items():
+                self.statistics.timing("tracknet_" + name, seconds)
         return points

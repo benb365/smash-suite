@@ -136,6 +136,8 @@ class Sessions:
             (session.directory / name).unlink(missing_ok=True)
         spec = dict(options=options.model_dump(), video=session.state.video.model_dump(),
                     directory=str(session.directory), models=str(self.runtime.models))
+        if config := os.environ.get("SMASH_SUITE_BENCHMARK_CONFIG"):
+            spec["benchmark"] = json.loads(config)
         (session.directory / "request.json").write_text(json.dumps(spec), encoding="utf-8")
         self.busy = session.id
         session.spawned.clear()
@@ -149,6 +151,8 @@ class Sessions:
         started = time.monotonic()
         phase, phase_started = "preparation", started
         timings = {}
+        benchmark_clock = dict(worker_spawn_start=started)
+        benchmark_enabled = bool(os.environ.get("SMASH_SUITE_BENCHMARK_CONFIG"))
         try:
             command = ([sys.executable, "--worker"] if getattr(sys, "frozen", False)
                        else [sys.executable, "-m", "app.worker"])
@@ -164,9 +168,12 @@ class Sessions:
                     except (ValueError, UnicodeDecodeError):
                         errors.write(line.decode(errors="replace"))
                         continue
+                    if benchmark_enabled and event.get("type") in ("profile_ready", "benchmark_start"):
+                        benchmark_clock[event["type"]] = event["monotonic_s"]
                     if event.get("type") == "progress":
                         if next_phase := event.get("phase"):
                             now = time.monotonic()
+                            benchmark_clock[next_phase] = now
                             timings[f"{phase}_s"] = now - phase_started
                             phase, phase_started = next_phase, now
                         await self.publish(session, stage=event["stage"], progress=event["progress"])
@@ -181,6 +188,7 @@ class Sessions:
             if not output.is_file() or not output.stat().st_size:
                 raise RuntimeError("没有生成可播放的成片。")
             finished = time.monotonic()
+            benchmark_clock["completed"] = finished
             # One server clock covers startup/download through output readiness;
             # explicit worker boundaries keep phases independent of progress text.
             timings[f"{phase}_s"] = finished - phase_started
@@ -195,6 +203,9 @@ class Sessions:
             await self.publish(session, status="failed", stage="处理未完成", error=str(exc),
                                elapsed_s=time.monotonic() - started)
         finally:
+            if benchmark_enabled:
+                benchmark_clock["finished"] = time.monotonic()
+                (session.directory / "benchmark-clock.json").write_text(json.dumps(benchmark_clock))
             session.spawned.set()
             if self.busy == session.id:
                 self.busy = None

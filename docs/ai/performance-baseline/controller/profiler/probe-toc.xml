@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='utf-8'?>
+<trace-toc>
+    <run number="1">
+        <info>
+            <target>
+                <device platform="macOS" model="MacBook Pro" os-version="26.5.1 (25F80)" />
+                <process type="attached" return-exit-status="0" name="python" pid="14935" termination-reason="exit(0)" />
+                </target>
+            <summary>
+                <start-date>2026-10-20T20:26:25.305+08:00</start-date>
+                <end-date>2026-10-20T20:26:36.663+08:00</end-date>
+                <duration>11.358236</duration>
+                <end-reason>Target app exited</end-reason>
+                <instruments-version>16.0 (17F113)</instruments-version>
+                <template-name>Metal System Trace</template-name>
+                <recording-mode>Deferred</recording-mode>
+                <time-limit>18 seconds</time-limit>
+                <intruments-recording-settings>
+                    <instrument name="Hangs">
+                        <array>
+                            <dictionary>
+                                <key name="Reporting Threshold">Include Brief Unresponsiveness (&gt;100 ms)</key>
+                            </dictionary>
+                        </array>
+                    </instrument>
+                    <instrument name="Metal Application">
+                        <array>
+                            <dictionary>
+                                <key name="GPU">
+                                    <value>Counter Set: (null)</value>
+                                    <value>Shader Timeline: Disabled</value>
+                                    <value>Induced GPU Performance State: Default</value>
+                                </key>
+                            </dictionary>
+                        </array>
+                    </instrument>
+                    <instrument name="os_signpost">
+                        <options>
+                            <option key="Dynamic Subsystems" value="" />
+                        </options>
+                    </instrument>
+                </intruments-recording-settings>
+            </summary>
+        </info>
+        <processes>
+            <process name="TextInputMenuAgent" pid="2426" path="/System/Library/CoreServices/TextInputMenuAgent.app/Contents/MacOS/TextInputMenuAgent" />
+            <process name="VTDecoderXPCService" pid="13549" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService" />
+            <process name="NotificationCenter" pid="1179" path="/System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter" />
+            <process name="Spotlight" pid="8180" path="/System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight" />
+            <process name="ThemeWidgetControlViewService" pid="585" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/ThemeWidgetControlViewService.xpc/Contents/MacOS/ThemeWidgetControlViewService" />
+            <process name="replayd" pid="42841" path="/usr/libexec/replayd" />
+            <process name="com.apple.appkit.xpc.openAndSav" pid="29439" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService" />
+            <process name="cameracaptured" pid="557" path="cameracaptured" />
+            <process name="WeChatAppEx" pid="70726" path="/Applications/WeChat.app/Contents/MacOS/WeChatAppEx.app/Contents/MacOS/WeChatAppEx" />
+            <process name="Microsoft Defender Helper" pid="2411" path="/Applications/Microsoft Defender.app/Contents/MacOS/Microsoft Defender Helper.app/Contents/MacOS/Microsoft Defender Helper" />
+            <process name="ThemeWidgetControlViewService" pid="15151" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/ThemeWidgetControlViewService.xpc/Contents/MacOS/ThemeWidgetControlViewService" />
+            <process name="QuickLookUIService" pid="13887" path="/System/Library/Frameworks/QuickLookUI.framework/Versions/A/XPCServices/QuickLookUIService.xpc/Contents/MacOS/QuickLookUIService" />
+            <process name="Xcode" pid="92578" path="/Applications/Xcode.app/Contents/MacOS/Xcode" />
+            <process name="Google Chrome" pid="65327" path="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" />
+            <process name="LinkedNotesUIService" pid="64268" path="/System/Library/Frameworks/PaperKit.framework/Contents/LinkedNotesUIService.app/Contents/MacOS/LinkedNotesUIService" />
+            <process name="UserNotificationCenter" pid="8732" path="/System/Library/CoreServices/UserNotificationCenter.app/Contents/MacOS/UserNotificationCenter" />
+            <process name="photoanalysisd" pid="14199" path="/System/Library/PrivateFrameworks/PhotoAnalysis.framework/Versions/A/Support/photoanalysisd" />
+            <process name="AccessibilityVisualsAgent" pid="63800" path="/System/Library/PrivateFrameworks/AccessibilitySupport.framework/Versions/A/Resources/AccessibilityVisualsAgent.app/Contents/MacOS/AccessibilityVisualsAgent" />
+            <process name="com.apple.SafariPlatformSupport" pid="66740" path="/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper" />
+            <process name="WeChat" pid="70714" path="/Applications/WeChat.app/Contents/MacOS/WeChat" />
+            <process name="AccessibilityUIServer" pid="1068" path="/System/Library/CoreServices/AccessibilityUIServer.app/Contents/MacOS/AccessibilityUIServer" />
+            <process name="com.apple.appkit.xpc.openAndSav" pid="53235" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService" />
+            <process name="Lark Helper" pid="1420" path="/Applications/Lark.app/Contents/Frameworks/Lark Framework.framework/Versions/147.0.7727.149/Helpers/Lark Helper.app/Contents/MacOS/Lark Helper" />
+            <process name="DockHelper" pid="20347" path="/System/Library/CoreServices/Dock.app/Contents/XPCServices/DockHelper.xpc/Contents/MacOS/DockHelper" />
+            <process name="iconservicesagent" pid="13710" path="/System/Library/CoreServices/iconservicesagent" />
+            <process name="com.apple.SafariPlatformSupport" pid="17518" path="/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper" />
+            <process name="Dock" pid="1130" path="/System/Library/CoreServices/Dock.app/Contents/MacOS/Dock" />
+            <process name="DTServiceHub" pid="15187" path="/Applications/Xcode.app/Contents/SharedFrameworks/DVTInstrumentsFoundation.framework/Versions/A/Resources/DTServiceHub" />
+            <process name="SCIM_Extension" pid="14972" path="/System/Library/Input Methods/SCIM.app/Contents/PlugIns/SCIM_Extension.appex/Contents/MacOS/SCIM_Extension" />
+            <process name="ptpcamerad" pid="29438" path="/usr/libexec/ptpcamerad" />
+            <process name="VTEncoderXPCService" pid="71945" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTEncoderXPCService.xpc/Contents/MacOS/VTEncoderXPCService" />
+            <process name="com.apple.SafariPlatformSupport" pid="14956" path="/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper" />
+            <process name="photolibraryd" pid="43117" path="/System/Library/PrivateFrameworks/PhotoLibraryServices.framework/Versions/A/Support/photolibraryd" />
+            <process name="CoreServicesUIAgent" pid="43801" path="/System/Library/CoreServices/CoreServicesUIAgent.app/Contents/MacOS/CoreServicesUIAgent" />
+            <process name="com.apple.appkit.xpc.openAndSav" pid="54030" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService" />
+            <process name="com.apple.SafariPlatformSupport" pid="53262" path="/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper" />
+            <process name="WindowServer" pid="418" path="WindowServer" />
+            <process name="Code Helper" pid="2328" path="/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper.app/Contents/MacOS/Code Helper" />
+            <process name="TextInputSwitcher" pid="20271" path="/System/Library/CoreServices/TextInputSwitcher.app/Contents/MacOS/TextInputSwitcher" />
+            <process name="com.apple.appkit.xpc.openAndSav" pid="50940" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService" />
+            <process name="Codex (Service)" pid="82122" path="/Applications/ChatGPT.app/Contents/Frameworks/Codex Framework.framework/Versions/155.0.8059.80/Helpers/Codex (Service).app/Contents/MacOS/Codex (Service)" />
+            <process name="com.apple.appkit.xpc.openAndSav" pid="92789" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService" />
+            <process name="VTEncoderXPCService" pid="15004" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTEncoderXPCService.xpc/Contents/MacOS/VTEncoderXPCService" />
+            <process name="Google Chrome Helper (Aperitif)" pid="65349" path="/Applications/Google Chrome.app/Contents/Frameworks/Google Chrome Framework.framework/Versions/155.0.8059.41/Helpers/Google Chrome Helper (Aperitif).app/Contents/MacOS/Google Chrome Helper (Aperitif)" />
+            <process name="ThemeWidgetControlViewService" pid="41548" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/ThemeWidgetControlViewService.xpc/Contents/MacOS/ThemeWidgetControlViewService" />
+            <process name="mediaanalysisd" pid="43122" path="/System/Library/PrivateFrameworks/MediaAnalysis.framework/Versions/A/mediaanalysisd" />
+            <process name="CursorUIViewService" pid="1247" path="/System/Library/PrivateFrameworks/TextInputUIMacHelper.framework/Versions/A/XPCServices/CursorUIViewService.xpc/Contents/MacOS/CursorUIViewService" />
+            <process name="com.apple.appkit.xpc.openAndSav" pid="60993" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/com.apple.appkit.xpc.openAndSavePanelService.xpc/Contents/MacOS/com.apple.appkit.xpc.openAndSavePanelService" />
+            <process name="SkyComputerUseService" pid="82443" path="/Users/bytedance/.codex/computer-use/Codex Computer Use.app/Contents/MacOS/SkyComputerUseService" />
+            <process name="ThemeWidgetControlViewService" pid="41549" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/ThemeWidgetControlViewService.xpc/Contents/MacOS/ThemeWidgetControlViewService" />
+            <process name="Preview" pid="29433" path="/System/Applications/Preview.app/Contents/MacOS/Preview" />
+            <process name="com.apple.SafariPlatformSupport" pid="82445" path="/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper" />
+            <process name="CorpLink Helper (GPU)" pid="26932" path="/Applications/CorpLink.app/Contents/Frameworks/CorpLink Helper (GPU).app/Contents/MacOS/CorpLink Helper (GPU)" />
+            <process name="universalAccessAuthWarn" pid="2285" path="/System/Library/PrivateFrameworks/UniversalAccess.framework/Versions/A/Resources/universalAccessAuthWarn.app/Contents/MacOS/universalAccessAuthWarn" />
+            <process name="avconferenced" pid="1367" path="/usr/libexec/avconferenced" />
+            <process name="iTerm2" pid="1109" path="/Applications/iTerm.app/Contents/MacOS/iTerm2" />
+            <process name="ControlCenter" pid="1131" path="/System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter" />
+            <process name="WeChatAppEx Helper (GPU)" pid="71195" path="/Applications/WeChat.app/Contents/MacOS/WeChatAppEx.app/Contents/Frameworks/WeChatAppEx Framework.framework/Versions/C/Helpers/WeChatAppEx Helper (GPU).app/Contents/MacOS/WeChatAppEx Helper (GPU)" />
+            <process name="CorpLink" pid="26930" path="/Applications/CorpLink.app/Contents/MacOS/CorpLink" />
+            <process name="Code" pid="1128" path="/Applications/Visual Studio Code.app/Contents/MacOS/Code" />
+            <process name="python" pid="14935" path="/Users/bytedance/workspace/experiments/smash-suite/.venv/bin/python" />
+            <process name="gputoolsserviced" pid="92597" path="/usr/libexec/gputoolsserviced" />
+            <process name="iPhone Mirroring" pid="13524" path="/System/Applications/iPhone Mirroring.app/Contents/MacOS/iPhone Mirroring" />
+            <process name="Reminders" pid="3594" path="/System/Applications/Reminders.app/Contents/MacOS/Reminders" />
+            <process name="Lark Helper" pid="1423" path="/Applications/Lark.app/Contents/Frameworks/Lark Framework.framework/Versions/147.0.7727.149/Helpers/Lark Helper.app/Contents/MacOS/Lark Helper" />
+            <process name="coreautha" pid="68960" path="/System/Library/Frameworks/LocalAuthentication.framework/Support/coreautha.bundle/Contents/MacOS/coreautha" />
+            <process name="AKAuthorizationRemoteViewServic" pid="1325" path="/System/Library/PrivateFrameworks/AuthKitUI.framework/Versions/A/XPCServices/AKAuthorizationRemoteViewService.xpc/Contents/MacOS/AKAuthorizationRemoteViewService" />
+            <process name="com.apple.dt.instruments.dtsecur" pid="15191" path="com.apple.dt.ins" />
+            <process name="ThemeWidgetControlViewService" pid="8689" path="/System/Library/Frameworks/AppKit.framework/Versions/C/XPCServices/ThemeWidgetControlViewService.xpc/Contents/MacOS/ThemeWidgetControlViewService" />
+            <process name="VTDecoderXPCService" pid="15003" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService" />
+            <process name="VTDecoderXPCService" pid="3964" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService" />
+            <process name="kernel" pid="0" path="/System/Library/Kernels/kernel.release.t6050" />
+            <process name="ChatGPT" pid="82102" path="/Applications/ChatGPT.app/Contents/MacOS/ChatGPT" />
+            <process name="com.apple.photos.ImageConversio" pid="6919" path="/System/Library/PrivateFrameworks/MediaConversionService.framework/Versions/A/XPCServices/com.apple.photos.ImageConversionService.xpc/Contents/MacOS/com.apple.photos.ImageConversionService" />
+            <process name="Obsidian Helper" pid="1863" path="/Applications/Obsidian.app/Contents/Frameworks/Obsidian Helper.app/Contents/MacOS/Obsidian Helper" />
+            <process name="com.apple.SafariPlatformSupport" pid="71912" path="/System/Library/PrivateFrameworks/SafariPlatformSupport.framework/Versions/A/XPCServices/com.apple.SafariPlatformSupport.Helper.xpc/Contents/MacOS/com.apple.SafariPlatformSupport.Helper" />
+            <process name="VTDecoderXPCService" pid="71954" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService" />
+            <process name="Feishu" pid="1120" path="/Applications/Lark.app/Contents/MacOS/Feishu" />
+            <process name="VTEncoderXPCService" pid="82529" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTEncoderXPCService.xpc/Contents/MacOS/VTEncoderXPCService" />
+            <process name="VTDecoderXPCService" pid="38626" path="/System/Library/Frameworks/VideoToolbox.framework/Versions/A/XPCServices/VTDecoderXPCService.xpc/Contents/MacOS/VTDecoderXPCService" />
+            <process name="loginwindow" pid="421" path="/System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow" />
+            <process name="Finder" pid="1135" path="/System/Library/CoreServices/Finder.app/Contents/MacOS/Finder" />
+            <process name="PowerChime" pid="41014" path="/System/Library/CoreServices/PowerChime.app/Contents/MacOS/PowerChime" />
+            <process name="com.apple.cmio.registerassistan" pid="415" path="com.apple.cmio.r" />
+            <process name="Obsidian" pid="1121" path="/Applications/Obsidian.app/Contents/MacOS/Obsidian" />
+        </processes>
+        <data>
+            <table codes="&quot;0x2d,*&quot;" schema="kdebug" callstack="user" target="SINGLE" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x85,0x92&quot; &quot;0x85,0x93&quot; &quot;0x85,0xae&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x2b,0xdc&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x1,0x25&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x1f,0x7&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x31,0xca&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;33,0x11&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x2b,0xd8&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x2b,0x87&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x2b,0x65&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x07,0x00&quot; &quot;0x1f,0x05&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x85,0x12&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table schema="ca-client-present-request" documentation="Denotes client requests to present a CAMetalDrawable." />
+            <table schema="metal-shader-profiler-intervals" target-pid="SINGLE" documentation="Denotes Shader Timeline intervals" />
+            <table schema="display-compositor-events-interval" documentation="Shows generic compositor events" />
+            <table schema="metal-residency-set-usage-event" documentation="Denotes a MTLResidencySet usage" />
+            <table schema="displayed-surfaces-interval" target-pid="SINGLE" documentation="Shows when a surface is being displayed." />
+            <table codes="&quot;0x85,0xAF&quot; &quot;0x34,0x11&quot; &quot;0x34,0x0f&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x31,0xb0&quot; &quot;0x31,0xd0&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table schema="metal-application-encoders-list" target-pid="SINGLE" documentation="Denotes an a list of encoders created by the tracing Metal application." />
+            <table codes="&quot;0x85,0x20&quot; &quot;0x31,0x80&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x34,0x11&quot; &quot;0x34,0x0f&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x85,0xc2&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x85,0x3&quot; &quot;0x85,0x90&quot; &quot;0x85,0xA9&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x85,0x92&quot; &quot;0x85,0x93&quot; &quot;0x85,0xae&quot; &quot;0x06,0x1b&quot; &quot;0x2b,0x24&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x85,0x9&quot; &quot;0x85,0x18&quot;" callstack="user" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table schema="display-surface-queue" documentation="Describes display surface queueing events." />
+            <table codes="&quot;0x85,0x2&quot;" callstack="user" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x85,0x1&quot; &quot;0x85,0x8&quot;" callstack="user" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table schema="metal-driver-event-per-thread-intervals" target-pid="SINGLE" documentation="Denotes an interesting period of memory activity in the Metal driver." />
+            <table schema="metal-object-label" documentation="Metal Object Label" />
+            <table codes="&quot;0x85,0xc0&quot; &quot;0x85,0xc1&quot; &quot;0x31,0xca&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x85,0x30&quot;" callstack="user" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table schema="metal-gpu-execution-points" documentation="Denotes an interesting points of activity in the GPU." />
+            <table codes="&quot;0x85,0x80&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table codes="&quot;0x2b,0x2b&quot;" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+            <table sample-rate-micro-seconds="1000" target="SINGLE" schema="time-sample" callstack="user" all-thread-states="NO" documentation="Holds a raw CPU profiling sample." />
+            <table track-id-base="2000" schema="metal-object-dependency-chain-display" documentation="VObject Dependency for Metal System Trace" />
+            <table codes="&quot;33,0x11&quot;" target="SINGLE" schema="kdebug-strings" documentation="Associates numeric arguments with strings in kdebug trace points." />
+            <table codes="&quot;0x1f,0x05&quot;" target="SINGLE" schema="kdebug-strings" documentation="Associates numeric arguments with strings in kdebug trace points." />
+            <table codes="&quot;0x85,0x1&quot; &quot;0x85,0x2&quot; &quot;0x85,0x8&quot; &quot;0x85,0x30&quot; &quot;0x85,0xc0&quot; &quot;0x85,0xc1&quot; &quot;0x31,0xca&quot;" schema="kdebug-strings" documentation="Associates numeric arguments with strings in kdebug trace points." />
+            <table schema="metal-gpu-info" documentation="Marks GPU info" />
+            <table schema="dyld-library-load" target-pid="SINGLE" />
+            <table enable-priority-inversion-detection="0" target-pid="SINGLE" message-type="Fault" schema="os-log" category="&quot;Hang Risk&quot; &quot;Severe Hang Risk&quot; CFNetwork Contacts CoreML" subsystem="&quot;com.apple.runtime-issues&quot;" documentation="Holds a message from the OS's Unified Logging and Tracing component." />
+            <table track-id-base="2000" schema="metal-object-dependency-chain-gpu" documentation="Visual highlight for Metal System Trace" />
+            <table schema="process-info" documentation="Associates processes with their process names." />
+            <table schema="metal-visual-highlight-chain-gpu" documentation="Visual highlight for Metal System Trace" />
+            <table schema="ca-client-presented-handler" documentation="Denotes CAMetalDrawable presented handlers." />
+            <table schema="runloop-events" target-pid="SINGLE" />
+            <table schema="metal-residency-set-interval" documentation="Denotes a MTLResidencySet interval" />
+            <table schema="metal-driver-intervals" target-pid="SINGLE" documentation="Denotes an interesting period of activity in the Metal driver." />
+            <table schema="time-info" documentation="Raw data needed transform a mach-absolute-time to a trace relative timestamp" />
+            <table schema="graphics-compiler-activity-intervals" target-pid="SINGLE" documentation="Denotes a period of activity in the graphics compiler in the Metal API." />
+            <table schema="metal-application-command-buffer-submissions" target-pid="SINGLE" documentation="Marks Metal command buffer submissions" />
+            <table requested-consistent-state="0" schema="gpu-performance-state-info" documentation="GPU Performance State Info" />
+            <table schema="graphics-compiler-spill-events" documentation="Marks compiler spill events" />
+            <table schema="gpu-counter-info" counter-profile="0" counter-device="0" shader-profiler="0" documentation="GPU Counter Info" />
+            <table schema="device-display-info" documentation="Marks related info about Displays connected to the machine." />
+            <table schema="gpu-shader-profiler-sample" documentation="GPU Shader Profiler Sample" />
+            <table schema="metal-command-buffer-completed" documentation="Marks when Metal Command Buffer are completed" />
+            <table schema="hang-risks" detect-priority-inversions="0" target-pid="SINGLE" />
+            <table schema="metal-wired-sysmem-level-interval" documentation="Denotes wired system memory level" />
+            <table schema="os-signpost-arg" target-pid="SINGLE" documentation="Holds a signpost metadata argument from the OS's Unified Logging and Tracing component." />
+            <table schema="os-signpost-arg" category="ShaderTimeline" subsystem="&quot;com.apple.Metal.AGXSignposts&quot;" documentation="Holds a signpost metadata argument from the OS's Unified Logging and Tracing component." />
+            <table schema="metal-current-allocated-size" target-pid="SINGLE" documentation="Marks the total allocated Metal device memory of the app (MTLDevice.currentAllocatedSize)" />
+            <table schema="metal-ar-events" documentation="Marks AR events" />
+            <table schema="metal-application-intervals" target-pid="SINGLE" documentation="Denotes an interesting period of activity in the Metal applications." />
+            <table content="metal-connection-chains" schema="visual-chain" target-pid="SINGLE" documentation="Connects multiple objects on a graph to be treated a single, selectable chain of events." />
+            <table requested-consistent-state="0" schema="gpu-performance-state-intervals" documentation="Denotes the current and induced performance state of the device." />
+            <table schema="gpu-aps-stream" documentation="GPU APS Stream" />
+            <table schema="display-vsyncs-interval" documentation="Marks display vsyncs" />
+            <table schema="device-thermal-state-intervals" documentation="Denotes the current thermal state of the device." />
+            <table schema="metal-visual-highlight-chain-app" documentation="Visual highlight for Metal System Trace" />
+            <table schema="metal-driver-event-intervals" target-pid="SINGLE" documentation="Denotes an interesting period of memory activity in the Metal driver." />
+            <table hangs-threshold="100" schema="potential-hangs" target-pid="SINGLE" />
+            <table schema="metal-shader-profiler-shader-list" target-pid="SINGLE" documentation="Denotes compiled shaders" />
+            <table content="metal-connections" schema="visual-connection" target-pid="SINGLE" documentation="Connects points on a graph between instruments or tracks." />
+            <table schema="display-events-interval" documentation="Shows generic display events" />
+            <table schema="gpu-shader-profiler-interval" documentation="GPU Shader Profiler Interval" />
+            <table schema="thread-info" documentation="Associates threads with their owning process." />
+            <table schema="metal-visual-highlight-chain-display" documentation="Visual Highlight for Metal System Trace" />
+            <table schema="display-compositor-interval" target-pid="SINGLE" documentation="Shows compositor events." />
+            <table schema="tick" frequency="1" documentation="Provides modelers with a regular reference time for modeling fixed time-based statistics. The ticks are evenly spaced with a configurable frequency specifying the number of events to generate per second, so a tick schema with a frequency of 10 will generate a row every 100ms." />
+            <table schema="tick" frequency="10" documentation="Provides modelers with a regular reference time for modeling fixed time-based statistics. The ticks are evenly spaced with a configurable frequency specifying the number of events to generate per second, so a tick schema with a frequency of 10 will generate a row every 100ms." />
+            <table schema="tick" documentation="Provides modelers with a regular reference time for modeling fixed time-based statistics. The ticks are evenly spaced with a configurable frequency specifying the number of events to generate per second, so a tick schema with a frequency of 10 will generate a row every 100ms." />
+            <table schema="life-cycle-period" target-pid="SINGLE" documentation="Identifies where an application is in its lifecycle." />
+            <table target-pid="SINGLE" context-switch-sampling="0" high-frequency-sampling="0" schema="time-profile" needs-kernel-callstack="0" record-waiting-threads="0" documentation="When combined with other time-profile samples, creates a statistical picture of where your application is spending its time." />
+            <table track-id-base="1000" schema="metal-object-dependency-chain-app" documentation="Object Dependency for Metal System Trace" />
+            <table schema="os-signpost" category="CAMetalLayer" subsystem="&quot;com.apple.coreanimation&quot;" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component." />
+            <table schema="os-signpost" category="&quot;CAMetalLayer.Stalls&quot;" subsystem="&quot;com.apple.coreanimation&quot;" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component." />
+            <table schema="os-signpost" category="InduceCondition" subsystem="&quot;com.apple.ConditionInducer.LowSeverity&quot;" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component." />
+            <table schema="os-signpost" category="ShaderTimeline" subsystem="&quot;com.apple.Metal.AGXSignposts&quot;" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component." />
+            <table requested-consistent-state="0" schema="gpu-performance-device-state-intervals" documentation="Denotes the average performance state of the device." />
+            <table schema="device-gpu-info" documentation="Marks related info about GPUs connected to the machine." />
+            <table schema="os-signpost" target-pid="SINGLE" documentation="Holds a signpost event from the OS's Unified Logging and Tracing component." />
+            <table schema="metal-gpu-state-intervals" documentation="Denotes GPU state (on/off) periods" />
+            <table schema="mps-hw-intervals" target-pid="SINGLE" documentation="Denotes an interesting period of activity caused by Metal Applications." />
+            <table schema="ca-client-buffer-wait-interval" documentation="Denotes an waiting for next available drawable." />
+            <table schema="gpu-counter-value" documentation="GPU Counter Value" />
+            <table schema="metal-gpu-counter-profile" counter-profile="0" counter-device="0" shader-profiler="0" documentation="Denotes GPU Counter value intervals" />
+            <table track-id-base="2000" schema="metal-object-dependency-chain-driver" documentation="Object Dependency for Metal System Trace" />
+            <table schema="metal-io-surface-access" documentation="Denotes IO Surface accesses by Metal Applications" />
+            <table schema="metal-command-buffer-error" documentation="Marks Metal command buffer error" />
+            <table schema="metal-residency-set-resource-event" documentation="Denotes a MTLResidencySet resource" />
+            <table schema="metal-application-event-interval" target-pid="SINGLE" documentation="Marks metal application events such as Debug Groups on command buffer" />
+            <table layout-scope="name" schema="os-signpost-interval" target-pid="SINGLE" documentation="Marks an interesting interval in time using the os_signpost API." />
+            <table schema="metal-gpu-counter-intervals" documentation="Denotes GPU Counter value intervals" />
+            <table schema="displayed-surfaces-per-second" documentation="Shows how many surfaces have been displayed per second" />
+            <table schema="display-surface-swap" documentation="Describes display surface swap events." />
+            <table schema="metal-gpu-submission-to-command-buffer-id" documentation="Maps between Metal command buffer ID and accelerator ID" />
+            <table schema="metal-known-compositor-process" documentation="Marks compositor processes" />
+            <table schema="metal-gpu-intervals" target-pid="SINGLE" documentation="Denotes an interesting period of activity in the GPU." />
+            <table schema="metal-command-buffer-frame-assignment" documentation="Resolves Metal Command Buffer frame assignment" />
+            <table schema="metal-visual-highlight-chain-driver" documentation="Visual highlight for Metal System Trace" />
+            <table schema="metal-command-buffer-to-accelerator-id" documentation="Maps between Metal command buffer ID and accelerator ID" />
+            <table schema="metal-resource-allocations" target-pid="SINGLE" documentation="Marks a point in time where the application may created a Metal resource" />
+            <table schema="metal-kernel-resource-allocations" target-pid="SINGLE" documentation="Marks a point in time where the application may created a driver back for Metal resource" />
+            <table codes="&quot;0x07,0x00&quot;" target="SINGLE" schema="kdebug" documentation="Tracing the kernel and some system frameworks." />
+        </data>
+        <tracks />
+    </run>
+</trace-toc>

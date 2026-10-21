@@ -1,0 +1,23 @@
+{
+  "time-sample": {
+    "code": 0,
+    "stdout": "Finished export to the file: /Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/docs/ai/performance-baseline/controller/profiler/time-sample.xml\n",
+    "stderr": "",
+    "rows": 954,
+    "bytes": 511955
+  },
+  "metal-gpu-intervals": {
+    "code": 0,
+    "stdout": "Finished export to the file: /Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/docs/ai/performance-baseline/controller/profiler/metal-gpu-intervals.xml\n",
+    "stderr": "",
+    "rows": 43307,
+    "bytes": 42611833
+  },
+  "os-signpost": {
+    "code": 0,
+    "stdout": "Finished export to the file: /Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/docs/ai/performance-baseline/controller/profiler/os-signpost.xml\n",
+    "stderr": "",
+    "rows": 24898,
+    "bytes": 12376519
+  }
+}
