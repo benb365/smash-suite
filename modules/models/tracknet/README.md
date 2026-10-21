@@ -35,4 +35,4 @@ C 场边观测可传 `frame_ids=[id0, id1, id2]`，按同一视频的帧号复�
 .venv/bin/python -m pytest modules/models/tracknet/tests
 ```
 
-真实TrackNet推理、C缓存单项与组合、A复制简化完整输出已复核；首轮独立验收通过，当前等待人工确认集成。[上游许可证](LICENSE.txt)保留在本目录。
+真实TrackNet推理、C缓存单项与组合、A复制简化完整输出已复核；用户已确认集成首轮 OPT-03/04，当前准备合入。[上游许可证](LICENSE.txt)保留在本目录。

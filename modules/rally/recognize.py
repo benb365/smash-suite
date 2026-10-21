@@ -276,7 +276,7 @@ def person_signals(source, info, people, ball, weight, progress, statistics=None
                         if not crop.size:
                             continue
                         tick = time.monotonic()
-                        raw = model(crop, statistics=stats)
+                        raw = model(crop)
                         stats.timing("pose_inference_s", time.monotonic() - tick)
                         stats.add("pose_calls")
                         stats.add("person_crops")

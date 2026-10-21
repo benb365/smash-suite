@@ -36,7 +36,7 @@
 
 六组真实识别与成片、资源曲线、Python/原生采样及复跑方法见[性能基线报告](reports/performance-baseline.md)。本轮基线已通过独立验收并经用户确认集成到 develop，报告保留供后续对照；单次测量不替代约 30 分钟产品验收。
 
-后续优化另行记录于[首轮阶段报告](../../docs/features/performance-optimization/reports/first-round.md)：C/D保留项组合已验证输出等价；批处理有调用减少但出现已确认误删，本轮暂缓，单次完整处理耗时差异尚不能单独归因。首轮独立验收已通过，当前等待人工确认集成；尚未合入或推送。
+后续优化另行记录于[首轮阶段报告](../../docs/features/performance-optimization/reports/first-round.md)：OPT-03/04 组合已验证输出等价，用户已确认集成，当前准备合入。OPT-01 仅保留诊断结论和历史证据；OPT-02 批处理有调用减少但漏掉用户确认仍在进行中的回合，等待 D 找球后的算法稳健性改善后重评。
 
 ## 当前进展
 

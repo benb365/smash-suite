@@ -26,4 +26,4 @@
 
 ## 当前进展
 
-整理后模块导入和既有自动测试通过。原性能基线已复核A/C/D真实处理；首轮保留改动已完成单项及C/D组合检查，同帧批处理产品代码已撤回，失败证据保留。首轮独立验收通过，当前等待人工确认集成；尚未合入或推送。见[性能阶段报告](../../docs/features/performance-optimization/reports/first-round.md)。入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
+整理后模块导入和既有自动测试通过。原性能基线已复核 A/C/D 真实处理；用户已确认集成首轮 OPT-03/04，当前准备合入。OPT-01 诊断结论和历史证据保留，细分计时代码不纳入产品；OPT-02 等待 D 找球后的算法稳健性改善后重评，失败证据保留。见[性能阶段报告](../../docs/features/performance-optimization/reports/first-round.md)。入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
