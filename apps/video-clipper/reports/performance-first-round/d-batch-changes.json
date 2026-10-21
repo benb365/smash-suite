@@ -1,0 +1,52 @@
+{
+  "changes": [
+    {
+      "reference": {
+        "rally_id": 7,
+        "start_ms": 100900.0,
+        "end_ms": 108000.0,
+        "emitted_at_ms": 250900.3125
+      },
+      "candidate": {
+        "rally_id": 7,
+        "start_ms": 100900.0,
+        "end_ms": 108400.0,
+        "emitted_at_ms": 250900.3125
+      }
+    },
+    {
+      "reference": {
+        "rally_id": 12,
+        "start_ms": 215700.0,
+        "end_ms": 233000.0,
+        "emitted_at_ms": 250900.3125
+      },
+      "candidate": {
+        "rally_id": 12,
+        "start_ms": 215700.0,
+        "end_ms": 229000.0,
+        "emitted_at_ms": 250900.3125
+      }
+    }
+  ],
+  "source_video_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+  "reference": "opt01-d",
+  "candidate": "opt02-d",
+  "effect_verdict": "failed",
+  "human_review": {
+    "date": "2026-10-21",
+    "point_ms": 230193,
+    "source": "用户确认当前对照画面",
+    "comment": "球还没落地，理论上应该是强置信回合中",
+    "scope": "确认该时间点仍在回合中；未据此补造完整回合起止或整段准确率",
+    "screenshot": "d-batch-230193.png",
+    "consequence": "第12段原始结束229000ms、加500ms尾部缓冲后仍不覆盖该回合中时间点，违反不减少已保留有效对打内容的边界"
+  },
+  "adoption": "deferred_this_round_by_user",
+  "follow_up": {
+    "performance": "模型调用2432→1255次已确认；首次单次总耗时差8.62%，但追加相同源码原版有明显漂移，独立墙钟收益待重评",
+    "hypothesis": "用户提出：优化原有算法逻辑后可能规避误删；尚未验证",
+    "next_review": "检查姿态输出扰动如何传递到回合结束判断，改善算法稳健性后重新评估批处理",
+    "scope": "本轮移除批处理产品代码，保留补丁与原始失败证据；不实施条件合批或算法规则调整"
+  }
+}

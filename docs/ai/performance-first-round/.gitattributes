@@ -1,0 +1,2 @@
+# Unified-diff context prefixes are data that must be preserved bytewise.
+*.patch whitespace=-blank-at-eol

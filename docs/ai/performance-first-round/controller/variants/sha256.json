@@ -1,0 +1,7 @@
+{
+  "opt01-statistics.patch": "f30b8ab1d034c1bbe423d9abb03bdfe859d1c3973ddaab61cc4a6e5105d67afc",
+  "opt02-batch.patch": "48f478014d8a492db39278977732e5888ca90e1d4fea832f13b005d3e2686f4f",
+  "opt03-cache.patch": "40841778083c99e1a04a00bdb65f115f99de6996218b314d9b819b0a2f34016c",
+  "opt04-pose-copy.patch": "ddcb94bc9253469cb227cad3210522668cb57653aff519656b89e5a80cd98f36",
+  "opt04-tracknet-copy-after-cache.patch": "cd2f9f272fdb5fefbfb4249110ec03dc239b7c02baed246b79b2db7f311f3279"
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": "combined-d",
+  "case": "D-short",
+  "base": "5c946e9e6186d052624ca6f853a62d40f034f6e8",
+  "sources": {
+    "modules/rally/recognize.py": "ee2c0a949522ab6c809bf7da9afb4a4956dda9ad3b6da4fc389e8f0598e8bcd0",
+    "modules/models/keypoint_rcnn/__init__.py": "379ed20f3c6e228efecd08828ee8b6b6dc6a89084dd19173163ef1cab9c19316",
+    "modules/models/tracknet/predictor.py": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa"
+  },
+  "patches": [],
+  "final_sources": true,
+  "copy_only": false,
+  "uid": 501,
+  "started_monotonic": 1347721.448555708,
+  "returncode": 0,
+  "finished_monotonic": 1348020.245980416,
+  "source_unchanged": true
+}

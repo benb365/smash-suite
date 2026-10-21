@@ -186,39 +186,46 @@ def observe(source, info, camera_type, court, predictor, yolo_weight, device, pr
             features.append(row)
         person_batch.clear()
 
-    with stats.phase("video_observation"):
-        with FileFrameSource(source, mode="offline") as frames:
-            for original in frames:
-                frame = normalized(original)
-                queue.append(frame)
-                if frame.frame_id % 6 == 0:
-                    person_batch.append(frame)
-                    if len(person_batch) == 4:
-                        people_flush()
-                if len(queue) == 3:
-                    phase = queue[0].frame_id % 3
-                    if phase == 0 or (phase == 1 and camera_type == "courtside"):
-                        predictor([f.image for f in queue])
-                        target = native if phase == 0 else shifted
-                        for f, row in zip(queue, predictor.last_candidates):
-                            target[f.frame_id] = dict(row, frame_id=f.frame_id, timestamp_ms=f.timestamp_ms)
-                        if phase == 0 and len(native) == 3:
-                            shifted[0] = native[0]
-                if time.monotonic() - last > 1:
-                    progress("正在寻找羽毛球和球员", .48 * min(1, frame.timestamp_ms / info.duration_ms))
-                    last = time.monotonic()
-            people_flush()
-        if camera_type == "courtside" and shifted:
-            tail = None
-            for fid in range(max(shifted) + 1, frames.stats["frames_delivered"]):
-                if fid in native:
-                    shifted[fid] = native[fid]
-                else:
-                    if tail is None:
-                        predictor([f.image for f in queue]); tail = list(predictor.last_candidates)
-                    j = next(i for i, f in enumerate(queue) if f.frame_id == fid)
-                    f = list(queue)[j]
-                    shifted[fid] = dict(tail[j], frame_id=fid, timestamp_ms=f.timestamp_ms)
+    try:
+        with stats.phase("video_observation"):
+            with FileFrameSource(source, mode="offline") as frames:
+                for original in frames:
+                    frame = normalized(original)
+                    queue.append(frame)
+                    if frame.frame_id % 6 == 0:
+                        person_batch.append(frame)
+                        if len(person_batch) == 4:
+                            people_flush()
+                    if len(queue) == 3:
+                        phase = queue[0].frame_id % 3
+                        if phase == 0 or (phase == 1 and camera_type == "courtside"):
+                            if camera_type == "courtside":
+                                predictor([f.image for f in queue], frame_ids=[f.frame_id for f in queue])
+                            else:
+                                predictor([f.image for f in queue])
+                            target = native if phase == 0 else shifted
+                            for f, row in zip(queue, predictor.last_candidates):
+                                target[f.frame_id] = dict(row, frame_id=f.frame_id, timestamp_ms=f.timestamp_ms)
+                            if phase == 0 and len(native) == 3:
+                                shifted[0] = native[0]
+                    if time.monotonic() - last > 1:
+                        progress("正在寻找羽毛球和球员", .48 * min(1, frame.timestamp_ms / info.duration_ms))
+                        last = time.monotonic()
+                people_flush()
+            if camera_type == "courtside" and shifted:
+                tail = None
+                for fid in range(max(shifted) + 1, frames.stats["frames_delivered"]):
+                    if fid in native:
+                        shifted[fid] = native[fid]
+                    else:
+                        if tail is None:
+                            predictor([f.image for f in queue], frame_ids=[f.frame_id for f in queue]); tail = list(predictor.last_candidates)
+                        j = next(i for i, f in enumerate(queue) if f.frame_id == fid)
+                        f = list(queue)[j]
+                        shifted[fid] = dict(tail[j], frame_id=fid, timestamp_ms=f.timestamp_ms)
+    finally:
+        if camera_type == "courtside":
+            predictor.clear_preprocessed_cache()
     stats.source("observation", frames.stats)
     stats.add("native_observations", len(native))
     stats.add("shifted_observations", len(shifted))
@@ -269,7 +276,7 @@ def person_signals(source, info, people, ball, weight, progress, statistics=None
                         if not crop.size:
                             continue
                         tick = time.monotonic()
-                        raw = model(crop)
+                        raw = model(crop, statistics=stats)
                         stats.timing("pose_inference_s", time.monotonic() - tick)
                         stats.add("pose_calls")
                         stats.add("person_crops")

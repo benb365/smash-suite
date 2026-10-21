@@ -1,0 +1,9 @@
+已汇总 7 个已完成 run/case；排除 0 个未完成或不可读记录。
+输出目录：/Users/bytedance/.codex/worktrees/performance-first-round/smash-suite/apps/video-clipper/reports/performance-first-round/measurement-summary
+combined-c/C-short: 114.69371983292513 秒；样本 114；图表 combined-c-C-short-resources.png
+combined-d/D-short: 295.94129804102704 秒；样本 293；图表 combined-d-D-short-resources.png
+opt01-d/D-short: 318.3818405410275 秒；样本 315；图表 opt01-d-D-short-resources.png
+opt01-d-control/D-short: 339.23569683311507 秒；样本 336；图表 opt01-d-control-D-short-resources.png
+opt02-d/D-short: 290.95088320807554 秒；样本 288；图表 opt02-d-D-short-resources.png
+opt03-c/C-short: 114.02834370918572 秒；样本 114；图表 opt03-c-C-short-resources.png
+opt04-a/A-short: 43.559546124888584 秒；样本 45；图表 opt04-a-A-short-resources.png

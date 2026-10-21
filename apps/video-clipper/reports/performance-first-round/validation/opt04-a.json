@@ -1,0 +1,92 @@
+{
+  "candidate": "apps/video-clipper/.runtime/performance-first-round/opt04-a/A-short",
+  "reference": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-short",
+  "equal": {
+    "predictions": true,
+    "export_ranges": true,
+    "output_duration_ms": true,
+    "quality": true,
+    "padding_ms": true,
+    "warnings": true
+  },
+  "candidate_media": {
+    "path": "apps/video-clipper/.runtime/performance-first-round/opt04-a/A-short/evidence/output.mp4",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "time_base": "1/90000",
+        "start_time": 1800,
+        "duration": 4177800,
+        "width": 1920,
+        "height": 1080,
+        "average_rate": "58050/2321"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "time_base": "1/44100",
+        "start_time": 0,
+        "duration": 2048004,
+        "sample_rate": 44100,
+        "channels": 2
+      }
+    ],
+    "decoded": {
+      "video": {
+        "frames": 1161,
+        "first_pts_s": 0.02,
+        "last_pts_s": 46.42,
+        "strictly_increasing_pts": true
+      },
+      "audio": {
+        "frames": 2001,
+        "first_pts_s": 0.0,
+        "last_pts_s": 46.439909297052154,
+        "strictly_increasing_pts": true
+      }
+    }
+  },
+  "reference_media": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-short/evidence/output.mp4",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "time_base": "1/90000",
+        "start_time": 1800,
+        "duration": 4177800,
+        "width": 1920,
+        "height": 1080,
+        "average_rate": "58050/2321"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "time_base": "1/44100",
+        "start_time": 0,
+        "duration": 2048004,
+        "sample_rate": 44100,
+        "channels": 2
+      }
+    ],
+    "decoded": {
+      "video": {
+        "frames": 1161,
+        "first_pts_s": 0.02,
+        "last_pts_s": 46.42,
+        "strictly_increasing_pts": true
+      },
+      "audio": {
+        "frames": 2001,
+        "first_pts_s": 0.0,
+        "last_pts_s": 46.439909297052154,
+        "strictly_increasing_pts": true
+      }
+    }
+  },
+  "media_structure_equal": true,
+  "range_sum_ms": 46440.0,
+  "declared_minus_sum_ms": 0.0,
+  "passed_equivalence": true
+}

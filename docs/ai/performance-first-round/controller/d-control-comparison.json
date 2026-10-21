@@ -1,0 +1,21 @@
+{
+  "code": true,
+  "environment": true,
+  "algorithm_profiles": true,
+  "algorithm_selection": true,
+  "inputs_sha256": true,
+  "protocol": true,
+  "frozen_sources_equal": true,
+  "scope": "同被测源码/依赖快照/模型配置的两次原版；不等于全部机器运行时状态相同",
+  "total_s": {
+    "opt01-d": 318.3818405410275,
+    "combined-d": 295.94129804102704,
+    "opt01-d-control": 339.23569683311507
+  },
+  "model_call_s": {
+    "opt01-d": 159.30746357422322,
+    "combined-d": 138.4376512421295,
+    "opt01-d-control": 175.1343539452646
+  },
+  "attribution": "相同原版也有明显耗时差异；运行时原因未定位，不把copy或批处理的单次差额作为确定独立收益。减少的复制和模型调用单独报告。"
+}

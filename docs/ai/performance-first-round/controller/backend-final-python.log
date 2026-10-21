@@ -1,0 +1,31 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.11.16, pytest-9.1.1, pluggy-1.7.0
+rootdir: /Users/bytedance/.codex/worktrees/performance-first-round/smash-suite
+configfile: pyproject.toml
+testpaths: modules, apps/video-clipper/backend/tests
+plugins: anyio-4.15.1
+collected 106 items
+
+modules/media/tests/test_cfr.py .                                        [  0%]
+modules/media/tests/test_video_input.py .............                    [ 13%]
+modules/models/tests/test_model_assets.py ..                             [ 15%]
+modules/models/tracknet/tests/test_points.py ..                          [ 16%]
+modules/models/tracknet/tests/test_preprocessed_cache.py ..              [ 18%]
+modules/rally/tests/test_candidate_rally.py .......                      [ 25%]
+modules/rally/tests/test_m1_comparison.py ...                            [ 28%]
+modules/rally/tests/test_pose_statistics.py .                            [ 29%]
+modules/rally/tests/test_rally_eval.py ..............                    [ 42%]
+modules/rally/tests/test_rally_stream.py .........                       [ 50%]
+modules/rally/tests/test_real_video_input.py ....                        [ 54%]
+modules/rally/tests/test_tracknet_rally.py ....                          [ 58%]
+modules/rally/tests/test_trajectory_rally.py ....................        [ 77%]
+apps/video-clipper/backend/tests/test_benchmark.py ...........           [ 87%]
+apps/video-clipper/backend/tests/test_product.py .............           [100%]
+
+=============================== warnings summary ===============================
+.venv/lib/python3.11/site-packages/fastapi/testclient.py:1
+  /Users/bytedance/.codex/worktrees/performance-first-round/smash-suite/.venv/lib/python3.11/site-packages/fastapi/testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================= 106 passed, 1 warning in 11.92s ========================

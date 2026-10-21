@@ -1,0 +1,11 @@
+--- a/modules/models/keypoint_rcnn/__init__.py
++++ b/modules/models/keypoint_rcnn/__init__.py
+@@ -17,7 +17,7 @@
+         import time
+         enabled = statistics is not None and statistics.enabled
+         tick = time.monotonic() if enabled else None
+-        tensor = self.torch.from_numpy(cv2.cvtColor(image, cv2.COLOR_BGR2RGB).copy()).permute(2, 0, 1).float() / 255
++        tensor = self.torch.from_numpy(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).permute(2, 0, 1).float() / 255
+         if enabled:
+             statistics.timing("pose_input_preparation_s", time.monotonic() - tick)
+         return tensor

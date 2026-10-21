@@ -1,0 +1,1 @@
+{"output": "apps/video-clipper/reports/performance-first-round/validation/opt01-d-control.json", "passed_equivalence": true, "equal": {"predictions": true, "export_ranges": true, "output_duration_ms": true, "quality": true, "padding_ms": true, "warnings": true}, "media_structure_equal": true}
