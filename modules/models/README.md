@@ -10,7 +10,7 @@
 
 ## 环境与文件
 
-先按[项目首页](../../README.md#开发工作流)安装共同环境。主要依赖 PyTorch、Torchvision、Ultralytics、OpenCV 和 NumPy；权重下载使用 Requests 和 Filelock。
+先按[项目首页](../../README.md#开发环境)安装共同环境。主要依赖 PyTorch、Torchvision、Ultralytics、OpenCV 和 NumPy；权重下载使用 Requests 和 Filelock。
 
 每个模型的代码、配置与 README 位于对应目录，开发权重放在该目录的 `weights/`，不提交 Git。`assets.py` 记录固定下载来源、大小和 SHA256；缺失权重首次使用时下载并校验，之后离线复用。已迁移现有的三个在用权重。
 

@@ -17,7 +17,7 @@ result = model(person_crop)
 
 ## 用视频测试
 
-完成[共同环境准备](../../../README.md#开发工作流)，在仓库根目录运行：
+完成[共同环境准备](../../../README.md#开发环境)，在仓库根目录运行：
 
 ```sh
 .venv/bin/python -m modules.models --model keypoint_rcnn \

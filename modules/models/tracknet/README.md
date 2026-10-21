@@ -15,7 +15,7 @@ points = model([frame0, frame1, frame2])
 
 ## 用视频测试
 
-在仓库根目录、完成[环境准备](../../../README.md#开发工作流)后执行：
+在仓库根目录、完成[环境准备](../../../README.md#开发环境)后执行：
 
 ```sh
 .venv/bin/python -m modules.models --model tracknet \
