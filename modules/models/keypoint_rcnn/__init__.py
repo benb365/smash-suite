@@ -14,6 +14,6 @@ class PoseEstimator:
 
     def __call__(self, image):
         import cv2
-        tensor = self.torch.from_numpy(cv2.cvtColor(image, cv2.COLOR_BGR2RGB).copy()).permute(2, 0, 1).float() / 255
+        tensor = self.torch.from_numpy(cv2.cvtColor(image, cv2.COLOR_BGR2RGB)).permute(2, 0, 1).float() / 255
         with self.torch.inference_mode():
             return {k: v.cpu().numpy() for k, v in self.model([tensor])[0].items()}

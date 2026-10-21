@@ -15,6 +15,10 @@ result = model(person_crop)
 
 可显式传入 `weight` 路径，默认权重位于 `weights/pose_kpRCNN.pth`。
 
+稳定接口为 `model(image)`。姿态入口细分计时仅用于首轮 OPT-01 测量，结论和历史证据见[阶段报告](../../../docs/features/performance-optimization/reports/first-round.md#诊断与效果测试)；诊断计时代码不属于当前产品接口。
+
+回合识别当前在 CPU 上逐个人物裁剪调用模型。首轮 OPT-03/04 已按用户确认合入 develop；OPT-02 同帧批处理因漏掉仍在回合中的确认点而阻塞，等待 D 找球后的算法稳健性改善。详见[阶段报告](../../../docs/features/performance-optimization/reports/first-round.md)。
+
 ## 用视频测试
 
 完成[共同环境准备](../../../README.md#开发环境)，在仓库根目录运行：

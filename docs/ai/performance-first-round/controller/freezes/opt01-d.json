@@ -1,0 +1,23 @@
+{
+  "run_id": "opt01-d",
+  "case": "D-short",
+  "base": "5c946e9e6186d052624ca6f853a62d40f034f6e8",
+  "sources": {
+    "modules/rally/recognize.py": "2eff07c41651186270b85d652d1160a50586a34bad1a2c1772be373fa514a7e3",
+    "modules/models/keypoint_rcnn/__init__.py": "8766a6046742daafb3afa47466215a4487c1669c9f070faf638b249085b7d018",
+    "modules/models/tracknet/predictor.py": "37f9ace5e33f3c93386083e8658d73e75e9ce3d22e4daea416c921d4803a3c74"
+  },
+  "patches": [
+    {
+      "path": "/Users/bytedance/.codex/worktrees/performance-first-round/smash-suite/docs/ai/performance-first-round/controller/variants/opt01-statistics.patch",
+      "sha256": "f30b8ab1d034c1bbe423d9abb03bdfe859d1c3973ddaab61cc4a6e5105d67afc"
+    }
+  ],
+  "final_sources": false,
+  "copy_only": false,
+  "uid": 501,
+  "started_monotonic": 1345714.141896291,
+  "returncode": 0,
+  "finished_monotonic": 1346035.442057416,
+  "source_unchanged": true
+}

@@ -13,6 +13,12 @@ points = model([frame0, frame1, frame2])
 
 可显式传入 `weight` 路径。默认权重位于 `weights/ball_track.pt`；首次缺失时从固定来源下载并校验。分数来自热力图，不等于已经确认属于主球场的球，也不代表回合已经开始。
 
+## 重叠帧复用
+
+C 场边观测可传 `frame_ids=[id0, id1, id2]`，按同一视频的帧号复用最多3份CPU预处理张量。它只减少颜色转换、浮点及缩放的重复计算，每组模型仍照常推理。普通 `model(frames)` 调用不启用缓存。
+
+帧号必须对应同一视频中的同一幅图像。观测完成或失败后调用 `clear_preprocessed_cache()`；复用实例处理另一视频前也须清空，避免帧号重用串图。C识别入口已用清理逻辑保证此生命周期。[首轮阶段证据](../../../docs/features/performance-optimization/reports/first-round.md)记录张量、模型输出与完整剪辑对照。
+
 ## 用视频测试
 
 在仓库根目录、完成[环境准备](../../../README.md#开发环境)后执行：
@@ -29,4 +35,4 @@ points = model([frame0, frame1, frame2])
 .venv/bin/python -m pytest modules/models/tracknet/tests
 ```
 
-迁移后的推理尚未重测。[上游许可证](LICENSE.txt)保留在本目录。
+真实TrackNet推理、C缓存单项与组合、A复制简化完整输出已复核；首轮 OPT-03/04 已按用户确认合入 develop。[上游许可证](LICENSE.txt)保留在本目录。

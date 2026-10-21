@@ -1,0 +1,92 @@
+{
+  "candidate": "apps/video-clipper/.runtime/performance-first-round/combined-c/C-short",
+  "reference": "apps/video-clipper/.runtime/performance-first-round/opt03-c/C-short",
+  "equal": {
+    "predictions": true,
+    "export_ranges": true,
+    "output_duration_ms": true,
+    "quality": true,
+    "padding_ms": true,
+    "warnings": true
+  },
+  "candidate_media": {
+    "path": "apps/video-clipper/.runtime/performance-first-round/combined-c/C-short/evidence/output.mp4",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "time_base": "1/16000",
+        "start_time": 0,
+        "duration": 1773872,
+        "width": 1920,
+        "height": 1080,
+        "average_rate": "3326000/110867"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "time_base": "1/48000",
+        "start_time": 0,
+        "duration": 5321616,
+        "sample_rate": 48000,
+        "channels": 2
+      }
+    ],
+    "decoded": {
+      "video": {
+        "frames": 3326,
+        "first_pts_s": 0.0,
+        "last_pts_s": 110.833,
+        "strictly_increasing_pts": true
+      },
+      "audio": {
+        "frames": 5197,
+        "first_pts_s": 0.0,
+        "last_pts_s": 110.84797916666666,
+        "strictly_increasing_pts": true
+      }
+    }
+  },
+  "reference_media": {
+    "path": "apps/video-clipper/.runtime/performance-first-round/opt03-c/C-short/evidence/output.mp4",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "time_base": "1/16000",
+        "start_time": 0,
+        "duration": 1773872,
+        "width": 1920,
+        "height": 1080,
+        "average_rate": "3326000/110867"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "time_base": "1/48000",
+        "start_time": 0,
+        "duration": 5321616,
+        "sample_rate": 48000,
+        "channels": 2
+      }
+    ],
+    "decoded": {
+      "video": {
+        "frames": 3326,
+        "first_pts_s": 0.0,
+        "last_pts_s": 110.833,
+        "strictly_increasing_pts": true
+      },
+      "audio": {
+        "frames": 5197,
+        "first_pts_s": 0.0,
+        "last_pts_s": 110.84797916666666,
+        "strictly_increasing_pts": true
+      }
+    }
+  },
+  "media_structure_equal": true,
+  "range_sum_ms": 110867.0,
+  "declared_minus_sum_ms": 0.0,
+  "passed_equivalence": true
+}

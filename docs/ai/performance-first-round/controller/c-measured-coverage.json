@@ -1,0 +1,8 @@
+{
+  "scope": "C组合测量的实际执行路径与最终保留实现",
+  "measured_run": "combined-c",
+  "reconstructed_sources_equal_freeze": true,
+  "tracknet_file_equal": true,
+  "observe_function_ast_equal": true,
+  "note": "最终recognize增加D姿态细计时，C路径不调用该函数；Keypoint文件不参与C识别。最终完整D仍另行测量。"
+}

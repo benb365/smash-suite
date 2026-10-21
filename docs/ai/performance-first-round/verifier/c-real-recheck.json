@@ -1,0 +1,155 @@
+{
+  "reference_source_sha256": "37f9ace5e33f3c93386083e8658d73e75e9ce3d22e4daea416c921d4803a3c74",
+  "windows_frame_ids": [
+    [
+      0,
+      1,
+      2
+    ],
+    [
+      1,
+      2,
+      3
+    ],
+    [
+      3,
+      4,
+      5
+    ],
+    [
+      4,
+      5,
+      6
+    ]
+  ],
+  "tensor_matches": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "tensor_shapes": [
+    {
+      "current": [
+        9,
+        288,
+        512
+      ],
+      "reference": [
+        9,
+        288,
+        512
+      ]
+    },
+    {
+      "current": [
+        9,
+        288,
+        512
+      ],
+      "reference": [
+        9,
+        288,
+        512
+      ]
+    },
+    {
+      "current": [
+        9,
+        288,
+        512
+      ],
+      "reference": [
+        9,
+        288,
+        512
+      ]
+    },
+    {
+      "current": [
+        9,
+        288,
+        512
+      ],
+      "reference": [
+        9,
+        288,
+        512
+      ]
+    }
+  ],
+  "model_heatmap_matches": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "candidate_matches": [
+    true,
+    true,
+    true,
+    true
+  ],
+  "rgb_ownership_and_tensor_checks": [
+    {
+      "rgb_owns_data": true,
+      "rgb_c_contiguous": true,
+      "rgb_shares_with_source": false,
+      "rgb_equal_to_copy_result": true,
+      "tensor_strict_equal": true
+    },
+    {
+      "rgb_owns_data": true,
+      "rgb_c_contiguous": true,
+      "rgb_shares_with_source": false,
+      "rgb_equal_to_copy_result": true,
+      "tensor_strict_equal": true
+    },
+    {
+      "rgb_owns_data": true,
+      "rgb_c_contiguous": true,
+      "rgb_shares_with_source": false,
+      "rgb_equal_to_copy_result": true,
+      "tensor_strict_equal": true
+    },
+    {
+      "rgb_owns_data": true,
+      "rgb_c_contiguous": true,
+      "rgb_shares_with_source": false,
+      "rgb_equal_to_copy_result": true,
+      "tensor_strict_equal": true
+    },
+    {
+      "rgb_owns_data": true,
+      "rgb_c_contiguous": true,
+      "rgb_shares_with_source": false,
+      "rgb_equal_to_copy_result": true,
+      "tensor_strict_equal": true
+    },
+    {
+      "rgb_owns_data": true,
+      "rgb_c_contiguous": true,
+      "rgb_shares_with_source": false,
+      "rgb_equal_to_copy_result": true,
+      "tensor_strict_equal": true
+    },
+    {
+      "rgb_owns_data": true,
+      "rgb_c_contiguous": true,
+      "rgb_shares_with_source": false,
+      "rgb_equal_to_copy_result": true,
+      "tensor_strict_equal": true
+    }
+  ],
+  "prepared_frames": 7,
+  "cache_peak_items": 3,
+  "cache_tensor_bytes_at_peak": 5308416,
+  "cache_tensor_bytes_before_release": 5308416,
+  "process_maxrss_before_model": 415629312,
+  "process_maxrss_after_model_init": 500301824,
+  "process_maxrss_after_windows": 600539136,
+  "process_maxrss_unit": "bytes on macOS; KiB on Linux",
+  "decoded_frames": 7,
+  "model_input_frames": 12,
+  "cache_items_after_release": 0
+}

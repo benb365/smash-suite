@@ -1,0 +1,6 @@
+{
+  "approved_script": "controller/probe_tracknet.py",
+  "source_stage": "C真实窗口探针形状比较修正后，代码未另改",
+  "sha256": "dba3bc8220969122193cf5fcf4c02262cbde4be35a2c18a860875d9cb0abe5ed",
+  "purpose": "提供给独立验收的主控批准检查入口，不读取开发通信目录"
+}

@@ -1,0 +1,23 @@
+{
+  "round": "integration-1",
+  "head": "55c6f0c13c4eff35dc960da6328359711117afda",
+  "files": {
+    "apps/video-clipper/README.md": "2bdfdd1b1ea87b8c0eebbcaf669c9449d3d5c79b4683f95fa6dffa8df2cda85b",
+    "docs/README.md": "00c7ccb523834c1f4d6470a4f62e9e91233464d303dfbb72e7646951034d70d1",
+    "docs/ai/performance-first-round/task.md": "afae5424de25d1bf64d274bd6cacdac52f31aa4b1cdf8dd6a16edcddbbd82e39",
+    "docs/features/performance-optimization/README.md": "ac2fe0ad4185808b846f4e093a230a10b11fa94e1c382e60372f5bdf163de576",
+    "docs/features/performance-optimization/first-round.md": "27a53ccb6cff34a07723c3cf3f60dd64942f803e2c39dab3de9d65f033b61636",
+    "docs/features/performance-optimization/reports/first-round.md": "5d833abd875b974d3c007d24ebf369beb5646e70d74b1ceba1116b24f6885152",
+    "docs/plan/roadmap.md": "9114b4f5e8ea750e2b4aaf8d61736ef316103cf50e042cae74bb961a87450d20",
+    "modules/models/README.md": "e22b6e42c3c4f924933c4a63a0b05b8ef4fc137568ad0e6a3c1cd2233b307624",
+    "modules/models/keypoint_rcnn/README.md": "953f6df3effb5b05eb8df0be2e149785c1e76330128019f997316e6dc1939447",
+    "modules/models/keypoint_rcnn/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb",
+    "modules/models/tracknet/README.md": "fd060404dc0f995ae191d0f1446d4796e5c4fc7c517c65ca70333772276763a6",
+    "modules/models/tracknet/predictor.py": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+    "modules/models/tracknet/tests/test_preprocessed_cache.py": "7c60f4d9525216a9dad60574c7bf28b2d9475d08f162b4fb572bb9702ad62fc7",
+    "modules/rally/recognize.py": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+    "modules/rally/tests/test_pose_statistics.py": null,
+    "package.json": "57d2dd5d2fbe1ce1fe35ccf0325473808fe3812006815a079b0c0577759f9810",
+    "pyproject.toml": "955e99f299a8c932ead4e23384266750056a1be0531aec393641cb23ff446822"
+  }
+}

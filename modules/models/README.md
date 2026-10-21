@@ -26,4 +26,4 @@
 
 ## 当前进展
 
-整理后模块导入和既有自动测试通过；真实模型推理尚未在迁移后的环境中复核。入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
+整理后模块导入和既有自动测试通过。原性能基线已复核 A/C/D 真实处理；首轮 OPT-03/04 已按用户确认合入 develop。OPT-01 诊断结论和历史证据保留，细分计时代码不纳入产品；OPT-02 等待 D 找球后的算法稳健性改善后重评，失败证据保留。见[性能阶段报告](../../docs/features/performance-optimization/reports/first-round.md)。入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。

@@ -1,0 +1,23 @@
+{
+  "round": "develop-integration-1",
+  "head": "5c946e9e6186d052624ca6f853a62d40f034f6e8",
+  "merge_head": "8614c3c760684c8ff5e24a2485cf846e2311b77b",
+  "files": {
+    "apps/video-clipper/README.md": "26be1c05786223d8ed9d005b463ed95c288babc6c67bb7d99cef4cb7713cdc5c",
+    "apps/video-clipper/reports/performance-first-round/README.md": "74c4c5def1e2529ec1fc4350cfab4720744b5c8817cf7070d7a9858780354ed1",
+    "docs/ai/performance-first-round/controller/README.md": "0efd893047b149883b172ea4144b77dc7ffea7dc7ede52164f0856e0269e054a",
+    "docs/ai/performance-first-round/task.md": "c46db59d30ca248f049acff388292d4fccf44d24a25f499daf23bcb2e83f4336",
+    "docs/features/performance-optimization/README.md": "7f67c241e8f2b7790325cfef24f5747337eaf0da06cb7bdf825d72a5b54ae3b1",
+    "docs/features/performance-optimization/first-round.md": "2a2444ce359850cf05c8c4dcf01416aa9984e99fc8d52dcd812cf8d0fb11ed47",
+    "docs/features/performance-optimization/reports/first-round.md": "8fbef9f4f1ab4c5611dbead935a372518d25d022fcebd86e74676abd51bc7efa",
+    "docs/plan/roadmap.md": "c62f48d19befc8ee3862f2e4460359c8f0275d2cf5ac067517ce1f2bf5bf2427",
+    "modules/models/README.md": "7306c1caa18f11293206ba9bac6a42440bb01a37660ac6e1d46dece352660ab6",
+    "modules/models/keypoint_rcnn/README.md": "a4f705bd8eb529c717d8b9671d1866013d0ae3c8b1209878d0adb20bdbca16eb",
+    "modules/models/keypoint_rcnn/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb",
+    "modules/models/tracknet/README.md": "9e493cc86e546a0faee692de2e8ce059bc8efb7d62d17cfc3f4606f2143a9871",
+    "modules/models/tracknet/predictor.py": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+    "modules/models/tracknet/tests/test_preprocessed_cache.py": "7c60f4d9525216a9dad60574c7bf28b2d9475d08f162b4fb572bb9702ad62fc7",
+    "modules/rally/recognize.py": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+    "modules/rally/tests/test_pose_statistics.py": null
+  }
+}
