@@ -73,6 +73,6 @@ Python 调用入口是 `recognize(source, info, camera_type, weights, progress, 
 .venv/bin/python -m pytest modules/rally/tests
 ```
 
-当前自动测试使用合成输入校验流式契约和算法规则。真实视频须从上方场景入口重新推理，不能由旧缓存检查替代。本次性能任务另按[性能基线协议](../../apps/video-clipper/reports/performance-baseline.md)比较三份真实短片的统计开关输出；尚未完成。更多入口见[实验说明](experiments/README.md)。
+当前自动测试使用合成输入校验流式契约和算法规则。真实视频须从上方场景入口重新推理，不能由旧缓存检查替代。本轮性能任务已按[性能基线报告](../../apps/video-clipper/reports/performance-baseline.md)完成三份真实短片的统计开关对照，原始识别区间与成片结构均一致；该对照不代表准确率验收。更多入口见[实验说明](experiments/README.md)。
 
 原文件输入诊断入口保留为 `modules.rally.experiments.run_live_tracknet`，支持 `offline/realtime`、固定重复和处理日志；`run_tracknet` 保留已确认恒定帧率素材的早期基线入口。
