@@ -1,0 +1,156 @@
+{
+  "task": "OPT-06 reference audit",
+  "current_commit": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+  "manifest_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/apps/video-clipper/reports/performance-first-round/inputs.json",
+  "manifest_sha256": "afd60a8dbb0930948faf6962fb881b27e27fc42d8dc4f395ff923695f27d8ec4",
+  "conclusion": {
+    "A-short": "valid current develop algorithm/output reference; frozen-original predictor injection is confirmed by runner code.",
+    "C-short": "valid current develop algorithm/output reference; frozen-original predictor injection is confirmed by runner code.",
+    "D-short": "valid historical interval reference for current algorithmic behavior; only detailed pose timing instrumentation differs, so not a current cost reference."
+  },
+  "case_checks": {
+    "A-short": {
+      "manifest_video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "run_video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "prediction_count": 5,
+      "export_range_count": 5,
+      "source_result_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/result.json",
+      "source_result_sha256": "bdb4264acd72a662b6028b81b13880f805e78e7f364f6e383334f3274911d667",
+      "run_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/run.json",
+      "run_sha256": "2057ff32112bb9dc886fa6218a63d06e05bc0884e11b3a07702766a78fcf5b37"
+    },
+    "C-short": {
+      "manifest_video_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "run_video_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "prediction_count": 9,
+      "export_range_count": 9,
+      "source_result_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/result.json",
+      "source_result_sha256": "94615682f4273784c628ba0e3eb0732c69bc2b5612ef8e9c8f0993d654aed391",
+      "run_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/run.json",
+      "run_sha256": "e89de02b1ad18afe7f68695609a0634c05f7ec08580dae85966fdf4b08a47e21"
+    },
+    "D-short": {
+      "manifest_video_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "input_video_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "prediction_count": 13,
+      "export_range_count": 13,
+      "source_result_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/evidence/result.json",
+      "source_result_sha256": "3a23dd7aeb08c60ecac95ebe585c06cd5c9fade97a9fd85ee276641d570b9aff",
+      "freeze_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/docs/ai/performance-first-round/controller/freezes/combined-d.json",
+      "freeze_sha256": "91e92d48797d7f5745879b163d804bce029ccab981c95b0dc06446d197a8dbc1",
+      "source_commit": "ba0fd88b4563c5366a5dcdac8c5a941573a1a65b",
+      "outer_run_result_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/result.json",
+      "outer_run_result_sha256": "27a6f99fa98633a8550e73eb8f259783c676fe387e21efb6da235459f21a982a",
+      "status": "completed",
+      "model_weights_sha256": {
+        "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b",
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "pose_kpRCNN.pth": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+      },
+      "evidence_preservation_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/docs/ai/performance-first-round/controller/evidence-preservation.json",
+      "evidence_preservation_sha256": "52e08e786e0786ad3ae213e1df468c1863433b2c2f7ebeb66aabfe1893d57f78",
+      "preserved_model_copies_match": true
+    }
+  },
+  "limitations": [
+    "Existing media SHA differs from prior manual annotation SHA; no accuracy/recall ground truth is claimed.",
+    "No intervals are labeled true/false by this audit."
+  ],
+  "evidence": {
+    "A-short": {
+      "source_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/result.json",
+      "source_sha256": "bdb4264acd72a662b6028b81b13880f805e78e7f364f6e383334f3274911d667",
+      "run_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/run.json",
+      "run_sha256": "2057ff32112bb9dc886fa6218a63d06e05bc0884e11b3a07702766a78fcf5b37",
+      "freeze_path": null,
+      "freeze_sha256": null
+    },
+    "C-short": {
+      "source_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/result.json",
+      "source_sha256": "94615682f4273784c628ba0e3eb0732c69bc2b5612ef8e9c8f0993d654aed391",
+      "run_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/run.json",
+      "run_sha256": "e89de02b1ad18afe7f68695609a0634c05f7ec08580dae85966fdf4b08a47e21",
+      "freeze_path": null,
+      "freeze_sha256": null
+    },
+    "D-short": {
+      "source_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/evidence/result.json",
+      "source_sha256": "3a23dd7aeb08c60ecac95ebe585c06cd5c9fade97a9fd85ee276641d570b9aff",
+      "run_path": null,
+      "run_sha256": null,
+      "freeze_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/docs/ai/performance-first-round/controller/freezes/combined-d.json",
+      "freeze_sha256": "91e92d48797d7f5745879b163d804bce029ccab981c95b0dc06446d197a8dbc1",
+      "outer_run_result": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/result.json",
+        "sha256": "27a6f99fa98633a8550e73eb8f259783c676fe387e21efb6da235459f21a982a"
+      },
+      "evidence_preservation": {
+        "path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/docs/ai/performance-first-round/controller/evidence-preservation.json",
+        "sha256": "52e08e786e0786ad3ae213e1df468c1863433b2c2f7ebeb66aabfe1893d57f78",
+        "verification": "pass"
+      },
+      "preserved_model_copies": {
+        "ball_track.pt": {
+          "path": "combined-d/D-short/home/models/ball_track.pt",
+          "bytes": 45400030,
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "path": "combined-d/D-short/home/models/yolo11n.pt",
+          "bytes": 5613764,
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        },
+        "pose_kpRCNN.pth": {
+          "path": "combined-d/D-short/home/models/pose_kpRCNN.pth",
+          "bytes": 237101765,
+          "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+        }
+      }
+    }
+  },
+  "preserved_reference_mirror": {
+    "source_root": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite",
+    "destination_root": "/Users/bytedance/workspace/experiments/smash-suite",
+    "manifest": "/Users/bytedance/workspace/experiments/smash-suite/docs/ai/opt07a/evidence-preservation.json",
+    "manifest_sha256": "b1c3a231f9cc035d72e6a91f03d1914ed11040ffe7afa80a999c7bf661824cd9",
+    "files": [
+      {
+        "case_id": "A-short",
+        "file": "result.json",
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/result.json",
+        "sha256": "bdb4264acd72a662b6028b81b13880f805e78e7f364f6e383334f3274911d667"
+      },
+      {
+        "case_id": "A-short",
+        "file": "run.json",
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/run.json",
+        "sha256": "2057ff32112bb9dc886fa6218a63d06e05bc0884e11b3a07702766a78fcf5b37"
+      },
+      {
+        "case_id": "A-short",
+        "file": "statistics.json",
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/statistics.json",
+        "sha256": "d5550a6b13903e22bea583ef122b4845dd6100154a70f79906cd2363d27dc548"
+      },
+      {
+        "case_id": "C-short",
+        "file": "result.json",
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/result.json",
+        "sha256": "94615682f4273784c628ba0e3eb0732c69bc2b5612ef8e9c8f0993d654aed391"
+      },
+      {
+        "case_id": "C-short",
+        "file": "run.json",
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/run.json",
+        "sha256": "e89de02b1ad18afe7f68695609a0634c05f7ec08580dae85966fdf4b08a47e21"
+      },
+      {
+        "case_id": "C-short",
+        "file": "statistics.json",
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/statistics.json",
+        "sha256": "a059688cb2c7f4f12214511be3087477a62cb08dfaadc3d2f42edfcf750e1519"
+      }
+    ],
+    "note": "Original absolute source paths in normalized references remain historical provenance. These byte-identical copies remain accessible after the original managed worktree is archived."
+  }
+}
