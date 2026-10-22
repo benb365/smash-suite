@@ -1,0 +1,26 @@
+{
+  "round": 1,
+  "base": "0467b6590d16e4dc60ecc3ae6aa0a40063da8b51",
+  "accepted_task_commit": "a960998b367aea63ca2f10e01059be9e3c542614",
+  "staged_sha256": {
+    "apps/video-clipper/reports/opt08a-size/README.md": "513f95dc782127569afceb98c3c097d8abc451d881b2bbecf562f5505165336a",
+    "apps/video-clipper/reports/opt08a-size/review.json": "c03b53b7c63b1eec9c6f3c8d619ce42badff0c17605b915e9e0fd22a26bac5eb",
+    "apps/video-clipper/reports/opt08a-size/summary.json": "517003e610fb8eda0b39152776356e78863e05304bf41c901f80e82ad3f484d1",
+    "apps/video-clipper/reports/opt08a-size/viewer.png": "987a58441030abb99df4fd3ccf007f9f854bbe60f94180b5a59fba77e7892dec",
+    "docs/ai/opt08a-size/acceptance-freeze.json": "78e99f0ee2044093af6fb35241ea7dffbab38141deccdf63a8f8aac7615c1fad",
+    "docs/ai/opt08a-size/controller/commit-input.md": "55967643e01c33d73a89b0af73264208113e33ace9788e2e802213ad24244aee",
+    "docs/ai/opt08a-size/controller/integration.md": "4dbd9109464bdfc6982df420ddd7705c23cad33a2945d2a3a5cc849010956d57",
+    "docs/ai/opt08a-size/developer/input.md": "67ebfd4646d5aa2d5af53a22ff34c68a84cdf38935f90ad9637c51f8be64b2f7",
+    "docs/ai/opt08a-size/developer/output.md": "0bbda2a27f16d44e71a0c8613f2108d8eec5b754125c84b37ea18b3cfb33c6ba",
+    "docs/ai/opt08a-size/evidence-preservation.json": "6cff7c413aefe225e24278971d04f7f8fc2fc8f89ad3b7c3accd116a4f34d227",
+    "docs/ai/opt08a-size/run.py": "315a714129783d55cd246378b7f599cc57f0068f66f736d0db71d36626eebbbc",
+    "docs/ai/opt08a-size/summarize.py": "1bdf67043dfce85372784268c7790d9462f88d9b701c41b234c6420f540cab96",
+    "docs/ai/opt08a-size/task.md": "47367681eba452613fab91bb609f6079414f83498e60b1bf7eb9970edf1a6539",
+    "docs/ai/opt08a-size/test_run.py": "170fec04422fcfb8c61ef6b264911224a22b512fc0b027476fa3da362c713e45",
+    "docs/ai/opt08a-size/verifier/input.md": "8ab434cecab13d154f277fc9c4137c62b9c17262444bd796e46080e69db5e4c9",
+    "docs/ai/opt08a-size/verifier/output.md": "4720c9e5722800bd40b06b112d97295011b25a0e3b05a8159e11aee104e342d4",
+    "docs/features/performance-optimization/README.md": "bd0e7f827b0c22678615a497465f71fae77919e9e4e47e1d2e9b0907ddb7e16f",
+    "docs/plan/roadmap.md": "15c22eb30fe669bce22a1440af897c7b0b5bf52777cd5e5e6da52a5961e81d66"
+  },
+  "planning_policy": "committed baseline plus own progress in index; user planning drafts remain unstaged"
+}
