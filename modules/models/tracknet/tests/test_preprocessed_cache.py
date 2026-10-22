@@ -1,5 +1,6 @@
 import numpy as np
 import torch
+import pytest
 
 from modules.models.tracknet.predictor import TrackNetPredictor
 
@@ -74,6 +75,37 @@ def test_overlapping_windows_reuse_only_explicit_frame_ids():
 
     model.clear_preprocessed_cache()
     assert not model._preprocessed_cache
+
+
+@pytest.mark.parametrize("use_cache", [False, True], ids=["no-cache", "overlapping-cache"])
+def test_preprocessing_matches_original_formula_and_preserves_input(use_cache):
+    import cv2
+    from torchvision.transforms.functional import resize
+
+    pixels = np.arange(14 * 19 * 3, dtype=np.uint32).reshape(14, 19, 3)
+    bases = [((pixels + index * 37) % 256).astype(np.uint8) for index in range(4)]
+    frames = [base[1:-1, 2:-1, :] for base in bases]
+    snapshots = [frame.copy() for frame in frames]
+    model = predictor()
+    windows = [(0, 1, 2), (1, 2, 3)] if use_cache else [(0, 1, 2)]
+
+    for window in windows:
+        selected = [frames[index] for index in window]
+        if use_cache:
+            model(selected, frame_ids=list(window))
+        else:
+            model(selected)
+
+        expected = []
+        for frame in selected:
+            rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            tensor = torch.from_numpy(rgb).permute(2, 0, 1).float() / 255
+            expected.append(resize(tensor, [288, 512], antialias=True))
+        assert torch.equal(model.model.inputs[-1], torch.cat(expected))
+
+    for frame, snapshot in zip(frames, snapshots):
+        assert np.array_equal(frame, snapshot)
+    assert all(not frame.flags.c_contiguous for frame in frames)
 
 
 def test_observe_keeps_window_and_tail_groups_then_releases_cache(monkeypatch):

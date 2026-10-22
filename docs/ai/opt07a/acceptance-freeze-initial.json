@@ -1,0 +1,23 @@
+{
+  "round": 1,
+  "base_commit": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+  "branch": "codex/opt07a-tracknet",
+  "files_sha256": {
+    "apps/video-clipper/reports/opt07a/README.md": "3f32454f02edd08e363f526268fed9ff7be38434c05b1238e11b154e211f6c4b",
+    "apps/video-clipper/reports/opt07a/preprocess-small.json": "f64e5b17f066af23f3799a1410e3d777a0d0e77fe6f6f434736f97c60ce57ffe",
+    "apps/video-clipper/reports/opt07a/strict-equivalence.json": "271d2781409c12d8581b9abeb47ccbb678ead67b5bd74c636208f36fa0cf1d56",
+    "apps/video-clipper/reports/opt07a/summary.json": "f71ee50924cbd343112e4810efe216466935373b31fa1cbeaffe6c0aa11b618e",
+    "apps/video-clipper/reports/opt07a/viewer.png": "090031af08236fb9b060204040c79613a88028504ed5bfe73596007e7839b88f",
+    "docs/ai/opt07a/README.md": "feb6e2e4fdeb62517bcb4fa6dfa89429c49f88011dac947d299409edf4bab27b",
+    "docs/ai/opt07a/probe.py": "a60ffde2f8b1d140428b746354e47ed2a72dca4045c97a87aae3f5f3e18aa101",
+    "docs/ai/opt07a/recognition.py": "030f8ff03186a1f97d3350a975f6daf63fb779467a998e1bf0061797bee0f428",
+    "docs/features/performance-optimization/README.md": "bf16a6ff29d096f088c9b158ed99dec6cbfce4294b9dafb380d9810d7b8ee572",
+    "modules/models/tracknet/README.md": "0cd7225e9a4aba5ba42abf298e6a991c50e0bccc1fa1c78738bae188aff8d8b3",
+    "modules/models/tracknet/predictor.py": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+    "modules/models/tracknet/tests/test_preprocessed_cache.py": "24a089cf9d4cc38aba0a0c14e77b0c4e0755a744503f63f3123d6128d5137b69"
+  },
+  "reference_predictor_sha256": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+  "raw_evidence_root": "apps/video-clipper/.runtime/opt07a",
+  "implementation_frozen": true,
+  "developer_paused": true
+}

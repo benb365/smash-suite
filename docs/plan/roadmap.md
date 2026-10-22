@@ -91,6 +91,7 @@ flowchart BT
 | 任务 | 负责人 + 分支 | 当前进展 |
 | --- | --- | --- |
 | 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已完成（2026-10-21 基线），作为后续优化参考而非活跃认领；[性能报告](../../apps/video-clipper/reports/performance-baseline.md) |
+| 性能优化 | benb365 + codex/opt06-scan | 进行中：OPT-07A 已通过独立验收并按用户确认合入；OPT-06 正在做每秒首组三帧的候选诊断，随后继续确定项目和高优先级尝试；[方案与进展](../features/performance-optimization/README.md) |
 | Windows 后端适配 | cjfranklin1 + [codex/windows-runtime](https://github.com/benb365/smash-suite/tree/codex/windows-runtime) | 已开始推进，适配与验证结果待同步 |
 
 本轮性能报告按人工确认保留为已完成基线引用，作为“结束后移除此处记录”的明确例外。

@@ -82,7 +82,7 @@ class TrackNetPredictor:
                     self.statistics.add("tracknet_cache_hits")
             else:
                 rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                tensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float() / 255
+                tensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float().div_(255)
                 tensor = resize(tensor, [288, 512], antialias=True)
                 if use_cache:
                     self._preprocessed_cache[frame_id] = tensor

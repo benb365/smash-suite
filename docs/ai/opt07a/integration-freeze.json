@@ -1,0 +1,35 @@
+{
+  "base_commit": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+  "accepted_task_commit": "616eb682d0971725a23f5e0c839cbf1ad005e573",
+  "branch": "develop",
+  "index_files_sha256": {
+    "apps/video-clipper/reports/opt07a/README.md": "34948755c81d3b3913bd49b89b3629441fb001b81408e03befffebdad0e19b22",
+    "apps/video-clipper/reports/opt07a/preprocess-small.json": "f64e5b17f066af23f3799a1410e3d777a0d0e77fe6f6f434736f97c60ce57ffe",
+    "apps/video-clipper/reports/opt07a/strict-equivalence.json": "271d2781409c12d8581b9abeb47ccbb678ead67b5bd74c636208f36fa0cf1d56",
+    "apps/video-clipper/reports/opt07a/summary.json": "f71ee50924cbd343112e4810efe216466935373b31fa1cbeaffe6c0aa11b618e",
+    "apps/video-clipper/reports/opt07a/viewer.png": "090031af08236fb9b060204040c79613a88028504ed5bfe73596007e7839b88f",
+    "docs/ai/opt07a/README.md": "94bdd3177bd59ecd7685a013ef4b447f506363e6a148d623dcb512817a9cec51",
+    "docs/ai/opt07a/acceptance-freeze-initial.json": "8a3a46b069eb8ff9a3f28f5cca16c06d482f5b9b3848fd66b580a81499a908b4",
+    "docs/ai/opt07a/acceptance-freeze.json": "90048c85635f4ec7f955e2756d3a6396164e959368a703361047a249a0d3d928",
+    "docs/ai/opt07a/developer/input.md": "3f5e05b0db3f2b170eb159ba52d1a3ff4914a421fcb992b93c78a08e1015731c",
+    "docs/ai/opt07a/developer/output.md": "c25c846267ee55a7c36e6424eb0149c4343c57c7428b17f63ed3de44bd143295",
+    "docs/ai/opt07a/evidence-preservation.json": "b1c3a231f9cc035d72e6a91f03d1914ed11040ffe7afa80a999c7bf661824cd9",
+    "docs/ai/opt07a/probe.py": "a60ffde2f8b1d140428b746354e47ed2a72dca4045c97a87aae3f5f3e18aa101",
+    "docs/ai/opt07a/recognition.py": "030f8ff03186a1f97d3350a975f6daf63fb779467a998e1bf0061797bee0f428",
+    "docs/ai/opt07a/task.md": "7bd207fcbd3c854c02a7b19f0c93cb377020738c63aafb16521dd74a8a1737bf",
+    "docs/ai/opt07a/verifier/input.md": "f29150e244717b64e8cc3cc09641e93343815897d30b3e3edff9d482d5ad6485",
+    "docs/ai/opt07a/verifier/output.md": "f1366ddd115ecefe5b051f4f49d7eac5ee8718e5278045350ed0925e5b94a7f2",
+    "docs/features/performance-optimization/README.md": "a6988b06ceba837c8e0191ea1f3019df33022a81e4f71e19786b94a4126737b1",
+    "docs/plan/roadmap.md": "9a98184ad8887f9367174d3aadfc3d52b73852eb8b7780135e4d0a02d1de1970",
+    "modules/models/tracknet/README.md": "0cd7225e9a4aba5ba42abf298e6a991c50e0bccc1fa1c78738bae188aff8d8b3",
+    "modules/models/tracknet/predictor.py": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+    "modules/models/tracknet/tests/test_preprocessed_cache.py": "24a089cf9d4cc38aba0a0c14e77b0c4e0755a744503f63f3123d6128d5137b69"
+  },
+  "working_tree_drafts": [
+    "docs/features/performance-optimization/README.md",
+    "docs/plan/roadmap.md"
+  ],
+  "scope": "Accepted OPT-07A plus integration state, evidence preservation and continuing OPT-06 claim. User drafts excluded.",
+  "revision": 2,
+  "revision_note": "Clarify that managed-worktree archiving occurs after integration commit and verification; evidence has already been copied."
+}

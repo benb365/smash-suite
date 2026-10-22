@@ -1,0 +1,148 @@
+{
+  "source_worktree": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite",
+  "destination_root": "/Users/bytedance/workspace/experiments/smash-suite",
+  "source_task_commit": "616eb682d0971725a23f5e0c839cbf1ad005e573",
+  "complete": true,
+  "files": [
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/preprocess-small.json",
+      "bytes": 2554,
+      "sha256": "f64e5b17f066af23f3799a1410e3d777a0d0e77fe6f6f434736f97c60ce57ffe"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/probe-controller/model-io.pt",
+      "bytes": 254825881,
+      "sha256": "94bfce8112a1f530d1918b132739157aa0a0a6ef5b438ac805dc71c82f849cbe"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/probe-controller/report.json",
+      "bytes": 67443,
+      "sha256": "bd75f186d12a340cdc3ef17e3d01883513ab46cc56de9173d9ff6f16fda13ee3"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/probe-independent/model-io.pt",
+      "bytes": 339767593,
+      "sha256": "88e9dc1ca24aa4584a6cadc5a6f1353139a82cf8211539bd25874a1d29e2b735"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/probe-independent/report.json",
+      "bytes": 89790,
+      "sha256": "f13ac2cf7755c009a02fedc14fdd2ce2a8a4b6f7296f09345755448d73497e1e"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/probe-retained/model-io.pt",
+      "bytes": 339767593,
+      "sha256": "88e9dc1ca24aa4584a6cadc5a6f1353139a82cf8211539bd25874a1d29e2b735"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/probe-retained/report.json",
+      "bytes": 89786,
+      "sha256": "1dd2f72fc27685491c1f6ecadafbb45355a4bd77aa3d5d8f363e59eea2127b9a"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/resources.json",
+      "bytes": 8559,
+      "sha256": "b812f29cda70b3aadef8d614ded72976f2f85a38bccf77b83f0f0ec87692119f"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/result.json",
+      "bytes": 1937,
+      "sha256": "bdb4264acd72a662b6028b81b13880f805e78e7f364f6e383334f3274911d667"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/run.json",
+      "bytes": 3111,
+      "sha256": "2057ff32112bb9dc886fa6218a63d06e05bc0884e11b3a07702766a78fcf5b37"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/statistics.json",
+      "bytes": 5727,
+      "sha256": "d5550a6b13903e22bea583ef122b4845dd6100154a70f79906cd2363d27dc548"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/decisions.json",
+      "bytes": 13634,
+      "sha256": "1be2326629b0a062c7b2f41fdb34a780ef2b5df3e3aa3f7dc23cb3afc2bfea24"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/resources.json",
+      "bytes": 22963,
+      "sha256": "01bf3426366d89a6e4bcf23cd2b49d279a4a95f9d431e3743e9eae81c3f964aa"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/result.json",
+      "bytes": 2203,
+      "sha256": "94615682f4273784c628ba0e3eb0732c69bc2b5612ef8e9c8f0993d654aed391"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/run.json",
+      "bytes": 3395,
+      "sha256": "e89de02b1ad18afe7f68695609a0634c05f7ec08580dae85966fdf4b08a47e21"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/statistics.json",
+      "bytes": 13786,
+      "sha256": "a059688cb2c7f4f12214511be3087477a62cb08dfaadc3d2f42edfcf750e1519"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/A-short/resources.json",
+      "bytes": 8318,
+      "sha256": "e19d2a97ec344e9638c8aa9b2efab0fd598a95fa29c7d3985932c23479feb85b"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/A-short/result.json",
+      "bytes": 1937,
+      "sha256": "784b954987c79d7c81ebfe68ab9bbf9f35f79c2c69828d486f02af06a0771cc7"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/A-short/run.json",
+      "bytes": 3020,
+      "sha256": "9f030fae188b0696909799e347c5902d0947a6008d096804da7acf1fc2f64713"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/A-short/statistics.json",
+      "bytes": 5605,
+      "sha256": "88b54db34a611ccb749c4f28214ac0452bed7a5a766552d3aa58e7b13865517c"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/C-short/decisions.json",
+      "bytes": 13634,
+      "sha256": "1be2326629b0a062c7b2f41fdb34a780ef2b5df3e3aa3f7dc23cb3afc2bfea24"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/C-short/resources.json",
+      "bytes": 22716,
+      "sha256": "93d93ce60a11e4e3b13f14040324980c8c000e52e55792d8caf6c0ebd72399ad"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/C-short/result.json",
+      "bytes": 2203,
+      "sha256": "1fad5502ffa9cdc468897197ec68e4422843b67dbb5f9a61f91fb5ba2118f33a"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/C-short/run.json",
+      "bytes": 3306,
+      "sha256": "1be3a20bbe66d33669aa5aceed5b88399e674b3429fcfd856e0b9ec25af92606"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/recognition/candidate/C-short/statistics.json",
+      "bytes": 13651,
+      "sha256": "482b4100a640f6464231ad4461629eb0facdfeb1feecfd157bae88369ecdbc5f"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/reference/freeze.json",
+      "bytes": 969,
+      "sha256": "851ed2316c92e0e9119c23c23971bea1ae4e6412489161ec21243f9eb37c0364"
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt07a/reference/predictor.py",
+      "bytes": 6245,
+      "sha256": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa"
+    },
+    {
+      "path": "modules/models/tracknet/.runtime/opt07a-review.json",
+      "bytes": 4729,
+      "sha256": "bcdfbffdffa81cc0b5a9d889a3787259e87fbe739aa52498743fe20b1f7e42bf"
+    }
+  ]
+}
