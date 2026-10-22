@@ -1,0 +1,37 @@
+{
+  "round": 1,
+  "head": "c62527982a6bcd6fc95cb00572f346d52d36fffb",
+  "worktree": "/Users/bytedance/.codex/worktrees/opt09a-single/smash-suite",
+  "files": {
+    "apps/video-clipper/reports/opt09a-single/README.md": "a125caebe81619deb7fa0c7e3e153cfd732511171a2f1974c6c5e45f38855d92",
+    "apps/video-clipper/reports/opt09a-single/review.json": "d2aa45541d848472d657bc39aa3c1c9f7baecf7cb6653db71ca90089216883f4",
+    "apps/video-clipper/reports/opt09a-single/summary.json": "f98f76470b77361c24eb0e22b2de7a6c0d8ab16fa0ad18e791f2d23b23b57802",
+    "apps/video-clipper/reports/opt09a-single/viewer.png": "297f2654578570d55fc15443424ba9f2d46b61253e29d891c9fe52a0452bafef",
+    "docs/ai/opt09a-single/developer/input.md": "d99c4704bdb94fbac6c86440bb80e3457b1d0df0009f42d38f87e47f0b71380b",
+    "docs/ai/opt09a-single/developer/output.md": "1f546a4571ad79642df59e171729291ea0fa1ce002db930a4c67b3537aa9c060",
+    "docs/ai/opt09a-single/run.py": "de947ebac22f020347cca1be775b6294acdb7c38dbf69b5f7f4b9dfe8bb1ec20",
+    "docs/ai/opt09a-single/summarize.py": "0e073dae4299a526ea979924c306fa60ed0d99b556b6de50b16c1d58a026f3d0",
+    "docs/ai/opt09a-single/task.md": "65f90c31cd4d68a831b10acc8951c6a31c4387877a5c6b0232d2dd854551e11a",
+    "docs/ai/opt09a-single/test_experiment.py": "a367c852784d5fe1ec9986c46cbf707f9786d587521eb07ae1a059a4dd31b61d",
+    "docs/ai/opt09a-single/verifier/input.md": "0bf4c8a691e4a40ed79fd4197ab07da78d1526fc68ae37b1fce81d892364c459"
+  },
+  "runtime_files": {
+    "apps/video-clipper/.runtime/opt09a-single/C-short-native/decisions.json": "605fa80bba991afb0c9eefd2a2fc89f9e1aab3f1d11ff55a9baba441a71a1ffd",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-native/derived_observe.py": "c0c9dfc5e243a31dfac0f4643e739f73d0c934666b6f9e4dcec011f89bed857e",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-native/observations.json": "a803531f05ffd83e6e52a89416736795f019effdbe07b7a06b8218e91da4adf0",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-native/resources.json": "9dee94ed6f9ea788e321f2dc11ba84afa7678ea01a19081c6ae3613fee735847",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-native/result.json": "fe76b7824cd7c2eabdb4f5a885872d777dce2005819825798df2a9a416648e22",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-native/run.json": "e349ffaa890c52728eb37241d11820c9225281857f0e1a25b8561d42c1a82735",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-native/statistics.json": "ac6a07b74acb240619d779462f7459e4206089c2332c95d5d1fc1c4062068db1",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/decisions.json": "5408c0d45c6bd411d889d7da492160972af0f86970e72de9ec22dfa6e6e30e43",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/derived_observe.py": "ae9e7a3585106484baa6afe4695e9a0fe6c00d8da54fbeb36381d9e422084b04",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/observations.json": "8da570c8fc6973758bf21e0c3b7f7d1a0ee8e5d5374ca8b12c8ec4011ec8e72b",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/resources.json": "24153f506e1739756cf005616d8bfccf15649d0374d4b8d1e72d273684430fd6",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/result.json": "3c8cff4c827476925ca13d9c0d6ea8752c1c35ad970a2e02e450ef3f018d33a5",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/run.json": "35a7093a43f613ef28019ae9ccc10b05f9aac51ff4d083113464eb0947a965a7",
+    "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/statistics.json": "df42f62216ac42001bcedc2f39f0f0c674e6883f0101e82655a9aac54192a824",
+    "modules/models/tracknet/.runtime/opt09a-single-review.json": "d2aa45541d848472d657bc39aa3c1c9f7baecf7cb6653db71ca90089216883f4"
+  },
+  "developer_state": "paused after real result and viewer report closeout",
+  "production_diff": []
+}

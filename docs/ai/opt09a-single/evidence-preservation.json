@@ -1,0 +1,211 @@
+{
+  "source_worktree": "/Users/bytedance/.codex/worktrees/opt09a-single/smash-suite",
+  "task_commit": "48ffa7e4fc463926e7f11b4930ba83065aed3837",
+  "primary_before": "5bb39fa69181e86c21bde20e74d951f1cb2ca415",
+  "accepted_files": [
+    {
+      "path": "apps/video-clipper/reports/opt09a-single/README.md",
+      "source_sha256": "a125caebe81619deb7fa0c7e3e153cfd732511171a2f1974c6c5e45f38855d92",
+      "sha256": "a125caebe81619deb7fa0c7e3e153cfd732511171a2f1974c6c5e45f38855d92",
+      "bytes": 3385
+    },
+    {
+      "path": "apps/video-clipper/reports/opt09a-single/review.json",
+      "source_sha256": "d2aa45541d848472d657bc39aa3c1c9f7baecf7cb6653db71ca90089216883f4",
+      "sha256": "d2aa45541d848472d657bc39aa3c1c9f7baecf7cb6653db71ca90089216883f4",
+      "bytes": 4547
+    },
+    {
+      "path": "apps/video-clipper/reports/opt09a-single/summary.json",
+      "source_sha256": "f98f76470b77361c24eb0e22b2de7a6c0d8ab16fa0ad18e791f2d23b23b57802",
+      "sha256": "f98f76470b77361c24eb0e22b2de7a6c0d8ab16fa0ad18e791f2d23b23b57802",
+      "bytes": 43111
+    },
+    {
+      "path": "apps/video-clipper/reports/opt09a-single/viewer.png",
+      "source_sha256": "297f2654578570d55fc15443424ba9f2d46b61253e29d891c9fe52a0452bafef",
+      "sha256": "297f2654578570d55fc15443424ba9f2d46b61253e29d891c9fe52a0452bafef",
+      "bytes": 92688
+    },
+    {
+      "path": "docs/ai/opt09a-single/acceptance-freeze.json",
+      "source_sha256": "c967603b5d62d11ab4997256ddbc488a778ae490e24d16d533ada501f60d0b27",
+      "sha256": "c967603b5d62d11ab4997256ddbc488a778ae490e24d16d533ada501f60d0b27",
+      "bytes": 3781
+    },
+    {
+      "path": "docs/ai/opt09a-single/controller/commit-input.md",
+      "source_sha256": "ee8f3c2bcfb8671050a1bc4d0df31fa3f2b9a3a6a2e18cac793363fb365b0eb6",
+      "sha256": "ee8f3c2bcfb8671050a1bc4d0df31fa3f2b9a3a6a2e18cac793363fb365b0eb6",
+      "bytes": 817
+    },
+    {
+      "path": "docs/ai/opt09a-single/developer/input.md",
+      "source_sha256": "d99c4704bdb94fbac6c86440bb80e3457b1d0df0009f42d38f87e47f0b71380b",
+      "sha256": "d99c4704bdb94fbac6c86440bb80e3457b1d0df0009f42d38f87e47f0b71380b",
+      "bytes": 8024
+    },
+    {
+      "path": "docs/ai/opt09a-single/developer/output.md",
+      "source_sha256": "1f546a4571ad79642df59e171729291ea0fa1ce002db930a4c67b3537aa9c060",
+      "sha256": "1f546a4571ad79642df59e171729291ea0fa1ce002db930a4c67b3537aa9c060",
+      "bytes": 7242
+    },
+    {
+      "path": "docs/ai/opt09a-single/run.py",
+      "source_sha256": "de947ebac22f020347cca1be775b6294acdb7c38dbf69b5f7f4b9dfe8bb1ec20",
+      "sha256": "de947ebac22f020347cca1be775b6294acdb7c38dbf69b5f7f4b9dfe8bb1ec20",
+      "bytes": 7293
+    },
+    {
+      "path": "docs/ai/opt09a-single/summarize.py",
+      "source_sha256": "0e073dae4299a526ea979924c306fa60ed0d99b556b6de50b16c1d58a026f3d0",
+      "sha256": "0e073dae4299a526ea979924c306fa60ed0d99b556b6de50b16c1d58a026f3d0",
+      "bytes": 17147
+    },
+    {
+      "path": "docs/ai/opt09a-single/task.md",
+      "source_sha256": "65f90c31cd4d68a831b10acc8951c6a31c4387877a5c6b0232d2dd854551e11a",
+      "sha256": "548a320308d6bd6db34c3ce57e5ba5456c221627823cd41806177d73bb4c4a3a",
+      "bytes": 6104,
+      "metadata_note": "controller integration stage only; source SHA retained"
+    },
+    {
+      "path": "docs/ai/opt09a-single/test_experiment.py",
+      "source_sha256": "a367c852784d5fe1ec9986c46cbf707f9786d587521eb07ae1a059a4dd31b61d",
+      "sha256": "a367c852784d5fe1ec9986c46cbf707f9786d587521eb07ae1a059a4dd31b61d",
+      "bytes": 6443
+    },
+    {
+      "path": "docs/ai/opt09a-single/verifier/input.md",
+      "source_sha256": "0bf4c8a691e4a40ed79fd4197ab07da78d1526fc68ae37b1fce81d892364c459",
+      "sha256": "0bf4c8a691e4a40ed79fd4197ab07da78d1526fc68ae37b1fce81d892364c459",
+      "bytes": 3730
+    },
+    {
+      "path": "docs/ai/opt09a-single/verifier/output.md",
+      "source_sha256": "44d8a5fba0db8971402485df47d81671aa6027ca0e2b784f1ed703f26b95d6f9",
+      "sha256": "44d8a5fba0db8971402485df47d81671aa6027ca0e2b784f1ed703f26b95d6f9",
+      "bytes": 3254
+    }
+  ],
+  "runtime_files": [
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-native/decisions.json",
+      "sha256": "605fa80bba991afb0c9eefd2a2fc89f9e1aab3f1d11ff55a9baba441a71a1ffd",
+      "bytes": 11648
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-native/derived_observe.py",
+      "sha256": "c0c9dfc5e243a31dfac0f4643e739f73d0c934666b6f9e4dcec011f89bed857e",
+      "bytes": 4840
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-native/observations.json",
+      "sha256": "a803531f05ffd83e6e52a89416736795f019effdbe07b7a06b8218e91da4adf0",
+      "bytes": 7047371
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-native/resources.json",
+      "sha256": "9dee94ed6f9ea788e321f2dc11ba84afa7678ea01a19081c6ae3613fee735847",
+      "bytes": 12509
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-native/result.json",
+      "sha256": "fe76b7824cd7c2eabdb4f5a885872d777dce2005819825798df2a9a416648e22",
+      "bytes": 2368
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-native/run.json",
+      "sha256": "e349ffaa890c52728eb37241d11820c9225281857f0e1a25b8561d42c1a82735",
+      "bytes": 4010
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-native/statistics.json",
+      "sha256": "ac6a07b74acb240619d779462f7459e4206089c2332c95d5d1fc1c4062068db1",
+      "bytes": 8263
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/decisions.json",
+      "sha256": "5408c0d45c6bd411d889d7da492160972af0f86970e72de9ec22dfa6e6e30e43",
+      "bytes": 13288
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/derived_observe.py",
+      "sha256": "ae9e7a3585106484baa6afe4695e9a0fe6c00d8da54fbeb36381d9e422084b04",
+      "bytes": 4852
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/observations.json",
+      "sha256": "8da570c8fc6973758bf21e0c3b7f7d1a0ee8e5d5374ca8b12c8ec4011ec8e72b",
+      "bytes": 7039913
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/resources.json",
+      "sha256": "24153f506e1739756cf005616d8bfccf15649d0374d4b8d1e72d273684430fd6",
+      "bytes": 12298
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/result.json",
+      "sha256": "3c8cff4c827476925ca13d9c0d6ea8752c1c35ad970a2e02e450ef3f018d33a5",
+      "bytes": 2044
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/run.json",
+      "sha256": "35a7093a43f613ef28019ae9ccc10b05f9aac51ff4d083113464eb0947a965a7",
+      "bytes": 4012
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/C-short-shifted/statistics.json",
+      "sha256": "df42f62216ac42001bcedc2f39f0f0c674e6883f0101e82655a9aac54192a824",
+      "bytes": 8188
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/independent-C-short-shifted/decisions.json",
+      "sha256": "5408c0d45c6bd411d889d7da492160972af0f86970e72de9ec22dfa6e6e30e43",
+      "bytes": 13288
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/independent-C-short-shifted/derived_observe.py",
+      "sha256": "ae9e7a3585106484baa6afe4695e9a0fe6c00d8da54fbeb36381d9e422084b04",
+      "bytes": 4852
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/independent-C-short-shifted/observations.json",
+      "sha256": "8da570c8fc6973758bf21e0c3b7f7d1a0ee8e5d5374ca8b12c8ec4011ec8e72b",
+      "bytes": 7039913
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/independent-C-short-shifted/resources.json",
+      "sha256": "23214943f16bd18d51412bb3401d7f16c40a293bb81bb5ee02f2217b9ea7b2ba",
+      "bytes": 12189
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/independent-C-short-shifted/result.json",
+      "sha256": "cd433d7f50a82fab5ec4ca3528e42a5b55fd481169c891c4f1f0a3dbdb4adddf",
+      "bytes": 2046
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/independent-C-short-shifted/run.json",
+      "sha256": "6c3e20f90e674c029ede195a6e38c7ef1d145551a472f1accf80a1c43b6f4113",
+      "bytes": 4090
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/independent-C-short-shifted/statistics.json",
+      "sha256": "0eb5e1f8f04b939f9cc21d8ac07ac1ba2f45fd88a813b2bb005467185f4d3e97",
+      "bytes": 8186
+    }
+  ],
+  "sidecars": [
+    {
+      "path": "modules/models/tracknet/.runtime/opt09a-single-review.json",
+      "sha256": "d2aa45541d848472d657bc39aa3c1c9f7baecf7cb6653db71ca90089216883f4",
+      "bytes": 4547
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt09a-single/viewer.png",
+      "sha256": "297f2654578570d55fc15443424ba9f2d46b61253e29d891c9fe52a0452bafef",
+      "bytes": 92688
+    }
+  ]
+}
