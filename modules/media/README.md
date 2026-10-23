@@ -22,6 +22,8 @@ ranges = selected_ranges([{"start_ms": 1000, "end_ms": 5000}], info.duration_ms)
 render(source, Path("output.mp4"), ranges, info, "balanced", lambda fraction: None)
 ```
 
+产品如需烧录字幕叠图，可传 `overlay_ass=Path("overlay.ass")`。媒体模块在既有选段与时间变换之后应用 ASS，不读取叠图内容，也不依赖产品或羽毛球算法模块。
+
 `selected_ranges` 默认不补时；调用方可传 `padding_ms`。导出保留源画面尺寸和原音画相对偏移，支持 `high`、`balanced`、`small` 三档质量。调用者负责输出目录和工作文件的生命周期。
 
 ## 输入预检

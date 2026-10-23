@@ -39,12 +39,14 @@ class ShuttleRallySegmenter:
         height: float,
         config: FlightConfig | None = None,
         statistics=None,
+        observation_sink=None,
     ) -> None:
         from .statistics import Statistics
         self.statistics = statistics or Statistics()
         self.predict = predict
         self.width, self.height = width, height
         self.config = config or FlightConfig()
+        self.observation_sink = observation_sink
         self.pending: list[TimestampedFrame] = []
         self.points: deque[tuple[float, ShuttlePoint]] = deque()
         self.streak: list[tuple[float, float]] = []
@@ -66,6 +68,8 @@ class ShuttleRallySegmenter:
         intervals = []
         with self.statistics.phase("rally_decision"):
             for source, point in zip(self.pending, points):
+                if self.observation_sink is not None:
+                    self.observation_sink(source, point)
                 intervals.extend(self._observe(source, point, frame.timestamp_ms))
         self.pending.clear()
         return intervals

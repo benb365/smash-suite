@@ -85,6 +85,7 @@ export default withMermaid(defineConfig({
           page('实验与回放', 'modules/rally/experiments/README.md'),
           { text: '实验报告', collapsed: true, items: reports('modules/rally/experiments/reports') },
         ] },
+        page('二维球路分析', 'modules/trajectory/README.md'),
       ] },
       { text: '产品', items: [
         { ...page('自动剪辑', 'apps/video-clipper/README.md'), items: [
@@ -105,6 +106,7 @@ export default withMermaid(defineConfig({
       ] },
       { text: '项目计划', items: [
         page('路线图', 'docs/plan/roadmap.md'),
+        page('成片中的二维球路', 'docs/features/trajectory-overlay/README.md'),
         page('想法与灵感', 'docs/plan/ideas.md'),
       ] },
     ],

@@ -17,6 +17,8 @@ from fastapi.testclient import TestClient
 
 from app.main import create_app
 from modules.media.video import ffmpeg_exe, render, selected_ranges
+from app.trajectory_overlay import write_overlay
+from modules.trajectory.constraints import constrain_shots
 from app.input_policy import probe
 from app.product_types import ProcessRequest
 from app.runtime import Runtime
@@ -257,7 +259,11 @@ def test_render_silent_variable_frame_timestamps(tmp_path):
     info = probe(source, source.name)
     assert not info.has_audio
     output = tmp_path / "vfr-cut.mp4"
-    render(source, output, [[40, 220], [300, 540]], info, "balanced", lambda p: None)
+    ranges = [[40, 220], [300, 540]]
+    overlay = tmp_path / "vfr.ass"
+    write_overlay({"shots": [dict(start_ms=50, end_ms=500, start_xy=[1, 2], end_xy=[4, 10],
+                                  end_kind="next_hit")]}, ranges, overlay, info.width, info.height)
+    render(source, output, ranges, info, "balanced", lambda p: None, overlay_ass=overlay)
     with av.open(str(output)) as container:
         assert not container.streams.audio
         stream = container.streams.video[0]
@@ -265,7 +271,85 @@ def test_render_silent_variable_frame_timestamps(tmp_path):
         frames = list(container.decode(video=0))
         actual = [float(f.pts * f.time_base * 1000) for f in frames]
         assert actual == pytest.approx([0, 60, 140, 180, 220, 280, 360], abs=1)
-        assert [int(np.mean(f.to_ndarray(format="rgb24"))) for f in frames] == pytest.approx([20, 40, 60, 100, 120, 140, 160], abs=3)
+        assert [int(f.to_ndarray(format="rgb24")[90, 160].mean()) for f in frames] == pytest.approx([20, 40, 60, 100, 120, 140, 160], abs=3)
+
+
+def test_trajectory_overlay_maps_shot_times_and_is_burned_in(tmp_path, video):
+    info = probe(video, "input.mp4")
+    ranges = [[1000, 2000], [4000, 5000]]
+    paths = {"shots": [
+        {"start_ms": 1200, "end_ms": 1500, "start_xy": [1, 2], "end_xy": [4, 10], "end_kind": "predicted_landing"},
+        {"start_ms": 1800, "end_ms": 2200, "start_xy": [1, 2], "end_xy": [4, 10], "end_kind": "next_hit"},
+        {"start_ms": 3000, "end_ms": 4500, "start_xy": [1, 2], "end_xy": [4, 10], "end_kind": "detected_landing"},
+        {"start_ms": 4500, "end_ms": 4700, "start_xy": [1, 2], "end_xy": None, "end_kind": "unresolved"},
+    ]}
+    overlay = tmp_path / "trajectory.ass"
+    write_overlay(paths, ranges, overlay, info.width, info.height)
+    ass = overlay.read_text()
+    assert "m m " not in ass
+    assert "Dialogue: 1,0:00:00.20,0:00:00.50" in ass
+    assert "Dialogue: 1,0:00:00.80,0:00:01.00" in ass
+    assert "Dialogue: 1,0:00:01.00,0:00:01.50" in ass
+    assert ass.count("Dialogue: 1,") == 3
+
+    output = tmp_path / "overlay.mp4"
+    render(video, output, ranges, info, "balanced", lambda p: None, overlay_ass=overlay)
+    with av.open(str(output)) as container:
+        frame = next(container.decode(video=0))
+        rendered_pixel = frame.to_ndarray(format="rgb24")[4, 310]
+    with av.open(str(video)) as container:
+        source_frame = min(container.decode(video=0), key=lambda f: abs(float(f.pts * f.time_base) - 1.0))
+        source_pixel = source_frame.to_ndarray(format="rgb24")[4, 310]
+    assert not np.array_equal(rendered_pixel, source_pixel)
+
+
+def test_trajectory_overlay_applies_court_constraints_per_rally_and_exempts_final_hit(tmp_path):
+    paths = {"shots": [
+        {"rally_id": 1, "shot_id": 1, "start_ms": 0, "end_ms": 1000,
+         "start_xy": [1, 2], "end_xy": [1, 4], "end_kind": "predicted_landing"},
+        {"rally_id": 1, "shot_id": 2, "start_ms": 1000, "end_ms": 2000,
+         "start_xy": [1, 10], "end_xy": [1, 8], "end_kind": "next_hit"},
+        {"rally_id": 1, "shot_id": 3, "start_ms": 2000, "end_ms": 2100,
+         "start_xy": None, "end_xy": None, "end_kind": "unresolved"},
+        {"rally_id": 2, "shot_id": 1, "start_ms": 3000, "end_ms": 4000,
+         "start_xy": [5.19, 2], "end_xy": [4, 10], "end_kind": "predicted_landing"},
+        {"rally_id": 2, "shot_id": 2, "start_ms": 4000, "end_ms": 5000,
+         "start_xy": [2, 10], "end_xy": [2, 12], "end_kind": "next_hit"},
+    ]}
+    overlay = tmp_path / "court-constrained.ass"
+
+    write_overlay(paths, [[0, 5000]], overlay, 1920, 1080)
+
+    arrows = [line for line in overlay.read_text().splitlines() if line.startswith("Dialogue: 1,")]
+    assert len(arrows) == 3
+    assert [line.split(",", 3)[1:3] for line in arrows] == [
+        ["0:00:00.00", "0:00:01.00"],
+        ["0:00:01.00", "0:00:02.00"],
+        ["0:00:04.00", "0:00:05.00"],
+    ]
+
+
+def test_overlay_reuses_analyzer_player_origin_repair_without_mutating_paths(tmp_path):
+    paths = {"shots": [
+        {"rally_id": 1, "shot_id": 1, "start_ms": 120, "end_ms": 180,
+         "start_xy": [5.3, 10], "end_xy": [1, 2], "end_kind": "predicted_landing",
+         "diagnostics": {"hit_side": "near", "start_source": "fitted_racket_contact_projection"}},
+        {"rally_id": 1, "shot_id": 2, "start_ms": 200, "end_ms": 250,
+         "start_xy": [1, 2], "end_xy": None, "end_kind": "unresolved"},
+    ]}
+    tracks = [{"timestamp_ms": 120, "players": [{"side": "near", "xy": [2, 10]}]}]
+    processed = {"shots": constrain_shots(paths["shots"], tracks)}
+    once = processed["shots"]
+    twice = constrain_shots(once)
+    overlay = tmp_path / "player-origin.ass"
+
+    write_overlay(processed, [[0, 500]], overlay, 1920, 1080)
+
+    assert twice == once
+    assert paths["shots"][0]["start_xy"] == [5.3, 10]
+    assert processed["shots"][0]["start_xy"] == [2, 10]
+    assert processed["shots"][0]["diagnostics"]["court_constraint"]["start_estimate"]["method"] == "exact"
+    assert len([line for line in overlay.read_text().splitlines() if line.startswith("Dialogue: 1,")]) == 1
 
 
 def test_render_fractional_frame_boundaries_with_nonzero_origin(tmp_path):
@@ -284,14 +368,18 @@ def test_render_fractional_frame_boundaries_with_nonzero_origin(tmp_path):
     assert info.first_pts_ms > 0
     output = tmp_path / "fractional-cut.mp4"
     ranges = [[13 / 30 * 1000, 29 / 30 * 1000], [59 / 30 * 1000, 79 / 30 * 1000]]
-    render(source, output, ranges, info, "balanced", lambda p: None)
+    overlay = tmp_path / "fractional.ass"
+    write_overlay({"shots": [dict(start_ms=15 / 30 * 1000, end_ms=76 / 30 * 1000,
+                                  start_xy=[1, 2], end_xy=[4, 10], end_kind="detected_landing")]},
+                  ranges, overlay, info.width, info.height)
+    render(source, output, ranges, info, "balanced", lambda p: None, overlay_ass=overlay)
     with av.open(str(source)) as container:
         originals = [float(f.to_ndarray(format="rgb24").mean()) for f in container.decode(video=0)]
     with av.open(str(output)) as container:
         frames = list(container.decode(video=0))
         selected = list(range(13, 29)) + list(range(59, 79))
         assert len(frames) == len(selected)
-        assert [float(f.to_ndarray(format="rgb24").mean()) for f in frames] == pytest.approx(
+        assert [float(f.to_ndarray(format="rgb24")[90, 160].mean()) for f in frames] == pytest.approx(
             [originals[i] for i in selected], abs=3)
         assert [float(f.pts * f.time_base) for f in frames] == pytest.approx(
             [i / 30 for i in range(36)], abs=1 / 15360)
