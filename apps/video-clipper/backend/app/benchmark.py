@@ -185,7 +185,10 @@ def run_case(case, args):
     models = home / "models"
     models.mkdir(parents=True)
     weights = {}
-    for name in required_models(case["scene"]):
+    model_names = list(required_models(case["scene"]))
+    if case["scene"] == "high" and case.get("show_shot_paths", False) and "yolo11n.pt" not in model_names:
+        model_names.append("yolo11n.pt")
+    for name in model_names:
         source = args.models / name
         actual = sha256(source)
         if actual != ASSETS[name]["sha256"]:
@@ -237,8 +240,11 @@ def run_case(case, args):
         with source.open("rb") as media:
             request("POST", session_url + "/video", headers=dict(headers, **{"X-File-Name": source.name}), data=media)
         with ResourceSampler(backend.pid, home / "work", case_dir / "resources.jsonl"):
-            request("POST", session_url + "/run", headers=headers,
-                    json=dict(camera_type=case["scene"], quality="balanced", court=case.get("court")))
+            options = dict(camera_type=case["scene"], quality="balanced", court=case.get("court"),
+                           show_shot_paths=case.get("show_shot_paths", False))
+            if case.get("optimizations") is not None:
+                options["optimizations"] = case["optimizations"]
+            request("POST", session_url + "/run", headers=headers, json=options)
             published_ready = False
             deadline = time.monotonic() + args.timeout
             while True:

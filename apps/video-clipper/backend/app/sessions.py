@@ -145,7 +145,8 @@ class Sessions:
         await self.publish(session, status="running", stage="正在准备处理", progress=0, error=None,
                            output_url=None, output_bytes=None, output_duration_ms=None,
                            elapsed_s=None, timings=None,
-                           camera_type=options.camera_type, quality=options.quality, warnings=[])
+                           camera_type=options.camera_type, quality=options.quality,
+                           optimizations=options.optimizations.model_copy(), warnings=[])
 
     async def _run(self, session: Session):
         started = time.monotonic()

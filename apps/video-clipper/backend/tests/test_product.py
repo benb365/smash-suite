@@ -20,7 +20,7 @@ from modules.media.video import ffmpeg_exe, render, selected_ranges
 from app.trajectory_overlay import write_overlay
 from modules.trajectory.constraints import constrain_shots
 from app.input_policy import probe
-from app.product_types import ProcessRequest
+from app.product_types import JobState, ProcessRequest
 from app.runtime import Runtime
 from app.sessions import Sessions
 
@@ -41,6 +41,22 @@ def test_ranges_clip_sort_merge_and_reject_invalid():
         selected_ranges([dict(start_ms=float("nan"), end_ms=2)], 6000)
     with pytest.raises(ValueError):
         ProcessRequest(camera_type="courtside", court=[(0, 0), (1, 1), (1, 0), (0, 1)])
+
+
+@pytest.mark.parametrize(("camera", "dynamic_scan"), [
+    ("high", True), ("courtside", False), ("personal", False),
+])
+def test_process_request_fills_scene_optimization_defaults(camera, dynamic_scan):
+    options = ProcessRequest(camera_type=camera)
+    assert options.optimizations.model_dump() == dict(
+        limit_fps=True, small_input=True, grayscale=True, dynamic_scan=dynamic_scan)
+
+
+def test_process_request_preserves_explicit_false_and_fills_missing_optimization_fields():
+    options = ProcessRequest(camera_type="high", optimizations={"dynamic_scan": False, "limit_fps": False})
+    assert options.optimizations.model_dump() == dict(
+        limit_fps=False, small_input=True, grayscale=True, dynamic_scan=False)
+    assert JobState().optimizations is None
 
 
 def test_session_isolation_host_origin_and_no_history(tmp_path):

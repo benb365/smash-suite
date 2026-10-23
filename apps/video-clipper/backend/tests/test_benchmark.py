@@ -43,6 +43,8 @@ def test_high_statistics_switch_preserves_predictions_and_decode(tmp_path, monke
     class Predictor:
         def __init__(self, *args, statistics=None, **kwargs):
             self.statistics = statistics
+            self.input_size = self.content_size = (288, 512)
+            self.color_mode = "rgb"
         def __call__(self, images):
             self.statistics.add("tracknet_calls")
             return [ShuttlePoint(0., 0., 0.) for _ in images]
@@ -95,7 +97,9 @@ def test_recursive_process_coverage_and_work_bytes(tmp_path):
 
 
 @pytest.mark.parametrize("profile_wait, fail", [(False, False), (True, False), (False, True)])
-def test_runner_uses_product_http_lease_archive_and_original_timings(tmp_path, monkeypatch, profile_wait, fail):
+@pytest.mark.parametrize("optimizations", [None, dict(limit_fps=False, small_input=False, grayscale=False, dynamic_scan=False)])
+def test_runner_uses_product_http_lease_archive_and_original_timings(
+        tmp_path, monkeypatch, profile_wait, fail, optimizations):
     """Synthetic worker tests orchestration; it does not claim real model acceptance."""
     import shutil
     import threading
@@ -140,6 +144,8 @@ duration=render(directory/'source.mp4',directory/'output.mp4',[[100,900]],info,'
     output = tmp_path / "run"
     output.mkdir()
     case = dict(case_id="synthetic", scene="high", video=str(video), court=None, sha256=sha256(video), status="passed")
+    if optimizations is not None:
+        case["optimizations"] = optimizations
     args = Namespace(output=output, models=tmp_path, profile_wait=profile_wait, profile_timeout=10,
                      mps_signposts=False, no_statistics=profile_wait, py_spy_path=None, timeout=30)
     errors = []
@@ -179,6 +185,9 @@ duration=render(directory/'source.mp4',directory/'output.mp4',[[100,900]],info,'
     assert (evidence / "benchmark-clock.json").exists()
     spec = json.loads((evidence / "request.json").read_text())
     assert spec["benchmark"]["statistics_enabled"] is not profile_wait
+    expected = optimizations or dict(limit_fps=True, small_input=True, grayscale=True, dynamic_scan=True)
+    assert spec["options"]["optimizations"] == expected
+    assert spec["options"]["show_shot_paths"] is False
     assert result["statistics_enabled"] is not profile_wait
     assert not (evidence / "source.mp4").exists()
     assert result["artifacts"]["output.mp4"]["sha256"] == sha256(evidence / "output.mp4")
@@ -194,7 +203,9 @@ def test_file_scenario_statistics_switch_preserves_results(tmp_path, monkeypatch
     import torch
     monkeypatch.setattr(torch.backends.mps, "is_available", lambda: False)
     monkeypatch.setattr(torch.cuda, "is_available", lambda: False)
-    monkeypatch.setattr("modules.rally.recognize.TrackNetPredictor", lambda *a, **kw: object())
+    from types import SimpleNamespace
+    monkeypatch.setattr("modules.rally.recognize.TrackNetPredictor", lambda *a, **kw:
+                        SimpleNamespace(input_size=(288, 512), content_size=(288, 512), color_mode="rgb"))
     boxes = [dict(x1=0, y1=0, x2=10, y2=20), dict(x1=20, y1=20, x2=30, y2=40)]
     features = [dict(boxes=boxes, features=[[], []])] * 2
     monkeypatch.setattr("modules.rally.recognize.observe", lambda *a, **kw: ([{}] * 3, [{}] * 3, features))
@@ -211,7 +222,7 @@ def test_file_scenario_statistics_switch_preserves_results(tmp_path, monkeypatch
         monkeypatch.setattr("modules.rally.common.players_v2.select", lambda *a: ([dict(track_id=1), dict(track_id=2)], None))
         monkeypatch.setattr("modules.rally.common.players_v2.follow", lambda *a: [])
         monkeypatch.setattr("modules.rally.candidate_rally.candidate_motion", lambda *a, **kw: [])
-        monkeypatch.setattr("modules.rally.recognize.person_signals", lambda *a: dict(times=np.array([0., 1000.])))
+        monkeypatch.setattr("modules.rally.recognize.person_signals", lambda *a, **kw: dict(times=np.array([0., 1000.])))
         monkeypatch.setattr("modules.rally.common.feet.add_foot_signals", lambda *a: None)
         monkeypatch.setattr("modules.rally.scenarios.personal.predict", lambda *a: (predicted, {"synthetic": True}))
     outputs = []

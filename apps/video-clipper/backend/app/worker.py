@@ -27,6 +27,7 @@ def main(request_path: str):
     benchmark = spec.get("benchmark")
     statistics = Statistics(bool(benchmark) and benchmark.get("statistics_enabled", True))
     failure = None
+    resolved_optimizations = None
     try:
         # Third-party imports otherwise write settings outside the workspace.
         # YOLO appends its own subdirectory and requires this parent to exist.
@@ -39,6 +40,7 @@ def main(request_path: str):
         from app.product_types import ProcessRequest
         from modules.media.types import VideoInfo
         options = ProcessRequest(**spec["options"])
+        resolved_optimizations = options.optimizations.model_dump()
         info = VideoInfo(**spec["video"])
         from modules.rally.recognize import recognize
         if benchmark and benchmark.get("profile_wait"):
@@ -76,7 +78,7 @@ def main(request_path: str):
                 predictions, details = recognize(source, info, options.camera_type, weights,
                                                   lambda stage, fraction: event(stage, .08 + .72 * fraction),
                                                   directory, court=options.court, statistics=statistics,
-                                                  observation_sink=observation_sink)
+                                                  observation_sink=observation_sink, optimizations=resolved_optimizations)
             shot_paths = analyze(source, info, predictions, point_path, weights, directory,
                                  lambda stage, fraction: event(stage, .08 + .72 * fraction))
             (directory / "shot-paths.json").write_text(json.dumps(shot_paths, ensure_ascii=False), encoding="utf-8")
@@ -88,7 +90,8 @@ def main(request_path: str):
             if not show_shot_paths:
                 predictions, details = recognize(source, info, options.camera_type, weights,
                                                  lambda stage, fraction: event(stage, .08 + .72 * fraction),
-                                                 directory, court=options.court, statistics=statistics)
+                                                 directory, court=options.court, statistics=statistics,
+                                                 optimizations=resolved_optimizations)
         ranges = selected_ranges(predictions, info.duration_ms, padding_ms=500)
         event("正在生成带原声音的成片", .8, phase="rendering")
         if shot_paths is not None:
@@ -100,13 +103,15 @@ def main(request_path: str):
         duration_ms = (render(*render_args, overlay_ass=overlay_ass) if overlay_ass is not None
                        else render(*render_args))
         result = dict(predictions=predictions, export_ranges=ranges, output_duration_ms=duration_ms,
-                      quality=options.quality, padding_ms=500, **details)
+                      quality=options.quality, padding_ms=500,
+                      optimizations=resolved_optimizations, **details)
         (directory / "result.json").write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")
         return 0
     except Exception as exc:
         failure = str(exc)
         traceback.print_exc(file=sys.stderr)
-        (directory / "result.json").write_text(json.dumps(dict(error=str(exc)), ensure_ascii=False), encoding="utf-8")
+        (directory / "result.json").write_text(json.dumps(dict(error=str(exc),
+                                    optimizations=resolved_optimizations), ensure_ascii=False), encoding="utf-8")
         return 1
     finally:
         statistics.write(directory / "statistics.json", error=failure)

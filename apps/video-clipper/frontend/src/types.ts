@@ -1,6 +1,12 @@
 export type CameraType = 'high' | 'courtside' | 'personal';
 export type Quality = 'high' | 'balanced' | 'small';
 export type Point = [number, number];
+export type Optimizations = {
+  limit_fps: boolean;
+  small_input: boolean;
+  grayscale: boolean;
+  dynamic_scan: boolean;
+};
 export interface JobState {
   status: 'empty' | 'uploading' | 'ready' | 'running' | 'completed' | 'failed' | 'cancelled';
   stage: string;
@@ -14,6 +20,7 @@ export interface JobState {
   timings: { preparation_s: number; recognition_s: number; rendering_s: number } | null;
   error: string | null;
   warnings: string[];
+  optimizations: Optimizations | null;
 }
 export interface ScreenState {
   job: JobState;
@@ -23,6 +30,7 @@ export interface ScreenState {
   camera: CameraType;
   showShotPaths: boolean;
   quality: Quality;
+  optimizations: Optimizations;
   court: Point[];
   selectingCourt: boolean;
   notice: string;
@@ -33,8 +41,10 @@ export const emptyJob: JobState = {
   status: 'empty', stage: '选择一份 MP4 录像开始', progress: 0, video: null,
   output_url: null, output_bytes: null, output_duration_ms: null, rally_count: 0,
   elapsed_s: null, timings: null, error: null, warnings: [],
+  optimizations: null,
 };
 export const initialScreen: ScreenState = {
   job: emptyJob, online: false, uploadProgress: 0, saving: false, camera: 'high',
   showShotPaths: true, quality: 'balanced', court: [], selectingCourt: false, notice: '', error: '', canSave: true,
+  optimizations: { limit_fps: true, small_input: true, grayscale: true, dynamic_scan: true },
 };

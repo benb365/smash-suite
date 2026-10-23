@@ -50,7 +50,19 @@ A 保留原逐帧方案，C/D 已接入确认的改进并继续通过文件分�
 
 其他场景使用 `--scene courtside` 或 `--scene personal`；必要时用 `--court '[[0,0],[1,0],[1,1],[0,1]]'` 传入四个归一化主场角点。输出 `result.json` 包含原始回合区间、识别说明和设备信息，不导出成片，不施加产品的前后补时。
 
-Python 调用入口是 `recognize(source, info, camera_type, weights, progress, directory, court=None)`：`info` 由媒体模块的 `probe` 提供，`weights` 可由模型模块的 `ensure_models(required_models(camera_type))` 获取，`directory` 为调用者已创建的工作目录。产品负责界面请求到这些参数的转换。
+Python 调用入口是 `recognize(source, info, camera_type, weights, progress, directory, court=None, statistics=None, optimizations=None, observation_sink=None)`：`info` 由媒体模块的 `probe` 提供，`weights` 可由模型模块的 `ensure_models(required_models(camera_type))` 获取，`directory` 为调用者已创建的工作目录。产品负责界面请求到这些参数的转换。
+
+### 文件识别配置
+
+`optimizations` 接受 `limit_fps`、`small_input`、`grayscale`、`dynamic_scan` 四个布尔值。模块直接调用时省略的字段为关闭；产品先解析[场景默认值](../../apps/video-clipper/requirements.md#高级选项)，再显式传入完整配置。
+
+处理顺序为源时间选帧、三帧分组、模型输入处理和回合判断。35fps 上限保留原始帧号与时间戳，三帧组及每六帧人物观测按选中帧顺序调度；个人视角第二遍选帧使用相同规则，肩腕上下文仍取锚点后第 1、3、5 个选中帧。尺寸和灰度行为由[找球模型](../models/tracknet/README.md#调用)维护。
+
+动态粗筛只用于文件分析。每个源时间秒检查该相位首个完整三帧窗口，任一帧全局峰分数达到 0.5 即向两侧按三帧组扩展，包含首个全负停止组。同一相位的相同窗口只推理一次。C 保留基础和错位两相位及首尾补全；D 保留完整人物观测，候选控制姿态推理，已选锚点的肩腕上下文不受候选限制。跳过位置保留缺失观测与原时间，不直接裁断回合；A 用单个原分段器离线回放，不修改逐帧接口。
+
+结果的 `recognition` 保存有效开关、帧率上限、实际网络与有效图像尺寸（高、宽）、颜色模式，以及启用粗筛时的窗口计数。导出补时仍由应用独立处理。
+
+高视角可通过 `observation_sink` 逐条保存实际找球观测供球路分析复用；粗筛缺失位置不会作为模型观测写入，保留真实源帧号和时间。
 
 ## 效果评估
 

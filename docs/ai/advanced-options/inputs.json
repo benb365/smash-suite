@@ -1,0 +1,202 @@
+{
+  "cases": [
+    {
+      "scene": "high",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "court": null,
+      "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "status": "passed",
+      "metadata": {
+        "bytes": 70418255,
+        "container_duration_s": 168.091,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 25.0,
+        "container_frames": 4200,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "A-all-off",
+      "optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      }
+    },
+    {
+      "scene": "courtside",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+      "court": null,
+      "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "status": "passed",
+      "metadata": {
+        "bytes": 66256451,
+        "container_duration_s": 180.000313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.99994791675709,
+        "container_frames": 5400,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "C-all-off",
+      "optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      }
+    },
+    {
+      "scene": "personal",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+      "court": null,
+      "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "status": "passed",
+      "metadata": {
+        "bytes": 14278282,
+        "container_duration_s": 250.900313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.999962634562284,
+        "container_frames": 7527,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "D-all-off",
+      "optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      }
+    },
+    {
+      "scene": "high",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "court": null,
+      "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "status": "passed",
+      "metadata": {
+        "bytes": 70418255,
+        "container_duration_s": 168.091,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 25.0,
+        "container_frames": 4200,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "A-new-default"
+    },
+    {
+      "scene": "courtside",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+      "court": null,
+      "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "status": "passed",
+      "metadata": {
+        "bytes": 66256451,
+        "container_duration_s": 180.000313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.99994791675709,
+        "container_frames": 5400,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "C-new-default"
+    },
+    {
+      "scene": "personal",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+      "court": null,
+      "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "status": "passed",
+      "metadata": {
+        "bytes": 14278282,
+        "container_duration_s": 250.900313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.999962634562284,
+        "container_frames": 7527,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "D-new-default"
+    },
+    {
+      "scene": "courtside",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+      "court": null,
+      "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "status": "passed",
+      "metadata": {
+        "bytes": 66256451,
+        "container_duration_s": 180.000313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.99994791675709,
+        "container_frames": 5400,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "C-dynamic-on",
+      "optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      }
+    },
+    {
+      "scene": "personal",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+      "court": null,
+      "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "status": "passed",
+      "metadata": {
+        "bytes": 14278282,
+        "container_duration_s": 250.900313,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 29.999962634562284,
+        "container_frames": 7527,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "D-dynamic-on",
+      "optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      }
+    }
+  ]
+}

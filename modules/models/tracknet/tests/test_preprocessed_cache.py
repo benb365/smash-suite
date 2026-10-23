@@ -38,6 +38,11 @@ def predictor():
     instance.device = "cpu"
     instance.record_candidates = False
     instance.statistics = Counts()
+    instance.small_input = False
+    instance.grayscale = False
+    instance.input_size = (288, 512)
+    instance.content_size = (288, 512)
+    instance.color_mode = "rgb"
     instance.last_candidates = []
     instance._preprocessed_cache = __import__("collections").OrderedDict()
     instance._cache_peak_items = 0
@@ -115,7 +120,7 @@ def test_observe_keeps_window_and_tail_groups_then_releases_cache(monkeypatch):
     import modules.rally.recognize as recognize
 
     class FrameSource:
-        def __init__(self, source, mode):
+        def __init__(self, source, mode, max_fps=None):
             self.frames = [TimestampedFrame(i, i * 40, np.zeros((16, 24, 3), dtype=np.uint8))
                            for i in range(8)]
             self.stats = {"frames_delivered": len(self.frames), "frames_decoded": len(self.frames)}

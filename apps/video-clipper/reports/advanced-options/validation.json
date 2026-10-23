@@ -1,0 +1,1850 @@
+{
+  "schema_version": 1,
+  "status": "verified_single_run_per_case_no_accuracy_claim",
+  "host": {
+    "python": "3.11.16 (main, Sep 29 2026, 14:49:58) [Clang 22.1.3 ]",
+    "executable": "/Users/bytedance/workspace/experiments/smash-suite/.venv/bin/python",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "dependencies": {
+      "uvicorn": "0.54.0",
+      "websockets": "17.2",
+      "filelock": "4.2.4",
+      "watchfiles": "1.3.0",
+      "kiwisolver": "1.5.1",
+      "requests": "2.32.5",
+      "numpy": "2.2.6",
+      "click": "8.5.0",
+      "ultralytics-thop": "2.2.2",
+      "packaging": "26.3",
+      "pyinstaller": "6.16.0",
+      "uvloop": "0.23.0",
+      "scipy": "1.13.1",
+      "starlette": "1.9.0",
+      "altgraph": "0.17.5",
+      "ultralytics": "8.4.56",
+      "Pygments": "2.21.0",
+      "httptools": "0.9.0",
+      "pip": "24.0",
+      "networkx": "3.6.1",
+      "torch": "2.8.0",
+      "contourpy": "1.3.3",
+      "polars-runtime-32": "2.0.0",
+      "polars": "2.0.0",
+      "fastapi": "0.148.0",
+      "opentelemetry-api": "1.45.1",
+      "pyinstaller-hooks-contrib": "2026.8",
+      "iniconfig": "2.3.1",
+      "httpcore": "1.0.9",
+      "lap": "0.5.13",
+      "pillow": "13.0.0",
+      "sympy": "1.14.0",
+      "smash-suite": "0.2.0",
+      "pluggy": "1.7.0",
+      "torchvision": "0.23.0",
+      "pytest": "9.1.1",
+      "setuptools": "84.0.0",
+      "urllib3": "2.8.0",
+      "h11": "0.16.0",
+      "pydantic_core": "2.50.1",
+      "python-dateutil": "2.9.0.post0",
+      "mpmath": "1.3.0",
+      "certifi": "2026.10.18",
+      "PyYAML": "6.0.3",
+      "macholib": "1.16.4",
+      "fsspec": "2026.9.0",
+      "opencv-python": "5.0.0.93",
+      "matplotlib": "3.11.2",
+      "python-dotenv": "1.2.4",
+      "imageio-ffmpeg": "0.6.0",
+      "cycler": "0.12.1",
+      "Jinja2": "3.1.6",
+      "annotated-types": "0.8.0",
+      "annotated-doc": "0.0.5",
+      "typing-inspection": "0.4.4",
+      "av": "14.2.0",
+      "httpx": "0.28.1",
+      "typing_extensions": "4.16.0",
+      "MarkupSafe": "3.0.4",
+      "pydantic": "2.14.1",
+      "psutil": "7.2.2",
+      "fonttools": "4.67.0",
+      "charset-normalizer": "3.5.2",
+      "anyio": "4.15.1",
+      "pyparsing": "3.3.3",
+      "six": "1.17.0",
+      "idna": "3.20"
+    },
+    "cpu_count": 18,
+    "mps_available": true,
+    "cuda_available": false,
+    "ffmpeg_executable": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/imageio_ffmpeg/binaries/ffmpeg-macos-aarch64-v7.1",
+    "ffmpeg_sha256": "6d175a4743ca50256e89a8cdd731100f9cee33bd79aeea46894d209410dc6617",
+    "ffmpeg_version": "ffmpeg version 7.1 Copyright (c) 2000-2024 the FFmpeg developers\nbuilt with Apple clang version 13.1.6 (clang-1316.0.21.2.5)\nconfiguration: --prefix=/Volumes/tempdisk/sw --extra-cflags=-fno-stack-check --arch=arm64 --cc=/usr/bin/clang --enable-gpl --enable-libvmaf --enable-libopenjpeg --enable-libopus --enable-libmp3lame --enable-libx264 --enable-libx265 --enable-libvpx --enable-libwebp --enable-libass --enable-libfreetype --enable-fontconfig --enable-libtheora --enable-libvorbis --enable-libsnappy --enable-libaom --enable-libvidstab --enable-libzimg --enable-libsvtav1 --enable-libharfbuzz --enable-libkvazaar --pkg-config-flags=--static --enable-ffplay --enable-postproc --enable-neon --enable-runtime-cpudetect --disable-indev=qtkit --disable-indev=x11grab_xcb\nlibavutil      59. 39.100 / 59. 39.100\nlibavcodec     61. 19.100 / 61. 19.100\nlibavformat    61.  7.100 / 61.  7.100\nlibavdevice    61.  3.100 / 61.  3.100\nlibavfilter    10.  4.100 / 10.  4.100\nlibswscale      8.  3.100 /  8.  3.100\nlibswresample   5.  3.100 /  5.  3.100\nlibpostproc    58.  3.100 / 58.  3.100\n",
+    "threads": {
+      "worker_env": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "OMP_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "torch_intraop": 4,
+      "opencv": 1,
+      "pose_device": "cpu",
+      "model_device": "automatic"
+    }
+  },
+  "run_manifest_sha256": "3e75e3ed47a8265f2ba480f80bc5ffa8d01de5a6b1ea8f835dedb0195b53120f",
+  "cases": {
+    "A-all-off": {
+      "case_id": "A-all-off",
+      "input_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "requested_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      },
+      "effective_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      },
+      "recognition_parameters": {
+        "max_fps": null,
+        "tracknet_input_size": [
+          288,
+          512
+        ],
+        "tracknet_content_size": [
+          288,
+          512
+        ],
+        "tracknet_color_mode": "rgb"
+      },
+      "padding_ms": 500,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 3640.0,
+          "end_ms": 9600.0,
+          "emitted_at_ms": 11240.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24480.0,
+          "end_ms": 31400.0,
+          "emitted_at_ms": 33080.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 47280.0,
+          "end_ms": 56720.0,
+          "emitted_at_ms": 58400.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 101080.0,
+          "end_ms": 108800.0,
+          "emitted_at_ms": 110480.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 142440.0,
+          "end_ms": 153840.0,
+          "emitted_at_ms": 155480.0
+        }
+      ],
+      "export_ranges": [
+        [
+          3140.0,
+          10100.0
+        ],
+        [
+          23980.0,
+          31900.0
+        ],
+        [
+          46780.0,
+          57220.0
+        ],
+        [
+          100580.0,
+          109300.0
+        ],
+        [
+          141940.0,
+          154340.0
+        ]
+      ],
+      "timings": {
+        "preparation_s": 0.5066571249626577,
+        "recognition_s": 37.98369641718455,
+        "rendering_s": 9.378464167006314,
+        "total_s": 47.86881770915352
+      },
+      "output": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/A-all-off/evidence/output.mp4",
+        "bytes": 16834404,
+        "sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+        "full_decode": "passed"
+      },
+      "output_ranges_match_worker_result": true,
+      "actual_state_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      }
+    },
+    "C-all-off": {
+      "case_id": "C-all-off",
+      "input_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "requested_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      },
+      "effective_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      },
+      "recognition_parameters": {
+        "max_fps": null,
+        "tracknet_input_size": [
+          288,
+          512
+        ],
+        "tracknet_content_size": [
+          288,
+          512
+        ],
+        "tracknet_color_mode": "rgb"
+      },
+      "padding_ms": 500,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 7700.0,
+          "end_ms": 10800.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 14167.0,
+          "end_ms": 20267.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24133.0,
+          "end_ms": 44833.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 49567.0,
+          "end_ms": 67367.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 70533.0,
+          "end_ms": 88033.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 91500.0,
+          "end_ms": 103000.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 120933.0,
+          "end_ms": 133600.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 149233.0,
+          "end_ms": 153533.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 170267.0,
+          "end_ms": 178467.0,
+          "emitted_at_ms": 179967.0
+        }
+      ],
+      "export_ranges": [
+        [
+          7200.0,
+          11300.0
+        ],
+        [
+          13667.0,
+          20767.0
+        ],
+        [
+          23633.0,
+          45333.0
+        ],
+        [
+          49067.0,
+          67867.0
+        ],
+        [
+          70033.0,
+          88533.0
+        ],
+        [
+          91000.0,
+          103500.0
+        ],
+        [
+          120433.0,
+          134100.0
+        ],
+        [
+          148733.0,
+          154033.0
+        ],
+        [
+          169767.0,
+          178967.0
+        ]
+      ],
+      "timings": {
+        "preparation_s": 0.3234564589802176,
+        "recognition_s": 112.65627583302557,
+        "rendering_s": 20.23622391698882,
+        "total_s": 133.2159562089946
+      },
+      "output": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/C-all-off/evidence/output.mp4",
+        "bytes": 44465082,
+        "sha256": "4f16419abb135c1866e55f09b24e88fa35b586c2c60c780280bb79d9a2df0519",
+        "full_decode": "passed"
+      },
+      "output_ranges_match_worker_result": true,
+      "actual_state_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      }
+    },
+    "D-all-off": {
+      "case_id": "D-all-off",
+      "input_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "requested_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      },
+      "effective_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      },
+      "recognition_parameters": {
+        "max_fps": null,
+        "tracknet_input_size": [
+          288,
+          512
+        ],
+        "tracknet_content_size": [
+          288,
+          512
+        ],
+        "tracknet_color_mode": "rgb"
+      },
+      "padding_ms": 500,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 0,
+          "end_ms": 7200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 18900.0,
+          "end_ms": 27000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 29700.0,
+          "end_ms": 42000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 50300.0,
+          "end_ms": 55000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 63500.0,
+          "end_ms": 68600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 77500.0,
+          "end_ms": 90000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 100900.0,
+          "end_ms": 108000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 115500.0,
+          "end_ms": 129600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 137100.0,
+          "end_ms": 145600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 10,
+          "start_ms": 153100.0,
+          "end_ms": 176800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 11,
+          "start_ms": 198700.0,
+          "end_ms": 207800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 12,
+          "start_ms": 215700.0,
+          "end_ms": 233000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 13,
+          "start_ms": 241300.0,
+          "end_ms": 246200.0,
+          "emitted_at_ms": 250900.3125
+        }
+      ],
+      "export_ranges": [
+        [
+          0,
+          7700.0
+        ],
+        [
+          18400.0,
+          27500.0
+        ],
+        [
+          29200.0,
+          42500.0
+        ],
+        [
+          49800.0,
+          55500.0
+        ],
+        [
+          63000.0,
+          69100.0
+        ],
+        [
+          77000.0,
+          90500.0
+        ],
+        [
+          100400.0,
+          108500.0
+        ],
+        [
+          115000.0,
+          130100.0
+        ],
+        [
+          136600.0,
+          146100.0
+        ],
+        [
+          152600.0,
+          177300.0
+        ],
+        [
+          198200.0,
+          208300.0
+        ],
+        [
+          215200.0,
+          233500.0
+        ],
+        [
+          240800.0,
+          246700.0
+        ]
+      ],
+      "timings": {
+        "preparation_s": 0.5489897078368813,
+        "recognition_s": 275.9558669591788,
+        "rendering_s": 13.25529258302413,
+        "total_s": 289.76014925003983
+      },
+      "output": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/D-all-off/evidence/output.mp4",
+        "bytes": 20814940,
+        "sha256": "f97c720cda23768819373766cb49f5c3531179a879fdfa0dc043f497726d5eed",
+        "full_decode": "passed"
+      },
+      "output_ranges_match_worker_result": true,
+      "actual_state_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      }
+    },
+    "A-new-default": {
+      "case_id": "A-new-default",
+      "input_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "requested_optimizations": null,
+      "effective_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      },
+      "recognition_parameters": {
+        "max_fps": 35,
+        "tracknet_input_size": [
+          184,
+          320
+        ],
+        "tracknet_content_size": [
+          180,
+          320
+        ],
+        "tracknet_color_mode": "gray"
+      },
+      "padding_ms": 500,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 3960.0,
+          "end_ms": 9320.0,
+          "emitted_at_ms": 11000.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24520.0,
+          "end_ms": 31360.0,
+          "emitted_at_ms": 33080.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 48120.0,
+          "end_ms": 56400.0,
+          "emitted_at_ms": 58040.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 101880.0,
+          "end_ms": 108440.0,
+          "emitted_at_ms": 110120.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 142440.0,
+          "end_ms": 153840.0,
+          "emitted_at_ms": 155480.0
+        }
+      ],
+      "export_ranges": [
+        [
+          3460.0,
+          9820.0
+        ],
+        [
+          24020.0,
+          31860.0
+        ],
+        [
+          47620.0,
+          56900.0
+        ],
+        [
+          101380.0,
+          108940.0
+        ],
+        [
+          141940.0,
+          154340.0
+        ]
+      ],
+      "timings": {
+        "preparation_s": 0.44105804106220603,
+        "recognition_s": 21.311310874996707,
+        "rendering_s": 8.01467025000602,
+        "total_s": 29.767039166064933
+      },
+      "output": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/A-new-default/evidence/output.mp4",
+        "bytes": 15825819,
+        "sha256": "9f52c4260684cad0c10971986e7b22ec44fa4f2d65c0f1596eababd5f2184e62",
+        "full_decode": "passed"
+      },
+      "output_ranges_match_worker_result": true,
+      "actual_state_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      }
+    },
+    "C-new-default": {
+      "case_id": "C-new-default",
+      "input_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "requested_optimizations": null,
+      "effective_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": false
+      },
+      "recognition_parameters": {
+        "max_fps": 35,
+        "tracknet_input_size": [
+          184,
+          320
+        ],
+        "tracknet_content_size": [
+          180,
+          320
+        ],
+        "tracknet_color_mode": "gray"
+      },
+      "padding_ms": 500,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 14133.0,
+          "end_ms": 17733.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 24500.0,
+          "end_ms": 44400.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 49533.0,
+          "end_ms": 67167.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 75833.0,
+          "end_ms": 86467.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 96533.0,
+          "end_ms": 108967.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 120933.0,
+          "end_ms": 133567.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 149133.0,
+          "end_ms": 153600.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 170267.0,
+          "end_ms": 179533.0,
+          "emitted_at_ms": 179967.0
+        }
+      ],
+      "export_ranges": [
+        [
+          13633.0,
+          18233.0
+        ],
+        [
+          24000.0,
+          44900.0
+        ],
+        [
+          49033.0,
+          67667.0
+        ],
+        [
+          75333.0,
+          86967.0
+        ],
+        [
+          96033.0,
+          109467.0
+        ],
+        [
+          120433.0,
+          134067.0
+        ],
+        [
+          148633.0,
+          154100.0
+        ],
+        [
+          169767.0,
+          180000.3125
+        ]
+      ],
+      "timings": {
+        "preparation_s": 0.32395237497985363,
+        "recognition_s": 99.34346716688015,
+        "rendering_s": 16.69606279209256,
+        "total_s": 116.36348233395256
+      },
+      "output": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/C-new-default/evidence/output.mp4",
+        "bytes": 40011730,
+        "sha256": "a96778edc4efe1e10052f7993e421e85df0a1e8ee387363f11fe1095dbe0a698",
+        "full_decode": "passed"
+      },
+      "output_ranges_match_worker_result": true,
+      "actual_state_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": false
+      }
+    },
+    "D-new-default": {
+      "case_id": "D-new-default",
+      "input_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "requested_optimizations": null,
+      "effective_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": false
+      },
+      "recognition_parameters": {
+        "max_fps": 35,
+        "tracknet_input_size": [
+          184,
+          320
+        ],
+        "tracknet_content_size": [
+          180,
+          320
+        ],
+        "tracknet_color_mode": "gray"
+      },
+      "padding_ms": 500,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 0,
+          "end_ms": 7200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 18900.0,
+          "end_ms": 27000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 29700.0,
+          "end_ms": 42000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 50300.0,
+          "end_ms": 55000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 63500.0,
+          "end_ms": 68600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 77500.0,
+          "end_ms": 89600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 101100.0,
+          "end_ms": 108000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 115500.0,
+          "end_ms": 129200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 9,
+          "start_ms": 137100.0,
+          "end_ms": 145600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 10,
+          "start_ms": 153100.0,
+          "end_ms": 176800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 11,
+          "start_ms": 198700.0,
+          "end_ms": 207800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 12,
+          "start_ms": 215700.0,
+          "end_ms": 233000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 13,
+          "start_ms": 241300.0,
+          "end_ms": 246200.0,
+          "emitted_at_ms": 250900.3125
+        }
+      ],
+      "export_ranges": [
+        [
+          0,
+          7700.0
+        ],
+        [
+          18400.0,
+          27500.0
+        ],
+        [
+          29200.0,
+          42500.0
+        ],
+        [
+          49800.0,
+          55500.0
+        ],
+        [
+          63000.0,
+          69100.0
+        ],
+        [
+          77000.0,
+          90100.0
+        ],
+        [
+          100600.0,
+          108500.0
+        ],
+        [
+          115000.0,
+          129700.0
+        ],
+        [
+          136600.0,
+          146100.0
+        ],
+        [
+          152600.0,
+          177300.0
+        ],
+        [
+          198200.0,
+          208300.0
+        ],
+        [
+          215200.0,
+          233500.0
+        ],
+        [
+          240800.0,
+          246700.0
+        ]
+      ],
+      "timings": {
+        "preparation_s": 0.568074791925028,
+        "recognition_s": 274.90100787510164,
+        "rendering_s": 14.215942166978493,
+        "total_s": 289.68502483400516
+      },
+      "output": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/D-new-default/evidence/output.mp4",
+        "bytes": 20668985,
+        "sha256": "a49c5b9e1e0c3663d2595d345aca754c7c471f87b06e144b113d57de70b58b0a",
+        "full_decode": "passed"
+      },
+      "output_ranges_match_worker_result": true,
+      "actual_state_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": false
+      }
+    },
+    "C-dynamic-on": {
+      "case_id": "C-dynamic-on",
+      "input_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "requested_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      },
+      "effective_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      },
+      "recognition_parameters": {
+        "max_fps": 35,
+        "tracknet_input_size": [
+          184,
+          320
+        ],
+        "tracknet_content_size": [
+          180,
+          320
+        ],
+        "tracknet_color_mode": "gray"
+      },
+      "padding_ms": 500,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 14133.0,
+          "end_ms": 17733.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 24500.0,
+          "end_ms": 44400.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 49533.0,
+          "end_ms": 67167.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 75833.0,
+          "end_ms": 86467.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 96533.0,
+          "end_ms": 108967.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 120933.0,
+          "end_ms": 133567.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 149133.0,
+          "end_ms": 153600.0,
+          "emitted_at_ms": 179967.0
+        },
+        {
+          "rally_id": 8,
+          "start_ms": 170267.0,
+          "end_ms": 179533.0,
+          "emitted_at_ms": 179967.0
+        }
+      ],
+      "export_ranges": [
+        [
+          13633.0,
+          18233.0
+        ],
+        [
+          24000.0,
+          44900.0
+        ],
+        [
+          49033.0,
+          67667.0
+        ],
+        [
+          75333.0,
+          86967.0
+        ],
+        [
+          96033.0,
+          109467.0
+        ],
+        [
+          120433.0,
+          134067.0
+        ],
+        [
+          148633.0,
+          154100.0
+        ],
+        [
+          169767.0,
+          180000.3125
+        ]
+      ],
+      "timings": {
+        "preparation_s": 0.4859112079720944,
+        "recognition_s": 89.55516662495211,
+        "rendering_s": 16.92552833398804,
+        "total_s": 106.96660616691224
+      },
+      "output": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/C-dynamic-on/evidence/output.mp4",
+        "bytes": 40011730,
+        "sha256": "a96778edc4efe1e10052f7993e421e85df0a1e8ee387363f11fe1095dbe0a698",
+        "full_decode": "passed"
+      },
+      "output_ranges_match_worker_result": true,
+      "actual_state_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      }
+    },
+    "D-dynamic-on": {
+      "case_id": "D-dynamic-on",
+      "input_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "requested_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      },
+      "effective_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      },
+      "recognition_parameters": {
+        "max_fps": 35,
+        "tracknet_input_size": [
+          184,
+          320
+        ],
+        "tracknet_content_size": [
+          180,
+          320
+        ],
+        "tracknet_color_mode": "gray"
+      },
+      "padding_ms": 500,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 32500.0,
+          "end_ms": 38600.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 83100.0,
+          "end_ms": 89000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 120500.0,
+          "end_ms": 129200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 137100.0,
+          "end_ms": 141000.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 215900.0,
+          "end_ms": 219800.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 222100.0,
+          "end_ms": 227200.0,
+          "emitted_at_ms": 250900.3125
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 242100.0,
+          "end_ms": 245800.0,
+          "emitted_at_ms": 250900.3125
+        }
+      ],
+      "export_ranges": [
+        [
+          32000.0,
+          39100.0
+        ],
+        [
+          82600.0,
+          89500.0
+        ],
+        [
+          120000.0,
+          129700.0
+        ],
+        [
+          136600.0,
+          141500.0
+        ],
+        [
+          215400.0,
+          220300.0
+        ],
+        [
+          221600.0,
+          227700.0
+        ],
+        [
+          241600.0,
+          246300.0
+        ]
+      ],
+      "timings": {
+        "preparation_s": 0.5793349160812795,
+        "recognition_s": 140.9413418341428,
+        "rendering_s": 4.985561499837786,
+        "total_s": 146.50623825006187
+      },
+      "output": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/D-dynamic-on/evidence/output.mp4",
+        "bytes": 6478563,
+        "sha256": "cabad6aa36cc0f811fceede4f5a958a55009e60184efdbfe0abca2efdff7a178",
+        "full_decode": "passed"
+      },
+      "output_ranges_match_worker_result": true,
+      "actual_state_optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      }
+    }
+  },
+  "comparisons_to_all_off": {
+    "A-new-default": {
+      "comparison_baseline": "high-all-off",
+      "total_delta_s": -18.101778543088585,
+      "total_reduction_fraction": 0.3781538673688017,
+      "recognition_delta_s": -16.67238554218784,
+      "export_ranges": {
+        "equal": false,
+        "baseline_count": 5,
+        "candidate_count": 5,
+        "exact_intervals_removed": [
+          [
+            3140.0,
+            10100.0
+          ],
+          [
+            23980.0,
+            31900.0
+          ],
+          [
+            46780.0,
+            57220.0
+          ],
+          [
+            100580.0,
+            109300.0
+          ]
+        ],
+        "exact_intervals_added": [
+          [
+            3460.0,
+            9820.0
+          ],
+          [
+            24020.0,
+            31860.0
+          ],
+          [
+            47620.0,
+            56900.0
+          ],
+          [
+            101380.0,
+            108940.0
+          ]
+        ],
+        "index_boundary_deltas_ms": [
+          {
+            "index": 0,
+            "start": 320.0,
+            "end": -280.0
+          },
+          {
+            "index": 1,
+            "start": 40.0,
+            "end": -40.0
+          },
+          {
+            "index": 2,
+            "start": 840.0,
+            "end": -320.0
+          },
+          {
+            "index": 3,
+            "start": 800.0,
+            "end": -360.0
+          },
+          {
+            "index": 4,
+            "start": 0.0,
+            "end": 0.0
+          }
+        ]
+      }
+    },
+    "C-new-default": {
+      "comparison_baseline": "courtside-all-off",
+      "total_delta_s": -16.85247387504205,
+      "total_reduction_fraction": 0.12650491994069543,
+      "recognition_delta_s": -13.312808666145429,
+      "export_ranges": {
+        "equal": false,
+        "baseline_count": 9,
+        "candidate_count": 8,
+        "exact_intervals_removed": [
+          [
+            7200.0,
+            11300.0
+          ],
+          [
+            13667.0,
+            20767.0
+          ],
+          [
+            23633.0,
+            45333.0
+          ],
+          [
+            49067.0,
+            67867.0
+          ],
+          [
+            70033.0,
+            88533.0
+          ],
+          [
+            91000.0,
+            103500.0
+          ],
+          [
+            120433.0,
+            134100.0
+          ],
+          [
+            148733.0,
+            154033.0
+          ],
+          [
+            169767.0,
+            178967.0
+          ]
+        ],
+        "exact_intervals_added": [
+          [
+            13633.0,
+            18233.0
+          ],
+          [
+            24000.0,
+            44900.0
+          ],
+          [
+            49033.0,
+            67667.0
+          ],
+          [
+            75333.0,
+            86967.0
+          ],
+          [
+            96033.0,
+            109467.0
+          ],
+          [
+            120433.0,
+            134067.0
+          ],
+          [
+            148633.0,
+            154100.0
+          ],
+          [
+            169767.0,
+            180000.3125
+          ]
+        ]
+      }
+    },
+    "D-new-default": {
+      "comparison_baseline": "personal-all-off",
+      "total_delta_s": -0.07512441603466868,
+      "total_reduction_fraction": 0.0002592641404592953,
+      "recognition_delta_s": -1.0548590840771794,
+      "export_ranges": {
+        "equal": false,
+        "baseline_count": 13,
+        "candidate_count": 13,
+        "exact_intervals_removed": [
+          [
+            77000.0,
+            90500.0
+          ],
+          [
+            100400.0,
+            108500.0
+          ],
+          [
+            115000.0,
+            130100.0
+          ]
+        ],
+        "exact_intervals_added": [
+          [
+            77000.0,
+            90100.0
+          ],
+          [
+            100600.0,
+            108500.0
+          ],
+          [
+            115000.0,
+            129700.0
+          ]
+        ],
+        "index_boundary_deltas_ms": [
+          {
+            "index": 0,
+            "start": 0,
+            "end": 0.0
+          },
+          {
+            "index": 1,
+            "start": 0.0,
+            "end": 0.0
+          },
+          {
+            "index": 2,
+            "start": 0.0,
+            "end": 0.0
+          },
+          {
+            "index": 3,
+            "start": 0.0,
+            "end": 0.0
+          },
+          {
+            "index": 4,
+            "start": 0.0,
+            "end": 0.0
+          },
+          {
+            "index": 5,
+            "start": 0.0,
+            "end": -400.0
+          },
+          {
+            "index": 6,
+            "start": 200.0,
+            "end": 0.0
+          },
+          {
+            "index": 7,
+            "start": 0.0,
+            "end": -400.0
+          },
+          {
+            "index": 8,
+            "start": 0.0,
+            "end": 0.0
+          },
+          {
+            "index": 9,
+            "start": 0.0,
+            "end": 0.0
+          },
+          {
+            "index": 10,
+            "start": 0.0,
+            "end": 0.0
+          },
+          {
+            "index": 11,
+            "start": 0.0,
+            "end": 0.0
+          },
+          {
+            "index": 12,
+            "start": 0.0,
+            "end": 0.0
+          }
+        ]
+      }
+    },
+    "C-dynamic-on": {
+      "comparison_baseline": "courtside-all-off",
+      "total_delta_s": -26.24935004208237,
+      "total_reduction_fraction": 0.19704358838892633,
+      "recognition_delta_s": -23.101109208073467,
+      "export_ranges": {
+        "equal": false,
+        "baseline_count": 9,
+        "candidate_count": 8,
+        "exact_intervals_removed": [
+          [
+            7200.0,
+            11300.0
+          ],
+          [
+            13667.0,
+            20767.0
+          ],
+          [
+            23633.0,
+            45333.0
+          ],
+          [
+            49067.0,
+            67867.0
+          ],
+          [
+            70033.0,
+            88533.0
+          ],
+          [
+            91000.0,
+            103500.0
+          ],
+          [
+            120433.0,
+            134100.0
+          ],
+          [
+            148733.0,
+            154033.0
+          ],
+          [
+            169767.0,
+            178967.0
+          ]
+        ],
+        "exact_intervals_added": [
+          [
+            13633.0,
+            18233.0
+          ],
+          [
+            24000.0,
+            44900.0
+          ],
+          [
+            49033.0,
+            67667.0
+          ],
+          [
+            75333.0,
+            86967.0
+          ],
+          [
+            96033.0,
+            109467.0
+          ],
+          [
+            120433.0,
+            134067.0
+          ],
+          [
+            148633.0,
+            154100.0
+          ],
+          [
+            169767.0,
+            180000.3125
+          ]
+        ]
+      }
+    },
+    "D-dynamic-on": {
+      "comparison_baseline": "personal-all-off",
+      "total_delta_s": -143.25391099997796,
+      "total_reduction_fraction": 0.494387897613765,
+      "recognition_delta_s": -135.01452512503602,
+      "export_ranges": {
+        "equal": false,
+        "baseline_count": 13,
+        "candidate_count": 7,
+        "exact_intervals_removed": [
+          [
+            0,
+            7700.0
+          ],
+          [
+            18400.0,
+            27500.0
+          ],
+          [
+            29200.0,
+            42500.0
+          ],
+          [
+            49800.0,
+            55500.0
+          ],
+          [
+            63000.0,
+            69100.0
+          ],
+          [
+            77000.0,
+            90500.0
+          ],
+          [
+            100400.0,
+            108500.0
+          ],
+          [
+            115000.0,
+            130100.0
+          ],
+          [
+            136600.0,
+            146100.0
+          ],
+          [
+            152600.0,
+            177300.0
+          ],
+          [
+            198200.0,
+            208300.0
+          ],
+          [
+            215200.0,
+            233500.0
+          ],
+          [
+            240800.0,
+            246700.0
+          ]
+        ],
+        "exact_intervals_added": [
+          [
+            32000.0,
+            39100.0
+          ],
+          [
+            82600.0,
+            89500.0
+          ],
+          [
+            120000.0,
+            129700.0
+          ],
+          [
+            136600.0,
+            141500.0
+          ],
+          [
+            215400.0,
+            220300.0
+          ],
+          [
+            221600.0,
+            227700.0
+          ],
+          [
+            241600.0,
+            246300.0
+          ]
+        ]
+      }
+    }
+  },
+  "frozen_baseline_output_comparison": {
+    "A-all-off": {
+      "status": "output-identical-to-frozen-baseline",
+      "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "old_run_git_commit": "f19450b0595acfbcfb37047f202af3bc4d2704f2",
+      "old_run_code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb"
+      },
+      "old_result_json_sha256": "99c13ec57f1e711c93d84afcdfbf6545adf04973e01447a3f66b5540501c2c79",
+      "current_result_json_sha256": "9ec8224caff2eb4c3876ad5be4483368692af204975720317f6f77b2fcdca95d",
+      "predictions_equal": true,
+      "export_ranges_equal": true,
+      "old_baseline_timings_seconds": {
+        "preparation_s": 2.949201500043273,
+        "recognition_s": 35.359510000096634,
+        "rendering_s": 8.0829937919043,
+        "total_s": 46.39170529204421
+      },
+      "old_baseline_timings_comparison": "archived reference only; not a same-session performance control"
+    },
+    "C-all-off": {
+      "status": "output-identical-to-frozen-baseline",
+      "video_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "old_run_git_commit": "f19450b0595acfbcfb37047f202af3bc4d2704f2",
+      "old_run_code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb"
+      },
+      "old_result_json_sha256": "acd63a41ddd29978d1db6701958787a5efe1cf3fcdd292c2c0d88d6e7babc24d",
+      "current_result_json_sha256": "d81a20d835436a80c34578141a269a95b78afed8d7d3d107904d44f075a26a75",
+      "predictions_equal": true,
+      "export_ranges_equal": true,
+      "old_baseline_timings_seconds": {
+        "preparation_s": 2.6900949999690056,
+        "recognition_s": 98.40071720909327,
+        "rendering_s": 19.687295916024595,
+        "total_s": 120.77810812508687
+      },
+      "old_baseline_timings_comparison": "archived reference only; not a same-session performance control"
+    },
+    "D-all-off": {
+      "status": "output-identical-to-frozen-baseline",
+      "video_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "old_run_git_commit": "f19450b0595acfbcfb37047f202af3bc4d2704f2",
+      "old_run_code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb"
+      },
+      "old_result_json_sha256": "0eaa6f3269bb362f9ddc33661d12bfab67b6349a19bb723bad8647e07d2eff23",
+      "current_result_json_sha256": "821a0411f6868caa3215a13a2da8fa707d8155ff0ec48acf76224396a7d35314",
+      "predictions_equal": true,
+      "export_ranges_equal": true,
+      "old_baseline_timings_seconds": {
+        "preparation_s": 2.6432755840942264,
+        "recognition_s": 275.1372532499954,
+        "rendering_s": 12.375133749796078,
+        "total_s": 290.1556625838857
+      },
+      "old_baseline_timings_comparison": "archived reference only; not a same-session performance control"
+    }
+  },
+  "implementation_boundary": {
+    "benchmark_start_head": "41ad27da46c08e10ec7e39ce8efa7b15471caf3d",
+    "trajectory_overlay_integrated_head": "4f1b7a1",
+    "measurement_note": "HEAD changed from the benchmark-start revision to 4f1b7a1 while cases ran; the three old short baselines have identical predictions and export ranges. A all-off and A default were recorded before the overlay integration and have no shot-paths.json. C/D are unaffected by show_shot_paths because the worker gates the feature to high view. The separate A show-paths case verifies the integrated feature.",
+    "a_without_overlay_cases": [
+      "A-all-off",
+      "A-new-default"
+    ],
+    "c_d_show_flag_scope": "high view only"
+  },
+  "shot_path_integration": {
+    "status": "integrated-feature-verified",
+    "case_id": "A-default-show-paths",
+    "input_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+    "show_shot_paths": true,
+    "effective_optimizations": {
+      "limit_fps": true,
+      "small_input": true,
+      "grayscale": true,
+      "dynamic_scan": true
+    },
+    "predictions_equal_to_A_new_default": true,
+    "export_ranges_equal_to_A_new_default": true,
+    "padding_ms": 500,
+    "yolo_weight": {
+      "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+      "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+    },
+    "yolo_weight_source": "existing local model cache; no download",
+    "artifacts": {
+      "shot-paths.json": {
+        "bytes": 37358,
+        "sha256": "142fa555f35766abb555f18f8d3865ed9cfb3a0278c6fcafa49380d8260812a5"
+      },
+      "trajectory-overlay.ass": {
+        "bytes": 8746,
+        "sha256": "af8a3193162bbfba272a2c1c4dd1fccec17d81d84c179b50b59be013bf111406"
+      },
+      "ball-observations.jsonl": {
+        "bytes": 160032,
+        "sha256": "3904b993913a6102752ac93642c54c0bff100e2e3774aec99fcc99d30a51c4ba"
+      },
+      "output.mp4": {
+        "bytes": 15617971,
+        "sha256": "cc224b8f2a5940e22b0896d80adef2267a91fc1de07e62ad153564fe68d8669b"
+      }
+    },
+    "timings": {
+      "preparation_s": 0.5039956669788808,
+      "recognition_s": 66.85810129111633,
+      "rendering_s": 7.947777999797836,
+      "total_s": 75.30987495789304
+    },
+    "output_full_decode": "passed",
+    "performance_comparison": "integration-only; excluded from the eight-case performance comparison"
+  },
+  "review_data": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/review.json"
+}

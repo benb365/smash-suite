@@ -44,9 +44,23 @@ def heatmap_candidates(heatmap, *, width, height):
     return dict(global_peak=peak, largest_region=largest, peaks=peaks[:32],
                 peak_floor=.1, max_peaks=32)
 
+
+def _fold_grayscale_first_layer(model):
+    import torch
+
+    conv = model.conv2d_1.conv
+    if conv.in_channels != 9 or conv.groups != 1:
+        raise ValueError("Grayscale TrackNet requires an ungrouped 9-channel first layer")
+    old_weight = conv.weight
+    folded = old_weight.detach().reshape(conv.out_channels, 3, 3, *old_weight.shape[-2:]).sum(dim=2)
+    conv.weight = torch.nn.Parameter(folded, requires_grad=old_weight.requires_grad)
+    conv.in_channels = 3
+
+
 class TrackNetPredictor:
     """TrackNet inference and the recorded point/candidate decoder."""
-    def __init__(self, weight=None, *, device="cpu", record_candidates=False, statistics=None):
+    def __init__(self, weight=None, *, device="cpu", record_candidates=False, statistics=None,
+                 small_input=False, grayscale=False):
         import torch
         from .model import TrackNet
         from modules.models.assets import ensure_models
@@ -55,12 +69,19 @@ class TrackNetPredictor:
         self.torch, self.device = torch, device
         self.record_candidates = record_candidates
         self.statistics = statistics
+        self.small_input = bool(small_input)
+        self.grayscale = bool(grayscale)
+        self.input_size = (288, 512)
+        self.content_size = (288, 512)
+        self.color_mode = "gray" if self.grayscale else "rgb"
         self.last_candidates = []
         self._preprocessed_cache = OrderedDict()
         self._cache_peak_items = 0
         torch.set_num_threads(4)
         self.model = TrackNet()
         self.model.load_state_dict(torch.load(weight, map_location="cpu", weights_only=True))
+        if self.grayscale:
+            _fold_grayscale_first_layer(self.model)
         self.model.eval().to(device)
 
     def __call__(self, frames: list[Any], *, frame_ids: list[int] | None = None) -> list[ShuttlePoint]:
@@ -73,6 +94,7 @@ class TrackNetPredictor:
             raise ValueError("frame_ids must match frames")
         use_cache = frame_ids is not None
         tensors = []
+        content_sizes = []
         for index, frame in enumerate(frames):
             frame_id = frame_ids[index] if use_cache else None
             if use_cache and frame_id in self._preprocessed_cache:
@@ -80,10 +102,25 @@ class TrackNetPredictor:
                 self._preprocessed_cache[frame_id] = tensor
                 if self.statistics is not None:
                     self.statistics.add("tracknet_cache_hits")
+                content_size = self._content_dimensions(frame)
             else:
-                rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-                tensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float().div_(255)
-                tensor = resize(tensor, [288, 512], antialias=True)
+                if self.grayscale:
+                    image = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+                    tensor = self.torch.from_numpy(image).unsqueeze(0).float().div_(255)
+                else:
+                    image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                    tensor = self.torch.from_numpy(image).permute(2, 0, 1).float().div_(255)
+                content_size = self._content_dimensions(frame)
+                if self.small_input:
+                    height, width = content_size
+                    tensor = resize(tensor, [height, width], antialias=True)
+                    padded_height = (height + 7) // 8 * 8
+                    padded_width = (width + 7) // 8 * 8
+                    tensor = self.torch.nn.functional.pad(
+                        tensor, (0, padded_width - width, 0, padded_height - height))
+                else:
+                    tensor = resize(tensor, [288, 512], antialias=True)
+                    content_size = (288, 512)
                 if use_cache:
                     self._preprocessed_cache[frame_id] = tensor
                     if len(self._preprocessed_cache) > 3:
@@ -93,13 +130,18 @@ class TrackNetPredictor:
                         self.statistics.add("tracknet_cache_misses")
                         self.statistics.add("tracknet_cache_prepared_frames")
             tensors.append(tensor)
+            content_sizes.append(content_size)
+        self.input_size = tuple(tensors[0].shape[-2:])
+        self.content_size = content_sizes[0]
         preprocessed = time.perf_counter()
         with self.torch.inference_mode():
             heatmaps = self.model(self.torch.cat(tensors).unsqueeze(0).to(self.device))[0].cpu().numpy()
         inferred = time.perf_counter()
         points = []
         self.last_candidates = []
-        for frame, heatmap in zip(frames, heatmaps):
+        for frame, heatmap, content_size in zip(frames, heatmaps, content_sizes):
+            content_height, content_width = content_size
+            heatmap = heatmap[:content_height, :content_width]
             if self.record_candidates:
                 self.last_candidates.append(heatmap_candidates(
                     heatmap, width=frame.shape[1], height=frame.shape[0]))
@@ -109,7 +151,8 @@ class TrackNetPredictor:
             if contours:
                 bx, by, bw, bh = max((cv2.boundingRect(contour) for contour in contours), key=lambda box: box[2] * box[3])
                 x, y = bx + bw / 2, by + bh / 2
-            points.append(ShuttlePoint(x * frame.shape[1] / 512, y * frame.shape[0] / 288, float(heatmap[py, px])))
+            points.append(ShuttlePoint(x * frame.shape[1] / heatmap.shape[1],
+                                       y * frame.shape[0] / heatmap.shape[0], float(heatmap[py, px])))
         self.last_timing = dict(preprocess_s=preprocessed - started,
                                 inference_and_transfer_s=inferred - preprocessed,
                                 point_decode_s=time.perf_counter() - inferred)
@@ -125,3 +168,10 @@ class TrackNetPredictor:
         if self.statistics is not None:
             self.statistics.add("tracknet_cache_max_items", self._cache_peak_items)
         self._preprocessed_cache.clear()
+
+    def _content_dimensions(self, frame):
+        height, width = frame.shape[:2]
+        if not self.small_input:
+            return 288, 512
+        scale = min(1.0, 320.0 / max(height, width))
+        return max(1, round(height * scale)), max(1, round(width * scale))

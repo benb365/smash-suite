@@ -3,7 +3,7 @@ from __future__ import annotations
 import math
 from typing import Literal, Optional
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 from modules.media.types import VideoInfo
 
 
@@ -16,6 +16,18 @@ class ProcessRequest(BaseModel):
     quality: Quality = "balanced"
     show_shot_paths: bool = True
     court: Optional[list[tuple[float, float]]] = None
+    optimizations: Optional["Optimizations"] = None
+
+    @model_validator(mode="after")
+    def resolve_optimizations(self):
+        defaults = dict(limit_fps=True, small_input=True, grayscale=True,
+                        dynamic_scan=self.camera_type == "high")
+        requested = self.optimizations or Optimizations()
+        self.optimizations = Optimizations(**{
+            name: getattr(requested, name) if getattr(requested, name) is not None else default
+            for name, default in defaults.items()
+        })
+        return self
 
     @field_validator("court")
     @classmethod
@@ -34,6 +46,11 @@ class ProcessRequest(BaseModel):
         return points
 
 
+class Optimizations(BaseModel):
+    limit_fps: Optional[bool] = None
+    small_input: Optional[bool] = None
+    grayscale: Optional[bool] = None
+    dynamic_scan: Optional[bool] = None
 
 
 class ProcessingTimings(BaseModel):
@@ -56,4 +73,5 @@ class JobState(BaseModel):
     error: Optional[str] = None
     camera_type: Optional[CameraType] = None
     quality: Quality = "balanced"
+    optimizations: Optional[Optimizations] = None
     warnings: list[str] = Field(default_factory=list)
