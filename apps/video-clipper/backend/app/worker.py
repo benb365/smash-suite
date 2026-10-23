@@ -52,7 +52,10 @@ def main(request_path: str):
                 time.sleep(.05)
         if benchmark:
             print(json.dumps(dict(type="benchmark_start", monotonic_s=time.monotonic())), flush=True)
-        weights = ensure_models(required_models(options.camera_type), Path(spec["models"]),
+        model_names = required_models(options.camera_type)
+        if options.camera_type == "high" and options.show_shot_paths and "yolo11n.pt" not in model_names:
+            model_names.append("yolo11n.pt")
+        weights = ensure_models(model_names, Path(spec["models"]),
                                 lambda stage, fraction: event(stage, .08 * fraction))
         event("正在识别对打回合", .08, phase="recognition")
         # Profiler attachment happens after imports and before normal model work.
@@ -61,14 +64,41 @@ def main(request_path: str):
         if benchmark and benchmark.get("mps_signposts"):
             import torch
             signposts = torch.mps.profiler.profile(mode="interval,event", wait_until_completed=False)
+        source = directory / "source.mp4"
+        shot_paths = None
+        overlay_ass = None
+        show_shot_paths = options.camera_type == "high" and options.show_shot_paths
+        if show_shot_paths:
+            from modules.trajectory import ObservationLog, analyze
+            point_path = directory / "ball-observations.jsonl"
+            with statistics.mps_sampling(), signposts, ObservationLog(
+                    point_path, source=source, info=info, weight=weights["ball_track.pt"]) as observation_sink:
+                predictions, details = recognize(source, info, options.camera_type, weights,
+                                                  lambda stage, fraction: event(stage, .08 + .72 * fraction),
+                                                  directory, court=options.court, statistics=statistics,
+                                                  observation_sink=observation_sink)
+            shot_paths = analyze(source, info, predictions, point_path, weights, directory,
+                                 lambda stage, fraction: event(stage, .08 + .72 * fraction))
+            (directory / "shot-paths.json").write_text(json.dumps(shot_paths, ensure_ascii=False), encoding="utf-8")
+        else:
+            # A previous run in this leased session may have had the option enabled.
+            for name in ("ball-observations.jsonl", "ball-observations.meta.json", "shot-paths.json", "trajectory-overlay.ass"):
+                (directory / name).unlink(missing_ok=True)
         with statistics.mps_sampling(), signposts:
-            predictions, details = recognize(directory / "source.mp4", info, options.camera_type, weights,
-                                             lambda stage, fraction: event(stage, .08 + .72 * fraction),
-                                             directory, court=options.court, statistics=statistics)
+            if not show_shot_paths:
+                predictions, details = recognize(source, info, options.camera_type, weights,
+                                                 lambda stage, fraction: event(stage, .08 + .72 * fraction),
+                                                 directory, court=options.court, statistics=statistics)
         ranges = selected_ranges(predictions, info.duration_ms, padding_ms=500)
         event("正在生成带原声音的成片", .8, phase="rendering")
-        duration_ms = render(directory / "source.mp4", directory / "output.mp4", ranges, info, options.quality,
-                             lambda fraction: event("正在生成带原声音的成片", .8 + .2 * fraction))
+        if shot_paths is not None:
+            from app.trajectory_overlay import write_overlay
+            overlay_ass = directory / "trajectory-overlay.ass"
+            write_overlay(shot_paths, ranges, overlay_ass, info.width, info.height)
+        render_args = (source, directory / "output.mp4", ranges, info, options.quality,
+                       lambda fraction: event("正在生成带原声音的成片", .8 + .2 * fraction))
+        duration_ms = (render(*render_args, overlay_ass=overlay_ass) if overlay_ass is not None
+                       else render(*render_args))
         result = dict(predictions=predictions, export_ranges=ranges, output_duration_ms=duration_ms,
                       quality=options.quality, padding_ms=500, **details)
         (directory / "result.json").write_text(json.dumps(result, ensure_ascii=False), encoding="utf-8")

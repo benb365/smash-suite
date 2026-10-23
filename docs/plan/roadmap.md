@@ -6,7 +6,7 @@
 - 项目产品演进方向
   - 视频流处理
   - 视频剪辑生成
-- 算法提供回合、内容与球速能力
+- 算法提供回合、内容、球速与球路能力
 - 工程流程支持智能体长期协作和独立验收。
 
 ## 项目进度总览
@@ -33,7 +33,8 @@ flowchart BT
     stream["流式能力<br/><small>A 已支持<br/>C/D 待改造</small>"]
     content["内容评价<br/><small>高光判别待做</small>"]
     speed["杀球球速<br/><small>识别测量待研究</small>"]
-    rally ~~~ stream ~~~ content ~~~ speed
+    trajectory["二维球路分析<br/><small>演进中</small>"]
+    rally ~~~ stream ~~~ content ~~~ speed ~~~ trajectory
     end
   end
 
@@ -59,7 +60,7 @@ flowchart BT
 
   engineering -. 工程支撑 .-> foundation
   foundation -->|帧与模型观测| algorithms
-  algorithms -->|回合与内容结果| products
+  algorithms -->|回合、内容与球路结果| products
 
   classDef complete fill:#dcfce7,stroke:#16a34a,color:#166534
   classDef partial fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
@@ -69,6 +70,7 @@ flowchart BT
   class live,content,speed,maintenance pending
   class workflow complete
   class performance active
+  class trajectory partial
   style products fill:#f8fafc,stroke:#94a3b8,color:#334155
   style algorithms fill:#f8fafc,stroke:#94a3b8,color:#334155
   style foundation fill:#f8fafc,stroke:#94a3b8,color:#334155
@@ -113,6 +115,10 @@ flowchart TD
 
   content["4 事件识别与内容评价<br/><small>P1</small>"] --> highlights["6 进阶视频剪辑<br/><small>高光集锦与全场最佳 · P1</small>"]
 
+  trajectory["15 二维球路分析<br/><small>演进中 · P2</small>"] --> overlays["16 剪辑球路叠图<br/><small>演进中 · P2</small>"]
+  style trajectory fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+  style overlays fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+
   style baseline fill:#f1f5f9,stroke:#94a3b8,color:#334155
   style optimize fill:#f1f5f9,stroke:#94a3b8,color:#334155
   style stream fill:#f1f5f9,stroke:#94a3b8,color:#334155
@@ -156,5 +162,7 @@ flowchart TD
 | 12 | *实时视频处理* | 连通真实拍摄、传输、持续分析与结果访问，含 Android 真机采集、上传可靠性和整体延迟验证 | P2 | 7、9 | 待办 |
 | 13 | 数据管理 | 管理素材、标注、分析结果和成片的组织、留存与清理，覆盖研发材料与产品数据 | P3 | — | 待办 |
 | 14 | 发行与商用 | 处理产品分发、签名公证、授权审查、商用交付与平台支持 | P3 | — | 待办 |
+| 15 | [二维球路分析](../features/trajectory-overlay/README.md) | 估计逐拍起点与预计落地点 | P2 | — | 演进中 |
+| 16 | [剪辑球路叠图](../features/trajectory-overlay/README.md) | 在导出视频中同步显示球路 | P2 | 15 | 演进中 |
 
 必要的素材、标注、测试和评估随所属需求推进，不因数据管理排后而推迟。独立验收 agent 与开发 agent 分工，不能替代算法验收所需的独立来源数据。

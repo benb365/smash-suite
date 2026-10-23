@@ -14,6 +14,7 @@ Quality = Literal["high", "balanced", "small"]
 class ProcessRequest(BaseModel):
     camera_type: CameraType
     quality: Quality = "balanced"
+    show_shot_paths: bool = True
     court: Optional[list[tuple[float, float]]] = None
 
     @field_validator("court")

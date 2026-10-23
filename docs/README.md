@@ -12,6 +12,7 @@
 | 调用找球、人物检测和姿态模型 | [模型模块](../modules/models/README.md) |
 | 运行或改进回合识别 | [回合模块](../modules/rally/README.md) · [识别需求](../modules/rally/requirements.md) |
 | 比较算法效果与评分 | [评估规范](../modules/rally/evaluation.md) · [实验与回放](../modules/rally/experiments/README.md) |
+| 分析逐拍球路并在成片显示 | [二维球路专题](features/trajectory-overlay/README.md) · [球路模块](../modules/trajectory/README.md) |
 | 了解跨模块性能优化方案、阶段进展与总结 | [性能优化专题](features/performance-optimization/README.md)（专项实验和测量证据仍归所属应用或模块） |
 | 准备测试素材和人工标注 | [数据集](../datasets/README.md) · [数据规范](../datasets/requirements.md) |
 | 从视频平台采集录像 | [录像采集插件](../tools/ysp-recorder/README.md) |

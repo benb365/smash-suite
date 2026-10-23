@@ -268,7 +268,7 @@ def test_worker_statistics_switch_keeps_profile_handshake_and_signposts(tmp_path
     (tmp_path / "profile-release").touch()
     request_path = tmp_path / "request.json"
     request_path.write_text(json.dumps(dict(directory=str(tmp_path), models=str(tmp_path),
-        options=dict(camera_type="high", quality="balanced"),
+        options=dict(camera_type="high", quality="balanced", show_shot_paths=False),
         video=dict(name="synthetic.mp4", duration_ms=1000, width=320, height=180, has_audio=False, first_pts_ms=0),
         benchmark=dict(statistics_enabled=statistics_enabled, profile_wait=True, mps_signposts=True))))
     assert main(str(request_path)) == 0
@@ -280,3 +280,67 @@ def test_worker_statistics_switch_keeps_profile_handshake_and_signposts(tmp_path
     assert (tmp_path / "profile-ready.json").exists()
     assert (tmp_path / "statistics.json").exists() is statistics_enabled
     assert json.loads((tmp_path / "result.json").read_text())["predictions"] == [dict(start_ms=100, end_ms=900)]
+
+
+def test_worker_synthetic_shot_path_pipeline_stays_in_recognition(tmp_path, monkeypatch, capsys):
+    from app.worker import main
+    import modules.trajectory as trajectory
+
+    calls = []
+
+    class ObservationLog:
+        def __init__(self, path, **metadata):
+            self.path = path
+            calls.append(("log-open", metadata))
+
+        def __enter__(self):
+            return self
+
+        def __call__(self, frame, point):
+            calls.append(("observation", frame, point))
+
+        def __exit__(self, *_):
+            self.path.write_text('{"frame_id":1}\n')
+            self.path.with_suffix(".meta.json").write_text('{"complete":true}')
+
+    def recognize(*args, observation_sink, **kwargs):
+        observation_sink({"frame_id": 1}, {"x": 100, "y": 200})
+        calls.append(("recognize", kwargs))
+        return [dict(start_ms=100, end_ms=900)], {}
+
+    def analyze(*args):
+        calls.append(("analyze", args[-1]))
+        return {"schema_version": 1, "shots": [dict(start_ms=100, end_ms=900, start_xy=[1, 2],
+                                                        end_xy=[4, 10], end_kind="next_hit")]}
+
+    def render(source, output, ranges, info, quality, progress, *, overlay_ass=None):
+        assert overlay_ass and overlay_ass.is_file()
+        calls.append(("render", ranges, overlay_ass))
+        output.write_bytes(b"synthetic-output")
+        return sum(end - start for start, end in ranges)
+
+    requested_models = []
+    def ensure_models(names, *args, **kwargs):
+        requested_models.extend(names)
+        return {name: f"fake-{name}" for name in names}
+
+    monkeypatch.setattr("modules.models.assets.ensure_models", ensure_models)
+    monkeypatch.setattr("modules.rally.recognize.recognize", recognize)
+    monkeypatch.setattr("modules.media.video.render", render)
+    monkeypatch.setattr(trajectory, "ObservationLog", ObservationLog)
+    monkeypatch.setattr(trajectory, "analyze", analyze)
+    request_path = tmp_path / "request.json"
+    (tmp_path / "source.mp4").write_bytes(b"synthetic-source")
+    request_path.write_text(json.dumps(dict(directory=str(tmp_path), models=str(tmp_path),
+        options=dict(camera_type="high", quality="balanced", show_shot_paths=True),
+        video=dict(name="synthetic.mp4", duration_ms=1000, width=320, height=180, has_audio=False, first_pts_ms=0))))
+
+    assert main(str(request_path)) == 0
+    assert requested_models == ["ball_track.pt", "yolo11n.pt"]
+    assert [call[0] for call in calls] == ["log-open", "observation", "recognize", "analyze", "render"]
+    assert (tmp_path / "ball-observations.jsonl").exists()
+    assert (tmp_path / "ball-observations.meta.json").exists()
+    assert json.loads((tmp_path / "shot-paths.json").read_text())["shots"][0]["end_kind"] == "next_hit"
+    assert (tmp_path / "trajectory-overlay.ass").is_file()
+    events = [json.loads(line) for line in capsys.readouterr().out.splitlines()]
+    assert [event.get("phase") for event in events if event.get("phase")] == ["recognition", "rendering"]

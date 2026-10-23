@@ -1,0 +1,31 @@
+{
+  "round": 3,
+  "base": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+  "branch": "codex/trajectory-overlay-v1",
+  "code_version": "6f6379e21c04756264a5f7c6153c1581e66146a30c5efa457cb408c4fd3c9f71",
+  "code_sha256": {
+    "apps/video-clipper/backend/app/product_types.py": "4998c4c1d82ee717749b58a0e7bb769186fec7af080b5d35bca2d745185068f2",
+    "apps/video-clipper/backend/app/trajectory_overlay.py": "4b11961d90d51f9aabca819555606687cf698550b6ab7d913ca15413306bcd17",
+    "apps/video-clipper/backend/app/worker.py": "fd4574bb36c7443e78b17366227eec818677e469a2e8f55939141455a7fd12ff",
+    "apps/video-clipper/backend/tests/test_benchmark.py": "8bc3afdccc855dda2a7f83897982a99697f5ec78028c8d05e2d02780dbcc8f8f",
+    "apps/video-clipper/backend/tests/test_product.py": "b67761ab7b6e8135e6a839afd5b275784762df2dbefc619af6a9a764db8fb673",
+    "apps/video-clipper/frontend/src/App.tsx": "bfb86475e8642832ebf6d0d471e78e557f7e0a65269c51247c7db2cf11ec2fee",
+    "apps/video-clipper/frontend/src/host.ts": "b4a1282cf87d217d33d64bc74087a2c93c627a9ba45ba947cf986f05ac9d6c31",
+    "apps/video-clipper/frontend/src/styles.css": "8c337c7b307e284357780ad0061227c9984edab801b7d250f94f6ca2c19815e9",
+    "apps/video-clipper/frontend/src/types.ts": "a8297a86ab0e46fa5c3118bd53ee7041e09b84cdfe19433fae49dbb62028c4fa",
+    "modules/media/video.py": "df373675c4ccce880f871a0058139b64dc488725a113b8abf6e43fc28435353e",
+    "modules/rally/recognize.py": "a74fb7d3c859665c1665618768a4c093eb2844a5bdb265896c7892c48f54de8e",
+    "modules/rally/scenarios/high.py": "3168810c25e0f609ba41310a6cc1b505563eaae2a8e7c93763abd20c2a9ceab0",
+    "modules/rally/tests/test_tracknet_rally.py": "1e008852eecbc79a225a1f9e6e6ebec38bc665f14dd86ecd88736ebdcdfa198a",
+    "modules/rally/tracknet_rally.py": "4e6eafb1208154bb66dff8755a1000e96a7eba98f4266b202d979a1674e00c2b",
+    "modules/trajectory/__init__.py": "871f8d47bdedd430b7e058c1759eaa10038f39968524046ffcb592b77ee26be3",
+    "modules/trajectory/__main__.py": "e37da54291e3f204adfca5879e0e888ce05d0eaa9cca4283719d1eeff707a588",
+    "modules/trajectory/analyzer.py": "d4cbb3e8497fd8abaa73f4673905ebb090a617f9cacbb18b09af7a042affe5f9",
+    "modules/trajectory/capture.py": "1a4e887f9d19110a1f5238162f821a68219e6b8f211fced0b8d75074405ce0ba",
+    "modules/trajectory/court.py": "42dc1583a5f1171c320da0c95c38ddf2b9fb2eb7f9a42d4a6a209e0f1f7d4b48",
+    "modules/trajectory/observations.py": "e15fe6994ae40596c34431296f253ef5a79d91f3b3ff612af89ba7cad598bda7",
+    "modules/trajectory/tests/real-observation-regressions.json": "29f0a6bb0d8d0025f40acab75b6e030a1b024164495db75b0c2b8005306a56ec",
+    "modules/trajectory/tests/test_trajectory.py": "194e98503e1b30a81784e3c9690308b01d550205072fbd737ea2205e0516a62b",
+    "tools/docs-site/.vitepress/config.mts": "402b718025661eb3debd384609645ef1f5dbd27df4573570f20bd4169d1edf50"
+  }
+}

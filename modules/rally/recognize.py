@@ -29,7 +29,7 @@ def normalized(frame):
     return TimestampedFrame(frame.frame_id, frame.timestamp_ms, cv2.resize(frame.image, (1920, 1080)))
 
 
-def recognize(source: Path, info: VideoInfo, camera_type: str, weights: dict, progress, directory: Path, court=None, statistics=None):
+def recognize(source: Path, info: VideoInfo, camera_type: str, weights: dict, progress, directory: Path, court=None, statistics=None, observation_sink=None):
     from .statistics import Statistics
     stats = statistics or Statistics()
     from .scenarios import SCENARIOS
@@ -50,7 +50,8 @@ def recognize(source: Path, info: VideoInfo, camera_type: str, weights: dict, pr
     if camera_type == "high":
         predictions = []
         config = TrajectoryConfig(**profiles["high"])
-        segmenter = TrajectoryRallySegmenter(predictor, width=1920, height=1080, config=config, statistics=stats)
+        segmenter = TrajectoryRallySegmenter(predictor, width=1920, height=1080, config=config,
+                                             statistics=stats, observation_sink=observation_sink)
         stream = RallyStream(segmenter)
         last = time.monotonic()
         with stats.phase("video_observation"):

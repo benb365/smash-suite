@@ -21,6 +21,7 @@ export interface ScreenState {
   uploadProgress: number;
   saving: boolean;
   camera: CameraType;
+  showShotPaths: boolean;
   quality: Quality;
   court: Point[];
   selectingCourt: boolean;
@@ -35,5 +36,5 @@ export const emptyJob: JobState = {
 };
 export const initialScreen: ScreenState = {
   job: emptyJob, online: false, uploadProgress: 0, saving: false, camera: 'high',
-  quality: 'balanced', court: [], selectingCourt: false, notice: '', error: '', canSave: true,
+  showShotPaths: true, quality: 'balanced', court: [], selectingCourt: false, notice: '', error: '', canSave: true,
 };

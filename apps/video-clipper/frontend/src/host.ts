@@ -3,7 +3,7 @@ import type { LynxViewElement } from '@lynx-js/web-core/client';
 import { initialScreen, type JobState, type Point, type ScreenState } from './types';
 import './host.css';
 
-type Session = { id: string; token: string; preferences?: Pick<ScreenState, 'camera' | 'quality' | 'court'> };
+type Session = { id: string; token: string; preferences?: Pick<ScreenState, 'camera' | 'quality' | 'court' | 'showShotPaths'> };
 type SaveHandle = { createWritable(): Promise<WritableStream<Uint8Array> & { abort(): Promise<void> }> };
 type SaveWindow = Window & { showSaveFilePicker?: (options: unknown) => Promise<SaveHandle> };
 const view = document.querySelector('#controls') as LynxViewElement;
@@ -23,7 +23,7 @@ let requestedFrame = '';
 
 function publish() {
   if (session) {
-    session.preferences = { camera: screen.camera, quality: screen.quality, court: screen.court };
+    session.preferences = { camera: screen.camera, quality: screen.quality, court: screen.court, showShotPaths: screen.showShotPaths };
     sessionStorage.setItem('smash-session', JSON.stringify(session));
   }
   if (ready) view.sendGlobalEvent('product-state', [JSON.stringify(screen)]);
@@ -214,9 +214,11 @@ view.onNativeModulesCall = async (name: string, data: Record<string, unknown>) =
     else if (name === 'options') {
       if (data.camera) {
         screen.camera = data.camera as ScreenState['camera'];
+        screen.showShotPaths = screen.camera === 'high';
         screen.court = []; screen.selectingCourt = false;
       }
       if (data.quality) screen.quality = data.quality as ScreenState['quality'];
+      if (typeof data.showShotPaths === 'boolean' && screen.camera === 'high') screen.showShotPaths = data.showShotPaths;
     } else if (name === 'selectCourt') {
       if (!screen.selectingCourt) screen.court = [];
       screen.selectingCourt = true;
@@ -225,7 +227,8 @@ view.onNativeModulesCall = async (name: string, data: Record<string, unknown>) =
     else if (name === 'run') {
       if (screen.court.length && screen.court.length !== 4) throw new Error('请选完球场四角，或清除后再开始。');
       const response = await request('/run', { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ camera_type: screen.camera, quality: screen.quality, court: screen.court.length === 4 ? screen.court : null }) });
+        body: JSON.stringify({ camera_type: screen.camera, quality: screen.quality, court: screen.court.length === 4 ? screen.court : null,
+          show_shot_paths: screen.camera === 'high' && screen.showShotPaths }) });
       screen.notice = ''; screen.job = await response.json();
     } else if (name === 'cancel') {
       upload?.abort(); upload = undefined;
