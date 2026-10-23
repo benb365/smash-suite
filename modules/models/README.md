@@ -30,4 +30,4 @@
 
 独立调用 `PoseEstimator()` 默认 CPU；可显式选择 CUDA，默认批大小由调用方控制。回合模块的个人视角入口在 CUDA 可用时自动选择 CUDA，默认逐张推理；设备支持、累计计时及批处理差异见[姿态接口](keypoint_rcnn/README.md)。
 
-Windows 的固定权重 D1 对照见[2026-10-21 实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)。当前 `codex/windows-latest` 正在整合最新 develop，本轮模型与高级配置联用仍待实际验证；旧报告不代表当前整合版本通过。此前入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
+Windows 的固定权重 D1 对照见[2026-10-21 实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)。`codex/windows-latest` 已整合 develop `1080146` 并完成三个场景的真实模型和默认高级配置联用，个人视角实际使用 CUDA、batch 1，见[本轮整合记录](../../apps/video-clipper/reports/windows-latest-20261023.md)。本轮没有重跑同版本 CPU 性能对照。此前入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。

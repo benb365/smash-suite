@@ -5,6 +5,7 @@ import subprocess
 import sys
 import time
 from pathlib import Path
+from types import SimpleNamespace
 
 import numpy as np
 import pytest
@@ -14,6 +15,81 @@ from modules.media.video import ffmpeg_exe, probe
 from modules.models.tracknet import ShuttlePoint
 from modules.rally.recognize import recognize
 from modules.rally.statistics import Statistics
+
+
+@pytest.mark.parametrize("outcome", ["success", "missing", "nonzero", "timeout"])
+def test_windows_backend_tree_termination_is_bounded_and_reports_failures(tmp_path, monkeypatch, outcome):
+    from app import benchmark
+
+    system_root = tmp_path / "Windows"
+    monkeypatch.setattr(benchmark, "os", SimpleNamespace(name="nt", environ={"SystemRoot": str(system_root)}))
+    monkeypatch.setattr(subprocess, "CREATE_NO_WINDOW", 0x08000000, raising=False)
+
+    class Backend:
+        pid = 12345
+        returncode = None
+        terminated = False
+
+        def poll(self):
+            return self.returncode
+
+        def terminate(self):
+            self.terminated = True
+            self.returncode = -15
+
+    backend = Backend()
+    calls = []
+
+    def run(command, **kwargs):
+        calls.append((command, kwargs))
+        if outcome == "missing":
+            raise FileNotFoundError("synthetic missing taskkill")
+        if outcome == "nonzero":
+            raise subprocess.CalledProcessError(1, command)
+        if outcome == "timeout":
+            raise subprocess.TimeoutExpired(command, 5)
+        backend.returncode = 0
+        return subprocess.CompletedProcess(command, 0)
+
+    monkeypatch.setattr(subprocess, "run", run)
+    error = benchmark.terminate_backend(backend)
+
+    assert calls == [([str(system_root / "System32" / "taskkill.exe"), "/PID", "12345", "/T", "/F"],
+                     dict(stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                          creationflags=0x08000000, check=True, timeout=5))]
+    assert backend.terminated is (outcome != "success")
+    assert backend.poll() is not None
+    if outcome == "success":
+        assert error is None
+    else:
+        assert "tree termination unverified" in error
+        assert {"missing": "FileNotFoundError", "nonzero": "CalledProcessError",
+                "timeout": "TimeoutExpired"}[outcome] in error
+
+
+@pytest.mark.parametrize("teardown", [False, True])
+def test_lease_disconnect_is_only_suppressed_after_teardown_starts(monkeypatch, teardown):
+    import threading
+    from app.benchmark import keep_lease
+
+    stop, errors, sent = threading.Event(), [], []
+
+    class Socket:
+        def __enter__(self): return self
+        def __exit__(self, *args): pass
+        def send(self, message): sent.append(message)
+
+        def recv(self, timeout):
+            assert timeout == .5
+            if teardown:
+                # The runner marks teardown before DELETE closes this socket.
+                stop.set()
+            raise RuntimeError("received 1001 going away")
+
+    monkeypatch.setattr("websockets.sync.client.connect", lambda *args, **kwargs: Socket())
+    keep_lease("ws://unused", "unit-token", stop, errors)
+    assert sent == [json.dumps(dict(token="unit-token"))]
+    assert errors == ([] if teardown else ["received 1001 going away"])
 
 
 def test_nested_primary_times_are_exclusive_and_failure_is_saved(tmp_path, monkeypatch):
@@ -150,6 +226,21 @@ duration=render(directory/'source.mp4',directory/'output.mp4',[[100,900]],info,'
         case["optimizations"] = optimizations
     args = Namespace(output=output, models=tmp_path, profile_wait=profile_wait, profile_timeout=10,
                      mps_signposts=False, no_statistics=profile_wait, py_spy_path=None, timeout=30)
+    original_lease, original_request = benchmark.keep_lease, benchmark.request
+    lease_stops = []
+
+    def recorded_lease(url, token, stop, errors):
+        lease_stops.append(stop)
+        return original_lease(url, token, stop, errors)
+
+    def checked_request(method, url, **kwargs):
+        if method == "DELETE":
+            assert lease_stops and lease_stops[0].is_set()
+            assert (output / "synthetic/evidence/benchmark-clock.json").is_file()
+        return original_request(method, url, **kwargs)
+
+    monkeypatch.setattr(benchmark, "keep_lease", recorded_lease)
+    monkeypatch.setattr(benchmark, "request", checked_request)
     errors = []
     def release():
         try:
@@ -170,6 +261,8 @@ duration=render(directory/'source.mp4',directory/'output.mp4',[[100,900]],info,'
     if profile_wait:
         releaser.join(2)
     assert not errors
+    assert result["lease_errors"] == []
+    assert "cleanup_error" not in result
     if fail:
         assert result["status"] == "failed"
         assert "意外退出" in result["error"]

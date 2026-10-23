@@ -179,6 +179,28 @@ def keep_lease(url, token, stop, errors):
             errors.append(str(exc))
 
 
+def terminate_backend(backend):
+    """Stop this runner's backend; return any unverified tree-cleanup failure."""
+    if os.name != "nt":
+        backend.terminate()
+        return None
+    # A venv redirector may own Uvicorn. Terminate only our Popen's tree.
+    taskkill = Path(os.environ.get("SystemRoot") or r"C:\Windows") / "System32" / "taskkill.exe"
+    try:
+        subprocess.run([str(taskkill), "/PID", str(backend.pid), "/T", "/F"],
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                       creationflags=subprocess.CREATE_NO_WINDOW, check=True, timeout=5)
+    except (OSError, subprocess.SubprocessError) as exc:
+        error = f"Backend tree termination unverified: {type(exc).__name__}: {exc}"
+        try:
+            if backend.poll() is None:
+                backend.terminate()
+        except OSError as fallback:
+            error += f"; backend terminate failed: {fallback}"
+        return error
+    return None
+
+
 def run_case(case, args):
     case_dir = args.output / case["case_id"]
     case_dir.mkdir(parents=True, exist_ok=False)
@@ -301,6 +323,9 @@ def run_case(case, args):
                 clock = json.loads(clock_path.read_text(encoding="utf-8"))
                 result["timings"] = dict(**result["state"]["timings"], total_s=result["state"]["elapsed_s"])
                 result["clock"] = clock
+            # Evidence is safe; the following DELETE intentionally closes the
+            # WebSocket. Mark teardown first so its normal 1001 is not a lease error.
+            stop.set()
             if session_url and backend.poll() is None:
                 try:
                     request("DELETE", session_url, headers=headers)
@@ -311,14 +336,9 @@ def run_case(case, args):
             lease.join(3)
         if backend:
             if backend.poll() is None:
-                if os.name == "nt":
-                    # A venv redirector may own the actual Uvicorn process.
-                    # Stop this runner's tree rather than orphaning its child.
-                    subprocess.run(["taskkill", "/PID", str(backend.pid), "/T", "/F"],
-                                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                                   creationflags=subprocess.CREATE_NO_WINDOW, check=False)
-                else:
-                    backend.terminate()
+                error = terminate_backend(backend)
+                if error:
+                    result["cleanup_error"] = "; ".join(filter(None, (result.get("cleanup_error"), error)))
             try:
                 backend.wait(timeout=10)
             except subprocess.TimeoutExpired:
@@ -336,7 +356,7 @@ def run_case(case, args):
                     except FileNotFoundError:
                         pass
                     except OSError as exc:
-                        result["cleanup_error"] = str(exc)
+                        result["cleanup_error"] = "; ".join(filter(None, (result.get("cleanup_error"), str(exc))))
         if (case_dir / "resources.jsonl").exists():
             result["resources"] = summarize_resources(case_dir / "resources.jsonl")
             result["resources_sha256"] = sha256(case_dir / "resources.jsonl")

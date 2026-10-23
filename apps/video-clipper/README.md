@@ -50,7 +50,7 @@
 
 旧测试包曾完成验收；整理后服务与首页入口检查通过。macOS 性能基线完成 A/C/D 各短长六份真实识别和成片，并核对十份测量/剖析输出；高级配置另有八次真实产品运行与一次球路联用检查。各报告分别记录运行环境、配置和验收边界，不代表完整浏览器操作、约 30 分钟产品验收或重新打包已完成。
 
-Windows 的历史 D1 CPU/CUDA 对照及默认 CUDA HTTP 流程见[2026-10-21 性能记录](reports/pose-performance-20261021.md)。当前 `codex/windows-latest` 正在整合 develop `1080146` 的高级配置、球路及性能改动，本轮 Windows 运行与成片验证尚未完成；历史结果不能直接作为整合后版本的通过证据。此前入口检查范围见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
+Windows 的历史 D1 CPU/CUDA 对照及默认 CUDA HTTP 流程见[2026-10-21 性能记录](reports/pose-performance-20261021.md)。`codex/windows-latest` 已整合 develop `1080146`，完成三个场景的默认配置、CUDA 姿态与高视角球路联用，以及成片完整解码检查，见[本轮 Windows 整合记录](reports/windows-latest-20261023.md)。这些短片运行不替代独立来源效果或长视频验收。此前入口检查范围见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
 
 ## 开发
 

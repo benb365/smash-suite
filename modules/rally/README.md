@@ -20,7 +20,7 @@ A 可以逐帧调用，确认结束后输出完整回合；C/D 会使用后续�
 
 A 保留原逐帧方案，C/D 已接入确认的改进并继续通过文件分析使用。当前评估纳入 A/C/D，B 继续暂缓。历史整理检查曾记录 16 份保存观测输出一致；其输入缓存现已缺失，旧检查入口已移除，不能作为当前可复验的证据。已知漏回合、边界和间歇问题仍待处理，独立来源验收未完成。记录见[算法确认报告](experiments/reports/algorithm-decisions-20261019.md)和[整理后快速检查](../../docs/ai/2026-10-19-quick-check/notes.md)。
 
-Windows 2026-10-21 的 D1 CPU/CUDA 对照见[历史实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)。当前 `codex/windows-latest` 正在整合 develop 的高级配置、统计及球路观测接口，本轮真实运行仍待验证；旧素材输出一致不替代当前版本或独立来源效果验收。
+Windows 2026-10-21 的 D1 CPU/CUDA 对照见[历史实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)。`codex/windows-latest` 已整合 develop `1080146` 的高级配置、统计及球路观测接口，完成三短片默认配置运行与 D1 关闭高级配置的历史区间回归，见[本轮实测记录](../../apps/video-clipper/reports/windows-latest-20261023.md)。旧素材输出一致不替代独立来源效果验收。
 
 ## 输入输出与职责
 

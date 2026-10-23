@@ -41,7 +41,7 @@ flowchart BT
   subgraph foundation["基础能力层"]
     subgraph foundationRow[" "]
     direction LR
-    models["模型推理<br/><small>三类模型已有<br/>Windows 最新版复核中</small>"]
+    models["模型推理<br/><small>三类模型已有<br/>Windows 三短片实跑完成</small>"]
     media["媒体读写<br/><small>文件读写导出已有<br/>实时源待接入</small>"]
     data["数据与评估<br/><small>素材标注已保留<br/>独立验收待补</small>"]
     models ~~~ media ~~~ data
@@ -94,7 +94,7 @@ flowchart BT
 | --- | --- | --- |
 | 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已完成（2026-10-21 基线），作为后续优化参考而非活跃认领；[性能报告](../../apps/video-clipper/reports/performance-baseline.md) |
 | 性能优化 | benb365 + codex/opt09b-frame-rate | 进行中：OPT-07A 已合入；OPT-06 动态粗筛 A/D、OPT-08A 输入画幅 A/C/D 本轮试验均已完成，候选不采用；OPT-20 已合入；OPT-09B 缺真实高帧率素材，用户确认保留待验收分支；[方案与进展](../features/performance-optimization/README.md) |
-| Windows 后端适配 | cjfranklin1 + codex/windows-latest | 进行中：整合 develop `1080146` 的高级配置、二维球路及性能改动，保留 Windows 运行修复和可选 CUDA 姿态；本轮运行、输出与配置联用待验证 |
+| Windows 后端适配 | cjfranklin1 + codex/windows-latest | 本轮整合及三短片 Windows 真实运行已完成，待集成；保留可选 CUDA 姿态，已运行默认高级配置及高视角球路；独立效果与长视频验收仍待完成，见[整合记录](../../apps/video-clipper/reports/windows-latest-20261023.md) |
 
 本轮性能报告按人工确认保留为已完成基线引用，作为“结束后移除此处记录”的明确例外。
 
@@ -104,7 +104,9 @@ flowchart BT
 
 2026-10-21 在 i7-12700F / RTX 3060 Ti 上完成的 D1 CPU/CUDA 对照和当时的 HTTP 流程见[历史实测记录](../../apps/video-clipper/reports/pose-performance-20261021.md)。该记录对应旧分支、旧配置和既有诊断素材，不能作为最新 develop 高级配置或球路功能的 Windows 验收证据。
 
-本轮在 `codex/windows-latest` 整合 Windows 适配及 CUDA batch 1，沿用最新场景默认配置、统计入口和媒体时间轴约定。结果及适用范围待本轮实际运行后补充；不替代负责人正在推进的性能任务，也不代表独立来源准确率或发行验收完成。
+本轮 `codex/windows-latest` 已整合 develop `1080146`，保留 Windows 运行修复及 CUDA batch 1，并完成 A/C/D 三短片真实 HTTP 识别和成片生成，覆盖场景默认配置与高视角球路。后端检查、前端配置检查、类型检查及构建通过；媒体复核和适用边界见[本轮整合记录](../../apps/video-clipper/reports/windows-latest-20261023.md)。当前默认配置与旧 CPU 测量不同，不据此声称新的 CUDA 加速比例。
+
+本轮完成范围为最新版的 Windows 整合与三短片运行，待负责人集成；独立效果与长视频验收仍待完成。不替代负责人正在推进的性能任务，也不代表球路落点精度或发行验收完成。
 
 ## 需求依赖
 
@@ -164,7 +166,7 @@ flowchart TD
 | 8 | 仓库维护 skill | 引入清理与重构 harness（辅助检查、清理和验证的机制），定期维护代码、架构和文档，保持简洁规范 | P2 | — | 待办 |
 | 9 | *流式回合识别* | A/C/D 持续接收视频并输出回合；C/D 允许有限延迟，使用后续到达的画面确认结果 | P2 | 5 | 待办 |
 | 10 | 杀球球速侦测 | 识别杀球并输出球速，确认可测条件、准确性与适用范围 | P2 | — | 待办 |
-| 11 | Windows 后端适配 | LTE 工作：适配并验证 Windows 下的后端运行 | P2 | — | 进行中：codex/windows-latest 整合最新 develop 并复核 |
+| 11 | Windows 后端适配 | LTE 工作：适配并验证 Windows 下的后端运行 | P2 | — | 本轮整合及三短片运行已完成，待集成；独立效果与长视频验收待完成 |
 | 12 | *实时视频处理* | 连通真实拍摄、传输、持续分析与结果访问，含 Android 真机采集、上传可靠性和整体延迟验证 | P2 | 7、9 | 待办 |
 | 13 | 数据管理 | 管理素材、标注、分析结果和成片的组织、留存与清理，覆盖研发材料与产品数据 | P3 | — | 待办 |
 | 14 | 发行与商用 | 处理产品分发、签名公证、授权审查、商用交付与平台支持 | P3 | — | 待办 |

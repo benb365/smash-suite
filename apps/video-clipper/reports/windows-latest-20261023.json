@@ -1,0 +1,869 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-23",
+  "status": "completed",
+  "scope": "Windows integration and three short-input product executions; not independent accuracy, long-video or distribution acceptance.",
+  "upstream_commit": "1080146a8816c7dda9f231523a74ba23ddd4962a",
+  "branch": "codex/windows-latest",
+  "measurement_commit": "442486dc9a57e4d0b4ff37650d24254f761859f1",
+  "measurement_worktree_clean": true,
+  "core_sources_sha256": {
+    "modules/rally/recognize.py": "4022121c12c9cca3761b6a120db8e5403a93fddf4badeddde741f5efacc5c929",
+    "modules/models/keypoint_rcnn/__init__.py": "789aa97ac6e573311724c3171c91c0e03998392ee48d6885a67c62816f8e23b9",
+    "modules/models/tracknet/predictor.py": "7aa636ae4109ffb2239774f19fe367bb8c6280e53bda476df51542947c2bfff3",
+    "modules/models/yolo11n/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+    "modules/media/video.py": "3567f83eb125ac31d6e4b70d5a4b8b47a8569b3f871298d6ee9a218d9f7e2b08",
+    "modules/media/video_input.py": "315df190f26ccca81384b933e9e54840d865507cebbf6e25aad524f846214bed",
+    "modules/rally/scenarios/profiles.json": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23"
+  },
+  "core_sources_still_unchanged": {
+    "modules/rally/recognize.py": true,
+    "modules/models/keypoint_rcnn/__init__.py": true,
+    "modules/models/tracknet/predictor.py": true,
+    "modules/models/yolo11n/__init__.py": true,
+    "modules/media/video.py": true,
+    "modules/media/video_input.py": true,
+    "modules/rally/scenarios/profiles.json": true
+  },
+  "post_measurement_changes": "Benchmark-only cleanup robustness and normal lease-close classification; tests and documentation. No model, recognition, media or trajectory runtime change.",
+  "machine": {
+    "cpu": "Intel Core i7-12700F",
+    "hardware": {
+      "platform": "Windows-10-10.0.26300-SP0",
+      "machine": "AMD64",
+      "processor": "Intel64 Family 6 Model 151 Stepping 2, GenuineIntel",
+      "logical_cpu_count": 20,
+      "cuda_available": true,
+      "cuda_runtime": "12.6",
+      "threads_before": {
+        "torch_intraop": 1,
+        "torch_interop": 12,
+        "opencv": 20,
+        "environment": {
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1"
+        }
+      },
+      "gpus": [
+        {
+          "index": 0,
+          "name": "NVIDIA GeForce RTX 3060 Ti",
+          "total_memory_bytes": 8589410304,
+          "compute_capability": [
+            8,
+            6
+          ]
+        }
+      ],
+      "threads_after_recognition": {
+        "torch_intraop": 4,
+        "torch_interop": 12,
+        "opencv": 1,
+        "environment": {
+          "OPENBLAS_NUM_THREADS": "1",
+          "OMP_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1"
+        }
+      }
+    },
+    "versions": {
+      "python": "3.11.0",
+      "torch": "2.8.0+cu126",
+      "torchvision": "0.23.0+cu126",
+      "numpy": "1.26.4",
+      "opencv-python": "4.11.0.86",
+      "av": "14.2.0",
+      "scipy": "1.13.1",
+      "ultralytics": "8.4.56",
+      "imageio-ffmpeg": "0.6.0",
+      "ffmpeg": "ffmpeg version 7.1-essentials_build-www.gyan.dev Copyright (c) 2000-2024 the FFmpeg developers"
+    }
+  },
+  "models": {
+    "ball_track.pt": {
+      "path": "E:\\Codex repository\\SoloShuttlePose\\.runtime\\clip-app\\models\\ball_track.pt",
+      "bytes": 45400030,
+      "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+    },
+    "yolo11n.pt": {
+      "path": "E:\\Codex repository\\SoloShuttlePose\\.runtime\\clip-app\\models\\yolo11n.pt",
+      "bytes": 5613764,
+      "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+    },
+    "pose_kpRCNN.pth": {
+      "path": "E:\\Codex repository\\SoloShuttlePose\\.runtime\\clip-app\\models\\pose_kpRCNN.pth",
+      "bytes": 237101765,
+      "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+    }
+  },
+  "evidence_directory": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023",
+  "raw_evidence_sha256": {
+    "inputs.json": "635f8c44202a5c88da9fbb6508a8beb08c18719530c0e11eff526f769c345137",
+    "product-defaults\\manifest.json": "c49e8f109aa060f433da57f835ba3f205f48e8a0c7832a8c7393b37e61264fe3",
+    "product-defaults-report.json": "6b9056251fa33f1ffe323dc7878f3e7c4b1fc7b26182fb95ba209043ffa3cc87",
+    "product-media-validation.json": "72ceee5039d1bf4f71af30febe2a5b81352bfd47cc8a1637fbf4aa5671c93d4e",
+    "D1-off-cuda\\performance.json": "6f7fb113ff6bd066b7f7bf22c4f240992343199a654c3cb6ac6aa5ecd93460b6",
+    "D1-off-cuda\\result.json": "9d2f724e3e39f1763f56dc20e2d9fe7dd40bb25b2c8ca50ce8cc75d487cceb79",
+    "legacy-D1-off-reference.json": "77c7a3db2c3cd29154299af213e6ae3231d92334f377a4307d91d535f6c9eacd",
+    "A1-overlay-frame.png": "f22e6cabdf68cd275b3b32ea3c62079910c35f6a8b63ea119cbf50b58fe047ba"
+  },
+  "checks": {
+    "backend": {
+      "passed": 297,
+      "seconds": 35.45
+    },
+    "frontend_configuration_tests": {
+      "passed": 5
+    },
+    "frontend_typecheck": "passed",
+    "frontend_build": "passed",
+    "real_product_cases": 3,
+    "complete_media_decode": "passed",
+    "special_windows_ass_path_actual_ffmpeg_burn": "passed",
+    "ui": {
+      "accessibility_interaction": "advanced options and personal-scene defaults verified",
+      "browser_screenshot": "capture unavailable",
+      "product_output_visual": "A1 output frame at 700ms inspected: upper-right court and yellow arrow visible",
+      "trajectory_accuracy_assessed": false
+    },
+    "local_latest_launcher_help": "passed"
+  },
+  "product_cases": [
+    {
+      "case_id": "A1-default-overlay",
+      "scene": "high",
+      "source_sha256": "44f1b239f615cf47ed06fb248d32ddc1e835d2333f50e8871bcf886bf9b7b91e",
+      "source_duration_ms": 168000.0,
+      "timings_s": {
+        "preparation_s": 0.75,
+        "recognition_s": 88.31300000008196,
+        "rendering_s": 16.375,
+        "total_s": 105.43800000008196
+      },
+      "output_path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023\\product-defaults\\A1-default-overlay\\evidence\\output.mp4",
+      "output_sha256": "e2e65b697a50e356d7d26b36a6d7503c34fc25917a1b731c0c925af6b0ef2b10",
+      "output_bytes": 15620558,
+      "output_duration_ms": 43440.0,
+      "rally_count": 5,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 3960.0,
+          "end_ms": 9320.0,
+          "emitted_at_ms": 11000.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24520.0,
+          "end_ms": 31360.0,
+          "emitted_at_ms": 33080.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 48120.0,
+          "end_ms": 56400.0,
+          "emitted_at_ms": 58040.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 101880.0,
+          "end_ms": 108440.0,
+          "emitted_at_ms": 110120.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 142440.0,
+          "end_ms": 153840.0,
+          "emitted_at_ms": 155480.0
+        }
+      ],
+      "export_ranges": [
+        [
+          3460.0,
+          9820.0
+        ],
+        [
+          24020.0,
+          31860.0
+        ],
+        [
+          47620.0,
+          56900.0
+        ],
+        [
+          101380.0,
+          108940.0
+        ],
+        [
+          141940.0,
+          154340.0
+        ]
+      ],
+      "optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": true
+      },
+      "show_shot_paths": true,
+      "model_device": "cuda",
+      "pose_device": null,
+      "pose_batch_size": null,
+      "media_validation": {
+        "passed": true,
+        "checks": {
+          "frame_count_matches_selected_source": true,
+          "audio_decodes": true,
+          "original_dimensions": true,
+          "duration_matches_selected_ranges": true,
+          "all_decoded_video_dimensions_match": true,
+          "decoded_audio_corrupt_flags_clear_when_available": true
+        },
+        "source_decoded_frames": 4200,
+        "video_corrupt_flags_checked": true,
+        "audio_video_sync_verified": false,
+        "audio_validation_scope": "Complete exported audio decoding, nonempty samples when expected, and monotonic PTS; does not establish audio/video synchronization or waveform correspondence to the source.",
+        "expected_output_frames": 1086,
+        "decoded": {
+          "video": 1086,
+          "audio": 1871,
+          "audio_samples": 1915904
+        },
+        "video_tracks": 1,
+        "audio_tracks": 1,
+        "width": 1920,
+        "height": 1080,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "first_pts_ms": {
+          "audio": 0.0,
+          "video": 20.0
+        },
+        "last_pts_ms": {
+          "audio": 43421.315192743765,
+          "video": 43420.0
+        },
+        "video_duration_ms": 43420.0,
+        "video_start_ms": 20.0,
+        "video_presentation_end_ms": 43440.0,
+        "audio_duration_ms": 43440.0,
+        "requested_duration_ms": 43440.0,
+        "duration_tolerance_ms": 39.98158379373849,
+        "decoded_frame_checks": {
+          "video_frames": 1086,
+          "audio_frames": 1871,
+          "bad_video_dimensions": 0,
+          "audio_frames_with_corrupt_flag": 1871,
+          "corrupt_audio_frames": 0
+        }
+      },
+      "overlay_evidence": {
+        "ass_path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023\\product-defaults\\A1-default-overlay\\evidence\\trajectory-overlay.ass",
+        "shot_paths_path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023\\product-defaults\\A1-default-overlay\\evidence\\shot-paths.json",
+        "trajectory_accuracy_assessed": false,
+        "limitation": "Artifact existence, event structure and render-filter wiring only; does not establish trajectory or landing-point accuracy, or independently prove the burned pixels.",
+        "ass_bytes": 8997,
+        "ass_sha256": "ae61b08168ecfdd3326d23ad4393c8ede2aacffccbd3fca7bc4a97f74a6475dd",
+        "dialogue_events": 49,
+        "court_events": 14,
+        "arrow_events": 35,
+        "events_by_layer": {
+          "0": 14,
+          "1": 35
+        },
+        "first_event_ms": 0.0,
+        "last_event_ms": 43440.0,
+        "first_arrow_event": {
+          "start_ms": 620.0,
+          "end_ms": 1420.0
+        },
+        "shot_paths_bytes": 37628,
+        "shot_paths_sha256": "895ec9a882ac5c053f1c0bbe2617605eb6711542c6cec9e11a043e3a9cbdaa26",
+        "shot_count": 44,
+        "shot_end_kinds": {
+          "predicted_landing": 16,
+          "next_hit": 16,
+          "unresolved": 9,
+          "detected_landing": 3
+        },
+        "shots_with_two_endpoints": 35,
+        "render_filter_sha256": "c636d5a315f086e16974f74c493d9f0016c015116a8a89c475b6a08800e8ad74",
+        "checks": {
+          "ass_exists": true,
+          "shot_paths_exist": true,
+          "render_filters_exist": true,
+          "ass_events_present": true,
+          "ass_events_well_formed": true,
+          "ass_resolution_matches_source": true,
+          "ass_sha_matches_saved_evidence": true,
+          "shot_paths_contains_shot_list": true,
+          "shot_paths_sha_matches_saved_evidence": true,
+          "render_filter_references_ass": true
+        },
+        "passed": true
+      },
+      "overlay_frame": {
+        "path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023\\A1-overlay-frame.png",
+        "target_ms": 670.0,
+        "selection": "first arrow event + 50 ms (or midpoint for a shorter event)",
+        "saved": true,
+        "actual_pts_ms": 700.0,
+        "sha256": "f22e6cabdf68cd275b3b32ea3c62079910c35f6a8b63ea119cbf50b58fe047ba",
+        "width": 1920,
+        "height": 1080,
+        "inside_first_arrow_event": true
+      },
+      "resources": {
+        "samples": 104,
+        "max_interval_s": 1.0790000000270084,
+        "pids": [
+          45800,
+          121080,
+          122516,
+          129832,
+          130128,
+          130360,
+          131128,
+          132764
+        ],
+        "observed_peak": {
+          "cpu_percent": 778.3,
+          "rss_bytes": 2135252992,
+          "work_logical_bytes": 92249741,
+          "work_without_source_logical_bytes": 19316881
+        },
+        "minimum_disk_free_bytes": 2214495506432,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "cleanup": {
+        "known_owned_processes_still_running": [],
+        "work_empty": true,
+        "error": null,
+        "recorded_lease_errors": [
+          "received 1001 (going away); then sent 1001 (going away)"
+        ],
+        "lease_error_classification": "Expected 1001 caused by intentional session DELETE after completion; raw evidence retained. The driver race was fixed after measurements and covered by synthetic HTTP regression tests."
+      }
+    },
+    {
+      "case_id": "C1-default",
+      "scene": "courtside",
+      "source_sha256": "643a124c0ae591113e173336c776e0975b144d60c48b81b6fb901ebd2d6f8e81",
+      "source_duration_ms": 165102.0,
+      "timings_s": {
+        "preparation_s": 1.0320000000065193,
+        "recognition_s": 66.98400000005495,
+        "rendering_s": 18.890999999945052,
+        "total_s": 86.90700000000652
+      },
+      "output_path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023\\product-defaults\\C1-default\\evidence\\output.mp4",
+      "output_sha256": "5ee3bec55e3826d71776a83002df0df14e11fe2b3d4f5d422193fe4e95863e8d",
+      "output_bytes": 27551782,
+      "output_duration_ms": 43123.0,
+      "rally_count": 5,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 31620.0,
+          "end_ms": 43427.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 69543.0,
+          "end_ms": 77448.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 95259.0,
+          "end_ms": 101362.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 125711.0,
+          "end_ms": 134316.0,
+          "emitted_at_ms": 165068.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 151793.0,
+          "end_ms": 155496.0,
+          "emitted_at_ms": 165068.0
+        }
+      ],
+      "export_ranges": [
+        [
+          31120.0,
+          43927.0
+        ],
+        [
+          69043.0,
+          77948.0
+        ],
+        [
+          94759.0,
+          101862.0
+        ],
+        [
+          125211.0,
+          134816.0
+        ],
+        [
+          151293.0,
+          155996.0
+        ]
+      ],
+      "optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": false
+      },
+      "show_shot_paths": false,
+      "model_device": "cuda",
+      "pose_device": null,
+      "pose_batch_size": null,
+      "media_validation": {
+        "passed": true,
+        "checks": {
+          "frame_count_matches_selected_source": true,
+          "audio_decodes": true,
+          "original_dimensions": true,
+          "duration_matches_selected_ranges": true,
+          "all_decoded_video_dimensions_match": true,
+          "decoded_audio_corrupt_flags_clear_when_available": true
+        },
+        "source_decoded_frames": 4950,
+        "video_corrupt_flags_checked": true,
+        "audio_video_sync_verified": false,
+        "audio_validation_scope": "Complete exported audio decoding, nonempty samples when expected, and monotonic PTS; does not establish audio/video synchronization or waveform correspondence to the source.",
+        "expected_output_frames": 1290,
+        "decoded": {
+          "video": 1290,
+          "audio": 1858,
+          "audio_samples": 1902592
+        },
+        "video_tracks": 1,
+        "audio_tracks": 1,
+        "width": 1920,
+        "height": 1080,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "first_pts_ms": {
+          "audio": 0.0,
+          "video": 33.0
+        },
+        "last_pts_ms": {
+          "audio": 43119.38775510204,
+          "video": 43089.0
+        },
+        "video_duration_ms": 43090.0,
+        "video_start_ms": 33.0,
+        "video_presentation_end_ms": 43123.0,
+        "audio_duration_ms": 43122.99319727891,
+        "requested_duration_ms": 43123.0,
+        "duration_tolerance_ms": 33.4031007751938,
+        "decoded_frame_checks": {
+          "video_frames": 1290,
+          "audio_frames": 1858,
+          "bad_video_dimensions": 0,
+          "audio_frames_with_corrupt_flag": 1858,
+          "corrupt_audio_frames": 0
+        }
+      },
+      "overlay_evidence": null,
+      "overlay_frame": null,
+      "resources": {
+        "samples": 86,
+        "max_interval_s": 1.109000000054948,
+        "pids": [
+          63988,
+          78532,
+          129704,
+          129724,
+          132392,
+          132424,
+          133108,
+          133808
+        ],
+        "observed_peak": {
+          "cpu_percent": 659.6,
+          "rss_bytes": 2183843840,
+          "work_logical_bytes": 96907759,
+          "work_without_source_logical_bytes": 28346113
+        },
+        "minimum_disk_free_bytes": 2214303535104,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "cleanup": {
+        "known_owned_processes_still_running": [],
+        "work_empty": true,
+        "error": null,
+        "recorded_lease_errors": [
+          "received 1001 (going away); then sent 1001 (going away)"
+        ],
+        "lease_error_classification": "Expected 1001 caused by intentional session DELETE after completion; raw evidence retained. The driver race was fixed after measurements and covered by synthetic HTTP regression tests."
+      }
+    },
+    {
+      "case_id": "D1-default",
+      "scene": "personal",
+      "source_sha256": "897858a17a3f8380f6baff726e6eff77fe0e891a49b4fa9fc6176f1e97de722b",
+      "source_duration_ms": 150989.0625,
+      "timings_s": {
+        "preparation_s": 0.984000000054948,
+        "recognition_s": 108.59399999992456,
+        "rendering_s": 21.26500000001397,
+        "total_s": 130.84299999999348
+      },
+      "output_path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023\\product-defaults\\D1-default\\evidence\\output.mp4",
+      "output_sha256": "4481c4bd15270dc20ed9d746d57c19ce5d14e2bcf912d74ffc6b9858d7dced88",
+      "output_bytes": 23129213,
+      "output_duration_ms": 65755.8125,
+      "rally_count": 7,
+      "predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 49300.0,
+          "end_ms": 57000.0,
+          "emitted_at_ms": 150989.0625
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 68100.0,
+          "end_ms": 74200.0,
+          "emitted_at_ms": 150989.0625
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 83500.0,
+          "end_ms": 92600.0,
+          "emitted_at_ms": 150989.0625
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 95900.0,
+          "end_ms": 103000.0,
+          "emitted_at_ms": 150989.0625
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 111300.0,
+          "end_ms": 122255.8125,
+          "emitted_at_ms": 150989.0625
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 128355.8125,
+          "end_ms": 142455.8125,
+          "emitted_at_ms": 150989.0625
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 146755.8125,
+          "end_ms": 150455.8125,
+          "emitted_at_ms": 150989.0625
+        }
+      ],
+      "export_ranges": [
+        [
+          48800.0,
+          57500.0
+        ],
+        [
+          67600.0,
+          74700.0
+        ],
+        [
+          83000.0,
+          93100.0
+        ],
+        [
+          95400.0,
+          103500.0
+        ],
+        [
+          110800.0,
+          122755.8125
+        ],
+        [
+          127855.8125,
+          142955.8125
+        ],
+        [
+          146255.8125,
+          150955.8125
+        ]
+      ],
+      "optimizations": {
+        "limit_fps": true,
+        "small_input": true,
+        "grayscale": true,
+        "dynamic_scan": false
+      },
+      "show_shot_paths": false,
+      "model_device": "cuda",
+      "pose_device": "cuda",
+      "pose_batch_size": 1,
+      "media_validation": {
+        "passed": true,
+        "checks": {
+          "frame_count_matches_selected_source": true,
+          "audio_decodes": true,
+          "original_dimensions": true,
+          "duration_matches_selected_ranges": true,
+          "all_decoded_video_dimensions_match": true,
+          "decoded_audio_corrupt_flags_clear_when_available": true
+        },
+        "source_decoded_frames": 4528,
+        "video_corrupt_flags_checked": true,
+        "audio_video_sync_verified": false,
+        "audio_validation_scope": "Complete exported audio decoding, nonempty samples when expected, and monotonic PTS; does not establish audio/video synchronization or waveform correspondence to the source.",
+        "expected_output_frames": 1971,
+        "decoded": {
+          "video": 1971,
+          "audio": 3083,
+          "audio_samples": 3156992
+        },
+        "video_tracks": 1,
+        "audio_tracks": 1,
+        "width": 1920,
+        "height": 1080,
+        "video_codec": "h264",
+        "audio_codec": "aac",
+        "first_pts_ms": {
+          "video": 0.0,
+          "audio": 0.0
+        },
+        "last_pts_ms": {
+          "video": 65722.4375,
+          "audio": 65749.33333333333
+        },
+        "video_duration_ms": 65755.8125,
+        "video_start_ms": 0.0,
+        "video_presentation_end_ms": 65755.8125,
+        "audio_duration_ms": 65756.0,
+        "requested_duration_ms": 65755.8125,
+        "duration_tolerance_ms": 33.36165017757484,
+        "decoded_frame_checks": {
+          "video_frames": 1971,
+          "audio_frames": 3083,
+          "bad_video_dimensions": 0,
+          "audio_frames_with_corrupt_flag": 3083,
+          "corrupt_audio_frames": 0
+        }
+      },
+      "overlay_evidence": null,
+      "overlay_frame": null,
+      "resources": {
+        "samples": 128,
+        "max_interval_s": 1.125,
+        "pids": [
+          103888,
+          118128,
+          121716,
+          125412,
+          130336,
+          130348,
+          133984,
+          133988
+        ],
+        "observed_peak": {
+          "cpu_percent": 584.1,
+          "rss_bytes": 2516328448,
+          "work_logical_bytes": 63870302,
+          "work_without_source_logical_bytes": 23817722
+        },
+        "minimum_disk_free_bytes": 2213971283968,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "cleanup": {
+        "known_owned_processes_still_running": [],
+        "work_empty": true,
+        "error": null,
+        "recorded_lease_errors": [
+          "received 1001 (going away); then sent 1001 (going away)"
+        ],
+        "lease_error_classification": "Expected 1001 caused by intentional session DELETE after completion; raw evidence retained. The driver race was fixed after measurements and covered by synthetic HTTP regression tests."
+      }
+    }
+  ],
+  "d1_advanced_options_off": {
+    "options": {
+      "scene": "personal",
+      "quality": "balanced",
+      "padding_ms": 500,
+      "pose_device": "cuda",
+      "pose_batch_size": 1,
+      "optimization_profile": "off",
+      "show_shot_paths": false,
+      "resolved_optimizations": {
+        "limit_fps": false,
+        "small_input": false,
+        "grayscale": false,
+        "dynamic_scan": false
+      }
+    },
+    "stage_timings_s": {
+      "preparation": 5.599456699914299,
+      "recognition": 170.77000449993648,
+      "select_ranges": 2.1400046534836292e-05,
+      "render": 15.821111000026576,
+      "validation_and_reference": 14.409593699965626
+    },
+    "pipeline_wall_s": 192.2018257000018,
+    "total_wall_s": 206.71926399995573,
+    "reference_path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023\\legacy-D1-off-reference.json",
+    "reference_sha256": "77c7a3db2c3cd29154299af213e6ae3231d92334f377a4307d91d535f6c9eacd",
+    "reference_derivation": {
+      "path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\performance-20261021\\baseline-D1\\reference.json",
+      "sha256": "4c1fb74da311c5c398c11b14b0c20c077d6cf3041ecb7b85fd55aa121b258467",
+      "note": "Metadata-only derived copy; frozen f460178 did not have optional input optimizations. Predictions unchanged."
+    },
+    "same_predictions": true,
+    "same_export_ranges": true,
+    "maximum_boundary_delta_ms": 0.0,
+    "reference_unchanged": true,
+    "output": {
+      "path": "E:\\Codex repository\\SoloShuttlePose\\ouputs\\windows-latest-20261023\\D1-off-cuda\\output.mp4",
+      "bytes": 23228193,
+      "sha256": "88b2a65f68ef4a8b7562566f3fbd0d5013f81c90f830f615d2aabe2a30c1c2d4"
+    },
+    "historical_cpu_output_sha256_equal": true,
+    "validation": {
+      "passed": true,
+      "checks": {
+        "frame_count_matches_selected_source": true,
+        "audio_decodes": true,
+        "original_dimensions": true,
+        "duration_matches_selected_ranges": true
+      },
+      "source_decoded_frames": 4528,
+      "video_corrupt_flags_checked": true,
+      "audio_video_sync_verified": false,
+      "audio_validation_scope": "Complete exported audio decoding, nonempty samples when expected, and monotonic PTS; does not establish audio/video synchronization or waveform correspondence to the source.",
+      "expected_output_frames": 1977,
+      "decoded": {
+        "video": 1977,
+        "audio": 3092,
+        "audio_samples": 3166208
+      },
+      "video_tracks": 1,
+      "audio_tracks": 1,
+      "width": 1920,
+      "height": 1080,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "first_pts_ms": {
+        "video": 0.0,
+        "audio": 0.0
+      },
+      "last_pts_ms": {
+        "video": 65922.4375,
+        "audio": 65941.33333333333
+      },
+      "video_duration_ms": 65955.8125,
+      "video_start_ms": 0.0,
+      "video_presentation_end_ms": 65955.8125,
+      "audio_duration_ms": 65956.0,
+      "requested_duration_ms": 65955.8125,
+      "duration_tolerance_ms": 33.36156423874557
+    },
+    "statistics": {
+      "schema_version": 1,
+      "error": null,
+      "primary_phases": [
+        "model_initialization",
+        "video_observation",
+        "people_and_trajectories",
+        "action_analysis",
+        "rally_decision",
+        "intermediate_writes"
+      ],
+      "seconds": {
+        "model_initialization": 10.233999999938533,
+        "tracknet_preprocess_s": 34.49272689840291,
+        "tracknet_inference_and_transfer_s": 40.921011003199965,
+        "tracknet_point_decode_s": 2.341952999122441,
+        "person_detector_s": 9.457999999867752,
+        "video_observation": 89.93700000003446,
+        "people_and_trajectories": 2.969000000040978,
+        "pose_decode_s": 10.703633502009325,
+        "pose_conversion_s": 4.363999999361113,
+        "pose_crop_preparation_s": 0.006716997246257961,
+        "pose_inference_s": 40.229186600772664,
+        "pose_selection_s": 0.16236329975072294,
+        "pose_flow_s": 8.490206900984049,
+        "pose_extract_s": 0.1230331000406295,
+        "action_analysis": 67.28099999995902,
+        "pose_model_initialization_s": 0.13042800000403076,
+        "pose_tensor_preparation_s": 1.2393056001747027,
+        "pose_model_inference_and_transfer_s": 38.69496719969902,
+        "intermediate_writes": 0.0,
+        "rally_decision": 0.01600000006146729
+      },
+      "counts": {
+        "tracknet_calls": 1509,
+        "tracknet_input_frames": 4527,
+        "candidate_peaks": 19182,
+        "person_detector_calls": 189,
+        "person_detector_images": 755,
+        "person_boxes": 9472,
+        "decode_passes": 2,
+        "frames_decoded": 9056,
+        "native_observations": 4527,
+        "shifted_observations": 1,
+        "pose_anchor_frames": 755,
+        "pose_converted_frames": 3019,
+        "pose_calls": 1465,
+        "person_crops": 1465,
+        "pose_flow_frames": 2264
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 4528,
+          "frames_selected": 4528,
+          "frames_skipped": 0,
+          "frames_converted": 4528,
+          "frames_delivered": 4528,
+          "queue_peak": 6,
+          "decode_s": 13.509000002406538,
+          "conversion_s": 8.614000000641681,
+          "max_lag_s": 0.0,
+          "fps": 29.98892717808616,
+          "expected_frames": 4528,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 0.0,
+          "last_timestamp_ms": 150955.8125,
+          "last_delivered_timestamp_ms": 150955.8125
+        },
+        {
+          "pass_name": "pose",
+          "frames_decoded": 4528,
+          "frames_selected": 4528,
+          "frames_skipped": 0
+        }
+      ],
+      "mps_samples": [],
+      "accounting": "Primary phases are exclusive; model and decode subtimings overlap their parent. Decoder work is on another thread. Do not sum subtimings or process memory with MPS memory."
+    },
+    "limitation": "Historical CPU version is different. No current-version CPU/GPU speedup claim; direct driver excludes HTTP and shot-path overlay."
+  },
+  "limits": [
+    "One execution for each 2.5–2.8-minute input; no repeated-run variance or 30-minute memory/stability acceptance.",
+    "Sources are 25/approximately 30 fps; real high-frame-rate input and active 35-fps skipping remain unvalidated.",
+    "New defaults change inference input; D1 boundaries differ from advanced-options-off. Recognition quality and independent sources were not evaluated.",
+    "Trajectory and predicted landing accuracy remain unvalidated; 9 of 44 A1 shots have unresolved endpoints.",
+    "Complete audio decoding and monotonic PTS do not establish audio/video synchronization or waveform correspondence.",
+    "No Windows EXE/installer, macOS or Linux acceptance in this integration."
+  ],
+  "created_at_utc": "2026-10-23T10:56:37.490718+00:00"
+}

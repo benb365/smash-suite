@@ -2,7 +2,7 @@
 
 在 Windows 上从源码运行自动剪辑应用，使用 Chrome 或 Edge 操作本机服务。本说明适用于 Python 3.11、Node.js 20.19+；命令在仓库根目录的 PowerShell 中执行。
 
-当前 `codex/windows-latest` 正在整合 develop `1080146` 的高级配置、球路叠图及性能改动。本页保留已知的 Windows 运行方法；整合后版本的本机验证仍在进行，历史报告不代表本轮通过。
+`codex/windows-latest` 已整合 develop `1080146` 的高级配置、球路叠图及性能改动，完成本轮 A/C/D 三短片的 Windows 真实产品运行。独立效果与长视频验收仍待完成；本轮结果及范围见[整合验证记录](reports/windows-latest-20261023.md)。
 
 ## 安装环境
 
@@ -116,7 +116,7 @@ node scripts/python.mjs scripts/benchmark_clipper.py --source $sourceVideo --sce
 
 每个目录包含 `output.mp4`、`result.json`、`performance.json` 和 `events.jsonl`。固定使用均衡质量和前后各 0.5 秒补时；报告区分处理耗时与额外的完整解码校验耗时。`performance.json` 的 `status: passed` 表示执行与导出检查通过；区间回归需查看 `reference_comparison` 的身份核验、区间差异及 `same_order_exact`，不能仅凭该状态认定结果一致。参考文件保持原样，预测区间按原顺序逐项比较；出现区间变化时需结合原片判断影响。音轨完整解码和非空检查不等于音画同步验收。
 
-产品新默认值和球路联用使用 `apps/video-clipper/backend/app/benchmark.py` 的真实 HTTP 入口另行验证。输入例显式设置 `show_shot_paths=true` 才覆盖高视角球路；单独运行上述模块脚本没有覆盖上传、会话、请求默认值或叠图行为。方法和证据格式见[高级配置验证](reports/advanced-options/README.md)，本轮 Windows 结果须另行记录。
+产品新默认值和球路联用使用 `apps/video-clipper/backend/app/benchmark.py` 的真实 HTTP 入口另行验证。输入例显式设置 `show_shot_paths=true` 才覆盖高视角球路；单独运行上述模块脚本没有覆盖上传、会话、请求默认值或叠图行为。方法和证据格式见[高级配置验证](reports/advanced-options/README.md)，本轮三场景 Windows 运行见[整合验证记录](reports/windows-latest-20261023.md)。
 
 ## 本次兼容修复
 
@@ -129,6 +129,10 @@ node scripts/python.mjs scripts/benchmark_clipper.py --source $sourceVideo --sce
 | 默认编码导致中文配置、结果或错误读取失败 | 请求、配置、结果与日志显式使用 UTF-8 |
 | 中文路径生成缩略图失败 | OpenCV 编码后由 Python 写入文件 |
 | `.mjs` 被系统映射为 `text/plain`，按钮不可用 | 前端桥模块使用 `.js` |
+| Windows ASS 文件路径导致叠图滤镜失败 | 按 FFmpeg 滤镜语法转义字幕文件路径 |
+| 自动球场标定向中文目录写图失败 | 改用 OpenCV `imencode` 后由 Python 写入文件 |
+| 基准运行退出后遗留后端或 worker | 按进程树终止该次基准启动的进程 |
+| 正常关闭租约与任务结束并发，被记为异常 | 区分正常关闭与实际连接失败，收尾时等待租约任务结束 |
 
 流复制 MP4 的预滚帧数差异另见[媒体输入说明](../../modules/media/README.md#帧与时间)。
 
@@ -142,6 +146,8 @@ git diff --check
 
 此前三个场景的 Windows 实测摘要见[2026-10-20 运行记录](reports/windows-runtime-20261020.json)，个人视角 CPU/CUDA 对照及当时的默认 CUDA 应用流程见[2026-10-21 性能报告](reports/pose-performance-20261021.md)。记录对应当时的源码、工作区和配置；负责人在 macOS/MPS 上的新性能报告也不能直接当作本机 Windows/CUDA 的验收结果。
 
-`codex/windows-latest` 的本轮自动检查、真实模型、默认高级配置和高视角球路联用仍待完成并记录。旧报告的通过数与耗时不沿用到本轮。
+本轮后端检查、前端配置检查、类型检查与构建通过。已通过真实 HTTP 流程完成 A/C/D 三短片识别及成片生成：高视角使用四项默认配置并开启球路，场边和个人视角使用前三项配置、关闭粗筛；个人视角实际使用 CUDA、batch 1。完整媒体解码和画面复核的结论以[本轮报告](reports/windows-latest-20261023.md)为准。
+
+本轮默认配置与旧 CPU 测量不同，不构成新的 CPU/CUDA 配对收益；旧通过数和耗时也不沿用。三短片运行不代表独立来源准确率、球路落点精度或长视频验收完成。
 
 当前支持 Windows 源码开发与运行。`build:product` 的发行脚本仍要求 macOS Apple 芯片，尚未提供 Windows EXE 或安装包。macOS / Linux 的解释器路径仍受入口支持，本次没有在这些系统重新运行验证。
