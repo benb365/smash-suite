@@ -150,18 +150,15 @@ def observe(source, info, camera_type, court, predictor, yolo_weight, device, pr
     stats = statistics or Statistics()
     from modules.models.yolo11n import PersonDetector
     from modules.rally.common.player_paths import descriptor
-    from modules.rally.common.body_features import body_motion
     with stats.phase("model_initialization"):
         detector = PersonDetector(yolo_weight, device=device)
     native, shifted, features = {}, {}, []
     queue = deque(maxlen=3)
     person_batch = []
-    previous_gray, previous_time = None, None
     last = time.monotonic()
     court = np.array([[x * 1920, y * 1080] for x, y in court], np.float32) if court else None
 
     def people_flush():
-        nonlocal previous_gray, previous_time
         if not person_batch:
             return
         tick = time.monotonic()
@@ -176,11 +173,7 @@ def observe(source, info, camera_type, court, predictor, yolo_weight, device, pr
             row = dict(frame_id=frame.frame_id, timestamp_ms=frame.timestamp_ms, boxes=boxes)
             descriptors = [descriptor(frame.image, b) for b in boxes]
             if camera_type == "personal":
-                gray = cv2.cvtColor(cv2.resize(frame.image, (960, 540)), cv2.COLOR_BGR2GRAY)
-                dt = (frame.timestamp_ms - previous_time) / 1000 if previous_time is not None else None
-                flow = None if previous_gray is None else cv2.calcOpticalFlowFarneback(previous_gray, gray, None, .5, 4, 21, 3, 7, 1.5, 0)
-                row.update(appearance=descriptors, body_motion=[None if flow is None else body_motion(flow, b, dt) for b in boxes])
-                previous_gray, previous_time = gray, frame.timestamp_ms
+                row["appearance"] = descriptors
             else:
                 row["features"] = descriptors
             features.append(row)

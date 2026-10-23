@@ -1,0 +1,277 @@
+{
+  "source_worktree": "/Users/bytedance/.codex/worktrees/opt20-flow/smash-suite",
+  "task_commit": "f4772273b112ef358ac5345a18aabae37974ee0a",
+  "source_base": "5bb39fa69181e86c21bde20e74d951f1cb2ca415",
+  "primary_before": "92988bfc7efc33127b988db2c3c7cffe23611944",
+  "accepted_files": [
+    {
+      "path": "apps/video-clipper/reports/opt20-flow/README.md",
+      "source_sha256": "68e6ad5c2f9afde785116e8d0bcd640cf50f346ec33637f0ef694880890f640e",
+      "sha256": "68e6ad5c2f9afde785116e8d0bcd640cf50f346ec33637f0ef694880890f640e",
+      "bytes": 2350
+    },
+    {
+      "path": "apps/video-clipper/reports/opt20-flow/summary.json",
+      "source_sha256": "cac990efea5c3b4e5baf80865ffcf3ed7bae2a7d48a605ff7080752668be2338",
+      "sha256": "cac990efea5c3b4e5baf80865ffcf3ed7bae2a7d48a605ff7080752668be2338",
+      "bytes": 24039
+    },
+    {
+      "path": "docs/ai/opt20-flow/acceptance-freeze.json",
+      "source_sha256": "30357187bd0132d6db30a9b54b940b30ff0702e46e24caf7d250ae33ce325ed3",
+      "sha256": "30357187bd0132d6db30a9b54b940b30ff0702e46e24caf7d250ae33ce325ed3",
+      "bytes": 10260
+    },
+    {
+      "path": "docs/ai/opt20-flow/controller/commit-input.md",
+      "source_sha256": "a09d0eae1ce16401f82f6f82866dc2928384d584cee78fffef6204335013f5c9",
+      "sha256": "a09d0eae1ce16401f82f6f82866dc2928384d584cee78fffef6204335013f5c9",
+      "bytes": 716
+    },
+    {
+      "path": "docs/ai/opt20-flow/developer/input.md",
+      "source_sha256": "9ea6491d38c642288050f95b0eb550498abcc1513258d1be7987dba3465d8e0b",
+      "sha256": "9ea6491d38c642288050f95b0eb550498abcc1513258d1be7987dba3465d8e0b",
+      "bytes": 1182
+    },
+    {
+      "path": "docs/ai/opt20-flow/developer/output.md",
+      "source_sha256": "499a15bfaad11429dec1849a31f80c6baadc6ce071e17e65d4513c69dfff399f",
+      "sha256": "499a15bfaad11429dec1849a31f80c6baadc6ce071e17e65d4513c69dfff399f",
+      "bytes": 3954
+    },
+    {
+      "path": "docs/ai/opt20-flow/task.md",
+      "source_sha256": "414c7183d9cde8cf2146014ad2bfbc9a9ded680699e24acc1fe78fdc42df57eb",
+      "sha256": "c9756b81bbfc2d8c29c8e8eac4d134f8998fc9818a66c94adeb5c094f520285f",
+      "bytes": 5384,
+      "metadata_note": "integration stage only; source SHA retained"
+    },
+    {
+      "path": "docs/ai/opt20-flow/verifier/input.md",
+      "source_sha256": "8a6b978cb3d2172bb8d7d0e8af0c9220b27487768de0b78bdc76c22e5aee4022",
+      "sha256": "8a6b978cb3d2172bb8d7d0e8af0c9220b27487768de0b78bdc76c22e5aee4022",
+      "bytes": 2807
+    },
+    {
+      "path": "docs/ai/opt20-flow/verifier/output.md",
+      "source_sha256": "efbf85eb58ccdaf1d765e3d52e0c5655e67c3d18eb0dd7740a99d773de8a06d7",
+      "sha256": "efbf85eb58ccdaf1d765e3d52e0c5655e67c3d18eb0dd7740a99d773de8a06d7",
+      "bytes": 4161
+    },
+    {
+      "path": "modules/rally/common/body_features.py",
+      "deleted": true
+    },
+    {
+      "path": "modules/rally/common/players_v2.py",
+      "source_sha256": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+      "sha256": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+      "bytes": 5442
+    },
+    {
+      "path": "modules/rally/common/trials.py",
+      "source_sha256": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+      "sha256": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+      "bytes": 1590
+    },
+    {
+      "path": "modules/rally/recognize.py",
+      "source_sha256": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+      "sha256": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+      "bytes": 20385
+    }
+  ],
+  "runtime_files": [
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/backend.log",
+      "sha256": "f130241478486d0a87be0f9d171939193836b9b85bb2939cb97cfc2c231940e7",
+      "bytes": 910
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/benchmark-clock.json",
+      "sha256": "3539dcf5caeeb3d5882bd990db1df8e16c5202b32b324d719d3add8c92fca9a3",
+      "bytes": 208
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/decisions.json",
+      "sha256": "ecc3d1438204d95c0fb4c178cf4b089aed0956c7711958840dd311f0c649eac3",
+      "bytes": 6918
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/frame.jpg",
+      "sha256": "5e5145974bcb8f02834bb6627dd8c33cf462bf5e682d6b6a89d48a2ff64d3d9c",
+      "bytes": 363150
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/output.ffmpeg.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/output.filters",
+      "sha256": "a0047cb6d4a00127ca530f338928ddd2c3c3791a787a63fd6ca06720ee2e5772",
+      "bytes": 2192
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/output.mp4",
+      "sha256": "f97c720cda23768819373766cb49f5c3531179a879fdfa0dc043f497726d5eed",
+      "bytes": 20814940
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/person-signals.npz",
+      "sha256": "acb26813bfc0a0cfc51752dcf2278a98250462d83cd3f650f3986cf79f1bf2ed",
+      "bytes": 82894
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/request.json",
+      "sha256": "956aeebb7e802b1add44cc8f8938d93c67cacdb74fd4521043d6c1cd343711e2",
+      "bytes": 650
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/result.json",
+      "sha256": "701c370ccdfb67a10252261f92c717ec3d88cfef91e981db36b60aa024155f67",
+      "bytes": 1747
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/statistics.json",
+      "sha256": "c9fba99cebe93f9660934f74fd2751bf6944246800d85a9d6b0c10ebd0d76b16",
+      "bytes": 32294
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/evidence/worker.log",
+      "sha256": "ce3624b1736160c63ac6c01876d5a1d40610f0c66a01174818e97245a022aff9",
+      "bytes": 1443
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/input.json",
+      "sha256": "685a07ff98dd4775efc30e031f428903f90725e0e30dc7023e245f03911271ac",
+      "bytes": 3194
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/resources.jsonl",
+      "sha256": "9bba5af95f329d78bd78dbe17382e16b3013e1815cef5f730bbe96dd987c0fd9",
+      "bytes": 159436
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/D-short/result.json",
+      "sha256": "d9fb4f03f8349f3e153362aa7a17d28039198168b7aca0654fefeba1802270e6",
+      "bytes": 7803
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/manifest.json",
+      "sha256": "b763a2a9676b5501e2d5508827e6903e9dc52ff44850f854745901a1de5abd27",
+      "bytes": 68761
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate/results.json",
+      "sha256": "8669f1868cc621bc271e3532de10cdc15afcf3bc9fc2554437103fdfa6fe96a5",
+      "bytes": 8199
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/candidate-report.json",
+      "sha256": "69058ed6fc7ddb912e05d48a6de85f6090ca099d698be0f23ab31617b18cf2f9",
+      "bytes": 9110
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/equivalence.json",
+      "sha256": "1adeca9a71ca7573ab089534d42626a6c87af7df7ebe63831f49b4b021e6f8c7",
+      "bytes": 3714
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/backend.log",
+      "sha256": "9501760c35d4be4bfc16da1aa9a60545e5c9dc94081cd347c2ed52e1cdbcd796",
+      "bytes": 912
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/benchmark-clock.json",
+      "sha256": "08f643ad042a4234e4846784ee65f0606e8d254ff6110c20dc7edaefb7dcd891",
+      "bytes": 206
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/decisions.json",
+      "sha256": "ecc3d1438204d95c0fb4c178cf4b089aed0956c7711958840dd311f0c649eac3",
+      "bytes": 6918
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/frame.jpg",
+      "sha256": "5e5145974bcb8f02834bb6627dd8c33cf462bf5e682d6b6a89d48a2ff64d3d9c",
+      "bytes": 363150
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/output.ffmpeg.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/output.filters",
+      "sha256": "a0047cb6d4a00127ca530f338928ddd2c3c3791a787a63fd6ca06720ee2e5772",
+      "bytes": 2192
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/output.mp4",
+      "sha256": "f97c720cda23768819373766cb49f5c3531179a879fdfa0dc043f497726d5eed",
+      "bytes": 20814940
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/person-signals.npz",
+      "sha256": "acb26813bfc0a0cfc51752dcf2278a98250462d83cd3f650f3986cf79f1bf2ed",
+      "bytes": 82894
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/request.json",
+      "sha256": "603c49eb6e41d62c215561e5736175b145eb7771767f4fb1a4fc4ad4eb80009d",
+      "bytes": 655
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/result.json",
+      "sha256": "ee0540a3d9e08dedb72bc9b13e15f37f8685ac5df5f8fbfcd13352d7a3d6a4f4",
+      "bytes": 1747
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/statistics.json",
+      "sha256": "987a75e9e98dbfd9d418d395d49341d46ff8b54b4e19df4fafb24956e6d720a6",
+      "bytes": 33298
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/evidence/worker.log",
+      "sha256": "5b95566b55e53455d6c46df02be434881ff552ae7d82b0038764a895d067f3d7",
+      "bytes": 1448
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/input.json",
+      "sha256": "685a07ff98dd4775efc30e031f428903f90725e0e30dc7023e245f03911271ac",
+      "bytes": 3194
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/resources.jsonl",
+      "sha256": "cb8f583813b280dbc5a4f8ff864f14e357bbbcc56dfeacdd6f1985786673549f",
+      "bytes": 165475
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/D-short/result.json",
+      "sha256": "e0ac79bd74f9219cbae39de9355595960ba59e6f7d5bc5a1637f5ab1e844f06d",
+      "bytes": 7887
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/manifest.json",
+      "sha256": "a6196a1051c042a09fafd09df8cab92a216ed2b20658c062562c4361e2959577",
+      "bytes": 69061
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent/results.json",
+      "sha256": "8f509920c7b3b226124bd976da95cdb9eed627df1e964f92aac6c16a8c8953ca",
+      "bytes": 8287
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent-equivalence.json",
+      "sha256": "7e692c345b0b328496a633758e5dcc5dedfe1d3fa98db3a960ad9008c04496ab",
+      "bytes": 3718
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt20-flow/independent-report.json",
+      "sha256": "67bf6c6f67739d7a6ee5e7de1080fbbdd40abd2aaa7db322b4792c45dc27d54c",
+      "bytes": 9204
+    }
+  ]
+}

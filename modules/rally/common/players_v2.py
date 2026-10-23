@@ -24,7 +24,7 @@ def follow(rows,seeds):
                 if dt<=2 and dist>.6+1.8*dt:continue
                 travel=0 if dt>2 else .25*dist/max(.3,math.sqrt(dt+.04))
                 cost=travel+2*ad+.2*abs(math.log(ratio))-.1*b['confidence']
-                choices.append((cost,j,dict(box=b,box_index=j,appearance_error=ad,body_motion=row['body_motion'][j])))
+                choices.append((cost,j,dict(box=b,box_index=j,appearance_error=ad)))
             options.append(choices)
         pairs=[(a[0]+z[0],a,z) for a,z in itertools.product(*options) if a[1]<0 or z[1]<0 or a[1]!=z[1]]
         _,a,z=min(pairs,key=lambda q:q[0]);people=[]
