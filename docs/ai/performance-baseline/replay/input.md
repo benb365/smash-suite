@@ -1,0 +1,3 @@
+# 保存观测恢复盘点（只读机械任务）
+先读../task.md、AGENTS和modules/rally/experiments/cases.json。开发报告清单所需原目录 modules/rally/.runtime/c1-weak-tracks-20261017/full-phase1-C1-01/candidates.jsonl 缺失。只读盘点 /Users/bytedance/workspace/experiments/smash-suite 的该相关缓存路径、迁移记录和 outputs/ 下与cases.json所需C1同名/同哈希的保存观测；可用rg --files先限定路径，按清单SHA校验候选，禁止大范围内容扫描或改写输入。用户仅要求保留原outputs，主控此前“不读”是预防边界，现为必要回放恢复明确批准只读目标文件，不准修改/删除/暂存/提交任何outputs。
+其余34项观测可一并核对哪些清单文件缺失，输出已存在且SHA匹配的精确来源映射及缺口，写自己的output.md。不得读developer/media/verifier通信，也不改实现或复制数据；不运行模型、不改cases期望。可只读 /Users/bytedance/workspace/test/meterials/outputs/realtime-input-20261005/offline/01-02-clip/tracknet-points.jsonl 这个清单原输入。所有写只限本role output.md（目录为docs/ai/performance-baseline/replay/）。

@@ -1,0 +1,10 @@
+{
+  "replay-result.json": {
+    "sha256": "313e006e075b30c216e00504d90bec0a17d2543127ae5bac9e79900da062fba3",
+    "source": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/original-people-D/replay-result.json"
+  },
+  "observations.json.gz": {
+    "sha256": "de715b85f9049ef2c5805defd9f44042e009e4e67030e530cef90cc6c9d238c9",
+    "source": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/original-people-D/observations.json.gz"
+  }
+}

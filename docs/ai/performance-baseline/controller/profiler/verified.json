@@ -1,0 +1,86 @@
+{
+  "time-sample": {
+    "rows": 954,
+    "target_pid_rows": 954,
+    "target_subsystems": {},
+    "target_names_top": []
+  },
+  "metal-gpu-intervals": {
+    "rows": 43307,
+    "target_pid_rows": 2992,
+    "target_subsystems": {},
+    "target_names_top": []
+  },
+  "os-signpost": {
+    "rows": 24898,
+    "target_pid_rows": 19878,
+    "target_subsystems": {
+      "com.apple.Metal.AGXSignposts": 3588,
+      "com.apple.metalperformanceshadersgraph": 5430,
+      "PyTorchMPS": 10860
+    },
+    "target_names_top": [
+      [
+        "MPSGraph_Encode",
+        5430
+      ],
+      [
+        "PyTorchOperationIntervals",
+        5430
+      ],
+      [
+        "Metal Buffer Resource",
+        3524
+      ],
+      [
+        "PyTorchOperationEvents",
+        2715
+      ],
+      [
+        "PyTorchCopyIntervals",
+        1810
+      ],
+      [
+        "PyTorchCopyEvents",
+        905
+      ],
+      [
+        "FunctionCompiled",
+        28
+      ],
+      [
+        "AGX Internal Buffer Resource",
+        28
+      ],
+      [
+        "Metal Heap Resource",
+        8
+      ]
+    ]
+  },
+  "artifact_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profiler-preflight",
+  "py_spy": {
+    "version": "0.4.2",
+    "samples": 299,
+    "errors": 0,
+    "probe_uid": 501,
+    "authentication": "macOS system administrator dialog; sampler only"
+  },
+  "command": "xcrun xctrace record --template 'Metal System Trace' --instrument 'Time Profiler' --instrument os_signpost --attach 14935 --time-limit 18s",
+  "symbolicated_cpu": {
+    "schema": "time-profile",
+    "rows": 949,
+    "frames": 18353,
+    "examples": [
+      "iokit_user_client_trap",
+      "IOGPUCommandQueueSubmitCommandBuffers",
+      "-[IOGPUMetalCommandQueue submitCommandBuffers:count:]"
+    ],
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profiler-preflight/time-profile.xml"
+  },
+  "raw_toc": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profiler-preflight/probe-toc.xml",
+    "sha256": "60f05d1c442398faa32aa87da636d92a144909a290dc30fa7c3da305249b45b3",
+    "tracked_copy": "probe-toc.xml is sanitized: environment and device identifiers removed"
+  }
+}

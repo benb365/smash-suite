@@ -44,7 +44,7 @@ class PoseEstimator:
         tensors = []
         for image in images:
             rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
-            tensor = self.torch.from_numpy(rgb.copy()).permute(2, 0, 1).float() / 255
+            tensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float() / 255
             tensors.append(tensor.to(self.device))
         prepared = perf_counter()
         with self.torch.inference_mode():

@@ -3,6 +3,7 @@
 Run from a repository root. An explicit repository on PYTHONPATH takes priority,
 so this same script can measure another checkout without copying the driver.
 No inputs or models are downloaded. Use a new output directory for each run.
+This entry measures recognition and plain MP4 export, without shot-path overlays.
 """
 from __future__ import annotations
 
@@ -101,6 +102,16 @@ def intervals(rows, *, predictions):
     return pairs
 
 
+def recognition_optimizations(scene, profile):
+    """Resolve input choices explicitly; standalone and product defaults differ."""
+    if profile == "off":
+        return dict(limit_fps=False, small_input=False, grayscale=False, dynamic_scan=False)
+    if profile == "default":
+        from app.product_types import ProcessRequest
+        return ProcessRequest(camera_type=scene).optimizations.model_dump()
+    raise ValueError(f"Unknown optimization profile: {profile}")
+
+
 def compare_intervals(current, reference):
     rows = [dict(index=i, current_ms=a, reference_ms=b,
                  start_delta_ms=a[0] - b[0], end_delta_ms=a[1] - b[1], exact=a == b)
@@ -190,6 +201,8 @@ def main(argv=None, *, exclusive_process=False):
     parser.add_argument("--reference", type=Path, help="Existing result JSON to compare without changing it")
     parser.add_argument("--pose-device", choices=("cpu", "cuda"), help="Personal-scene pose device; omitted means recognize's default")
     parser.add_argument("--pose-batch-size", type=int, default=1)
+    parser.add_argument("--optimizations", choices=("off", "default"), default="off",
+                        help="Explicit recognition input choices; default=off. Shot-path overlays are excluded.")
     args = parser.parse_args(argv)
     if not args.source.is_absolute() or not args.source.is_file():
         parser.error("--source must be an absolute path to an existing video.")
@@ -214,7 +227,10 @@ def main(argv=None, *, exclusive_process=False):
                   repository=dict(path=str(root), core_sources_sha256=core_source_hashes(root), **git_info(root)),
                   driver=dict(path=str(Path(__file__).resolve()), sha256=digest(__file__)),
                   options=dict(scene=args.scene, quality="balanced", padding_ms=500,
-                               pose_device=args.pose_device, pose_batch_size=args.pose_batch_size), stage_timings_s={})
+                               pose_device=args.pose_device, pose_batch_size=args.pose_batch_size,
+                               optimization_profile=args.optimizations, show_shot_paths=False),
+                  scope="Recognition plus plain MP4 export; not the full HTTP product or shot-path overlay workload.",
+                  stage_timings_s={})
     torch = None
     cuda_devices = []
     phase, phase_start = "preparation", started
@@ -258,6 +274,17 @@ def main(argv=None, *, exclusive_process=False):
                 raise RuntimeError("Imported project modules from outside the selected repository.")
             signature = inspect.signature(recognize)
             pose_kwargs = {}
+            resolved_optimizations = recognition_optimizations(args.scene, args.optimizations)
+            report["options"]["resolved_optimizations"] = resolved_optimizations
+            if "optimizations" in signature.parameters:
+                pose_kwargs["optimizations"] = resolved_optimizations
+            elif args.optimizations != "off":
+                raise ValueError("This checkout cannot resolve the requested product optimization profile.")
+            statistics = None
+            if "statistics" in signature.parameters:
+                from modules.rally.statistics import Statistics
+                statistics = Statistics(True)
+                pose_kwargs["statistics"] = statistics
             for name, value in (("pose_device", args.pose_device), ("pose_batch_size", args.pose_batch_size)):
                 if name in signature.parameters:
                     if value is not None:
@@ -265,7 +292,7 @@ def main(argv=None, *, exclusive_process=False):
                 elif value not in ((None, "cpu") if name == "pose_device" else (1,)):
                     raise ValueError(f"This checkout's recognize does not support {name}={value!r}; baseline permits CPU / batch 1 only.")
             report["recognize_signature"] = str(signature)
-            report["recognize_pose_kwargs"] = pose_kwargs
+            report["recognize_pose_kwargs"] = {key: value for key, value in pose_kwargs.items() if key != "statistics"}
             if args.pose_device == "cuda" and not torch.cuda.is_available():
                 raise RuntimeError("--pose-device cuda was requested but CUDA is unavailable.")
             cuda_devices = list(range(torch.cuda.device_count())) if torch.cuda.is_available() else []
@@ -317,6 +344,9 @@ def main(argv=None, *, exclusive_process=False):
             sync()
             report["stage_timings_s"]["recognition"] = time.perf_counter() - phase_start
             report["recognition_performance"] = details.get("performance")
+            if statistics is not None:
+                statistics.write(destination / "statistics.json")
+                report["recognition_statistics"] = json.loads((destination / "statistics.json").read_text(encoding="utf-8"))
             report["recognition_device"] = details.get("device")
             report["hardware"]["threads_after_recognition"] = threads(cv2)
             event("stage_end", "recognition")
@@ -336,7 +366,7 @@ def main(argv=None, *, exclusive_process=False):
             event("stage_end", "render")
             result = dict(predictions=predictions, export_ranges=ranges, output_duration_ms=duration_ms,
                           quality="balanced", padding_ms=500, benchmark_source=dict(report["source"]),
-                          benchmark_scene=args.scene, **details)
+                          benchmark_scene=args.scene, benchmark_optimizations=resolved_optimizations, **details)
             save_json(destination / "result.json", result)
             phase_start = time.perf_counter()
             phase = "validation_and_reference"
@@ -360,10 +390,15 @@ def main(argv=None, *, exclusive_process=False):
                 reference_scene = reference.get("benchmark_scene")
                 comparison["same_source_sha256"] = reference_sha == report["source"]["sha256"] if reference_sha is not None else None
                 comparison["same_scene"] = reference_scene == args.scene if reference_scene is not None else None
+                reference_options = reference.get("benchmark_optimizations")
+                comparison["same_optimizations"] = (reference_options == resolved_optimizations
+                                                      if reference_options is not None else None)
                 identity_checks = ("same_source_sha256", "same_scene", "reference_unchanged")
                 failed_checks = [name for name in identity_checks if comparison[name] is False]
                 comparison["identity_verification"] = ("failed" if failed_checks else
                     "verified" if all(comparison[name] is True for name in identity_checks) else "unverified")
+                comparison["performance_comparison_compatible"] = (
+                    comparison["identity_verification"] == "verified" and comparison["same_optimizations"] is True)
                 report["reference_comparison"] = comparison
                 if failed_checks:
                     raise RuntimeError("Reference identity validation failed: " + ", ".join(failed_checks))

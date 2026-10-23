@@ -1,0 +1,19 @@
+{
+  "decoded_frames": 3,
+  "frame_ids_omitted": true,
+  "captured_shape": [
+    9,
+    288,
+    512
+  ],
+  "reference_shape": [
+    9,
+    288,
+    512
+  ],
+  "strict_tensor_equal": true,
+  "cache_items": 0,
+  "cache_keys_present": [],
+  "model_calls": 1,
+  "device": "mps"
+}

@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "kind": "baseline",
+  "evidence_directory": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native/show-paths",
+  "manifest_sha256": "626c65b8c443787c3abfc6ad4354a3796d62658c56bd617716148ce486c5e9a6",
+  "inputs_sha256": "9c9d8abf5a5dd411a56b2de4d5394c06a2078da2578681b93ac2d533f2fc534b",
+  "results": [
+    {
+      "case_id": "A-default-show-paths",
+      "input": {
+        "scene": "high",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+        "court": null,
+        "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+        "status": "passed",
+        "metadata": {
+          "bytes": 70418255,
+          "container_duration_s": 168.091,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 25.0,
+          "container_frames": 4200,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "A-default-show-paths",
+        "show_shot_paths": true
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        }
+      },
+      "input_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 168000.0,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 91.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 15617971,
+        "output_duration_ms": 43440.0,
+        "rally_count": 5,
+        "elapsed_s": 75.30987495789304,
+        "timings": {
+          "preparation_s": 0.5039956669788808,
+          "recognition_s": 66.85810129111633,
+          "rendering_s": 7.947777999797836
+        },
+        "error": null,
+        "camera_type": "high",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": true,
+          "small_input": true,
+          "grayscale": true,
+          "dynamic_scan": true
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 830,
+          "sha256": "59bcf8a26c193957a85ed5c1ca296b73513ab08d9d2e819b164e3497520557a7"
+        },
+        "court-line-mask.png": {
+          "bytes": 11753,
+          "sha256": "613797d333f4c67d07226c3d909529fb40832dced2d99e44e554b39652192db5"
+        },
+        "result.json": {
+          "bytes": 2000,
+          "sha256": "45b5c8d71447cd6966cf10b0f11939ea2af7598dc7d512226b888cac9479f981"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "court-calibration.jpg": {
+          "bytes": 336214,
+          "sha256": "e47606b036f2dc6feb9b2a5aa1f3723d714948d8f1b3c464b83c88f04e6be7f2"
+        },
+        "output.filters": {
+          "bytes": 1203,
+          "sha256": "b2f11de948c95e6b24d001b2566f7f8292561b30646e81270bbe75178db8ae87"
+        },
+        "worker.log": {
+          "bytes": 1476,
+          "sha256": "549bba1ebf7df661f546963c4d4e07483c39bb9e6d95c5db080d929e0e62725a"
+        },
+        "output.mp4": {
+          "bytes": 15617971,
+          "sha256": "cc224b8f2a5940e22b0896d80adef2267a91fc1de07e62ad153564fe68d8669b"
+        },
+        "statistics.json": {
+          "bytes": 4105,
+          "sha256": "e6cf753ef10a33f6dad410b14972b3c092a1240c0ff1cf6549daa7681d4053b5"
+        },
+        "shot-paths.json": {
+          "bytes": 37358,
+          "sha256": "142fa555f35766abb555f18f8d3865ed9cfb3a0278c6fcafa49380d8260812a5"
+        },
+        "trajectory-overlay.ass": {
+          "bytes": 8746,
+          "sha256": "af8a3193162bbfba272a2c1c4dd1fccec17d81d84c179b50b59be013bf111406"
+        },
+        "ball-observations.meta.json": {
+          "bytes": 831,
+          "sha256": "6cd913bf27bc3b5b61e1dae42391ecd890334518f2fdf5b14854d7335afa16c0"
+        },
+        "people-observations.json": {
+          "bytes": 1949191,
+          "sha256": "b9ab520fdc718750703ae1fd4b9d66d711c450afa4f2b1a3acd796d682cb77fc"
+        },
+        "frame.jpg": {
+          "bytes": 389375,
+          "sha256": "bcc68a44e809edf7cd612442eaf7ca1cd2508f68d56e4650be86e29f08fa6e79"
+        },
+        "ball-observations.jsonl": {
+          "bytes": 160032,
+          "sha256": "3904b993913a6102752ac93642c54c0bff100e2e3774aec99fcc99d30a51c4ba"
+        },
+        "benchmark-clock.json": {
+          "bytes": 207,
+          "sha256": "b1971ee2a902f7690a52b92c1b836a37c68ab91c24151877faab30a5db37fbf2"
+        },
+        "court.json": {
+          "bytes": 2020,
+          "sha256": "0663b5b4b1052294eb92d6a0e66dfa797a647eb56514ec2a8a9190c5ff3d3ae2"
+        },
+        "player-tracks.json": {
+          "bytes": 630483,
+          "sha256": "8a0c4d38051479f171b9871c5dc0fe633910e352f2fde49b7d25772a28262a59"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.5039956669788808,
+        "recognition_s": 66.85810129111633,
+        "rendering_s": 7.947777999797836,
+        "total_s": 75.30987495789304
+      },
+      "clock": {
+        "worker_spawn_start": 1515696.927133583,
+        "benchmark_start": 1515697.333397208,
+        "recognition": 1515697.43112925,
+        "rendering": 1515764.289230541,
+        "completed": 1515772.237008541,
+        "finished": 1515772.237247541
+      },
+      "resources": {
+        "samples": 76,
+        "max_interval_s": 1.036643125116825,
+        "pids": [
+          85864,
+          85872,
+          85953,
+          85954,
+          86232
+        ],
+        "observed_peak": {
+          "cpu_percent": 554.1,
+          "rss_bytes": 2124824576,
+          "work_logical_bytes": 89922945,
+          "work_without_source_logical_bytes": 19504690
+        },
+        "minimum_disk_free_bytes": 1593535180800,
+        "errors": [
+          {
+            "monotonic_s": 1515772.212459166,
+            "interval_s": 1.0187797080725431,
+            "processes": [
+              {
+                "pid": 85864,
+                "parent_pid": 85851,
+                "name": "python3.11",
+                "created_at": 1792740564.968236,
+                "cpu_percent": 0.3,
+                "cpu_seconds": 0.67964792,
+                "rss_bytes": 126386176
+              }
+            ],
+            "errors": [
+              {
+                "pid": 85872,
+                "error": "process no longer exists (pid=85872, name='python3.11')"
+              }
+            ],
+            "cpu_percent": 0.3,
+            "rss_bytes": 126386176,
+            "work_logical_bytes": 89922237,
+            "work_without_source_logical_bytes": 19503982,
+            "disk_free_bytes": 1593595453440
+          }
+        ],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "87020f837abc092b2a792c1b8e5fcfa4cf340789d13ef4beff4d2d9eed28359e",
+      "lease_errors": [
+        "received 1001 (going away); then sent 1001 (going away)"
+      ]
+    }
+  ],
+  "limits": "One run per input, not a stability estimate or 30-minute acceptance. Profiling is separate from baseline."
+}

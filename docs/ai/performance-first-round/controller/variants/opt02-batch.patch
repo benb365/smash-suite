@@ -1,0 +1,59 @@
+--- a/modules/models/keypoint_rcnn/__init__.py
++++ b/modules/models/keypoint_rcnn/__init__.py
+@@ -42,3 +42,17 @@
+             statistics.timing("pose_model_call_s", time.monotonic() - tick)
+         return self._convert(output, statistics)
+ 
++    def predict_batch(self, images, statistics=None):
++        if len(images) == 1:
++            return [self(images[0], statistics)]
++        if len(images) != 2:
++            raise ValueError("PoseEstimator batches must contain one or two images")
++        tensors = [self._prepare(image, statistics) for image in images]
++        import time
++        enabled = statistics is not None and statistics.enabled
++        tick = time.monotonic() if enabled else None
++        with self.torch.inference_mode():
++            outputs = self.model(tensors)
++        if enabled:
++            statistics.timing("pose_model_call_s", time.monotonic() - tick)
++        return [self._convert(output, statistics) for output in outputs]
+--- a/modules/rally/recognize.py
++++ b/modules/rally/recognize.py
+@@ -267,7 +267,7 @@
+                     if image.shape[:2] != (1080, 1920):
+                         image = cv2.resize(image, (1920, 1080))
+                     row = anchors[fid]
+-                    persons = []
++                    prepared = []
+                     for person in row["players"]:
+                         b = person["box"]; h = height(b)
+                         x1, x2 = max(0, int(b["x1"] - .2 * h)), min(1920, int(b["x2"] + .2 * h))
+@@ -275,11 +275,25 @@
+                         crop = image[y1:y2, x1:x2]
+                         if not crop.size:
+                             continue
++                        prepared.append((person, b, x1, y1, crop))
++                        if stats.enabled:
++                            stats.add(f"pose_input_width_bucket_{crop.shape[1] // 64}")
++                            stats.add(f"pose_input_height_bucket_{crop.shape[0] // 64}")
++                    persons = []
++                    raws = []
++                    if prepared:
++                        batch_size = len(prepared)
++                        if batch_size > 2:
++                            raise ValueError("D pose inference accepts at most two players per frame")
++                        stats.add("pose_batch_images", batch_size)
++                        stats.add("pose_single_image_batches" if batch_size == 1 else "pose_two_image_batches")
+                         tick = time.monotonic()
+-                        raw = model(crop, statistics=stats)
++                        crops = [item[4] for item in prepared]
++                        raws = [model(crops[0], statistics=stats)] if batch_size == 1 else model.predict_batch(crops, stats)
+                         stats.timing("pose_inference_s", time.monotonic() - tick)
+                         stats.add("pose_calls")
+-                        stats.add("person_crops")
++                        stats.add("person_crops", batch_size)
++                    for (person, b, x1, y1, _), raw in zip(prepared, raws):
+                         target = np.array([b["x1"] - x1, b["y1"] - y1, b["x2"] - x1, b["y2"] - y1])
+                         scores = []
+                         for box in raw["boxes"]:

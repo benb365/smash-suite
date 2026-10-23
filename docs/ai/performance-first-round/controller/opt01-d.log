@@ -1,0 +1,4 @@
+/Users/bytedance/.codex/worktrees/performance-first-round/smash-suite/docs/ai/performance-first-round/controller/variants/opt01-statistics.patch:38: new blank line at EOF.
++
+warning: 1 line adds whitespace errors.
+{"run_id": "opt01-d", "status": "completed", "timings": {"preparation_s": 0.5491852909326553, "recognition_s": 304.73712437506765, "rendering_s": 13.09553087502718, "total_s": 318.3818405410275}, "source_unchanged": true}

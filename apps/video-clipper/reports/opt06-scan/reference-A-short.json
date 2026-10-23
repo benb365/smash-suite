@@ -1,0 +1,101 @@
+{
+  "case_id": "A-short",
+  "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 3640.0,
+      "end_ms": 9600.0,
+      "emitted_at_ms": 11240.0
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 24480.0,
+      "end_ms": 31400.0,
+      "emitted_at_ms": 33080.0
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 47280.0,
+      "end_ms": 56720.0,
+      "emitted_at_ms": 58400.0
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 101080.0,
+      "end_ms": 108800.0,
+      "emitted_at_ms": 110480.0
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 142440.0,
+      "end_ms": 153840.0,
+      "emitted_at_ms": 155480.0
+    }
+  ],
+  "export_ranges": [
+    [
+      3140.0,
+      10100.0
+    ],
+    [
+      23980.0,
+      31900.0
+    ],
+    [
+      46780.0,
+      57220.0
+    ],
+    [
+      100580.0,
+      109300.0
+    ],
+    [
+      141940.0,
+      154340.0
+    ]
+  ],
+  "provenance": {
+    "source_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/result.json",
+    "source_sha256": "bdb4264acd72a662b6028b81b13880f805e78e7f364f6e383334f3274911d667",
+    "run_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/run.json",
+    "run_sha256": "2057ff32112bb9dc886fa6218a63d06e05bc0884e11b3a07702766a78fcf5b37",
+    "statistics_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short/statistics.json",
+    "statistics_sha256": "d5550a6b13903e22bea583ef122b4845dd6100154a70f79906cd2363d27dc548",
+    "runner_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/docs/ai/opt07a/recognition.py",
+    "runner_sha256": "030f8ff03186a1f97d3350a975f6daf63fb779467a998e1bf0061797bee0f428",
+    "reference_predictor_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/reference/predictor.py",
+    "reference_predictor_sha256": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+    "manifest_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/apps/video-clipper/reports/performance-first-round/inputs.json",
+    "manifest_sha256": "afd60a8dbb0930948faf6962fb881b27e27fc42d8dc4f395ff923695f27d8ec4",
+    "commit": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+    "variant": "baseline",
+    "runtime": {
+      "python": "3.11.16 (main, Sep 29 2026, 14:49:58) [Clang 22.1.3 ]",
+      "platform": "macOS-26.5.1-arm64-arm-64bit",
+      "torch": "2.8.0",
+      "torchvision": "0.23.0",
+      "numpy": "2.2.6",
+      "opencv": "5.0.0",
+      "psutil": "7.2.2",
+      "device": "mps",
+      "mps_available": true,
+      "torch_threads": 4,
+      "opencv_threads": 18
+    },
+    "model_sha256": {
+      "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+    },
+    "code_sha256": {
+      "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+      "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+      "predictor": "fa19748811ec51484bcb1f97241899da1c60a6f9972c8ceb80ea58180b1bd83c",
+      "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+      "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+      "frozen_predictor": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa"
+    },
+    "import_mechanism": "Runner loads frozen predictor into modules.models.tracknet.TrackNetPredictor before importing modules.rally.recognize.",
+    "source_limitations": "Valid output reference for current develop interval diagnosis. It is not an accuracy/recall reference because the media SHA differs from the existing manual-annotation SHA. Run time is historical."
+  }
+}

@@ -1,0 +1,3012 @@
+{
+  "reference_source_sha256": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+  "current_source_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+  "environment": {
+    "python": "3.11.16 (main, Sep 29 2026, 14:49:58) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "numpy": "2.2.6",
+    "opencv": "5.0.0",
+    "device": "mps",
+    "mps_available": true,
+    "torch_threads": 4,
+    "opencv_threads": 18,
+    "modules_source": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/modules/__init__.py"
+  },
+  "weight_sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b",
+  "cases": {
+    "A-short": {
+      "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "video_path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "file_frame_source": {
+        "frames_decoded": 4200,
+        "frames_delivered": 4200,
+        "queue_peak": 1,
+        "decode_s": 8.003236148739234,
+        "conversion_s": 5.050951546290889,
+        "max_lag_s": 0.0,
+        "fps": 25.0,
+        "expected_frames": 4200,
+        "width": 1920,
+        "height": 1080,
+        "first_pts_ms": 91.0,
+        "last_timestamp_ms": 167960.0,
+        "last_delivered_timestamp_ms": 167960.0
+      },
+      "groups": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          2099,
+          2100,
+          2101
+        ],
+        [
+          4197,
+          4198,
+          4199
+        ]
+      ],
+      "variants": {
+        "baseline": {
+          "source_sha256": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float() / 255",
+          "cache": {
+            "counts": {
+              "tracknet_calls": 3,
+              "tracknet_input_frames": 9,
+              "candidate_peaks": 3,
+              "tracknet_cache_max_items": 0
+            },
+            "cache_peak_items": 0,
+            "cache_items_before_clear": 0,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                40.0,
+                80.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2a204537071d2fa5df9529be6d50cb005a5322b3856fc48d5cdc34bf25368846"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "36581399fd290d43fff42eac665b9182242a386cf3f36c17f7a9aab6e5ea8546"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "52f34668d4671773c07e9d2811bae9ae506c2814a32bf077576d8d4d51df2d00"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                2099,
+                2100,
+                2101
+              ],
+              "pts_ms": [
+                83960.0,
+                84000.0,
+                84040.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2ba2514bbe6e10ece06f5267cafa893d235222067d3ddf8ad52fe2ba0926d449"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "9cab9c0316167ec8136250eaabe66e48d136333d10a1a247808852a1f63d63ca"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "d1692fd18117ab1ca445f4de4b2d3377e8c4ef8f32a1598379e706ddd0221351"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                4197,
+                4198,
+                4199
+              ],
+              "pts_ms": [
+                167880.0,
+                167920.0,
+                167960.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e40343c76200567fe4c7119d29be0faf858a5224d65c18e7cb8a278518e96b2f"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4ea36d466a06e7a6633c8551633191a9b58257533eb2ff83d167b0b195ff6d54"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e06bcde13983a6f67045beaf7a896d34643b82284cc1a898b6190b9600906b4d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            }
+          ]
+        },
+        "inplace": {
+          "source_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float().div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_calls": 3,
+              "tracknet_input_frames": 9,
+              "candidate_peaks": 3,
+              "tracknet_cache_max_items": 0
+            },
+            "cache_peak_items": 0,
+            "cache_items_before_clear": 0,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                40.0,
+                80.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2a204537071d2fa5df9529be6d50cb005a5322b3856fc48d5cdc34bf25368846"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "36581399fd290d43fff42eac665b9182242a386cf3f36c17f7a9aab6e5ea8546"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "52f34668d4671773c07e9d2811bae9ae506c2814a32bf077576d8d4d51df2d00"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                2099,
+                2100,
+                2101
+              ],
+              "pts_ms": [
+                83960.0,
+                84000.0,
+                84040.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2ba2514bbe6e10ece06f5267cafa893d235222067d3ddf8ad52fe2ba0926d449"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "9cab9c0316167ec8136250eaabe66e48d136333d10a1a247808852a1f63d63ca"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "d1692fd18117ab1ca445f4de4b2d3377e8c4ef8f32a1598379e706ddd0221351"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                4197,
+                4198,
+                4199
+              ],
+              "pts_ms": [
+                167880.0,
+                167920.0,
+                167960.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e40343c76200567fe4c7119d29be0faf858a5224d65c18e7cb8a278518e96b2f"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4ea36d466a06e7a6633c8551633191a9b58257533eb2ff83d167b0b195ff6d54"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e06bcde13983a6f67045beaf7a896d34643b82284cc1a898b6190b9600906b4d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        },
+        "fused": {
+          "source_sha256": "8a9f96ff8505610296b8fedd44c0d5630074538287c0209cb852b61d62fe9ba8",
+          "formula": "rgb = frame[:, :, ::-1].astype(np.float32)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_calls": 3,
+              "tracknet_input_frames": 9,
+              "candidate_peaks": 3,
+              "tracknet_cache_max_items": 0
+            },
+            "cache_peak_items": 0,
+            "cache_items_before_clear": 0,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                40.0,
+                80.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2a204537071d2fa5df9529be6d50cb005a5322b3856fc48d5cdc34bf25368846"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "36581399fd290d43fff42eac665b9182242a386cf3f36c17f7a9aab6e5ea8546"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "52f34668d4671773c07e9d2811bae9ae506c2814a32bf077576d8d4d51df2d00"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                2099,
+                2100,
+                2101
+              ],
+              "pts_ms": [
+                83960.0,
+                84000.0,
+                84040.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2ba2514bbe6e10ece06f5267cafa893d235222067d3ddf8ad52fe2ba0926d449"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "9cab9c0316167ec8136250eaabe66e48d136333d10a1a247808852a1f63d63ca"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "d1692fd18117ab1ca445f4de4b2d3377e8c4ef8f32a1598379e706ddd0221351"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                4197,
+                4198,
+                4199
+              ],
+              "pts_ms": [
+                167880.0,
+                167920.0,
+                167960.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e40343c76200567fe4c7119d29be0faf858a5224d65c18e7cb8a278518e96b2f"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4ea36d466a06e7a6633c8551633191a9b58257533eb2ff83d167b0b195ff6d54"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e06bcde13983a6f67045beaf7a896d34643b82284cc1a898b6190b9600906b4d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        },
+        "current": {
+          "source_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float().div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_calls": 3,
+              "tracknet_input_frames": 9,
+              "candidate_peaks": 3,
+              "tracknet_cache_max_items": 0
+            },
+            "cache_peak_items": 0,
+            "cache_items_before_clear": 0,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                40.0,
+                80.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2a204537071d2fa5df9529be6d50cb005a5322b3856fc48d5cdc34bf25368846"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "36581399fd290d43fff42eac665b9182242a386cf3f36c17f7a9aab6e5ea8546"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "52f34668d4671773c07e9d2811bae9ae506c2814a32bf077576d8d4d51df2d00"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                2099,
+                2100,
+                2101
+              ],
+              "pts_ms": [
+                83960.0,
+                84000.0,
+                84040.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2ba2514bbe6e10ece06f5267cafa893d235222067d3ddf8ad52fe2ba0926d449"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "9cab9c0316167ec8136250eaabe66e48d136333d10a1a247808852a1f63d63ca"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "d1692fd18117ab1ca445f4de4b2d3377e8c4ef8f32a1598379e706ddd0221351"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                4197,
+                4198,
+                4199
+              ],
+              "pts_ms": [
+                167880.0,
+                167920.0,
+                167960.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e40343c76200567fe4c7119d29be0faf858a5224d65c18e7cb8a278518e96b2f"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4ea36d466a06e7a6633c8551633191a9b58257533eb2ff83d167b0b195ff6d54"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e06bcde13983a6f67045beaf7a896d34643b82284cc1a898b6190b9600906b4d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        }
+      }
+    },
+    "C-short": {
+      "video_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "video_path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+      "file_frame_source": {
+        "frames_decoded": 5400,
+        "frames_delivered": 5400,
+        "queue_peak": 1,
+        "decode_s": 9.532434504712,
+        "conversion_s": 6.406981196720153,
+        "max_lag_s": 0.0,
+        "fps": 29.99994791675709,
+        "expected_frames": 5400,
+        "width": 1920,
+        "height": 1080,
+        "first_pts_ms": 0.0,
+        "last_timestamp_ms": 179967.0,
+        "last_delivered_timestamp_ms": 179967.0
+      },
+      "groups": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          3
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          6
+        ],
+        [
+          2699,
+          2700,
+          2701
+        ],
+        [
+          5397,
+          5398,
+          5399
+        ]
+      ],
+      "variants": {
+        "baseline": {
+          "source_sha256": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float() / 255",
+          "cache": {
+            "counts": {
+              "tracknet_cache_misses": 13,
+              "tracknet_cache_prepared_frames": 13,
+              "tracknet_calls": 6,
+              "tracknet_input_frames": 18,
+              "candidate_peaks": 110,
+              "tracknet_cache_hits": 5,
+              "tracknet_cache_max_items": 3
+            },
+            "cache_peak_items": 3,
+            "cache_items_before_clear": 3,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                33.0,
+                67.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "9454c83ed8a7a824d2013a05c0a580a753be49d47270befa1d4d540d2a6b7aa6"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4490c203441aec7f74cc9d6532e5d6b473ac46a93772677de4ff7be7caeb9377"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "a2b325023added352ac09559bff68350b2d817f778202072e8eacb5998e0d6dc"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 0,
+                "misses": 3,
+                "prepared_frames": 3
+              }
+            },
+            {
+              "frame_ids": [
+                1,
+                2,
+                3
+              ],
+              "pts_ms": [
+                33.0,
+                67.0,
+                100.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4490c203441aec7f74cc9d6532e5d6b473ac46a93772677de4ff7be7caeb9377"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "a2b325023added352ac09559bff68350b2d817f778202072e8eacb5998e0d6dc"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2b2b4113243debec52cd788081c53d4f67586c251479ff04786f32b0de429e4d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 2,
+                "misses": 4,
+                "prepared_frames": 4
+              }
+            },
+            {
+              "frame_ids": [
+                3,
+                4,
+                5
+              ],
+              "pts_ms": [
+                100.0,
+                133.0,
+                167.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2b2b4113243debec52cd788081c53d4f67586c251479ff04786f32b0de429e4d"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "45c7445ddbd5802c58ccd2197a5cd34095d886bc1effac9e75b0502876cf4ca9"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "dcaac2d0d3193f64e99a4f1c6ed2c70422ce9b3041616a6ad13fcc66b0f57946"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 3,
+                "misses": 6,
+                "prepared_frames": 6
+              }
+            },
+            {
+              "frame_ids": [
+                4,
+                5,
+                6
+              ],
+              "pts_ms": [
+                133.0,
+                167.0,
+                200.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "45c7445ddbd5802c58ccd2197a5cd34095d886bc1effac9e75b0502876cf4ca9"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "dcaac2d0d3193f64e99a4f1c6ed2c70422ce9b3041616a6ad13fcc66b0f57946"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "fd235e7baa53fc8cd712184342c43b18da085a38cc7480903042138982ddb066"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 7,
+                "prepared_frames": 7
+              }
+            },
+            {
+              "frame_ids": [
+                2699,
+                2700,
+                2701
+              ],
+              "pts_ms": [
+                89967.0,
+                90000.0,
+                90033.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "1029a604dd5613fd4ad4d1101a76a823f55ca94e92c60eaf31aecb980bbe5391"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "6459bedb0a3bfa9071553d7f07172aa28ba7722f40a676374f66c9985b9dd25a"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "37e80fa6e4bf65e3af6f48f19d6827e8de90db566461a15889243c43b1102a7d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 10,
+                "prepared_frames": 10
+              }
+            },
+            {
+              "frame_ids": [
+                5397,
+                5398,
+                5399
+              ],
+              "pts_ms": [
+                179900.0,
+                179933.0,
+                179967.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "99eaa66d5e82bf59233bf0a7ddb303a156dbc20f7cae0d0e2169a244191bf19e"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "04d961ad4378639408f72dbb5a815d422dcd479dac697c8cc2d064d34ea54c98"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "898769cded28eae32a2b21e4c675ce86c29754ad4933a95880bb3ae731f134d1"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 13,
+                "prepared_frames": 13
+              }
+            }
+          ]
+        },
+        "inplace": {
+          "source_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float().div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_cache_misses": 13,
+              "tracknet_cache_prepared_frames": 13,
+              "tracknet_calls": 6,
+              "tracknet_input_frames": 18,
+              "candidate_peaks": 110,
+              "tracknet_cache_hits": 5,
+              "tracknet_cache_max_items": 3
+            },
+            "cache_peak_items": 3,
+            "cache_items_before_clear": 3,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                33.0,
+                67.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "9454c83ed8a7a824d2013a05c0a580a753be49d47270befa1d4d540d2a6b7aa6"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4490c203441aec7f74cc9d6532e5d6b473ac46a93772677de4ff7be7caeb9377"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "a2b325023added352ac09559bff68350b2d817f778202072e8eacb5998e0d6dc"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 0,
+                "misses": 3,
+                "prepared_frames": 3
+              }
+            },
+            {
+              "frame_ids": [
+                1,
+                2,
+                3
+              ],
+              "pts_ms": [
+                33.0,
+                67.0,
+                100.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4490c203441aec7f74cc9d6532e5d6b473ac46a93772677de4ff7be7caeb9377"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "a2b325023added352ac09559bff68350b2d817f778202072e8eacb5998e0d6dc"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2b2b4113243debec52cd788081c53d4f67586c251479ff04786f32b0de429e4d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 2,
+                "misses": 4,
+                "prepared_frames": 4
+              }
+            },
+            {
+              "frame_ids": [
+                3,
+                4,
+                5
+              ],
+              "pts_ms": [
+                100.0,
+                133.0,
+                167.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2b2b4113243debec52cd788081c53d4f67586c251479ff04786f32b0de429e4d"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "45c7445ddbd5802c58ccd2197a5cd34095d886bc1effac9e75b0502876cf4ca9"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "dcaac2d0d3193f64e99a4f1c6ed2c70422ce9b3041616a6ad13fcc66b0f57946"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 3,
+                "misses": 6,
+                "prepared_frames": 6
+              }
+            },
+            {
+              "frame_ids": [
+                4,
+                5,
+                6
+              ],
+              "pts_ms": [
+                133.0,
+                167.0,
+                200.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "45c7445ddbd5802c58ccd2197a5cd34095d886bc1effac9e75b0502876cf4ca9"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "dcaac2d0d3193f64e99a4f1c6ed2c70422ce9b3041616a6ad13fcc66b0f57946"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "fd235e7baa53fc8cd712184342c43b18da085a38cc7480903042138982ddb066"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 7,
+                "prepared_frames": 7
+              }
+            },
+            {
+              "frame_ids": [
+                2699,
+                2700,
+                2701
+              ],
+              "pts_ms": [
+                89967.0,
+                90000.0,
+                90033.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "1029a604dd5613fd4ad4d1101a76a823f55ca94e92c60eaf31aecb980bbe5391"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "6459bedb0a3bfa9071553d7f07172aa28ba7722f40a676374f66c9985b9dd25a"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "37e80fa6e4bf65e3af6f48f19d6827e8de90db566461a15889243c43b1102a7d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 10,
+                "prepared_frames": 10
+              }
+            },
+            {
+              "frame_ids": [
+                5397,
+                5398,
+                5399
+              ],
+              "pts_ms": [
+                179900.0,
+                179933.0,
+                179967.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "99eaa66d5e82bf59233bf0a7ddb303a156dbc20f7cae0d0e2169a244191bf19e"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "04d961ad4378639408f72dbb5a815d422dcd479dac697c8cc2d064d34ea54c98"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "898769cded28eae32a2b21e4c675ce86c29754ad4933a95880bb3ae731f134d1"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 13,
+                "prepared_frames": 13
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        },
+        "fused": {
+          "source_sha256": "8a9f96ff8505610296b8fedd44c0d5630074538287c0209cb852b61d62fe9ba8",
+          "formula": "rgb = frame[:, :, ::-1].astype(np.float32)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_cache_misses": 13,
+              "tracknet_cache_prepared_frames": 13,
+              "tracknet_calls": 6,
+              "tracknet_input_frames": 18,
+              "candidate_peaks": 110,
+              "tracknet_cache_hits": 5,
+              "tracknet_cache_max_items": 3
+            },
+            "cache_peak_items": 3,
+            "cache_items_before_clear": 3,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                33.0,
+                67.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "9454c83ed8a7a824d2013a05c0a580a753be49d47270befa1d4d540d2a6b7aa6"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4490c203441aec7f74cc9d6532e5d6b473ac46a93772677de4ff7be7caeb9377"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "a2b325023added352ac09559bff68350b2d817f778202072e8eacb5998e0d6dc"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 0,
+                "misses": 3,
+                "prepared_frames": 3
+              }
+            },
+            {
+              "frame_ids": [
+                1,
+                2,
+                3
+              ],
+              "pts_ms": [
+                33.0,
+                67.0,
+                100.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4490c203441aec7f74cc9d6532e5d6b473ac46a93772677de4ff7be7caeb9377"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "a2b325023added352ac09559bff68350b2d817f778202072e8eacb5998e0d6dc"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2b2b4113243debec52cd788081c53d4f67586c251479ff04786f32b0de429e4d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 2,
+                "misses": 4,
+                "prepared_frames": 4
+              }
+            },
+            {
+              "frame_ids": [
+                3,
+                4,
+                5
+              ],
+              "pts_ms": [
+                100.0,
+                133.0,
+                167.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2b2b4113243debec52cd788081c53d4f67586c251479ff04786f32b0de429e4d"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "45c7445ddbd5802c58ccd2197a5cd34095d886bc1effac9e75b0502876cf4ca9"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "dcaac2d0d3193f64e99a4f1c6ed2c70422ce9b3041616a6ad13fcc66b0f57946"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 3,
+                "misses": 6,
+                "prepared_frames": 6
+              }
+            },
+            {
+              "frame_ids": [
+                4,
+                5,
+                6
+              ],
+              "pts_ms": [
+                133.0,
+                167.0,
+                200.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "45c7445ddbd5802c58ccd2197a5cd34095d886bc1effac9e75b0502876cf4ca9"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "dcaac2d0d3193f64e99a4f1c6ed2c70422ce9b3041616a6ad13fcc66b0f57946"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "fd235e7baa53fc8cd712184342c43b18da085a38cc7480903042138982ddb066"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 7,
+                "prepared_frames": 7
+              }
+            },
+            {
+              "frame_ids": [
+                2699,
+                2700,
+                2701
+              ],
+              "pts_ms": [
+                89967.0,
+                90000.0,
+                90033.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "1029a604dd5613fd4ad4d1101a76a823f55ca94e92c60eaf31aecb980bbe5391"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "6459bedb0a3bfa9071553d7f07172aa28ba7722f40a676374f66c9985b9dd25a"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "37e80fa6e4bf65e3af6f48f19d6827e8de90db566461a15889243c43b1102a7d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 10,
+                "prepared_frames": 10
+              }
+            },
+            {
+              "frame_ids": [
+                5397,
+                5398,
+                5399
+              ],
+              "pts_ms": [
+                179900.0,
+                179933.0,
+                179967.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "99eaa66d5e82bf59233bf0a7ddb303a156dbc20f7cae0d0e2169a244191bf19e"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "04d961ad4378639408f72dbb5a815d422dcd479dac697c8cc2d064d34ea54c98"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "898769cded28eae32a2b21e4c675ce86c29754ad4933a95880bb3ae731f134d1"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 13,
+                "prepared_frames": 13
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        },
+        "current": {
+          "source_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float().div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_cache_misses": 13,
+              "tracknet_cache_prepared_frames": 13,
+              "tracknet_calls": 6,
+              "tracknet_input_frames": 18,
+              "candidate_peaks": 110,
+              "tracknet_cache_hits": 5,
+              "tracknet_cache_max_items": 3
+            },
+            "cache_peak_items": 3,
+            "cache_items_before_clear": 3,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                33.0,
+                67.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "9454c83ed8a7a824d2013a05c0a580a753be49d47270befa1d4d540d2a6b7aa6"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4490c203441aec7f74cc9d6532e5d6b473ac46a93772677de4ff7be7caeb9377"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "a2b325023added352ac09559bff68350b2d817f778202072e8eacb5998e0d6dc"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 0,
+                "misses": 3,
+                "prepared_frames": 3
+              }
+            },
+            {
+              "frame_ids": [
+                1,
+                2,
+                3
+              ],
+              "pts_ms": [
+                33.0,
+                67.0,
+                100.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "4490c203441aec7f74cc9d6532e5d6b473ac46a93772677de4ff7be7caeb9377"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "a2b325023added352ac09559bff68350b2d817f778202072e8eacb5998e0d6dc"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2b2b4113243debec52cd788081c53d4f67586c251479ff04786f32b0de429e4d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 2,
+                "misses": 4,
+                "prepared_frames": 4
+              }
+            },
+            {
+              "frame_ids": [
+                3,
+                4,
+                5
+              ],
+              "pts_ms": [
+                100.0,
+                133.0,
+                167.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "2b2b4113243debec52cd788081c53d4f67586c251479ff04786f32b0de429e4d"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "45c7445ddbd5802c58ccd2197a5cd34095d886bc1effac9e75b0502876cf4ca9"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "dcaac2d0d3193f64e99a4f1c6ed2c70422ce9b3041616a6ad13fcc66b0f57946"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 3,
+                "misses": 6,
+                "prepared_frames": 6
+              }
+            },
+            {
+              "frame_ids": [
+                4,
+                5,
+                6
+              ],
+              "pts_ms": [
+                133.0,
+                167.0,
+                200.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "45c7445ddbd5802c58ccd2197a5cd34095d886bc1effac9e75b0502876cf4ca9"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "dcaac2d0d3193f64e99a4f1c6ed2c70422ce9b3041616a6ad13fcc66b0f57946"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "fd235e7baa53fc8cd712184342c43b18da085a38cc7480903042138982ddb066"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 7,
+                "prepared_frames": 7
+              }
+            },
+            {
+              "frame_ids": [
+                2699,
+                2700,
+                2701
+              ],
+              "pts_ms": [
+                89967.0,
+                90000.0,
+                90033.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "1029a604dd5613fd4ad4d1101a76a823f55ca94e92c60eaf31aecb980bbe5391"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "6459bedb0a3bfa9071553d7f07172aa28ba7722f40a676374f66c9985b9dd25a"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "37e80fa6e4bf65e3af6f48f19d6827e8de90db566461a15889243c43b1102a7d"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 10,
+                "prepared_frames": 10
+              }
+            },
+            {
+              "frame_ids": [
+                5397,
+                5398,
+                5399
+              ],
+              "pts_ms": [
+                179900.0,
+                179933.0,
+                179967.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "99eaa66d5e82bf59233bf0a7ddb303a156dbc20f7cae0d0e2169a244191bf19e"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "04d961ad4378639408f72dbb5a815d422dcd479dac697c8cc2d064d34ea54c98"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "898769cded28eae32a2b21e4c675ce86c29754ad4933a95880bb3ae731f134d1"
+                }
+              ],
+              "cache_after_call": {
+                "items": 3,
+                "hits": 5,
+                "misses": 13,
+                "prepared_frames": 13
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        }
+      }
+    },
+    "D-short": {
+      "video_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "video_path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+      "file_frame_source": {
+        "frames_decoded": 7527,
+        "frames_delivered": 7527,
+        "queue_peak": 1,
+        "decode_s": 6.871960849966854,
+        "conversion_s": 9.01878721266985,
+        "max_lag_s": 0.0,
+        "fps": 29.999962634562284,
+        "expected_frames": 7527,
+        "width": 1920,
+        "height": 1080,
+        "first_pts_ms": 0.0,
+        "last_timestamp_ms": 250867.0,
+        "last_delivered_timestamp_ms": 250867.0
+      },
+      "groups": [
+        [
+          0,
+          1,
+          2
+        ],
+        [
+          3762,
+          3763,
+          3764
+        ],
+        [
+          7524,
+          7525,
+          7526
+        ]
+      ],
+      "variants": {
+        "baseline": {
+          "source_sha256": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float() / 255",
+          "cache": {
+            "counts": {
+              "tracknet_calls": 3,
+              "tracknet_input_frames": 9,
+              "candidate_peaks": 15,
+              "tracknet_cache_max_items": 0
+            },
+            "cache_peak_items": 0,
+            "cache_items_before_clear": 0,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                33.0,
+                67.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "70322606c278d613520e1e9f867f12318bfee22f9533d2ea00efe21e0d2cce16"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "aeb3e3178b2ce5ac7b78795dcbb309d25f13f9286aed306b894263030994a1fe"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "1313a923bffeb66de4ddbcefbc0c8e08781fbdcfde7c07c2eac2ae1b5f9e8060"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                3762,
+                3763,
+                3764
+              ],
+              "pts_ms": [
+                125400.0,
+                125433.0,
+                125467.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e6110f5516ac74ad719ec9f9741ce46d5ce77a9b13e9f3ae1fb06b6a11cd464b"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "5516f5b6df3057fcf8d547d9f66fe591786a004db7870542f4b52cf3a66e5746"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "85c69952ecffa23224820978eb118470e1184076b2bd7840f8ed0c803584db9c"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                7524,
+                7525,
+                7526
+              ],
+              "pts_ms": [
+                250800.0,
+                250833.0,
+                250867.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e461fbfd6aba979c0def5fc000b8017ddacef3ada74151d6ccbd6060f6829a34"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "3b48cd9b3d47efb3bacab6ee382a505c59ad49dd5491e128a7898e983f5ffe7d"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "f15729c34327df23ae2ed794a3bd6ce4acdb62b4cc54dd57df0b9d15fd4631f4"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            }
+          ]
+        },
+        "inplace": {
+          "source_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float().div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_calls": 3,
+              "tracknet_input_frames": 9,
+              "candidate_peaks": 15,
+              "tracknet_cache_max_items": 0
+            },
+            "cache_peak_items": 0,
+            "cache_items_before_clear": 0,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                33.0,
+                67.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "70322606c278d613520e1e9f867f12318bfee22f9533d2ea00efe21e0d2cce16"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "aeb3e3178b2ce5ac7b78795dcbb309d25f13f9286aed306b894263030994a1fe"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "1313a923bffeb66de4ddbcefbc0c8e08781fbdcfde7c07c2eac2ae1b5f9e8060"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                3762,
+                3763,
+                3764
+              ],
+              "pts_ms": [
+                125400.0,
+                125433.0,
+                125467.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e6110f5516ac74ad719ec9f9741ce46d5ce77a9b13e9f3ae1fb06b6a11cd464b"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "5516f5b6df3057fcf8d547d9f66fe591786a004db7870542f4b52cf3a66e5746"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "85c69952ecffa23224820978eb118470e1184076b2bd7840f8ed0c803584db9c"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                7524,
+                7525,
+                7526
+              ],
+              "pts_ms": [
+                250800.0,
+                250833.0,
+                250867.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e461fbfd6aba979c0def5fc000b8017ddacef3ada74151d6ccbd6060f6829a34"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "3b48cd9b3d47efb3bacab6ee382a505c59ad49dd5491e128a7898e983f5ffe7d"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "f15729c34327df23ae2ed794a3bd6ce4acdb62b4cc54dd57df0b9d15fd4631f4"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        },
+        "fused": {
+          "source_sha256": "8a9f96ff8505610296b8fedd44c0d5630074538287c0209cb852b61d62fe9ba8",
+          "formula": "rgb = frame[:, :, ::-1].astype(np.float32)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_calls": 3,
+              "tracknet_input_frames": 9,
+              "candidate_peaks": 15,
+              "tracknet_cache_max_items": 0
+            },
+            "cache_peak_items": 0,
+            "cache_items_before_clear": 0,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                33.0,
+                67.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "70322606c278d613520e1e9f867f12318bfee22f9533d2ea00efe21e0d2cce16"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "aeb3e3178b2ce5ac7b78795dcbb309d25f13f9286aed306b894263030994a1fe"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "1313a923bffeb66de4ddbcefbc0c8e08781fbdcfde7c07c2eac2ae1b5f9e8060"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                3762,
+                3763,
+                3764
+              ],
+              "pts_ms": [
+                125400.0,
+                125433.0,
+                125467.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e6110f5516ac74ad719ec9f9741ce46d5ce77a9b13e9f3ae1fb06b6a11cd464b"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "5516f5b6df3057fcf8d547d9f66fe591786a004db7870542f4b52cf3a66e5746"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "85c69952ecffa23224820978eb118470e1184076b2bd7840f8ed0c803584db9c"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                7524,
+                7525,
+                7526
+              ],
+              "pts_ms": [
+                250800.0,
+                250833.0,
+                250867.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e461fbfd6aba979c0def5fc000b8017ddacef3ada74151d6ccbd6060f6829a34"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "3b48cd9b3d47efb3bacab6ee382a505c59ad49dd5491e128a7898e983f5ffe7d"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "f15729c34327df23ae2ed794a3bd6ce4acdb62b4cc54dd57df0b9d15fd4631f4"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        },
+        "current": {
+          "source_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+          "formula": "rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)\ntensor = self.torch.from_numpy(rgb).permute(2, 0, 1).float().div_(255)",
+          "cache": {
+            "counts": {
+              "tracknet_calls": 3,
+              "tracknet_input_frames": 9,
+              "candidate_peaks": 15,
+              "tracknet_cache_max_items": 0
+            },
+            "cache_peak_items": 0,
+            "cache_items_before_clear": 0,
+            "cache_items_after_clear": 0,
+            "source_frames_unchanged": true
+          },
+          "windows": [
+            {
+              "frame_ids": [
+                0,
+                1,
+                2
+              ],
+              "pts_ms": [
+                0.0,
+                33.0,
+                67.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "70322606c278d613520e1e9f867f12318bfee22f9533d2ea00efe21e0d2cce16"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "aeb3e3178b2ce5ac7b78795dcbb309d25f13f9286aed306b894263030994a1fe"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "1313a923bffeb66de4ddbcefbc0c8e08781fbdcfde7c07c2eac2ae1b5f9e8060"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                3762,
+                3763,
+                3764
+              ],
+              "pts_ms": [
+                125400.0,
+                125433.0,
+                125467.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e6110f5516ac74ad719ec9f9741ce46d5ce77a9b13e9f3ae1fb06b6a11cd464b"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "5516f5b6df3057fcf8d547d9f66fe591786a004db7870542f4b52cf3a66e5746"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "85c69952ecffa23224820978eb118470e1184076b2bd7840f8ed0c803584db9c"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            },
+            {
+              "frame_ids": [
+                7524,
+                7525,
+                7526
+              ],
+              "pts_ms": [
+                250800.0,
+                250833.0,
+                250867.0
+              ],
+              "images": [
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "e461fbfd6aba979c0def5fc000b8017ddacef3ada74151d6ccbd6060f6829a34"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "3b48cd9b3d47efb3bacab6ee382a505c59ad49dd5491e128a7898e983f5ffe7d"
+                },
+                {
+                  "shape": [
+                    1080,
+                    1920,
+                    3
+                  ],
+                  "dtype": "uint8",
+                  "sha256": "f15729c34327df23ae2ed794a3bd6ce4acdb62b4cc54dd57df0b9d15fd4631f4"
+                }
+              ],
+              "cache_after_call": {
+                "items": 0,
+                "hits": 0,
+                "misses": 0,
+                "prepared_frames": 0
+              }
+            }
+          ],
+          "strict_comparison_to_baseline": [
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            },
+            {
+              "frame_ids_equal": true,
+              "pts_equal": true,
+              "image_metadata_equal": true,
+              "model_input_equal": true,
+              "heatmap_equal": true,
+              "points_equal": true,
+              "candidates_equal": true,
+              "cache_stats_equal": true
+            }
+          ]
+        }
+      }
+    }
+  },
+  "model_io_file": "../../.runtime/opt07a/probe-retained/model-io.pt"
+}

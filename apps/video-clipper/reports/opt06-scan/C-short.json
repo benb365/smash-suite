@@ -1,0 +1,5988 @@
+{
+  "status": "completed",
+  "case_id": "C-short",
+  "worktree": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite",
+  "git_head": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+  "module_paths": {
+    "FileFrameSource": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/modules/media/video_input.py",
+    "TrackNetPredictor": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/modules/models/tracknet/predictor.py",
+    "TrackNet": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/modules/models/tracknet/model.py"
+  },
+  "input": {
+    "manifest": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/reports/performance-first-round/inputs.json",
+    "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+    "video_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c"
+  },
+  "reference": {
+    "path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/apps/video-clipper/reports/opt06-scan/reference-C-short.json",
+    "sha256": "2ec6ec45ffb28e28ad1cd160c1650a3bdac086199d2dda5c7d5f8255a01e76a2",
+    "provenance": {
+      "source_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/result.json",
+      "source_sha256": "94615682f4273784c628ba0e3eb0732c69bc2b5612ef8e9c8f0993d654aed391",
+      "run_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/run.json",
+      "run_sha256": "e89de02b1ad18afe7f68695609a0634c05f7ec08580dae85966fdf4b08a47e21",
+      "statistics_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short/statistics.json",
+      "statistics_sha256": "a059688cb2c7f4f12214511be3087477a62cb08dfaadc3d2f42edfcf750e1519",
+      "runner_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/docs/ai/opt07a/recognition.py",
+      "runner_sha256": "030f8ff03186a1f97d3350a975f6daf63fb779467a998e1bf0061797bee0f428",
+      "reference_predictor_path": "/Users/bytedance/.codex/worktrees/opt07a-tracknet/smash-suite/apps/video-clipper/.runtime/opt07a/reference/predictor.py",
+      "reference_predictor_sha256": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+      "manifest_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/apps/video-clipper/reports/performance-first-round/inputs.json",
+      "manifest_sha256": "afd60a8dbb0930948faf6962fb881b27e27fc42d8dc4f395ff923695f27d8ec4",
+      "commit": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+      "variant": "baseline",
+      "runtime": {
+        "python": "3.11.16 (main, Sep 29 2026, 14:49:58) [Clang 22.1.3 ]",
+        "platform": "macOS-26.5.1-arm64-arm-64bit",
+        "torch": "2.8.0",
+        "torchvision": "0.23.0",
+        "numpy": "2.2.6",
+        "opencv": "5.0.0",
+        "psutil": "7.2.2",
+        "device": "mps",
+        "mps_available": true,
+        "torch_threads": 4,
+        "opencv_threads": 18
+      },
+      "model_sha256": {
+        "ball_track.pt": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b",
+        "yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+      },
+      "code_sha256": {
+        "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+        "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "frozen_predictor": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa"
+      },
+      "import_mechanism": "Runner loads frozen predictor into modules.models.tracknet.TrackNetPredictor before importing modules.rally.recognize.",
+      "source_limitations": "Valid output reference for current develop interval diagnosis. It is not an accuracy/recall reference because the media SHA differs from the existing manual-annotation SHA. Run time is historical."
+    },
+    "predictions": [
+      {
+        "rally_id": 1,
+        "start_ms": 7700.0,
+        "end_ms": 10800.0,
+        "emitted_at_ms": 179967.0
+      },
+      {
+        "rally_id": 2,
+        "start_ms": 14167.0,
+        "end_ms": 20267.0,
+        "emitted_at_ms": 179967.0
+      },
+      {
+        "rally_id": 3,
+        "start_ms": 24133.0,
+        "end_ms": 44833.0,
+        "emitted_at_ms": 179967.0
+      },
+      {
+        "rally_id": 4,
+        "start_ms": 49567.0,
+        "end_ms": 67367.0,
+        "emitted_at_ms": 179967.0
+      },
+      {
+        "rally_id": 5,
+        "start_ms": 70533.0,
+        "end_ms": 88033.0,
+        "emitted_at_ms": 179967.0
+      },
+      {
+        "rally_id": 6,
+        "start_ms": 91500.0,
+        "end_ms": 103000.0,
+        "emitted_at_ms": 179967.0
+      },
+      {
+        "rally_id": 7,
+        "start_ms": 120933.0,
+        "end_ms": 133600.0,
+        "emitted_at_ms": 179967.0
+      },
+      {
+        "rally_id": 8,
+        "start_ms": 149233.0,
+        "end_ms": 153533.0,
+        "emitted_at_ms": 179967.0
+      },
+      {
+        "rally_id": 9,
+        "start_ms": 170267.0,
+        "end_ms": 178467.0,
+        "emitted_at_ms": 179967.0
+      }
+    ],
+    "export_ranges": [
+      [
+        7200.0,
+        11300.0
+      ],
+      [
+        13667.0,
+        20767.0
+      ],
+      [
+        23633.0,
+        45333.0
+      ],
+      [
+        49067.0,
+        67867.0
+      ],
+      [
+        70033.0,
+        88533.0
+      ],
+      [
+        91000.0,
+        103500.0
+      ],
+      [
+        120433.0,
+        134100.0
+      ],
+      [
+        148733.0,
+        154033.0
+      ],
+      [
+        169767.0,
+        178967.0
+      ]
+    ]
+  },
+  "code": {
+    "docs/ai/opt06-scan/scan.py": "2e124af70f90188608b8d8a6aa2b5c6114f05971c9d755e5901f48bb0746766f",
+    "modules/media/video_input.py": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+    "modules/models/tracknet/predictor.py": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa",
+    "modules/models/tracknet/model.py": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+    "modules/models/assets.py": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+    "modules/rally/statistics.py": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5"
+  },
+  "weight": {
+    "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+    "bytes": 45400030,
+    "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+  },
+  "config": {
+    "sample_frames_per_second": 3,
+    "model_input_size": [
+      288,
+      512
+    ],
+    "threshold": 0.5,
+    "device": "mps",
+    "torch_threads": 4,
+    "opencv_threads": 18,
+    "python": "3.11.16",
+    "torch": "2.8.0",
+    "opencv": "5.0.0",
+    "av": "14.2.0",
+    "numpy": "2.2.6",
+    "torchvision": "0.23.0"
+  },
+  "groups": [
+    {
+      "source_second": 0,
+      "frame_ids": [
+        0,
+        1,
+        2
+      ],
+      "timestamps_ms": [
+        0.0,
+        33.0,
+        67.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.23957225680351257,
+          "positive": false
+        },
+        {
+          "confidence": 0.21856644749641418,
+          "positive": false
+        },
+        {
+          "confidence": 0.2514157295227051,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 1,
+      "frame_ids": [
+        30,
+        31,
+        32
+      ],
+      "timestamps_ms": [
+        1000.0,
+        1033.0,
+        1067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.20821695029735565,
+          "positive": false
+        },
+        {
+          "confidence": 0.197184756398201,
+          "positive": false
+        },
+        {
+          "confidence": 0.1685875952243805,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 2,
+      "frame_ids": [
+        60,
+        61,
+        62
+      ],
+      "timestamps_ms": [
+        2000.0,
+        2033.0,
+        2067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5565881133079529,
+          "positive": true
+        },
+        {
+          "confidence": 0.8604796528816223,
+          "positive": true
+        },
+        {
+          "confidence": 0.36559632420539856,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 3,
+      "frame_ids": [
+        90,
+        91,
+        92
+      ],
+      "timestamps_ms": [
+        3000.0,
+        3033.0,
+        3067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5029385685920715,
+          "positive": true
+        },
+        {
+          "confidence": 0.5526651740074158,
+          "positive": true
+        },
+        {
+          "confidence": 0.5938427448272705,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 4,
+      "frame_ids": [
+        120,
+        121,
+        122
+      ],
+      "timestamps_ms": [
+        4000.0,
+        4033.0,
+        4067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6936575770378113,
+          "positive": true
+        },
+        {
+          "confidence": 0.7314139604568481,
+          "positive": true
+        },
+        {
+          "confidence": 0.8271222114562988,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 5,
+      "frame_ids": [
+        150,
+        151,
+        152
+      ],
+      "timestamps_ms": [
+        5000.0,
+        5033.0,
+        5067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5031611323356628,
+          "positive": true
+        },
+        {
+          "confidence": 0.5989770293235779,
+          "positive": true
+        },
+        {
+          "confidence": 0.5655744671821594,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 6,
+      "frame_ids": [
+        180,
+        181,
+        182
+      ],
+      "timestamps_ms": [
+        6000.0,
+        6033.0,
+        6067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.766226589679718,
+          "positive": true
+        },
+        {
+          "confidence": 0.8063917756080627,
+          "positive": true
+        },
+        {
+          "confidence": 0.7997759580612183,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 7,
+      "frame_ids": [
+        210,
+        211,
+        212
+      ],
+      "timestamps_ms": [
+        7000.0,
+        7033.0,
+        7067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6976661086082458,
+          "positive": true
+        },
+        {
+          "confidence": 0.7704646587371826,
+          "positive": true
+        },
+        {
+          "confidence": 0.7539595365524292,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 8,
+      "frame_ids": [
+        240,
+        241,
+        242
+      ],
+      "timestamps_ms": [
+        8000.0,
+        8033.0,
+        8067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8173025846481323,
+          "positive": true
+        },
+        {
+          "confidence": 0.9093748927116394,
+          "positive": true
+        },
+        {
+          "confidence": 0.9160950183868408,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 9,
+      "frame_ids": [
+        270,
+        271,
+        272
+      ],
+      "timestamps_ms": [
+        9000.0,
+        9033.0,
+        9067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9027822017669678,
+          "positive": true
+        },
+        {
+          "confidence": 0.8394404053688049,
+          "positive": true
+        },
+        {
+          "confidence": 0.9129204750061035,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 10,
+      "frame_ids": [
+        300,
+        301,
+        302
+      ],
+      "timestamps_ms": [
+        10000.0,
+        10033.0,
+        10067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8960626721382141,
+          "positive": true
+        },
+        {
+          "confidence": 0.8287985324859619,
+          "positive": true
+        },
+        {
+          "confidence": 0.727877676486969,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 11,
+      "frame_ids": [
+        330,
+        331,
+        332
+      ],
+      "timestamps_ms": [
+        11000.0,
+        11033.0,
+        11067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.655310332775116,
+          "positive": true
+        },
+        {
+          "confidence": 0.6777375936508179,
+          "positive": true
+        },
+        {
+          "confidence": 0.6569302082061768,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 12,
+      "frame_ids": [
+        360,
+        361,
+        362
+      ],
+      "timestamps_ms": [
+        12000.0,
+        12033.0,
+        12067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9641188383102417,
+          "positive": true
+        },
+        {
+          "confidence": 0.9474037885665894,
+          "positive": true
+        },
+        {
+          "confidence": 0.8425098657608032,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 13,
+      "frame_ids": [
+        390,
+        391,
+        392
+      ],
+      "timestamps_ms": [
+        13000.0,
+        13033.0,
+        13067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.754413902759552,
+          "positive": true
+        },
+        {
+          "confidence": 0.677226185798645,
+          "positive": true
+        },
+        {
+          "confidence": 0.674944281578064,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 14,
+      "frame_ids": [
+        420,
+        421,
+        422
+      ],
+      "timestamps_ms": [
+        14000.0,
+        14033.0,
+        14067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8530757427215576,
+          "positive": true
+        },
+        {
+          "confidence": 0.7979798316955566,
+          "positive": true
+        },
+        {
+          "confidence": 0.8015594482421875,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 15,
+      "frame_ids": [
+        450,
+        451,
+        452
+      ],
+      "timestamps_ms": [
+        15000.0,
+        15033.0,
+        15067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9491097927093506,
+          "positive": true
+        },
+        {
+          "confidence": 0.9597424864768982,
+          "positive": true
+        },
+        {
+          "confidence": 0.9389715790748596,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 16,
+      "frame_ids": [
+        480,
+        481,
+        482
+      ],
+      "timestamps_ms": [
+        16000.0,
+        16033.0,
+        16067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7797753214836121,
+          "positive": true
+        },
+        {
+          "confidence": 0.7869754433631897,
+          "positive": true
+        },
+        {
+          "confidence": 0.7130085229873657,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 17,
+      "frame_ids": [
+        510,
+        511,
+        512
+      ],
+      "timestamps_ms": [
+        17000.0,
+        17033.0,
+        17067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9254838824272156,
+          "positive": true
+        },
+        {
+          "confidence": 0.928933322429657,
+          "positive": true
+        },
+        {
+          "confidence": 0.9214155077934265,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 18,
+      "frame_ids": [
+        540,
+        541,
+        542
+      ],
+      "timestamps_ms": [
+        18000.0,
+        18033.0,
+        18067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9571653008460999,
+          "positive": true
+        },
+        {
+          "confidence": 0.9685623645782471,
+          "positive": true
+        },
+        {
+          "confidence": 0.943926215171814,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 19,
+      "frame_ids": [
+        570,
+        571,
+        572
+      ],
+      "timestamps_ms": [
+        19000.0,
+        19033.0,
+        19067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6742773056030273,
+          "positive": true
+        },
+        {
+          "confidence": 0.5872706174850464,
+          "positive": true
+        },
+        {
+          "confidence": 0.5994201302528381,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 20,
+      "frame_ids": [
+        600,
+        601,
+        602
+      ],
+      "timestamps_ms": [
+        20000.0,
+        20033.0,
+        20067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9072388410568237,
+          "positive": true
+        },
+        {
+          "confidence": 0.9114776849746704,
+          "positive": true
+        },
+        {
+          "confidence": 0.9403846263885498,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 21,
+      "frame_ids": [
+        630,
+        631,
+        632
+      ],
+      "timestamps_ms": [
+        21000.0,
+        21033.0,
+        21067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6256874799728394,
+          "positive": true
+        },
+        {
+          "confidence": 0.6693370938301086,
+          "positive": true
+        },
+        {
+          "confidence": 0.6541308760643005,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 22,
+      "frame_ids": [
+        660,
+        661,
+        662
+      ],
+      "timestamps_ms": [
+        22000.0,
+        22033.0,
+        22067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5493537783622742,
+          "positive": true
+        },
+        {
+          "confidence": 0.537905752658844,
+          "positive": true
+        },
+        {
+          "confidence": 0.5046870708465576,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 23,
+      "frame_ids": [
+        690,
+        691,
+        692
+      ],
+      "timestamps_ms": [
+        23000.0,
+        23033.0,
+        23067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8921830058097839,
+          "positive": true
+        },
+        {
+          "confidence": 0.9463421702384949,
+          "positive": true
+        },
+        {
+          "confidence": 0.9059086441993713,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 24,
+      "frame_ids": [
+        720,
+        721,
+        722
+      ],
+      "timestamps_ms": [
+        24000.0,
+        24033.0,
+        24067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6123199462890625,
+          "positive": true
+        },
+        {
+          "confidence": 0.7017099261283875,
+          "positive": true
+        },
+        {
+          "confidence": 0.6037769913673401,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 25,
+      "frame_ids": [
+        750,
+        751,
+        752
+      ],
+      "timestamps_ms": [
+        25000.0,
+        25033.0,
+        25067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8849235773086548,
+          "positive": true
+        },
+        {
+          "confidence": 0.963106095790863,
+          "positive": true
+        },
+        {
+          "confidence": 0.9235677719116211,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 26,
+      "frame_ids": [
+        780,
+        781,
+        782
+      ],
+      "timestamps_ms": [
+        26000.0,
+        26033.0,
+        26067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8972349166870117,
+          "positive": true
+        },
+        {
+          "confidence": 0.8326556086540222,
+          "positive": true
+        },
+        {
+          "confidence": 0.818101704120636,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 27,
+      "frame_ids": [
+        810,
+        811,
+        812
+      ],
+      "timestamps_ms": [
+        27000.0,
+        27033.0,
+        27067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9071510434150696,
+          "positive": true
+        },
+        {
+          "confidence": 0.824572741985321,
+          "positive": true
+        },
+        {
+          "confidence": 0.8981098532676697,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 28,
+      "frame_ids": [
+        840,
+        841,
+        842
+      ],
+      "timestamps_ms": [
+        28000.0,
+        28033.0,
+        28067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9594598412513733,
+          "positive": true
+        },
+        {
+          "confidence": 0.9649471640586853,
+          "positive": true
+        },
+        {
+          "confidence": 0.9673543572425842,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 29,
+      "frame_ids": [
+        870,
+        871,
+        872
+      ],
+      "timestamps_ms": [
+        29000.0,
+        29033.0,
+        29067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9610458612442017,
+          "positive": true
+        },
+        {
+          "confidence": 0.9665782451629639,
+          "positive": true
+        },
+        {
+          "confidence": 0.97392737865448,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 30,
+      "frame_ids": [
+        900,
+        901,
+        902
+      ],
+      "timestamps_ms": [
+        30000.0,
+        30033.0,
+        30067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.811410129070282,
+          "positive": true
+        },
+        {
+          "confidence": 0.8042629361152649,
+          "positive": true
+        },
+        {
+          "confidence": 0.5124561190605164,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 31,
+      "frame_ids": [
+        930,
+        931,
+        932
+      ],
+      "timestamps_ms": [
+        31000.0,
+        31033.0,
+        31067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9218849539756775,
+          "positive": true
+        },
+        {
+          "confidence": 0.9252448081970215,
+          "positive": true
+        },
+        {
+          "confidence": 0.920353889465332,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 32,
+      "frame_ids": [
+        960,
+        961,
+        962
+      ],
+      "timestamps_ms": [
+        32000.0,
+        32033.0,
+        32067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8159259557723999,
+          "positive": true
+        },
+        {
+          "confidence": 0.8807950019836426,
+          "positive": true
+        },
+        {
+          "confidence": 0.7984962463378906,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 33,
+      "frame_ids": [
+        990,
+        991,
+        992
+      ],
+      "timestamps_ms": [
+        33000.0,
+        33033.0,
+        33067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9147722721099854,
+          "positive": true
+        },
+        {
+          "confidence": 0.9403619766235352,
+          "positive": true
+        },
+        {
+          "confidence": 0.9413046836853027,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 34,
+      "frame_ids": [
+        1020,
+        1021,
+        1022
+      ],
+      "timestamps_ms": [
+        34000.0,
+        34033.0,
+        34067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6070827841758728,
+          "positive": true
+        },
+        {
+          "confidence": 0.6329237222671509,
+          "positive": true
+        },
+        {
+          "confidence": 0.5692703723907471,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 35,
+      "frame_ids": [
+        1050,
+        1051,
+        1052
+      ],
+      "timestamps_ms": [
+        35000.0,
+        35033.0,
+        35067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5590767860412598,
+          "positive": true
+        },
+        {
+          "confidence": 0.572422206401825,
+          "positive": true
+        },
+        {
+          "confidence": 0.5014922618865967,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 36,
+      "frame_ids": [
+        1080,
+        1081,
+        1082
+      ],
+      "timestamps_ms": [
+        36000.0,
+        36033.0,
+        36067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8948383927345276,
+          "positive": true
+        },
+        {
+          "confidence": 0.9141755104064941,
+          "positive": true
+        },
+        {
+          "confidence": 0.9085604548454285,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 37,
+      "frame_ids": [
+        1110,
+        1111,
+        1112
+      ],
+      "timestamps_ms": [
+        37000.0,
+        37033.0,
+        37067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9036679863929749,
+          "positive": true
+        },
+        {
+          "confidence": 0.9521703124046326,
+          "positive": true
+        },
+        {
+          "confidence": 0.9305480718612671,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 38,
+      "frame_ids": [
+        1140,
+        1141,
+        1142
+      ],
+      "timestamps_ms": [
+        38000.0,
+        38033.0,
+        38067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8741323947906494,
+          "positive": true
+        },
+        {
+          "confidence": 0.8936011791229248,
+          "positive": true
+        },
+        {
+          "confidence": 0.8973406553268433,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 39,
+      "frame_ids": [
+        1170,
+        1171,
+        1172
+      ],
+      "timestamps_ms": [
+        39000.0,
+        39033.0,
+        39067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.33894768357276917,
+          "positive": false
+        },
+        {
+          "confidence": 0.30572226643562317,
+          "positive": false
+        },
+        {
+          "confidence": 0.33823317289352417,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 40,
+      "frame_ids": [
+        1200,
+        1201,
+        1202
+      ],
+      "timestamps_ms": [
+        40000.0,
+        40033.0,
+        40067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8797638416290283,
+          "positive": true
+        },
+        {
+          "confidence": 0.9330848455429077,
+          "positive": true
+        },
+        {
+          "confidence": 0.883668065071106,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 41,
+      "frame_ids": [
+        1230,
+        1231,
+        1232
+      ],
+      "timestamps_ms": [
+        41000.0,
+        41033.0,
+        41067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5372041463851929,
+          "positive": true
+        },
+        {
+          "confidence": 0.5502398610115051,
+          "positive": true
+        },
+        {
+          "confidence": 0.49822911620140076,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 42,
+      "frame_ids": [
+        1260,
+        1261,
+        1262
+      ],
+      "timestamps_ms": [
+        42000.0,
+        42033.0,
+        42067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8106751441955566,
+          "positive": true
+        },
+        {
+          "confidence": 0.8821648359298706,
+          "positive": true
+        },
+        {
+          "confidence": 0.9011921286582947,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 43,
+      "frame_ids": [
+        1290,
+        1291,
+        1292
+      ],
+      "timestamps_ms": [
+        43000.0,
+        43033.0,
+        43067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5024399161338806,
+          "positive": true
+        },
+        {
+          "confidence": 0.4966537058353424,
+          "positive": false
+        },
+        {
+          "confidence": 0.6450935006141663,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 44,
+      "frame_ids": [
+        1320,
+        1321,
+        1322
+      ],
+      "timestamps_ms": [
+        44000.0,
+        44033.0,
+        44067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9725439548492432,
+          "positive": true
+        },
+        {
+          "confidence": 0.9376425743103027,
+          "positive": true
+        },
+        {
+          "confidence": 0.9546324014663696,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 45,
+      "frame_ids": [
+        1350,
+        1351,
+        1352
+      ],
+      "timestamps_ms": [
+        45000.0,
+        45033.0,
+        45067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.49319693446159363,
+          "positive": false
+        },
+        {
+          "confidence": 0.5304105877876282,
+          "positive": true
+        },
+        {
+          "confidence": 0.47393521666526794,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 46,
+      "frame_ids": [
+        1380,
+        1381,
+        1382
+      ],
+      "timestamps_ms": [
+        46000.0,
+        46033.0,
+        46067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.940643310546875,
+          "positive": true
+        },
+        {
+          "confidence": 0.9209940433502197,
+          "positive": true
+        },
+        {
+          "confidence": 0.804140567779541,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 47,
+      "frame_ids": [
+        1410,
+        1411,
+        1412
+      ],
+      "timestamps_ms": [
+        47000.0,
+        47033.0,
+        47067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.84285968542099,
+          "positive": true
+        },
+        {
+          "confidence": 0.6241437792778015,
+          "positive": true
+        },
+        {
+          "confidence": 0.5778669118881226,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 48,
+      "frame_ids": [
+        1440,
+        1441,
+        1442
+      ],
+      "timestamps_ms": [
+        48000.0,
+        48033.0,
+        48067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9470576643943787,
+          "positive": true
+        },
+        {
+          "confidence": 0.9508413076400757,
+          "positive": true
+        },
+        {
+          "confidence": 0.9120199680328369,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 49,
+      "frame_ids": [
+        1470,
+        1471,
+        1472
+      ],
+      "timestamps_ms": [
+        49000.0,
+        49033.0,
+        49067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9240355491638184,
+          "positive": true
+        },
+        {
+          "confidence": 0.909974217414856,
+          "positive": true
+        },
+        {
+          "confidence": 0.9448725581169128,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 50,
+      "frame_ids": [
+        1500,
+        1501,
+        1502
+      ],
+      "timestamps_ms": [
+        50000.0,
+        50033.0,
+        50067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9257892370223999,
+          "positive": true
+        },
+        {
+          "confidence": 0.9307889342308044,
+          "positive": true
+        },
+        {
+          "confidence": 0.9217512011528015,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 51,
+      "frame_ids": [
+        1530,
+        1531,
+        1532
+      ],
+      "timestamps_ms": [
+        51000.0,
+        51033.0,
+        51067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9450569152832031,
+          "positive": true
+        },
+        {
+          "confidence": 0.9611045718193054,
+          "positive": true
+        },
+        {
+          "confidence": 0.9265782237052917,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 52,
+      "frame_ids": [
+        1560,
+        1561,
+        1562
+      ],
+      "timestamps_ms": [
+        52000.0,
+        52033.0,
+        52067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8605027794837952,
+          "positive": true
+        },
+        {
+          "confidence": 0.8796303272247314,
+          "positive": true
+        },
+        {
+          "confidence": 0.9288274049758911,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 53,
+      "frame_ids": [
+        1590,
+        1591,
+        1592
+      ],
+      "timestamps_ms": [
+        53000.0,
+        53033.0,
+        53067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9656785130500793,
+          "positive": true
+        },
+        {
+          "confidence": 0.9616224765777588,
+          "positive": true
+        },
+        {
+          "confidence": 0.9635406732559204,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 54,
+      "frame_ids": [
+        1620,
+        1621,
+        1622
+      ],
+      "timestamps_ms": [
+        54000.0,
+        54033.0,
+        54067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9063537120819092,
+          "positive": true
+        },
+        {
+          "confidence": 0.9399932622909546,
+          "positive": true
+        },
+        {
+          "confidence": 0.9581791162490845,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 55,
+      "frame_ids": [
+        1650,
+        1651,
+        1652
+      ],
+      "timestamps_ms": [
+        55000.0,
+        55033.0,
+        55067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9270068407058716,
+          "positive": true
+        },
+        {
+          "confidence": 0.9210588335990906,
+          "positive": true
+        },
+        {
+          "confidence": 0.9202642440795898,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 56,
+      "frame_ids": [
+        1680,
+        1681,
+        1682
+      ],
+      "timestamps_ms": [
+        56000.0,
+        56033.0,
+        56067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.893865168094635,
+          "positive": true
+        },
+        {
+          "confidence": 0.9393078684806824,
+          "positive": true
+        },
+        {
+          "confidence": 0.8027529120445251,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 57,
+      "frame_ids": [
+        1710,
+        1711,
+        1712
+      ],
+      "timestamps_ms": [
+        57000.0,
+        57033.0,
+        57067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9093245267868042,
+          "positive": true
+        },
+        {
+          "confidence": 0.9182156324386597,
+          "positive": true
+        },
+        {
+          "confidence": 0.9318807721138,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 58,
+      "frame_ids": [
+        1740,
+        1741,
+        1742
+      ],
+      "timestamps_ms": [
+        58000.0,
+        58033.0,
+        58067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7813966274261475,
+          "positive": true
+        },
+        {
+          "confidence": 0.8692079782485962,
+          "positive": true
+        },
+        {
+          "confidence": 0.8328442573547363,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 59,
+      "frame_ids": [
+        1770,
+        1771,
+        1772
+      ],
+      "timestamps_ms": [
+        59000.0,
+        59033.0,
+        59067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9581769108772278,
+          "positive": true
+        },
+        {
+          "confidence": 0.9544495940208435,
+          "positive": true
+        },
+        {
+          "confidence": 0.9609981775283813,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 60,
+      "frame_ids": [
+        1800,
+        1801,
+        1802
+      ],
+      "timestamps_ms": [
+        60000.0,
+        60033.0,
+        60067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5687336921691895,
+          "positive": true
+        },
+        {
+          "confidence": 0.6375150680541992,
+          "positive": true
+        },
+        {
+          "confidence": 0.5870712995529175,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 61,
+      "frame_ids": [
+        1830,
+        1831,
+        1832
+      ],
+      "timestamps_ms": [
+        61000.0,
+        61033.0,
+        61067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8922463059425354,
+          "positive": true
+        },
+        {
+          "confidence": 0.933110237121582,
+          "positive": true
+        },
+        {
+          "confidence": 0.9526768922805786,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 62,
+      "frame_ids": [
+        1860,
+        1861,
+        1862
+      ],
+      "timestamps_ms": [
+        62000.0,
+        62033.0,
+        62067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.33205655217170715,
+          "positive": false
+        },
+        {
+          "confidence": 0.23329368233680725,
+          "positive": false
+        },
+        {
+          "confidence": 0.2485276311635971,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 63,
+      "frame_ids": [
+        1890,
+        1891,
+        1892
+      ],
+      "timestamps_ms": [
+        63000.0,
+        63033.0,
+        63067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6717345118522644,
+          "positive": true
+        },
+        {
+          "confidence": 0.7881731986999512,
+          "positive": true
+        },
+        {
+          "confidence": 0.5627796053886414,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 64,
+      "frame_ids": [
+        1920,
+        1921,
+        1922
+      ],
+      "timestamps_ms": [
+        64000.0,
+        64033.0,
+        64067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7967952489852905,
+          "positive": true
+        },
+        {
+          "confidence": 0.8092725276947021,
+          "positive": true
+        },
+        {
+          "confidence": 0.8061899542808533,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 65,
+      "frame_ids": [
+        1950,
+        1951,
+        1952
+      ],
+      "timestamps_ms": [
+        65000.0,
+        65033.0,
+        65067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.936875581741333,
+          "positive": true
+        },
+        {
+          "confidence": 0.8955930471420288,
+          "positive": true
+        },
+        {
+          "confidence": 0.8870134949684143,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 66,
+      "frame_ids": [
+        1980,
+        1981,
+        1982
+      ],
+      "timestamps_ms": [
+        66000.0,
+        66033.0,
+        66067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5399452447891235,
+          "positive": true
+        },
+        {
+          "confidence": 0.6036131978034973,
+          "positive": true
+        },
+        {
+          "confidence": 0.7368493676185608,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 67,
+      "frame_ids": [
+        2010,
+        2011,
+        2012
+      ],
+      "timestamps_ms": [
+        67000.0,
+        67033.0,
+        67067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9100369811058044,
+          "positive": true
+        },
+        {
+          "confidence": 0.9413917064666748,
+          "positive": true
+        },
+        {
+          "confidence": 0.9585187435150146,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 68,
+      "frame_ids": [
+        2040,
+        2041,
+        2042
+      ],
+      "timestamps_ms": [
+        68000.0,
+        68033.0,
+        68067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8377147316932678,
+          "positive": true
+        },
+        {
+          "confidence": 0.8580836057662964,
+          "positive": true
+        },
+        {
+          "confidence": 0.8317391276359558,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 69,
+      "frame_ids": [
+        2070,
+        2071,
+        2072
+      ],
+      "timestamps_ms": [
+        69000.0,
+        69033.0,
+        69067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6034741401672363,
+          "positive": true
+        },
+        {
+          "confidence": 0.6642488837242126,
+          "positive": true
+        },
+        {
+          "confidence": 0.5359216332435608,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 70,
+      "frame_ids": [
+        2100,
+        2101,
+        2102
+      ],
+      "timestamps_ms": [
+        70000.0,
+        70033.0,
+        70067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.2791373133659363,
+          "positive": false
+        },
+        {
+          "confidence": 0.2750434875488281,
+          "positive": false
+        },
+        {
+          "confidence": 0.2922648787498474,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 71,
+      "frame_ids": [
+        2130,
+        2131,
+        2132
+      ],
+      "timestamps_ms": [
+        71000.0,
+        71033.0,
+        71067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8508202433586121,
+          "positive": true
+        },
+        {
+          "confidence": 0.8870290517807007,
+          "positive": true
+        },
+        {
+          "confidence": 0.913112461566925,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 72,
+      "frame_ids": [
+        2160,
+        2161,
+        2162
+      ],
+      "timestamps_ms": [
+        72000.0,
+        72033.0,
+        72067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8035569190979004,
+          "positive": true
+        },
+        {
+          "confidence": 0.8975969552993774,
+          "positive": true
+        },
+        {
+          "confidence": 0.8629980087280273,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 73,
+      "frame_ids": [
+        2190,
+        2191,
+        2192
+      ],
+      "timestamps_ms": [
+        73000.0,
+        73033.0,
+        73067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.764382004737854,
+          "positive": true
+        },
+        {
+          "confidence": 0.8524281978607178,
+          "positive": true
+        },
+        {
+          "confidence": 0.8423807621002197,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 74,
+      "frame_ids": [
+        2220,
+        2221,
+        2222
+      ],
+      "timestamps_ms": [
+        74000.0,
+        74033.0,
+        74067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5974070429801941,
+          "positive": true
+        },
+        {
+          "confidence": 0.7713809609413147,
+          "positive": true
+        },
+        {
+          "confidence": 0.7883338928222656,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 75,
+      "frame_ids": [
+        2250,
+        2251,
+        2252
+      ],
+      "timestamps_ms": [
+        75000.0,
+        75033.0,
+        75067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7059702277183533,
+          "positive": true
+        },
+        {
+          "confidence": 0.7144728899002075,
+          "positive": true
+        },
+        {
+          "confidence": 0.803523063659668,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 76,
+      "frame_ids": [
+        2280,
+        2281,
+        2282
+      ],
+      "timestamps_ms": [
+        76000.0,
+        76033.0,
+        76067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.954011082649231,
+          "positive": true
+        },
+        {
+          "confidence": 0.9440988302230835,
+          "positive": true
+        },
+        {
+          "confidence": 0.9688503742218018,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 77,
+      "frame_ids": [
+        2310,
+        2311,
+        2312
+      ],
+      "timestamps_ms": [
+        77000.0,
+        77033.0,
+        77067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9169691205024719,
+          "positive": true
+        },
+        {
+          "confidence": 0.8549305200576782,
+          "positive": true
+        },
+        {
+          "confidence": 0.8538857102394104,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 78,
+      "frame_ids": [
+        2340,
+        2341,
+        2342
+      ],
+      "timestamps_ms": [
+        78000.0,
+        78033.0,
+        78067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9289171099662781,
+          "positive": true
+        },
+        {
+          "confidence": 0.9090065360069275,
+          "positive": true
+        },
+        {
+          "confidence": 0.9391082525253296,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 79,
+      "frame_ids": [
+        2370,
+        2371,
+        2372
+      ],
+      "timestamps_ms": [
+        79000.0,
+        79033.0,
+        79067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9768505096435547,
+          "positive": true
+        },
+        {
+          "confidence": 0.9707911014556885,
+          "positive": true
+        },
+        {
+          "confidence": 0.9613474011421204,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 80,
+      "frame_ids": [
+        2400,
+        2401,
+        2402
+      ],
+      "timestamps_ms": [
+        80000.0,
+        80033.0,
+        80067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8937728404998779,
+          "positive": true
+        },
+        {
+          "confidence": 0.9307442307472229,
+          "positive": true
+        },
+        {
+          "confidence": 0.9442552924156189,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 81,
+      "frame_ids": [
+        2430,
+        2431,
+        2432
+      ],
+      "timestamps_ms": [
+        81000.0,
+        81033.0,
+        81067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.40484318137168884,
+          "positive": false
+        },
+        {
+          "confidence": 0.7974931001663208,
+          "positive": true
+        },
+        {
+          "confidence": 0.8820939660072327,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 82,
+      "frame_ids": [
+        2460,
+        2461,
+        2462
+      ],
+      "timestamps_ms": [
+        82000.0,
+        82033.0,
+        82067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9393479228019714,
+          "positive": true
+        },
+        {
+          "confidence": 0.934980034828186,
+          "positive": true
+        },
+        {
+          "confidence": 0.9472805857658386,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 83,
+      "frame_ids": [
+        2490,
+        2491,
+        2492
+      ],
+      "timestamps_ms": [
+        83000.0,
+        83033.0,
+        83067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7522717118263245,
+          "positive": true
+        },
+        {
+          "confidence": 0.7344269156455994,
+          "positive": true
+        },
+        {
+          "confidence": 0.7372555136680603,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 84,
+      "frame_ids": [
+        2520,
+        2521,
+        2522
+      ],
+      "timestamps_ms": [
+        84000.0,
+        84033.0,
+        84067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.948599636554718,
+          "positive": true
+        },
+        {
+          "confidence": 0.9372227191925049,
+          "positive": true
+        },
+        {
+          "confidence": 0.9349345564842224,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 85,
+      "frame_ids": [
+        2550,
+        2551,
+        2552
+      ],
+      "timestamps_ms": [
+        85000.0,
+        85033.0,
+        85067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9587289690971375,
+          "positive": true
+        },
+        {
+          "confidence": 0.9703854918479919,
+          "positive": true
+        },
+        {
+          "confidence": 0.9781202673912048,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 86,
+      "frame_ids": [
+        2580,
+        2581,
+        2582
+      ],
+      "timestamps_ms": [
+        86000.0,
+        86033.0,
+        86067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7557606101036072,
+          "positive": true
+        },
+        {
+          "confidence": 0.7926846742630005,
+          "positive": true
+        },
+        {
+          "confidence": 0.7623140215873718,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 87,
+      "frame_ids": [
+        2610,
+        2611,
+        2612
+      ],
+      "timestamps_ms": [
+        87000.0,
+        87033.0,
+        87067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8508262038230896,
+          "positive": true
+        },
+        {
+          "confidence": 0.866449773311615,
+          "positive": true
+        },
+        {
+          "confidence": 0.9199363589286804,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 88,
+      "frame_ids": [
+        2640,
+        2641,
+        2642
+      ],
+      "timestamps_ms": [
+        88000.0,
+        88033.0,
+        88067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7706316113471985,
+          "positive": true
+        },
+        {
+          "confidence": 0.7852035760879517,
+          "positive": true
+        },
+        {
+          "confidence": 0.7807859182357788,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 89,
+      "frame_ids": [
+        2670,
+        2671,
+        2672
+      ],
+      "timestamps_ms": [
+        89000.0,
+        89033.0,
+        89067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9118723273277283,
+          "positive": true
+        },
+        {
+          "confidence": 0.9055861234664917,
+          "positive": true
+        },
+        {
+          "confidence": 0.8826894164085388,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 90,
+      "frame_ids": [
+        2700,
+        2701,
+        2702
+      ],
+      "timestamps_ms": [
+        90000.0,
+        90033.0,
+        90067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6107056140899658,
+          "positive": true
+        },
+        {
+          "confidence": 0.5224531888961792,
+          "positive": true
+        },
+        {
+          "confidence": 0.4853978157043457,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 91,
+      "frame_ids": [
+        2730,
+        2731,
+        2732
+      ],
+      "timestamps_ms": [
+        91000.0,
+        91033.0,
+        91067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9423844814300537,
+          "positive": true
+        },
+        {
+          "confidence": 0.9156887531280518,
+          "positive": true
+        },
+        {
+          "confidence": 0.9584143757820129,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 92,
+      "frame_ids": [
+        2760,
+        2761,
+        2762
+      ],
+      "timestamps_ms": [
+        92000.0,
+        92033.0,
+        92067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9385325908660889,
+          "positive": true
+        },
+        {
+          "confidence": 0.9498429298400879,
+          "positive": true
+        },
+        {
+          "confidence": 0.9699819087982178,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 93,
+      "frame_ids": [
+        2790,
+        2791,
+        2792
+      ],
+      "timestamps_ms": [
+        93000.0,
+        93033.0,
+        93067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9534878730773926,
+          "positive": true
+        },
+        {
+          "confidence": 0.9489719271659851,
+          "positive": true
+        },
+        {
+          "confidence": 0.9387965202331543,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 94,
+      "frame_ids": [
+        2820,
+        2821,
+        2822
+      ],
+      "timestamps_ms": [
+        94000.0,
+        94033.0,
+        94067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8433851599693298,
+          "positive": true
+        },
+        {
+          "confidence": 0.8953127861022949,
+          "positive": true
+        },
+        {
+          "confidence": 0.8597704172134399,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 95,
+      "frame_ids": [
+        2850,
+        2851,
+        2852
+      ],
+      "timestamps_ms": [
+        95000.0,
+        95033.0,
+        95067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.42292672395706177,
+          "positive": false
+        },
+        {
+          "confidence": 0.4182090759277344,
+          "positive": false
+        },
+        {
+          "confidence": 0.44451162219047546,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 96,
+      "frame_ids": [
+        2880,
+        2881,
+        2882
+      ],
+      "timestamps_ms": [
+        96000.0,
+        96033.0,
+        96067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.86061030626297,
+          "positive": true
+        },
+        {
+          "confidence": 0.9073147177696228,
+          "positive": true
+        },
+        {
+          "confidence": 0.8134725093841553,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 97,
+      "frame_ids": [
+        2910,
+        2911,
+        2912
+      ],
+      "timestamps_ms": [
+        97000.0,
+        97033.0,
+        97067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9360503554344177,
+          "positive": true
+        },
+        {
+          "confidence": 0.8980336785316467,
+          "positive": true
+        },
+        {
+          "confidence": 0.9211992621421814,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 98,
+      "frame_ids": [
+        2940,
+        2941,
+        2942
+      ],
+      "timestamps_ms": [
+        98000.0,
+        98033.0,
+        98067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9017688035964966,
+          "positive": true
+        },
+        {
+          "confidence": 0.9114882946014404,
+          "positive": true
+        },
+        {
+          "confidence": 0.8290753364562988,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 99,
+      "frame_ids": [
+        2970,
+        2971,
+        2972
+      ],
+      "timestamps_ms": [
+        99000.0,
+        99033.0,
+        99067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.871525228023529,
+          "positive": true
+        },
+        {
+          "confidence": 0.8674315810203552,
+          "positive": true
+        },
+        {
+          "confidence": 0.8410722017288208,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 100,
+      "frame_ids": [
+        3000,
+        3001,
+        3002
+      ],
+      "timestamps_ms": [
+        100000.0,
+        100033.0,
+        100067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7878273129463196,
+          "positive": true
+        },
+        {
+          "confidence": 0.8207655549049377,
+          "positive": true
+        },
+        {
+          "confidence": 0.8708189725875854,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 101,
+      "frame_ids": [
+        3030,
+        3031,
+        3032
+      ],
+      "timestamps_ms": [
+        101000.0,
+        101033.0,
+        101067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7352930903434753,
+          "positive": true
+        },
+        {
+          "confidence": 0.5873005390167236,
+          "positive": true
+        },
+        {
+          "confidence": 0.4166980981826782,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 102,
+      "frame_ids": [
+        3060,
+        3061,
+        3062
+      ],
+      "timestamps_ms": [
+        102000.0,
+        102033.0,
+        102067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8644728660583496,
+          "positive": true
+        },
+        {
+          "confidence": 0.8898351788520813,
+          "positive": true
+        },
+        {
+          "confidence": 0.8937405943870544,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 103,
+      "frame_ids": [
+        3090,
+        3091,
+        3092
+      ],
+      "timestamps_ms": [
+        103000.0,
+        103033.0,
+        103067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5461786389350891,
+          "positive": true
+        },
+        {
+          "confidence": 0.36719951033592224,
+          "positive": false
+        },
+        {
+          "confidence": 0.4004429578781128,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 104,
+      "frame_ids": [
+        3120,
+        3121,
+        3122
+      ],
+      "timestamps_ms": [
+        104000.0,
+        104033.0,
+        104067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.738353967666626,
+          "positive": true
+        },
+        {
+          "confidence": 0.8182517290115356,
+          "positive": true
+        },
+        {
+          "confidence": 0.6868985891342163,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 105,
+      "frame_ids": [
+        3150,
+        3151,
+        3152
+      ],
+      "timestamps_ms": [
+        105000.0,
+        105033.0,
+        105067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7172004580497742,
+          "positive": true
+        },
+        {
+          "confidence": 0.7833487391471863,
+          "positive": true
+        },
+        {
+          "confidence": 0.6926001310348511,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 106,
+      "frame_ids": [
+        3180,
+        3181,
+        3182
+      ],
+      "timestamps_ms": [
+        106000.0,
+        106033.0,
+        106067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8404181003570557,
+          "positive": true
+        },
+        {
+          "confidence": 0.9132586717605591,
+          "positive": true
+        },
+        {
+          "confidence": 0.8986963629722595,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 107,
+      "frame_ids": [
+        3210,
+        3211,
+        3212
+      ],
+      "timestamps_ms": [
+        107000.0,
+        107033.0,
+        107067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9598209857940674,
+          "positive": true
+        },
+        {
+          "confidence": 0.9677085876464844,
+          "positive": true
+        },
+        {
+          "confidence": 0.9385090470314026,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 108,
+      "frame_ids": [
+        3240,
+        3241,
+        3242
+      ],
+      "timestamps_ms": [
+        108000.0,
+        108033.0,
+        108067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.40862855315208435,
+          "positive": false
+        },
+        {
+          "confidence": 0.4049187898635864,
+          "positive": false
+        },
+        {
+          "confidence": 0.38084882497787476,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 109,
+      "frame_ids": [
+        3270,
+        3271,
+        3272
+      ],
+      "timestamps_ms": [
+        109000.0,
+        109033.0,
+        109067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.51417475938797,
+          "positive": true
+        },
+        {
+          "confidence": 0.5955967903137207,
+          "positive": true
+        },
+        {
+          "confidence": 0.5507273077964783,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 110,
+      "frame_ids": [
+        3300,
+        3301,
+        3302
+      ],
+      "timestamps_ms": [
+        110000.0,
+        110033.0,
+        110067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5330929756164551,
+          "positive": true
+        },
+        {
+          "confidence": 0.6725339889526367,
+          "positive": true
+        },
+        {
+          "confidence": 0.577680230140686,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 111,
+      "frame_ids": [
+        3330,
+        3331,
+        3332
+      ],
+      "timestamps_ms": [
+        111000.0,
+        111033.0,
+        111067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.821568489074707,
+          "positive": true
+        },
+        {
+          "confidence": 0.7704233527183533,
+          "positive": true
+        },
+        {
+          "confidence": 0.8427097797393799,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 112,
+      "frame_ids": [
+        3360,
+        3361,
+        3362
+      ],
+      "timestamps_ms": [
+        112000.0,
+        112033.0,
+        112067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9025929570198059,
+          "positive": true
+        },
+        {
+          "confidence": 0.9252175688743591,
+          "positive": true
+        },
+        {
+          "confidence": 0.807586669921875,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 113,
+      "frame_ids": [
+        3390,
+        3391,
+        3392
+      ],
+      "timestamps_ms": [
+        113000.0,
+        113033.0,
+        113067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5354244709014893,
+          "positive": true
+        },
+        {
+          "confidence": 0.527989387512207,
+          "positive": true
+        },
+        {
+          "confidence": 0.5210366249084473,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 114,
+      "frame_ids": [
+        3420,
+        3421,
+        3422
+      ],
+      "timestamps_ms": [
+        114000.0,
+        114033.0,
+        114067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8679373264312744,
+          "positive": true
+        },
+        {
+          "confidence": 0.7921571135520935,
+          "positive": true
+        },
+        {
+          "confidence": 0.8303613662719727,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 115,
+      "frame_ids": [
+        3450,
+        3451,
+        3452
+      ],
+      "timestamps_ms": [
+        115000.0,
+        115033.0,
+        115067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.822805643081665,
+          "positive": true
+        },
+        {
+          "confidence": 0.8350557684898376,
+          "positive": true
+        },
+        {
+          "confidence": 0.6789885759353638,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 116,
+      "frame_ids": [
+        3480,
+        3481,
+        3482
+      ],
+      "timestamps_ms": [
+        116000.0,
+        116033.0,
+        116067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.36103183031082153,
+          "positive": false
+        },
+        {
+          "confidence": 0.3075293004512787,
+          "positive": false
+        },
+        {
+          "confidence": 0.2993488609790802,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 117,
+      "frame_ids": [
+        3510,
+        3511,
+        3512
+      ],
+      "timestamps_ms": [
+        117000.0,
+        117033.0,
+        117067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8576247096061707,
+          "positive": true
+        },
+        {
+          "confidence": 0.8611130714416504,
+          "positive": true
+        },
+        {
+          "confidence": 0.8526573181152344,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 118,
+      "frame_ids": [
+        3540,
+        3541,
+        3542
+      ],
+      "timestamps_ms": [
+        118000.0,
+        118033.0,
+        118067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8722975254058838,
+          "positive": true
+        },
+        {
+          "confidence": 0.9426803588867188,
+          "positive": true
+        },
+        {
+          "confidence": 0.9522423148155212,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 119,
+      "frame_ids": [
+        3570,
+        3571,
+        3572
+      ],
+      "timestamps_ms": [
+        119000.0,
+        119033.0,
+        119067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.39020076394081116,
+          "positive": false
+        },
+        {
+          "confidence": 0.35087770223617554,
+          "positive": false
+        },
+        {
+          "confidence": 0.35143497586250305,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 120,
+      "frame_ids": [
+        3600,
+        3601,
+        3602
+      ],
+      "timestamps_ms": [
+        120000.0,
+        120033.0,
+        120067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.4360744059085846,
+          "positive": false
+        },
+        {
+          "confidence": 0.5014340281486511,
+          "positive": true
+        },
+        {
+          "confidence": 0.5042058825492859,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 121,
+      "frame_ids": [
+        3630,
+        3631,
+        3632
+      ],
+      "timestamps_ms": [
+        121000.0,
+        121033.0,
+        121067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8746188282966614,
+          "positive": true
+        },
+        {
+          "confidence": 0.9070212841033936,
+          "positive": true
+        },
+        {
+          "confidence": 0.8442413806915283,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 122,
+      "frame_ids": [
+        3660,
+        3661,
+        3662
+      ],
+      "timestamps_ms": [
+        122000.0,
+        122033.0,
+        122067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9046440720558167,
+          "positive": true
+        },
+        {
+          "confidence": 0.9413126111030579,
+          "positive": true
+        },
+        {
+          "confidence": 0.9525191187858582,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 123,
+      "frame_ids": [
+        3690,
+        3691,
+        3692
+      ],
+      "timestamps_ms": [
+        123000.0,
+        123033.0,
+        123067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6730244755744934,
+          "positive": true
+        },
+        {
+          "confidence": 0.7167513966560364,
+          "positive": true
+        },
+        {
+          "confidence": 0.7712945938110352,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 124,
+      "frame_ids": [
+        3720,
+        3721,
+        3722
+      ],
+      "timestamps_ms": [
+        124000.0,
+        124033.0,
+        124067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.731634795665741,
+          "positive": true
+        },
+        {
+          "confidence": 0.6571973562240601,
+          "positive": true
+        },
+        {
+          "confidence": 0.8811098337173462,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 125,
+      "frame_ids": [
+        3750,
+        3751,
+        3752
+      ],
+      "timestamps_ms": [
+        125000.0,
+        125033.0,
+        125067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7969208359718323,
+          "positive": true
+        },
+        {
+          "confidence": 0.8530020117759705,
+          "positive": true
+        },
+        {
+          "confidence": 0.9146828055381775,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 126,
+      "frame_ids": [
+        3780,
+        3781,
+        3782
+      ],
+      "timestamps_ms": [
+        126000.0,
+        126033.0,
+        126067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6867783069610596,
+          "positive": true
+        },
+        {
+          "confidence": 0.6439427733421326,
+          "positive": true
+        },
+        {
+          "confidence": 0.6205258369445801,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 127,
+      "frame_ids": [
+        3810,
+        3811,
+        3812
+      ],
+      "timestamps_ms": [
+        127000.0,
+        127033.0,
+        127067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9312793612480164,
+          "positive": true
+        },
+        {
+          "confidence": 0.9175223708152771,
+          "positive": true
+        },
+        {
+          "confidence": 0.9433935284614563,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 128,
+      "frame_ids": [
+        3840,
+        3841,
+        3842
+      ],
+      "timestamps_ms": [
+        128000.0,
+        128033.0,
+        128067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.33243605494499207,
+          "positive": false
+        },
+        {
+          "confidence": 0.3171570599079132,
+          "positive": false
+        },
+        {
+          "confidence": 0.32476329803466797,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 129,
+      "frame_ids": [
+        3870,
+        3871,
+        3872
+      ],
+      "timestamps_ms": [
+        129000.0,
+        129033.0,
+        129067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7018370032310486,
+          "positive": true
+        },
+        {
+          "confidence": 0.701783299446106,
+          "positive": true
+        },
+        {
+          "confidence": 0.704465389251709,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 130,
+      "frame_ids": [
+        3900,
+        3901,
+        3902
+      ],
+      "timestamps_ms": [
+        130000.0,
+        130033.0,
+        130067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8332615494728088,
+          "positive": true
+        },
+        {
+          "confidence": 0.7942867875099182,
+          "positive": true
+        },
+        {
+          "confidence": 0.8007017374038696,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 131,
+      "frame_ids": [
+        3930,
+        3931,
+        3932
+      ],
+      "timestamps_ms": [
+        131000.0,
+        131033.0,
+        131067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7793225646018982,
+          "positive": true
+        },
+        {
+          "confidence": 0.7575555443763733,
+          "positive": true
+        },
+        {
+          "confidence": 0.7586591243743896,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 132,
+      "frame_ids": [
+        3960,
+        3961,
+        3962
+      ],
+      "timestamps_ms": [
+        132000.0,
+        132033.0,
+        132067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9783753752708435,
+          "positive": true
+        },
+        {
+          "confidence": 0.9654242396354675,
+          "positive": true
+        },
+        {
+          "confidence": 0.9710846543312073,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 133,
+      "frame_ids": [
+        3990,
+        3991,
+        3992
+      ],
+      "timestamps_ms": [
+        133000.0,
+        133033.0,
+        133067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.874393880367279,
+          "positive": true
+        },
+        {
+          "confidence": 0.9027267098426819,
+          "positive": true
+        },
+        {
+          "confidence": 0.9144850373268127,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 134,
+      "frame_ids": [
+        4020,
+        4021,
+        4022
+      ],
+      "timestamps_ms": [
+        134000.0,
+        134033.0,
+        134067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.33755213022232056,
+          "positive": false
+        },
+        {
+          "confidence": 0.3641633689403534,
+          "positive": false
+        },
+        {
+          "confidence": 0.3508746922016144,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 135,
+      "frame_ids": [
+        4050,
+        4051,
+        4052
+      ],
+      "timestamps_ms": [
+        135000.0,
+        135033.0,
+        135067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5446177124977112,
+          "positive": true
+        },
+        {
+          "confidence": 0.6063787937164307,
+          "positive": true
+        },
+        {
+          "confidence": 0.566217839717865,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 136,
+      "frame_ids": [
+        4080,
+        4081,
+        4082
+      ],
+      "timestamps_ms": [
+        136000.0,
+        136033.0,
+        136067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6195576190948486,
+          "positive": true
+        },
+        {
+          "confidence": 0.6321853399276733,
+          "positive": true
+        },
+        {
+          "confidence": 0.5889455080032349,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 137,
+      "frame_ids": [
+        4110,
+        4111,
+        4112
+      ],
+      "timestamps_ms": [
+        137000.0,
+        137033.0,
+        137067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8299915194511414,
+          "positive": true
+        },
+        {
+          "confidence": 0.8545305728912354,
+          "positive": true
+        },
+        {
+          "confidence": 0.8835446834564209,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 138,
+      "frame_ids": [
+        4140,
+        4141,
+        4142
+      ],
+      "timestamps_ms": [
+        138000.0,
+        138033.0,
+        138067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9428783655166626,
+          "positive": true
+        },
+        {
+          "confidence": 0.9179103374481201,
+          "positive": true
+        },
+        {
+          "confidence": 0.943180501461029,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 139,
+      "frame_ids": [
+        4170,
+        4171,
+        4172
+      ],
+      "timestamps_ms": [
+        139000.0,
+        139033.0,
+        139067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6620954871177673,
+          "positive": true
+        },
+        {
+          "confidence": 0.6056978106498718,
+          "positive": true
+        },
+        {
+          "confidence": 0.6221548914909363,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 140,
+      "frame_ids": [
+        4200,
+        4201,
+        4202
+      ],
+      "timestamps_ms": [
+        140000.0,
+        140033.0,
+        140067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8134377002716064,
+          "positive": true
+        },
+        {
+          "confidence": 0.8500736951828003,
+          "positive": true
+        },
+        {
+          "confidence": 0.8309114575386047,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 141,
+      "frame_ids": [
+        4230,
+        4231,
+        4232
+      ],
+      "timestamps_ms": [
+        141000.0,
+        141033.0,
+        141067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5379183292388916,
+          "positive": true
+        },
+        {
+          "confidence": 0.5854874849319458,
+          "positive": true
+        },
+        {
+          "confidence": 0.5462468266487122,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 142,
+      "frame_ids": [
+        4260,
+        4261,
+        4262
+      ],
+      "timestamps_ms": [
+        142000.0,
+        142033.0,
+        142067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5786219239234924,
+          "positive": true
+        },
+        {
+          "confidence": 0.5734415650367737,
+          "positive": true
+        },
+        {
+          "confidence": 0.6861433386802673,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 143,
+      "frame_ids": [
+        4290,
+        4291,
+        4292
+      ],
+      "timestamps_ms": [
+        143000.0,
+        143033.0,
+        143067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6454191207885742,
+          "positive": true
+        },
+        {
+          "confidence": 0.6715672016143799,
+          "positive": true
+        },
+        {
+          "confidence": 0.6512736678123474,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 144,
+      "frame_ids": [
+        4320,
+        4321,
+        4322
+      ],
+      "timestamps_ms": [
+        144000.0,
+        144033.0,
+        144067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6142931580543518,
+          "positive": true
+        },
+        {
+          "confidence": 0.651414692401886,
+          "positive": true
+        },
+        {
+          "confidence": 0.6127840280532837,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 145,
+      "frame_ids": [
+        4350,
+        4351,
+        4352
+      ],
+      "timestamps_ms": [
+        145000.0,
+        145033.0,
+        145067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5979974269866943,
+          "positive": true
+        },
+        {
+          "confidence": 0.5933004021644592,
+          "positive": true
+        },
+        {
+          "confidence": 0.5479468107223511,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 146,
+      "frame_ids": [
+        4380,
+        4381,
+        4382
+      ],
+      "timestamps_ms": [
+        146000.0,
+        146033.0,
+        146067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5329047441482544,
+          "positive": true
+        },
+        {
+          "confidence": 0.5338632464408875,
+          "positive": true
+        },
+        {
+          "confidence": 0.4960138499736786,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 147,
+      "frame_ids": [
+        4410,
+        4411,
+        4412
+      ],
+      "timestamps_ms": [
+        147000.0,
+        147033.0,
+        147067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5527567863464355,
+          "positive": true
+        },
+        {
+          "confidence": 0.5649264454841614,
+          "positive": true
+        },
+        {
+          "confidence": 0.5252971649169922,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 148,
+      "frame_ids": [
+        4440,
+        4441,
+        4442
+      ],
+      "timestamps_ms": [
+        148000.0,
+        148033.0,
+        148067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7381338477134705,
+          "positive": true
+        },
+        {
+          "confidence": 0.7780601978302002,
+          "positive": true
+        },
+        {
+          "confidence": 0.7724989652633667,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 149,
+      "frame_ids": [
+        4470,
+        4471,
+        4472
+      ],
+      "timestamps_ms": [
+        149000.0,
+        149033.0,
+        149067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5876352787017822,
+          "positive": true
+        },
+        {
+          "confidence": 0.6387506127357483,
+          "positive": true
+        },
+        {
+          "confidence": 0.5903202891349792,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 150,
+      "frame_ids": [
+        4500,
+        4501,
+        4502
+      ],
+      "timestamps_ms": [
+        150000.0,
+        150033.0,
+        150067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8541299104690552,
+          "positive": true
+        },
+        {
+          "confidence": 0.8757030963897705,
+          "positive": true
+        },
+        {
+          "confidence": 0.8486967086791992,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 151,
+      "frame_ids": [
+        4530,
+        4531,
+        4532
+      ],
+      "timestamps_ms": [
+        151000.0,
+        151033.0,
+        151067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9399864077568054,
+          "positive": true
+        },
+        {
+          "confidence": 0.9165884256362915,
+          "positive": true
+        },
+        {
+          "confidence": 0.902242124080658,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 152,
+      "frame_ids": [
+        4560,
+        4561,
+        4562
+      ],
+      "timestamps_ms": [
+        152000.0,
+        152033.0,
+        152067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.4672549366950989,
+          "positive": false
+        },
+        {
+          "confidence": 0.5105466246604919,
+          "positive": true
+        },
+        {
+          "confidence": 0.5195481181144714,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 153,
+      "frame_ids": [
+        4590,
+        4591,
+        4592
+      ],
+      "timestamps_ms": [
+        153000.0,
+        153033.0,
+        153067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8296807408332825,
+          "positive": true
+        },
+        {
+          "confidence": 0.9053671956062317,
+          "positive": true
+        },
+        {
+          "confidence": 0.9012844562530518,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 154,
+      "frame_ids": [
+        4620,
+        4621,
+        4622
+      ],
+      "timestamps_ms": [
+        154000.0,
+        154033.0,
+        154067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8248370289802551,
+          "positive": true
+        },
+        {
+          "confidence": 0.8346679210662842,
+          "positive": true
+        },
+        {
+          "confidence": 0.8410186767578125,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 155,
+      "frame_ids": [
+        4650,
+        4651,
+        4652
+      ],
+      "timestamps_ms": [
+        155000.0,
+        155033.0,
+        155067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5490142703056335,
+          "positive": true
+        },
+        {
+          "confidence": 0.553242564201355,
+          "positive": true
+        },
+        {
+          "confidence": 0.5191032886505127,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 156,
+      "frame_ids": [
+        4680,
+        4681,
+        4682
+      ],
+      "timestamps_ms": [
+        156000.0,
+        156033.0,
+        156067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9688987135887146,
+          "positive": true
+        },
+        {
+          "confidence": 0.9740874171257019,
+          "positive": true
+        },
+        {
+          "confidence": 0.9746819734573364,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 157,
+      "frame_ids": [
+        4710,
+        4711,
+        4712
+      ],
+      "timestamps_ms": [
+        157000.0,
+        157033.0,
+        157067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6168212890625,
+          "positive": true
+        },
+        {
+          "confidence": 0.664882242679596,
+          "positive": true
+        },
+        {
+          "confidence": 0.6313725709915161,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 158,
+      "frame_ids": [
+        4740,
+        4741,
+        4742
+      ],
+      "timestamps_ms": [
+        158000.0,
+        158033.0,
+        158067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9708781838417053,
+          "positive": true
+        },
+        {
+          "confidence": 0.928478479385376,
+          "positive": true
+        },
+        {
+          "confidence": 0.8974355459213257,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 159,
+      "frame_ids": [
+        4770,
+        4771,
+        4772
+      ],
+      "timestamps_ms": [
+        159000.0,
+        159033.0,
+        159067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6328111886978149,
+          "positive": true
+        },
+        {
+          "confidence": 0.8308868408203125,
+          "positive": true
+        },
+        {
+          "confidence": 0.8948889970779419,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 160,
+      "frame_ids": [
+        4800,
+        4801,
+        4802
+      ],
+      "timestamps_ms": [
+        160000.0,
+        160033.0,
+        160067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6513118743896484,
+          "positive": true
+        },
+        {
+          "confidence": 0.7537662982940674,
+          "positive": true
+        },
+        {
+          "confidence": 0.840912938117981,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 161,
+      "frame_ids": [
+        4830,
+        4831,
+        4832
+      ],
+      "timestamps_ms": [
+        161000.0,
+        161033.0,
+        161067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.7326227426528931,
+          "positive": true
+        },
+        {
+          "confidence": 0.6784969568252563,
+          "positive": true
+        },
+        {
+          "confidence": 0.6406159996986389,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 162,
+      "frame_ids": [
+        4860,
+        4861,
+        4862
+      ],
+      "timestamps_ms": [
+        162000.0,
+        162033.0,
+        162067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5782245993614197,
+          "positive": true
+        },
+        {
+          "confidence": 0.6086556911468506,
+          "positive": true
+        },
+        {
+          "confidence": 0.5490469336509705,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 163,
+      "frame_ids": [
+        4890,
+        4891,
+        4892
+      ],
+      "timestamps_ms": [
+        163000.0,
+        163033.0,
+        163067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6179541945457458,
+          "positive": true
+        },
+        {
+          "confidence": 0.6290348768234253,
+          "positive": true
+        },
+        {
+          "confidence": 0.6149703860282898,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 164,
+      "frame_ids": [
+        4920,
+        4921,
+        4922
+      ],
+      "timestamps_ms": [
+        164000.0,
+        164033.0,
+        164067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.908879816532135,
+          "positive": true
+        },
+        {
+          "confidence": 0.9052312970161438,
+          "positive": true
+        },
+        {
+          "confidence": 0.9013656377792358,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 165,
+      "frame_ids": [
+        4950,
+        4951,
+        4952
+      ],
+      "timestamps_ms": [
+        165000.0,
+        165033.0,
+        165067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9232170581817627,
+          "positive": true
+        },
+        {
+          "confidence": 0.9308445453643799,
+          "positive": true
+        },
+        {
+          "confidence": 0.9221523404121399,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 166,
+      "frame_ids": [
+        4980,
+        4981,
+        4982
+      ],
+      "timestamps_ms": [
+        166000.0,
+        166033.0,
+        166067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5734689831733704,
+          "positive": true
+        },
+        {
+          "confidence": 0.5891230702400208,
+          "positive": true
+        },
+        {
+          "confidence": 0.5249474048614502,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 167,
+      "frame_ids": [
+        5010,
+        5011,
+        5012
+      ],
+      "timestamps_ms": [
+        167000.0,
+        167033.0,
+        167067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5407214760780334,
+          "positive": true
+        },
+        {
+          "confidence": 0.5416932106018066,
+          "positive": true
+        },
+        {
+          "confidence": 0.50264972448349,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 168,
+      "frame_ids": [
+        5040,
+        5041,
+        5042
+      ],
+      "timestamps_ms": [
+        168000.0,
+        168033.0,
+        168067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5483742356300354,
+          "positive": true
+        },
+        {
+          "confidence": 0.5409676432609558,
+          "positive": true
+        },
+        {
+          "confidence": 0.5052026510238647,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 169,
+      "frame_ids": [
+        5070,
+        5071,
+        5072
+      ],
+      "timestamps_ms": [
+        169000.0,
+        169033.0,
+        169067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5436872839927673,
+          "positive": true
+        },
+        {
+          "confidence": 0.5468012094497681,
+          "positive": true
+        },
+        {
+          "confidence": 0.5029062032699585,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 170,
+      "frame_ids": [
+        5100,
+        5101,
+        5102
+      ],
+      "timestamps_ms": [
+        170000.0,
+        170033.0,
+        170067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.6295021176338196,
+          "positive": true
+        },
+        {
+          "confidence": 0.7638099193572998,
+          "positive": true
+        },
+        {
+          "confidence": 0.8791918754577637,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 171,
+      "frame_ids": [
+        5130,
+        5131,
+        5132
+      ],
+      "timestamps_ms": [
+        171000.0,
+        171033.0,
+        171067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.5648289322853088,
+          "positive": true
+        },
+        {
+          "confidence": 0.5648474097251892,
+          "positive": true
+        },
+        {
+          "confidence": 0.6932232975959778,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 172,
+      "frame_ids": [
+        5160,
+        5161,
+        5162
+      ],
+      "timestamps_ms": [
+        172000.0,
+        172033.0,
+        172067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.47569540143013,
+          "positive": false
+        },
+        {
+          "confidence": 0.47102248668670654,
+          "positive": false
+        },
+        {
+          "confidence": 0.4965677857398987,
+          "positive": false
+        }
+      ]
+    },
+    {
+      "source_second": 173,
+      "frame_ids": [
+        5190,
+        5191,
+        5192
+      ],
+      "timestamps_ms": [
+        173000.0,
+        173033.0,
+        173067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9399524927139282,
+          "positive": true
+        },
+        {
+          "confidence": 0.9642685651779175,
+          "positive": true
+        },
+        {
+          "confidence": 0.9309862852096558,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 174,
+      "frame_ids": [
+        5220,
+        5221,
+        5222
+      ],
+      "timestamps_ms": [
+        174000.0,
+        174033.0,
+        174067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.84927898645401,
+          "positive": true
+        },
+        {
+          "confidence": 0.6502472162246704,
+          "positive": true
+        },
+        {
+          "confidence": 0.8937904834747314,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 175,
+      "frame_ids": [
+        5250,
+        5251,
+        5252
+      ],
+      "timestamps_ms": [
+        175000.0,
+        175033.0,
+        175067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9796274900436401,
+          "positive": true
+        },
+        {
+          "confidence": 0.9712319374084473,
+          "positive": true
+        },
+        {
+          "confidence": 0.9629530906677246,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 176,
+      "frame_ids": [
+        5280,
+        5281,
+        5282
+      ],
+      "timestamps_ms": [
+        176000.0,
+        176033.0,
+        176067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.8879505395889282,
+          "positive": true
+        },
+        {
+          "confidence": 0.8823201656341553,
+          "positive": true
+        },
+        {
+          "confidence": 0.8751340508460999,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 177,
+      "frame_ids": [
+        5310,
+        5311,
+        5312
+      ],
+      "timestamps_ms": [
+        177000.0,
+        177033.0,
+        177067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9444966316223145,
+          "positive": true
+        },
+        {
+          "confidence": 0.7318830490112305,
+          "positive": true
+        },
+        {
+          "confidence": 0.9423696398735046,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 178,
+      "frame_ids": [
+        5340,
+        5341,
+        5342
+      ],
+      "timestamps_ms": [
+        178000.0,
+        178033.0,
+        178067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9293239712715149,
+          "positive": true
+        },
+        {
+          "confidence": 0.9260960817337036,
+          "positive": true
+        },
+        {
+          "confidence": 0.9491431713104248,
+          "positive": true
+        }
+      ]
+    },
+    {
+      "source_second": 179,
+      "frame_ids": [
+        5370,
+        5371,
+        5372
+      ],
+      "timestamps_ms": [
+        179000.0,
+        179033.0,
+        179067.0
+      ],
+      "frames": [
+        {
+          "confidence": 0.9530152678489685,
+          "positive": true
+        },
+        {
+          "confidence": 0.9644397497177124,
+          "positive": true
+        },
+        {
+          "confidence": 0.9648428559303284,
+          "positive": true
+        }
+      ]
+    }
+  ],
+  "incomplete_tail": [],
+  "source_stats": {
+    "frames_decoded": 5400,
+    "frames_delivered": 5400,
+    "queue_peak": 6,
+    "decode_s": 9.926064054947346,
+    "conversion_s": 6.560446958988905,
+    "max_lag_s": 0.0,
+    "fps": 29.99994791675709,
+    "expected_frames": 5400,
+    "width": 1920,
+    "height": 1080,
+    "first_pts_ms": 0.0,
+    "last_timestamp_ms": 179967.0,
+    "last_delivered_timestamp_ms": 179967.0
+  },
+  "raw_prediction_coverage": [
+    {
+      "index": 0,
+      "start_ms": 7700.0,
+      "end_ms": 10800.0,
+      "sample_count": 9,
+      "hit_count": 9,
+      "hit": true,
+      "hit_timestamps_ms": [
+        8000.0,
+        8033.0,
+        8067.0,
+        9000.0,
+        9033.0,
+        9067.0,
+        10000.0,
+        10033.0,
+        10067.0
+      ],
+      "max_confidence": 0.9160950183868408,
+      "max_timestamp_ms": 8067.0
+    },
+    {
+      "index": 1,
+      "start_ms": 14167.0,
+      "end_ms": 20267.0,
+      "sample_count": 18,
+      "hit_count": 18,
+      "hit": true,
+      "hit_timestamps_ms": [
+        15000.0,
+        15033.0,
+        15067.0,
+        16000.0,
+        16033.0,
+        16067.0,
+        17000.0,
+        17033.0,
+        17067.0,
+        18000.0,
+        18033.0,
+        18067.0,
+        19000.0,
+        19033.0,
+        19067.0,
+        20000.0,
+        20033.0,
+        20067.0
+      ],
+      "max_confidence": 0.9685623645782471,
+      "max_timestamp_ms": 18033.0
+    },
+    {
+      "index": 2,
+      "start_ms": 24133.0,
+      "end_ms": 44833.0,
+      "sample_count": 60,
+      "hit_count": 55,
+      "hit": true,
+      "hit_timestamps_ms": [
+        25000.0,
+        25033.0,
+        25067.0,
+        26000.0,
+        26033.0,
+        26067.0,
+        27000.0,
+        27033.0,
+        27067.0,
+        28000.0,
+        28033.0,
+        28067.0,
+        29000.0,
+        29033.0,
+        29067.0,
+        30000.0,
+        30033.0,
+        30067.0,
+        31000.0,
+        31033.0,
+        31067.0,
+        32000.0,
+        32033.0,
+        32067.0,
+        33000.0,
+        33033.0,
+        33067.0,
+        34000.0,
+        34033.0,
+        34067.0,
+        35000.0,
+        35033.0,
+        35067.0,
+        36000.0,
+        36033.0,
+        36067.0,
+        37000.0,
+        37033.0,
+        37067.0,
+        38000.0,
+        38033.0,
+        38067.0,
+        40000.0,
+        40033.0,
+        40067.0,
+        41000.0,
+        41033.0,
+        42000.0,
+        42033.0,
+        42067.0,
+        43000.0,
+        43067.0,
+        44000.0,
+        44033.0,
+        44067.0
+      ],
+      "max_confidence": 0.97392737865448,
+      "max_timestamp_ms": 29067.0
+    },
+    {
+      "index": 3,
+      "start_ms": 49567.0,
+      "end_ms": 67367.0,
+      "sample_count": 54,
+      "hit_count": 51,
+      "hit": true,
+      "hit_timestamps_ms": [
+        50000.0,
+        50033.0,
+        50067.0,
+        51000.0,
+        51033.0,
+        51067.0,
+        52000.0,
+        52033.0,
+        52067.0,
+        53000.0,
+        53033.0,
+        53067.0,
+        54000.0,
+        54033.0,
+        54067.0,
+        55000.0,
+        55033.0,
+        55067.0,
+        56000.0,
+        56033.0,
+        56067.0,
+        57000.0,
+        57033.0,
+        57067.0,
+        58000.0,
+        58033.0,
+        58067.0,
+        59000.0,
+        59033.0,
+        59067.0,
+        60000.0,
+        60033.0,
+        60067.0,
+        61000.0,
+        61033.0,
+        61067.0,
+        63000.0,
+        63033.0,
+        63067.0,
+        64000.0,
+        64033.0,
+        64067.0,
+        65000.0,
+        65033.0,
+        65067.0,
+        66000.0,
+        66033.0,
+        66067.0,
+        67000.0,
+        67033.0,
+        67067.0
+      ],
+      "max_confidence": 0.9656785130500793,
+      "max_timestamp_ms": 53000.0
+    },
+    {
+      "index": 4,
+      "start_ms": 70533.0,
+      "end_ms": 88033.0,
+      "sample_count": 52,
+      "hit_count": 51,
+      "hit": true,
+      "hit_timestamps_ms": [
+        71000.0,
+        71033.0,
+        71067.0,
+        72000.0,
+        72033.0,
+        72067.0,
+        73000.0,
+        73033.0,
+        73067.0,
+        74000.0,
+        74033.0,
+        74067.0,
+        75000.0,
+        75033.0,
+        75067.0,
+        76000.0,
+        76033.0,
+        76067.0,
+        77000.0,
+        77033.0,
+        77067.0,
+        78000.0,
+        78033.0,
+        78067.0,
+        79000.0,
+        79033.0,
+        79067.0,
+        80000.0,
+        80033.0,
+        80067.0,
+        81033.0,
+        81067.0,
+        82000.0,
+        82033.0,
+        82067.0,
+        83000.0,
+        83033.0,
+        83067.0,
+        84000.0,
+        84033.0,
+        84067.0,
+        85000.0,
+        85033.0,
+        85067.0,
+        86000.0,
+        86033.0,
+        86067.0,
+        87000.0,
+        87033.0,
+        87067.0,
+        88000.0
+      ],
+      "max_confidence": 0.9781202673912048,
+      "max_timestamp_ms": 85067.0
+    },
+    {
+      "index": 5,
+      "start_ms": 91500.0,
+      "end_ms": 103000.0,
+      "sample_count": 33,
+      "hit_count": 29,
+      "hit": true,
+      "hit_timestamps_ms": [
+        92000.0,
+        92033.0,
+        92067.0,
+        93000.0,
+        93033.0,
+        93067.0,
+        94000.0,
+        94033.0,
+        94067.0,
+        96000.0,
+        96033.0,
+        96067.0,
+        97000.0,
+        97033.0,
+        97067.0,
+        98000.0,
+        98033.0,
+        98067.0,
+        99000.0,
+        99033.0,
+        99067.0,
+        100000.0,
+        100033.0,
+        100067.0,
+        101000.0,
+        101033.0,
+        102000.0,
+        102033.0,
+        102067.0
+      ],
+      "max_confidence": 0.9699819087982178,
+      "max_timestamp_ms": 92067.0
+    },
+    {
+      "index": 6,
+      "start_ms": 120933.0,
+      "end_ms": 133600.0,
+      "sample_count": 39,
+      "hit_count": 36,
+      "hit": true,
+      "hit_timestamps_ms": [
+        121000.0,
+        121033.0,
+        121067.0,
+        122000.0,
+        122033.0,
+        122067.0,
+        123000.0,
+        123033.0,
+        123067.0,
+        124000.0,
+        124033.0,
+        124067.0,
+        125000.0,
+        125033.0,
+        125067.0,
+        126000.0,
+        126033.0,
+        126067.0,
+        127000.0,
+        127033.0,
+        127067.0,
+        129000.0,
+        129033.0,
+        129067.0,
+        130000.0,
+        130033.0,
+        130067.0,
+        131000.0,
+        131033.0,
+        131067.0,
+        132000.0,
+        132033.0,
+        132067.0,
+        133000.0,
+        133033.0,
+        133067.0
+      ],
+      "max_confidence": 0.9783753752708435,
+      "max_timestamp_ms": 132000.0
+    },
+    {
+      "index": 7,
+      "start_ms": 149233.0,
+      "end_ms": 153533.0,
+      "sample_count": 12,
+      "hit_count": 11,
+      "hit": true,
+      "hit_timestamps_ms": [
+        150000.0,
+        150033.0,
+        150067.0,
+        151000.0,
+        151033.0,
+        151067.0,
+        152033.0,
+        152067.0,
+        153000.0,
+        153033.0,
+        153067.0
+      ],
+      "max_confidence": 0.9399864077568054,
+      "max_timestamp_ms": 151000.0
+    },
+    {
+      "index": 8,
+      "start_ms": 170267.0,
+      "end_ms": 178467.0,
+      "sample_count": 24,
+      "hit_count": 21,
+      "hit": true,
+      "hit_timestamps_ms": [
+        171000.0,
+        171033.0,
+        171067.0,
+        173000.0,
+        173033.0,
+        173067.0,
+        174000.0,
+        174033.0,
+        174067.0,
+        175000.0,
+        175033.0,
+        175067.0,
+        176000.0,
+        176033.0,
+        176067.0,
+        177000.0,
+        177033.0,
+        177067.0,
+        178000.0,
+        178033.0,
+        178067.0
+      ],
+      "max_confidence": 0.9796274900436401,
+      "max_timestamp_ms": 175000.0
+    }
+  ],
+  "export_range_coverage": [
+    {
+      "index": 0,
+      "start_ms": 7200.0,
+      "end_ms": 11300.0,
+      "sample_count": 12,
+      "hit_count": 12,
+      "hit": true,
+      "hit_timestamps_ms": [
+        8000.0,
+        8033.0,
+        8067.0,
+        9000.0,
+        9033.0,
+        9067.0,
+        10000.0,
+        10033.0,
+        10067.0,
+        11000.0,
+        11033.0,
+        11067.0
+      ],
+      "max_confidence": 0.9160950183868408,
+      "max_timestamp_ms": 8067.0
+    },
+    {
+      "index": 1,
+      "start_ms": 13667.0,
+      "end_ms": 20767.0,
+      "sample_count": 21,
+      "hit_count": 21,
+      "hit": true,
+      "hit_timestamps_ms": [
+        14000.0,
+        14033.0,
+        14067.0,
+        15000.0,
+        15033.0,
+        15067.0,
+        16000.0,
+        16033.0,
+        16067.0,
+        17000.0,
+        17033.0,
+        17067.0,
+        18000.0,
+        18033.0,
+        18067.0,
+        19000.0,
+        19033.0,
+        19067.0,
+        20000.0,
+        20033.0,
+        20067.0
+      ],
+      "max_confidence": 0.9685623645782471,
+      "max_timestamp_ms": 18033.0
+    },
+    {
+      "index": 2,
+      "start_ms": 23633.0,
+      "end_ms": 45333.0,
+      "sample_count": 66,
+      "hit_count": 59,
+      "hit": true,
+      "hit_timestamps_ms": [
+        24000.0,
+        24033.0,
+        24067.0,
+        25000.0,
+        25033.0,
+        25067.0,
+        26000.0,
+        26033.0,
+        26067.0,
+        27000.0,
+        27033.0,
+        27067.0,
+        28000.0,
+        28033.0,
+        28067.0,
+        29000.0,
+        29033.0,
+        29067.0,
+        30000.0,
+        30033.0,
+        30067.0,
+        31000.0,
+        31033.0,
+        31067.0,
+        32000.0,
+        32033.0,
+        32067.0,
+        33000.0,
+        33033.0,
+        33067.0,
+        34000.0,
+        34033.0,
+        34067.0,
+        35000.0,
+        35033.0,
+        35067.0,
+        36000.0,
+        36033.0,
+        36067.0,
+        37000.0,
+        37033.0,
+        37067.0,
+        38000.0,
+        38033.0,
+        38067.0,
+        40000.0,
+        40033.0,
+        40067.0,
+        41000.0,
+        41033.0,
+        42000.0,
+        42033.0,
+        42067.0,
+        43000.0,
+        43067.0,
+        44000.0,
+        44033.0,
+        44067.0,
+        45033.0
+      ],
+      "max_confidence": 0.97392737865448,
+      "max_timestamp_ms": 29067.0
+    },
+    {
+      "index": 3,
+      "start_ms": 49067.0,
+      "end_ms": 67867.0,
+      "sample_count": 55,
+      "hit_count": 52,
+      "hit": true,
+      "hit_timestamps_ms": [
+        49067.0,
+        50000.0,
+        50033.0,
+        50067.0,
+        51000.0,
+        51033.0,
+        51067.0,
+        52000.0,
+        52033.0,
+        52067.0,
+        53000.0,
+        53033.0,
+        53067.0,
+        54000.0,
+        54033.0,
+        54067.0,
+        55000.0,
+        55033.0,
+        55067.0,
+        56000.0,
+        56033.0,
+        56067.0,
+        57000.0,
+        57033.0,
+        57067.0,
+        58000.0,
+        58033.0,
+        58067.0,
+        59000.0,
+        59033.0,
+        59067.0,
+        60000.0,
+        60033.0,
+        60067.0,
+        61000.0,
+        61033.0,
+        61067.0,
+        63000.0,
+        63033.0,
+        63067.0,
+        64000.0,
+        64033.0,
+        64067.0,
+        65000.0,
+        65033.0,
+        65067.0,
+        66000.0,
+        66033.0,
+        66067.0,
+        67000.0,
+        67033.0,
+        67067.0
+      ],
+      "max_confidence": 0.9656785130500793,
+      "max_timestamp_ms": 53000.0
+    },
+    {
+      "index": 4,
+      "start_ms": 70033.0,
+      "end_ms": 88533.0,
+      "sample_count": 56,
+      "hit_count": 53,
+      "hit": true,
+      "hit_timestamps_ms": [
+        71000.0,
+        71033.0,
+        71067.0,
+        72000.0,
+        72033.0,
+        72067.0,
+        73000.0,
+        73033.0,
+        73067.0,
+        74000.0,
+        74033.0,
+        74067.0,
+        75000.0,
+        75033.0,
+        75067.0,
+        76000.0,
+        76033.0,
+        76067.0,
+        77000.0,
+        77033.0,
+        77067.0,
+        78000.0,
+        78033.0,
+        78067.0,
+        79000.0,
+        79033.0,
+        79067.0,
+        80000.0,
+        80033.0,
+        80067.0,
+        81033.0,
+        81067.0,
+        82000.0,
+        82033.0,
+        82067.0,
+        83000.0,
+        83033.0,
+        83067.0,
+        84000.0,
+        84033.0,
+        84067.0,
+        85000.0,
+        85033.0,
+        85067.0,
+        86000.0,
+        86033.0,
+        86067.0,
+        87000.0,
+        87033.0,
+        87067.0,
+        88000.0,
+        88033.0,
+        88067.0
+      ],
+      "max_confidence": 0.9781202673912048,
+      "max_timestamp_ms": 85067.0
+    },
+    {
+      "index": 5,
+      "start_ms": 91000.0,
+      "end_ms": 103500.0,
+      "sample_count": 39,
+      "hit_count": 33,
+      "hit": true,
+      "hit_timestamps_ms": [
+        91000.0,
+        91033.0,
+        91067.0,
+        92000.0,
+        92033.0,
+        92067.0,
+        93000.0,
+        93033.0,
+        93067.0,
+        94000.0,
+        94033.0,
+        94067.0,
+        96000.0,
+        96033.0,
+        96067.0,
+        97000.0,
+        97033.0,
+        97067.0,
+        98000.0,
+        98033.0,
+        98067.0,
+        99000.0,
+        99033.0,
+        99067.0,
+        100000.0,
+        100033.0,
+        100067.0,
+        101000.0,
+        101033.0,
+        102000.0,
+        102033.0,
+        102067.0,
+        103000.0
+      ],
+      "max_confidence": 0.9699819087982178,
+      "max_timestamp_ms": 92067.0
+    },
+    {
+      "index": 6,
+      "start_ms": 120433.0,
+      "end_ms": 134100.0,
+      "sample_count": 42,
+      "hit_count": 36,
+      "hit": true,
+      "hit_timestamps_ms": [
+        121000.0,
+        121033.0,
+        121067.0,
+        122000.0,
+        122033.0,
+        122067.0,
+        123000.0,
+        123033.0,
+        123067.0,
+        124000.0,
+        124033.0,
+        124067.0,
+        125000.0,
+        125033.0,
+        125067.0,
+        126000.0,
+        126033.0,
+        126067.0,
+        127000.0,
+        127033.0,
+        127067.0,
+        129000.0,
+        129033.0,
+        129067.0,
+        130000.0,
+        130033.0,
+        130067.0,
+        131000.0,
+        131033.0,
+        131067.0,
+        132000.0,
+        132033.0,
+        132067.0,
+        133000.0,
+        133033.0,
+        133067.0
+      ],
+      "max_confidence": 0.9783753752708435,
+      "max_timestamp_ms": 132000.0
+    },
+    {
+      "index": 7,
+      "start_ms": 148733.0,
+      "end_ms": 154033.0,
+      "sample_count": 16,
+      "hit_count": 15,
+      "hit": true,
+      "hit_timestamps_ms": [
+        149000.0,
+        149033.0,
+        149067.0,
+        150000.0,
+        150033.0,
+        150067.0,
+        151000.0,
+        151033.0,
+        151067.0,
+        152033.0,
+        152067.0,
+        153000.0,
+        153033.0,
+        153067.0,
+        154000.0
+      ],
+      "max_confidence": 0.9399864077568054,
+      "max_timestamp_ms": 151000.0
+    },
+    {
+      "index": 8,
+      "start_ms": 169767.0,
+      "end_ms": 178967.0,
+      "sample_count": 27,
+      "hit_count": 24,
+      "hit": true,
+      "hit_timestamps_ms": [
+        170000.0,
+        170033.0,
+        170067.0,
+        171000.0,
+        171033.0,
+        171067.0,
+        173000.0,
+        173033.0,
+        173067.0,
+        174000.0,
+        174033.0,
+        174067.0,
+        175000.0,
+        175033.0,
+        175067.0,
+        176000.0,
+        176033.0,
+        176067.0,
+        177000.0,
+        177033.0,
+        177067.0,
+        178000.0,
+        178033.0,
+        178067.0
+      ],
+      "max_confidence": 0.9796274900436401,
+      "max_timestamp_ms": 175000.0
+    }
+  ],
+  "statistics": {
+    "seconds": {
+      "tracknet_preprocess_s": 1.064049875130877,
+      "tracknet_inference_and_transfer_s": 3.4199025391135365,
+      "tracknet_point_decode_s": 0.05552437691949308
+    },
+    "counts": {
+      "tracknet_calls": 180,
+      "tracknet_input_frames": 540,
+      "candidate_peaks": 0,
+      "decode_passes": 1,
+      "frames_decoded": 5400
+    },
+    "mps_samples": [
+      {
+        "monotonic_s": 1451327.397397791,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 84361216
+      },
+      {
+        "monotonic_s": 1451328.403389291,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451329.411722416,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451330.421749375,
+        "allocated_bytes": 220549632,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451331.431767875,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451332.433261375,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451333.443286541,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451334.449147916,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451335.458109291,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451336.461698833,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451337.471730458,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451338.473300791,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451339.482579083,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451340.486689458,
+        "allocated_bytes": 50090496,
+        "driver_bytes": 1162313728
+      },
+      {
+        "monotonic_s": 1451341.495024833,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451342.505049416,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451343.515077625,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      },
+      {
+        "monotonic_s": 1451344.525162958,
+        "allocated_bytes": 45371904,
+        "driver_bytes": 1160544256
+      }
+    ]
+  },
+  "timing": {
+    "model_setup_s": 0.07293766690418124,
+    "scan_wall_s": 17.133952000178397,
+    "outer_wall_s": 19.700127040967345,
+    "outer_wall_boundary": "includes validation, import, model setup, scan and report assembly; excludes final JSON write; scan_wall_s excludes setup"
+  },
+  "max_rss": {
+    "value": 596197376,
+    "unit": "bytes on macOS"
+  }
+}

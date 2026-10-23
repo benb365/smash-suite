@@ -1,0 +1,2414 @@
+{
+  "schema_version": 1,
+  "purpose": "candidate-window calculation only; no analysis frames skipped",
+  "worktree": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite",
+  "git_head": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+  "script": {
+    "path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/docs/ai/opt06-scan/candidate_windows.py",
+    "sha256": "dbaffeb8a6b613ab9d04e9f6f744c817dcad9ad21a0b3c61518a5cbbdfa5c2d7"
+  },
+  "rule": {
+    "positive_sample": "confidence >= 0.5",
+    "expansion_each_side_ms": [
+      1000,
+      2000,
+      3000,
+      5000
+    ],
+    "clip_to": "[0, probed duration_ms]",
+    "merge": "overlapping or touching intervals",
+    "coverage": "whole interval must lie in candidate union; uncovered gaps listed"
+  },
+  "interpretation": "Intervals and retained-time ratios are candidate geometry only; low-confidence gaps are unknown, not negatives, and ratios are not runtime savings or accuracy.",
+  "cases": {
+    "A-short": {
+      "scan_report": {
+        "path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/apps/video-clipper/.runtime/opt06-scan/A-short/report.json",
+        "sha256": "b0a438e59ead9c86f5d9165c98c8962f0db7379eab2f6679c066390d74c0bc1f"
+      },
+      "video": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+        "duration_ms": 168000.0,
+        "first_pts_ms": 91.0,
+        "width": 1920,
+        "height": 1080,
+        "metadata_source": "modules.media.video.probe"
+      },
+      "scan_cost_observation": {
+        "model_setup_s": 0.11175804096274078,
+        "scan_wall_s": 18.093526083044708,
+        "outer_wall_s": 20.450831584166735,
+        "outer_wall_boundary": "includes validation, import, model setup, scan and report assembly; excludes final JSON write; scan_wall_s excludes setup"
+      },
+      "sampled_groups": 168,
+      "positive_groups": 50,
+      "sampled_frames": 504,
+      "positive_frames": 141,
+      "variants": [
+        {
+          "padding_each_side_ms": 1000,
+          "candidate_ranges_ms": [
+            [
+              3000.0,
+              10080.0
+            ],
+            [
+              12000.0,
+              15080.0
+            ],
+            [
+              24000.0,
+              27080.0
+            ],
+            [
+              29000.0,
+              34080.0
+            ],
+            [
+              48000.0,
+              58080.0
+            ],
+            [
+              64000.0,
+              66080.0
+            ],
+            [
+              75040.0,
+              77080.0
+            ],
+            [
+              98000.0,
+              100080.0
+            ],
+            [
+              101000.0,
+              110080.0
+            ],
+            [
+              112000.0,
+              115080.0
+            ],
+            [
+              116000.0,
+              118000.0
+            ],
+            [
+              142000.0,
+              156080.0
+            ],
+            [
+              157080.0,
+              160080.0
+            ]
+          ],
+          "kept_duration_ms": 65840.0,
+          "kept_duration_ratio": 0.3919047619047619,
+          "skippable_source_duration_ms": 102160.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 3640.0,
+              "end_ms": 9600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 24480.0,
+              "end_ms": 31400.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  27080.0,
+                  29000.0
+                ]
+              ]
+            },
+            {
+              "index": 2,
+              "start_ms": 47280.0,
+              "end_ms": 56720.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  47280.0,
+                  48000.0
+                ]
+              ]
+            },
+            {
+              "index": 3,
+              "start_ms": 101080.0,
+              "end_ms": 108800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 142440.0,
+              "end_ms": 153840.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 3140.0,
+              "end_ms": 10100.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  10080.0,
+                  10100.0
+                ]
+              ]
+            },
+            {
+              "index": 1,
+              "start_ms": 23980.0,
+              "end_ms": 31900.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  23980.0,
+                  24000.0
+                ],
+                [
+                  27080.0,
+                  29000.0
+                ]
+              ]
+            },
+            {
+              "index": 2,
+              "start_ms": 46780.0,
+              "end_ms": 57220.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  46780.0,
+                  48000.0
+                ]
+              ]
+            },
+            {
+              "index": 3,
+              "start_ms": 100580.0,
+              "end_ms": 109300.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  100580.0,
+                  101000.0
+                ]
+              ]
+            },
+            {
+              "index": 4,
+              "start_ms": 141940.0,
+              "end_ms": 154340.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  141940.0,
+                  142000.0
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 2000,
+          "candidate_ranges_ms": [
+            [
+              2000.0,
+              16080.0
+            ],
+            [
+              23000.0,
+              35080.0
+            ],
+            [
+              47000.0,
+              59080.0
+            ],
+            [
+              63000.0,
+              67080.0
+            ],
+            [
+              74040.0,
+              78080.0
+            ],
+            [
+              97000.0,
+              119000.0
+            ],
+            [
+              141000.0,
+              161080.0
+            ]
+          ],
+          "kept_duration_ms": 88440.0,
+          "kept_duration_ratio": 0.5264285714285715,
+          "skippable_source_duration_ms": 79560.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 3640.0,
+              "end_ms": 9600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 24480.0,
+              "end_ms": 31400.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 47280.0,
+              "end_ms": 56720.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 101080.0,
+              "end_ms": 108800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 142440.0,
+              "end_ms": 153840.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 3140.0,
+              "end_ms": 10100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 23980.0,
+              "end_ms": 31900.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 46780.0,
+              "end_ms": 57220.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  46780.0,
+                  47000.0
+                ]
+              ]
+            },
+            {
+              "index": 3,
+              "start_ms": 100580.0,
+              "end_ms": 109300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 141940.0,
+              "end_ms": 154340.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 3000,
+          "candidate_ranges_ms": [
+            [
+              1000.0,
+              17080.0
+            ],
+            [
+              22000.0,
+              36080.0
+            ],
+            [
+              46000.0,
+              60080.0
+            ],
+            [
+              62000.0,
+              68080.0
+            ],
+            [
+              73040.0,
+              79080.0
+            ],
+            [
+              96000.0,
+              120000.0
+            ],
+            [
+              140000.0,
+              162080.0
+            ]
+          ],
+          "kept_duration_ms": 102440.0,
+          "kept_duration_ratio": 0.6097619047619047,
+          "skippable_source_duration_ms": 65560.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 3640.0,
+              "end_ms": 9600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 24480.0,
+              "end_ms": 31400.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 47280.0,
+              "end_ms": 56720.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 101080.0,
+              "end_ms": 108800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 142440.0,
+              "end_ms": 153840.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 3140.0,
+              "end_ms": 10100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 23980.0,
+              "end_ms": 31900.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 46780.0,
+              "end_ms": 57220.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 100580.0,
+              "end_ms": 109300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 141940.0,
+              "end_ms": 154340.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 5000,
+          "candidate_ranges_ms": [
+            [
+              0.0,
+              19080.0
+            ],
+            [
+              20000.0,
+              38080.0
+            ],
+            [
+              44000.0,
+              70080.0
+            ],
+            [
+              71040.0,
+              81080.0
+            ],
+            [
+              94000.0,
+              122000.0
+            ],
+            [
+              138000.0,
+              164080.0
+            ]
+          ],
+          "kept_duration_ms": 127360.0,
+          "kept_duration_ratio": 0.758095238095238,
+          "skippable_source_duration_ms": 40640.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 3640.0,
+              "end_ms": 9600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 24480.0,
+              "end_ms": 31400.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 47280.0,
+              "end_ms": 56720.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 101080.0,
+              "end_ms": 108800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 142440.0,
+              "end_ms": 153840.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 3140.0,
+              "end_ms": 10100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 23980.0,
+              "end_ms": 31900.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 46780.0,
+              "end_ms": 57220.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 100580.0,
+              "end_ms": 109300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 141940.0,
+              "end_ms": 154340.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        }
+      ]
+    },
+    "C-short": {
+      "scan_report": {
+        "path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/apps/video-clipper/.runtime/opt06-scan/C-short/report.json",
+        "sha256": "b4f1a858d6657919d570253af7f3c30c40e358dc6c4e3afc91c273733d2bcfab"
+      },
+      "video": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+        "duration_ms": 180000.3125,
+        "first_pts_ms": 0.0,
+        "width": 1920,
+        "height": 1080,
+        "metadata_source": "modules.media.video.probe"
+      },
+      "scan_cost_observation": {
+        "model_setup_s": 0.07293766690418124,
+        "scan_wall_s": 17.133952000178397,
+        "outer_wall_s": 19.700127040967345,
+        "outer_wall_boundary": "includes validation, import, model setup, scan and report assembly; excludes final JSON write; scan_wall_s excludes setup"
+      },
+      "sampled_groups": 180,
+      "positive_groups": 168,
+      "sampled_frames": 540,
+      "positive_frames": 491,
+      "variants": [
+        {
+          "padding_each_side_ms": 1000,
+          "candidate_ranges_ms": [
+            [
+              1000.0,
+              180000.3125
+            ]
+          ],
+          "kept_duration_ms": 179000.3125,
+          "kept_duration_ratio": 0.9944444540894894,
+          "skippable_source_duration_ms": 1000.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 7700.0,
+              "end_ms": 10800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 14167.0,
+              "end_ms": 20267.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 24133.0,
+              "end_ms": 44833.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49567.0,
+              "end_ms": 67367.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 70533.0,
+              "end_ms": 88033.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 91500.0,
+              "end_ms": 103000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 120933.0,
+              "end_ms": 133600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 149233.0,
+              "end_ms": 153533.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 170267.0,
+              "end_ms": 178467.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 7200.0,
+              "end_ms": 11300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 13667.0,
+              "end_ms": 20767.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 23633.0,
+              "end_ms": 45333.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49067.0,
+              "end_ms": 67867.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 70033.0,
+              "end_ms": 88533.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 91000.0,
+              "end_ms": 103500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 120433.0,
+              "end_ms": 134100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 148733.0,
+              "end_ms": 154033.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 169767.0,
+              "end_ms": 178967.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 2000,
+          "candidate_ranges_ms": [
+            [
+              0.0,
+              180000.3125
+            ]
+          ],
+          "kept_duration_ms": 180000.3125,
+          "kept_duration_ratio": 1.0,
+          "skippable_source_duration_ms": 0.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 7700.0,
+              "end_ms": 10800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 14167.0,
+              "end_ms": 20267.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 24133.0,
+              "end_ms": 44833.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49567.0,
+              "end_ms": 67367.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 70533.0,
+              "end_ms": 88033.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 91500.0,
+              "end_ms": 103000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 120933.0,
+              "end_ms": 133600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 149233.0,
+              "end_ms": 153533.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 170267.0,
+              "end_ms": 178467.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 7200.0,
+              "end_ms": 11300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 13667.0,
+              "end_ms": 20767.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 23633.0,
+              "end_ms": 45333.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49067.0,
+              "end_ms": 67867.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 70033.0,
+              "end_ms": 88533.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 91000.0,
+              "end_ms": 103500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 120433.0,
+              "end_ms": 134100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 148733.0,
+              "end_ms": 154033.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 169767.0,
+              "end_ms": 178967.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 3000,
+          "candidate_ranges_ms": [
+            [
+              0.0,
+              180000.3125
+            ]
+          ],
+          "kept_duration_ms": 180000.3125,
+          "kept_duration_ratio": 1.0,
+          "skippable_source_duration_ms": 0.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 7700.0,
+              "end_ms": 10800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 14167.0,
+              "end_ms": 20267.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 24133.0,
+              "end_ms": 44833.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49567.0,
+              "end_ms": 67367.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 70533.0,
+              "end_ms": 88033.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 91500.0,
+              "end_ms": 103000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 120933.0,
+              "end_ms": 133600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 149233.0,
+              "end_ms": 153533.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 170267.0,
+              "end_ms": 178467.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 7200.0,
+              "end_ms": 11300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 13667.0,
+              "end_ms": 20767.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 23633.0,
+              "end_ms": 45333.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49067.0,
+              "end_ms": 67867.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 70033.0,
+              "end_ms": 88533.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 91000.0,
+              "end_ms": 103500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 120433.0,
+              "end_ms": 134100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 148733.0,
+              "end_ms": 154033.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 169767.0,
+              "end_ms": 178967.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 5000,
+          "candidate_ranges_ms": [
+            [
+              0.0,
+              180000.3125
+            ]
+          ],
+          "kept_duration_ms": 180000.3125,
+          "kept_duration_ratio": 1.0,
+          "skippable_source_duration_ms": 0.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 7700.0,
+              "end_ms": 10800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 14167.0,
+              "end_ms": 20267.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 24133.0,
+              "end_ms": 44833.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49567.0,
+              "end_ms": 67367.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 70533.0,
+              "end_ms": 88033.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 91500.0,
+              "end_ms": 103000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 120933.0,
+              "end_ms": 133600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 149233.0,
+              "end_ms": 153533.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 170267.0,
+              "end_ms": 178467.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 7200.0,
+              "end_ms": 11300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 13667.0,
+              "end_ms": 20767.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 23633.0,
+              "end_ms": 45333.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49067.0,
+              "end_ms": 67867.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 70033.0,
+              "end_ms": 88533.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 91000.0,
+              "end_ms": 103500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 120433.0,
+              "end_ms": 134100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 148733.0,
+              "end_ms": 154033.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 169767.0,
+              "end_ms": 178967.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        }
+      ]
+    },
+    "D-short": {
+      "scan_report": {
+        "path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/apps/video-clipper/.runtime/opt06-scan/D-short/report.json",
+        "sha256": "c1c776db5ab54b932a4b856adb01ccc6d32ef17f4aa0f9b098d9125e5a08ada2"
+      },
+      "video": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+        "duration_ms": 250900.3125,
+        "first_pts_ms": 0.0,
+        "width": 1920,
+        "height": 1080,
+        "metadata_source": "modules.media.video.probe"
+      },
+      "scan_cost_observation": {
+        "model_setup_s": 0.07158954092301428,
+        "scan_wall_s": 18.675277958158404,
+        "outer_wall_s": 21.142869791015983,
+        "outer_wall_boundary": "includes validation, import, model setup, scan and report assembly; excludes final JSON write; scan_wall_s excludes setup"
+      },
+      "sampled_groups": 251,
+      "positive_groups": 120,
+      "sampled_frames": 753,
+      "positive_frames": 314,
+      "variants": [
+        {
+          "padding_each_side_ms": 1000,
+          "candidate_ranges_ms": [
+            [
+              0.0,
+              6067.0
+            ],
+            [
+              9000.0,
+              13067.0
+            ],
+            [
+              20033.0,
+              23067.0
+            ],
+            [
+              27000.0,
+              29067.0
+            ],
+            [
+              30000.0,
+              32067.0
+            ],
+            [
+              33033.0,
+              45067.0
+            ],
+            [
+              50000.0,
+              56067.0
+            ],
+            [
+              58000.0,
+              60067.0
+            ],
+            [
+              62067.0,
+              67033.0
+            ],
+            [
+              73000.0,
+              75067.0
+            ],
+            [
+              77000.0,
+              97067.0
+            ],
+            [
+              102000.0,
+              114067.0
+            ],
+            [
+              117000.0,
+              124033.0
+            ],
+            [
+              125000.0,
+              129067.0
+            ],
+            [
+              131000.0,
+              133067.0
+            ],
+            [
+              138000.0,
+              145067.0
+            ],
+            [
+              148000.0,
+              150067.0
+            ],
+            [
+              154000.0,
+              174000.0
+            ],
+            [
+              183000.0,
+              185067.0
+            ],
+            [
+              186000.0,
+              196067.0
+            ],
+            [
+              198000.0,
+              200000.0
+            ],
+            [
+              201000.0,
+              209067.0
+            ],
+            [
+              211033.0,
+              213067.0
+            ],
+            [
+              216000.0,
+              232067.0
+            ],
+            [
+              234000.0,
+              240000.0
+            ],
+            [
+              242000.0,
+              247067.0
+            ],
+            [
+              248000.0,
+              250067.0
+            ]
+          ],
+          "kept_duration_ms": 172374.0,
+          "kept_duration_ratio": 0.6870218625176084,
+          "skippable_source_duration_ms": 78526.3125,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 0.0,
+              "end_ms": 7200.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  6067.0,
+                  7200.0
+                ]
+              ]
+            },
+            {
+              "index": 1,
+              "start_ms": 18900.0,
+              "end_ms": 27000.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  18900.0,
+                  20033.0
+                ],
+                [
+                  23067.0,
+                  27000.0
+                ]
+              ]
+            },
+            {
+              "index": 2,
+              "start_ms": 29700.0,
+              "end_ms": 42000.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  29700.0,
+                  30000.0
+                ],
+                [
+                  32067.0,
+                  33033.0
+                ]
+              ]
+            },
+            {
+              "index": 3,
+              "start_ms": 50300.0,
+              "end_ms": 55000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 63500.0,
+              "end_ms": 68600.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  67033.0,
+                  68600.0
+                ]
+              ]
+            },
+            {
+              "index": 5,
+              "start_ms": 77500.0,
+              "end_ms": 90000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 100900.0,
+              "end_ms": 108000.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  100900.0,
+                  102000.0
+                ]
+              ]
+            },
+            {
+              "index": 7,
+              "start_ms": 115500.0,
+              "end_ms": 129600.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  115500.0,
+                  117000.0
+                ],
+                [
+                  124033.0,
+                  125000.0
+                ],
+                [
+                  129067.0,
+                  129600.0
+                ]
+              ]
+            },
+            {
+              "index": 8,
+              "start_ms": 137100.0,
+              "end_ms": 145600.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  137100.0,
+                  138000.0
+                ],
+                [
+                  145067.0,
+                  145600.0
+                ]
+              ]
+            },
+            {
+              "index": 9,
+              "start_ms": 153100.0,
+              "end_ms": 176800.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  153100.0,
+                  154000.0
+                ],
+                [
+                  174000.0,
+                  176800.0
+                ]
+              ]
+            },
+            {
+              "index": 10,
+              "start_ms": 198700.0,
+              "end_ms": 207800.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  200000.0,
+                  201000.0
+                ]
+              ]
+            },
+            {
+              "index": 11,
+              "start_ms": 215700.0,
+              "end_ms": 233000.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  215700.0,
+                  216000.0
+                ],
+                [
+                  232067.0,
+                  233000.0
+                ]
+              ]
+            },
+            {
+              "index": 12,
+              "start_ms": 241300.0,
+              "end_ms": 246200.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  241300.0,
+                  242000.0
+                ]
+              ]
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 0.0,
+              "end_ms": 7700.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  6067.0,
+                  7700.0
+                ]
+              ]
+            },
+            {
+              "index": 1,
+              "start_ms": 18400.0,
+              "end_ms": 27500.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  18400.0,
+                  20033.0
+                ],
+                [
+                  23067.0,
+                  27000.0
+                ]
+              ]
+            },
+            {
+              "index": 2,
+              "start_ms": 29200.0,
+              "end_ms": 42500.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  29200.0,
+                  30000.0
+                ],
+                [
+                  32067.0,
+                  33033.0
+                ]
+              ]
+            },
+            {
+              "index": 3,
+              "start_ms": 49800.0,
+              "end_ms": 55500.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  49800.0,
+                  50000.0
+                ]
+              ]
+            },
+            {
+              "index": 4,
+              "start_ms": 63000.0,
+              "end_ms": 69100.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  67033.0,
+                  69100.0
+                ]
+              ]
+            },
+            {
+              "index": 5,
+              "start_ms": 77000.0,
+              "end_ms": 90500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 100400.0,
+              "end_ms": 108500.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  100400.0,
+                  102000.0
+                ]
+              ]
+            },
+            {
+              "index": 7,
+              "start_ms": 115000.0,
+              "end_ms": 130100.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  115000.0,
+                  117000.0
+                ],
+                [
+                  124033.0,
+                  125000.0
+                ],
+                [
+                  129067.0,
+                  130100.0
+                ]
+              ]
+            },
+            {
+              "index": 8,
+              "start_ms": 136600.0,
+              "end_ms": 146100.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  136600.0,
+                  138000.0
+                ],
+                [
+                  145067.0,
+                  146100.0
+                ]
+              ]
+            },
+            {
+              "index": 9,
+              "start_ms": 152600.0,
+              "end_ms": 177300.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  152600.0,
+                  154000.0
+                ],
+                [
+                  174000.0,
+                  177300.0
+                ]
+              ]
+            },
+            {
+              "index": 10,
+              "start_ms": 198200.0,
+              "end_ms": 208300.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  200000.0,
+                  201000.0
+                ]
+              ]
+            },
+            {
+              "index": 11,
+              "start_ms": 215200.0,
+              "end_ms": 233500.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  215200.0,
+                  216000.0
+                ],
+                [
+                  232067.0,
+                  233500.0
+                ]
+              ]
+            },
+            {
+              "index": 12,
+              "start_ms": 240800.0,
+              "end_ms": 246700.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  240800.0,
+                  242000.0
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 2000,
+          "candidate_ranges_ms": [
+            [
+              0.0,
+              7067.0
+            ],
+            [
+              8000.0,
+              14067.0
+            ],
+            [
+              19033.0,
+              24067.0
+            ],
+            [
+              26000.0,
+              46067.0
+            ],
+            [
+              49000.0,
+              68033.0
+            ],
+            [
+              72000.0,
+              98067.0
+            ],
+            [
+              101000.0,
+              115067.0
+            ],
+            [
+              116000.0,
+              134067.0
+            ],
+            [
+              137000.0,
+              146067.0
+            ],
+            [
+              147000.0,
+              151067.0
+            ],
+            [
+              153000.0,
+              175000.0
+            ],
+            [
+              182000.0,
+              214067.0
+            ],
+            [
+              215000.0,
+              250900.3125
+            ]
+          ],
+          "kept_duration_ms": 218570.3125,
+          "kept_duration_ratio": 0.871144042516886,
+          "skippable_source_duration_ms": 32330.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 0.0,
+              "end_ms": 7200.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  7067.0,
+                  7200.0
+                ]
+              ]
+            },
+            {
+              "index": 1,
+              "start_ms": 18900.0,
+              "end_ms": 27000.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  18900.0,
+                  19033.0
+                ],
+                [
+                  24067.0,
+                  26000.0
+                ]
+              ]
+            },
+            {
+              "index": 2,
+              "start_ms": 29700.0,
+              "end_ms": 42000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 50300.0,
+              "end_ms": 55000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 63500.0,
+              "end_ms": 68600.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  68033.0,
+                  68600.0
+                ]
+              ]
+            },
+            {
+              "index": 5,
+              "start_ms": 77500.0,
+              "end_ms": 90000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 100900.0,
+              "end_ms": 108000.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  100900.0,
+                  101000.0
+                ]
+              ]
+            },
+            {
+              "index": 7,
+              "start_ms": 115500.0,
+              "end_ms": 129600.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  115500.0,
+                  116000.0
+                ]
+              ]
+            },
+            {
+              "index": 8,
+              "start_ms": 137100.0,
+              "end_ms": 145600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 9,
+              "start_ms": 153100.0,
+              "end_ms": 176800.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  175000.0,
+                  176800.0
+                ]
+              ]
+            },
+            {
+              "index": 10,
+              "start_ms": 198700.0,
+              "end_ms": 207800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 11,
+              "start_ms": 215700.0,
+              "end_ms": 233000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 12,
+              "start_ms": 241300.0,
+              "end_ms": 246200.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 0.0,
+              "end_ms": 7700.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  7067.0,
+                  7700.0
+                ]
+              ]
+            },
+            {
+              "index": 1,
+              "start_ms": 18400.0,
+              "end_ms": 27500.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  18400.0,
+                  19033.0
+                ],
+                [
+                  24067.0,
+                  26000.0
+                ]
+              ]
+            },
+            {
+              "index": 2,
+              "start_ms": 29200.0,
+              "end_ms": 42500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49800.0,
+              "end_ms": 55500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 63000.0,
+              "end_ms": 69100.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  68033.0,
+                  69100.0
+                ]
+              ]
+            },
+            {
+              "index": 5,
+              "start_ms": 77000.0,
+              "end_ms": 90500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 100400.0,
+              "end_ms": 108500.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  100400.0,
+                  101000.0
+                ]
+              ]
+            },
+            {
+              "index": 7,
+              "start_ms": 115000.0,
+              "end_ms": 130100.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  115067.0,
+                  116000.0
+                ]
+              ]
+            },
+            {
+              "index": 8,
+              "start_ms": 136600.0,
+              "end_ms": 146100.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  136600.0,
+                  137000.0
+                ],
+                [
+                  146067.0,
+                  146100.0
+                ]
+              ]
+            },
+            {
+              "index": 9,
+              "start_ms": 152600.0,
+              "end_ms": 177300.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  152600.0,
+                  153000.0
+                ],
+                [
+                  175000.0,
+                  177300.0
+                ]
+              ]
+            },
+            {
+              "index": 10,
+              "start_ms": 198200.0,
+              "end_ms": 208300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 11,
+              "start_ms": 215200.0,
+              "end_ms": 233500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 12,
+              "start_ms": 240800.0,
+              "end_ms": 246700.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 3000,
+          "candidate_ranges_ms": [
+            [
+              0.0,
+              15067.0
+            ],
+            [
+              18033.0,
+              47067.0
+            ],
+            [
+              48000.0,
+              69033.0
+            ],
+            [
+              71000.0,
+              99067.0
+            ],
+            [
+              100000.0,
+              135067.0
+            ],
+            [
+              136000.0,
+              176000.0
+            ],
+            [
+              181000.0,
+              250900.3125
+            ]
+          ],
+          "kept_duration_ms": 238168.3125,
+          "kept_duration_ratio": 0.9492547463447261,
+          "skippable_source_duration_ms": 12732.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 0.0,
+              "end_ms": 7200.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 18900.0,
+              "end_ms": 27000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 29700.0,
+              "end_ms": 42000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 50300.0,
+              "end_ms": 55000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 63500.0,
+              "end_ms": 68600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 77500.0,
+              "end_ms": 90000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 100900.0,
+              "end_ms": 108000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 115500.0,
+              "end_ms": 129600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 137100.0,
+              "end_ms": 145600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 9,
+              "start_ms": 153100.0,
+              "end_ms": 176800.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  176000.0,
+                  176800.0
+                ]
+              ]
+            },
+            {
+              "index": 10,
+              "start_ms": 198700.0,
+              "end_ms": 207800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 11,
+              "start_ms": 215700.0,
+              "end_ms": 233000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 12,
+              "start_ms": 241300.0,
+              "end_ms": 246200.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 0.0,
+              "end_ms": 7700.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 18400.0,
+              "end_ms": 27500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 29200.0,
+              "end_ms": 42500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49800.0,
+              "end_ms": 55500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 63000.0,
+              "end_ms": 69100.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  69033.0,
+                  69100.0
+                ]
+              ]
+            },
+            {
+              "index": 5,
+              "start_ms": 77000.0,
+              "end_ms": 90500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 100400.0,
+              "end_ms": 108500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 115000.0,
+              "end_ms": 130100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 136600.0,
+              "end_ms": 146100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 9,
+              "start_ms": 152600.0,
+              "end_ms": 177300.0,
+              "fully_covered": false,
+              "uncovered_subintervals": [
+                [
+                  176000.0,
+                  177300.0
+                ]
+              ]
+            },
+            {
+              "index": 10,
+              "start_ms": 198200.0,
+              "end_ms": 208300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 11,
+              "start_ms": 215200.0,
+              "end_ms": 233500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 12,
+              "start_ms": 240800.0,
+              "end_ms": 246700.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        },
+        {
+          "padding_each_side_ms": 5000,
+          "candidate_ranges_ms": [
+            [
+              0.0,
+              178000.0
+            ],
+            [
+              179000.0,
+              250900.3125
+            ]
+          ],
+          "kept_duration_ms": 249900.3125,
+          "kept_duration_ratio": 0.9960143533101419,
+          "skippable_source_duration_ms": 1000.0,
+          "prediction_coverage": [
+            {
+              "index": 0,
+              "start_ms": 0.0,
+              "end_ms": 7200.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 18900.0,
+              "end_ms": 27000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 29700.0,
+              "end_ms": 42000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 50300.0,
+              "end_ms": 55000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 63500.0,
+              "end_ms": 68600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 77500.0,
+              "end_ms": 90000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 100900.0,
+              "end_ms": 108000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 115500.0,
+              "end_ms": 129600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 137100.0,
+              "end_ms": 145600.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 9,
+              "start_ms": 153100.0,
+              "end_ms": 176800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 10,
+              "start_ms": 198700.0,
+              "end_ms": 207800.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 11,
+              "start_ms": 215700.0,
+              "end_ms": 233000.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 12,
+              "start_ms": 241300.0,
+              "end_ms": 246200.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ],
+          "export_range_coverage": [
+            {
+              "index": 0,
+              "start_ms": 0.0,
+              "end_ms": 7700.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 1,
+              "start_ms": 18400.0,
+              "end_ms": 27500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 2,
+              "start_ms": 29200.0,
+              "end_ms": 42500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 3,
+              "start_ms": 49800.0,
+              "end_ms": 55500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 4,
+              "start_ms": 63000.0,
+              "end_ms": 69100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 5,
+              "start_ms": 77000.0,
+              "end_ms": 90500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 6,
+              "start_ms": 100400.0,
+              "end_ms": 108500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 7,
+              "start_ms": 115000.0,
+              "end_ms": 130100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 8,
+              "start_ms": 136600.0,
+              "end_ms": 146100.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 9,
+              "start_ms": 152600.0,
+              "end_ms": 177300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 10,
+              "start_ms": 198200.0,
+              "end_ms": 208300.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 11,
+              "start_ms": 215200.0,
+              "end_ms": 233500.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            },
+            {
+              "index": 12,
+              "start_ms": 240800.0,
+              "end_ms": 246700.0,
+              "fully_covered": true,
+              "uncovered_subintervals": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

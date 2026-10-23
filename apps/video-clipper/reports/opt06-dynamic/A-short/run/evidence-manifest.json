@@ -1,0 +1,82 @@
+{
+  "runtime": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/A-short",
+  "artifacts": {
+    "derived-recognize.py": {
+      "bytes": 20751,
+      "sha256": "3a62fd280ad9371a43a1664812a2ac14deafc73785d6cede10623d2cca188492",
+      "archive_file": "derived-recognize.py",
+      "archive_bytes": 20751,
+      "archive_sha256": "3a62fd280ad9371a43a1664812a2ac14deafc73785d6cede10623d2cca188492",
+      "gzip": false
+    },
+    "dynamic-diagnostics.json": {
+      "bytes": 2973469,
+      "sha256": "073c97262471d3945513be3728f0cdbb171f09755a9a6eb2e51fce4c23e16312",
+      "archive_file": "dynamic-diagnostics.json.gz",
+      "archive_bytes": 200686,
+      "archive_sha256": "ae40920efa2fa9c0491cb2e52617a207f3cd4389d01805ff9a48b671fd5e0de8",
+      "gzip": true
+    },
+    "output.ffmpeg.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_file": "output.ffmpeg.log",
+      "archive_bytes": 0,
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip": false
+    },
+    "output.filters": {
+      "bytes": 935,
+      "sha256": "f3fda5eebc8fd172e3461d0d6ffa601851c6dc071789a2c54b8a69bcb71aa860",
+      "archive_file": "output.filters",
+      "archive_bytes": 935,
+      "archive_sha256": "f3fda5eebc8fd172e3461d0d6ffa601851c6dc071789a2c54b8a69bcb71aa860",
+      "gzip": false
+    },
+    "output.mp4": {
+      "bytes": 16495729,
+      "sha256": "b13a8421eec78a75ccbebdcbc671b3e662769b885eee4101af524c21c7b7c117",
+      "retained_in_runtime_only": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/A-short/output.mp4"
+    },
+    "resources.jsonl": {
+      "bytes": 14487,
+      "sha256": "ce93d09861b43c092459aa7a94b8f485d743dd13136ad468a508a7a4d96608d2",
+      "archive_file": "resources.jsonl.gz",
+      "archive_bytes": 2268,
+      "archive_sha256": "05cb50ac38ae3bf27845df53f3ed8bc6e4db5b84e60136066c7ff41cd1534a52",
+      "gzip": true
+    },
+    "result.json": {
+      "bytes": 1996,
+      "sha256": "d5a823cb7af37afa02bf5c583af55dd926a5f2961c2d7493f1fd2900e2b0a07c",
+      "archive_file": "result.json",
+      "archive_bytes": 1996,
+      "archive_sha256": "d5a823cb7af37afa02bf5c583af55dd926a5f2961c2d7493f1fd2900e2b0a07c",
+      "gzip": false
+    },
+    "run.json": {
+      "bytes": 14390,
+      "sha256": "e01232b1e8a57cf0b104a1caf9934f496acee331b55c9a25098be95523eec35d",
+      "archive_file": "run.json",
+      "archive_bytes": 14390,
+      "archive_sha256": "e01232b1e8a57cf0b104a1caf9934f496acee331b55c9a25098be95523eec35d",
+      "gzip": false
+    },
+    "statistics.json": {
+      "bytes": 5037,
+      "sha256": "a06fe3e4f511b304ba778cbcc2ffaf29ccdd216965e34189852d0c260a008b92",
+      "archive_file": "statistics.json",
+      "archive_bytes": 5037,
+      "archive_sha256": "a06fe3e4f511b304ba778cbcc2ffaf29ccdd216965e34189852d0c260a008b92",
+      "gzip": false
+    },
+    "tracknet-points.jsonl": {
+      "bytes": 158144,
+      "sha256": "4484e19f09103809e1c22e1c161f2fe1173f79dca7986b7b7f831ed5811fad65",
+      "archive_file": "tracknet-points.jsonl.gz",
+      "archive_bytes": 27936,
+      "archive_sha256": "bba66df16a0e8074ab38b2336d1110f860f93dbeab93307748bb1f95b55178ae",
+      "gzip": true
+    }
+  }
+}

@@ -4,7 +4,7 @@
 
 ## 调用
 
-先按[项目首页](../../README.md#开发工作流)安装共同环境。以下示例在仓库根目录执行：
+先按[项目首页](../../README.md#开发环境)安装共同环境。以下示例在仓库根目录执行：
 
 ```python
 from pathlib import Path
@@ -21,6 +21,8 @@ with FileFrameSource(source, mode="offline") as frames:
 ranges = selected_ranges([{"start_ms": 1000, "end_ms": 5000}], info.duration_ms)
 render(source, Path("output.mp4"), ranges, info, "balanced", lambda fraction: None)
 ```
+
+产品如需烧录字幕叠图，可传 `overlay_ass=Path("overlay.ass")`。媒体模块在既有选段与时间变换之后应用 ASS，不读取叠图内容，也不依赖产品或羽毛球算法模块。
 
 `selected_ranges` 默认不补时；调用方可传 `padding_ms`。导出保留源画面尺寸和原音画相对偏移，支持 `high`、`balanced`、`small` 三档质量。调用者负责输出目录和工作文件的生命周期。
 
@@ -53,6 +55,8 @@ PY
 `FileFrameSource` 用 PyAV 解码原始 BGR 图像，以首帧 PTS（视频帧的显示时间戳）为零点保留实际帧时间间隔；缺失、重复或回退的时间戳会报错，不按估计帧率伪造时间或补帧。源分辨率和帧率保持不变。
 
 MP4 流复制片段可能通过编辑列表隐藏关键帧之前的预滚样本，导致头部声明帧数多于实际显示帧数。遇到帧数差异时，输入模块核对完整样本数量、数据位置和固定 PTS 偏移，仅在省略样本全部位于显示窗口外时接受，并在 `stats.edit_list_verification` 记录依据；截断或无法核实的文件仍报错。
+
+文件分析可传 `max_fps` 限制交付给算法的最高识别频率；默认 `None` 保留全部帧。限制以源 PTS 归零后的时间桶选择每桶首张真实帧，低于上限的帧不补齐；选中帧保留原始 `frame_id` 和 `timestamp_ms`。所有解码帧仍检查损坏标记、PTS 顺序和尺寸，即使该帧不会交付或转换成 BGR。
 
 `offline` 尽快读取；`realtime` 按单调时钟的启动时刻加源时间调度，模拟文件原速输入。一个解码线程与一个消费者之间最多排队六帧；实时模式下，最旧排队、待提交或正在处理帧落后计划时刻超过默认五秒，终止分析并保留诊断，可用 `max_lag_s` 调整。离线模式只施加有界阻塞，不使用实时超时。
 

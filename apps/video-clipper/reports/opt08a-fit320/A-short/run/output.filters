@@ -1,0 +1,9 @@
+[0:v]setpts=PTS-8190,select='gte(pts,293400)*lt(pts,1553400)+gte(pts,2158200)*lt(pts,2813400)+gte(pts,4188600)*lt(pts,5121000)+gte(pts,9048600)*lt(pts,9826200)+gte(pts,12756600)*lt(pts,13894200)',setpts='round(PTS-(293399.99999999994+604799.99999999988*gte(PTS,2158200)+1375199.9999999998*gte(PTS,4188600)+3927600.0000000005*gte(PTS,9048600)+2930400*gte(PTS,12756600)))'[video];
+[0:a:0]asetpts=PTS-(0.091000000)/TB,aresample=async=1:first_pts=0,apad[abase];
+[abase]asplit=5[a0][a1][a2][a3][a4];
+[a0]atrim=start=3.260000000:end=17.260000000,asetpts=PTS-(3.260000000)/TB[ao0];
+[a1]atrim=start=23.980000000:end=31.260000000,asetpts=PTS-(23.980000000)/TB[ao1];
+[a2]atrim=start=46.540000000:end=56.900000000,asetpts=PTS-(46.540000000)/TB[ao2];
+[a3]atrim=start=100.540000000:end=109.180000000,asetpts=PTS-(100.540000000)/TB[ao3];
+[a4]atrim=start=141.740000000:end=154.380000000,asetpts=PTS-(141.740000000)/TB[ao4];
+[ao0][ao1][ao2][ao3][ao4]concat=n=5:v=0:a=1[audio]

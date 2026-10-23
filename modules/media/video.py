@@ -80,7 +80,16 @@ def selected_ranges(predictions, duration_ms: float, padding_ms: float = 0) -> l
     return merged
 
 
-def render(source: Path, output: Path, ranges: list[list[float]], info: VideoInfo, quality: str, progress):
+def _ass_filter_path(path: Path) -> str:
+    # The option value and the surrounding filtergraph each parse escaping.
+    # Forward slashes avoid Windows separators becoming escape sequences.
+    value = path.resolve().as_posix()
+    value = "".join("\\" + char if char in "\\':" or char.isspace() else char for char in value)
+    return "".join("\\" + char if char in "\\'[],;" or char.isspace() else char for char in value)
+
+
+def render(source: Path, output: Path, ranges: list[list[float]], info: VideoInfo, quality: str, progress,
+           *, overlay_ass: Path | None = None):
     if not ranges:
         raise ValueError("没有识别到可保留的回合，未生成空视频。可检查拍摄类型或球场区域后重试。")
     # A single common origin preserves the actual audio/video offset. Never
@@ -104,6 +113,10 @@ def render(source: Path, output: Path, ranges: list[list[float]], info: VideoInf
     # Video concat guesses the last frame duration of each VFR segment and can
     # shift subsequent cuts. One select path also avoids buffering split video.
     filters = [f"[0:v]setpts=PTS-{origin_pts},select='{selected}',setpts='round(PTS-({removed}))'[video]"]
+    video_label = "video"
+    if overlay_ass is not None:
+        filters.append(f"[video]ass=filename={_ass_filter_path(overlay_ass)}[videoout]")
+        video_label = "videoout"
     if info.has_audio:
         filters.append(f"[0:a:0]asetpts=PTS-({origin:.9f})/TB,aresample=async=1:first_pts=0,apad[abase]")
         filters.append(f"[abase]asplit={count}" + "".join(f"[a{i}]" for i in range(count)))
@@ -115,7 +128,7 @@ def render(source: Path, output: Path, ranges: list[list[float]], info: VideoInf
     script.write_text(";\n".join(filters), encoding="utf-8")
     temporary = output.with_name("rendering.mp4")
     command = [ffmpeg_exe(), "-hide_banner", "-nostdin", "-y", "-v", "error", "-copyts", "-i", str(source),
-               "-filter_complex_script", str(script), "-map", "[video]", "-c:v", "libx264",
+               "-filter_complex_script", str(script), "-map", f"[{video_label}]", "-c:v", "libx264",
                "-preset", "fast", "-crf", str({"high": 18, "balanced": 23, "small": 28}[quality]),
                "-pix_fmt", "yuv420p", "-fps_mode", "vfr", "-enc_time_base:v",
                f"{time_base.numerator}:{time_base.denominator}", "-bf", "0", "-threads", "4"]

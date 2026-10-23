@@ -1,0 +1,406 @@
+{
+  "evaluator_version": "rally-iou-v3",
+  "boundary_policy": {
+    "outward_tolerance_ms": 1500.0,
+    "start_offset_range_ms": [
+      -1500.0,
+      0.0
+    ],
+    "end_offset_range_ms": [
+      0.0,
+      1500.0
+    ],
+    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+    "acceptance_denominator": "all_verified_truth"
+  },
+  "boundary_acceptance": {
+    "truth_count": 10,
+    "matched_count": 7,
+    "start_acceptable_count": 2,
+    "start_acceptable_rate": 0.2,
+    "end_acceptable_count": 1,
+    "end_acceptable_rate": 0.1,
+    "both_acceptable_count": 0,
+    "both_acceptable_rate": 0.0
+  },
+  "truth_count": 10,
+  "prediction_count": 8,
+  "input_prediction_count": 8,
+  "exclusion_policy": "fully_contained_without_truth_overlap",
+  "excluded_events": [
+    {
+      "event_id": "C2-E01",
+      "range_ms": [
+        8700.0,
+        10300.0
+      ],
+      "type": "failed_serve_or_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E02",
+      "range_ms": [
+        44000.0,
+        45000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E03",
+      "range_ms": [
+        86000.0,
+        88000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E04",
+      "range_ms": [
+        105800.0,
+        107800.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E05",
+      "range_ms": [
+        114600.0,
+        116000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E06",
+      "range_ms": [
+        132700.0,
+        134000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    },
+    {
+      "event_id": "C2-E07",
+      "range_ms": [
+        164800.0,
+        166000.0
+      ],
+      "type": "shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "取5.167，该视频的所有排除事件均确认不在正常回合内",
+      "confirmation_scope": "outside_normal_rallies",
+      "confirmation_context": "用户确认C2所列全部7项排除事件均不在正常回合内；不扩展到片尾未完回合。"
+    }
+  ],
+  "ignored_predictions": [],
+  "excluded_annotation_ids": [],
+  "matches": [
+    {
+      "prediction_id": 1,
+      "truth_id": 2,
+      "temporal_iou": 0.5929651163372094,
+      "start_offset_ms": -33.33333300000049,
+      "end_offset_ms": -2300.333333333332,
+      "start_error_ms": 0.0,
+      "end_error_ms": 2300.333333333332,
+      "start_acceptable": true,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 162234.0
+    },
+    {
+      "prediction_id": 2,
+      "truth_id": 3,
+      "temporal_iou": 0.90315525874953,
+      "start_offset_ms": 33.666667000001326,
+      "end_offset_ms": 1900.0,
+      "start_error_ms": 33.666667000001326,
+      "end_error_ms": 400.0,
+      "start_acceptable": false,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 135567.0
+    },
+    {
+      "prediction_id": 3,
+      "truth_id": 4,
+      "temporal_iou": 0.9217565217231,
+      "start_offset_ms": 66.66666699999769,
+      "end_offset_ms": -1433.0,
+      "start_error_ms": 66.66666699999769,
+      "end_error_ms": 1433.0,
+      "start_acceptable": false,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 112800.0
+    },
+    {
+      "prediction_id": 4,
+      "truth_id": 5,
+      "temporal_iou": 0.8149959250517207,
+      "start_offset_ms": -300.3333330000023,
+      "end_offset_ms": 1667.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 167.0,
+      "start_acceptable": true,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 93500.0
+    },
+    {
+      "prediction_id": 5,
+      "truth_id": 6,
+      "temporal_iou": 0.4791787227026963,
+      "start_offset_ms": 1966.3333330000023,
+      "end_offset_ms": 5533.666666999998,
+      "start_error_ms": 1966.3333330000023,
+      "end_error_ms": 4033.6666669999977,
+      "start_acceptable": false,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 71000.0
+    },
+    {
+      "prediction_id": 6,
+      "truth_id": 8,
+      "temporal_iou": 0.8535477489705285,
+      "start_offset_ms": 99.66666699999769,
+      "end_offset_ms": 1233.0,
+      "start_error_ms": 99.66666699999769,
+      "end_error_ms": 0.0,
+      "start_acceptable": false,
+      "end_acceptable": true,
+      "both_acceptable": false,
+      "output_latency_ms": 50034.0
+    },
+    {
+      "prediction_id": 7,
+      "truth_id": 9,
+      "temporal_iou": 0.26822727273946534,
+      "start_offset_ms": 2866.3333329999878,
+      "end_offset_ms": 2500.0,
+      "start_error_ms": 2866.3333329999878,
+      "end_error_ms": 1000.0,
+      "start_acceptable": false,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 26367.0
+    }
+  ],
+  "missed_rally_count": 3,
+  "false_positive_count": 1,
+  "false_split_count": 0,
+  "false_merge_count": 0,
+  "start_error_ms": {
+    "count": 5,
+    "mean": 1006.5333333999973,
+    "p50": 99.66666699999769,
+    "p95": 2686.3333329999905,
+    "max": 2866.3333329999878
+  },
+  "end_error_ms": {
+    "count": 6,
+    "mean": 1555.6666667222216,
+    "p50": 1216.5,
+    "p95": 3600.3333335833313,
+    "max": 4033.6666669999977
+  },
+  "output_latency_ms": {
+    "count": 8,
+    "mean": 81492.0,
+    "p50": 82250.0,
+    "p95": 152900.55,
+    "max": 162234.0
+  },
+  "unmatched_prediction_ids": [
+    8
+  ],
+  "unmatched_truth_ids": [
+    1,
+    7,
+    10
+  ],
+  "prediction_overlaps": {
+    "1": [
+      2
+    ],
+    "2": [
+      3
+    ],
+    "3": [
+      4
+    ],
+    "4": [
+      5
+    ],
+    "5": [
+      6
+    ],
+    "6": [
+      8
+    ],
+    "7": [
+      9
+    ],
+    "8": []
+  },
+  "truth_overlaps": {
+    "1": [],
+    "2": [
+      1
+    ],
+    "3": [
+      2
+    ],
+    "4": [
+      3
+    ],
+    "5": [
+      4
+    ],
+    "6": [
+      5
+    ],
+    "7": [],
+    "8": [
+      6
+    ],
+    "9": [
+      7
+    ],
+    "10": []
+  },
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 14300.0,
+      "end_ms": 17733.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 24467.0,
+      "end_ms": 44400.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 49500.0,
+      "end_ms": 67167.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 75833.0,
+      "end_ms": 86467.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 96533.0,
+      "end_ms": 108967.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 120933.0,
+      "end_ms": 129933.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 149133.0,
+      "end_ms": 153600.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 170267.0,
+      "end_ms": 179533.0,
+      "emitted_at_ms": 179967.0
+    }
+  ],
+  "annotations": [
+    {
+      "rally_id": 1,
+      "start_ms": 2000.0,
+      "end_ms": 5167.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 14333.333333,
+      "end_ms": 20033.333333333332,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 24433.333333,
+      "end_ms": 42500.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 49433.333333,
+      "end_ms": 68600.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 76133.333333,
+      "end_ms": 84800.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 94566.666667,
+      "end_ms": 103433.333333,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 111100.0,
+      "end_ms": 114433.333333,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 120833.333333,
+      "end_ms": 128700.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 146266.666667,
+      "end_ms": 151100.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 157733.333333,
+      "end_ms": 161600.0,
+      "review_status": "verified"
+    }
+  ]
+}

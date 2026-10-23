@@ -1,0 +1,43 @@
+{
+  "primary_head": "5bb39fa69181e86c21bde20e74d951f1cb2ca415",
+  "task_commit": "48ffa7e4fc463926e7f11b4930ba83065aed3837",
+  "staged_files": {
+    "apps/video-clipper/reports/opt09a-single/README.md": "a125caebe81619deb7fa0c7e3e153cfd732511171a2f1974c6c5e45f38855d92",
+    "apps/video-clipper/reports/opt09a-single/review.json": "d2aa45541d848472d657bc39aa3c1c9f7baecf7cb6653db71ca90089216883f4",
+    "apps/video-clipper/reports/opt09a-single/summary.json": "f98f76470b77361c24eb0e22b2de7a6c0d8ab16fa0ad18e791f2d23b23b57802",
+    "apps/video-clipper/reports/opt09a-single/viewer.png": "297f2654578570d55fc15443424ba9f2d46b61253e29d891c9fe52a0452bafef",
+    "docs/ai/opt09a-single/acceptance-freeze.json": "c967603b5d62d11ab4997256ddbc488a778ae490e24d16d533ada501f60d0b27",
+    "docs/ai/opt09a-single/controller/commit-input.md": "ee8f3c2bcfb8671050a1bc4d0df31fa3f2b9a3a6a2e18cac793363fb365b0eb6",
+    "docs/ai/opt09a-single/developer/input.md": "d99c4704bdb94fbac6c86440bb80e3457b1d0df0009f42d38f87e47f0b71380b",
+    "docs/ai/opt09a-single/developer/output.md": "1f546a4571ad79642df59e171729291ea0fa1ce002db930a4c67b3537aa9c060",
+    "docs/ai/opt09a-single/evidence-preservation.json": "54b8415aa5bb71e59f69614231bb636ba44ed10aa57e3a3f747eb09c243b2fe9",
+    "docs/ai/opt09a-single/run.py": "de947ebac22f020347cca1be775b6294acdb7c38dbf69b5f7f4b9dfe8bb1ec20",
+    "docs/ai/opt09a-single/summarize.py": "0e073dae4299a526ea979924c306fa60ed0d99b556b6de50b16c1d58a026f3d0",
+    "docs/ai/opt09a-single/task.md": "548a320308d6bd6db34c3ce57e5ba5456c221627823cd41806177d73bb4c4a3a",
+    "docs/ai/opt09a-single/test_experiment.py": "a367c852784d5fe1ec9986c46cbf707f9786d587521eb07ae1a059a4dd31b61d",
+    "docs/ai/opt09a-single/verifier/input.md": "0bf4c8a691e4a40ed79fd4197ab07da78d1526fc68ae37b1fce81d892364c459",
+    "docs/ai/opt09a-single/verifier/output.md": "44d8a5fba0db8971402485df47d81671aa6027ca0e2b784f1ed703f26b95d6f9",
+    "docs/features/performance-optimization/README.md": "dd768c5fe37276adf44529cb86e1df45da047d580a836321717f68a967a00611",
+    "docs/plan/roadmap.md": "a40002e00670503cba76d9d92f65c8dc37f087b3b583c8b08c8e0a01819f517a"
+  },
+  "expected_original_paths": [
+    "apps/video-clipper/reports/opt09a-single/README.md",
+    "apps/video-clipper/reports/opt09a-single/review.json",
+    "apps/video-clipper/reports/opt09a-single/summary.json",
+    "apps/video-clipper/reports/opt09a-single/viewer.png",
+    "docs/ai/opt09a-single/acceptance-freeze.json",
+    "docs/ai/opt09a-single/controller/commit-input.md",
+    "docs/ai/opt09a-single/developer/input.md",
+    "docs/ai/opt09a-single/developer/output.md",
+    "docs/ai/opt09a-single/evidence-preservation.json",
+    "docs/ai/opt09a-single/run.py",
+    "docs/ai/opt09a-single/summarize.py",
+    "docs/ai/opt09a-single/task.md",
+    "docs/ai/opt09a-single/test_experiment.py",
+    "docs/ai/opt09a-single/verifier/input.md",
+    "docs/ai/opt09a-single/verifier/output.md",
+    "docs/features/performance-optimization/README.md",
+    "docs/plan/roadmap.md"
+  ],
+  "production_changed": false
+}

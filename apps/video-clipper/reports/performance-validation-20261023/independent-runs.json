@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-23",
+  "independent_run_count": 3,
+  "runs": [
+    {
+      "task": "opt08a-fit320",
+      "case": "A-short",
+      "variant": "fit320",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.7538437079638243,
+        "recognition_s": 35.00101362494752,
+        "rendering_s": 8.885263084201142,
+        "total_s": 46.640120417112485
+      },
+      "network_input_shapes": {
+        "1x9x184x320": 1400
+      },
+      "raw_export_exact_match_first_round": true,
+      "video_sha256": "98b6a35aff667b73c9a94d5df909d74055ce2e34651203cd9643f6526ee38a55",
+      "run_sha256": "4b6437be25fd11e304486c876a9b4b41b1bce7ad5817df84697db735c71b9125",
+      "formal_archive": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/reports/opt08a-fit320/independent/A-short",
+      "verifier_output_sha256": "6f1bcd10f8ae47d065fec35e7b4d47cc80f79c92565588a9e8f187ab3aef2ff9",
+      "independent_summary_sha256": "cc6af82089bbf4cd710581ac926dcaf73608d93057a4f673293cba907482de05",
+      "accepted_freeze_sha256": "df7578f7a44fdf3aeca8de37e6a52d9ff84f698120c2c91d2fed1c6e0c5611d6"
+    },
+    {
+      "task": "opt06-dynamic",
+      "case": "A-short",
+      "variant": "dynamic",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.7907906249165535,
+        "recognition_s": 22.25143229193054,
+        "rendering_s": 7.8210289580747485,
+        "total_s": 32.86325187492184
+      },
+      "network_input_shapes": {
+        "1x9x288x512": 562
+      },
+      "raw_export_exact_match_first_round": true,
+      "video_sha256": "b13a8421eec78a75ccbebdcbc671b3e662769b885eee4101af524c21c7b7c117",
+      "run_sha256": "463f800cc9507fdfae7e8dae851b78aa5426762c52130cc239fee2e9d6ed08cf",
+      "formal_archive": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/reports/opt06-dynamic/independent/A-short",
+      "verifier_output_sha256": "65c2176f6c2a13124236eec3ea412cf190a358786b5bb9b4122e0a7bcd7e116f",
+      "independent_summary_sha256": "6356d32012dcbe771dabb75d4bc0d32876fa34c295c232686b06e8f694215870",
+      "accepted_freeze_sha256": "8fd310fa1b9a0c7d4728a3a74d57ba25efebb2be73a17cf3c498750b6cb1ef9e"
+    },
+    {
+      "task": "opt06-dynamic",
+      "case": "D-short",
+      "variant": "dynamic",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.781888416968286,
+        "recognition_s": 132.03809020807967,
+        "rendering_s": 8.05219087493606,
+        "total_s": 142.872169499984
+      },
+      "network_input_shapes": {
+        "1x9x288x512": 1299
+      },
+      "raw_export_exact_match_first_round": true,
+      "video_sha256": "f16d770e10a9a2a7f4cb5f5d3d501fe0839bb34428d91b521324b673d0d6ee88",
+      "run_sha256": "8e1e083d7d02feb6e8bdc49382b92173b241acafef8152b1e01aff4a1c2aa99a",
+      "formal_archive": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/reports/opt06-dynamic/independent/D-short",
+      "verifier_output_sha256": "65c2176f6c2a13124236eec3ea412cf190a358786b5bb9b4122e0a7bcd7e116f",
+      "independent_summary_sha256": "6356d32012dcbe771dabb75d4bc0d32876fa34c295c232686b06e8f694215870",
+      "accepted_freeze_sha256": "8fd310fa1b9a0c7d4728a3a74d57ba25efebb2be73a17cf3c498750b6cb1ef9e"
+    }
+  ],
+  "not_part_of_first_round_eight_cells": true,
+  "stable_speed_claim": false,
+  "original_D_people_replay": "exact same original person boxes/features/selection/follow/feet, 7527 frames and2509 saved TrackNet windows; formal evidence in opt06-dynamic/independent/original-people-D"
+}

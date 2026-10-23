@@ -15,6 +15,7 @@ def test_worker_passes_pose_settings_to_recognizer(tmp_path, monkeypatch, device
     from modules.models import assets
     from modules.media import video
     from modules.rally import recognize
+    from modules.rally.statistics import Statistics
 
     for key in ("OPENBLAS_NUM_THREADS", "OMP_NUM_THREADS", "MKL_NUM_THREADS",
                 "YOLO_CONFIG_DIR", "MPLCONFIGDIR"):
@@ -44,7 +45,13 @@ def test_worker_passes_pose_settings_to_recognizer(tmp_path, monkeypatch, device
         video=dict(name="测试录像.mp4", duration_ms=1000, width=64, height=36,
                    has_audio=False, first_pts_ms=0))), encoding="utf-8")
     assert worker.main(str(request)) == 0
-    assert calls == [dict(court=None, **expected)]
+    defaults = dict(limit_fps=True, small_input=True, grayscale=True, dynamic_scan=False)
+    assert len(calls) == 1
+    statistics = calls[0]["statistics"]
+    assert isinstance(statistics, Statistics)
+    assert statistics.enabled is False
+    assert calls == [dict(court=None, statistics=statistics, optimizations=defaults, **expected)]
     result = json.loads((tmp_path / "result.json").read_text(encoding="utf-8"))
     assert result["predictions"] == [dict(start_ms=100, end_ms=800)]
+    assert result["optimizations"] == defaults
     assert (tmp_path / "output.mp4").read_bytes() == b"unit-test-output"

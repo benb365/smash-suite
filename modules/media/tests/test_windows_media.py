@@ -60,3 +60,26 @@ def test_unicode_path_render_retains_size_and_decodable_frames(unicode_video):
     moved = output.with_name("已保存.mp4")
     output.replace(moved)
     assert moved.is_file()
+
+
+def test_ass_overlay_path_with_unicode_spaces_and_filter_characters(unicode_video):
+    av = pytest.importorskip("av")
+    from app.trajectory_overlay import write_overlay
+    folder = unicode_video.parent / "带 空格'中,[文];"
+    folder.mkdir()
+    overlay = folder / "球路 '叠图',[1];.ass"
+    info = video.probe(unicode_video, unicode_video.name)
+    ranges = [[80, 880]]
+    write_overlay({"shots": []}, ranges, overlay, info.width, info.height)
+    plain = unicode_video.parent / "原成片.mp4"
+    decorated = unicode_video.parent / "含球路.mp4"
+    video.render(unicode_video, plain, ranges, info, "balanced", lambda p: None)
+    video.render(unicode_video, decorated, ranges, info, "balanced", lambda p: None, overlay_ass=overlay)
+    with av.open(str(plain)) as container:
+        before = next(container.decode(video=0)).to_ndarray(format="bgr24")
+    with av.open(str(decorated)) as container:
+        frames = list(container.decode(video=0))
+        after = frames[0].to_ndarray(format="bgr24")
+    assert len(frames) == 20
+    assert before.shape == after.shape == (36, 64, 3)
+    assert np.max(np.abs(after.astype(int) - before.astype(int))) > 80

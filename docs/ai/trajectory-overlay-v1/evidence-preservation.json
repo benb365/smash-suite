@@ -1,0 +1,1132 @@
+{
+  "source_worktree": "/Users/bytedance/.codex/worktrees/trajectory-overlay-v1/smash-suite",
+  "preserved_root": "/Users/bytedance/workspace/experiments/smash-suite",
+  "groups": [
+    ".runtime/trajectory-overlay-v1-product/results",
+    ".runtime/trajectory-verification",
+    "modules/trajectory/.runtime"
+  ],
+  "files": [
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/summary.json",
+      "bytes": 7345,
+      "sha256": "d47c0f8b926787f37ef732782534b0f18db4279575d5445c5d3b3faf82385df1"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/rallies.json",
+      "bytes": 1494,
+      "sha256": "18012b6e838fdcfe3267a44f15eb8905cc94238e8cb6ae6625586f479a93d8cd"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/shot-paths-round3.json",
+      "bytes": 28242,
+      "sha256": "8525aeeb5bf57e07d746b34efef43994846e36993a53f908fe40fe7ce981aeb9"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/output.filters",
+      "bytes": 670,
+      "sha256": "2248c97ddac1b63535bbd4be4e3906e00e440d1c6105539a65d4ac462aad570a"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/output.mp4",
+      "bytes": 10175189,
+      "sha256": "784a863ac0bf6362b17057c8bc42b64e27b01a2f63182958acba6d2cddff825f"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/export-evidence.json",
+      "bytes": 2956,
+      "sha256": "fb29195f5876aea33d3ac11ff0655e4597f51808ba850f6e9770d6d610e43c10"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/shot-paths.json",
+      "bytes": 33978,
+      "sha256": "e5dec91b9b4aea0dae875ab17721adb6cf2654dbcf503905eaae1849c947ee62"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/trajectory-overlay.ass",
+      "bytes": 6567,
+      "sha256": "fc7f25d1604a411202043a0938957bf3267fd25682a9c8d45b5280077c1c03aa"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a2/player-tracks.json",
+      "bytes": 359944,
+      "sha256": "58b993d169bf620be3552929a938e75749e9932226fa7abe19d29181488bcb6b"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/rallies.json",
+      "bytes": 1680,
+      "sha256": "ab7ac358163063eef0ea121ddaa958f2e688d586134bfb1ce609d9464b480886"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/shot-paths-round3.json",
+      "bytes": 48568,
+      "sha256": "b526b4f0e221c55d9bf7cc7a69532fa4d9791135c8102f7afee52e95215b6505"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/output.filters",
+      "bytes": 1135,
+      "sha256": "1e9e3d50c9e2373b3e5a5a1e4eeb37edcb017226ddb9403992d5b3e0454d8aef"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/output.mp4",
+      "bytes": 16612599,
+      "sha256": "e6c5e71a7ee777c31b681538bb2d02eb7367eb9f6263aefc04017f362b8b31c4"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/export-evidence.json",
+      "bytes": 3075,
+      "sha256": "80c1e629895a6b569dcb941e7501141516c3561570015d40535211cffefe4ccb"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/shot-paths.json",
+      "bytes": 55198,
+      "sha256": "fd9733a608d40c21cff64dc2717a34531039e1d01e3f759c982a8575ecf7e24a"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/trajectory-overlay.ass",
+      "bytes": 8938,
+      "sha256": "4f4bbe53f09790168731613b9c95c2b0fc954a53a84f54865a48d8ad262978ab"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/player-origin-constraints/a1/player-tracks.json",
+      "bytes": 630483,
+      "sha256": "8a0c4d38051479f171b9871c5dc0fe633910e352f2fde49b7d25772a28262a59"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/summary.json",
+      "bytes": 6543,
+      "sha256": "30272042a89c7c09d9d3530941fa55904e1eb900a6865fb18ae6bc1fa214ee5e"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a2/rallies.json",
+      "bytes": 1494,
+      "sha256": "18012b6e838fdcfe3267a44f15eb8905cc94238e8cb6ae6625586f479a93d8cd"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a2/shot-paths-round3.json",
+      "bytes": 28242,
+      "sha256": "8525aeeb5bf57e07d746b34efef43994846e36993a53f908fe40fe7ce981aeb9"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a2/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a2/output.filters",
+      "bytes": 662,
+      "sha256": "1500134cf8c8f5d28504142fbee634a59a3873bb6d1fb472c87b2b1cbc26c030"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a2/output.mp4",
+      "bytes": 10175189,
+      "sha256": "784a863ac0bf6362b17057c8bc42b64e27b01a2f63182958acba6d2cddff825f"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a2/export-evidence.json",
+      "bytes": 2599,
+      "sha256": "8c66cc6b9ddb994065aeb3885e12f75938d6ebef58844d9e78248644a830b6d0"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a2/shot-paths.json",
+      "bytes": 32282,
+      "sha256": "0462faf7d10fb69a0f1d060cf6ea445bf08330c474795f82cc011007d7feb1fc"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a2/trajectory-overlay.ass",
+      "bytes": 6567,
+      "sha256": "fc7f25d1604a411202043a0938957bf3267fd25682a9c8d45b5280077c1c03aa"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a1/rallies.json",
+      "bytes": 1680,
+      "sha256": "ab7ac358163063eef0ea121ddaa958f2e688d586134bfb1ce609d9464b480886"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a1/shot-paths-round3.json",
+      "bytes": 48568,
+      "sha256": "b526b4f0e221c55d9bf7cc7a69532fa4d9791135c8102f7afee52e95215b6505"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a1/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a1/output.filters",
+      "bytes": 1127,
+      "sha256": "8968f5bd32bf91eae069b38dd7e9bb978ae645d263811924952c86846695e537"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a1/output.mp4",
+      "bytes": 16612599,
+      "sha256": "e6c5e71a7ee777c31b681538bb2d02eb7367eb9f6263aefc04017f362b8b31c4"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a1/export-evidence.json",
+      "bytes": 2721,
+      "sha256": "953eb21e0b54562ce25766396644095dc18e32a576118f1ccea928b884efbb9e"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a1/shot-paths.json",
+      "bytes": 53075,
+      "sha256": "3caac4decaa59139cd48993b3195c79db0bbd569461615041520394d41ab4101"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/court-constraints/a1/trajectory-overlay.ass",
+      "bytes": 8938,
+      "sha256": "4f4bbe53f09790168731613b9c95c2b0fc954a53a84f54865a48d8ad262978ab"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/summary.json",
+      "bytes": 7145,
+      "sha256": "08b85aa03994399fd166e2afa21c72d1b9323868a4950b05d069492072345883"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/review.json",
+      "bytes": 1292,
+      "sha256": "c6f74688bc8953361419e6d24bb25e783cf4c86c7c0c9893ab1bbf5b76e02e4e"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/rallies.json",
+      "bytes": 1494,
+      "sha256": "18012b6e838fdcfe3267a44f15eb8905cc94238e8cb6ae6625586f479a93d8cd"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/output.filters",
+      "bytes": 666,
+      "sha256": "3371845a8b46bf2b655f1ff11f9fbde3b1873e513f5319ca52ee6f932337093b"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/output.mp4",
+      "bytes": 10177859,
+      "sha256": "088f64cf2a9a12b96273e56babce180f87b8af92c3058dd610c3eb8d4d93577f"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/export-evidence.json",
+      "bytes": 3139,
+      "sha256": "6e1f024d8c3046c8ca2c2e128493cff37ba4446197db5eb1abd41344f1b90285"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/shot-paths.json",
+      "bytes": 21323,
+      "sha256": "d0a960b5d64c8ab9675219a272678174f3b98358dd217a4a97a9af0551525046"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/frame-arrow.png",
+      "bytes": 1518834,
+      "sha256": "d9169befaacdf334201548723845befac59f18b4f84215dabeef2b997af91119"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/trajectory-overlay.ass",
+      "bytes": 6574,
+      "sha256": "3b0f67c3fcd4bd050d6ed495e8b2d35e846a0bbee6f0ccbd900dbcb1879cb907"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a2/frame-no-arrow.png",
+      "bytes": 1466088,
+      "sha256": "db55ae2bb394119576f799c1cc3525c62f7a34c2f0b12bde9665acd7b26a64ed"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/rallies.json",
+      "bytes": 1680,
+      "sha256": "ab7ac358163063eef0ea121ddaa958f2e688d586134bfb1ce609d9464b480886"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/output.filters",
+      "bytes": 1131,
+      "sha256": "4d8a2fc7310b6b66f9a3c969effc8b88f4faea48c20f43a890edeb27abe591eb"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/output.mp4",
+      "bytes": 16608075,
+      "sha256": "02b579758686a0322771f9e4c3e2f10d8e71078074ed9fd736e746c27427a21d"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/export-evidence.json",
+      "bytes": 3255,
+      "sha256": "12a6c9ac2dc787f0740e30bc3575098ecf29285659e51473d48a3fab7bb97d32"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/shot-paths.json",
+      "bytes": 30605,
+      "sha256": "b62d5c193a32bc8b26ab470c8c4e82766070a0abb0a86e3be73b8ae02dade4a9"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/frame-arrow.png",
+      "bytes": 1396036,
+      "sha256": "fa29df74185008a4d5d7995d30357ed032724af9515734401e4500a5ff768f86"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/trajectory-overlay.ass",
+      "bytes": 8750,
+      "sha256": "5d1f69ee15f9dc48eac46989c36b93534863e0f2b4df1a361916bb8a0751bb97"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/frozen-offline-replay/a1/frame-no-arrow.png",
+      "bytes": 1312033,
+      "sha256": "25fb44798bb8d3a387c221522cf2daa0c7ba645821b22fce63ef58e96fc772b9"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/summary.json",
+      "bytes": 9273,
+      "sha256": "751da6042f2c9ba0183d284903d5df1e4e125cf6ea760b3c5d2d9fc732e3e576"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/review.json",
+      "bytes": 12446,
+      "sha256": "ca41d49ca498a5fb08d6b2d120a905bcc2fe73a0d2cae6ab34c4b8bced28f6b7"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/rallies.json",
+      "bytes": 1494,
+      "sha256": "18012b6e838fdcfe3267a44f15eb8905cc94238e8cb6ae6625586f479a93d8cd"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/output.filters",
+      "bytes": 666,
+      "sha256": "6a7971ff6b981812daf500ddf80894861ecf681650aebaa3580f9d5c390cf72c"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/output.mp4",
+      "bytes": 10179516,
+      "sha256": "8b326bf0a8a330c53d588f720d86c26a155031cb295363f76d58e2e8e7c09da8"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/export-evidence.json",
+      "bytes": 3618,
+      "sha256": "ea9f16a4b80166eb50da6057ba869886ddcd7dcaf07177d3c26b3b84d2022566"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/shot-paths.json",
+      "bytes": 27599,
+      "sha256": "1782cc3e81fd87d9cc8d28c4bf2badb0a0d49241c806d403d65c1a1ae959d0a3"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/frame-arrow.png",
+      "bytes": 2173394,
+      "sha256": "4852d1de0c69d563da610355fecf37f7b63d0eddf3c95b7ec015e45ba3c79976"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/trajectory-overlay.ass",
+      "bytes": 6932,
+      "sha256": "ce67a12a8d88156e97333c91402a623cc202ad383996cb87a1384cff109d4929"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a2/frame-no-arrow.png",
+      "bytes": 2099129,
+      "sha256": "3daf17965553888a29850f7497871940bd20087c804da9a83f151651fcb9ca1e"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/rallies.json",
+      "bytes": 1680,
+      "sha256": "ab7ac358163063eef0ea121ddaa958f2e688d586134bfb1ce609d9464b480886"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/output.filters",
+      "bytes": 1131,
+      "sha256": "04fea62158e882d62ca07d5a101d35904b16a93ff2b6245090dcd793df83219f"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/output.mp4",
+      "bytes": 16605970,
+      "sha256": "c066ecb2cd83b94dc365303f3e87b17ba482419f8ca8814b75fbc021421e4033"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/export-evidence.json",
+      "bytes": 3733,
+      "sha256": "19e2c8ec94814baf75b71fa424e19eb864aea44026d3da40aae474fbc4ec32d6"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/shot-paths.json",
+      "bytes": 39843,
+      "sha256": "7e0302f5b8680bc35a8585726977e03b873eb31645ec2389302f7ed3b4296519"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/frame-arrow.png",
+      "bytes": 2020939,
+      "sha256": "31a6ee457d3a2db4da416ddf151a6a214d8181e35195fbbce87ad72794de8acc"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/trajectory-overlay.ass",
+      "bytes": 8932,
+      "sha256": "cfd5f92ee4b4d15ed07aab06d30c8a2906e5af9f310b2eda31b4e87142fd1ea8"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round2-offline-replay/a1/frame-no-arrow.png",
+      "bytes": 1877094,
+      "sha256": "ef3cbbe5592f640656f9ef6f2ac1b76bfdabe0347fad42656ae8a026170f0430"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/summary.json",
+      "bytes": 9738,
+      "sha256": "cf7ff772720249e04d5d526152678b38393d702fa1afb431ebad25a22337b63b"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/review.json",
+      "bytes": 13601,
+      "sha256": "216f89c0e4f632b873da5a32e74cded10fcd6c6a6bd2a56bcf453163ccf799e9"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/rallies.json",
+      "bytes": 1494,
+      "sha256": "18012b6e838fdcfe3267a44f15eb8905cc94238e8cb6ae6625586f479a93d8cd"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/output.filters",
+      "bytes": 666,
+      "sha256": "71f348b44fb08189479b5ed9233ffae232176c246eaf1d09943eb5010fefb162"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/output.mp4",
+      "bytes": 10180070,
+      "sha256": "22128582a9ebd173ccdc196ed199e2ca427f4a5912bc1aabb544fe50786e607d"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/export-evidence.json",
+      "bytes": 3870,
+      "sha256": "3fe6b44718eb7f917d58c6e8aaccd7b6e03402b157e47f10e9b0ab6c3c6eac75"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/shot-paths.json",
+      "bytes": 28242,
+      "sha256": "8525aeeb5bf57e07d746b34efef43994846e36993a53f908fe40fe7ce981aeb9"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/frame-arrow.png",
+      "bytes": 2155583,
+      "sha256": "cf7d58049de3ee3644453ab81d6577e3af2fa8cf8ca2ac174645fd7f1b9ced56"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/trajectory-overlay.ass",
+      "bytes": 6930,
+      "sha256": "b4467ab76e213fbfd1599e2626fa994e77762a9d73137c5db7397b4dc8fe239e"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a2/frame-no-arrow.png",
+      "bytes": 2099129,
+      "sha256": "3daf17965553888a29850f7497871940bd20087c804da9a83f151651fcb9ca1e"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/rallies.json",
+      "bytes": 1680,
+      "sha256": "ab7ac358163063eef0ea121ddaa958f2e688d586134bfb1ce609d9464b480886"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/output.ffmpeg.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/output.filters",
+      "bytes": 1131,
+      "sha256": "9fde3a0015f4296a23f537d8d6137977518fafb91bc0e79e3aa5ec80ed5dbb1c"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/output.mp4",
+      "bytes": 16614660,
+      "sha256": "9a222596a4ed8d1aae5440f3a43aaeb411f952302ef6c6f504405f178d300a94"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/export-evidence.json",
+      "bytes": 3898,
+      "sha256": "c360cbd63a74c37da695f52690b3bb190ba85272aa57db20a9b0467bad8ef98a"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/shot-paths.json",
+      "bytes": 48568,
+      "sha256": "b526b4f0e221c55d9bf7cc7a69532fa4d9791135c8102f7afee52e95215b6505"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/frame-arrow.png",
+      "bytes": 1941049,
+      "sha256": "46d10fcc59661ee6f16a61794c914efc5df0beac6736aae580ff8b52fa562a67"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/trajectory-overlay.ass",
+      "bytes": 9474,
+      "sha256": "db49fb4dd26e4570b2e0e8928b1d3c968c974523ff565f12901ffaeeb11b0400"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/round3-offline-replay/a1/frame-no-arrow.png",
+      "bytes": 1876717,
+      "sha256": "83fbff03820970919758a7fe8204ab8d73e1542adc3a3eaa7a5c6488b605cb48"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/run-metadata.json",
+      "bytes": 1110,
+      "sha256": "75a4c2ee451fcde92850756efd08b0c7b5677face2179af0a0ea921a0cd1548d"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/request.json",
+      "bytes": 548,
+      "sha256": "9630adb1228264b2d691dbdaf293df0ddcedf25e5073a739de086a0a287ab75c"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/result.json",
+      "bytes": 1394,
+      "sha256": "bba471e97ebd83d7a7453288e1bea634a840ba9267e96fb2d4326b01a7f777e1"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/code-fingerprint.json",
+      "bytes": 2942,
+      "sha256": "3d559adf7f9bd16eca81b187e5ffd0f302bda2e065acf90f0bde08101964df75"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/worker.log",
+      "bytes": 1443,
+      "sha256": "86aa3bff2c68e10cc24fdfc0ea86bb6980012a6fa5dfadb895c940517494da24"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/output.mp4",
+      "bytes": 16602294,
+      "sha256": "853423d0220c7dd6c44a8b07e4f811f3faeae07d81bff3157dfc7a44a4434dd6"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/shot-paths.json",
+      "bytes": 23132,
+      "sha256": "254f35b7c9d7c825005c57c40bdbea9b91c637c079b52512b4b08eb202092ee5"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/trajectory-overlay.ass",
+      "bytes": 8570,
+      "sha256": "9e1460d25955c6f0fac3721ab26a67f78f27215d8536bc0e6376d72f429c9109"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/ball-observations.meta.json",
+      "bytes": 765,
+      "sha256": "51875f9f828fdea1403293ec513630ed5905d58d76b935d648c2843f874f253b"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/ball-observations.jsonl",
+      "bytes": 430047,
+      "sha256": "a221f5f8d1ca02b760b9c75b6a6bd98dc28d2cfe33c01bcb7d339eb9657f82e1"
+    },
+    {
+      "path": ".runtime/trajectory-overlay-v1-product/results/m1-short-a1-01-20261015/export-overlay-frame.png",
+      "bytes": 1392798,
+      "sha256": "4b4c2eaac63424186536e7558429614c503bea1ef4d295788a2b83e729f84fc3"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/switch.json",
+      "bytes": 7807,
+      "sha256": "322087085e5cb4a07764c036759781e53bde30b02facf1ee0fcd43ac05e54ff4"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/f2-recheck.json",
+      "bytes": 14504,
+      "sha256": "2832afdfd5e08049cd8fcc9b9732e2f135d93932bc41aee0e257f16a152d0b4a"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-truncated.jsonl",
+      "bytes": 430047,
+      "sha256": "a221f5f8d1ca02b760b9c75b6a6bd98dc28d2cfe33c01bcb7d339eb9657f82e1"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-window-0.jpg",
+      "bytes": 1336538,
+      "sha256": "d42b28b438d8bfd69d9a640c7ae252e92e6d960ebc2007cb808b362fe136ba7a"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-window-1.jpg",
+      "bytes": 1418658,
+      "sha256": "6e27d56aa507b278dd28509b43704bead576f76675e8d730a0bfe2b5a255acdc"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/f2-recheck-arc.jpg",
+      "bytes": 814147,
+      "sha256": "d1815fbcdf24a1d0db7d136e3eff9f10e6bff105e0eb2433d68474a04c8f3426"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-window-1.jpg",
+      "bytes": 1418004,
+      "sha256": "996ce47dcb31de86fa5a3ab89436554330e8fcbf24ac1d8bb1510498354e83c7"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-truncated.meta.json",
+      "bytes": 552,
+      "sha256": "cc94c31158a97703e17e012d1dc308a7dd692e015eda93f4f646f36020adeaec"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/check.json",
+      "bytes": 1017,
+      "sha256": "e936d59eae6fadf0e3bc8edd80d1f0d3fe08e4e58b2b92d17ead8a2818ca0742"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-window-0.jpg",
+      "bytes": 1527441,
+      "sha256": "8ef3f609a450894e31b8802224989b4d8d3ed78ac800955a0923c229a502ea46"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-window-2.jpg",
+      "bytes": 1428354,
+      "sha256": "efebd15f32652695e443bde596ac4e203f480fe0dc96059bcf56df1039d12610"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-truncated.jsonl",
+      "bytes": 247192,
+      "sha256": "176d014eac64fbc26e939924205185b3c5da06bbe627cfffb92e16ab71443d39"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-truncated.meta.json",
+      "bytes": 550,
+      "sha256": "fa01b361ef80d754a425fd273887eeed5ca09eef1388529babb872610c85b7ab"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-window-3.jpg",
+      "bytes": 2189342,
+      "sha256": "258cd8878e5570f6757d161e14f4e6554f748bb147ae3f3286c88af385b7f469"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/recompute.json",
+      "bytes": 526,
+      "sha256": "eb4304e362f0ba93b72d2ea418d1991994f5c9a74bdd087a096efd8cae5f2bde"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/f2-recheck-contact.jpg",
+      "bytes": 807296,
+      "sha256": "cd7712aa21a0953b18c157fe357b42fadb4ca73091300c38975498f989577c1c"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-recompute/court-line-mask.png",
+      "bytes": 11753,
+      "sha256": "613797d333f4c67d07226c3d909529fb40832dced2d99e44e554b39652192db5"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-recompute/court-calibration.jpg",
+      "bytes": 336214,
+      "sha256": "e47606b036f2dc6feb9b2a5aa1f3723d714948d8f1b3c464b83c88f04e6be7f2"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-recompute/shot-paths.json",
+      "bytes": 39843,
+      "sha256": "7e0302f5b8680bc35a8585726977e03b873eb31645ec2389302f7ed3b4296519"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-recompute/people-observations.json",
+      "bytes": 1949191,
+      "sha256": "b9ab520fdc718750703ae1fd4b9d66d711c450afa4f2b1a3acd796d682cb77fc"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-recompute/court.json",
+      "bytes": 2020,
+      "sha256": "0663b5b4b1052294eb92d6a0e66dfa797a647eb56514ec2a8a9190c5ff3d3ae2"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a1-recompute/player-tracks.json",
+      "bytes": 630483,
+      "sha256": "8a0c4d38051479f171b9871c5dc0fe633910e352f2fde49b7d25772a28262a59"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-recompute/court-line-mask.png",
+      "bytes": 11466,
+      "sha256": "2cd35b6f3b147406da7893a494f042b4122ac1455772c07bd3960808fa88d156"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-recompute/court-calibration.jpg",
+      "bytes": 360739,
+      "sha256": "c33b93e15dee0a6413b0f4ef7daa3788c47aff13876cc1068edf14c5de7b6435"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-recompute/shot-paths.json",
+      "bytes": 27599,
+      "sha256": "1782cc3e81fd87d9cc8d28c4bf2badb0a0d49241c806d403d65c1a1ae959d0a3"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-recompute/people-observations.json",
+      "bytes": 1225466,
+      "sha256": "1dbd674bac69164d9a7581a43f45079e8671950b0824c3e17994dba7a51ed5c8"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-recompute/court.json",
+      "bytes": 2004,
+      "sha256": "f34af9383f5a4f719d34f77c82bfe2a0dc74a3d63f6b26c3c4ef4a78d3b8fc2f"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round2/a2-recompute/player-tracks.json",
+      "bytes": 359944,
+      "sha256": "58b993d169bf620be3552929a938e75749e9932226fa7abe19d29181488bcb6b"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/switch.json",
+      "bytes": 6872,
+      "sha256": "c67779fbccd4949cacf48ed1d94e62ff4198070ff4e12eb2d20eea55e7724180"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-truncated.jsonl",
+      "bytes": 93,
+      "sha256": "25d9fb25c0e7d8cb2052849689366e2d873009bcd198bc5d8f02810e39628d11"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-window-0.jpg",
+      "bytes": 1336538,
+      "sha256": "d42b28b438d8bfd69d9a640c7ae252e92e6d960ebc2007cb808b362fe136ba7a"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-window-1.jpg",
+      "bytes": 1437396,
+      "sha256": "b5352e5d62da7e38a6a277615a459bcb847f9720efb492bc50c6f95e7449f1ff"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-window-1.jpg",
+      "bytes": 1334961,
+      "sha256": "5d0f004d632bc0ca72b6a0a4244af0b84d212ad0d23a26c1e754fa1d12d0e23c"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/trajectory-independent-check.py",
+      "bytes": 2328,
+      "sha256": "0b6ca05984f79a920abd199137785456de98bfb6a9bdf259be0292cba07ac8e5"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-truncated.meta.json",
+      "bytes": 557,
+      "sha256": "baafad15488e000ace88f5675cca93775b57c3b74fbfcc4162819f883a89b86e"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/check.json",
+      "bytes": 689,
+      "sha256": "7319b72f79cc032f014a86cea80eb1f3d15c3dc5fc380db1b10bca6e3f02a310"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-window-0.jpg",
+      "bytes": 1527441,
+      "sha256": "8ef3f609a450894e31b8802224989b4d8d3ed78ac800955a0923c229a502ea46"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-window-2.jpg",
+      "bytes": 1526671,
+      "sha256": "6d6ae279edcff2f2ed34fbd5a7091232571da2ae18fad0b7f5ec00f3a1437647"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-truncated.jsonl",
+      "bytes": 94,
+      "sha256": "2296ae179c9d2d5c741b90641ba80de7daba8a32b2a5807ef7cd0f93b125efed"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-truncated.meta.json",
+      "bytes": 556,
+      "sha256": "1409d0b59dcafc4600ac48830827eb9692974e299f1d575f2f6d0d592ddd2ae9"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/recompute.json",
+      "bytes": 526,
+      "sha256": "4d0b396c84090fbffef2bd5407ec872d59d41fc10265e4afafe6da99f4862de7"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-recompute/court-line-mask.png",
+      "bytes": 11753,
+      "sha256": "613797d333f4c67d07226c3d909529fb40832dced2d99e44e554b39652192db5"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-recompute/court-calibration.jpg",
+      "bytes": 336214,
+      "sha256": "e47606b036f2dc6feb9b2a5aa1f3723d714948d8f1b3c464b83c88f04e6be7f2"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-recompute/shot-paths.json",
+      "bytes": 30605,
+      "sha256": "b62d5c193a32bc8b26ab470c8c4e82766070a0abb0a86e3be73b8ae02dade4a9"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-recompute/people-observations.json",
+      "bytes": 1949191,
+      "sha256": "b9ab520fdc718750703ae1fd4b9d66d711c450afa4f2b1a3acd796d682cb77fc"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-recompute/court.json",
+      "bytes": 2020,
+      "sha256": "0663b5b4b1052294eb92d6a0e66dfa797a647eb56514ec2a8a9190c5ff3d3ae2"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a1-recompute/player-tracks.json",
+      "bytes": 630483,
+      "sha256": "8a0c4d38051479f171b9871c5dc0fe633910e352f2fde49b7d25772a28262a59"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-recompute/court-line-mask.png",
+      "bytes": 11466,
+      "sha256": "2cd35b6f3b147406da7893a494f042b4122ac1455772c07bd3960808fa88d156"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-recompute/court-calibration.jpg",
+      "bytes": 360739,
+      "sha256": "c33b93e15dee0a6413b0f4ef7daa3788c47aff13876cc1068edf14c5de7b6435"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-recompute/shot-paths.json",
+      "bytes": 21323,
+      "sha256": "d0a960b5d64c8ab9675219a272678174f3b98358dd217a4a97a9af0551525046"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-recompute/people-observations.json",
+      "bytes": 1225466,
+      "sha256": "1dbd674bac69164d9a7581a43f45079e8671950b0824c3e17994dba7a51ed5c8"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-recompute/court.json",
+      "bytes": 2004,
+      "sha256": "f34af9383f5a4f719d34f77c82bfe2a0dc74a3d63f6b26c3c4ef4a78d3b8fc2f"
+    },
+    {
+      "path": ".runtime/trajectory-verification/round1/a2-recompute/player-tracks.json",
+      "bytes": 359944,
+      "sha256": "58b993d169bf620be3552929a938e75749e9932226fa7abe19d29181488bcb6b"
+    },
+    {
+      "path": "modules/trajectory/.runtime/review-round2.json",
+      "bytes": 12712,
+      "sha256": "ae48a0e3e65f0c8482ebcce23268519f358839835ad29fee240e06f94233c723"
+    },
+    {
+      "path": "modules/trajectory/.runtime/round3-event-audit.json",
+      "bytes": 15927,
+      "sha256": "88a53666b2d63984adaca7b75399886501960356ea46135e5bae921b484eee2a"
+    },
+    {
+      "path": "modules/trajectory/.runtime/review-round3.json",
+      "bytes": 13866,
+      "sha256": "6fa2fba27afb10e9217171ff67b203d8131c989f01ed3241b680f239db8489c0"
+    },
+    {
+      "path": "modules/trajectory/.runtime/round3-evidence.json",
+      "bytes": 34794,
+      "sha256": "de3ed47ca0a1d4e63d3da35cca71762afbdecfaf059ee2980b8f1f083f06fe79"
+    },
+    {
+      "path": "modules/trajectory/.runtime/round2-evidence.json",
+      "bytes": 15300,
+      "sha256": "7ef18382909bf3a2aed9d82b5fa9804c0a307bb771f59d306e039773d47a432c"
+    },
+    {
+      "path": "modules/trajectory/.runtime/round1-evidence.json",
+      "bytes": 6777,
+      "sha256": "848b3c92fb9844cf8b28701348636478ec18160cce501845b029f5355150895c"
+    },
+    {
+      "path": "modules/trajectory/.runtime/review.json",
+      "bytes": 11300,
+      "sha256": "a5dcf2cbb724be215b08a618fc1488c28994f557698757c76b1466f6d7d55fac"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/rallies.json",
+      "bytes": 1494,
+      "sha256": "18012b6e838fdcfe3267a44f15eb8905cc94238e8cb6ae6625586f479a93d8cd"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/court-line-mask.png",
+      "bytes": 11466,
+      "sha256": "2cd35b6f3b147406da7893a494f042b4122ac1455772c07bd3960808fa88d156"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/court-fit-test.json",
+      "bytes": 895,
+      "sha256": "ac82e1b887059538ac3705c5880d8e55e92348b7550e87156c055e9377746b61"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/source-first.jpg",
+      "bytes": 447554,
+      "sha256": "fadd1b2aa9ef39d5a08047d4423a60dcdc4335ad6feeae732d4517a0b864e47c"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/court-calibration.jpg",
+      "bytes": 360739,
+      "sha256": "c33b93e15dee0a6413b0f4ef7daa3788c47aff13876cc1068edf14c5de7b6435"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/contact-2.jpg",
+      "bytes": 1118171,
+      "sha256": "8ae5edd1a29cdf727bd63a1c90de77995f13e63bf73d34864380c580f36ff9a5"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/contact-0.jpg",
+      "bytes": 1117656,
+      "sha256": "e274d3bdd719803e75d7c7581f86a1b1222c0509d70e20fc38c2d83b391610cb"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/contact-1.jpg",
+      "bytes": 1116152,
+      "sha256": "9d6f7b7bae97ab52c8bab0647d3a1864c0c62b7b528cc73b5bd8432674dcf09b"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/shot-paths.json",
+      "bytes": 28242,
+      "sha256": "8525aeeb5bf57e07d746b34efef43994846e36993a53f908fe40fe7ce981aeb9"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round2-frames-1.jpg",
+      "bytes": 987296,
+      "sha256": "f634e81ff5dd598d8db526d7aaaa7a26839cc54bd345456c6a0dbc8b28d23854"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round2-frames-0.jpg",
+      "bytes": 997665,
+      "sha256": "1d77565f9023fcf67ee8495e724fbbbffad2e4f88983f33d87b85590d3b3985a"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/ball-observations.meta.json",
+      "bytes": 610,
+      "sha256": "c05ce78a76e03b7eec5121a9944131b82e934648df5cc1ee630d619b65ba5c8e"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round2-frames-2.jpg",
+      "bytes": 680685,
+      "sha256": "92ab782f134ea8456fcc05700192ba5b162de840f1664d6146705d351edd21a2"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/people-observations.json",
+      "bytes": 1225466,
+      "sha256": "1dbd674bac69164d9a7581a43f45079e8671950b0824c3e17994dba7a51ed5c8"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/ball-observations.jsonl",
+      "bytes": 247192,
+      "sha256": "176d014eac64fbc26e939924205185b3c5da06bbe627cfffb92e16ab71443d39"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/preflight.json",
+      "bytes": 339,
+      "sha256": "e903cc6f183a235abccb906856e29e9f82b3ae933c043f57422b7c590d6e003a"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/court.json",
+      "bytes": 2004,
+      "sha256": "f34af9383f5a4f719d34f77c82bfe2a0dc74a3d63f6b26c3c4ef4a78d3b8fc2f"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/player-tracks.json",
+      "bytes": 359944,
+      "sha256": "58b993d169bf620be3552929a938e75749e9932226fa7abe19d29181488bcb6b"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round3-audit/rally-5-page-0.jpg",
+      "bytes": 531895,
+      "sha256": "0bb4460ae65118269cf0ff0d2e5a3139b11ad4bbaa49452bf39e262cfd4da0fb"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round3-audit/rally-5-page-1.jpg",
+      "bytes": 530360,
+      "sha256": "64a97de14cf9dc2ea49a8a54e6d3e5d63f48b62f343a22378217530807b9e2fe"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round3-audit/rally-5-page-3.jpg",
+      "bytes": 527410,
+      "sha256": "747dc17d060469b956bb86639d0af9b18d4ce5996a1feeffa80eddff673d08fa"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round3-audit/rally-5-page-2.jpg",
+      "bytes": 533652,
+      "sha256": "0f3920ed085c2c672748165943dce9b87a01f68074c5b2f7ba7af38298cd4b5d"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round3-audit/rally-5-page-5.jpg",
+      "bytes": 273508,
+      "sha256": "ef9c2992ee3193851b823ed9ddd52b509c3908de8d1b604b81e16bef44af71e0"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round3-audit/rally-5-page-4.jpg",
+      "bytes": 529978,
+      "sha256": "cd1aab48a50609dd6686d3bc18889ca9cd5bfe5ecdece36a6836179ebb46e299"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-a2-01-20261019-workerfix/round3-audit/rally-3-page-0.jpg",
+      "bytes": 536283,
+      "sha256": "562f391dd582128afe0aae41287d0bbafb49ff84c06ccd2c8eccd2642197524b"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/rallies.json",
+      "bytes": 1680,
+      "sha256": "ab7ac358163063eef0ea121ddaa958f2e688d586134bfb1ce609d9464b480886"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/court-line-mask.png",
+      "bytes": 11753,
+      "sha256": "613797d333f4c67d07226c3d909529fb40832dced2d99e44e554b39652192db5"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/court-fit-test.json",
+      "bytes": 910,
+      "sha256": "20f0ab43cd7ac63ee41d95253c3338f7112b00e83d955b7943865f9a3332c414"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/source-first.jpg",
+      "bytes": 389375,
+      "sha256": "bcc68a44e809edf7cd612442eaf7ca1cd2508f68d56e4650be86e29f08fa6e79"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/hit-diagnostic.jpg",
+      "bytes": 1217064,
+      "sha256": "d5b6f3e64619f5d3853861ccf80c998ed0bbf3c02e4f6a1fdf62cc3758aa027a"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/court-calibration.jpg",
+      "bytes": 336214,
+      "sha256": "e47606b036f2dc6feb9b2a5aa1f3723d714948d8f1b3c464b83c88f04e6be7f2"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/contact-0.jpg",
+      "bytes": 815433,
+      "sha256": "d1cbb4a7fca9af5ff50b2ddd80809c1a39c38cc50d95a64ae5e277330ccba58b"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round2-frames-4.jpg",
+      "bytes": 322437,
+      "sha256": "6f9a7d63d188a364329264fe7afdf94d13afe3923c82349ca139e5adb3bbbd2d"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/shot-paths.json",
+      "bytes": 48568,
+      "sha256": "b526b4f0e221c55d9bf7cc7a69532fa4d9791135c8102f7afee52e95215b6505"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round2-frames-1.jpg",
+      "bytes": 864831,
+      "sha256": "21edbc8aa06b89ec80d4aaa945dc9c50016cbf826fd20df01ed8c19ffe7ae00d"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round2-frames-0.jpg",
+      "bytes": 869172,
+      "sha256": "419c0fc152385f5797a89ea61da36f322dece6c42a75cc289cac8e9700cd615f"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/ball-observations.meta.json",
+      "bytes": 609,
+      "sha256": "66b640e506eb609600f5ee4c6cd296c26122ec5c2787722e84ee7b198ef4c397"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round2-frames-2.jpg",
+      "bytes": 859917,
+      "sha256": "961d3b630cc07e734a86db2f07d391c2777e3f70625ec5073acf2f4a32abcd68"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round2-frames-3.jpg",
+      "bytes": 861623,
+      "sha256": "dcb001aaa8d9807c1364e5d86ab6ecb327159f4d96566a7f1c0d40d5448dae14"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/people-observations.json",
+      "bytes": 1949191,
+      "sha256": "b9ab520fdc718750703ae1fd4b9d66d711c450afa4f2b1a3acd796d682cb77fc"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/ball-observations.jsonl",
+      "bytes": 430047,
+      "sha256": "a221f5f8d1ca02b760b9c75b6a6bd98dc28d2cfe33c01bcb7d339eb9657f82e1"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/preflight.json",
+      "bytes": 342,
+      "sha256": "b59a36f97c1543a9821e230c7501e3d346d9ebeb52075ffbea9c6ad2f1a76f3e"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/court.json",
+      "bytes": 2020,
+      "sha256": "0663b5b4b1052294eb92d6a0e66dfa797a647eb56514ec2a8a9190c5ff3d3ae2"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/player-tracks.json",
+      "bytes": 630483,
+      "sha256": "8a0c4d38051479f171b9871c5dc0fe633910e352f2fde49b7d25772a28262a59"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-7-page-1.jpg",
+      "bytes": 489065,
+      "sha256": "1709ba181c1485656a760fb32d94ed57fa68d95776abb314e38464d7f6057c92"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-7-page-0.jpg",
+      "bytes": 493521,
+      "sha256": "dac067081b37cc1d8f4f6db18cce1d2167d837ed65947c6461c2a74548eb63e4"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-7-page-2.jpg",
+      "bytes": 326023,
+      "sha256": "dc2726b8d48b31defa511e46e7c9a1add7ac0a124186c51382e48606a2e166dd"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-7-page-3.jpg",
+      "bytes": 250358,
+      "sha256": "be3629309c8e5499c76cf978bdc6c25a1a5fcafc2dc575c661966800a0981be7"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-3-page-2.jpg",
+      "bytes": 328016,
+      "sha256": "40e5e1319dda3e9c98eca65f1239ef109eb9bc32e4d60521b9deaefe3934f5d7"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-3-page-1.jpg",
+      "bytes": 488073,
+      "sha256": "bbcc3a55310ab8a42ceccebdc80f9ab310fca70c3b4a0bbb0765aca1d808aa5c"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-3-page-0.jpg",
+      "bytes": 486340,
+      "sha256": "0fe1ae9df9ca28d620c505ffdbb1a5d5097d67e6d617cd7af258787140592809"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-6-page-1.jpg",
+      "bytes": 406543,
+      "sha256": "99d2c604bbae632c9bb3229ee35b4298b0fa5bfe42e1b8afc851acba3f7bcc58"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-6-page-0.jpg",
+      "bytes": 489041,
+      "sha256": "5e747ce6fced3f8499f0267a213b5fc6c826795b68e1a0cbab7b1439e4e99303"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-6-page-2.jpg",
+      "bytes": 98971,
+      "sha256": "8fc0c8835c0075803d7fd6ca78cdd050d822b308f70214a91690166a7fa14e39"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-1-page-0.jpg",
+      "bytes": 490798,
+      "sha256": "fb0de7910604a86a442ffda637865c3ace45473427275af52adf20ce85ae79b3"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-4-page-0.jpg",
+      "bytes": 488864,
+      "sha256": "f6f31fa48c8ccff1b2cb64b273ed293669536f1dbfe557030804d4624635fa70"
+    },
+    {
+      "path": "modules/trajectory/.runtime/m1-short-a1-01-20261015/round3-audit/rally-4-page-1.jpg",
+      "bytes": 257080,
+      "sha256": "4ac238140088d7d15f5469e4b950802e422688a8d205dad17046cca7ba25eb22"
+    }
+  ],
+  "total_bytes": 231757579
+}

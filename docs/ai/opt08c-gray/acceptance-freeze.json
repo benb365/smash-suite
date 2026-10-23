@@ -1,0 +1,31 @@
+{
+  "round": 1,
+  "head": "c62527982a6bcd6fc95cb00572f346d52d36fffb",
+  "worktree": "/Users/bytedance/.codex/worktrees/opt08c-gray/smash-suite",
+  "files": {
+    "apps/video-clipper/reports/opt08c-gray/README.md": "8710392f80f255e295ced7660ec4d03c1d763df814bec4a2c63016b8d316bcd9",
+    "apps/video-clipper/reports/opt08c-gray/probe.json": "97fad4fbf682fef8806f4ad5a9a97234f2f4991cd30305687df1dcc5290a6de1",
+    "apps/video-clipper/reports/opt08c-gray/review.json": "3f826f6a07d2a26555dfd3ac659249601f042ba053780091743b95f71ed115cb",
+    "apps/video-clipper/reports/opt08c-gray/summary.json": "92bb36fa4a4215f8cc0c540af394ecb4447bb4fa28b686c1d6cd14f94951824e",
+    "apps/video-clipper/reports/opt08c-gray/viewer.png": "4bda36ecbca0f258e4635f8b1148a0a5fd21b0a96e1604cd9d4409aa61aaf6dd",
+    "docs/ai/opt08c-gray/developer/input.md": "f5d361cfb03390ed5c07189646f8197ca711d4a7d7a01a4c09c537c2f61c92ab",
+    "docs/ai/opt08c-gray/developer/output.md": "264c23900172cfc9a7c39d0ce0a727830d387d8f0261371aa948789f13ab6860",
+    "docs/ai/opt08c-gray/probe.py": "abc07320928acd36b8440d0a6ddfe2c074ace1f3180ac6cc390b6e3596a8737b",
+    "docs/ai/opt08c-gray/run.py": "953059bc6aa4f99b9b65f9e29e135e61275f8512d97eb75b959aa19e5e42b214",
+    "docs/ai/opt08c-gray/summarize.py": "b66d285a592ea7e29beaa11cc349b2afc0f9247e5405d33ab4f81c2398c26f20",
+    "docs/ai/opt08c-gray/task.md": "17b726a2de2b8ef48cdeb7eb48998cfe22b209cd3bdfca740c85ddb30e26ce34",
+    "docs/ai/opt08c-gray/test_experiment.py": "5950b34d15c442615a2c5711822695ef5fdc6c0f6124260074a8bbded67fc48b",
+    "docs/ai/opt08c-gray/verifier/input.md": "2a1d4dd2eede632475940fa7de0754ddddb7c09f3eaaad82d59007efcb4584da"
+  },
+  "runtime_files": {
+    "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/derived_predictor.py": "5c94de392d70e91cb3a23cb4acbdf51ae6735fe4d94c3f5bfbb63825eca8fd80",
+    "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/resources.json": "4c70084229bee29683c2c6ac1bdf84c2581aac7d52ed5f0c19247ecd41d2a973",
+    "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/result.json": "cd6f3b0a47628fa9627a8afe1b9f8785a34a17fd2b9070b7a42b4754a5dc1da1",
+    "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/run.json": "78ca13b7ec43aa8cd1ea43112d0724c34cb33c6ef88248562974fa072bd36d87",
+    "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/statistics.json": "8258ef34e41cdf460f212c07d9d6ee6e2e45ef17c9e654c3a96e2b71e9e7d35d",
+    "apps/video-clipper/.runtime/opt08c-gray/probe/probe.json": "97fad4fbf682fef8806f4ad5a9a97234f2f4991cd30305687df1dcc5290a6de1",
+    "modules/models/tracknet/.runtime/opt08c-gray-review.json": "3f826f6a07d2a26555dfd3ac659249601f042ba053780091743b95f71ed115cb"
+  },
+  "developer_state": "paused after final report corrections",
+  "production_diff": []
+}

@@ -1,0 +1,1691 @@
+{
+  "schema_version": 1,
+  "scope": "One A-short full recognition run per input size; output and cost comparison only, without matching human labels.",
+  "decision": "Do not adopt 216x384 or 144x256 in this round; do not run C-short or change production code. Changed outputs cannot be shown to preserve the required effect without matched human labels, so the conservative retention gate is not met.",
+  "limitations": [
+    "The baseline is this round's full 288x512 A-short control. Its raw predictions and selected export ranges exactly match the saved OPT-07A candidate.",
+    "There are no matching human labels for this media. Candidate differences are not asserted to be missed truth, false positives, or an accuracy score.",
+    "Each size is a single run; wall time and sampled resource differences are diagnostic observations, not stable performance claims.",
+    "The viewer played 8 to 17 seconds; the screenshot captures the single 13.022-second point. No frame-by-frame review or human annotation was performed."
+  ],
+  "inputs": {
+    "case": "A-short",
+    "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+    "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+    "frame_count_expected_and_decoded": 4200,
+    "first_pts_ms": 91.0,
+    "last_timestamp_ms": 167960.0,
+    "duration_ms": 168000,
+    "weight": {
+      "ball_track.pt": {
+        "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+        "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+      }
+    }
+  },
+  "environment": {
+    "git_commit": "4910e1e5af66d4baebc8373bc6d138645510a996",
+    "python": "3.11.16 (main, Sep 29 2026, 14:49:58) [Clang 22.1.3 ]",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "torch": "2.8.0",
+    "torchvision": "0.23.0",
+    "numpy": "2.2.6",
+    "opencv": "5.0.0",
+    "psutil": "7.2.2",
+    "device": "mps",
+    "mps_available": true,
+    "torch_threads": 4,
+    "opencv_threads": 18
+  },
+  "baseline_match_to_opt07a": {
+    "comparison_source": "apps/video-clipper/reports/opt07a/summary.json rows[0].variants.candidate",
+    "raw_predictions_equal": true,
+    "export_ranges_equal": true
+  },
+  "review_evidence": {
+    "json": "apps/video-clipper/reports/opt08a-size/review.json",
+    "json_sha256": "c03b53b7c63b1eec9c6f3c8d619ce42badff0c17605b915e9e0fd22a26bac5eb",
+    "screenshot": "apps/video-clipper/reports/opt08a-size/viewer.png",
+    "screenshot_sha256": "987a58441030abb99df4fd3ccf007f9f854bbe60f94180b5a59fba77e7892dec",
+    "observation": "The viewer played 8 to 17 seconds, and the screenshot captures the single 13.022-second point: both players are waiting on court; the 216x384 track retains this region while the control and 144x256 tracks omit it. No frame-by-frame review or human annotation was performed."
+  },
+  "variants": {
+    "288x512": {
+      "input_size": {
+        "height": 288,
+        "width": 512
+      },
+      "status": "completed",
+      "actual_predictor_class": "modules.models.tracknet._opt07a_reference.TrackNetPredictor",
+      "predictor_source_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/models/tracknet/predictor.py",
+      "source_predictor_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+      "derived_predictor_sha256": "01b5d8274b743807e5bc10a4992b6ec66a3bd58f77236a9ccd376a2fe69ef9f9",
+      "runner_sha256": "315a714129783d55cd246378b7f599cc57f0068f66f736d0db71d36626eebbbc",
+      "code_sha256": {
+        "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+        "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "frozen_predictor": "01b5d8274b743807e5bc10a4992b6ec66a3bd58f77236a9ccd376a2fe69ef9f9"
+      },
+      "git_status_at_run": [
+        "?? docs/ai/opt08a-size/"
+      ],
+      "derived_predictor_runtime_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-288x512/derived_predictor.py",
+      "recognition_wall_seconds": 29.96660520788282,
+      "recognition_wall_seconds_outer_check": 29.967888749903068,
+      "preflight_wall_seconds_excluded": 4.218403332866728,
+      "torch_threads": 4,
+      "opencv_threads": 18,
+      "workload": {
+        "tracknet_calls": 1400,
+        "tracknet_input_frames": 4200,
+        "candidate_peaks": 0,
+        "decode_passes": 1,
+        "frames_decoded": 4200
+      },
+      "raw_predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 3640.0,
+          "end_ms": 9600.0,
+          "emitted_at_ms": 11240.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 24480.0,
+          "end_ms": 31400.0,
+          "emitted_at_ms": 33080.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 47280.0,
+          "end_ms": 56720.0,
+          "emitted_at_ms": 58400.0
+        },
+        {
+          "rally_id": 6,
+          "start_ms": 101080.0,
+          "end_ms": 108800.0,
+          "emitted_at_ms": 110480.0
+        },
+        {
+          "rally_id": 7,
+          "start_ms": 142440.0,
+          "end_ms": 153840.0,
+          "emitted_at_ms": 155480.0
+        }
+      ],
+      "export_ranges_padding_500ms": [
+        [
+          3140.0,
+          10100.0
+        ],
+        [
+          23980.0,
+          31900.0
+        ],
+        [
+          46780.0,
+          57220.0
+        ],
+        [
+          100580.0,
+          109300.0
+        ],
+        [
+          141940.0,
+          154340.0
+        ]
+      ],
+      "diagnostics": {
+        "warnings": [],
+        "recognition": {
+          "algorithm": "high-trajectory-frozen-20261018",
+          "config": {
+            "confidence": 0.6,
+            "motion_window_ms": 200,
+            "min_motion_window_ms": 80,
+            "min_speed_px_s": 100,
+            "max_speed_px_s": 4000,
+            "quiet_ms": 1600,
+            "min_flight_span_ms": 2200,
+            "field": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "direction_window_ms": 160,
+            "direction_min_span_ms": 40,
+            "direction_max_residual_px": 80,
+            "top_fraction": 0.15,
+            "exit_max_y_fraction": 0.4,
+            "exit_horizon_ms": 250,
+            "high_clear_gap_ms": 2800,
+            "reentry_x_fraction": 0.2,
+            "turn_jump_px_s": 1100,
+            "track_gap_ms": 120,
+            "return_support_ms": 320,
+            "return_travel_px": 120,
+            "short_event_ms": 5000,
+            "filter_single_flight": true,
+            "filter_uncertain_short": true
+          },
+          "decoded_frames": 4200
+        },
+        "device": "mps",
+        "recognition_wall_s": 29.96660520788282
+      },
+      "point_differences_vs_288x512": null,
+      "interval_differences_vs_288x512": {
+        "raw_by_prediction_order": [
+          {
+            "control": [
+              [
+                3640.0,
+                9600.0
+              ]
+            ],
+            "candidate": [
+              [
+                3640.0,
+                9600.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                24480.0,
+                31400.0
+              ]
+            ],
+            "candidate": [
+              [
+                24480.0,
+                31400.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                47280.0,
+                56720.0
+              ]
+            ],
+            "candidate": [
+              [
+                47280.0,
+                56720.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                101080.0,
+                108800.0
+              ]
+            ],
+            "candidate": [
+              [
+                101080.0,
+                108800.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                142440.0,
+                153840.0
+              ]
+            ],
+            "candidate": [
+              [
+                142440.0,
+                153840.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          }
+        ],
+        "export_by_selected_range_order": [
+          {
+            "control": [
+              [
+                3140.0,
+                10100.0
+              ]
+            ],
+            "candidate": [
+              [
+                3140.0,
+                10100.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                23980.0,
+                31900.0
+              ]
+            ],
+            "candidate": [
+              [
+                23980.0,
+                31900.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                46780.0,
+                57220.0
+              ]
+            ],
+            "candidate": [
+              [
+                46780.0,
+                57220.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                100580.0,
+                109300.0
+              ]
+            ],
+            "candidate": [
+              [
+                100580.0,
+                109300.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                141940.0,
+                154340.0
+              ]
+            ],
+            "candidate": [
+              [
+                141940.0,
+                154340.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [],
+            "missing_ms": 0,
+            "extra_ms": 0
+          }
+        ],
+        "raw_union": {
+          "control": [
+            [
+              3640.0,
+              9600.0
+            ],
+            [
+              24480.0,
+              31400.0
+            ],
+            [
+              47280.0,
+              56720.0
+            ],
+            [
+              101080.0,
+              108800.0
+            ],
+            [
+              142440.0,
+              153840.0
+            ]
+          ],
+          "candidate": [
+            [
+              3640.0,
+              9600.0
+            ],
+            [
+              24480.0,
+              31400.0
+            ],
+            [
+              47280.0,
+              56720.0
+            ],
+            [
+              101080.0,
+              108800.0
+            ],
+            [
+              142440.0,
+              153840.0
+            ]
+          ],
+          "missing_from_candidate": [],
+          "extra_in_candidate": [],
+          "missing_ms": 0,
+          "extra_ms": 0
+        },
+        "export_union": {
+          "control": [
+            [
+              3140.0,
+              10100.0
+            ],
+            [
+              23980.0,
+              31900.0
+            ],
+            [
+              46780.0,
+              57220.0
+            ],
+            [
+              100580.0,
+              109300.0
+            ],
+            [
+              141940.0,
+              154340.0
+            ]
+          ],
+          "candidate": [
+            [
+              3140.0,
+              10100.0
+            ],
+            [
+              23980.0,
+              31900.0
+            ],
+            [
+              46780.0,
+              57220.0
+            ],
+            [
+              100580.0,
+              109300.0
+            ],
+            [
+              141940.0,
+              154340.0
+            ]
+          ],
+          "missing_from_candidate": [],
+          "extra_in_candidate": [],
+          "missing_ms": 0,
+          "extra_ms": 0
+        }
+      },
+      "resources": {
+        "process_sample_count": 31,
+        "process_sampling_interval_seconds_max": 1.0101432499941438,
+        "process_rss_sampled_peak_bytes": 584417280,
+        "process_cpu_percent_sampled_mean": 154.2225806451613,
+        "process_cpu_percent_sampled_max": 164.8,
+        "mps_sample_count": 30,
+        "mps_allocated_sampled_peak_bytes": 229986816,
+        "mps_driver_sampled_peak_bytes": 1165852672,
+        "sampling_note": "Process RSS/CPU and MPS are independent approximately one-second samples; they are observed peaks, not continuous maxima.",
+        "statistics_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-288x512/statistics.json",
+        "resources_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-288x512/resources.json",
+        "wall_seconds": 29.96660520788282,
+        "preflight_wall_seconds_outside_recognition": 4.218403332866728,
+        "outer_recognition_wall_seconds": 29.967888749903068,
+        "phase_seconds": {
+          "model_initialization": 0.06513841706328094,
+          "tracknet_preprocess_s": 8.035004124278203,
+          "tracknet_inference_and_transfer_s": 21.171423834981397,
+          "tracknet_point_decode_s": 0.4363971226848662,
+          "video_observation": 29.797582001192495,
+          "rally_decision": 0.10360162379220128
+        }
+      },
+      "evidence_directory": "apps/video-clipper/.runtime/opt08a-size/A-short-288x512"
+    },
+    "216x384": {
+      "input_size": {
+        "height": 216,
+        "width": 384
+      },
+      "status": "completed",
+      "actual_predictor_class": "modules.models.tracknet._opt07a_reference.TrackNetPredictor",
+      "predictor_source_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/models/tracknet/predictor.py",
+      "source_predictor_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+      "derived_predictor_sha256": "bb79b58574ba9d4d11c37ec41c0e2100d167c8ef1d52757f6cebbf91b8d22766",
+      "runner_sha256": "315a714129783d55cd246378b7f599cc57f0068f66f736d0db71d36626eebbbc",
+      "code_sha256": {
+        "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+        "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "frozen_predictor": "bb79b58574ba9d4d11c37ec41c0e2100d167c8ef1d52757f6cebbf91b8d22766"
+      },
+      "git_status_at_run": [
+        "?? docs/ai/opt08a-size/"
+      ],
+      "derived_predictor_runtime_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-216x384/derived_predictor.py",
+      "recognition_wall_seconds": 22.037524458020926,
+      "recognition_wall_seconds_outer_check": 22.03871062514372,
+      "preflight_wall_seconds_excluded": 4.11288774991408,
+      "torch_threads": 4,
+      "opencv_threads": 18,
+      "workload": {
+        "tracknet_calls": 1400,
+        "tracknet_input_frames": 4200,
+        "candidate_peaks": 0,
+        "decode_passes": 1,
+        "frames_decoded": 4200
+      },
+      "raw_predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 3640.0,
+          "end_ms": 15400.0,
+          "emitted_at_ms": 17120.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 24280.0,
+          "end_ms": 31440.0,
+          "emitted_at_ms": 33080.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 47280.0,
+          "end_ms": 56640.0,
+          "emitted_at_ms": 58280.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 100560.0,
+          "end_ms": 108800.0,
+          "emitted_at_ms": 110480.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 142240.0,
+          "end_ms": 153840.0,
+          "emitted_at_ms": 155480.0
+        }
+      ],
+      "export_ranges_padding_500ms": [
+        [
+          3140.0,
+          15900.0
+        ],
+        [
+          23780.0,
+          31940.0
+        ],
+        [
+          46780.0,
+          57140.0
+        ],
+        [
+          100060.0,
+          109300.0
+        ],
+        [
+          141740.0,
+          154340.0
+        ]
+      ],
+      "diagnostics": {
+        "warnings": [],
+        "recognition": {
+          "algorithm": "high-trajectory-frozen-20261018",
+          "config": {
+            "confidence": 0.6,
+            "motion_window_ms": 200,
+            "min_motion_window_ms": 80,
+            "min_speed_px_s": 100,
+            "max_speed_px_s": 4000,
+            "quiet_ms": 1600,
+            "min_flight_span_ms": 2200,
+            "field": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "direction_window_ms": 160,
+            "direction_min_span_ms": 40,
+            "direction_max_residual_px": 80,
+            "top_fraction": 0.15,
+            "exit_max_y_fraction": 0.4,
+            "exit_horizon_ms": 250,
+            "high_clear_gap_ms": 2800,
+            "reentry_x_fraction": 0.2,
+            "turn_jump_px_s": 1100,
+            "track_gap_ms": 120,
+            "return_support_ms": 320,
+            "return_travel_px": 120,
+            "short_event_ms": 5000,
+            "filter_single_flight": true,
+            "filter_uncertain_short": true
+          },
+          "decoded_frames": 4200
+        },
+        "device": "mps",
+        "recognition_wall_s": 22.037524458020926
+      },
+      "point_differences_vs_288x512": {
+        "compared_points": 4200,
+        "points_with_any_changed_value": 4200,
+        "changed_field_counts": {
+          "x": 4047,
+          "y": 4032,
+          "confidence": 4200
+        },
+        "absolute_delta_mean_by_field": {
+          "x": 251.80238095238096,
+          "y": 130.4674107142857,
+          "confidence": 0.15752338914865893
+        },
+        "absolute_delta_max_by_field": {
+          "x": 1332.5,
+          "y": 742.5,
+          "confidence": 0.9395474679768085
+        },
+        "interpretation": "Numeric output-difference diagnostics against the 288x512 control; not accuracy or ground truth."
+      },
+      "interval_differences_vs_288x512": {
+        "raw_by_prediction_order": [
+          {
+            "control": [
+              [
+                3640.0,
+                9600.0
+              ]
+            ],
+            "candidate": [
+              [
+                3640.0,
+                15400.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                9600.0,
+                15400.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 5800.0
+          },
+          {
+            "control": [
+              [
+                24480.0,
+                31400.0
+              ]
+            ],
+            "candidate": [
+              [
+                24280.0,
+                31440.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                24280.0,
+                24480.0
+              ],
+              [
+                31400.0,
+                31440.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 240.0
+          },
+          {
+            "control": [
+              [
+                47280.0,
+                56720.0
+              ]
+            ],
+            "candidate": [
+              [
+                47280.0,
+                56640.0
+              ]
+            ],
+            "missing_from_candidate": [
+              [
+                56640.0,
+                56720.0
+              ]
+            ],
+            "extra_in_candidate": [],
+            "missing_ms": 80.0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                101080.0,
+                108800.0
+              ]
+            ],
+            "candidate": [
+              [
+                100560.0,
+                108800.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                100560.0,
+                101080.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 520.0
+          },
+          {
+            "control": [
+              [
+                142440.0,
+                153840.0
+              ]
+            ],
+            "candidate": [
+              [
+                142240.0,
+                153840.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                142240.0,
+                142440.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 200.0
+          }
+        ],
+        "export_by_selected_range_order": [
+          {
+            "control": [
+              [
+                3140.0,
+                10100.0
+              ]
+            ],
+            "candidate": [
+              [
+                3140.0,
+                15900.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                10100.0,
+                15900.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 5800.0
+          },
+          {
+            "control": [
+              [
+                23980.0,
+                31900.0
+              ]
+            ],
+            "candidate": [
+              [
+                23780.0,
+                31940.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                23780.0,
+                23980.0
+              ],
+              [
+                31900.0,
+                31940.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 240.0
+          },
+          {
+            "control": [
+              [
+                46780.0,
+                57220.0
+              ]
+            ],
+            "candidate": [
+              [
+                46780.0,
+                57140.0
+              ]
+            ],
+            "missing_from_candidate": [
+              [
+                57140.0,
+                57220.0
+              ]
+            ],
+            "extra_in_candidate": [],
+            "missing_ms": 80.0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                100580.0,
+                109300.0
+              ]
+            ],
+            "candidate": [
+              [
+                100060.0,
+                109300.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                100060.0,
+                100580.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 520.0
+          },
+          {
+            "control": [
+              [
+                141940.0,
+                154340.0
+              ]
+            ],
+            "candidate": [
+              [
+                141740.0,
+                154340.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                141740.0,
+                141940.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 200.0
+          }
+        ],
+        "raw_union": {
+          "control": [
+            [
+              3640.0,
+              9600.0
+            ],
+            [
+              24480.0,
+              31400.0
+            ],
+            [
+              47280.0,
+              56720.0
+            ],
+            [
+              101080.0,
+              108800.0
+            ],
+            [
+              142440.0,
+              153840.0
+            ]
+          ],
+          "candidate": [
+            [
+              3640.0,
+              15400.0
+            ],
+            [
+              24280.0,
+              31440.0
+            ],
+            [
+              47280.0,
+              56640.0
+            ],
+            [
+              100560.0,
+              108800.0
+            ],
+            [
+              142240.0,
+              153840.0
+            ]
+          ],
+          "missing_from_candidate": [
+            [
+              56640.0,
+              56720.0
+            ]
+          ],
+          "extra_in_candidate": [
+            [
+              9600.0,
+              15400.0
+            ],
+            [
+              24280.0,
+              24480.0
+            ],
+            [
+              31400.0,
+              31440.0
+            ],
+            [
+              100560.0,
+              101080.0
+            ],
+            [
+              142240.0,
+              142440.0
+            ]
+          ],
+          "missing_ms": 80.0,
+          "extra_ms": 6760.0
+        },
+        "export_union": {
+          "control": [
+            [
+              3140.0,
+              10100.0
+            ],
+            [
+              23980.0,
+              31900.0
+            ],
+            [
+              46780.0,
+              57220.0
+            ],
+            [
+              100580.0,
+              109300.0
+            ],
+            [
+              141940.0,
+              154340.0
+            ]
+          ],
+          "candidate": [
+            [
+              3140.0,
+              15900.0
+            ],
+            [
+              23780.0,
+              31940.0
+            ],
+            [
+              46780.0,
+              57140.0
+            ],
+            [
+              100060.0,
+              109300.0
+            ],
+            [
+              141740.0,
+              154340.0
+            ]
+          ],
+          "missing_from_candidate": [
+            [
+              57140.0,
+              57220.0
+            ]
+          ],
+          "extra_in_candidate": [
+            [
+              10100.0,
+              15900.0
+            ],
+            [
+              23780.0,
+              23980.0
+            ],
+            [
+              31900.0,
+              31940.0
+            ],
+            [
+              100060.0,
+              100580.0
+            ],
+            [
+              141740.0,
+              141940.0
+            ]
+          ],
+          "missing_ms": 80.0,
+          "extra_ms": 6760.0
+        }
+      },
+      "resources": {
+        "process_sample_count": 23,
+        "process_sampling_interval_seconds_max": 1.010089416988194,
+        "process_rss_sampled_peak_bytes": 562659328,
+        "process_cpu_percent_sampled_mean": 203.46086956521734,
+        "process_cpu_percent_sampled_max": 217.9,
+        "mps_sample_count": 22,
+        "mps_allocated_sampled_peak_bytes": 143909376,
+        "mps_driver_sampled_peak_bytes": 1163542528,
+        "sampling_note": "Process RSS/CPU and MPS are independent approximately one-second samples; they are observed peaks, not continuous maxima.",
+        "statistics_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-216x384/statistics.json",
+        "resources_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-216x384/resources.json",
+        "wall_seconds": 22.037524458020926,
+        "preflight_wall_seconds_outside_recognition": 4.11288774991408,
+        "outer_recognition_wall_seconds": 22.03871062514372,
+        "phase_seconds": {
+          "model_initialization": 0.06288658292032778,
+          "tracknet_preprocess_s": 7.777036988409236,
+          "tracknet_inference_and_transfer_s": 13.667141578393057,
+          "tracknet_point_decode_s": 0.2800356668885797,
+          "video_observation": 21.869946477934718,
+          "rally_decision": 0.10441752220503986
+        }
+      },
+      "evidence_directory": "apps/video-clipper/.runtime/opt08a-size/A-short-216x384"
+    },
+    "144x256": {
+      "input_size": {
+        "height": 144,
+        "width": 256
+      },
+      "status": "completed",
+      "actual_predictor_class": "modules.models.tracknet._opt07a_reference.TrackNetPredictor",
+      "predictor_source_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/models/tracknet/predictor.py",
+      "source_predictor_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+      "derived_predictor_sha256": "98b703bf5f431885b43b47a1e0cb15469565d42433cc3b2134661fbb0f43b88c",
+      "runner_sha256": "315a714129783d55cd246378b7f599cc57f0068f66f736d0db71d36626eebbbc",
+      "code_sha256": {
+        "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+        "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "frozen_predictor": "98b703bf5f431885b43b47a1e0cb15469565d42433cc3b2134661fbb0f43b88c"
+      },
+      "git_status_at_run": [
+        "?? docs/ai/opt08a-size/"
+      ],
+      "derived_predictor_runtime_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-144x256/derived_predictor.py",
+      "recognition_wall_seconds": 19.712088167201728,
+      "recognition_wall_seconds_outer_check": 19.713137957965955,
+      "preflight_wall_seconds_excluded": 2.7390618750359863,
+      "torch_threads": 4,
+      "opencv_threads": 18,
+      "workload": {
+        "tracknet_calls": 1400,
+        "tracknet_input_frames": 4200,
+        "candidate_peaks": 0,
+        "decode_passes": 1,
+        "frames_decoded": 4200
+      },
+      "raw_predictions": [
+        {
+          "rally_id": 1,
+          "start_ms": 3760.0,
+          "end_ms": 10880.0,
+          "emitted_at_ms": 12560.0
+        },
+        {
+          "rally_id": 2,
+          "start_ms": 23880.0,
+          "end_ms": 31440.0,
+          "emitted_at_ms": 33080.0
+        },
+        {
+          "rally_id": 3,
+          "start_ms": 47200.0,
+          "end_ms": 56480.0,
+          "emitted_at_ms": 58160.0
+        },
+        {
+          "rally_id": 4,
+          "start_ms": 101120.0,
+          "end_ms": 108320.0,
+          "emitted_at_ms": 110000.0
+        },
+        {
+          "rally_id": 5,
+          "start_ms": 142440.0,
+          "end_ms": 153880.0,
+          "emitted_at_ms": 155600.0
+        }
+      ],
+      "export_ranges_padding_500ms": [
+        [
+          3260.0,
+          11380.0
+        ],
+        [
+          23380.0,
+          31940.0
+        ],
+        [
+          46700.0,
+          56980.0
+        ],
+        [
+          100620.0,
+          108820.0
+        ],
+        [
+          141940.0,
+          154380.0
+        ]
+      ],
+      "diagnostics": {
+        "warnings": [],
+        "recognition": {
+          "algorithm": "high-trajectory-frozen-20261018",
+          "config": {
+            "confidence": 0.6,
+            "motion_window_ms": 200,
+            "min_motion_window_ms": 80,
+            "min_speed_px_s": 100,
+            "max_speed_px_s": 4000,
+            "quiet_ms": 1600,
+            "min_flight_span_ms": 2200,
+            "field": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "direction_window_ms": 160,
+            "direction_min_span_ms": 40,
+            "direction_max_residual_px": 80,
+            "top_fraction": 0.15,
+            "exit_max_y_fraction": 0.4,
+            "exit_horizon_ms": 250,
+            "high_clear_gap_ms": 2800,
+            "reentry_x_fraction": 0.2,
+            "turn_jump_px_s": 1100,
+            "track_gap_ms": 120,
+            "return_support_ms": 320,
+            "return_travel_px": 120,
+            "short_event_ms": 5000,
+            "filter_single_flight": true,
+            "filter_uncertain_short": true
+          },
+          "decoded_frames": 4200
+        },
+        "device": "mps",
+        "recognition_wall_s": 19.712088167201728
+      },
+      "point_differences_vs_288x512": {
+        "compared_points": 4200,
+        "points_with_any_changed_value": 4200,
+        "changed_field_counts": {
+          "x": 3984,
+          "y": 3975,
+          "confidence": 4200
+        },
+        "absolute_delta_mean_by_field": {
+          "x": 337.5357142857143,
+          "y": 193.47723214285713,
+          "confidence": 0.16986068173555569
+        },
+        "absolute_delta_max_by_field": {
+          "x": 1867.5,
+          "y": 1035.0,
+          "confidence": 0.9513764288276434
+        },
+        "interpretation": "Numeric output-difference diagnostics against the 288x512 control; not accuracy or ground truth."
+      },
+      "interval_differences_vs_288x512": {
+        "raw_by_prediction_order": [
+          {
+            "control": [
+              [
+                3640.0,
+                9600.0
+              ]
+            ],
+            "candidate": [
+              [
+                3760.0,
+                10880.0
+              ]
+            ],
+            "missing_from_candidate": [
+              [
+                3640.0,
+                3760.0
+              ]
+            ],
+            "extra_in_candidate": [
+              [
+                9600.0,
+                10880.0
+              ]
+            ],
+            "missing_ms": 120.0,
+            "extra_ms": 1280.0
+          },
+          {
+            "control": [
+              [
+                24480.0,
+                31400.0
+              ]
+            ],
+            "candidate": [
+              [
+                23880.0,
+                31440.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                23880.0,
+                24480.0
+              ],
+              [
+                31400.0,
+                31440.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 640.0
+          },
+          {
+            "control": [
+              [
+                47280.0,
+                56720.0
+              ]
+            ],
+            "candidate": [
+              [
+                47200.0,
+                56480.0
+              ]
+            ],
+            "missing_from_candidate": [
+              [
+                56480.0,
+                56720.0
+              ]
+            ],
+            "extra_in_candidate": [
+              [
+                47200.0,
+                47280.0
+              ]
+            ],
+            "missing_ms": 240.0,
+            "extra_ms": 80.0
+          },
+          {
+            "control": [
+              [
+                101080.0,
+                108800.0
+              ]
+            ],
+            "candidate": [
+              [
+                101120.0,
+                108320.0
+              ]
+            ],
+            "missing_from_candidate": [
+              [
+                101080.0,
+                101120.0
+              ],
+              [
+                108320.0,
+                108800.0
+              ]
+            ],
+            "extra_in_candidate": [],
+            "missing_ms": 520.0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                142440.0,
+                153840.0
+              ]
+            ],
+            "candidate": [
+              [
+                142440.0,
+                153880.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                153840.0,
+                153880.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 40.0
+          }
+        ],
+        "export_by_selected_range_order": [
+          {
+            "control": [
+              [
+                3140.0,
+                10100.0
+              ]
+            ],
+            "candidate": [
+              [
+                3260.0,
+                11380.0
+              ]
+            ],
+            "missing_from_candidate": [
+              [
+                3140.0,
+                3260.0
+              ]
+            ],
+            "extra_in_candidate": [
+              [
+                10100.0,
+                11380.0
+              ]
+            ],
+            "missing_ms": 120.0,
+            "extra_ms": 1280.0
+          },
+          {
+            "control": [
+              [
+                23980.0,
+                31900.0
+              ]
+            ],
+            "candidate": [
+              [
+                23380.0,
+                31940.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                23380.0,
+                23980.0
+              ],
+              [
+                31900.0,
+                31940.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 640.0
+          },
+          {
+            "control": [
+              [
+                46780.0,
+                57220.0
+              ]
+            ],
+            "candidate": [
+              [
+                46700.0,
+                56980.0
+              ]
+            ],
+            "missing_from_candidate": [
+              [
+                56980.0,
+                57220.0
+              ]
+            ],
+            "extra_in_candidate": [
+              [
+                46700.0,
+                46780.0
+              ]
+            ],
+            "missing_ms": 240.0,
+            "extra_ms": 80.0
+          },
+          {
+            "control": [
+              [
+                100580.0,
+                109300.0
+              ]
+            ],
+            "candidate": [
+              [
+                100620.0,
+                108820.0
+              ]
+            ],
+            "missing_from_candidate": [
+              [
+                100580.0,
+                100620.0
+              ],
+              [
+                108820.0,
+                109300.0
+              ]
+            ],
+            "extra_in_candidate": [],
+            "missing_ms": 520.0,
+            "extra_ms": 0
+          },
+          {
+            "control": [
+              [
+                141940.0,
+                154340.0
+              ]
+            ],
+            "candidate": [
+              [
+                141940.0,
+                154380.0
+              ]
+            ],
+            "missing_from_candidate": [],
+            "extra_in_candidate": [
+              [
+                154340.0,
+                154380.0
+              ]
+            ],
+            "missing_ms": 0,
+            "extra_ms": 40.0
+          }
+        ],
+        "raw_union": {
+          "control": [
+            [
+              3640.0,
+              9600.0
+            ],
+            [
+              24480.0,
+              31400.0
+            ],
+            [
+              47280.0,
+              56720.0
+            ],
+            [
+              101080.0,
+              108800.0
+            ],
+            [
+              142440.0,
+              153840.0
+            ]
+          ],
+          "candidate": [
+            [
+              3760.0,
+              10880.0
+            ],
+            [
+              23880.0,
+              31440.0
+            ],
+            [
+              47200.0,
+              56480.0
+            ],
+            [
+              101120.0,
+              108320.0
+            ],
+            [
+              142440.0,
+              153880.0
+            ]
+          ],
+          "missing_from_candidate": [
+            [
+              3640.0,
+              3760.0
+            ],
+            [
+              56480.0,
+              56720.0
+            ],
+            [
+              101080.0,
+              101120.0
+            ],
+            [
+              108320.0,
+              108800.0
+            ]
+          ],
+          "extra_in_candidate": [
+            [
+              9600.0,
+              10880.0
+            ],
+            [
+              23880.0,
+              24480.0
+            ],
+            [
+              31400.0,
+              31440.0
+            ],
+            [
+              47200.0,
+              47280.0
+            ],
+            [
+              153840.0,
+              153880.0
+            ]
+          ],
+          "missing_ms": 880.0,
+          "extra_ms": 2040.0
+        },
+        "export_union": {
+          "control": [
+            [
+              3140.0,
+              10100.0
+            ],
+            [
+              23980.0,
+              31900.0
+            ],
+            [
+              46780.0,
+              57220.0
+            ],
+            [
+              100580.0,
+              109300.0
+            ],
+            [
+              141940.0,
+              154340.0
+            ]
+          ],
+          "candidate": [
+            [
+              3260.0,
+              11380.0
+            ],
+            [
+              23380.0,
+              31940.0
+            ],
+            [
+              46700.0,
+              56980.0
+            ],
+            [
+              100620.0,
+              108820.0
+            ],
+            [
+              141940.0,
+              154380.0
+            ]
+          ],
+          "missing_from_candidate": [
+            [
+              3140.0,
+              3260.0
+            ],
+            [
+              56980.0,
+              57220.0
+            ],
+            [
+              100580.0,
+              100620.0
+            ],
+            [
+              108820.0,
+              109300.0
+            ]
+          ],
+          "extra_in_candidate": [
+            [
+              10100.0,
+              11380.0
+            ],
+            [
+              23380.0,
+              23980.0
+            ],
+            [
+              31900.0,
+              31940.0
+            ],
+            [
+              46700.0,
+              46780.0
+            ],
+            [
+              154340.0,
+              154380.0
+            ]
+          ],
+          "missing_ms": 880.0,
+          "extra_ms": 2040.0
+        }
+      },
+      "resources": {
+        "process_sample_count": 21,
+        "process_sampling_interval_seconds_max": 1.0100949169136584,
+        "process_rss_sampled_peak_bytes": 563249152,
+        "process_cpu_percent_sampled_mean": 211.05238095238096,
+        "process_cpu_percent_sampled_max": 233.1,
+        "mps_sample_count": 20,
+        "mps_allocated_sampled_peak_bytes": 79729152,
+        "mps_driver_sampled_peak_bytes": 1195425792,
+        "sampling_note": "Process RSS/CPU and MPS are independent approximately one-second samples; they are observed peaks, not continuous maxima.",
+        "statistics_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-144x256/statistics.json",
+        "resources_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-size/A-short-144x256/resources.json",
+        "wall_seconds": 19.712088167201728,
+        "preflight_wall_seconds_outside_recognition": 2.7390618750359863,
+        "outer_recognition_wall_seconds": 19.713137957965955,
+        "phase_seconds": {
+          "model_initialization": 0.07240300020202994,
+          "tracknet_preprocess_s": 7.153064547339454,
+          "tracknet_inference_and_transfer_s": 12.104110926855356,
+          "tracknet_point_decode_s": 0.15793951856903732,
+          "video_observation": 19.560267427703366,
+          "rally_decision": 0.07911611418239772
+        }
+      },
+      "evidence_directory": "apps/video-clipper/.runtime/opt08a-size/A-short-144x256"
+    }
+  },
+  "summarizer_sha256": "1bdf67043dfce85372784268c7790d9462f88d9b701c41b234c6420f540cab96"
+}

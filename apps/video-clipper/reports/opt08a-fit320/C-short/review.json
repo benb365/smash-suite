@@ -1,0 +1,643 @@
+{
+  "schema_version": 1,
+  "title": "C-short baseline 与 candidate 时间轴对照",
+  "note": "正式人工行仅含 review_status=verified；difference issues 是复看窗口，不代表准确率错误。",
+  "primary_track": "candidate-export",
+  "tracks": [
+    {
+      "id": "truth",
+      "label": "已核验人工回合",
+      "role": "truth"
+    },
+    {
+      "id": "baseline-raw",
+      "label": "baseline 原始区间",
+      "role": "prediction"
+    },
+    {
+      "id": "candidate-raw",
+      "label": "candidate 原始区间",
+      "role": "prediction"
+    },
+    {
+      "id": "baseline-export",
+      "label": "baseline 成片区间",
+      "role": "prediction"
+    },
+    {
+      "id": "candidate-export",
+      "label": "candidate 成片区间",
+      "role": "prediction"
+    },
+    {
+      "id": "excluded",
+      "label": "已确认排除事件",
+      "role": "excluded"
+    }
+  ],
+  "clips": [
+    {
+      "id": "C-short",
+      "title": "C-short",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+      "duration_ms": 180000.313,
+      "media_offset_ms": 0.0,
+      "note": "clip时间从首帧PTS归零；首帧原始PTS=0.0ms。",
+      "intervals": {
+        "truth": [
+          {
+            "id": "1",
+            "label": "第1回合",
+            "start_ms": 2000.0,
+            "end_ms": 5167.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "2",
+            "label": "第2回合",
+            "start_ms": 14333.333333,
+            "end_ms": 20033.333333333332,
+            "review_status": "verified"
+          },
+          {
+            "id": "3",
+            "label": "第3回合",
+            "start_ms": 24433.333333,
+            "end_ms": 42500.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "4",
+            "label": "第4回合",
+            "start_ms": 49433.333333,
+            "end_ms": 68600.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "5",
+            "label": "第5回合",
+            "start_ms": 76133.333333,
+            "end_ms": 84800.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "6",
+            "label": "第6回合",
+            "start_ms": 94566.666667,
+            "end_ms": 103433.333333,
+            "review_status": "verified"
+          },
+          {
+            "id": "7",
+            "label": "第7回合",
+            "start_ms": 111100.0,
+            "end_ms": 114433.333333,
+            "review_status": "verified"
+          },
+          {
+            "id": "8",
+            "label": "第8回合",
+            "start_ms": 120833.333333,
+            "end_ms": 128700.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "9",
+            "label": "第9回合",
+            "start_ms": 146266.666667,
+            "end_ms": 151100.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "10",
+            "label": "第10回合",
+            "start_ms": 157733.333333,
+            "end_ms": 161600.0,
+            "review_status": "verified"
+          }
+        ],
+        "baseline-raw": [
+          {
+            "id": "1",
+            "start_ms": 7700.0,
+            "end_ms": 10800.0
+          },
+          {
+            "id": "2",
+            "start_ms": 14167.0,
+            "end_ms": 20267.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24133.0,
+            "end_ms": 44833.0
+          },
+          {
+            "id": "4",
+            "start_ms": 49567.0,
+            "end_ms": 67367.0
+          },
+          {
+            "id": "5",
+            "start_ms": 70533.0,
+            "end_ms": 88033.0
+          },
+          {
+            "id": "6",
+            "start_ms": 91500.0,
+            "end_ms": 103000.0
+          },
+          {
+            "id": "7",
+            "start_ms": 120933.0,
+            "end_ms": 133600.0
+          },
+          {
+            "id": "8",
+            "start_ms": 149233.0,
+            "end_ms": 153533.0
+          },
+          {
+            "id": "9",
+            "start_ms": 170267.0,
+            "end_ms": 178467.0
+          }
+        ],
+        "candidate-raw": [
+          {
+            "id": "1",
+            "start_ms": 14300.0,
+            "end_ms": 17733.0
+          },
+          {
+            "id": "2",
+            "start_ms": 24467.0,
+            "end_ms": 44400.0
+          },
+          {
+            "id": "3",
+            "start_ms": 49500.0,
+            "end_ms": 67167.0
+          },
+          {
+            "id": "4",
+            "start_ms": 75833.0,
+            "end_ms": 86467.0
+          },
+          {
+            "id": "5",
+            "start_ms": 96533.0,
+            "end_ms": 108967.0
+          },
+          {
+            "id": "6",
+            "start_ms": 120933.0,
+            "end_ms": 129933.0
+          },
+          {
+            "id": "7",
+            "start_ms": 149133.0,
+            "end_ms": 153600.0
+          },
+          {
+            "id": "8",
+            "start_ms": 170267.0,
+            "end_ms": 179533.0
+          }
+        ],
+        "baseline-export": [
+          {
+            "id": "1",
+            "start_ms": 7200.0,
+            "end_ms": 11300.0
+          },
+          {
+            "id": "2",
+            "start_ms": 13667.0,
+            "end_ms": 20767.0
+          },
+          {
+            "id": "3",
+            "start_ms": 23633.0,
+            "end_ms": 45333.0
+          },
+          {
+            "id": "4",
+            "start_ms": 49067.0,
+            "end_ms": 67867.0
+          },
+          {
+            "id": "5",
+            "start_ms": 70033.0,
+            "end_ms": 88533.0
+          },
+          {
+            "id": "6",
+            "start_ms": 91000.0,
+            "end_ms": 103500.0
+          },
+          {
+            "id": "7",
+            "start_ms": 120433.0,
+            "end_ms": 134100.0
+          },
+          {
+            "id": "8",
+            "start_ms": 148733.0,
+            "end_ms": 154033.0
+          },
+          {
+            "id": "9",
+            "start_ms": 169767.0,
+            "end_ms": 178967.0
+          }
+        ],
+        "candidate-export": [
+          {
+            "id": "1",
+            "start_ms": 13800.0,
+            "end_ms": 18233.0
+          },
+          {
+            "id": "2",
+            "start_ms": 23967.0,
+            "end_ms": 44900.0
+          },
+          {
+            "id": "3",
+            "start_ms": 49000.0,
+            "end_ms": 67667.0
+          },
+          {
+            "id": "4",
+            "start_ms": 75333.0,
+            "end_ms": 86967.0
+          },
+          {
+            "id": "5",
+            "start_ms": 96033.0,
+            "end_ms": 109467.0
+          },
+          {
+            "id": "6",
+            "start_ms": 120433.0,
+            "end_ms": 130433.0
+          },
+          {
+            "id": "7",
+            "start_ms": 148633.0,
+            "end_ms": 154100.0
+          },
+          {
+            "id": "8",
+            "start_ms": 169767.0,
+            "end_ms": 180000.3125
+          }
+        ],
+        "excluded": [
+          {
+            "id": "C2-E01",
+            "label": "failed_serve_or_return",
+            "start_ms": 8700.0,
+            "end_ms": 10300.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E02",
+            "label": "shuttle_return",
+            "start_ms": 44000.0,
+            "end_ms": 45000.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E03",
+            "label": "shuttle_return",
+            "start_ms": 86000.0,
+            "end_ms": 88000.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E04",
+            "label": "shuttle_return",
+            "start_ms": 105800.0,
+            "end_ms": 107800.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E05",
+            "label": "shuttle_return",
+            "start_ms": 114600.0,
+            "end_ms": 116000.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E06",
+            "label": "shuttle_return",
+            "start_ms": 132700.0,
+            "end_ms": 134000.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E07",
+            "label": "shuttle_return",
+            "start_ms": 164800.0,
+            "end_ms": 166000.0,
+            "review_status": "human_confirmed"
+          }
+        ]
+      },
+      "issues": [
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 48000.0,
+          "end_ms": 51067.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 101500.0,
+          "end_ms": 110467.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 147633.0,
+          "end_ms": 150733.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 152033.0,
+          "end_ms": 155100.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 176967.0,
+          "end_ms": 180000.313
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 6200.0,
+          "end_ms": 12300.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 12667.0,
+          "end_ms": 15800.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 16233.0,
+          "end_ms": 21767.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 22633.0,
+          "end_ms": 25967.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 42900.0,
+          "end_ms": 46333.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 65667.0,
+          "end_ms": 68867.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 69033.0,
+          "end_ms": 77333.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 84967.0,
+          "end_ms": 89533.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 90000.0,
+          "end_ms": 98033.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 128433.0,
+          "end_ms": 135100.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 12667.0,
+          "end_ms": 15800.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 16233.0,
+          "end_ms": 21767.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 22633.0,
+          "end_ms": 25967.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 42900.0,
+          "end_ms": 46333.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 48000.0,
+          "end_ms": 51067.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 65667.0,
+          "end_ms": 68867.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 69033.0,
+          "end_ms": 77333.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 84967.0,
+          "end_ms": 89533.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 90000.0,
+          "end_ms": 98033.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 101500.0,
+          "end_ms": 110467.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 128433.0,
+          "end_ms": 135100.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 147633.0,
+          "end_ms": 150733.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 152033.0,
+          "end_ms": 155100.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 176967.0,
+          "end_ms": 180000.313
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 47500.0,
+          "end_ms": 50567.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 102000.0,
+          "end_ms": 110967.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 147133.0,
+          "end_ms": 150233.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 152533.0,
+          "end_ms": 155600.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 177467.0,
+          "end_ms": 180000.313
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 5700.0,
+          "end_ms": 12800.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 12167.0,
+          "end_ms": 15300.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 16733.0,
+          "end_ms": 22267.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 22133.0,
+          "end_ms": 25467.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 43400.0,
+          "end_ms": 46833.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 66167.0,
+          "end_ms": 69367.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 68533.0,
+          "end_ms": 76833.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 85467.0,
+          "end_ms": 90033.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 89500.0,
+          "end_ms": 97533.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 128933.0,
+          "end_ms": 135600.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 12167.0,
+          "end_ms": 15300.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 16733.0,
+          "end_ms": 22267.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 22133.0,
+          "end_ms": 25467.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 43400.0,
+          "end_ms": 46833.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 47500.0,
+          "end_ms": 50567.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 66167.0,
+          "end_ms": 69367.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 68533.0,
+          "end_ms": 76833.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 85467.0,
+          "end_ms": 90033.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 89500.0,
+          "end_ms": 97533.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 102000.0,
+          "end_ms": 110967.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 128933.0,
+          "end_ms": 135600.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 147133.0,
+          "end_ms": 150233.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 152533.0,
+          "end_ms": 155600.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 177467.0,
+          "end_ms": 180000.313
+        }
+      ]
+    }
+  ]
+}

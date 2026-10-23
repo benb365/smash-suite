@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "title": "模型输入尺寸对照",
+  "note": "三份完整 A 片真实识别输出。没有匹配的人工标注；时间轴仅比较方案，不代表准确率。",
+  "primary_track": "medium",
+  "tracks": [
+    {
+      "id": "full",
+      "label": "原尺寸 288×512",
+      "role": "prediction"
+    },
+    {
+      "id": "medium",
+      "label": "缩小 216×384",
+      "role": "prediction"
+    },
+    {
+      "id": "small",
+      "label": "缩小 144×256",
+      "role": "prediction"
+    }
+  ],
+  "clips": [
+    {
+      "id": "A-short",
+      "title": "官方高视角短片",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "duration_ms": 168000,
+      "media_offset_ms": 91,
+      "intervals": {
+        "full": [
+          {
+            "id": "1",
+            "start_ms": 3640.0,
+            "end_ms": 9600.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24480.0,
+            "end_ms": 31400.0
+          },
+          {
+            "id": "4",
+            "start_ms": 47280.0,
+            "end_ms": 56720.0
+          },
+          {
+            "id": "6",
+            "start_ms": 101080.0,
+            "end_ms": 108800.0
+          },
+          {
+            "id": "7",
+            "start_ms": 142440.0,
+            "end_ms": 153840.0
+          }
+        ],
+        "medium": [
+          {
+            "id": "1",
+            "start_ms": 3640.0,
+            "end_ms": 15400.0
+          },
+          {
+            "id": "2",
+            "start_ms": 24280.0,
+            "end_ms": 31440.0
+          },
+          {
+            "id": "3",
+            "start_ms": 47280.0,
+            "end_ms": 56640.0
+          },
+          {
+            "id": "4",
+            "start_ms": 100560.0,
+            "end_ms": 108800.0
+          },
+          {
+            "id": "5",
+            "start_ms": 142240.0,
+            "end_ms": 153840.0
+          }
+        ],
+        "small": [
+          {
+            "id": "1",
+            "start_ms": 3760.0,
+            "end_ms": 10880.0
+          },
+          {
+            "id": "2",
+            "start_ms": 23880.0,
+            "end_ms": 31440.0
+          },
+          {
+            "id": "3",
+            "start_ms": 47200.0,
+            "end_ms": 56480.0
+          },
+          {
+            "id": "4",
+            "start_ms": 101120.0,
+            "end_ms": 108320.0
+          },
+          {
+            "id": "5",
+            "start_ms": 142440.0,
+            "end_ms": 153880.0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "label": "较小尺寸第1段结束延长",
+          "start_ms": 8000,
+          "end_ms": 17000
+        },
+        {
+          "label": "第3段结束差异",
+          "start_ms": 52000,
+          "end_ms": 59000
+        },
+        {
+          "label": "第4段边界差异",
+          "start_ms": 100000,
+          "end_ms": 112000
+        }
+      ]
+    }
+  ]
+}

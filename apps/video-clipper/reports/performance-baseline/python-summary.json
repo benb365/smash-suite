@@ -1,0 +1,1349 @@
+{
+  "A": {
+    "case": "A",
+    "status": "passed",
+    "inputs": {
+      "svg": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/python-flamegraph.svg",
+        "bytes": 108520,
+        "sha256": "7619ac0cb1298c480a52193841c00a47d83bbe991482bdecdb94c81be29f7aa8"
+      },
+      "py_spy_log": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/py-spy.log",
+        "bytes": 432,
+        "sha256": "49c74557d7a299e9cfa26123a3d985f459b50b99b180901734b8ce435b0274ee"
+      }
+    },
+    "issues": [],
+    "observations": [
+      "SVG total_samples differs from py-spy log collected sample count; both are preserved"
+    ],
+    "sample_counts": {
+      "svg_total_samples": 17508,
+      "py_spy_log_collected_samples": 17532,
+      "py_spy_log_errors": 0,
+      "svg_minus_log_samples": -24,
+      "counts_equal": false
+    },
+    "warnings": [
+      "[2026-10-20T13:47:59.821614000Z WARN  inferno::flamegraph] Ignored 1 lines with invalid format"
+    ],
+    "sampling_errors": {
+      "count": 0,
+      "raw_py_spy_warning_lines": [],
+      "evidence_completeness": "no reported py-spy stack-unfold errors",
+      "underlying_cause": null
+    },
+    "frame_count": 380,
+    "recognize_coverage": {
+      "found": true,
+      "root_frames": [
+        "recognize (modules/rally/recognize.py:59)"
+      ],
+      "visible_inclusive_entry_union_samples": 4210,
+      "percent_of_full_capture": 24.04615033127713,
+      "visible_residual_samples": 1,
+      "percent_of_full_capture_visible_residual": 0.0057116746630111945,
+      "percent_of_visible_recognize_union_visible_residual": 0.023752969121140142
+    },
+    "handshake_wait": {
+      "svg_frames": [
+        "main (app/worker.py:52)"
+      ],
+      "samples": 10427,
+      "percent_of_full_capture": 59.55563171121773,
+      "worker_source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/backend/app/worker.py",
+      "worker_source_line_52": "time.sleep(.05)",
+      "source_mapping_valid": true,
+      "overlap_with_recognize_samples": 0,
+      "mutually_exclusive_from_recognize": true,
+      "quantifiable_wall_time_from_py_spy_samples": false,
+      "algorithm_hotspot_included": false,
+      "note": "Frame residency is not wall time; use benchmark-clock profile_ready to benchmark_start for full wait duration."
+    },
+    "targets": {
+      "recognize": {
+        "matched_frame_count": 1,
+        "visible_inclusive_union_samples": 4210,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              59
+            ],
+            "inclusive_samples": 4210,
+            "visible_residual_samples": 1,
+            "inclusive_percent_of_denominator": 24.04615033127713,
+            "visible_residual_percent_of_denominator": 0.0057116746630111945
+          }
+        ]
+      },
+      "observe": {
+        "matched_frame_count": 0,
+        "visible_inclusive_union_samples": 0,
+        "functions": []
+      },
+      "person_signals": {
+        "matched_frame_count": 0,
+        "visible_inclusive_union_samples": 0,
+        "functions": []
+      },
+      "tracknet_predictor_entries": {
+        "matched_frame_count": 7,
+        "visible_inclusive_union_samples": 4177,
+        "functions": [
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              66,
+              71,
+              72,
+              73,
+              76,
+              84,
+              86
+            ],
+            "inclusive_samples": 4177,
+            "visible_residual_samples": 1194,
+            "inclusive_percent_of_denominator": 23.85766506739776,
+            "visible_residual_percent_of_denominator": 6.819739547635367
+          }
+        ]
+      },
+      "pose_entries": {
+        "matched_frame_count": 0,
+        "visible_inclusive_union_samples": 0,
+        "functions": []
+      }
+    },
+    "denominators": {
+      "full_capture_samples": 17508,
+      "visible_recognize_entry_union_samples": 4210
+    },
+    "algorithm_hotspots_scope": "Only frames below visible recognize entries are included; handshake wait remains separate. Omitted narrow stack regions remain outside scope.",
+    "concrete_python_frames": {
+      "full_capture_denominator": {
+        "matched_frame_count": 47,
+        "visible_inclusive_union_samples": 4210,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              59
+            ],
+            "inclusive_samples": 4210,
+            "visible_residual_samples": 1,
+            "inclusive_percent_of_denominator": 24.04615033127713,
+            "visible_residual_percent_of_denominator": 0.0057116746630111945
+          },
+          {
+            "frame": "process (modules/rally/rally_stream.py)",
+            "lines": [
+              32
+            ],
+            "inclusive_samples": 4209,
+            "visible_residual_samples": 21,
+            "inclusive_percent_of_denominator": 24.040438656614118,
+            "visible_residual_percent_of_denominator": 0.11994516792323509
+          },
+          {
+            "frame": "process (modules/rally/tracknet_rally.py)",
+            "lines": [
+              63
+            ],
+            "inclusive_samples": 4188,
+            "visible_residual_samples": 11,
+            "inclusive_percent_of_denominator": 23.920493488690884,
+            "visible_residual_percent_of_denominator": 0.06282842129312315
+          },
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              66,
+              71,
+              72,
+              73,
+              76,
+              84,
+              86
+            ],
+            "inclusive_samples": 4177,
+            "visible_residual_samples": 1194,
+            "inclusive_percent_of_denominator": 23.85766506739776,
+            "visible_residual_percent_of_denominator": 6.819739547635367
+          },
+          {
+            "frame": "forward (modules/models/tracknet/model.py)",
+            "lines": [
+              14,
+              46,
+              47,
+              49,
+              50,
+              52,
+              53,
+              54,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              63,
+              64,
+              66,
+              67,
+              68,
+              70,
+              71
+            ],
+            "inclusive_samples": 2126,
+            "visible_residual_samples": 43,
+            "inclusive_percent_of_denominator": 12.1430203335618,
+            "visible_residual_percent_of_denominator": 0.24560201050948138
+          }
+        ]
+      },
+      "visible_recognize_entry_union_denominator": {
+        "matched_frame_count": 47,
+        "visible_inclusive_union_samples": 4210,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              59
+            ],
+            "inclusive_samples": 4210,
+            "visible_residual_samples": 1,
+            "inclusive_percent_of_denominator": 100.0,
+            "visible_residual_percent_of_denominator": 0.023752969121140142
+          },
+          {
+            "frame": "process (modules/rally/rally_stream.py)",
+            "lines": [
+              32
+            ],
+            "inclusive_samples": 4209,
+            "visible_residual_samples": 21,
+            "inclusive_percent_of_denominator": 99.97624703087887,
+            "visible_residual_percent_of_denominator": 0.498812351543943
+          },
+          {
+            "frame": "process (modules/rally/tracknet_rally.py)",
+            "lines": [
+              63
+            ],
+            "inclusive_samples": 4188,
+            "visible_residual_samples": 11,
+            "inclusive_percent_of_denominator": 99.47743467933492,
+            "visible_residual_percent_of_denominator": 0.26128266033254155
+          },
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              66,
+              71,
+              72,
+              73,
+              76,
+              84,
+              86
+            ],
+            "inclusive_samples": 4177,
+            "visible_residual_samples": 1194,
+            "inclusive_percent_of_denominator": 99.21615201900238,
+            "visible_residual_percent_of_denominator": 28.36104513064133
+          },
+          {
+            "frame": "forward (modules/models/tracknet/model.py)",
+            "lines": [
+              14,
+              46,
+              47,
+              49,
+              50,
+              52,
+              53,
+              54,
+              56,
+              57,
+              58,
+              59,
+              61,
+              62,
+              63,
+              64,
+              66,
+              67,
+              68,
+              70,
+              71
+            ],
+            "inclusive_samples": 2126,
+            "visible_residual_samples": 43,
+            "inclusive_percent_of_denominator": 50.49881235154394,
+            "visible_residual_percent_of_denominator": 1.0213776722090262
+          }
+        ]
+      }
+    },
+    "inferno_min_width_percent_of_total_samples": 0.1,
+    "interpretation_limits": [
+      "Inferno omits frames narrower than 0.1% of total samples, so the SVG cannot recover omitted narrow appearances or exact full-stack coverage.",
+      "The recognize denominator is only the interval union of visible recognize entry frames.",
+      "Inclusive counts cover visible occurrences only; omitted narrow occurrences are absent.",
+      "A visible node residual is an upper bound on exclusive own-frame residency at that visible node occurrence; aggregation can omit narrow occurrences and is not a full-function upper bound.",
+      "Residual and inclusive sample counts are stack residency, not pure interpreter CPU time.",
+      "Python waiting and native-library residency are not equated with Python computation.",
+      "Samples/rate are not converted into wall-clock duration or actual baseline proportions.",
+      "Inclusive frame totals use interval unions; visible residual samples are visible parent intervals minus visible direct-child interval unions."
+    ],
+    "source_summary": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/python-analysis/A/summary.json",
+      "bytes": 28981,
+      "sha256": "d1a01c59e88044c2e83b7998b3efb47d6bb8e5fd6a6649c59c8710dd29181cf4"
+    }
+  },
+  "C": {
+    "case": "C",
+    "status": "passed_with_sampling_errors",
+    "inputs": {
+      "svg": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-C/python-flamegraph.svg",
+        "bytes": 163825,
+        "sha256": "ac7368f998ddb245511f12f11b85c7663d699508db3429e824518ee9d80b3b5e"
+      },
+      "py_spy_log": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-C/py-spy.log",
+        "bytes": 706,
+        "sha256": "15a66a51f4bddfe61e7cf50730262f3ea02f86eff0847249c3d81b9a1db996d6"
+      }
+    },
+    "issues": [],
+    "observations": [
+      "SVG total_samples differs from py-spy log collected sample count; both are preserved",
+      "py-spy reports 2 sampling errors; preserve as local missing stack coverage without automatically invalidating parsed SVG"
+    ],
+    "sample_counts": {
+      "svg_total_samples": 22631,
+      "py_spy_log_collected_samples": 22667,
+      "py_spy_log_errors": 2,
+      "svg_minus_log_samples": -36,
+      "counts_equal": false
+    },
+    "warnings": [
+      "[2026-10-21T02:30:24.821292000Z WARN  py_spy] Failed to get stack trace from 50312: Failed to call get_stack_trace for thread 8411946624",
+      "[2026-10-21T02:30:46.204304000Z WARN  py_spy] Failed to get stack trace from 50312: Failed to call get_stack_trace for thread 8411946624",
+      "[2026-10-21T02:32:39.214789000Z WARN  inferno::flamegraph] Ignored 1 lines with invalid format"
+    ],
+    "sampling_errors": {
+      "count": 2,
+      "raw_py_spy_warning_lines": [
+        "[2026-10-21T02:30:24.821292000Z WARN  py_spy] Failed to get stack trace from 50312: Failed to call get_stack_trace for thread 8411946624",
+        "[2026-10-21T02:30:46.204304000Z WARN  py_spy] Failed to get stack trace from 50312: Failed to call get_stack_trace for thread 8411946624"
+      ],
+      "evidence_completeness": "partial",
+      "underlying_cause": "unconfirmed"
+    },
+    "frame_count": 615,
+    "recognize_coverage": {
+      "found": true,
+      "root_frames": [
+        "recognize (modules/rally/recognize.py:106)",
+        "recognize (modules/rally/recognize.py:71)",
+        "recognize (modules/rally/recognize.py:91)",
+        "recognize (modules/rally/recognize.py:97)"
+      ],
+      "visible_inclusive_entry_union_samples": 12179,
+      "percent_of_full_capture": 53.81556272369758,
+      "visible_residual_samples": 75,
+      "percent_of_full_capture_visible_residual": 0.3314038266095179,
+      "percent_of_visible_recognize_union_visible_residual": 0.6158141062484604
+    },
+    "handshake_wait": {
+      "svg_frames": [],
+      "samples": 0,
+      "percent_of_full_capture": 0.0,
+      "worker_source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/backend/app/worker.py",
+      "worker_source_line_52": "time.sleep(.05)",
+      "source_mapping_valid": true,
+      "overlap_with_recognize_samples": 0,
+      "mutually_exclusive_from_recognize": true,
+      "quantifiable_wall_time_from_py_spy_samples": false,
+      "algorithm_hotspot_included": false,
+      "note": "Frame residency is not wall time; use benchmark-clock profile_ready to benchmark_start for full wait duration."
+    },
+    "targets": {
+      "recognize": {
+        "matched_frame_count": 4,
+        "visible_inclusive_union_samples": 12179,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              71,
+              91,
+              97,
+              106
+            ],
+            "inclusive_samples": 12179,
+            "visible_residual_samples": 75,
+            "inclusive_percent_of_denominator": 53.81556272369758,
+            "visible_residual_percent_of_denominator": 0.3314038266095179
+          }
+        ]
+      },
+      "observe": {
+        "matched_frame_count": 3,
+        "visible_inclusive_union_samples": 11540,
+        "functions": [
+          {
+            "frame": "observe (modules/rally/recognize.py)",
+            "lines": [
+              155,
+              197,
+              201
+            ],
+            "inclusive_samples": 11540,
+            "visible_residual_samples": 24,
+            "inclusive_percent_of_denominator": 50.99200212098449,
+            "visible_residual_percent_of_denominator": 0.10604922451504574
+          }
+        ]
+      },
+      "person_signals": {
+        "matched_frame_count": 0,
+        "visible_inclusive_union_samples": 0,
+        "functions": []
+      },
+      "tracknet_predictor_entries": {
+        "matched_frame_count": 13,
+        "visible_inclusive_union_samples": 9261,
+        "functions": [
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              71,
+              72,
+              73,
+              76,
+              82,
+              84,
+              86
+            ],
+            "inclusive_samples": 9261,
+            "visible_residual_samples": 2696,
+            "inclusive_percent_of_denominator": 40.92174450974327,
+            "visible_residual_percent_of_denominator": 11.912862887190137
+          },
+          {
+            "frame": "heatmap_candidates (modules/models/tracknet/predictor.py)",
+            "lines": [
+              21,
+              26,
+              32,
+              34,
+              35,
+              36
+            ],
+            "inclusive_samples": 334,
+            "visible_residual_samples": 334,
+            "inclusive_percent_of_denominator": 1.4758517078343865,
+            "visible_residual_percent_of_denominator": 1.4758517078343865
+          }
+        ]
+      },
+      "pose_entries": {
+        "matched_frame_count": 0,
+        "visible_inclusive_union_samples": 0,
+        "functions": []
+      }
+    },
+    "denominators": {
+      "full_capture_samples": 22631,
+      "visible_recognize_entry_union_samples": 12179
+    },
+    "algorithm_hotspots_scope": "Only frames below visible recognize entries are included; handshake wait remains separate. Omitted narrow stack regions remain outside scope.",
+    "concrete_python_frames": {
+      "full_capture_denominator": {
+        "matched_frame_count": 75,
+        "visible_inclusive_union_samples": 12179,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              71,
+              91,
+              97,
+              106
+            ],
+            "inclusive_samples": 12179,
+            "visible_residual_samples": 75,
+            "inclusive_percent_of_denominator": 53.81556272369758,
+            "visible_residual_percent_of_denominator": 0.3314038266095179
+          },
+          {
+            "frame": "observe (modules/rally/recognize.py)",
+            "lines": [
+              155,
+              197,
+              201
+            ],
+            "inclusive_samples": 11540,
+            "visible_residual_samples": 24,
+            "inclusive_percent_of_denominator": 50.99200212098449,
+            "visible_residual_percent_of_denominator": 0.10604922451504574
+          },
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              71,
+              72,
+              73,
+              76,
+              82,
+              84,
+              86
+            ],
+            "inclusive_samples": 9261,
+            "visible_residual_samples": 2696,
+            "inclusive_percent_of_denominator": 40.92174450974327,
+            "visible_residual_percent_of_denominator": 11.912862887190137
+          },
+          {
+            "frame": "forward (modules/models/tracknet/model.py)",
+            "lines": [
+              14,
+              46,
+              47,
+              49,
+              50,
+              52,
+              53,
+              54,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72
+            ],
+            "inclusive_samples": 5141,
+            "visible_residual_samples": 175,
+            "inclusive_percent_of_denominator": 22.716627634660423,
+            "visible_residual_percent_of_denominator": 0.7732755954222085
+          },
+          {
+            "frame": "people_flush (modules/rally/recognize.py)",
+            "lines": [
+              168,
+              177
+            ],
+            "inclusive_samples": 1134,
+            "visible_residual_samples": 0,
+            "inclusive_percent_of_denominator": 5.010825858335911,
+            "visible_residual_percent_of_denominator": 0.0
+          },
+          {
+            "frame": "associate (modules/rally/common/shuttle_paths.py)",
+            "lines": [
+              28
+            ],
+            "inclusive_samples": 462,
+            "visible_residual_samples": 26,
+            "inclusive_percent_of_denominator": 2.0414475719146306,
+            "visible_residual_percent_of_denominator": 0.11488665989129955
+          },
+          {
+            "frame": "predict (modules/rally/common/seeded_source.py)",
+            "lines": [
+              8,
+              10,
+              14,
+              15
+            ],
+            "inclusive_samples": 436,
+            "visible_residual_samples": 272,
+            "inclusive_percent_of_denominator": 1.926560912023331,
+            "visible_residual_percent_of_denominator": 1.2018912111705182
+          },
+          {
+            "frame": "heatmap_candidates (modules/models/tracknet/predictor.py)",
+            "lines": [
+              21,
+              26,
+              32,
+              34,
+              35,
+              36
+            ],
+            "inclusive_samples": 334,
+            "visible_residual_samples": 334,
+            "inclusive_percent_of_denominator": 1.4758517078343865,
+            "visible_residual_percent_of_denominator": 1.4758517078343865
+          },
+          {
+            "frame": "predict (modules/rally/scenarios/courtside.py)",
+            "lines": [
+              166
+            ],
+            "inclusive_samples": 78,
+            "visible_residual_samples": 4,
+            "inclusive_percent_of_denominator": 0.3446599796738986,
+            "visible_residual_percent_of_denominator": 0.01767487075250762
+          },
+          {
+            "frame": "split_intervals (modules/rally/scenarios/courtside.py)",
+            "lines": [
+              25
+            ],
+            "inclusive_samples": 74,
+            "visible_residual_samples": 0,
+            "inclusive_percent_of_denominator": 0.326985108921391,
+            "visible_residual_percent_of_denominator": 0.0
+          },
+          {
+            "frame": "<listcomp> (modules/rally/recognize.py)",
+            "lines": [
+              177
+            ],
+            "inclusive_samples": 30,
+            "visible_residual_samples": 6,
+            "inclusive_percent_of_denominator": 0.13256153064380716,
+            "visible_residual_percent_of_denominator": 0.026512306128761435
+          },
+          {
+            "frame": "descriptor (modules/rally/common/player_paths.py)",
+            "lines": [
+              59
+            ],
+            "inclusive_samples": 24,
+            "visible_residual_samples": 24,
+            "inclusive_percent_of_denominator": 0.10604922451504574,
+            "visible_residual_percent_of_denominator": 0.10604922451504574
+          },
+          {
+            "frame": "tracks (modules/rally/common/player_paths.py)",
+            "lines": [
+              28
+            ],
+            "inclusive_samples": 24,
+            "visible_residual_samples": 1,
+            "inclusive_percent_of_denominator": 0.10604922451504574,
+            "visible_residual_percent_of_denominator": 0.004418717688126905
+          },
+          {
+            "frame": "<genexpr> (modules/rally/common/player_paths.py)",
+            "lines": [
+              51
+            ],
+            "inclusive_samples": 23,
+            "visible_residual_samples": 23,
+            "inclusive_percent_of_denominator": 0.10163050682691883,
+            "visible_residual_percent_of_denominator": 0.10163050682691883
+          },
+          {
+            "frame": "appearance (modules/rally/common/player_paths.py)",
+            "lines": [
+              51
+            ],
+            "inclusive_samples": 23,
+            "visible_residual_samples": 0,
+            "inclusive_percent_of_denominator": 0.10163050682691883,
+            "visible_residual_percent_of_denominator": 0.0
+          }
+        ]
+      },
+      "visible_recognize_entry_union_denominator": {
+        "matched_frame_count": 75,
+        "visible_inclusive_union_samples": 12179,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              71,
+              91,
+              97,
+              106
+            ],
+            "inclusive_samples": 12179,
+            "visible_residual_samples": 75,
+            "inclusive_percent_of_denominator": 100.0,
+            "visible_residual_percent_of_denominator": 0.6158141062484604
+          },
+          {
+            "frame": "observe (modules/rally/recognize.py)",
+            "lines": [
+              155,
+              197,
+              201
+            ],
+            "inclusive_samples": 11540,
+            "visible_residual_samples": 24,
+            "inclusive_percent_of_denominator": 94.75326381476312,
+            "visible_residual_percent_of_denominator": 0.19706051399950736
+          },
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              71,
+              72,
+              73,
+              76,
+              82,
+              84,
+              86
+            ],
+            "inclusive_samples": 9261,
+            "visible_residual_samples": 2696,
+            "inclusive_percent_of_denominator": 76.0407258395599,
+            "visible_residual_percent_of_denominator": 22.136464405944658
+          },
+          {
+            "frame": "forward (modules/models/tracknet/model.py)",
+            "lines": [
+              14,
+              46,
+              47,
+              49,
+              50,
+              52,
+              53,
+              54,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72
+            ],
+            "inclusive_samples": 5141,
+            "visible_residual_samples": 175,
+            "inclusive_percent_of_denominator": 42.21200426964447,
+            "visible_residual_percent_of_denominator": 1.4368995812464078
+          },
+          {
+            "frame": "people_flush (modules/rally/recognize.py)",
+            "lines": [
+              168,
+              177
+            ],
+            "inclusive_samples": 1134,
+            "visible_residual_samples": 0,
+            "inclusive_percent_of_denominator": 9.311109286476722,
+            "visible_residual_percent_of_denominator": 0.0
+          },
+          {
+            "frame": "associate (modules/rally/common/shuttle_paths.py)",
+            "lines": [
+              28
+            ],
+            "inclusive_samples": 462,
+            "visible_residual_samples": 26,
+            "inclusive_percent_of_denominator": 3.7934148944905166,
+            "visible_residual_percent_of_denominator": 0.2134822234994663
+          },
+          {
+            "frame": "predict (modules/rally/common/seeded_source.py)",
+            "lines": [
+              8,
+              10,
+              14,
+              15
+            ],
+            "inclusive_samples": 436,
+            "visible_residual_samples": 272,
+            "inclusive_percent_of_denominator": 3.57993267099105,
+            "visible_residual_percent_of_denominator": 2.2333524919944168
+          },
+          {
+            "frame": "heatmap_candidates (modules/models/tracknet/predictor.py)",
+            "lines": [
+              21,
+              26,
+              32,
+              34,
+              35,
+              36
+            ],
+            "inclusive_samples": 334,
+            "visible_residual_samples": 334,
+            "inclusive_percent_of_denominator": 2.742425486493144,
+            "visible_residual_percent_of_denominator": 2.742425486493144
+          },
+          {
+            "frame": "predict (modules/rally/scenarios/courtside.py)",
+            "lines": [
+              166
+            ],
+            "inclusive_samples": 78,
+            "visible_residual_samples": 4,
+            "inclusive_percent_of_denominator": 0.6404466704983989,
+            "visible_residual_percent_of_denominator": 0.03284341899991789
+          },
+          {
+            "frame": "split_intervals (modules/rally/scenarios/courtside.py)",
+            "lines": [
+              25
+            ],
+            "inclusive_samples": 74,
+            "visible_residual_samples": 0,
+            "inclusive_percent_of_denominator": 0.607603251498481,
+            "visible_residual_percent_of_denominator": 0.0
+          },
+          {
+            "frame": "<listcomp> (modules/rally/recognize.py)",
+            "lines": [
+              177
+            ],
+            "inclusive_samples": 30,
+            "visible_residual_samples": 6,
+            "inclusive_percent_of_denominator": 0.24632564249938418,
+            "visible_residual_percent_of_denominator": 0.04926512849987684
+          },
+          {
+            "frame": "descriptor (modules/rally/common/player_paths.py)",
+            "lines": [
+              59
+            ],
+            "inclusive_samples": 24,
+            "visible_residual_samples": 24,
+            "inclusive_percent_of_denominator": 0.19706051399950736,
+            "visible_residual_percent_of_denominator": 0.19706051399950736
+          },
+          {
+            "frame": "tracks (modules/rally/common/player_paths.py)",
+            "lines": [
+              28
+            ],
+            "inclusive_samples": 24,
+            "visible_residual_samples": 1,
+            "inclusive_percent_of_denominator": 0.19706051399950736,
+            "visible_residual_percent_of_denominator": 0.008210854749979473
+          },
+          {
+            "frame": "<genexpr> (modules/rally/common/player_paths.py)",
+            "lines": [
+              51
+            ],
+            "inclusive_samples": 23,
+            "visible_residual_samples": 23,
+            "inclusive_percent_of_denominator": 0.18884965924952787,
+            "visible_residual_percent_of_denominator": 0.18884965924952787
+          },
+          {
+            "frame": "appearance (modules/rally/common/player_paths.py)",
+            "lines": [
+              51
+            ],
+            "inclusive_samples": 23,
+            "visible_residual_samples": 0,
+            "inclusive_percent_of_denominator": 0.18884965924952787,
+            "visible_residual_percent_of_denominator": 0.0
+          }
+        ]
+      }
+    },
+    "inferno_min_width_percent_of_total_samples": 0.1,
+    "interpretation_limits": [
+      "Inferno omits frames narrower than 0.1% of total samples, so the SVG cannot recover omitted narrow appearances or exact full-stack coverage.",
+      "The recognize denominator is only the interval union of visible recognize entry frames.",
+      "Inclusive counts cover visible occurrences only; omitted narrow occurrences are absent.",
+      "A visible node residual is an upper bound on exclusive own-frame residency at that visible node occurrence; aggregation can omit narrow occurrences and is not a full-function upper bound.",
+      "Residual and inclusive sample counts are stack residency, not pure interpreter CPU time.",
+      "Python waiting and native-library residency are not equated with Python computation.",
+      "Samples/rate are not converted into wall-clock duration or actual baseline proportions.",
+      "Inclusive frame totals use interval unions; visible residual samples are visible parent intervals minus visible direct-child interval unions."
+    ],
+    "source_summary": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/python-analysis/C/summary.json",
+      "bytes": 38440,
+      "sha256": "e18738c1dd290c69503039dfa813c22e5db5770b46d1c4ae03800fb3ee8b6df3"
+    }
+  },
+  "D": {
+    "case": "D",
+    "status": "passed",
+    "inputs": {
+      "svg": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/python-flamegraph.svg",
+        "bytes": 151498,
+        "sha256": "d1ccc152d0bcabf76ba480109f3eabb9d668c09b03bd78f8cb2a68035bd969cc"
+      },
+      "py_spy_log": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/py-spy.log",
+        "bytes": 432,
+        "sha256": "63ffd36b52f4ba74daec41563e5b23552631e39634d38dbf247a38bdd5103a93"
+      }
+    },
+    "issues": [],
+    "observations": [
+      "SVG total_samples differs from py-spy log collected sample count; both are preserved"
+    ],
+    "sample_counts": {
+      "svg_total_samples": 46137,
+      "py_spy_log_collected_samples": 46153,
+      "py_spy_log_errors": 0,
+      "svg_minus_log_samples": -16,
+      "counts_equal": false
+    },
+    "warnings": [
+      "[2026-10-21T02:40:16.985108000Z WARN  inferno::flamegraph] Ignored 1 lines with invalid format"
+    ],
+    "sampling_errors": {
+      "count": 0,
+      "raw_py_spy_warning_lines": [],
+      "evidence_completeness": "no reported py-spy stack-unfold errors",
+      "underlying_cause": null
+    },
+    "frame_count": 560,
+    "recognize_coverage": {
+      "found": true,
+      "root_frames": [
+        "recognize (modules/rally/recognize.py:113)",
+        "recognize (modules/rally/recognize.py:126)",
+        "recognize (modules/rally/recognize.py:71)"
+      ],
+      "visible_inclusive_entry_union_samples": 32199,
+      "percent_of_full_capture": 69.7899733402692,
+      "visible_residual_samples": 136,
+      "percent_of_full_capture_visible_residual": 0.2947742592713007,
+      "percent_of_visible_recognize_union_visible_residual": 0.4223733656324731
+    },
+    "handshake_wait": {
+      "svg_frames": [],
+      "samples": 0,
+      "percent_of_full_capture": 0.0,
+      "worker_source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/backend/app/worker.py",
+      "worker_source_line_52": "time.sleep(.05)",
+      "source_mapping_valid": true,
+      "overlap_with_recognize_samples": 0,
+      "mutually_exclusive_from_recognize": true,
+      "quantifiable_wall_time_from_py_spy_samples": false,
+      "algorithm_hotspot_included": false,
+      "note": "Frame residency is not wall time; use benchmark-clock profile_ready to benchmark_start for full wait duration."
+    },
+    "targets": {
+      "recognize": {
+        "matched_frame_count": 3,
+        "visible_inclusive_union_samples": 32199,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              71,
+              113,
+              126
+            ],
+            "inclusive_samples": 32199,
+            "visible_residual_samples": 136,
+            "inclusive_percent_of_denominator": 69.7899733402692,
+            "visible_residual_percent_of_denominator": 0.2947742592713007
+          }
+        ]
+      },
+      "observe": {
+        "matched_frame_count": 4,
+        "visible_inclusive_union_samples": 14000,
+        "functions": [
+          {
+            "frame": "observe (modules/rally/recognize.py)",
+            "lines": [
+              155,
+              197,
+              201,
+              210
+            ],
+            "inclusive_samples": 14000,
+            "visible_residual_samples": 211,
+            "inclusive_percent_of_denominator": 30.344409042633895,
+            "visible_residual_percent_of_denominator": 0.45733359342826796
+          }
+        ]
+      },
+      "person_signals": {
+        "matched_frame_count": 7,
+        "visible_inclusive_union_samples": 17982,
+        "functions": [
+          {
+            "frame": "person_signals (modules/rally/recognize.py)",
+            "lines": [
+              249,
+              257,
+              272,
+              294,
+              297,
+              305,
+              309
+            ],
+            "inclusive_samples": 17982,
+            "visible_residual_samples": 1924,
+            "inclusive_percent_of_denominator": 38.97522595747448,
+            "visible_residual_percent_of_denominator": 4.170188785573401
+          }
+        ]
+      },
+      "tracknet_predictor_entries": {
+        "matched_frame_count": 7,
+        "visible_inclusive_union_samples": 6499,
+        "functions": [
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              71,
+              72,
+              73,
+              76,
+              82
+            ],
+            "inclusive_samples": 6499,
+            "visible_residual_samples": 1812,
+            "inclusive_percent_of_denominator": 14.086308169148406,
+            "visible_residual_percent_of_denominator": 3.9274335132323297
+          },
+          {
+            "frame": "heatmap_candidates (modules/models/tracknet/predictor.py)",
+            "lines": [
+              21,
+              35
+            ],
+            "inclusive_samples": 116,
+            "visible_residual_samples": 116,
+            "inclusive_percent_of_denominator": 0.2514251034961094,
+            "visible_residual_percent_of_denominator": 0.2514251034961094
+          }
+        ]
+      },
+      "pose_entries": {
+        "matched_frame_count": 2,
+        "visible_inclusive_union_samples": 16058,
+        "functions": [
+          {
+            "frame": "__call__ (modules/models/keypoint_rcnn/__init__.py)",
+            "lines": [
+              17,
+              19
+            ],
+            "inclusive_samples": 16058,
+            "visible_residual_samples": 72,
+            "inclusive_percent_of_denominator": 34.80503717190108,
+            "visible_residual_percent_of_denominator": 0.1560569607906886
+          }
+        ]
+      }
+    },
+    "denominators": {
+      "full_capture_samples": 46137,
+      "visible_recognize_entry_union_samples": 32199
+    },
+    "algorithm_hotspots_scope": "Only frames below visible recognize entries are included; handshake wait remains separate. Omitted narrow stack regions remain outside scope.",
+    "concrete_python_frames": {
+      "full_capture_denominator": {
+        "matched_frame_count": 42,
+        "visible_inclusive_union_samples": 32199,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              71,
+              113,
+              126
+            ],
+            "inclusive_samples": 32199,
+            "visible_residual_samples": 136,
+            "inclusive_percent_of_denominator": 69.7899733402692,
+            "visible_residual_percent_of_denominator": 0.2947742592713007
+          },
+          {
+            "frame": "person_signals (modules/rally/recognize.py)",
+            "lines": [
+              249,
+              257,
+              272,
+              294,
+              297,
+              305,
+              309
+            ],
+            "inclusive_samples": 17982,
+            "visible_residual_samples": 1924,
+            "inclusive_percent_of_denominator": 38.97522595747448,
+            "visible_residual_percent_of_denominator": 4.170188785573401
+          },
+          {
+            "frame": "__call__ (modules/models/keypoint_rcnn/__init__.py)",
+            "lines": [
+              17,
+              19
+            ],
+            "inclusive_samples": 16058,
+            "visible_residual_samples": 72,
+            "inclusive_percent_of_denominator": 34.80503717190108,
+            "visible_residual_percent_of_denominator": 0.1560569607906886
+          },
+          {
+            "frame": "observe (modules/rally/recognize.py)",
+            "lines": [
+              155,
+              197,
+              201,
+              210
+            ],
+            "inclusive_samples": 14000,
+            "visible_residual_samples": 211,
+            "inclusive_percent_of_denominator": 30.344409042633895,
+            "visible_residual_percent_of_denominator": 0.45733359342826796
+          },
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              71,
+              72,
+              73,
+              76,
+              82
+            ],
+            "inclusive_samples": 6499,
+            "visible_residual_samples": 1812,
+            "inclusive_percent_of_denominator": 14.086308169148406,
+            "visible_residual_percent_of_denominator": 3.9274335132323297
+          },
+          {
+            "frame": "people_flush (modules/rally/recognize.py)",
+            "lines": [
+              168,
+              181,
+              182
+            ],
+            "inclusive_samples": 6267,
+            "visible_residual_samples": 4914,
+            "inclusive_percent_of_denominator": 13.583457962156187,
+            "visible_residual_percent_of_denominator": 10.650887573964496
+          },
+          {
+            "frame": "forward (modules/models/tracknet/model.py)",
+            "lines": [
+              14,
+              46,
+              52,
+              56,
+              59,
+              61,
+              64,
+              66,
+              68,
+              70
+            ],
+            "inclusive_samples": 3242,
+            "visible_residual_samples": 106,
+            "inclusive_percent_of_denominator": 7.026898151158506,
+            "visible_residual_percent_of_denominator": 0.22975052560851378
+          },
+          {
+            "frame": "heatmap_candidates (modules/models/tracknet/predictor.py)",
+            "lines": [
+              21,
+              35
+            ],
+            "inclusive_samples": 116,
+            "visible_residual_samples": 116,
+            "inclusive_percent_of_denominator": 0.2514251034961094,
+            "visible_residual_percent_of_denominator": 0.2514251034961094
+          },
+          {
+            "frame": "<listcomp> (modules/rally/recognize.py)",
+            "lines": [
+              182
+            ],
+            "inclusive_samples": 96,
+            "visible_residual_samples": 96,
+            "inclusive_percent_of_denominator": 0.20807594772091814,
+            "visible_residual_percent_of_denominator": 0.20807594772091814
+          },
+          {
+            "frame": "<module> (modules/rally/common/players_v2.py)",
+            "lines": [
+              6
+            ],
+            "inclusive_samples": 81,
+            "visible_residual_samples": 0,
+            "inclusive_percent_of_denominator": 0.1755640808895247,
+            "visible_residual_percent_of_denominator": 0.0
+          }
+        ]
+      },
+      "visible_recognize_entry_union_denominator": {
+        "matched_frame_count": 42,
+        "visible_inclusive_union_samples": 32199,
+        "functions": [
+          {
+            "frame": "recognize (modules/rally/recognize.py)",
+            "lines": [
+              71,
+              113,
+              126
+            ],
+            "inclusive_samples": 32199,
+            "visible_residual_samples": 136,
+            "inclusive_percent_of_denominator": 100.0,
+            "visible_residual_percent_of_denominator": 0.4223733656324731
+          },
+          {
+            "frame": "person_signals (modules/rally/recognize.py)",
+            "lines": [
+              249,
+              257,
+              272,
+              294,
+              297,
+              305,
+              309
+            ],
+            "inclusive_samples": 17982,
+            "visible_residual_samples": 1924,
+            "inclusive_percent_of_denominator": 55.84645485884655,
+            "visible_residual_percent_of_denominator": 5.975340849094692
+          },
+          {
+            "frame": "__call__ (modules/models/keypoint_rcnn/__init__.py)",
+            "lines": [
+              17,
+              19
+            ],
+            "inclusive_samples": 16058,
+            "visible_residual_samples": 72,
+            "inclusive_percent_of_denominator": 49.87111400975186,
+            "visible_residual_percent_of_denominator": 0.22360942886425045
+          },
+          {
+            "frame": "observe (modules/rally/recognize.py)",
+            "lines": [
+              155,
+              197,
+              201,
+              210
+            ],
+            "inclusive_samples": 14000,
+            "visible_residual_samples": 211,
+            "inclusive_percent_of_denominator": 43.4796111680487,
+            "visible_residual_percent_of_denominator": 0.6552998540327339
+          },
+          {
+            "frame": "__call__ (modules/models/tracknet/predictor.py)",
+            "lines": [
+              71,
+              72,
+              73,
+              76,
+              82
+            ],
+            "inclusive_samples": 6499,
+            "visible_residual_samples": 1812,
+            "inclusive_percent_of_denominator": 20.183856641510605,
+            "visible_residual_percent_of_denominator": 5.627503959750303
+          },
+          {
+            "frame": "people_flush (modules/rally/recognize.py)",
+            "lines": [
+              168,
+              181,
+              182
+            ],
+            "inclusive_samples": 6267,
+            "visible_residual_samples": 4914,
+            "inclusive_percent_of_denominator": 19.4633373707258,
+            "visible_residual_percent_of_denominator": 15.261343519985093
+          },
+          {
+            "frame": "forward (modules/models/tracknet/model.py)",
+            "lines": [
+              14,
+              46,
+              52,
+              56,
+              59,
+              61,
+              64,
+              66,
+              68,
+              70
+            ],
+            "inclusive_samples": 3242,
+            "visible_residual_samples": 106,
+            "inclusive_percent_of_denominator": 10.068635671915278,
+            "visible_residual_percent_of_denominator": 0.3292027702723687
+          },
+          {
+            "frame": "heatmap_candidates (modules/models/tracknet/predictor.py)",
+            "lines": [
+              21,
+              35
+            ],
+            "inclusive_samples": 116,
+            "visible_residual_samples": 116,
+            "inclusive_percent_of_denominator": 0.36025963539240347,
+            "visible_residual_percent_of_denominator": 0.36025963539240347
+          },
+          {
+            "frame": "<listcomp> (modules/rally/recognize.py)",
+            "lines": [
+              182
+            ],
+            "inclusive_samples": 96,
+            "visible_residual_samples": 96,
+            "inclusive_percent_of_denominator": 0.2981459051523339,
+            "visible_residual_percent_of_denominator": 0.2981459051523339
+          },
+          {
+            "frame": "<module> (modules/rally/common/players_v2.py)",
+            "lines": [
+              6
+            ],
+            "inclusive_samples": 81,
+            "visible_residual_samples": 0,
+            "inclusive_percent_of_denominator": 0.25156060747228176,
+            "visible_residual_percent_of_denominator": 0.0
+          }
+        ]
+      }
+    },
+    "inferno_min_width_percent_of_total_samples": 0.1,
+    "interpretation_limits": [
+      "Inferno omits frames narrower than 0.1% of total samples, so the SVG cannot recover omitted narrow appearances or exact full-stack coverage.",
+      "The recognize denominator is only the interval union of visible recognize entry frames.",
+      "Inclusive counts cover visible occurrences only; omitted narrow occurrences are absent.",
+      "A visible node residual is an upper bound on exclusive own-frame residency at that visible node occurrence; aggregation can omit narrow occurrences and is not a full-function upper bound.",
+      "Residual and inclusive sample counts are stack residency, not pure interpreter CPU time.",
+      "Python waiting and native-library residency are not equated with Python computation.",
+      "Samples/rate are not converted into wall-clock duration or actual baseline proportions.",
+      "Inclusive frame totals use interval unions; visible residual samples are visible parent intervals minus visible direct-child interval unions."
+    ],
+    "source_summary": {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/python-analysis/D/summary.json",
+      "bytes": 34686,
+      "sha256": "c404def84e418c3a7012bad5fb081411179c6f3cc32d11e5a4637097a3f82eeb"
+    }
+  }
+}

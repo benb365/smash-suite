@@ -1,0 +1,251 @@
+{
+  "case_id": "D-short",
+  "video_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 0,
+      "end_ms": 7200.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 18900.0,
+      "end_ms": 27000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 29700.0,
+      "end_ms": 42000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 50300.0,
+      "end_ms": 55000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 63500.0,
+      "end_ms": 68600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 77500.0,
+      "end_ms": 90000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 100900.0,
+      "end_ms": 108000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 115500.0,
+      "end_ms": 129600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 137100.0,
+      "end_ms": 145600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 153100.0,
+      "end_ms": 176800.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 11,
+      "start_ms": 198700.0,
+      "end_ms": 207800.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 12,
+      "start_ms": 215700.0,
+      "end_ms": 233000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 13,
+      "start_ms": 241300.0,
+      "end_ms": 246200.0,
+      "emitted_at_ms": 250900.3125
+    }
+  ],
+  "export_ranges": [
+    [
+      0,
+      7700.0
+    ],
+    [
+      18400.0,
+      27500.0
+    ],
+    [
+      29200.0,
+      42500.0
+    ],
+    [
+      49800.0,
+      55500.0
+    ],
+    [
+      63000.0,
+      69100.0
+    ],
+    [
+      77000.0,
+      90500.0
+    ],
+    [
+      100400.0,
+      108500.0
+    ],
+    [
+      115000.0,
+      130100.0
+    ],
+    [
+      136600.0,
+      146100.0
+    ],
+    [
+      152600.0,
+      177300.0
+    ],
+    [
+      198200.0,
+      208300.0
+    ],
+    [
+      215200.0,
+      233500.0
+    ],
+    [
+      240800.0,
+      246700.0
+    ]
+  ],
+  "provenance": {
+    "source_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/evidence/result.json",
+    "input_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/input.json",
+    "input_sha256": "685a07ff98dd4775efc30e031f428903f90725e0e30dc7023e245f03911271ac",
+    "request_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/evidence/request.json",
+    "request_sha256": "d92b8b98a975b6f0e242dbc05a85a42bf9e73c8c9ebaa6bc1e23dc724e20eac1",
+    "freeze_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/docs/ai/performance-first-round/controller/freezes/combined-d.json",
+    "freeze_sha256": "91e92d48797d7f5745879b163d804bce029ccab981c95b0dc06446d197a8dbc1",
+    "manifest_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/apps/video-clipper/reports/performance-first-round/inputs.json",
+    "manifest_sha256": "afd60a8dbb0930948faf6962fb881b27e27fc42d8dc4f395ff923695f27d8ec4",
+    "run_id": "combined-d",
+    "base_commit": "5c946e9e6186d052624ca6f853a62d40f034f6e8",
+    "source_commit": "ba0fd88b4563c5366a5dcdac8c5a941573a1a65b",
+    "current_commit": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+    "comparison": "Frozen combined-D source hashes match ba0fd88. Diff from ba0fd88 to current 94a8465 only removes PoseEstimator detailed sub-timing and changes model(crop, statistics=stats) to model(crop); recognition and interval logic are unchanged. D-short is personal, so the courtside-only TrackNet cache path is inactive.",
+    "metadata": {
+      "scene": "personal",
+      "camera_type": "personal",
+      "quality": "balanced",
+      "device": "mps",
+      "algorithm": "personal-context-candidate-20261018",
+      "native_frames": 7527,
+      "person_observations": 1255,
+      "selected_track_ids": [
+        58,
+        40
+      ],
+      "statistics_enabled": true
+    },
+    "source_limitations": "Historical interval output is suitable to check current retained intervals, but its detailed pose timing instrumentation differs from current source, so it cannot supply current-source cost. Model identity is corroborated by the completed outer result metadata and matching preserved model-copy SHA-256 records. Not an accuracy/recall reference.",
+    "source_code_sha256": {
+      "modules/rally/recognize.py": "ee2c0a949522ab6c809bf7da9afb4a4956dda9ad3b6da4fc389e8f0598e8bcd0",
+      "modules/models/keypoint_rcnn/__init__.py": "379ed20f3c6e228efecd08828ee8b6b6dc6a89084dd19173163ef1cab9c19316",
+      "modules/models/tracknet/predictor.py": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa"
+    },
+    "source_sha256": "3a23dd7aeb08c60ecac95ebe585c06cd5c9fade97a9fd85ee276641d570b9aff",
+    "outer_run_result_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/result.json",
+    "outer_run_result_sha256": "27a6f99fa98633a8550e73eb8f259783c676fe387e21efb6da235459f21a982a",
+    "outer_run_metadata": {
+      "case_id": "D-short",
+      "input_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "status": "completed",
+      "statistics_enabled": true,
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 250900.3125,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 0.0
+        },
+        "output_url": "/media/oQsa4P15PZfA372VVgmHOR3z9oeCnLpEYCvNQx-yDtY/output.mp4",
+        "output_bytes": 20814940,
+        "output_duration_ms": 147100.0,
+        "rally_count": 13,
+        "elapsed_s": 295.94129804102704,
+        "timings": {
+          "preparation_s": 0.5400862081442028,
+          "recognition_s": 282.56640620785765,
+          "rendering_s": 12.834805625025183
+        },
+        "error": null,
+        "camera_type": "personal",
+        "quality": "balanced",
+        "warnings": []
+      },
+      "timings": {
+        "preparation_s": 0.5400862081442028,
+        "recognition_s": 282.56640620785765,
+        "rendering_s": 12.834805625025183,
+        "total_s": 295.94129804102704
+      },
+      "clock": {
+        "worker_spawn_start": 1347723.74725625,
+        "benchmark_start": 1347724.112299541,
+        "recognition": 1347724.287342458,
+        "rendering": 1348006.853748666,
+        "completed": 1348019.688554291,
+        "finished": 1348019.688749916
+      },
+      "resources_sha256": "86c9a037e8714c7d13f4e5a2f98aeaa44b80cf54f57eb9e47b1b5ccda8eb85da"
+    },
+    "model_weights": {
+      "ball_track.pt": {
+        "source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/prepared-models/ball_track.pt",
+        "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b",
+        "preserved_copy_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+        "preserved_bytes": 45400030,
+        "preserved_sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+      },
+      "yolo11n.pt": {
+        "source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/prepared-models/yolo11n.pt",
+        "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "preserved_copy_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+        "preserved_bytes": 5613764,
+        "preserved_sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+      },
+      "pose_kpRCNN.pth": {
+        "source": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/prepared-models/pose_kpRCNN.pth",
+        "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1",
+        "preserved_copy_path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/pose_kpRCNN.pth",
+        "preserved_bytes": 237101765,
+        "preserved_sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+      }
+    },
+    "evidence_preservation_path": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite/docs/ai/performance-first-round/controller/evidence-preservation.json",
+    "evidence_preservation_sha256": "52e08e786e0786ad3ae213e1df468c1863433b2c2f7ebeb66aabfe1893d57f78",
+    "evidence_preservation_verification": "pass"
+  }
+}

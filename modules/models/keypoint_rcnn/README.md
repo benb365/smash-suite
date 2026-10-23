@@ -41,9 +41,13 @@ print(model.device, stats)
 
 统计通过 `perf_counter` 测量，取回输出时等待相关设备结果，不额外做全局 GPU 同步或重置全局显存统计。这里不包含场景模块的视频解码、人物跟踪和光流耗时，也不能用来代替整个剪辑任务的耗时。
 
+回合识别的个人视角入口在识别设备为 CUDA 时自动使用 CUDA，否则使用 CPU；默认批大小为 `1`，独立调用模型的 CPU 默认值保持不变。本分支保留上述累计计时接口，完整任务的阶段统计由回合模块的 `Statistics` 提供。
+
+首轮 OPT-01 的 CPU 细分测量与 OPT-02 同帧批处理是历史试验，见[阶段报告](../../../docs/features/performance-optimization/reports/first-round.md#诊断与效果测试)。OPT-02 因漏掉仍在回合中的确认点而阻塞，不能据调用减少启用默认批处理。Windows 真实裁剪中的批处理差异另见[2026-10-21 性能报告](../../../apps/video-clipper/reports/pose-performance-20261021.md)；这些历史结果不替代最新整合版本的验证。
+
 ## 用视频测试
 
-完成[共同环境准备](../../../README.md#开发工作流)，在仓库根目录运行：
+完成[共同环境准备](../../../README.md#开发环境)，在仓库根目录运行：
 
 ```sh
 .venv/bin/python -m modules.models --model keypoint_rcnn \

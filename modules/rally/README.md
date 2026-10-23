@@ -18,9 +18,9 @@ A 可以逐帧调用，确认结束后输出完整回合；C/D 会使用后续�
 
 ## 当前进展
 
-A 保留原逐帧方案，C/D 已接入确认的改进并继续通过文件分析使用。当前评估纳入 A/C/D，B 继续暂缓。整理后 16 份保存观测回放与确认结果逐项一致；这不等于重新运行模型或验证真实视频效果。已知漏回合、边界和间歇问题仍待处理，独立来源验收未完成。记录见[算法确认报告](experiments/reports/algorithm-decisions-20261019.md)和[整理后快速检查](../../docs/ai/2026-10-19-quick-check/notes.md)。
+A 保留原逐帧方案，C/D 已接入确认的改进并继续通过文件分析使用。当前评估纳入 A/C/D，B 继续暂缓。历史整理检查曾记录 16 份保存观测输出一致；其输入缓存现已缺失，旧检查入口已移除，不能作为当前可复验的证据。已知漏回合、边界和间歇问题仍待处理，独立来源验收未完成。记录见[算法确认报告](experiments/reports/algorithm-decisions-20261019.md)和[整理后快速检查](../../docs/ai/2026-10-19-quick-check/notes.md)。
 
-Windows 本机已对同一 D1 完成真实模型 CPU/CUDA 姿态性能对照，原始回合区间和成片保持相同；阶段计时、批次限制及原有边界缺陷见[实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)。该诊断素材结果不替代独立来源效果验收。
+Windows 2026-10-21 的 D1 CPU/CUDA 对照见[历史实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)。当前 `codex/windows-latest` 正在整合 develop 的高级配置、统计及球路观测接口，本轮真实运行仍待验证；旧素材输出一致不替代当前版本或独立来源效果验收。
 
 ## 输入输出与职责
 
@@ -42,7 +42,7 @@ Windows 本机已对同一 D1 完成真实模型 CPU/CUDA 姿态性能对照，�
 
 ## 运行场景算法
 
-按[项目首页](../../README.md#开发工作流)准备环境，在仓库根目录执行：
+按[项目首页](../../README.md#开发环境)准备环境，在仓库根目录执行：
 
 ```sh
 .venv/bin/python -m modules.rally --scene high \
@@ -52,17 +52,29 @@ Windows 本机已对同一 D1 完成真实模型 CPU/CUDA 姿态性能对照，�
 
 其他场景使用 `--scene courtside` 或 `--scene personal`；必要时用 `--court '[[0,0],[1,0],[1,1],[0,1]]'` 传入四个归一化主场角点。输出 `result.json` 包含原始回合区间、识别说明和设备信息，不导出成片，不施加产品的前后补时。
 
-Python 调用入口是 `recognize(source, info, camera_type, weights, progress, directory, court=None, *, pose_device=None, pose_batch_size=1)`：`info` 由媒体模块的 `probe` 提供，`weights` 可由模型模块的 `ensure_models(required_models(camera_type))` 获取，`directory` 为调用者已创建的工作目录。产品负责界面请求到这些参数的转换。
+Python 调用入口是 `recognize(source, info, camera_type, weights, progress, directory, court=None, statistics=None, optimizations=None, observation_sink=None, *, pose_device=None, pose_batch_size=1)`：`info` 由媒体模块的 `probe` 提供，`weights` 可由模型模块的 `ensure_models(required_models(camera_type))` 获取，`directory` 为调用者已创建的工作目录。产品负责界面请求到这些参数的转换。
 
-个人斜侧方的姿态模型默认在当前识别设备为 CUDA 时使用该设备，其余情况使用 CPU，MPS 仍使用 CPU。可显式传入 `pose_device="cpu"` 或 `pose_device="cuda"` 比较同一输入；显式指定的设备不可用时直接报错。`pose_batch_size` 是正整数，默认 `1`；较大值仅合并同一观测帧内的人物裁剪，不跨帧，不改变帧采样、裁剪范围、关节筛选或后续光流判断顺序。
+### 姿态设备与统计
 
-返回的 `details["performance"]` 使用 `perf_counter` 记录 `model_setup_s`、`observe_s`、`person_tracking_s`、`candidate_motion_s`、`person_signals_s`、`scenario_decision_s` 和 `total_s`。模型构造计入 `model_setup_s`，从对应的观测和人物信号阶段扣除；YOLO 在首次预测时进行的设备初始化和预热仍计入观测阶段的 `yolo_wall_s`，该字段不代表纯前向耗时。总耗时还包含进度回调、导入及结果写入等开销。高视角的逐帧识别和决定交织进行，统一计入 `observe_s`，并由 `observe_includes_scenario_decision` 标明，不另外补造决定阶段的耗时。
+个人斜侧方的姿态模型默认在当前识别设备为 CUDA 时使用该设备，其余情况使用 CPU，MPS 仍使用 CPU。可显式传入 `pose_device="cpu"` 或 `pose_device="cuda"`；指定设备不可用时直接报错。`pose_batch_size` 是正整数，默认 `1`；较大值仅合并同一观测帧内的人物裁剪，不跨帧。批处理可能因模型内部补边产生关节和动作判断差异，启用前须核对最终回合及成片。
 
-C/D 的 `performance["observe"]` 细分归一化图像准备 `frame_prepare_s`、人物检测 `yolo_wall_s`、外观描述 `descriptor_wall_s` 和灰度准备/Farneback 光流/身体活动 `farneback_body_motion_wall_s`。`tracknet` 累计每次模型的 `preprocess_s`、`inference_and_transfer_s`、`point_decode_s`，另记外层 `wall_s`、调用数、输入帧次数及 native/shifted/tail 调用数；重复输入的帧按实际调用计数，尾部调用同样计入。`input` 原样保留 `FileFrameSource.stats`，其中解码与像素转换发生在生产线程，可以和消费侧工作重叠；它们用于解释热点，不能加成互斥阶段或与外层总时钟重复相加。
+模块使用 `statistics.py` 的可选 `Statistics` 聚合诊断；主阶段包括模型初始化、视频观测、人物与轨迹、动作分析、回合判断及中间写盘。主阶段互斥，模型、解码和传输细项嵌套其中；并行解码不能另加到总耗时。`pose_calls` 记录真实推理批次数，`person_crops` 记录输入裁剪数；实际姿态设备、批大小与模型累计计时保存在识别诊断中。2026-10-21 旧报告的 `details["performance"]` 结构不再作为当前阶段统计接口。
 
-个人动作入口 `person_signals(source, info, people, ball, weight, progress, *, pose_device="cpu", pose_batch_size=1, metrics=None)` 保持原返回值，可将性能细项写入调用者传入的字典。该字典也由 `recognize` 放入 `performance["person_signals"]`：`decode_s` 记录容器打开与逐帧解码等待，`frame_prepare_s`、`crop_prepare_s` 记录图像准备，`pose_wall_s` 记录姿态批次调用，`pose_selection_s` 记录人物匹配，`flow_s` 记录后续 LK 光流与统计，`extract_s` 记录信号提取；另含帧数、设备、批大小和包含模型初始化的 `total_s`。`pose_model` 原样保留模型的 `initialization_s`、`tensor_preparation_s`、`inference_and_transfer_s`、`batch_count` 和 `crop_count`。这些嵌套项用于解释阶段内部成本，不能与外层阶段重复相加；输出已取回 CPU 后无需额外同步 CUDA。
+直接调用个人动作入口时，可传 `person_signals(..., statistics=None, *, max_fps=None, candidate_ids=None, pose_device="cpu", pose_batch_size=1, metrics=None)`；`metrics` 为需要额外诊断的调用方字典，不改变信号返回值。完整剪辑耗时由产品记录，模型自身的累计计时见[姿态模型](../models/keypoint_rcnn/README.md#查看耗时)。
 
 命令行可用 `--pose-device cpu` / `--pose-device cuda` 和 `--pose-batch-size 1` 选择个人视角的姿态执行方式。剪辑应用 worker 对应读取 `SMASH_SUITE_POSE_DEVICE`、`SMASH_SUITE_POSE_BATCH_SIZE`；未设置时使用上述默认值。
+
+### 文件识别配置
+
+`optimizations` 接受 `limit_fps`、`small_input`、`grayscale`、`dynamic_scan` 四个布尔值。模块直接调用时省略的字段为关闭；产品先解析[场景默认值](../../apps/video-clipper/requirements.md#高级选项)，再显式传入完整配置。
+
+处理顺序为源时间选帧、三帧分组、模型输入处理和回合判断。35fps 上限保留原始帧号与时间戳，三帧组及每六帧人物观测按选中帧顺序调度；个人视角第二遍选帧使用相同规则，肩腕上下文仍取锚点后第 1、3、5 个选中帧。尺寸和灰度行为由[找球模型](../models/tracknet/README.md#调用)维护。
+
+动态粗筛只用于文件分析。每个源时间秒检查该相位首个完整三帧窗口，任一帧全局峰分数达到 0.5 即向两侧按三帧组扩展，包含首个全负停止组。同一相位的相同窗口只推理一次。C 保留基础和错位两相位及首尾补全；D 保留完整人物观测，候选控制姿态推理，已选锚点的肩腕上下文不受候选限制。跳过位置保留缺失观测与原时间，不直接裁断回合；A 用单个原分段器离线回放，不修改逐帧接口。
+
+结果的 `recognition` 保存有效开关、帧率上限、实际网络与有效图像尺寸（高、宽）、颜色模式，以及启用粗筛时的窗口计数。导出补时仍由应用独立处理。
+
+高视角可通过 `observation_sink` 逐条保存实际找球观测供球路分析复用；粗筛缺失位置不会作为模型观测写入，保留真实源帧号和时间。
 
 ## 效果评估
 
@@ -79,14 +91,12 @@ C/D 的 `performance["observe"]` 细分归一化图像准备 `frame_prepare_s`�
 
 ## 实验与自动测试
 
-`common/` 保存共用处理步骤，`scenarios/` 保存场景组合与参数，`evaluation/` 提供评分；`experiments/` 保存诊断及回放入口，运行文件放 `.runtime/`。历史试验源码归档到 `backup/`，不由产品动态导入。
+`common/` 保存共用处理步骤，`scenarios/` 保存场景组合与参数，`evaluation/` 提供评分；`experiments/` 保存诊断入口，运行文件放 `.runtime/`。历史试验源码归档到 `backup/`，不由产品动态导入。
 
 ```sh
 .venv/bin/python -m pytest modules/rally/tests
-.venv/bin/python -m modules.rally.experiments.replay \
-  --output modules/rally/.runtime/migration-replay.json
 ```
 
-回放入口使用 16 份保留的 A/C/D 观测，检查所选方案是否与确认记录逐条一致，不运行模型；它不能替代从视频运行的完整验证。共用缓存的片段按用例声明的窗口截取，并将帧号和时间归零，详见[实验入口说明](experiments/README.md)。
+当前自动测试使用合成输入校验流式契约和算法规则。真实视频须从上方场景入口重新推理，不能由旧缓存检查替代。本轮性能任务已按[性能基线报告](../../apps/video-clipper/reports/performance-baseline.md)完成三份真实短片的统计开关对照，原始识别区间与成片结构均一致；该对照不代表准确率验收。更多入口见[实验说明](experiments/README.md)。
 
 原文件输入诊断入口保留为 `modules.rally.experiments.run_live_tracknet`，支持 `offline/realtime`、固定重复和处理日志；`run_tracknet` 保留已确认恒定帧率素材的早期基线入口。

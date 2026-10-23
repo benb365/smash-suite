@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "error": null,
+  "primary_phases": [
+    "model_initialization",
+    "video_observation",
+    "people_and_trajectories",
+    "action_analysis",
+    "rally_decision",
+    "intermediate_writes"
+  ],
+  "seconds": {
+    "model_initialization": 0.08902449999004602,
+    "tracknet_preprocess_s": 3.2476712178904563,
+    "tracknet_inference_and_transfer_s": 11.387895462103188,
+    "tracknet_point_decode_s": 0.1747762463055551,
+    "video_observation": 22.0310865000356,
+    "rally_decision": 0.07257433305494487,
+    "intermediate_writes": 0.013787457952275872
+  },
+  "counts": {
+    "tracknet_calls": 562,
+    "tracknet_input_frames": 1686,
+    "candidate_peaks": 0,
+    "decode_passes": 1,
+    "frames_decoded": 4200
+  },
+  "sources": [
+    {
+      "pass_name": "observation",
+      "frames_decoded": 4200,
+      "frames_delivered": 4200,
+      "queue_peak": 6,
+      "decode_s": 8.660775169264525,
+      "conversion_s": 5.369954423978925,
+      "max_lag_s": 0.0,
+      "fps": 25.0,
+      "expected_frames": 4200,
+      "width": 1920,
+      "height": 1080,
+      "first_pts_ms": 91.0,
+      "last_timestamp_ms": 167960.0,
+      "last_delivered_timestamp_ms": 167960.0
+    }
+  ],
+  "mps_samples": [
+    {
+      "monotonic_s": 1508030.549277416,
+      "allocated_bytes": 0,
+      "driver_bytes": 458752
+    },
+    {
+      "monotonic_s": 1508031.5599365,
+      "allocated_bytes": 50090496,
+      "driver_bytes": 1162330112
+    },
+    {
+      "monotonic_s": 1508032.5699705,
+      "allocated_bytes": 140333568,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508033.579998375,
+      "allocated_bytes": 220549632,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508034.590028,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508035.600067625,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508036.610094291,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508037.618933833,
+      "allocated_bytes": 173363712,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508038.621420958,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508039.631471166,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508040.635524166,
+      "allocated_bytes": 173363712,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508041.645550458,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508042.654766125,
+      "allocated_bytes": 50090496,
+      "driver_bytes": 1162313728
+    },
+    {
+      "monotonic_s": 1508043.66482275,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508044.667574791,
+      "allocated_bytes": 140333568,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508045.677597333,
+      "allocated_bytes": 140333568,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508046.68295625,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508047.693030375,
+      "allocated_bytes": 220549632,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508048.703096583,
+      "allocated_bytes": 220549632,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508049.713135375,
+      "allocated_bytes": 220549632,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508050.723178666,
+      "allocated_bytes": 220549632,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508051.732562333,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508052.755692291,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508053.765751708,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508054.775832958,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508055.785884333,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508056.795932041,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508057.805988541,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1158447104
+    },
+    {
+      "monotonic_s": 1508058.816036708,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1158447104
+    },
+    {
+      "monotonic_s": 1508059.826081041,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1158447104
+    }
+  ],
+  "accounting": "Primary phases are exclusive; model and decode subtimings overlap their parent. Decoder work is on another thread. Do not sum subtimings or process memory with MPS memory."
+}

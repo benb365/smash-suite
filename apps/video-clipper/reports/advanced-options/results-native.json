@@ -1,0 +1,1247 @@
+{
+  "schema_version": 1,
+  "status": "completed",
+  "kind": "baseline",
+  "evidence_directory": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/advanced-options/20261023-native",
+  "manifest_sha256": "3e75e3ed47a8265f2ba480f80bc5ffa8d01de5a6b1ea8f835dedb0195b53120f",
+  "inputs_sha256": "20b0f3bc72096f6f44b14b1fda7c70cf483fa5ed339f24bd11143b2736c842d1",
+  "results": [
+    {
+      "case_id": "A-all-off",
+      "input": {
+        "scene": "high",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+        "court": null,
+        "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+        "status": "passed",
+        "metadata": {
+          "bytes": 70418255,
+          "container_duration_s": 168.091,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 25.0,
+          "container_frames": 4200,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "A-all-off",
+        "optimizations": {
+          "limit_fps": false,
+          "small_input": false,
+          "grayscale": false,
+          "dynamic_scan": false
+        }
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        }
+      },
+      "input_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 168000.0,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 91.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 16834404,
+        "output_duration_ms": 46440.0,
+        "rally_count": 5,
+        "elapsed_s": 47.86881770915352,
+        "timings": {
+          "preparation_s": 0.5066571249626577,
+          "recognition_s": 37.98369641718455,
+          "rendering_s": 9.378464167006314
+        },
+        "error": null,
+        "camera_type": "high",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": false,
+          "small_input": false,
+          "grayscale": false,
+          "dynamic_scan": false
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 765,
+          "sha256": "ed2e9980637bba0decc3697f575ad7baf7942a64c050121f040efd9fdadb30c1"
+        },
+        "result.json": {
+          "bytes": 1747,
+          "sha256": "9ec8224caff2eb4c3876ad5be4483368692af204975720317f6f77b2fcdca95d"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 935,
+          "sha256": "8464c05d493907a2980326f5189d7ac289487a7f635d60655c15edb2df7cac86"
+        },
+        "worker.log": {
+          "bytes": 912,
+          "sha256": "1dfe7c6aac57165112eedddaf92dba10c85246e5c967ac3c641bbd381e2ca85a"
+        },
+        "output.mp4": {
+          "bytes": 16834404,
+          "sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa"
+        },
+        "statistics.json": {
+          "bytes": 6052,
+          "sha256": "f679600d097156e208b7b075d765e2b381313d1084474b5c553c9229607b6ef4"
+        },
+        "frame.jpg": {
+          "bytes": 389375,
+          "sha256": "bcc68a44e809edf7cd612442eaf7ca1cd2508f68d56e4650be86e29f08fa6e79"
+        },
+        "benchmark-clock.json": {
+          "bytes": 208,
+          "sha256": "6deaa1202088131c618cf9879c57d1a37849ab44d489ba7df207e81a55bf520d"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.5066571249626577,
+        "recognition_s": 37.98369641718455,
+        "rendering_s": 9.378464167006314,
+        "total_s": 47.86881770915352
+      },
+      "clock": {
+        "worker_spawn_start": 1514497.645829666,
+        "benchmark_start": 1514498.056421666,
+        "recognition": 1514498.152486791,
+        "rendering": 1514536.136183208,
+        "completed": 1514545.514647375,
+        "finished": 1514545.514896333
+      },
+      "resources": {
+        "samples": 49,
+        "max_interval_s": 1.0211930410005152,
+        "pids": [
+          73780,
+          73781,
+          73846
+        ],
+        "observed_peak": {
+          "cpu_percent": 580.0,
+          "rss_bytes": 1263271936,
+          "work_logical_bytes": 87652653,
+          "work_without_source_logical_bytes": 17234398
+        },
+        "minimum_disk_free_bytes": 1594831601664,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "0ce172ce4fe8847c36da8550e09066508ddf85f797105f38766d40549bd80667",
+      "lease_errors": []
+    },
+    {
+      "case_id": "C-all-off",
+      "input": {
+        "scene": "courtside",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+        "court": null,
+        "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+        "status": "passed",
+        "metadata": {
+          "bytes": 66256451,
+          "container_duration_s": 180.000313,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 29.99994791675709,
+          "container_frames": 5400,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "C-all-off",
+        "optimizations": {
+          "limit_fps": false,
+          "small_input": false,
+          "grayscale": false,
+          "dynamic_scan": false
+        }
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        }
+      },
+      "input_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 180000.3125,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 0.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 44465082,
+        "output_duration_ms": 110867.0,
+        "rally_count": 9,
+        "elapsed_s": 133.2159562089946,
+        "timings": {
+          "preparation_s": 0.3234564589802176,
+          "recognition_s": 112.65627583302557,
+          "rendering_s": 20.23622391698882
+        },
+        "error": null,
+        "camera_type": "courtside",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": false,
+          "small_input": false,
+          "grayscale": false,
+          "dynamic_scan": false
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 772,
+          "sha256": "abe4e97af0779d5fbde3a6c2e13b8dbd7f06cb1bdb9f25add212abedc02618f5"
+        },
+        "result.json": {
+          "bytes": 1857,
+          "sha256": "d81a20d835436a80c34578141a269a95b78afed8d7d3d107904d44f075a26a75"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 1587,
+          "sha256": "7897d1caaf5e88a906e0b6fdb39e9ee8ea190f5db8c2804cdfe8c53d1adcad9b"
+        },
+        "worker.log": {
+          "bytes": 1454,
+          "sha256": "94282b4a689721954155bdb4ca93071b8fb18f1d912e4b5b4e57e82fd4e91b5b"
+        },
+        "decisions.json": {
+          "bytes": 13634,
+          "sha256": "1be2326629b0a062c7b2f41fdb34a780ef2b5df3e3aa3f7dc23cb3afc2bfea24"
+        },
+        "output.mp4": {
+          "bytes": 44465082,
+          "sha256": "4f16419abb135c1866e55f09b24e88fa35b586c2c60c780280bb79d9a2df0519"
+        },
+        "statistics.json": {
+          "bytes": 15296,
+          "sha256": "9d947b66ceaba3fd63d94c42cb60592014f1f6112bdd4e16604d14306e033f10"
+        },
+        "frame.jpg": {
+          "bytes": 533749,
+          "sha256": "b4fd8e36ce2cf76908ff96656930542e935b616469152dae24be29460456775e"
+        },
+        "benchmark-clock.json": {
+          "bytes": 200,
+          "sha256": "24aba441aa444cba47de563aad3fe707f4a3da28b633377010bf0ad6d3e9842d"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.3234564589802176,
+        "recognition_s": 112.65627583302557,
+        "rendering_s": 20.23622391698882,
+        "total_s": 133.2159562089946
+      },
+      "clock": {
+        "worker_spawn_start": 1514547.078113541,
+        "benchmark_start": 1514547.323958,
+        "recognition": 1514547.40157,
+        "rendering": 1514660.057845833,
+        "completed": 1514680.29406975,
+        "finished": 1514680.294353125
+      },
+      "resources": {
+        "samples": 132,
+        "max_interval_s": 1.0273186250124127,
+        "pids": [
+          73874,
+          73877,
+          73881,
+          73882,
+          75086
+        ],
+        "observed_peak": {
+          "cpu_percent": 501.4,
+          "rss_bytes": 2383003648,
+          "work_logical_bytes": 111640977,
+          "work_without_source_logical_bytes": 45384526
+        },
+        "minimum_disk_free_bytes": 1594709581824,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "0d029af352c8f36ed587475081d66242a35be9098c5a59b31bdddb489edde3c5",
+      "lease_errors": [
+        "received 1001 (going away); then sent 1001 (going away)"
+      ]
+    },
+    {
+      "case_id": "D-all-off",
+      "input": {
+        "scene": "personal",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+        "court": null,
+        "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+        "status": "passed",
+        "metadata": {
+          "bytes": 14278282,
+          "container_duration_s": 250.900313,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 29.999962634562284,
+          "container_frames": 7527,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "D-all-off",
+        "optimizations": {
+          "limit_fps": false,
+          "small_input": false,
+          "grayscale": false,
+          "dynamic_scan": false
+        }
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        },
+        "pose_kpRCNN.pth": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/pose_kpRCNN.pth",
+          "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+        }
+      },
+      "input_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 250900.3125,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 0.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 20814940,
+        "output_duration_ms": 147100.0,
+        "rally_count": 13,
+        "elapsed_s": 289.76014925003983,
+        "timings": {
+          "preparation_s": 0.5489897078368813,
+          "recognition_s": 275.9558669591788,
+          "rendering_s": 13.25529258302413
+        },
+        "error": null,
+        "camera_type": "personal",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": false,
+          "small_input": false,
+          "grayscale": false,
+          "dynamic_scan": false
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 771,
+          "sha256": "b8551dddfc92f0b02364e58e34cf4af9d3146e117ab7fdcac3fc186346ea3287"
+        },
+        "person-signals.npz": {
+          "bytes": 82894,
+          "sha256": "acb26813bfc0a0cfc51752dcf2278a98250462d83cd3f650f3986cf79f1bf2ed"
+        },
+        "result.json": {
+          "bytes": 2073,
+          "sha256": "821a0411f6868caa3215a13a2da8fa707d8155ff0ec48acf76224396a7d35314"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 2192,
+          "sha256": "a0047cb6d4a00127ca530f338928ddd2c3c3791a787a63fd6ca06720ee2e5772"
+        },
+        "worker.log": {
+          "bytes": 1454,
+          "sha256": "eff35f151b8853eb281d53a146f2e1f99e4cdc09f115be2f53579e9783a220dc"
+        },
+        "decisions.json": {
+          "bytes": 6918,
+          "sha256": "ecc3d1438204d95c0fb4c178cf4b089aed0956c7711958840dd311f0c649eac3"
+        },
+        "output.mp4": {
+          "bytes": 20814940,
+          "sha256": "f97c720cda23768819373766cb49f5c3531179a879fdfa0dc043f497726d5eed"
+        },
+        "statistics.json": {
+          "bytes": 35254,
+          "sha256": "48613da68ca85e62626421db1f8e1ca36962e1a3cc8a6cfa69d4c1d475caefce"
+        },
+        "frame.jpg": {
+          "bytes": 363150,
+          "sha256": "5e5145974bcb8f02834bb6627dd8c33cf462bf5e682d6b6a89d48a2ff64d3d9c"
+        },
+        "benchmark-clock.json": {
+          "bytes": 207,
+          "sha256": "98d78a5bf56373f3877fa050746fd6471ee8988b9f45f3297773c70f665be441"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.5489897078368813,
+        "recognition_s": 275.9558669591788,
+        "rendering_s": 13.25529258302413,
+        "total_s": 289.76014925003983
+      },
+      "clock": {
+        "worker_spawn_start": 1514681.739110958,
+        "benchmark_start": 1514682.11339225,
+        "recognition": 1514682.288100666,
+        "rendering": 1514958.243967625,
+        "completed": 1514971.499260208,
+        "finished": 1514971.499654541
+      },
+      "resources": {
+        "samples": 286,
+        "max_interval_s": 1.023229334037751,
+        "pids": [
+          75610,
+          75619,
+          75621,
+          75622,
+          78055
+        ],
+        "observed_peak": {
+          "cpu_percent": 477.9,
+          "rss_bytes": 2349547520,
+          "work_logical_bytes": 35939030,
+          "work_without_source_logical_bytes": 21660748
+        },
+        "minimum_disk_free_bytes": 1594422312960,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "0c5f3a8413afa3c70a8fc0e74f10838809b34a8ceb25a6517eb5ed03b1f55a61",
+      "lease_errors": []
+    },
+    {
+      "case_id": "A-new-default",
+      "input": {
+        "scene": "high",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+        "court": null,
+        "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+        "status": "passed",
+        "metadata": {
+          "bytes": 70418255,
+          "container_duration_s": 168.091,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 25.0,
+          "container_frames": 4200,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "A-new-default"
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        }
+      },
+      "input_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 168000.0,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 91.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 15825819,
+        "output_duration_ms": 43440.0,
+        "rally_count": 5,
+        "elapsed_s": 29.767039166064933,
+        "timings": {
+          "preparation_s": 0.44105804106220603,
+          "recognition_s": 21.311310874996707,
+          "rendering_s": 8.01467025000602
+        },
+        "error": null,
+        "camera_type": "high",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": true,
+          "small_input": true,
+          "grayscale": true,
+          "dynamic_scan": true
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 769,
+          "sha256": "d6558f707fb7ba325df672da6af8210f41de1500823dd24742f13a27d9f7ca95"
+        },
+        "result.json": {
+          "bytes": 1999,
+          "sha256": "46e0adc55270450262c3b7132df05144264c0392fcc3918f946c31c1111a397d"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 945,
+          "sha256": "326cbf83f0aef71a79744987f7fe093f5688cefd0bb0919c8750f2ffa1d1b50e"
+        },
+        "worker.log": {
+          "bytes": 912,
+          "sha256": "7d67977382a8d1f4ea3aa866e0c85cab79ba0ff2c9994506dce1d2c50fd583e2"
+        },
+        "output.mp4": {
+          "bytes": 15825819,
+          "sha256": "9f52c4260684cad0c10971986e7b22ec44fa4f2d65c0f1596eababd5f2184e62"
+        },
+        "statistics.json": {
+          "bytes": 3982,
+          "sha256": "595a1e756b98bf5f8d93a16549d8c0a9c7bed1d9b7a7bbecc123f16ce00eff75"
+        },
+        "frame.jpg": {
+          "bytes": 389375,
+          "sha256": "bcc68a44e809edf7cd612442eaf7ca1cd2508f68d56e4650be86e29f08fa6e79"
+        },
+        "benchmark-clock.json": {
+          "bytes": 207,
+          "sha256": "ef42f2a9c1a0de9abd957a5c2b7eb00d2b1f48577cd34182ae80d69f947ce8fa"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.44105804106220603,
+        "recognition_s": 21.311310874996707,
+        "rendering_s": 8.01467025000602,
+        "total_s": 29.767039166064933
+      },
+      "clock": {
+        "worker_spawn_start": 1514972.68555125,
+        "benchmark_start": 1514973.041463166,
+        "recognition": 1514973.126609291,
+        "rendering": 1514994.437920166,
+        "completed": 1515002.452590416,
+        "finished": 1515002.452808666
+      },
+      "resources": {
+        "samples": 31,
+        "max_interval_s": 1.0230708331800997,
+        "pids": [
+          78075,
+          78084,
+          78501
+        ],
+        "observed_peak": {
+          "cpu_percent": 588.6,
+          "rss_bytes": 1364393984,
+          "work_logical_bytes": 86642263,
+          "work_without_source_logical_bytes": 16224008
+        },
+        "minimum_disk_free_bytes": 1594299576320,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "962f6e7c64ed812cb34a33019916e1a4ec3d30587b624dcddd924f8a0574f05f",
+      "lease_errors": [
+        "received 1001 (going away); then sent 1001 (going away)"
+      ]
+    },
+    {
+      "case_id": "C-new-default",
+      "input": {
+        "scene": "courtside",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+        "court": null,
+        "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+        "status": "passed",
+        "metadata": {
+          "bytes": 66256451,
+          "container_duration_s": 180.000313,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 29.99994791675709,
+          "container_frames": 5400,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "C-new-default"
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        }
+      },
+      "input_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 180000.3125,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 0.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 40011730,
+        "output_duration_ms": 98536.3125,
+        "rally_count": 8,
+        "elapsed_s": 116.36348233395256,
+        "timings": {
+          "preparation_s": 0.32395237497985363,
+          "recognition_s": 99.34346716688015,
+          "rendering_s": 16.69606279209256
+        },
+        "error": null,
+        "camera_type": "courtside",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": true,
+          "small_input": true,
+          "grayscale": true,
+          "dynamic_scan": false
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 777,
+          "sha256": "4f1382251f75f23d1ca5688cb29489f627bd98752359279568ee39ecf48b032d"
+        },
+        "result.json": {
+          "bytes": 1752,
+          "sha256": "b55a5681ad74ab68a40a576e6f3110e59995ed3dde4afbbdd6c22353959019b9"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 1444,
+          "sha256": "e73a662059a4cf4575b6335f46bd1592cd0fd032177fe4f4c713e18bc8dc1c13"
+        },
+        "worker.log": {
+          "bytes": 1458,
+          "sha256": "43413ff0ab6f8270a8dd1bde4a39f97f65d4ceb6f6e97803810d9644c716d504"
+        },
+        "decisions.json": {
+          "bytes": 10513,
+          "sha256": "9ed615b64e5ad1d3ab77e4fc8d9d666d66428ef70ba66820ff4c5d5979c65b89"
+        },
+        "output.mp4": {
+          "bytes": 40011730,
+          "sha256": "a96778edc4efe1e10052f7993e421e85df0a1e8ee387363f11fe1095dbe0a698"
+        },
+        "statistics.json": {
+          "bytes": 13956,
+          "sha256": "8caca4f61039abedf20241b6eef24a9311c476e74a1f9b6353a4f29ddf18b554"
+        },
+        "frame.jpg": {
+          "bytes": 533749,
+          "sha256": "b4fd8e36ce2cf76908ff96656930542e935b616469152dae24be29460456775e"
+        },
+        "benchmark-clock.json": {
+          "bytes": 207,
+          "sha256": "281e209b59ebed9f04dc54b7329cb6fe03a10c3bb91083ca941af16f30a8fedc"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.32395237497985363,
+        "recognition_s": 99.34346716688015,
+        "rendering_s": 16.69606279209256,
+        "total_s": 116.36348233395256
+      },
+      "clock": {
+        "worker_spawn_start": 1515003.909343416,
+        "benchmark_start": 1515004.165420583,
+        "recognition": 1515004.233295791,
+        "rendering": 1515103.576762958,
+        "completed": 1515120.27282575,
+        "finished": 1515120.273022458
+      },
+      "resources": {
+        "samples": 116,
+        "max_interval_s": 1.020938582951203,
+        "pids": [
+          78514,
+          78544,
+          78589,
+          78590,
+          78962
+        ],
+        "observed_peak": {
+          "cpu_percent": 514.4,
+          "rss_bytes": 2321022976,
+          "work_logical_bytes": 107182932,
+          "work_without_source_logical_bytes": 40926481
+        },
+        "minimum_disk_free_bytes": 1594189512704,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "f9adc38586ec9b832559fcfa9e0487495a45f7e5726cfc84d52a2e2bcf147adb",
+      "lease_errors": []
+    },
+    {
+      "case_id": "D-new-default",
+      "input": {
+        "scene": "personal",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+        "court": null,
+        "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+        "status": "passed",
+        "metadata": {
+          "bytes": 14278282,
+          "container_duration_s": 250.900313,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 29.999962634562284,
+          "container_frames": 7527,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "D-new-default"
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        },
+        "pose_kpRCNN.pth": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/pose_kpRCNN.pth",
+          "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+        }
+      },
+      "input_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 250900.3125,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 0.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 20668985,
+        "output_duration_ms": 146100.0,
+        "rally_count": 13,
+        "elapsed_s": 289.68502483400516,
+        "timings": {
+          "preparation_s": 0.568074791925028,
+          "recognition_s": 274.90100787510164,
+          "rendering_s": 14.215942166978493
+        },
+        "error": null,
+        "camera_type": "personal",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": true,
+          "small_input": true,
+          "grayscale": true,
+          "dynamic_scan": false
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 776,
+          "sha256": "13b45cf587a818152f9121a730dc98b0726c6441a143de003db63af960c871f5"
+        },
+        "person-signals.npz": {
+          "bytes": 82878,
+          "sha256": "c0f17911b84b49ccb581eb6e809b863a7dad8b9ce6b3d3ad263c9719ea4bd8a7"
+        },
+        "result.json": {
+          "bytes": 2067,
+          "sha256": "02e0a6c5103cd6fa6ba281d654500724f9defd55080616bb6135d0d3a7526c40"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 2192,
+          "sha256": "8aaa393643cdcdc0cbabbaa85c909c6c27a147f407637b98f32be2f439765699"
+        },
+        "worker.log": {
+          "bytes": 1458,
+          "sha256": "1820c13a747ae3a6acba98529afb22ab0404052606c4c1b13419ecba00db7496"
+        },
+        "decisions.json": {
+          "bytes": 6918,
+          "sha256": "121c9ad5146d99cb4f0450b1450d8eadf7b85d4c045938d05b03dbdbd80f48e7"
+        },
+        "output.mp4": {
+          "bytes": 20668985,
+          "sha256": "a49c5b9e1e0c3663d2595d345aca754c7c471f87b06e144b113d57de70b58b0a"
+        },
+        "statistics.json": {
+          "bytes": 35160,
+          "sha256": "515915d992ee246918b2a8d12db584dbf33de42050c1e0139bcb1e4e6a29c519"
+        },
+        "frame.jpg": {
+          "bytes": 363150,
+          "sha256": "5e5145974bcb8f02834bb6627dd8c33cf462bf5e682d6b6a89d48a2ff64d3d9c"
+        },
+        "benchmark-clock.json": {
+          "bytes": 206,
+          "sha256": "49f9f3021c5755092cfda622afdd9986cf3fafd51684e922fe1b36f28a1dee40"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.568074791925028,
+        "recognition_s": 274.90100787510164,
+        "rendering_s": 14.215942166978493,
+        "total_s": 289.68502483400516
+      },
+      "clock": {
+        "worker_spawn_start": 1515121.792878666,
+        "benchmark_start": 1515122.179175708,
+        "recognition": 1515122.360953458,
+        "rendering": 1515397.261961333,
+        "completed": 1515411.4779035,
+        "finished": 1515411.478284083
+      },
+      "resources": {
+        "samples": 286,
+        "max_interval_s": 1.049139125039801,
+        "pids": [
+          79051,
+          79060,
+          79074,
+          79075,
+          82289
+        ],
+        "observed_peak": {
+          "cpu_percent": 474.2,
+          "rss_bytes": 2327740416,
+          "work_logical_bytes": 35792967,
+          "work_without_source_logical_bytes": 21514685
+        },
+        "minimum_disk_free_bytes": 1593913024512,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "021f8a116742fadf387ffd31f5e86f1afc006a0bb144aa4f093096c4ec3beced",
+      "lease_errors": [
+        "received 1001 (going away); then sent 1001 (going away)"
+      ]
+    },
+    {
+      "case_id": "C-dynamic-on",
+      "input": {
+        "scene": "courtside",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+        "court": null,
+        "sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+        "status": "passed",
+        "metadata": {
+          "bytes": 66256451,
+          "container_duration_s": 180.000313,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 29.99994791675709,
+          "container_frames": 5400,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "C-dynamic-on",
+        "optimizations": {
+          "limit_fps": true,
+          "small_input": true,
+          "grayscale": true,
+          "dynamic_scan": true
+        }
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        }
+      },
+      "input_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 180000.3125,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 0.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 40011730,
+        "output_duration_ms": 98536.3125,
+        "rally_count": 8,
+        "elapsed_s": 106.96660616691224,
+        "timings": {
+          "preparation_s": 0.4859112079720944,
+          "recognition_s": 89.55516662495211,
+          "rendering_s": 16.92552833398804
+        },
+        "error": null,
+        "camera_type": "courtside",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": true,
+          "small_input": true,
+          "grayscale": true,
+          "dynamic_scan": true
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 799,
+          "sha256": "14e52e42be1436a00315a5591b9af49b5e1c1338cc7f657d154b8b8f54ac3e28"
+        },
+        "result.json": {
+          "bytes": 2187,
+          "sha256": "4d72901fd47c557bb52478b38693aca8b5def19cf44f9ea6c700841fdba98420"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 1444,
+          "sha256": "e73a662059a4cf4575b6335f46bd1592cd0fd032177fe4f4c713e18bc8dc1c13"
+        },
+        "worker.log": {
+          "bytes": 1457,
+          "sha256": "b624f4d95e5fbda693e4a40196bdeb77bd885a34d1d404af46e2b1598d9a47d4"
+        },
+        "decisions.json": {
+          "bytes": 10516,
+          "sha256": "56240896f3ae698bedbd428cd0385e64dfcc5e599746c02c77137edf7c4aa90c"
+        },
+        "output.mp4": {
+          "bytes": 40011730,
+          "sha256": "a96778edc4efe1e10052f7993e421e85df0a1e8ee387363f11fe1095dbe0a698"
+        },
+        "statistics.json": {
+          "bytes": 12640,
+          "sha256": "62b8db1f5a10279672a42a385a7b9c94dce0889de0809665069ca69434804e8c"
+        },
+        "frame.jpg": {
+          "bytes": 533749,
+          "sha256": "b4fd8e36ce2cf76908ff96656930542e935b616469152dae24be29460456775e"
+        },
+        "benchmark-clock.json": {
+          "bytes": 206,
+          "sha256": "e8f0c182d09eb2ac284bf108206146f7be98685bff4ce464f62438ccecc4cc44"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.4859112079720944,
+        "recognition_s": 89.55516662495211,
+        "rendering_s": 16.92552833398804,
+        "total_s": 106.96660616691224
+      },
+      "clock": {
+        "worker_spawn_start": 1515412.644221333,
+        "benchmark_start": 1515413.038495208,
+        "recognition": 1515413.130132541,
+        "rendering": 1515502.685299166,
+        "completed": 1515519.6108275,
+        "finished": 1515519.611067416
+      },
+      "resources": {
+        "samples": 107,
+        "max_interval_s": 1.022444583941251,
+        "pids": [
+          82617,
+          82623,
+          82634,
+          82635,
+          83837
+        ],
+        "observed_peak": {
+          "cpu_percent": 509.2,
+          "rss_bytes": 2464448512,
+          "work_logical_bytes": 107182074,
+          "work_without_source_logical_bytes": 40925623
+        },
+        "minimum_disk_free_bytes": 1593901404160,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "93d3d199feed27e8d064a19bb8989752240c5a00f0530718750ea0800dda026a",
+      "lease_errors": [
+        "received 1001 (going away); then sent 1001 (going away)"
+      ]
+    },
+    {
+      "case_id": "D-dynamic-on",
+      "input": {
+        "scene": "personal",
+        "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+        "court": null,
+        "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+        "status": "passed",
+        "metadata": {
+          "bytes": 14278282,
+          "container_duration_s": 250.900313,
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "fps": 29.999962634562284,
+          "container_frames": 7527,
+          "audio_streams": 1,
+          "audio_codecs": [
+            "aac"
+          ]
+        },
+        "case_id": "D-dynamic-on",
+        "optimizations": {
+          "limit_fps": true,
+          "small_input": true,
+          "grayscale": true,
+          "dynamic_scan": true
+        }
+      },
+      "kind": "baseline",
+      "weights": {
+        "ball_track.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        },
+        "pose_kpRCNN.pth": {
+          "source": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/pose_kpRCNN.pth",
+          "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+        }
+      },
+      "input_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+      "statistics_enabled": true,
+      "status": "completed",
+      "state": {
+        "status": "completed",
+        "stage": "成片已生成，预览后保存",
+        "progress": 1,
+        "video": {
+          "name": "clip.mp4",
+          "duration_ms": 250900.3125,
+          "width": 1920,
+          "height": 1080,
+          "has_audio": true,
+          "first_pts_ms": 0.0
+        },
+        "output_url": "/media/<redacted>/output.mp4",
+        "output_bytes": 6478563,
+        "output_duration_ms": 44300.0,
+        "rally_count": 7,
+        "elapsed_s": 146.50623825006187,
+        "timings": {
+          "preparation_s": 0.5793349160812795,
+          "recognition_s": 140.9413418341428,
+          "rendering_s": 4.985561499837786
+        },
+        "error": null,
+        "camera_type": "personal",
+        "quality": "balanced",
+        "optimizations": {
+          "limit_fps": true,
+          "small_input": true,
+          "grayscale": true,
+          "dynamic_scan": true
+        },
+        "warnings": []
+      },
+      "artifacts": {
+        "request.json": {
+          "bytes": 798,
+          "sha256": "db6d21bd4c378e914ddfe44329662e6208d27a1707304ab15ce5f606f45eb7a6"
+        },
+        "person-signals.npz": {
+          "bytes": 51204,
+          "sha256": "2a9d7e88bfdd2642cef8b6a5ed228729c1777b82a3e133e6eb7a83c403f6a86d"
+        },
+        "result.json": {
+          "bytes": 1650,
+          "sha256": "adb09ed21f0c22db2bfdac22b1e2b5036e23142f3ffddc824ccf40f84a0f4698"
+        },
+        "output.ffmpeg.log": {
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "output.filters": {
+          "bytes": 1259,
+          "sha256": "5b9bb1a7b0dee5618e74505b9521653653609e744ccbfa542d1fd3b262db5674"
+        },
+        "worker.log": {
+          "bytes": 1457,
+          "sha256": "e630c41a1df313b999bffd3ad2f10c7199aa80779496062488e0a2d1a9aec0ab"
+        },
+        "decisions.json": {
+          "bytes": 5641,
+          "sha256": "fb6c28ee9018ab280ed737ecb0efa8a21fcfff7e1fe2347a9b7e6906749e4d94"
+        },
+        "output.mp4": {
+          "bytes": 6478563,
+          "sha256": "cabad6aa36cc0f811fceede4f5a958a55009e60184efdbfe0abca2efdff7a178"
+        },
+        "statistics.json": {
+          "bytes": 19076,
+          "sha256": "3ced899fc43c10e6d654f11bcd32c894bbb29216844e1b0c7ed1c813b6f02e59"
+        },
+        "frame.jpg": {
+          "bytes": 363150,
+          "sha256": "5e5145974bcb8f02834bb6627dd8c33cf462bf5e682d6b6a89d48a2ff64d3d9c"
+        },
+        "benchmark-clock.json": {
+          "bytes": 202,
+          "sha256": "42921700c88e98bea89b353f548b6472e8e471d8b99228e5d780a3199c020765"
+        }
+      },
+      "timings": {
+        "preparation_s": 0.5793349160812795,
+        "recognition_s": 140.9413418341428,
+        "rendering_s": 4.985561499837786,
+        "total_s": 146.50623825006187
+      },
+      "clock": {
+        "worker_spawn_start": 1515521.10667,
+        "benchmark_start": 1515521.506438791,
+        "recognition": 1515521.686004916,
+        "rendering": 1515662.62734675,
+        "completed": 1515667.61290825,
+        "finished": 1515667.613138458
+      },
+      "resources": {
+        "samples": 145,
+        "max_interval_s": 1.027507625054568,
+        "pids": [
+          83882,
+          83886,
+          83888,
+          83889,
+          85503
+        ],
+        "observed_peak": {
+          "cpu_percent": 540.4,
+          "rss_bytes": 2318336000,
+          "work_logical_bytes": 21552177,
+          "work_without_source_logical_bytes": 7273895
+        },
+        "minimum_disk_free_bytes": 1593622228992,
+        "errors": [],
+        "limitations": "One-second observations can miss short-lived processes and transient peaks. CPU is percent of one logical core; RSS sums processes and may count shared pages twice. MPS counters are separate, never added to RSS."
+      },
+      "resources_sha256": "dc1a36650a9ddc4f2fb09694a858fb51db436111de8ae1eaf399e3e5e5a35a8b",
+      "lease_errors": [
+        "received 1001 (going away); then sent 1001 (going away)"
+      ]
+    }
+  ],
+  "limits": "One run per input, not a stability estimate or 30-minute acceptance. Profiling is separate from baseline."
+}

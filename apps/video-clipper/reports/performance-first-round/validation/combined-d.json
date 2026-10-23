@@ -1,0 +1,159 @@
+{
+  "candidate": "apps/video-clipper/.runtime/performance-first-round/combined-d/D-short",
+  "reference": "apps/video-clipper/.runtime/performance-first-round/opt01-d/D-short",
+  "equal": {
+    "predictions": true,
+    "export_ranges": true,
+    "output_duration_ms": true,
+    "quality": true,
+    "padding_ms": true,
+    "warnings": true
+  },
+  "candidate_media": {
+    "path": "apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/evidence/output.mp4",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "time_base": "1/16000",
+        "start_time": 0,
+        "duration": 2353600,
+        "width": 1920,
+        "height": 1080,
+        "average_rate": "30"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "time_base": "1/44100",
+        "start_time": 0,
+        "duration": 6487110,
+        "sample_rate": 44100,
+        "channels": 2
+      }
+    ],
+    "decoded": {
+      "video": {
+        "frames": 4413,
+        "first_pts_s": 0.0,
+        "last_pts_s": 147.067,
+        "strictly_increasing_pts": true
+      },
+      "audio": {
+        "frames": 6336,
+        "first_pts_s": 0.0,
+        "last_pts_s": 147.0984126984127,
+        "strictly_increasing_pts": true
+      }
+    }
+  },
+  "reference_media": {
+    "path": "apps/video-clipper/.runtime/performance-first-round/opt01-d/D-short/evidence/output.mp4",
+    "streams": [
+      {
+        "type": "video",
+        "codec": "h264",
+        "time_base": "1/16000",
+        "start_time": 0,
+        "duration": 2353600,
+        "width": 1920,
+        "height": 1080,
+        "average_rate": "30"
+      },
+      {
+        "type": "audio",
+        "codec": "aac",
+        "time_base": "1/44100",
+        "start_time": 0,
+        "duration": 6487110,
+        "sample_rate": 44100,
+        "channels": 2
+      }
+    ],
+    "decoded": {
+      "video": {
+        "frames": 4413,
+        "first_pts_s": 0.0,
+        "last_pts_s": 147.067,
+        "strictly_increasing_pts": true
+      },
+      "audio": {
+        "frames": 6336,
+        "first_pts_s": 0.0,
+        "last_pts_s": 147.0984126984127,
+        "strictly_increasing_pts": true
+      }
+    }
+  },
+  "media_structure_equal": true,
+  "range_sum_ms": 147100.0,
+  "declared_minus_sum_ms": 0.0,
+  "signals": {
+    "times": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "arm": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "high": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "ready": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "pickup": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "speed": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "present": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "ball": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "lkarm": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "lkhigh": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "lk_valid": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "foot_speed": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    },
+    "foot_valid": {
+      "equal": true,
+      "shape_equal": true,
+      "max_abs_difference": 0.0
+    }
+  },
+  "passed_equivalence": true
+}

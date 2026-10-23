@@ -1,0 +1,190 @@
+{
+  "source_worktree": "/Users/bytedance/.codex/worktrees/opt08c-gray/smash-suite",
+  "task_commit": "c36b0dc673d9cde65f160fbf6e8e2cd629174b68",
+  "primary_before": "c62527982a6bcd6fc95cb00572f346d52d36fffb",
+  "accepted_files": [
+    {
+      "path": "apps/video-clipper/reports/opt08c-gray/README.md",
+      "source_sha256": "8710392f80f255e295ced7660ec4d03c1d763df814bec4a2c63016b8d316bcd9",
+      "sha256": "8710392f80f255e295ced7660ec4d03c1d763df814bec4a2c63016b8d316bcd9",
+      "bytes": 2878
+    },
+    {
+      "path": "apps/video-clipper/reports/opt08c-gray/probe.json",
+      "source_sha256": "97fad4fbf682fef8806f4ad5a9a97234f2f4991cd30305687df1dcc5290a6de1",
+      "sha256": "97fad4fbf682fef8806f4ad5a9a97234f2f4991cd30305687df1dcc5290a6de1",
+      "bytes": 94029
+    },
+    {
+      "path": "apps/video-clipper/reports/opt08c-gray/review.json",
+      "source_sha256": "3f826f6a07d2a26555dfd3ac659249601f042ba053780091743b95f71ed115cb",
+      "sha256": "3f826f6a07d2a26555dfd3ac659249601f042ba053780091743b95f71ed115cb",
+      "bytes": 2288
+    },
+    {
+      "path": "apps/video-clipper/reports/opt08c-gray/summary.json",
+      "source_sha256": "92bb36fa4a4215f8cc0c540af394ecb4447bb4fa28b686c1d6cd14f94951824e",
+      "sha256": "92bb36fa4a4215f8cc0c540af394ecb4447bb4fa28b686c1d6cd14f94951824e",
+      "bytes": 44493
+    },
+    {
+      "path": "apps/video-clipper/reports/opt08c-gray/viewer.png",
+      "source_sha256": "4bda36ecbca0f258e4635f8b1148a0a5fd21b0a96e1604cd9d4409aa61aaf6dd",
+      "sha256": "4bda36ecbca0f258e4635f8b1148a0a5fd21b0a96e1604cd9d4409aa61aaf6dd",
+      "bytes": 74725
+    },
+    {
+      "path": "docs/ai/opt08c-gray/acceptance-freeze.json",
+      "source_sha256": "916a7197e1ce58676677ff8d66f40e0baacdcdbb9899de011a4f524aa39b3175",
+      "sha256": "916a7197e1ce58676677ff8d66f40e0baacdcdbb9899de011a4f524aa39b3175",
+      "bytes": 2757
+    },
+    {
+      "path": "docs/ai/opt08c-gray/controller/close-input.md",
+      "source_sha256": "44bb49ec0370edd90d8e3027ac22699e9622d843817f36850809b00a93d445ae",
+      "sha256": "44bb49ec0370edd90d8e3027ac22699e9622d843817f36850809b00a93d445ae",
+      "bytes": 539
+    },
+    {
+      "path": "docs/ai/opt08c-gray/controller/commit-input.md",
+      "source_sha256": "a15e4724b744d6a31405020c6faf8c4de35b959af1dbcfec8411d6fe50ee870b",
+      "sha256": "a15e4724b744d6a31405020c6faf8c4de35b959af1dbcfec8411d6fe50ee870b",
+      "bytes": 979
+    },
+    {
+      "path": "docs/ai/opt08c-gray/controller/environment.md",
+      "source_sha256": "0430cf82e8485d0c7fdb47cf46644e42c1f881f83c6bf5597266cc47a9bcc942",
+      "sha256": "0430cf82e8485d0c7fdb47cf46644e42c1f881f83c6bf5597266cc47a9bcc942",
+      "bytes": 864
+    },
+    {
+      "path": "docs/ai/opt08c-gray/developer/input.md",
+      "source_sha256": "f5d361cfb03390ed5c07189646f8197ca711d4a7d7a01a4c09c537c2f61c92ab",
+      "sha256": "f5d361cfb03390ed5c07189646f8197ca711d4a7d7a01a4c09c537c2f61c92ab",
+      "bytes": 8706
+    },
+    {
+      "path": "docs/ai/opt08c-gray/developer/output.md",
+      "source_sha256": "264c23900172cfc9a7c39d0ce0a727830d387d8f0261371aa948789f13ab6860",
+      "sha256": "264c23900172cfc9a7c39d0ce0a727830d387d8f0261371aa948789f13ab6860",
+      "bytes": 6615
+    },
+    {
+      "path": "docs/ai/opt08c-gray/probe.py",
+      "source_sha256": "abc07320928acd36b8440d0a6ddfe2c074ace1f3180ac6cc390b6e3596a8737b",
+      "sha256": "abc07320928acd36b8440d0a6ddfe2c074ace1f3180ac6cc390b6e3596a8737b",
+      "bytes": 16330
+    },
+    {
+      "path": "docs/ai/opt08c-gray/run.py",
+      "source_sha256": "953059bc6aa4f99b9b65f9e29e135e61275f8512d97eb75b959aa19e5e42b214",
+      "sha256": "953059bc6aa4f99b9b65f9e29e135e61275f8512d97eb75b959aa19e5e42b214",
+      "bytes": 5983
+    },
+    {
+      "path": "docs/ai/opt08c-gray/summarize.py",
+      "source_sha256": "b66d285a592ea7e29beaa11cc349b2afc0f9247e5405d33ab4f81c2398c26f20",
+      "sha256": "b66d285a592ea7e29beaa11cc349b2afc0f9247e5405d33ab4f81c2398c26f20",
+      "bytes": 10764
+    },
+    {
+      "path": "docs/ai/opt08c-gray/task.md",
+      "source_sha256": "17b726a2de2b8ef48cdeb7eb48998cfe22b209cd3bdfca740c85ddb30e26ce34",
+      "sha256": "665732b0cc962f852e1d1bce2796cbf53dee54a71e2d37e8c7bb3ce4c7b47b48",
+      "bytes": 4144,
+      "metadata_note": "controller integration stage only; source SHA retained"
+    },
+    {
+      "path": "docs/ai/opt08c-gray/test_experiment.py",
+      "source_sha256": "5950b34d15c442615a2c5711822695ef5fdc6c0f6124260074a8bbded67fc48b",
+      "sha256": "5950b34d15c442615a2c5711822695ef5fdc6c0f6124260074a8bbded67fc48b",
+      "bytes": 6045
+    },
+    {
+      "path": "docs/ai/opt08c-gray/verifier/input.md",
+      "source_sha256": "2a1d4dd2eede632475940fa7de0754ddddb7c09f3eaaad82d59007efcb4584da",
+      "sha256": "2a1d4dd2eede632475940fa7de0754ddddb7c09f3eaaad82d59007efcb4584da",
+      "bytes": 4430
+    },
+    {
+      "path": "docs/ai/opt08c-gray/verifier/output.md",
+      "source_sha256": "f2916ad76197fdffb855f5dcf00ef4dd76d603aa11330794850b81de90c1b5fa",
+      "sha256": "f2916ad76197fdffb855f5dcf00ef4dd76d603aa11330794850b81de90c1b5fa",
+      "bytes": 3237
+    }
+  ],
+  "runtime_files": [
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/derived_predictor.py",
+      "sha256": "5c94de392d70e91cb3a23cb4acbdf51ae6735fe4d94c3f5bfbb63825eca8fd80",
+      "bytes": 7363
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/resources.json",
+      "sha256": "4c70084229bee29683c2c6ac1bdf84c2581aac7d52ed5f0c19247ecd41d2a973",
+      "bytes": 6005
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/result.json",
+      "sha256": "cd6f3b0a47628fa9627a8afe1b9f8785a34a17fd2b9070b7a42b4754a5dc1da1",
+      "bytes": 1937
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/run.json",
+      "sha256": "78ca13b7ec43aa8cd1ea43112d0724c34cb33c6ef88248562974fa072bd36d87",
+      "bytes": 1251907
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/A-short-gray3/statistics.json",
+      "sha256": "8258ef34e41cdf460f212c07d9d6ee6e2e45ef17c9e654c3a96e2b71e9e7d35d",
+      "bytes": 4381
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/independent-A-short-gray3/derived_predictor.py",
+      "sha256": "5c94de392d70e91cb3a23cb4acbdf51ae6735fe4d94c3f5bfbb63825eca8fd80",
+      "bytes": 7363
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/independent-A-short-gray3/resources.json",
+      "sha256": "89b1b10130772d1636c865da297f89daf85e58d70100940a4af53ac85b450116",
+      "bytes": 6002
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/independent-A-short-gray3/result.json",
+      "sha256": "5edd410a308f4762fffc916daf1a328ee272cdbb9ecfd93043084a9a19539938",
+      "bytes": 1937
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/independent-A-short-gray3/run.json",
+      "sha256": "34e3df7d9eb88ec084252ccc4a0ede118465b414e2cd603034d80b9d6337ff38",
+      "bytes": 1251994
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/independent-A-short-gray3/statistics.json",
+      "sha256": "9a708ff873282adbc2947ea46a2a7a4091c67651b9a458002138611e71e87fa5",
+      "bytes": 4388
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/independent-probe/probe.json",
+      "sha256": "933ab36598ee41282cb49f1f50a6c93e255d1c7dc87a7a67435ccdd2a40e82bc",
+      "bytes": 94031
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/probe/probe.json",
+      "sha256": "97fad4fbf682fef8806f4ad5a9a97234f2f4991cd30305687df1dcc5290a6de1",
+      "bytes": 94029
+    }
+  ],
+  "sidecars": [
+    {
+      "path": "modules/models/tracknet/.runtime/opt08c-gray-review.json",
+      "sha256": "3f826f6a07d2a26555dfd3ac659249601f042ba053780091743b95f71ed115cb",
+      "bytes": 2288
+    },
+    {
+      "path": "apps/video-clipper/.runtime/opt08c-gray/viewer.png",
+      "sha256": "4bda36ecbca0f258e4635f8b1148a0a5fd21b0a96e1604cd9d4409aa61aaf6dd",
+      "bytes": 74725
+    }
+  ]
+}

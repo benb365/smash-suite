@@ -1,0 +1,906 @@
+{
+  "date": "2026-10-23",
+  "baseline_implementation": "develop 41ad27da46c08e10ec7e39ce8efa7b15471caf3d",
+  "processing": "Independent process using current recognize and render functions, not HTTP/UI. Timing starts before dependency imports and ends when balanced output is ready. Diagnostic report packaging and post-hoc evaluation are excluded; dynamic diagnostic writes are inside recognition.",
+  "serial_first_round": true,
+  "run_count": 8,
+  "runs": [
+    {
+      "case": "A-short",
+      "variant": "baseline",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.949201500043273,
+        "recognition_s": 35.359510000096634,
+        "rendering_s": 8.0829937919043,
+        "total_s": 46.39170529204421
+      },
+      "network_input_shapes": {
+        "1x9x288x512": 1400
+      },
+      "counts": {
+        "tracknet_calls": 1400,
+        "tracknet_input_frames": 4200,
+        "candidate_peaks": 0,
+        "decode_passes": 1,
+        "frames_decoded": 4200
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 4200,
+          "frames_delivered": 4200,
+          "queue_peak": 6,
+          "decode_s": 9.775490961270407,
+          "conversion_s": 5.921380025334656,
+          "max_lag_s": 0.0,
+          "fps": 25.0,
+          "expected_frames": 4200,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 91.0,
+          "last_timestamp_ms": 167960.0,
+          "last_delivered_timestamp_ms": 167960.0
+        }
+      ],
+      "resources": {
+        "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+        "rss_peak_bytes": 1122959360,
+        "cpu_peak_percent": 582.9000000000001,
+        "work_logical_peak_bytes": 17243328,
+        "mps_allocated_peak_bytes": 220549632,
+        "mps_driver_peak_bytes": 1162313728
+      },
+      "runtime": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/A-short",
+      "archive": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/reports/performance-validation-20261023/baseline/A-short",
+      "run_sha256": "99d1f6ba461a1cc25edc45ed8b29530d014a30ea89428f594d3bb6afb8577878",
+      "result_sha256": "99c13ec57f1e711c93d84afcdfbf6545adf04973e01447a3f66b5540501c2c79",
+      "models": {
+        "ball_track.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        }
+      },
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb"
+      },
+      "quality": "balanced",
+      "padding_ms": 500
+    },
+    {
+      "case": "C-short",
+      "variant": "baseline",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.6900949999690056,
+        "recognition_s": 98.40071720909327,
+        "rendering_s": 19.687295916024595,
+        "total_s": 120.77810812508687
+      },
+      "network_input_shapes": {
+        "1x9x288x512": 3599
+      },
+      "counts": {
+        "tracknet_cache_misses": 5400,
+        "tracknet_cache_prepared_frames": 5400,
+        "tracknet_calls": 3599,
+        "tracknet_input_frames": 10797,
+        "candidate_peaks": 69821,
+        "tracknet_cache_hits": 5397,
+        "person_detector_calls": 225,
+        "person_detector_images": 900,
+        "person_boxes": 7170,
+        "tracknet_cache_max_items": 3,
+        "decode_passes": 1,
+        "frames_decoded": 5400,
+        "native_observations": 5400,
+        "shifted_observations": 5400,
+        "associated_tracks": 184,
+        "coherent_flights": 226
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 5400,
+          "frames_delivered": 5400,
+          "queue_peak": 6,
+          "decode_s": 11.419857348315418,
+          "conversion_s": 7.457246564561501,
+          "max_lag_s": 0.0,
+          "fps": 29.99994791675709,
+          "expected_frames": 5400,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 0.0,
+          "last_timestamp_ms": 179967.0,
+          "last_delivered_timestamp_ms": 179967.0
+        }
+      ],
+      "resources": {
+        "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+        "rss_peak_bytes": 2236973056,
+        "cpu_peak_percent": 495.09999999999997,
+        "work_logical_peak_bytes": 52444575,
+        "mps_allocated_peak_bytes": 235663104,
+        "mps_driver_peak_bytes": 1195917312
+      },
+      "runtime": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/C-short",
+      "archive": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/reports/performance-validation-20261023/baseline/C-short",
+      "run_sha256": "9f1d57192c23e968c4aade6cb3bdd9951baabf85c71db91cfb7eff3c9f7e6eef",
+      "result_sha256": "acd63a41ddd29978d1db6701958787a5efe1cf3fcdd292c2c0d88d6e7babc24d",
+      "models": {
+        "ball_track.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        }
+      },
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb"
+      },
+      "quality": "balanced",
+      "padding_ms": 500
+    },
+    {
+      "case": "D-short",
+      "variant": "baseline",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.6432755840942264,
+        "recognition_s": 275.1372532499954,
+        "rendering_s": 12.375133749796078,
+        "total_s": 290.1556625838857
+      },
+      "network_input_shapes": {
+        "1x9x288x512": 2509
+      },
+      "counts": {
+        "tracknet_calls": 2509,
+        "tracknet_input_frames": 7527,
+        "candidate_peaks": 18244,
+        "person_detector_calls": 314,
+        "person_detector_images": 1255,
+        "person_boxes": 3373,
+        "decode_passes": 2,
+        "frames_decoded": 15054,
+        "native_observations": 7527,
+        "shifted_observations": 1,
+        "pose_converted_frames": 5018,
+        "pose_calls": 2432,
+        "person_crops": 2432
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 7527,
+          "frames_delivered": 7527,
+          "queue_peak": 6,
+          "decode_s": 8.120203553000465,
+          "conversion_s": 10.182010696968064,
+          "max_lag_s": 0.0,
+          "fps": 29.999962634562284,
+          "expected_frames": 7527,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 0.0,
+          "last_timestamp_ms": 250867.0,
+          "last_delivered_timestamp_ms": 250867.0
+        },
+        {
+          "pass_name": "pose",
+          "frames_decoded": 7527
+        }
+      ],
+      "resources": {
+        "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+        "rss_peak_bytes": 2219065344,
+        "cpu_peak_percent": 489.8,
+        "work_logical_peak_bytes": 24752901,
+        "mps_allocated_peak_bytes": 234509056,
+        "mps_driver_peak_bytes": 1194213376
+      },
+      "runtime": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short",
+      "archive": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/reports/performance-validation-20261023/baseline/D-short",
+      "run_sha256": "2d604f8a69c8383d703bd75a54cfe220cf1780f700ab26e4ed0554cd80feb6e7",
+      "result_sha256": "0eaa6f3269bb362f9ddc33661d12bfab67b6349a19bb723bad8647e07d2eff23",
+      "models": {
+        "ball_track.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        },
+        "pose_kpRCNN.pth": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/pose_kpRCNN.pth",
+          "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+        }
+      },
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb"
+      },
+      "quality": "balanced",
+      "padding_ms": 500
+    },
+    {
+      "case": "A-short",
+      "variant": "dynamic",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.5957231249194592,
+        "recognition_s": 22.206777167040855,
+        "rendering_s": 7.82849816698581,
+        "total_s": 32.630998458946124
+      },
+      "network_input_shapes": {
+        "1x9x288x512": 562
+      },
+      "counts": {
+        "tracknet_calls": 562,
+        "tracknet_input_frames": 1686,
+        "candidate_peaks": 0,
+        "decode_passes": 1,
+        "frames_decoded": 4200
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 4200,
+          "frames_delivered": 4200,
+          "queue_peak": 6,
+          "decode_s": 8.660775169264525,
+          "conversion_s": 5.369954423978925,
+          "max_lag_s": 0.0,
+          "fps": 25.0,
+          "expected_frames": 4200,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 91.0,
+          "last_timestamp_ms": 167960.0,
+          "last_delivered_timestamp_ms": 167960.0
+        }
+      ],
+      "resources": {
+        "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+        "rss_peak_bytes": 1290076160,
+        "cpu_peak_percent": 579.6,
+        "work_logical_peak_bytes": 19658625,
+        "mps_allocated_peak_bytes": 220549632,
+        "mps_driver_peak_bytes": 1162330112
+      },
+      "runtime": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/A-short",
+      "archive": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/reports/opt06-dynamic/A-short/run",
+      "run_sha256": "e01232b1e8a57cf0b104a1caf9934f496acee331b55c9a25098be95523eec35d",
+      "result_sha256": "d5a823cb7af37afa02bf5c583af55dd926a5f2961c2d7493f1fd2900e2b0a07c",
+      "models": {
+        "ball_track.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        }
+      },
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "70a02e3eefdfe7f565d44c897582375fb743aacde05ea260fcaca5b7d2162c85",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb",
+        "candidate": "9b1cfd61b1111e3a1acf34946fb02dc0796d78dbe8022bdc508be1f27aa19ac0"
+      },
+      "quality": "balanced",
+      "padding_ms": 500
+    },
+    {
+      "case": "D-short",
+      "variant": "dynamic",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.7331418748945,
+        "recognition_s": 131.08987866691314,
+        "rendering_s": 7.897980833193287,
+        "total_s": 141.72100137500092
+      },
+      "network_input_shapes": {
+        "1x9x288x512": 1299
+      },
+      "counts": {
+        "tracknet_calls": 1299,
+        "tracknet_input_frames": 3897,
+        "candidate_peaks": 11046,
+        "person_detector_calls": 314,
+        "person_detector_images": 1255,
+        "person_boxes": 3373,
+        "decode_passes": 2,
+        "frames_decoded": 15054,
+        "native_observations": 7527,
+        "shifted_observations": 1,
+        "pose_converted_frames": 2376,
+        "pose_calls": 1167,
+        "person_crops": 1167
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 7527,
+          "frames_delivered": 7527,
+          "queue_peak": 6,
+          "decode_s": 7.686240615788847,
+          "conversion_s": 9.8492825422436,
+          "max_lag_s": 0.0,
+          "fps": 29.999962634562284,
+          "expected_frames": 7527,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 0.0,
+          "last_timestamp_ms": 250867.0,
+          "last_delivered_timestamp_ms": 250867.0
+        },
+        {
+          "pass_name": "pose",
+          "frames_decoded": 7527
+        }
+      ],
+      "resources": {
+        "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+        "rss_peak_bytes": 2158690304,
+        "cpu_peak_percent": 563.5999999999999,
+        "work_logical_peak_bytes": 32621357,
+        "mps_allocated_peak_bytes": 234509056,
+        "mps_driver_peak_bytes": 1194557440
+      },
+      "runtime": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/D-short",
+      "archive": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/reports/opt06-dynamic/D-short/run",
+      "run_sha256": "8b3854cbbdbeeed2c6cb3d7b8b240020e6ae082b499ec1f01736b0924d45061b",
+      "result_sha256": "a63b2cd1f439676031cb3e816e2fe803eecea3c001ea2c8ad5b9e484fdb551e8",
+      "models": {
+        "ball_track.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        },
+        "pose_kpRCNN.pth": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/pose_kpRCNN.pth",
+          "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+        }
+      },
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "70a02e3eefdfe7f565d44c897582375fb743aacde05ea260fcaca5b7d2162c85",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb",
+        "candidate": "9b1cfd61b1111e3a1acf34946fb02dc0796d78dbe8022bdc508be1f27aa19ac0"
+      },
+      "quality": "balanced",
+      "padding_ms": 500
+    },
+    {
+      "case": "A-short",
+      "variant": "fit320",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.6270417920313776,
+        "recognition_s": 35.27789174998179,
+        "rendering_s": 9.387009124970064,
+        "total_s": 47.29194266698323
+      },
+      "network_input_shapes": {
+        "1x9x184x320": 1400
+      },
+      "counts": {
+        "tracknet_calls": 1400,
+        "tracknet_input_frames": 4200,
+        "candidate_peaks": 0,
+        "decode_passes": 1,
+        "frames_decoded": 4200
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 4200,
+          "frames_delivered": 4200,
+          "queue_peak": 6,
+          "decode_s": 9.847334292484447,
+          "conversion_s": 6.0174879264086485,
+          "max_lag_s": 0.0,
+          "fps": 25.0,
+          "expected_frames": 4200,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 91.0,
+          "last_timestamp_ms": 167960.0,
+          "last_delivered_timestamp_ms": 167960.0
+        }
+      ],
+      "resources": {
+        "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+        "rss_peak_bytes": 1093763072,
+        "cpu_peak_percent": 589.2,
+        "work_logical_peak_bytes": 19545002,
+        "mps_allocated_peak_bytes": 122857984,
+        "mps_driver_peak_bytes": 1162674176
+      },
+      "runtime": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/fit320/A-short",
+      "archive": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/reports/opt08a-fit320/A-short/run",
+      "run_sha256": "cfc4f419d109cb485f541ab0aff1c5f917719b176d85f4b91e13eae516ad3bf8",
+      "result_sha256": "2fb3f223416ab47e3b0a84ac9e1b1a3f55ed34b2f858d63eb12bf4e63af40cc8",
+      "models": {
+        "ball_track.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        }
+      },
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb",
+        "candidate": "7785820c2dbec130d28cb79512da067c12b052df521fddab1d5ea1368db57fed"
+      },
+      "quality": "balanced",
+      "padding_ms": 500
+    },
+    {
+      "case": "C-short",
+      "variant": "fit320",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.321582291042432,
+        "recognition_s": 78.29669958399609,
+        "rendering_s": 16.129761208081618,
+        "total_s": 96.74804308312014
+      },
+      "network_input_shapes": {
+        "1x9x184x320": 3599
+      },
+      "counts": {
+        "tracknet_cache_misses": 5400,
+        "tracknet_cache_prepared_frames": 5400,
+        "tracknet_calls": 3599,
+        "tracknet_input_frames": 10797,
+        "candidate_peaks": 23276,
+        "tracknet_cache_hits": 5397,
+        "person_detector_calls": 225,
+        "person_detector_images": 900,
+        "person_boxes": 7170,
+        "tracknet_cache_max_items": 3,
+        "decode_passes": 1,
+        "frames_decoded": 5400,
+        "native_observations": 5400,
+        "shifted_observations": 5400,
+        "associated_tracks": 162,
+        "coherent_flights": 199
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 5400,
+          "frames_delivered": 5400,
+          "queue_peak": 6,
+          "decode_s": 11.957762674894184,
+          "conversion_s": 7.75489546591416,
+          "max_lag_s": 0.0,
+          "fps": 29.99994791675709,
+          "expected_frames": 5400,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 0.0,
+          "last_timestamp_ms": 179967.0,
+          "last_delivered_timestamp_ms": 179967.0
+        }
+      ],
+      "resources": {
+        "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+        "rss_peak_bytes": 2205483008,
+        "cpu_peak_percent": 516.3000000000001,
+        "work_logical_peak_bytes": 43991913,
+        "mps_allocated_peak_bytes": 185031680,
+        "mps_driver_peak_bytes": 1199915008
+      },
+      "runtime": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/fit320/C-short",
+      "archive": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/reports/opt08a-fit320/C-short/run",
+      "run_sha256": "374b697aca2c63ecbb3b8cc51465539a8dccbe2aa0f2981ed247ed1bd6f8b391",
+      "result_sha256": "4692687ee627fd61f6d20aef1415a85e005f37803149d61eb3089729604cf1db",
+      "models": {
+        "ball_track.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        }
+      },
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb",
+        "candidate": "7785820c2dbec130d28cb79512da067c12b052df521fddab1d5ea1368db57fed"
+      },
+      "quality": "balanced",
+      "padding_ms": 500
+    },
+    {
+      "case": "D-short",
+      "variant": "fit320",
+      "status": "completed",
+      "timings": {
+        "preparation_s": 2.685852832859382,
+        "recognition_s": 257.51301870914176,
+        "rendering_s": 12.477848415961489,
+        "total_s": 272.67671995796263
+      },
+      "network_input_shapes": {
+        "1x9x184x320": 2509
+      },
+      "counts": {
+        "tracknet_calls": 2509,
+        "tracknet_input_frames": 7527,
+        "candidate_peaks": 6424,
+        "person_detector_calls": 314,
+        "person_detector_images": 1255,
+        "person_boxes": 3373,
+        "decode_passes": 2,
+        "frames_decoded": 15054,
+        "native_observations": 7527,
+        "shifted_observations": 1,
+        "pose_converted_frames": 5018,
+        "pose_calls": 2432,
+        "person_crops": 2432
+      },
+      "sources": [
+        {
+          "pass_name": "observation",
+          "frames_decoded": 7527,
+          "frames_delivered": 7527,
+          "queue_peak": 6,
+          "decode_s": 7.943242899375036,
+          "conversion_s": 10.051969721680507,
+          "max_lag_s": 0.0,
+          "fps": 29.999962634562284,
+          "expected_frames": 7527,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 0.0,
+          "last_timestamp_ms": 250867.0,
+          "last_delivered_timestamp_ms": 250867.0
+        },
+        {
+          "pass_name": "pose",
+          "frames_decoded": 7527
+        }
+      ],
+      "resources": {
+        "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+        "rss_peak_bytes": 2219704320,
+        "cpu_peak_percent": 471.4,
+        "work_logical_peak_bytes": 23869767,
+        "mps_allocated_peak_bytes": 191733760,
+        "mps_driver_peak_bytes": 1195343872
+      },
+      "runtime": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/fit320/D-short",
+      "archive": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/reports/opt08a-fit320/D-short/run",
+      "run_sha256": "a681c648d8bccd26212223382fa3679b2b421d96a603a238486ea0945a53caf8",
+      "result_sha256": "fe4a7959b2aa58f01e3244d5c1348ad451e48f0f4b78a014682dd560db40204d",
+      "models": {
+        "ball_track.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+          "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+        },
+        "yolo11n.pt": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+          "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+        },
+        "pose_kpRCNN.pth": {
+          "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/pose_kpRCNN.pth",
+          "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+        }
+      },
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb",
+        "candidate": "7785820c2dbec130d28cb79512da067c12b052df521fddab1d5ea1368db57fed"
+      },
+      "quality": "balanced",
+      "padding_ms": 500
+    }
+  ],
+  "combination": {
+    "executed": false,
+    "reason": "Both dynamic A and D violate the approved retained-content and boundary gates. No scene has two retained candidates."
+  },
+  "limits": [
+    "Single observed run per first-round cell is not stable speed evidence.",
+    "TrackNet and YOLO use MPS; D Keypoint R-CNN retains CPU execution.",
+    "C was not tested for OPT-06.",
+    "No product defaults, source frames, labels, model weights or export quality changed."
+  ]
+}

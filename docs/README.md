@@ -1,6 +1,6 @@
 # 项目文档
 
-[项目介绍与架构](../README.md) · [开发环境](../README.md#开发工作流) · [当前进展与计划](plan/roadmap.md) · [想法与灵感](plan/ideas.md)
+[项目介绍与架构](../README.md) · [开发环境](../README.md#开发环境) · [当前进展与计划](plan/roadmap.md) · [想法与灵感](plan/ideas.md)
 
 ## 按任务查阅
 
@@ -12,6 +12,8 @@
 | 调用找球、人物检测和姿态模型 | [模型模块](../modules/models/README.md) |
 | 运行或改进回合识别 | [回合模块](../modules/rally/README.md) · [识别需求](../modules/rally/requirements.md) |
 | 比较算法效果与评分 | [评估规范](../modules/rally/evaluation.md) · [实验与回放](../modules/rally/experiments/README.md) |
+| 分析逐拍球路并在成片显示 | [二维球路专题](features/trajectory-overlay/README.md) · [球路模块](../modules/trajectory/README.md) |
+| 了解跨模块性能优化方案、阶段进展与总结 | [性能优化专题](features/performance-optimization/README.md)（专项实验和测量证据仍归所属应用或模块） |
 | 准备测试素材和人工标注 | [数据集](../datasets/README.md) · [数据规范](../datasets/requirements.md) |
 | 从视频平台采集录像 | [录像采集插件](../tools/ysp-recorder/README.md) |
 | 启动或构建本地文档站 | [文档站工具](../tools/docs-site/README.md) |
@@ -24,4 +26,6 @@
 | 对照视频、人工标注和算法区间 | [结果查看](../modules/rally/experiments/README.md#查看视频与结果) |
 | 媒体输入与实时模拟结果 | [输入实验](../modules/media/experiments/realtime-input.md) |
 | 剪辑产品验收与耗时 | [产品验证记录](../apps/video-clipper/README.md#验证记录) |
+| 首轮跨模块性能优化结果 | [首轮性能优化报告](features/performance-optimization/reports/first-round.md) |
+| 动态粗筛与输入画幅试验 | [OPT-06 动态粗筛](../apps/video-clipper/reports/opt06-dynamic/README.md) · [OPT-08A 输入画幅](../apps/video-clipper/reports/opt08a-fit320/README.md) |
 | 素材筛选与标注审核 | [素材记录](../datasets/README.md#审核与整理记录) |

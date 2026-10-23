@@ -1,0 +1,193 @@
+{
+  "schema_version": 1,
+  "title": "C-short 单组与双组回合输出对比",
+  "note": "仅展示本次实际算法区间。此视频没有SHA匹配的人工标签；缺少人工行，不代表人工审核或评估通过。",
+  "primary_track": "shifted",
+  "tracks": [
+    {
+      "id": "dual",
+      "label": "OPT-07A 双组（保存的控制）",
+      "role": "prediction"
+    },
+    {
+      "id": "native",
+      "label": "OPT-09A native 单组",
+      "role": "prediction"
+    },
+    {
+      "id": "shifted",
+      "label": "OPT-09A shifted 单组",
+      "role": "prediction"
+    }
+  ],
+  "clips": [
+    {
+      "id": "C-short",
+      "title": "C-short 完整 5400 帧",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+      "duration_ms": 180000.3125,
+      "media_offset_ms": 0,
+      "note": "时间以首帧为零。",
+      "intervals": {
+        "dual": [
+          {
+            "id": "1",
+            "start_ms": 7700.0,
+            "end_ms": 10800.0
+          },
+          {
+            "id": "2",
+            "start_ms": 14167.0,
+            "end_ms": 20267.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24133.0,
+            "end_ms": 44833.0
+          },
+          {
+            "id": "4",
+            "start_ms": 49567.0,
+            "end_ms": 67367.0
+          },
+          {
+            "id": "5",
+            "start_ms": 70533.0,
+            "end_ms": 88033.0
+          },
+          {
+            "id": "6",
+            "start_ms": 91500.0,
+            "end_ms": 103000.0
+          },
+          {
+            "id": "7",
+            "start_ms": 120933.0,
+            "end_ms": 133600.0
+          },
+          {
+            "id": "8",
+            "start_ms": 149233.0,
+            "end_ms": 153533.0
+          },
+          {
+            "id": "9",
+            "start_ms": 170267.0,
+            "end_ms": 178467.0
+          }
+        ],
+        "native": [
+          {
+            "id": "1",
+            "start_ms": 7700.0,
+            "end_ms": 11000.0
+          },
+          {
+            "id": "2",
+            "start_ms": 14133.0,
+            "end_ms": 20367.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24400.0,
+            "end_ms": 40633.0
+          },
+          {
+            "id": "4",
+            "start_ms": 49567.0,
+            "end_ms": 67667.0
+          },
+          {
+            "id": "5",
+            "start_ms": 70533.0,
+            "end_ms": 87333.0
+          },
+          {
+            "id": "6",
+            "start_ms": 91567.0,
+            "end_ms": 103000.0
+          },
+          {
+            "id": "7",
+            "start_ms": 105600.0,
+            "end_ms": 115667.0
+          },
+          {
+            "id": "8",
+            "start_ms": 120933.0,
+            "end_ms": 133567.0
+          },
+          {
+            "id": "9",
+            "start_ms": 149200.0,
+            "end_ms": 153567.0
+          },
+          {
+            "id": "10",
+            "start_ms": 170300.0,
+            "end_ms": 178467.0
+          }
+        ],
+        "shifted": [
+          {
+            "id": "1",
+            "start_ms": 14167.0,
+            "end_ms": 20267.0
+          },
+          {
+            "id": "2",
+            "start_ms": 24133.0,
+            "end_ms": 44833.0
+          },
+          {
+            "id": "3",
+            "start_ms": 49567.0,
+            "end_ms": 67300.0
+          },
+          {
+            "id": "4",
+            "start_ms": 70533.0,
+            "end_ms": 88033.0
+          },
+          {
+            "id": "5",
+            "start_ms": 91500.0,
+            "end_ms": 105900.0
+          },
+          {
+            "id": "6",
+            "start_ms": 120933.0,
+            "end_ms": 133600.0
+          },
+          {
+            "id": "7",
+            "start_ms": 149233.0,
+            "end_ms": 153533.0
+          },
+          {
+            "id": "8",
+            "start_ms": 170267.0,
+            "end_ms": 178467.0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "label": "6–12秒：单组与双组输出差异窗口",
+          "start_ms": 6000,
+          "end_ms": 12000
+        },
+        {
+          "label": "39.5–46秒：单组与双组输出差异窗口",
+          "start_ms": 39500,
+          "end_ms": 46000
+        },
+        {
+          "label": "103–117秒：单组与双组输出差异窗口",
+          "start_ms": 103000,
+          "end_ms": 117000
+        }
+      ]
+    }
+  ]
+}

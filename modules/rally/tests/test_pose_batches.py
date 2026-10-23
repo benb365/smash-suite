@@ -9,6 +9,7 @@ from modules.media.types import VideoInfo
 from modules.models import keypoint_rcnn
 from modules.rally.common import pose_context
 from modules.rally.recognize import person_signals
+from modules.rally.statistics import Statistics
 
 
 @pytest.fixture
@@ -100,13 +101,15 @@ def test_same_anchor_batches_preserve_rows_signals_sampling_and_coordinates(nati
     monkeypatch.setattr(keypoint_rcnn, "PoseEstimator", FakePose)
     monkeypatch.setattr(pose_context, "extract", extract)
     monkeypatch.setattr("cv2.calcOpticalFlowPyrLK", failed_flow)
-    signals, statistics = [], []
+    signals, statistics, shared_statistics = [], [], []
     for batch_size in (1, 2):
         metrics = {}
+        shared = Statistics(enabled=True)
         signals.append(person_signals(source, info, people, ball, "unused-pose.pth",
-                                      lambda stage, fraction: None, pose_device="cpu",
+                                      lambda stage, fraction: None, shared, pose_device="cpu",
                                       pose_batch_size=batch_size, metrics=metrics))
         statistics.append(metrics)
+        shared_statistics.append(shared)
 
     assert models[0].batch_sizes == [1, 1, 1, 1, 1, 1]
     assert models[1].batch_sizes == [2, 2, 2]
@@ -133,7 +136,7 @@ def test_same_anchor_batches_preserve_rows_signals_sampling_and_coordinates(nati
         np.testing.assert_array_equal(signals[0][key], np.zeros((3, 2)))
     assert len(flow_calls) == 24  # Six sampled flow frames, two people, two runs.
     np.testing.assert_array_equal(flow_calls[0], flow_calls[12])
-    for batch_size, metrics, model in zip((1, 2), statistics, models):
+    for batch_size, metrics, model, shared in zip((1, 2), statistics, models, shared_statistics):
         assert metrics["decoded_frames"] == 13
         assert metrics["anchor_frames"] == 3
         assert metrics["flow_frames"] == 6
@@ -141,6 +144,14 @@ def test_same_anchor_batches_preserve_rows_signals_sampling_and_coordinates(nati
         assert metrics["pose_device"] == "cpu"
         assert metrics["pose_model"]["crop_count"] == 6
         assert metrics["pose_model"]["batch_count"] == len(model.batch_sizes)
+        assert shared.counts["pose_calls"] == len(model.batch_sizes)
+        assert shared.counts["person_crops"] == 6
+        assert shared.counts["pose_anchor_frames"] == 3
+        assert shared.counts["pose_flow_frames"] == 6
+        assert shared.sources == [dict(pass_name="pose", frames_decoded=13,
+                                       frames_selected=13, frames_skipped=0)]
+        assert shared.seconds["pose_tensor_preparation_s"] == 0
+        assert shared.seconds["pose_model_inference_and_transfer_s"] == 0
         assert all(metrics[key] >= 0 for key in ("model_setup_s", "decode_s", "frame_prepare_s",
                                                "crop_prepare_s", "pose_wall_s", "pose_selection_s",
                                                "flow_s", "extract_s", "total_s"))

@@ -1,0 +1,186 @@
+{
+  "status": "completed",
+  "variant": "baseline",
+  "case": "D-short",
+  "video_sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+  "git_commit": "f19450b0595acfbcfb37047f202af3bc4d2704f2",
+  "code_sha256": {
+    "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+    "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+    "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+    "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+    "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+    "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+    "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+    "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+    "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+    "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+    "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+    "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+    "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+    "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+    "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+    "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+    "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+    "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+    "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+    "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+    "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+    "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+    "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+    "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+    "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+    "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+    "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+    "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+    "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+    "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+    "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+    "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+    "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+    "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+    "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+    "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+    "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb"
+  },
+  "output": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short",
+  "timings": {
+    "preparation_s": 2.6432755840942264,
+    "recognition_s": 275.1372532499954,
+    "rendering_s": 12.375133749796078,
+    "total_s": 290.1556625838857
+  },
+  "root": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite",
+  "started_monotonic_s": 1507669.976334166,
+  "git_status": [
+    "M docs/ai/opt08a-size/task.md",
+    "?? docs/ai/opt08a-fit320/",
+    "?? docs/ai/performance-validation/"
+  ],
+  "python": "3.11.16 (main, Sep 29 2026, 14:49:58) [Clang 22.1.3 ]",
+  "python_executable": "/Users/bytedance/workspace/experiments/smash-suite/.venv/bin/python",
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "numpy": "2.2.6",
+  "opencv": "5.0.0",
+  "torch": "2.8.0",
+  "torchvision": "0.23.0",
+  "psutil": "7.2.2",
+  "threads": {
+    "numeric_environment": {
+      "OPENBLAS_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "BLIS_NUM_THREADS": "1"
+    },
+    "torch": 4,
+    "opencv": 18
+  },
+  "device": {
+    "expected": "mps",
+    "mps_available": true
+  },
+  "input": {
+    "manifest": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/reports/performance-first-round/inputs.json",
+    "manifest_sha256": "afd60a8dbb0930948faf6962fb881b27e27fc42d8dc4f395ff923695f27d8ec4",
+    "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+    "sha256": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+    "scene": "personal",
+    "manifest_metadata": {
+      "bytes": 14278282,
+      "container_duration_s": 250.900313,
+      "video_codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": 29.999962634562284,
+      "container_frames": 7527,
+      "audio_streams": 1,
+      "audio_codecs": [
+        "aac"
+      ]
+    },
+    "probed_shape": {
+      "height": 1080,
+      "width": 1920
+    },
+    "duration_ms": 250900.3125,
+    "first_pts_ms": 0.0
+  },
+  "models": {
+    "ball_track.pt": {
+      "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/ball_track.pt",
+      "sha256": "0366a776d557dec4227d78555857c7ca475fd27fe8f3ac8d2f283e78349ef68b"
+    },
+    "yolo11n.pt": {
+      "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt",
+      "sha256": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1"
+    },
+    "pose_kpRCNN.pth": {
+      "path": "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/pose_kpRCNN.pth",
+      "sha256": "7780185501d3631e8eb8ef6e4a322125b6e939ce3d595466075811b6465bc2c1"
+    }
+  },
+  "source_paths": {
+    "harness": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/docs/ai/performance-validation/harness.py",
+    "runner": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/docs/ai/opt08a-fit320/run.py",
+    "recognize": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/recognize.py",
+    "rally_stream": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/rally_stream.py",
+    "predictor": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/models/tracknet/predictor.py",
+    "tracknet_model": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/models/tracknet/model.py",
+    "scenario_profiles": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/scenarios/profiles.json",
+    "model_assets": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/models/assets.py",
+    "media_video": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/media/video.py",
+    "media_input": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/media/video_input.py",
+    "statistics": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/statistics.py",
+    "resource_sampler": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/backend/app/benchmark.py",
+    "scenario/courtside.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/scenarios/courtside.py",
+    "scenario/high.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/scenarios/high.py",
+    "scenario/__init__.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/scenarios/__init__.py",
+    "scenario/personal.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/scenarios/personal.py",
+    "rally_common/arc_features.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/arc_features.py",
+    "rally_common/check_short_events.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/check_short_events.py",
+    "rally_common/trials.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/trials.py",
+    "rally_common/coherent_flights.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/coherent_flights.py",
+    "rally_common/high_return.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/high_return.py",
+    "rally_common/players_v2.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/players_v2.py",
+    "rally_common/shuttle_paths.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/shuttle_paths.py",
+    "rally_common/buffer_actions.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/buffer_actions.py",
+    "rally_common/__init__.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/__init__.py",
+    "rally_common/seeded_source.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/seeded_source.py",
+    "rally_common/refined_person.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/refined_person.py",
+    "rally_common/supported_start.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/supported_start.py",
+    "rally_common/connected_flight_filter.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/connected_flight_filter.py",
+    "rally_common/region_gate.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/region_gate.py",
+    "rally_common/pose_context.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/pose_context.py",
+    "rally_common/attached_motion.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/attached_motion.py",
+    "rally_common/pose_lk_motion_count.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/pose_lk_motion_count.py",
+    "rally_common/player_paths.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/player_paths.py",
+    "rally_common/court_rules.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/court_rules.py",
+    "rally_common/feet.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/rally/common/feet.py",
+    "yolo/__init__.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/models/yolo11n/__init__.py",
+    "pose/__init__.py": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/modules/models/keypoint_rcnn/__init__.py"
+  },
+  "configuration": {
+    "variant": "baseline",
+    "predictor": "current product TrackNetPredictor unchanged",
+    "input_shape_counts": {
+      "288x512": 7527
+    }
+  },
+  "execution": "independent process calling the product modules.rally.recognize.recognize and modules.media.video.render",
+  "export_quality": "balanced",
+  "export_padding_ms": 500,
+  "decode_expectation": "one FileFrameSource EOF pass for A/C; D retains recognition's second pose decode",
+  "point_trace_note": "call_index is predictor invocation order; frame_ids are null when the product caller does not pass them. Each call records its actual three returned points and existing last_candidates without retaining frames.",
+  "recognition_detail_wall_s": 275.11789779085666,
+  "export_duration_ms": 147100.0,
+  "completed_monotonic_s": 1507960.13199675,
+  "input_shape_counts": {
+    "288x512": 7527
+  },
+  "network_input_shapes": {
+    "1x9x288x512": 2509
+  },
+  "report_write_s": 0.013617500197142363
+}

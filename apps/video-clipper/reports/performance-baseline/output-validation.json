@@ -1,0 +1,824 @@
+{
+  "status": "passed",
+  "actual_output_count": 10,
+  "expected_output_count": 10,
+  "issues": [],
+  "source": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/validation.json",
+    "bytes": 757360,
+    "sha256": "55469f713244009a05008562e1dbdfa620911d9d2da254b362cb346dc8f1c507"
+  },
+  "cases": [
+    {
+      "group": "baseline",
+      "case_id": "A-short",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 46440.0,
+        "output_duration_ms": 46440.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-short/evidence/output.mp4",
+        "sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+        "bytes": 16834404,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/baseline-A-short-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/90000",
+          "decoded_frames": 1161,
+          "duration_s": 46.42,
+          "first_pts_s": 0.02,
+          "last_pts_s": 46.42,
+          "observed_pts_span_s": 46.4,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/44100",
+            "duration_s": 46.44
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 46.44
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "baseline",
+      "case_id": "A-long",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 257800.0,
+        "output_duration_ms": 257800.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/A-long/evidence/output.mp4",
+        "sha256": "0e1a86992dff4f79e4aa09c13fd8f42cff47b4cbbf8bdd46db38e7aea1b2a432",
+        "bytes": 92817434,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/baseline-A-long-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/90000",
+          "decoded_frames": 6445,
+          "duration_s": 257.78,
+          "first_pts_s": 0.02,
+          "last_pts_s": 257.78,
+          "observed_pts_span_s": 257.76,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/44100",
+            "duration_s": 257.8
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 257.8
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "baseline",
+      "case_id": "C-short",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 110867.0,
+        "output_duration_ms": 110867.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-short/evidence/output.mp4",
+        "sha256": "4f16419abb135c1866e55f09b24e88fa35b586c2c60c780280bb79d9a2df0519",
+        "bytes": 44465082,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/baseline-C-short-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/16000",
+          "decoded_frames": 3326,
+          "duration_s": 110.867,
+          "first_pts_s": 0.0,
+          "last_pts_s": 110.833,
+          "observed_pts_span_s": 110.833,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 48000,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/48000",
+            "duration_s": 110.867
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 110.867
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "baseline",
+      "case_id": "C-long",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 281623.0,
+        "output_duration_ms": 281623.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/C-long/evidence/output.mp4",
+        "sha256": "1ac447c2b176996ada7fe3b07d88794ce64bf314c62ee4c9fd77f7ec60bf6ea2",
+        "bytes": 166063069,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/baseline-C-long-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/16000",
+          "decoded_frames": 8438,
+          "duration_s": 281.623,
+          "first_pts_s": 0.0,
+          "last_pts_s": 281.59,
+          "observed_pts_span_s": 281.59,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/44100",
+            "duration_s": 281.6219954648526
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 281.623
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "baseline",
+      "case_id": "D-short",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 147100.0,
+        "output_duration_ms": 147100.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-short/evidence/output.mp4",
+        "sha256": "f97c720cda23768819373766cb49f5c3531179a879fdfa0dc043f497726d5eed",
+        "bytes": 20814940,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/baseline-D-short-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/16000",
+          "decoded_frames": 4413,
+          "duration_s": 147.1,
+          "first_pts_s": 0.0,
+          "last_pts_s": 147.067,
+          "observed_pts_span_s": 147.067,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/44100",
+            "duration_s": 147.1
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 147.1
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "baseline",
+      "case_id": "D-long",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 307211.625,
+        "output_duration_ms": 307211.625,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/baseline/D-long/evidence/output.mp4",
+        "sha256": "ba055cb1cbdc0d0214bbf265a9ce461b5b3f27ab631becc699124a3ce63767a9",
+        "bytes": 110496866,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/baseline-D-long-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/16000",
+          "decoded_frames": 9211,
+          "duration_s": 307.211625,
+          "first_pts_s": 0.0,
+          "last_pts_s": 307.1783125,
+          "observed_pts_span_s": 307.1783125,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 48000,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/48000",
+            "duration_s": 307.211
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 307.211625
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "profile-A",
+      "case_id": "A-short",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 46440.0,
+        "output_duration_ms": 46440.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-A/A-short/evidence/output.mp4",
+        "sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+        "bytes": 16834404,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/profile-A-A-short-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/90000",
+          "decoded_frames": 1161,
+          "duration_s": 46.42,
+          "first_pts_s": 0.02,
+          "last_pts_s": 46.42,
+          "observed_pts_span_s": 46.4,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/44100",
+            "duration_s": 46.44
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 46.44
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "profile-C",
+      "case_id": "C-short",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 110867.0,
+        "output_duration_ms": 110867.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-C/C-short/evidence/output.mp4",
+        "sha256": "4f16419abb135c1866e55f09b24e88fa35b586c2c60c780280bb79d9a2df0519",
+        "bytes": 44465082,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/profile-C-C-short-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/16000",
+          "decoded_frames": 3326,
+          "duration_s": 110.867,
+          "first_pts_s": 0.0,
+          "last_pts_s": 110.833,
+          "observed_pts_span_s": 110.833,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 48000,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/48000",
+            "duration_s": 110.867
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 110.867
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "profile-D",
+      "case_id": "D-short",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 147100.0,
+        "output_duration_ms": 147100.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-D/D-short/evidence/output.mp4",
+        "sha256": "f97c720cda23768819373766cb49f5c3531179a879fdfa0dc043f497726d5eed",
+        "bytes": 20814940,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/profile-D-D-short-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/16000",
+          "decoded_frames": 4413,
+          "duration_s": 147.1,
+          "first_pts_s": 0.0,
+          "last_pts_s": 147.067,
+          "observed_pts_span_s": 147.067,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/44100",
+            "duration_s": 147.1
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 147.1
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    },
+    {
+      "group": "profile-native-A",
+      "case_id": "A-short",
+      "issues": [],
+      "range_duration_check": {
+        "sum_ranges_ms": 46440.0,
+        "output_duration_ms": 46440.0,
+        "delta_ms": 0.0,
+        "matches_with_float_precision": true,
+        "comparison": "Float precision only: rel_tol=1e-12, abs_tol=1e-9 ms."
+      },
+      "decoded_output": {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-native-A/A-short/evidence/output.mp4",
+        "sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+        "bytes": 16834404,
+        "ffmpeg_exit_code": 0,
+        "ffmpeg_log": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/output-validation/run-20261021T024238Z/profile-native-A-A-short-ffmpeg.log",
+        "video": {
+          "codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "pixel_format": "yuv420p",
+          "time_base": "1/90000",
+          "decoded_frames": 1161,
+          "duration_s": 46.42,
+          "first_pts_s": 0.02,
+          "last_pts_s": 46.42,
+          "observed_pts_span_s": 46.4,
+          "frame_sizes": [
+            [
+              1920,
+              1080
+            ]
+          ],
+          "pts_monotonic": true,
+          "pts_issues": []
+        },
+        "audio_streams": [
+          {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "channels": 2,
+            "layout": "stereo",
+            "time_base": "1/44100",
+            "duration_s": 46.44
+          }
+        ],
+        "issues": [],
+        "container_duration_s": 46.44
+      },
+      "state_video_dimensions_check": {
+        "state_width_height": [
+          1920,
+          1080
+        ],
+        "decoded_width_height": [
+          1920,
+          1080
+        ],
+        "equal": true
+      }
+    }
+  ],
+  "profile_comparisons": [
+    {
+      "case_id": "A-short",
+      "baseline_group": "baseline",
+      "profile_group": "profile-A",
+      "issues": [],
+      "predictions": {
+        "raw_canonical_equal": true
+      },
+      "export_ranges": {
+        "raw_canonical_equal": true
+      },
+      "output_structure": {
+        "baseline": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "audio_streams": [
+            {
+              "codec": "aac",
+              "sample_rate": 44100,
+              "channels": 2,
+              "layout": "stereo",
+              "time_base": "1/44100",
+              "duration_s": 46.44
+            }
+          ],
+          "decoded_frames": 1161
+        },
+        "profile": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "audio_streams": [
+            {
+              "codec": "aac",
+              "sample_rate": 44100,
+              "channels": 2,
+              "layout": "stereo",
+              "time_base": "1/44100",
+              "duration_s": 46.44
+            }
+          ],
+          "decoded_frames": 1161
+        },
+        "equal": true
+      }
+    },
+    {
+      "case_id": "C-short",
+      "baseline_group": "baseline",
+      "profile_group": "profile-C",
+      "issues": [],
+      "predictions": {
+        "raw_canonical_equal": true
+      },
+      "export_ranges": {
+        "raw_canonical_equal": true
+      },
+      "output_structure": {
+        "baseline": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "audio_streams": [
+            {
+              "codec": "aac",
+              "sample_rate": 48000,
+              "channels": 2,
+              "layout": "stereo",
+              "time_base": "1/48000",
+              "duration_s": 110.867
+            }
+          ],
+          "decoded_frames": 3326
+        },
+        "profile": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "audio_streams": [
+            {
+              "codec": "aac",
+              "sample_rate": 48000,
+              "channels": 2,
+              "layout": "stereo",
+              "time_base": "1/48000",
+              "duration_s": 110.867
+            }
+          ],
+          "decoded_frames": 3326
+        },
+        "equal": true
+      }
+    },
+    {
+      "case_id": "D-short",
+      "baseline_group": "baseline",
+      "profile_group": "profile-D",
+      "issues": [],
+      "predictions": {
+        "raw_canonical_equal": true
+      },
+      "export_ranges": {
+        "raw_canonical_equal": true
+      },
+      "output_structure": {
+        "baseline": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "audio_streams": [
+            {
+              "codec": "aac",
+              "sample_rate": 44100,
+              "channels": 2,
+              "layout": "stereo",
+              "time_base": "1/44100",
+              "duration_s": 147.1
+            }
+          ],
+          "decoded_frames": 4413
+        },
+        "profile": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "audio_streams": [
+            {
+              "codec": "aac",
+              "sample_rate": 44100,
+              "channels": 2,
+              "layout": "stereo",
+              "time_base": "1/44100",
+              "duration_s": 147.1
+            }
+          ],
+          "decoded_frames": 4413
+        },
+        "equal": true
+      }
+    },
+    {
+      "case_id": "A-short",
+      "baseline_group": "baseline",
+      "profile_group": "profile-native-A",
+      "issues": [],
+      "predictions": {
+        "raw_canonical_equal": true
+      },
+      "export_ranges": {
+        "raw_canonical_equal": true
+      },
+      "output_structure": {
+        "baseline": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "audio_streams": [
+            {
+              "codec": "aac",
+              "sample_rate": 44100,
+              "channels": 2,
+              "layout": "stereo",
+              "time_base": "1/44100",
+              "duration_s": 46.44
+            }
+          ],
+          "decoded_frames": 1161
+        },
+        "profile": {
+          "video_codec": "h264",
+          "width": 1920,
+          "height": 1080,
+          "audio_streams": [
+            {
+              "codec": "aac",
+              "sample_rate": 44100,
+              "channels": 2,
+              "layout": "stereo",
+              "time_base": "1/44100",
+              "duration_s": 46.44
+            }
+          ],
+          "decoded_frames": 1161
+        },
+        "equal": true
+      },
+      "comparison_role": "supplemental native-profile recovery versus baseline A-short"
+    }
+  ]
+}

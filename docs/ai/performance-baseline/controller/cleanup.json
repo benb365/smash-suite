@@ -1,0 +1,26 @@
+{
+  "status": "removed",
+  "inventory_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/cleanup-inventory.json",
+  "inventory_sha256": "7f3575d63063a5af161a4be7bb8df6bd0e8cbddcb0e76d4b071dcdab7c15ef65",
+  "removed": [
+    {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-A/native-unfinished.trace",
+      "bytes": 9736346232,
+      "file_count": 2,
+      "reason": "Unexportable unfinished first A trace"
+    },
+    {
+      "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/A/full-native-A-r1",
+      "bytes": 127906137,
+      "file_count": 9,
+      "reason": "Interrupted duplicate re-export, never used for analysis"
+    }
+  ],
+  "retained_failure_diagnostics": [
+    "profile-control-A/failed-native-finalization.json",
+    "profile-control-A/save-sample.txt",
+    "profile-control-A/xctrace.log",
+    "profile-control-A/recording-python-pass.json"
+  ],
+  "valid_raw_profiles_retained": true
+}

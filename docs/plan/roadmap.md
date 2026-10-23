@@ -6,7 +6,7 @@
 - 项目产品演进方向
   - 视频流处理
   - 视频剪辑生成
-- 算法提供回合、内容与球速能力
+- 算法提供回合、内容、球速与球路能力
 - 工程流程支持智能体长期协作和独立验收。
 
 ## 项目进度总览
@@ -33,14 +33,15 @@ flowchart BT
     stream["流式能力<br/><small>A 已支持<br/>C/D 待改造</small>"]
     content["内容评价<br/><small>高光判别待做</small>"]
     speed["杀球球速<br/><small>识别测量待研究</small>"]
-    rally ~~~ stream ~~~ content ~~~ speed
+    trajectory["二维球路分析<br/><small>演进中</small>"]
+    rally ~~~ stream ~~~ content ~~~ speed ~~~ trajectory
     end
   end
 
   subgraph foundation["基础能力层"]
     subgraph foundationRow[" "]
     direction LR
-    models["模型推理<br/><small>三类模型已有<br/>Windows D1 实跑已复核</small>"]
+    models["模型推理<br/><small>三类模型已有<br/>Windows 最新版复核中</small>"]
     media["媒体读写<br/><small>文件读写导出已有<br/>实时源待接入</small>"]
     data["数据与评估<br/><small>素材标注已保留<br/>独立验收待补</small>"]
     models ~~~ media ~~~ data
@@ -52,14 +53,14 @@ flowchart BT
     direction LR
     maintenance["仓库维护<br/><small>维护 skill 待引入</small>"]
     workflow["自动协作<br/><small>单任务流程已验证<br/>人工验收已通过</small>"]
-    performance["性能与部署<br/><small>本机 D1 加速已测<br/>全量基线推进中</small>"]
+    performance["性能与部署<br/><small>基线已完成，供后续对照<br/>优化进行中，选型待做</small>"]
     maintenance ~~~ workflow ~~~ performance
     end
   end
 
   engineering -. 工程支撑 .-> foundation
   foundation -->|帧与模型观测| algorithms
-  algorithms -->|回合与内容结果| products
+  algorithms -->|回合、内容与球路结果| products
 
   classDef complete fill:#dcfce7,stroke:#16a34a,color:#166534
   classDef partial fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
@@ -69,6 +70,7 @@ flowchart BT
   class live,content,speed,maintenance pending
   class workflow complete
   class performance active
+  class trajectory partial
   style products fill:#f8fafc,stroke:#94a3b8,color:#334155
   style algorithms fill:#f8fafc,stroke:#94a3b8,color:#334155
   style foundation fill:#f8fafc,stroke:#94a3b8,color:#334155
@@ -90,16 +92,19 @@ flowchart BT
 
 | 任务 | 负责人 + 分支 | 当前进展 |
 | --- | --- | --- |
-| 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已登记开发中，实施与验证结果待同步 |
-| Windows 后端适配 | cjfranklin1 + [codex/windows-runtime](https://github.com/benb365/smash-suite/tree/codex/windows-runtime)、[codex/pose-performance](https://github.com/benb365/smash-suite/tree/codex/pose-performance) | 适配、本机验证及下述性能专项已提交分支，待集成；完整平台与独立来源验收仍有缺口 |
+| 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已完成（2026-10-21 基线），作为后续优化参考而非活跃认领；[性能报告](../../apps/video-clipper/reports/performance-baseline.md) |
+| 性能优化 | benb365 + codex/opt09b-frame-rate | 进行中：OPT-07A 已合入；OPT-06 动态粗筛 A/D、OPT-08A 输入画幅 A/C/D 本轮试验均已完成，候选不采用；OPT-20 已合入；OPT-09B 缺真实高帧率素材，用户确认保留待验收分支；[方案与进展](../features/performance-optimization/README.md) |
+| Windows 后端适配 | cjfranklin1 + codex/windows-latest | 进行中：整合 develop `1080146` 的高级配置、二维球路及性能改动，保留 Windows 运行修复和可选 CUDA 姿态；本轮运行、输出与配置联用待验证 |
+
+本轮性能报告按人工确认保留为已完成基线引用，作为“结束后移除此处记录”的明确例外。
 
 认领任务时在此登记**任务、负责人或可定位的会话、当前进展**，并同步任务表状态；结束后移除此处记录。待领取工作统一查看任务表。
 
-### Windows 本机专项交付（2026-10-21）
+### Windows 历史记录与本轮范围
 
-用户指定的本轮姿态推理优化已完成。在 i7-12700F / RTX 3060 Ti 8GB 上，以同一 D1 原视频和冻结的 `f460178` 为参照，CUDA batch 1 的识别加导出从 1425.47 秒降至 470.18 秒，7 段原始/导出区间及成片 SHA256 相同。日常应用默认 CUDA 的完整 HTTP 流程通过，相关自动检查 122 项通过。计时、设备、显存、代码摘要和验证限制见[实测记录](../../apps/video-clipper/reports/pose-performance-20261021.md)。
+2026-10-21 在 i7-12700F / RTX 3060 Ti 上完成的 D1 CPU/CUDA 对照和当时的 HTTP 流程见[历史实测记录](../../apps/video-clipper/reports/pose-performance-20261021.md)。该记录对应旧分支、旧配置和既有诊断素材，不能作为最新 develop 高级配置或球路功能的 Windows 验收证据。
 
-已交付阶段计时、可复用基准入口和显式 CPU 路径；batch 2 会在真实裁剪上改变动作门控，默认保持 batch 1。后续性能分析重点为 TrackNet 预处理和身体光流，Rust 迁移依据实测热点决定。D1 是已有诊断素材，本轮不代表编号 2、5 的全项目工作或独立来源验收完成；性能基线负责人和已有任务安排保持上表记录。
+本轮在 `codex/windows-latest` 整合 Windows 适配及 CUDA batch 1，沿用最新场景默认配置、统计入口和媒体时间轴约定。结果及适用范围待本轮实际运行后补充；不替代负责人正在推进的性能任务，也不代表独立来源准确率或发行验收完成。
 
 ## 需求依赖
 
@@ -115,6 +120,10 @@ flowchart TD
   hardware -->|配置满足目标负载| live
 
   content["4 事件识别与内容评价<br/><small>P1</small>"] --> highlights["6 进阶视频剪辑<br/><small>高光集锦与全场最佳 · P1</small>"]
+
+  trajectory["15 二维球路分析<br/><small>演进中 · P2</small>"] --> overlays["16 剪辑球路叠图<br/><small>演进中 · P2</small>"]
+  style trajectory fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
+  style overlays fill:#dbeafe,stroke:#3b82f6,color:#1e3a8a
 
   style baseline fill:#f1f5f9,stroke:#94a3b8,color:#334155
   style optimize fill:#f1f5f9,stroke:#94a3b8,color:#334155
@@ -146,18 +155,20 @@ flowchart TD
 | 编号 | 任务 | 目标与范围 | 优先级 | 直接依赖 | 状态 |
 | --- | --- | --- | --- | --- | --- |
 | 1 | 自动协作 workflow | 建立已确认单任务的持续开发流程，经过独立功能、代码和文档验收；人工确认后再集成 develop | P0 | — | 已完成 |
-| 2 | 性能基线 | 固定当前版本和代表性输入，测量完整耗时、处理速度及内存等资源开销 | P1 | — | 进行中 |
-| 3 | 回合效果与场景适应 | 改善漏回合、边界缺失、间歇残留与主场选人，使用独立来源验证效果与适用范围 | P1 | — | 待办 |
+| 2 | 性能基线 | 固定当前版本和代表性输入，测量完整耗时、处理速度及内存等资源开销 | P1 | — | 已完成 |
+| 3 | 回合效果与场景适应 | 改善漏回合、边界缺失、间歇残留与主场选人，使用独立来源验证效果与适用范围；含 D 找球后回合结束判断的稳健性（OPT-02 前置） | P1 | — | 待办 |
 | 4 | 事件识别与内容评价 | 提供高光、全场最佳等剪辑所需的内容判别能力，含义与标准在需求中明确 | P1 | — | 待办 |
-| 5 | *性能优化* | 根据基线降低处理成本，验证速度收益及识别效果变化，为后续流式处理提供基础 | P1 | 2 | 待办 |
+| 5 | 性能优化 | 根据基线降低处理成本，验证速度收益及识别效果变化，为后续流式处理提供基础；首轮 OPT-03/04 已合入，OPT-02 等待 D 算法改进；OPT-07A 已合入，OPT-06 动态粗筛与 OPT-08A 输入画幅本轮试验已完成，候选不采用；OPT-08C 本轮不采用；OPT-09A 本轮两候选不采用；OPT-20 已合入；OPT-09B 缺真实高帧率素材，保留待验收分支；后续方案与进展见[专题](../features/performance-optimization/README.md) | P1 | 2 | 进行中 |
 | 6 | *进阶视频剪辑* | 支持高光集锦、全场最佳等内容筛选与成片生成，具体范围与验收另行规划 | P1 | 4 | 待办 |
 | 7 | *后端硬件选型* | 依据实测、目标负载及优化结果比较硬件，确认适用的后端配置 | P1 | 2、5 | 待办 |
 | 8 | 仓库维护 skill | 引入清理与重构 harness（辅助检查、清理和验证的机制），定期维护代码、架构和文档，保持简洁规范 | P2 | — | 待办 |
 | 9 | *流式回合识别* | A/C/D 持续接收视频并输出回合；C/D 允许有限延迟，使用后续到达的画面确认结果 | P2 | 5 | 待办 |
 | 10 | 杀球球速侦测 | 识别杀球并输出球速，确认可测条件、准确性与适用范围 | P2 | — | 待办 |
-| 11 | Windows 后端适配 | LTE 工作：适配并验证 Windows 下的后端运行 | P2 | — | 进行中：适配及本机验证已提交，待集成 |
+| 11 | Windows 后端适配 | LTE 工作：适配并验证 Windows 下的后端运行 | P2 | — | 进行中：codex/windows-latest 整合最新 develop 并复核 |
 | 12 | *实时视频处理* | 连通真实拍摄、传输、持续分析与结果访问，含 Android 真机采集、上传可靠性和整体延迟验证 | P2 | 7、9 | 待办 |
 | 13 | 数据管理 | 管理素材、标注、分析结果和成片的组织、留存与清理，覆盖研发材料与产品数据 | P3 | — | 待办 |
 | 14 | 发行与商用 | 处理产品分发、签名公证、授权审查、商用交付与平台支持 | P3 | — | 待办 |
+| 15 | [二维球路分析](../features/trajectory-overlay/README.md) | 估计逐拍起点与预计落地点 | P2 | — | 演进中 |
+| 16 | [剪辑球路叠图](../features/trajectory-overlay/README.md) | 在导出视频中同步显示球路 | P2 | 15 | 演进中 |
 
 必要的素材、标注、测试和评估随所属需求推进，不因数据管理排后而推迟。独立验收 agent 与开发 agent 分工，不能替代算法验收所需的独立来源数据。

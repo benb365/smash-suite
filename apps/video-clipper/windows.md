@@ -2,6 +2,8 @@
 
 在 Windows 上从源码运行自动剪辑应用，使用 Chrome 或 Edge 操作本机服务。本说明适用于 Python 3.11、Node.js 20.19+；命令在仓库根目录的 PowerShell 中执行。
 
+当前 `codex/windows-latest` 正在整合 develop `1080146` 的高级配置、球路叠图及性能改动。本页保留已知的 Windows 运行方法；整合后版本的本机验证仍在进行，历史报告不代表本轮通过。
+
 ## 安装环境
 
 创建独立虚拟环境。已有旧环境发生 NumPy、OpenCV 或 PyTorch DLL 错误时，可改用 `.venv-clip` 作为目录名，保留旧环境。
@@ -92,9 +94,13 @@ $env:SMASH_SUITE_DATA_DIR = Join-Path (Get-Location) '.runtime\clip-app'
 
 使用“保存 MP4”选择成片位置。会话临时文件的清理规则沿用[应用说明](README.md#使用)。关闭服务会清理当前临时会话，模型缓存保留。
 
+当前产品支持四项高级配置；未展开面板或请求省略配置时，同样使用[场景默认值](requirements.md#高级选项)。高视角默认四项开启，并默认生成球路叠图；场边和个人视角默认开启帧率上限、缩小找球图像和灰度，关闭动态粗筛。产品配置改变识别输入，历史 CPU/CUDA 对照的区间一致不代表这些新默认值与旧版结果相同。
+
 ## 单样本性能对照
 
-`scripts/benchmark_clipper.py` 直接处理一段本地录像，使用已缓存模型生成完整 MP4，并保存阶段耗时、设备与核心源码摘要、CUDA 显存峰值、事件和参考区间差异。脚本不下载录像或模型；个人视角的缓存目录须已有校验通过的 `ball_track.pt`、`yolo11n.pt` 和 `pose_kpRCNN.pth`。
+`scripts/benchmark_clipper.py` 直接处理一段本地录像，使用已缓存模型生成完整 MP4，并保存阶段耗时、有效配置、聚合统计、设备与核心源码摘要、CUDA 显存峰值、事件和参考区间差异。脚本不下载录像或模型；个人视角的缓存目录须已有校验通过的 `ball_track.pt`、`yolo11n.pt` 和 `pose_kpRCNN.pth`。
+
+该入口用于同一识别配置下的模块对照。`--optimizations off`（默认）显式关闭四项高级配置；`--optimizations default` 使用当前产品的场景默认值。两种模式都不运行高视角球路叠图，不能代替真实产品 HTTP 流程的验收。
 
 将下面四个占位路径替换为本机路径，源录像须为绝对路径。两次运行使用同一录像和模型缓存，各自选择一个尚无基准产物的新输出目录。每次只运行一条命令，等待结束后再运行下一条：
 
@@ -104,11 +110,13 @@ $modelCache = 'C:\path\to\cached-models'
 $cpuOutput = 'C:\path\to\new-cpu-b1-output'
 $cudaOutput = 'C:\path\to\new-cuda-b1-output'
 
-node scripts/python.mjs scripts/benchmark_clipper.py --source $sourceVideo --scene personal --models $modelCache --output $cpuOutput --pose-device cpu --pose-batch-size 1
-node scripts/python.mjs scripts/benchmark_clipper.py --source $sourceVideo --scene personal --models $modelCache --output $cudaOutput --reference (Join-Path $cpuOutput 'result.json') --pose-device cuda --pose-batch-size 1
+node scripts/python.mjs scripts/benchmark_clipper.py --source $sourceVideo --scene personal --models $modelCache --output $cpuOutput --pose-device cpu --pose-batch-size 1 --optimizations off
+node scripts/python.mjs scripts/benchmark_clipper.py --source $sourceVideo --scene personal --models $modelCache --output $cudaOutput --reference (Join-Path $cpuOutput 'result.json') --pose-device cuda --pose-batch-size 1 --optimizations off
 ```
 
 每个目录包含 `output.mp4`、`result.json`、`performance.json` 和 `events.jsonl`。固定使用均衡质量和前后各 0.5 秒补时；报告区分处理耗时与额外的完整解码校验耗时。`performance.json` 的 `status: passed` 表示执行与导出检查通过；区间回归需查看 `reference_comparison` 的身份核验、区间差异及 `same_order_exact`，不能仅凭该状态认定结果一致。参考文件保持原样，预测区间按原顺序逐项比较；出现区间变化时需结合原片判断影响。音轨完整解码和非空检查不等于音画同步验收。
+
+产品新默认值和球路联用使用 `apps/video-clipper/backend/app/benchmark.py` 的真实 HTTP 入口另行验证。输入例显式设置 `show_shot_paths=true` 才覆盖高视角球路；单独运行上述模块脚本没有覆盖上传、会话、请求默认值或叠图行为。方法和证据格式见[高级配置验证](reports/advanced-options/README.md)，本轮 Windows 结果须另行记录。
 
 ## 本次兼容修复
 
@@ -132,6 +140,8 @@ npx --yes pnpm@9.15.9 run typecheck:frontend
 git diff --check
 ```
 
-检查结果和此前三个场景的 Windows 实测摘要见[运行记录](reports/windows-runtime-20261020.json)。此前端到端录像验证使用包含本地验证工具的工作区；该记录将其与整理后分支的检查分开列出。 个人视角 CPU / CUDA 性能对照、默认 CUDA 应用流程及本轮检查记录见[性能报告](reports/pose-performance-20261021.md)。
+此前三个场景的 Windows 实测摘要见[2026-10-20 运行记录](reports/windows-runtime-20261020.json)，个人视角 CPU/CUDA 对照及当时的默认 CUDA 应用流程见[2026-10-21 性能报告](reports/pose-performance-20261021.md)。记录对应当时的源码、工作区和配置；负责人在 macOS/MPS 上的新性能报告也不能直接当作本机 Windows/CUDA 的验收结果。
+
+`codex/windows-latest` 的本轮自动检查、真实模型、默认高级配置和高视角球路联用仍待完成并记录。旧报告的通过数与耗时不沿用到本轮。
 
 当前支持 Windows 源码开发与运行。`build:product` 的发行脚本仍要求 macOS Apple 芯片，尚未提供 Windows EXE 或安装包。macOS / Linux 的解释器路径仍受入口支持，本次没有在这些系统重新运行验证。

@@ -1,0 +1,225 @@
+{
+  "evaluator_version": "rally-iou-v3",
+  "boundary_policy": {
+    "outward_tolerance_ms": 1500.0,
+    "start_offset_range_ms": [
+      -1500.0,
+      0.0
+    ],
+    "end_offset_range_ms": [
+      0.0,
+      1500.0
+    ],
+    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+    "acceptance_denominator": "all_verified_truth"
+  },
+  "boundary_acceptance": {
+    "truth_count": 5,
+    "matched_count": 5,
+    "start_acceptable_count": 3,
+    "start_acceptable_rate": 0.6,
+    "end_acceptable_count": 4,
+    "end_acceptable_rate": 0.8,
+    "both_acceptable_count": 3,
+    "both_acceptable_rate": 0.6
+  },
+  "truth_count": 5,
+  "prediction_count": 5,
+  "input_prediction_count": 5,
+  "exclusion_policy": "fully_contained_without_truth_overlap",
+  "excluded_events": [],
+  "ignored_predictions": [],
+  "excluded_annotation_ids": [],
+  "matches": [
+    {
+      "prediction_id": 1,
+      "truth_id": 1,
+      "temporal_iou": 0.8791946308724832,
+      "start_offset_ms": -400.0,
+      "end_offset_ms": 320.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 1640.0
+    },
+    {
+      "prediction_id": 3,
+      "truth_id": 2,
+      "temporal_iou": 0.9190751445086706,
+      "start_offset_ms": -160.0,
+      "end_offset_ms": 400.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 1680.0
+    },
+    {
+      "prediction_id": 4,
+      "truth_id": 3,
+      "temporal_iou": 0.9152542372881356,
+      "start_offset_ms": -200.0,
+      "end_offset_ms": 600.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 1680.0
+    },
+    {
+      "prediction_id": 6,
+      "truth_id": 4,
+      "temporal_iou": 0.9698492462311558,
+      "start_offset_ms": 200.0,
+      "end_offset_ms": -40.0,
+      "start_error_ms": 200.0,
+      "end_error_ms": 40.0,
+      "start_acceptable": false,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 1680.0
+    },
+    {
+      "prediction_id": 7,
+      "truth_id": 5,
+      "temporal_iou": 0.9340277777777778,
+      "start_offset_ms": 120.0,
+      "end_offset_ms": 640.0,
+      "start_error_ms": 120.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": false,
+      "end_acceptable": true,
+      "both_acceptable": false,
+      "output_latency_ms": 1640.0
+    }
+  ],
+  "missed_rally_count": 0,
+  "false_positive_count": 0,
+  "false_split_count": 0,
+  "false_merge_count": 0,
+  "start_error_ms": {
+    "count": 2,
+    "mean": 160.0,
+    "p50": 160.0,
+    "p95": 196.0,
+    "max": 200.0
+  },
+  "end_error_ms": {
+    "count": 1,
+    "mean": 40.0,
+    "p50": 40.0,
+    "p95": 40.0,
+    "max": 40.0
+  },
+  "output_latency_ms": {
+    "count": 5,
+    "mean": 1664.0,
+    "p50": 1680.0,
+    "p95": 1680.0,
+    "max": 1680.0
+  },
+  "unmatched_prediction_ids": [],
+  "unmatched_truth_ids": [],
+  "prediction_overlaps": {
+    "1": [
+      1
+    ],
+    "3": [
+      2
+    ],
+    "4": [
+      3
+    ],
+    "6": [
+      4
+    ],
+    "7": [
+      5
+    ]
+  },
+  "truth_overlaps": {
+    "1": [
+      1
+    ],
+    "2": [
+      3
+    ],
+    "3": [
+      4
+    ],
+    "4": [
+      6
+    ],
+    "5": [
+      7
+    ]
+  },
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 3640.0,
+      "end_ms": 9600.0,
+      "emitted_at_ms": 11240.0
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 24480.0,
+      "end_ms": 31400.0,
+      "emitted_at_ms": 33080.0
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 47280.0,
+      "end_ms": 56720.0,
+      "emitted_at_ms": 58400.0
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 101080.0,
+      "end_ms": 108800.0,
+      "emitted_at_ms": 110480.0
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 142440.0,
+      "end_ms": 153840.0,
+      "emitted_at_ms": 155480.0
+    }
+  ],
+  "annotations": [
+    {
+      "rally_id": 1,
+      "start_ms": 4040.0,
+      "end_ms": 9280.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 24640.0,
+      "end_ms": 31000.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 47480.0,
+      "end_ms": 56120.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 100880.0,
+      "end_ms": 108840.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 142320.0,
+      "end_ms": 153200.0,
+      "review_status": "verified"
+    }
+  ]
+}

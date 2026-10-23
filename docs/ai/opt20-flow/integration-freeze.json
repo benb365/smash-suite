@@ -1,0 +1,22 @@
+{
+  "primary_head": "92988bfc7efc33127b988db2c3c7cffe23611944",
+  "task_commit": "f4772273b112ef358ac5345a18aabae37974ee0a",
+  "staged_files": {
+    "apps/video-clipper/reports/opt20-flow/README.md": "68e6ad5c2f9afde785116e8d0bcd640cf50f346ec33637f0ef694880890f640e",
+    "apps/video-clipper/reports/opt20-flow/summary.json": "cac990efea5c3b4e5baf80865ffcf3ed7bae2a7d48a605ff7080752668be2338",
+    "docs/ai/opt20-flow/acceptance-freeze.json": "30357187bd0132d6db30a9b54b940b30ff0702e46e24caf7d250ae33ce325ed3",
+    "docs/ai/opt20-flow/controller/commit-input.md": "a09d0eae1ce16401f82f6f82866dc2928384d584cee78fffef6204335013f5c9",
+    "docs/ai/opt20-flow/developer/input.md": "9ea6491d38c642288050f95b0eb550498abcc1513258d1be7987dba3465d8e0b",
+    "docs/ai/opt20-flow/developer/output.md": "499a15bfaad11429dec1849a31f80c6baadc6ce071e17e65d4513c69dfff399f",
+    "docs/ai/opt20-flow/evidence-preservation.json": "d677b8002d66247dcdb4c06d8d0b20c97e53bb678d34ad14d5c2401cb8ff33ad",
+    "docs/ai/opt20-flow/task.md": "c9756b81bbfc2d8c29c8e8eac4d134f8998fc9818a66c94adeb5c094f520285f",
+    "docs/ai/opt20-flow/verifier/input.md": "8a6b978cb3d2172bb8d7d0e8af0c9220b27487768de0b78bdc76c22e5aee4022",
+    "docs/ai/opt20-flow/verifier/output.md": "efbf85eb58ccdaf1d765e3d52e0c5655e67c3d18eb0dd7740a99d773de8a06d7",
+    "docs/features/performance-optimization/README.md": "c11e1f86eb12c88fe993f1abc0f38b7e370ef07867091d1f9dd2dc0bfe515e68",
+    "docs/plan/roadmap.md": "3123f6668dad8e943cca83458a3574666b25827c352875b8a0f1fa48a57bbb92",
+    "modules/rally/common/body_features.py": null,
+    "modules/rally/common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+    "modules/rally/common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+    "modules/rally/recognize.py": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f"
+  }
+}

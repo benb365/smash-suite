@@ -1,0 +1,12 @@
+[0:v]setpts=PTS-0,select='gte(pts,220800)*lt(pts,291728)+gte(pts,383472)*lt(pts,718400)+gte(pts,784000)*lt(pts,1082672)+gte(pts,1205328)*lt(pts,1391472)+gte(pts,1536528)*lt(pts,1751472)+gte(pts,1926928)*lt(pts,2086928)+gte(pts,2378128)*lt(pts,2465600)+gte(pts,2716272)*lt(pts,2880005)',setpts='round(PTS-(220800+91743.999999999971*gte(PTS,383472)+65600.000000000015*gte(PTS,784000)+122655.99999999994*gte(PTS,1205328)+145056.00000000003*gte(PTS,1536528)+175456.00000000012*gte(PTS,1926928)+291200.00000000029*gte(PTS,2378128)+250672.00000000003*gte(PTS,2716272)))'[video];
+[0:a:0]asetpts=PTS-(0.000000000)/TB,aresample=async=1:first_pts=0,apad[abase];
+[abase]asplit=8[a0][a1][a2][a3][a4][a5][a6][a7];
+[a0]atrim=start=13.800000000:end=18.233000000,asetpts=PTS-(13.800000000)/TB[ao0];
+[a1]atrim=start=23.967000000:end=44.900000000,asetpts=PTS-(23.967000000)/TB[ao1];
+[a2]atrim=start=49.000000000:end=67.667000000,asetpts=PTS-(49.000000000)/TB[ao2];
+[a3]atrim=start=75.333000000:end=86.967000000,asetpts=PTS-(75.333000000)/TB[ao3];
+[a4]atrim=start=96.033000000:end=109.467000000,asetpts=PTS-(96.033000000)/TB[ao4];
+[a5]atrim=start=120.433000000:end=130.433000000,asetpts=PTS-(120.433000000)/TB[ao5];
+[a6]atrim=start=148.633000000:end=154.100000000,asetpts=PTS-(148.633000000)/TB[ao6];
+[a7]atrim=start=169.767000000:end=180.000312500,asetpts=PTS-(169.767000000)/TB[ao7];
+[ao0][ao1][ao2][ao3][ao4][ao5][ao6][ao7]concat=n=8:v=0:a=1[audio]

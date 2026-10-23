@@ -43,10 +43,27 @@ def test_native_stream_copy_edit_list_accepts_only_presented_frames(stream_copy_
     assert source.stats["edit_list_verification"] == proof
 
 
-def test_truncated_stream_copy_remains_a_failure(stream_copy_clip):
+def test_edit_list_validation_counts_decoded_frames_before_fps_selection(stream_copy_clip):
+    import av
+    with av.open(str(stream_copy_clip)) as container:
+        reference = [frame for frame in container.decode(video=0)]
+    with FileFrameSource(stream_copy_clip, max_fps=10) as source:
+        delivered = [(frame.frame_id, frame.timestamp_ms) for frame in source]
+    assert 0 < len(delivered) < len(reference)
+    assert source.stats["frames_decoded"] == len(reference)
+    assert source.stats["expected_frames"] == len(reference)
+    assert source.stats["frames_selected"] == source.stats["frames_delivered"] == len(delivered)
+    assert source.stats["frames_skipped"] == len(reference) - len(delivered)
+    assert source.stats["edit_list_verification"]["presented_frames"] == len(reference)
+    assert delivered[0][0] == 0
+    assert all(a[0] < b[0] and a[1] < b[1] for a, b in zip(delivered, delivered[1:]))
+
+
+@pytest.mark.parametrize("max_fps", [None, 10])
+def test_truncated_stream_copy_remains_a_failure(stream_copy_clip, max_fps):
     # The fast-start sample table survives, while required media samples do not.
     data = stream_copy_clip.read_bytes()
     stream_copy_clip.write_bytes(data[:-max(400, len(data) // 8)])
     with pytest.raises((RuntimeError, ValueError, __import__("av").error.FFmpegError)):
-        with FileFrameSource(stream_copy_clip) as source:
+        with FileFrameSource(stream_copy_clip, max_fps=max_fps) as source:
             list(source)

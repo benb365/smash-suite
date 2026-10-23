@@ -1,0 +1,18 @@
+{
+  "run_id": "opt04-a",
+  "case": "A-short",
+  "base": "5c946e9e6186d052624ca6f853a62d40f034f6e8",
+  "sources": {
+    "modules/rally/recognize.py": "fa79c51c6e36b506bd1a535765c5e5751cb63585eca1d435d4d870f51f769ef8",
+    "modules/models/keypoint_rcnn/__init__.py": "dea0a8b24abe44df315dd50da64b2868001c6ff88e7e135a449fb17852a47518",
+    "modules/models/tracknet/predictor.py": "27fb4322b90511610f14a2a8e93b4787eae9e3ee2477946243b67027cdc1f336"
+  },
+  "patches": [],
+  "final_sources": false,
+  "copy_only": true,
+  "uid": 501,
+  "started_monotonic": 1347066.427556666,
+  "returncode": 0,
+  "finished_monotonic": 1347112.913616708,
+  "source_unchanged": true
+}

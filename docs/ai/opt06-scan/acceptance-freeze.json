@@ -1,0 +1,33 @@
+{
+  "round": 1,
+  "head": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+  "worktree": "/Users/bytedance/.codex/worktrees/opt06-scan/smash-suite",
+  "production_diff": [],
+  "files": {
+    "apps/video-clipper/reports/opt06-scan/A-short.json": "b0a438e59ead9c86f5d9165c98c8962f0db7379eab2f6679c066390d74c0bc1f",
+    "apps/video-clipper/reports/opt06-scan/C-short.json": "b4f1a858d6657919d570253af7f3c30c40e358dc6c4e3afc91c273733d2bcfab",
+    "apps/video-clipper/reports/opt06-scan/D-short.json": "c1c776db5ab54b932a4b856adb01ccc6d32ef17f4aa0f9b098d9125e5a08ada2",
+    "apps/video-clipper/reports/opt06-scan/README.md": "5c0c317d9266e97a2bbe88955126e1ff777185246283ebbf32263e240fa559b7",
+    "apps/video-clipper/reports/opt06-scan/candidate-coverage.json": "bd701d02e452703441ec7055936b2bd4fa4ed403e4f788942e85b1b2d343a98a",
+    "apps/video-clipper/reports/opt06-scan/reference-A-short.json": "01b3d994b6b7a33a834e7e8af24154e08f103bd7568d7c982fd46d8a24a5cffe",
+    "apps/video-clipper/reports/opt06-scan/reference-C-short.json": "2ec6ec45ffb28e28ad1cd160c1650a3bdac086199d2dda5c7d5f8255a01e76a2",
+    "apps/video-clipper/reports/opt06-scan/reference-D-short.json": "47e0d726c359b4c1319cce2c90a382cfed05e4314f1f74621aa888de1d7d8847",
+    "apps/video-clipper/reports/opt06-scan/replay-candidate.json": "9a3f22b60b07050bac106c436b9e34b2091701894851168aae2cd1674c6f7ec7",
+    "apps/video-clipper/reports/opt06-scan/replay-full.json": "616dff9289f2755c9f5ac80d234955fef729e84554e9a648fd780504c0f9b6f0",
+    "docs/ai/opt06-scan/candidate_windows.py": "dbaffeb8a6b613ab9d04e9f6f744c817dcad9ad21a0b3c61518a5cbbdfa5c2d7",
+    "docs/ai/opt06-scan/controller/phase2-audit-input.md": "270e16271fc0dfcc8c9ef60539bfbfaade17e03394c6ffd6d489ca3dce3a10cf",
+    "docs/ai/opt06-scan/controller/phase2-audit.md": "18b301f5cfbd63954405b0efc625a3b0395a5dba8b38962fcceb8230757fae1b",
+    "docs/ai/opt06-scan/controller/reference-audit-input.md": "fe186b0b365d125240a0cae9fb251104d75c50bd912c9d2f2d5e6c2408e96d02",
+    "docs/ai/opt06-scan/controller/reference-audit.json": "092dcd126cadafb5144abd727a5ed812acf59f1182d6ab44fbb5d3bf17cd1eb4",
+    "docs/ai/opt06-scan/developer/input.md": "abd9978fef83139752c5dca8b20df0e11cd0f045194d35eaa6aa6b0616923370",
+    "docs/ai/opt06-scan/developer/output.md": "4e16b7f6f20eb8899f6a170838de1ccac6b9e6077d9da5dcadc2dcef6b41396e",
+    "docs/ai/opt06-scan/replay_tracknet.py": "c0a122ca6b9f03e7d28970d73c31245087ed8f28bd973a9b0224beec080ff02e",
+    "docs/ai/opt06-scan/scan.py": "2e124af70f90188608b8d8a6aa2b5c6114f05971c9d755e5901f48bb0746766f",
+    "docs/ai/opt06-scan/task.md": "32d44594168bc566f160c208048a6270b0d6078503992039812a5020314db6ab",
+    "docs/ai/opt06-scan/test_candidate_windows.py": "c3534f014041ec80a82c103dda500235fc38705c17028c95fc00a52b48c9c0f8",
+    "docs/ai/opt06-scan/test_replay_tracknet.py": "1d8c9849ebb232d51a36601ee50c812be437cbf69a698ff0b2cc284021a27266",
+    "docs/ai/opt06-scan/test_scan.py": "2dbed51036f957f2bbb395202798f458c528565b48debd75b1c026b240c6bde9",
+    "docs/ai/opt06-scan/verifier/input.md": "0581645dcdf2ff2203251667d82019b565c540100be13fe309a34f33370244ea"
+  },
+  "developer_state": "paused; root corrected own task status after report"
+}

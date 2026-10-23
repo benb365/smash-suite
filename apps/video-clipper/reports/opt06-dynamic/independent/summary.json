@@ -1,0 +1,1047 @@
+{
+  "round": "R2",
+  "status": "passed",
+  "checks": {
+    "human_reports": {
+      "frozen_files_exact": true,
+      "common_eight_run_rounded_costs_match_matrix": true,
+      "effect_failure_and_not_adopted_reported": true,
+      "review_state_limits_preserved": true
+    },
+    "A-short": {
+      "frames": 4200,
+      "native_windows": 1400,
+      "coarse": 168,
+      "candidates": 453,
+      "expected_and_actual_execution": 562,
+      "baseline_calls": 1400,
+      "dynamic_calls": 562,
+      "independent_first_negative_stops": 114,
+      "output_numeric_comparison": {
+        "points_different_windows": 0,
+        "point_numeric_differences": 0,
+        "max_point_difference": 0,
+        "candidates_different_windows": 0,
+        "candidate_numeric_differences": 0,
+        "max_candidate_difference": 0,
+        "threshold_class_changes": 0
+      },
+      "baseline_timings": {
+        "preparation_s": 2.949201500043273,
+        "recognition_s": 35.359510000096634,
+        "rendering_s": 8.0829937919043,
+        "total_s": 46.39170529204421
+      },
+      "dynamic_timings": {
+        "preparation_s": 2.7907906249165535,
+        "recognition_s": 22.25143229193054,
+        "rendering_s": 7.8210289580747485,
+        "total_s": 32.86325187492184
+      },
+      "effect": {
+        "raw": {
+          "missing": [
+            [
+              3640.0,
+              3840.0
+            ],
+            [
+              47280.0,
+              48120.0
+            ]
+          ],
+          "added": [],
+          "changed_boundaries": [
+            [
+              1,
+              1,
+              "start",
+              200.0,
+              120.0,
+              false
+            ],
+            [
+              4,
+              3,
+              "start",
+              840.0,
+              120.0,
+              false
+            ]
+          ],
+          "unpaired_baseline_ids": []
+        },
+        "export": {
+          "missing": [
+            [
+              3140.0,
+              3340.0
+            ],
+            [
+              46780.0,
+              47620.0
+            ]
+          ],
+          "added": [],
+          "changed_boundaries": [
+            [
+              1,
+              1,
+              "start",
+              200.0,
+              120.0,
+              false
+            ],
+            [
+              3,
+              3,
+              "start",
+              840.0,
+              120.0,
+              false
+            ]
+          ],
+          "unpaired_baseline_ids": []
+        },
+        "verified_truth_losses": [
+          {
+            "truth_id": 3,
+            "truth_duration_ms": 8640.0,
+            "lost_intervals": [
+              [
+                47480.0,
+                48120.0
+              ]
+            ],
+            "lost_ms": 640.0
+          }
+        ],
+        "verified_truth_new_loss_total_ms": 640.0,
+        "buffered_truth_losses": [
+          {
+            "truth_id": 3,
+            "lost_intervals": [
+              [
+                47480.0,
+                47620.0
+              ]
+            ],
+            "lost_ms": 140.0
+          }
+        ],
+        "review_state": {
+          "source_status": "verified_full_clip",
+          "source_review_status": null,
+          "negative_time_is_not_verified": true,
+          "formal_benchmark_ready": false,
+          "whole_clip_review_complete": null,
+          "listed_items_review_complete": null,
+          "progress": null
+        }
+      },
+      "full_decode": {
+        "path": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/output.mp4",
+        "sha256": "b13a8421eec78a75ccbebdcbc671b3e662769b885eee4101af524c21c7b7c117",
+        "errors": [],
+        "streams": {
+          "video": {
+            "codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "decoded_frames": 1135,
+            "first_timestamp_ms": 20.0,
+            "last_timestamp_ms": 45380.0
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "decoded_frames": 1956,
+            "decoded_samples": 2002944,
+            "first_timestamp_ms": 0.0,
+            "last_timestamp_ms": 45395.011337868484
+          }
+        },
+        "fully_decoded": true,
+        "container_duration_ms": 45400.0
+      },
+      "same_raw_export_and_all_observations_as_first_round": true,
+      "independent_timings": {
+        "preparation_s": 2.7907906249165535,
+        "recognition_s": 22.25143229193054,
+        "rendering_s": 7.8210289580747485,
+        "total_s": 32.86325187492184
+      }
+    },
+    "D-short": {
+      "frames": 7527,
+      "native_windows": 2509,
+      "coarse": 251,
+      "candidates": 1185,
+      "expected_and_actual_execution": 1299,
+      "baseline_calls": 2509,
+      "dynamic_calls": 1299,
+      "independent_first_negative_stops": 240,
+      "output_numeric_comparison": {
+        "points_different_windows": 0,
+        "point_numeric_differences": 0,
+        "max_point_difference": 0,
+        "candidates_different_windows": 0,
+        "candidate_numeric_differences": 0,
+        "max_candidate_difference": 0,
+        "threshold_class_changes": 0
+      },
+      "baseline_timings": {
+        "preparation_s": 2.6432755840942264,
+        "recognition_s": 275.1372532499954,
+        "rendering_s": 12.375133749796078,
+        "total_s": 290.1556625838857
+      },
+      "dynamic_timings": {
+        "preparation_s": 2.781888416968286,
+        "recognition_s": 132.03809020807967,
+        "rendering_s": 8.05219087493606,
+        "total_s": 142.872169499984
+      },
+      "people_pose": {
+        "full_anchor_rows": 1255,
+        "full_detector_calls": 314,
+        "full_boxes": 3373,
+        "selected_track_ids": [
+          58,
+          40
+        ],
+        "candidate_anchors": 594,
+        "skipped_rows": 661,
+        "expected_actual_pose_calls": 1167,
+        "empty_crops": 0,
+        "expected_actual_context_frames": 1782,
+        "pose_converted_frames": 2376,
+        "full_signal_times_equal": true,
+        "full_foot_signals_equal": true,
+        "full_feature_and_box_equality_against_baseline": "pending original observe replay; baseline did not save full candidates/people"
+      },
+      "effect": {
+        "raw": {
+          "missing": [
+            [
+              6200.0,
+              7200.0
+            ],
+            [
+              18900.0,
+              27000.0
+            ],
+            [
+              29700.0,
+              32500.0
+            ],
+            [
+              41200.0,
+              42000.0
+            ],
+            [
+              50300.0,
+              55000.0
+            ],
+            [
+              63500.0,
+              68600.0
+            ],
+            [
+              77500.0,
+              79300.0
+            ],
+            [
+              100900.0,
+              108000.0
+            ],
+            [
+              115500.0,
+              117300.0
+            ],
+            [
+              129200.0,
+              129600.0
+            ],
+            [
+              141000.0,
+              145600.0
+            ],
+            [
+              153100.0,
+              153300.0
+            ],
+            [
+              174200.0,
+              176800.0
+            ],
+            [
+              198700.0,
+              207800.0
+            ],
+            [
+              232600.0,
+              233000.0
+            ],
+            [
+              241300.0,
+              246200.0
+            ]
+          ],
+          "added": [],
+          "changed_boundaries": [
+            [
+              1,
+              1,
+              "end",
+              -1000.0,
+              100.0,
+              false
+            ],
+            [
+              3,
+              2,
+              "start",
+              2800.0,
+              100.0,
+              false
+            ],
+            [
+              3,
+              2,
+              "end",
+              -800.0,
+              100.0,
+              false
+            ],
+            [
+              6,
+              3,
+              "start",
+              1800.0,
+              100.0,
+              false
+            ],
+            [
+              8,
+              4,
+              "start",
+              1800.0,
+              100.0,
+              false
+            ],
+            [
+              8,
+              4,
+              "end",
+              -400.0,
+              100.0,
+              false
+            ],
+            [
+              9,
+              5,
+              "end",
+              -4600.0,
+              100.0,
+              false
+            ],
+            [
+              10,
+              6,
+              "start",
+              200.0,
+              100.0,
+              false
+            ],
+            [
+              10,
+              6,
+              "end",
+              -2600.0,
+              100.0,
+              false
+            ],
+            [
+              12,
+              7,
+              "end",
+              -400.0,
+              100.0,
+              false
+            ]
+          ],
+          "unpaired_baseline_ids": [
+            2,
+            4,
+            5,
+            7,
+            11,
+            13
+          ]
+        },
+        "export": {
+          "missing": [
+            [
+              6700.0,
+              7700.0
+            ],
+            [
+              18400.0,
+              27500.0
+            ],
+            [
+              29200.0,
+              32000.0
+            ],
+            [
+              41700.0,
+              42500.0
+            ],
+            [
+              49800.0,
+              55500.0
+            ],
+            [
+              63000.0,
+              69100.0
+            ],
+            [
+              77000.0,
+              78800.0
+            ],
+            [
+              100400.0,
+              108500.0
+            ],
+            [
+              115000.0,
+              116800.0
+            ],
+            [
+              129700.0,
+              130100.0
+            ],
+            [
+              141500.0,
+              146100.0
+            ],
+            [
+              152600.0,
+              152800.0
+            ],
+            [
+              174700.0,
+              177300.0
+            ],
+            [
+              198200.0,
+              208300.0
+            ],
+            [
+              233100.0,
+              233500.0
+            ],
+            [
+              240800.0,
+              246700.0
+            ]
+          ],
+          "added": [],
+          "changed_boundaries": [
+            [
+              1,
+              1,
+              "end",
+              -1000.0,
+              100.0,
+              false
+            ],
+            [
+              3,
+              2,
+              "start",
+              2800.0,
+              100.0,
+              false
+            ],
+            [
+              3,
+              2,
+              "end",
+              -800.0,
+              100.0,
+              false
+            ],
+            [
+              6,
+              3,
+              "start",
+              1800.0,
+              100.0,
+              false
+            ],
+            [
+              8,
+              4,
+              "start",
+              1800.0,
+              100.0,
+              false
+            ],
+            [
+              8,
+              4,
+              "end",
+              -400.0,
+              100.0,
+              false
+            ],
+            [
+              9,
+              5,
+              "end",
+              -4600.0,
+              100.0,
+              false
+            ],
+            [
+              10,
+              6,
+              "start",
+              200.0,
+              100.0,
+              false
+            ],
+            [
+              10,
+              6,
+              "end",
+              -2600.0,
+              100.0,
+              false
+            ],
+            [
+              12,
+              7,
+              "end",
+              -400.0,
+              100.0,
+              false
+            ]
+          ],
+          "unpaired_baseline_ids": [
+            2,
+            4,
+            5,
+            7,
+            11,
+            13
+          ]
+        },
+        "verified_truth_losses": [
+          {
+            "truth_id": 2,
+            "truth_duration_ms": 3067.0,
+            "lost_intervals": [
+              [
+                19633.0,
+                22700.0
+              ]
+            ],
+            "lost_ms": 3067.0
+          },
+          {
+            "truth_id": 3,
+            "truth_duration_ms": 9066.0,
+            "lost_intervals": [
+              [
+                30367.0,
+                32500.0
+              ]
+            ],
+            "lost_ms": 2133.0
+          },
+          {
+            "truth_id": 4,
+            "truth_duration_ms": 5833.0,
+            "lost_intervals": [
+              [
+                50300.0,
+                55000.0
+              ]
+            ],
+            "lost_ms": 4700.0
+          },
+          {
+            "truth_id": 5,
+            "truth_duration_ms": 4300.0,
+            "lost_intervals": [
+              [
+                63500.0,
+                66967.0
+              ]
+            ],
+            "lost_ms": 3467.0
+          },
+          {
+            "truth_id": 6,
+            "truth_duration_ms": 10967.0,
+            "lost_intervals": [
+              [
+                77733.0,
+                79300.0
+              ]
+            ],
+            "lost_ms": 1567.0
+          },
+          {
+            "truth_id": 7,
+            "truth_duration_ms": 5967.0,
+            "lost_intervals": [
+              [
+                102300.0,
+                108000.0
+              ]
+            ],
+            "lost_ms": 5700.0
+          },
+          {
+            "truth_id": 8,
+            "truth_duration_ms": 13734.0,
+            "lost_intervals": [
+              [
+                116333.0,
+                117300.0
+              ],
+              [
+                129200.0,
+                129600.0
+              ]
+            ],
+            "lost_ms": 1367.0
+          },
+          {
+            "truth_id": 9,
+            "truth_duration_ms": 5900.0,
+            "lost_intervals": [
+              [
+                141000.0,
+                144367.0
+              ]
+            ],
+            "lost_ms": 3367.0
+          },
+          {
+            "truth_id": 12,
+            "truth_duration_ms": 7166.0,
+            "lost_intervals": [
+              [
+                200067.0,
+                207233.0
+              ]
+            ],
+            "lost_ms": 7166.0
+          },
+          {
+            "truth_id": 14,
+            "truth_duration_ms": 3500.0,
+            "lost_intervals": [
+              [
+                242467.0,
+                245967.0
+              ]
+            ],
+            "lost_ms": 3500.0
+          }
+        ],
+        "verified_truth_new_loss_total_ms": 36034.0,
+        "buffered_truth_losses": [
+          {
+            "truth_id": 2,
+            "lost_intervals": [
+              [
+                19633.0,
+                22700.0
+              ]
+            ],
+            "lost_ms": 3067.0
+          },
+          {
+            "truth_id": 3,
+            "lost_intervals": [
+              [
+                30367.0,
+                32000.0
+              ]
+            ],
+            "lost_ms": 1633.0
+          },
+          {
+            "truth_id": 4,
+            "lost_intervals": [
+              [
+                49800.0,
+                55300.0
+              ]
+            ],
+            "lost_ms": 5500.0
+          },
+          {
+            "truth_id": 5,
+            "lost_intervals": [
+              [
+                63000.0,
+                66967.0
+              ]
+            ],
+            "lost_ms": 3967.0
+          },
+          {
+            "truth_id": 6,
+            "lost_intervals": [
+              [
+                77733.0,
+                78800.0
+              ]
+            ],
+            "lost_ms": 1067.0
+          },
+          {
+            "truth_id": 7,
+            "lost_intervals": [
+              [
+                102300.0,
+                108267.0
+              ]
+            ],
+            "lost_ms": 5967.0
+          },
+          {
+            "truth_id": 8,
+            "lost_intervals": [
+              [
+                116333.0,
+                116800.0
+              ],
+              [
+                129700.0,
+                130067.0
+              ]
+            ],
+            "lost_ms": 834.0
+          },
+          {
+            "truth_id": 9,
+            "lost_intervals": [
+              [
+                141500.0,
+                144367.0
+              ]
+            ],
+            "lost_ms": 2867.0
+          },
+          {
+            "truth_id": 12,
+            "lost_intervals": [
+              [
+                200067.0,
+                207233.0
+              ]
+            ],
+            "lost_ms": 7166.0
+          },
+          {
+            "truth_id": 14,
+            "lost_intervals": [
+              [
+                242467.0,
+                245967.0
+              ]
+            ],
+            "lost_ms": 3500.0
+          }
+        ],
+        "review_state": {
+          "source_status": "human_reviewed_listed_items",
+          "source_review_status": "needs_review",
+          "negative_time_is_not_verified": false,
+          "formal_benchmark_ready": false,
+          "whole_clip_review_complete": true,
+          "listed_items_review_complete": true,
+          "progress": {
+            "path": "datasets/badminton-v1/annotations/reviewed/rally/reserve-d2-20261018/review-progress-20261018.json",
+            "sha256": "751a3a37d045b7975d2fe26e1ab6b5f7066ddeaeb77bd98a3af6e798e0109e85",
+            "whole_clip_review_complete": true,
+            "rally_review_complete": true,
+            "listed_items_review_complete": true,
+            "confirmed_rally_ids": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ],
+            "confirmed_excluded_event_ids": [
+              "d2-event-01",
+              "d2-event-02",
+              "d2-event-03",
+              "d2-event-04",
+              "d2-event-05",
+              "d2-event-06",
+              "d2-event-07",
+              "d2-event-08",
+              "d2-event-09",
+              "d2-event-10"
+            ],
+            "remaining_rally_ids": [],
+            "remaining_boundary_review_ids": [],
+            "remaining_event_ids": [],
+            "remaining_incomplete_event_ids": []
+          }
+        }
+      },
+      "full_decode": {
+        "path": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/output.mp4",
+        "sha256": "f16d770e10a9a2a7f4cb5f5d3d501fe0839bb34428d91b521324b673d0d6ee88",
+        "errors": [],
+        "streams": {
+          "video": {
+            "codec": "h264",
+            "width": 1920,
+            "height": 1080,
+            "decoded_frames": 2571,
+            "first_timestamp_ms": 0.0,
+            "last_timestamp_ms": 85667.0
+          },
+          "audio": {
+            "codec": "aac",
+            "sample_rate": 44100,
+            "decoded_frames": 3691,
+            "decoded_samples": 3779584,
+            "first_timestamp_ms": 0.0,
+            "last_timestamp_ms": 85681.63265306123
+          }
+        },
+        "fully_decoded": true,
+        "container_duration_ms": 85700.0
+      },
+      "same_raw_export_and_all_observations_as_first_round": true,
+      "independent_timings": {
+        "preparation_s": 2.781888416968286,
+        "recognition_s": 132.03809020807967,
+        "rendering_s": 8.05219087493606,
+        "total_s": 142.872169499984
+      }
+    },
+    "original_people_replay": {
+      "round": "R2",
+      "kind": "targeted_original_observe_people_replay",
+      "status": "passed",
+      "note": "Real original D decoding/YOLO/person tracking; saved TrackNet outputs; no new TrackNet, pose, rendering or performance run.",
+      "script_sha256": "735ad44d110023310313fc247d64e550d7c2fc8b3cdd8c35b0846c66a784203f",
+      "checks": {
+        "all_native_observations": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "original_shifted_D": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "all_features_boxes_appearance": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "entire_selected_seeds": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "entire_follow_people": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "baseline_times": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "baseline_foot_speed": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "baseline_foot_valid": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "dynamic_times": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "dynamic_foot_speed": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        },
+        "dynamic_foot_valid": {
+          "equal": true,
+          "differences": 0,
+          "max_numeric_difference": 0.0,
+          "first_differences": []
+        }
+      },
+      "hashes": {
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/docs/ai/opt06-dynamic/acceptance-freeze.json": "8fd310fa1b9a0c7d4728a3a74d57ba25efebb2be73a17cf3c498750b6cb1ef9e",
+        "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/run.json": "2d604f8a69c8383d703bd75a54cfe220cf1780f700ab26e4ed0554cd80feb6e7",
+        "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/result.json": "0eaa6f3269bb362f9ddc33661d12bfab67b6349a19bb723bad8647e07d2eff23",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/D-short/run.json": "8b3854cbbdbeeed2c6cb3d7b8b240020e6ae082b499ec1f01736b0924d45061b",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/D-short/dynamic-diagnostics.json": "7a4cbbb130864bb813cd4d16a52017bc59b2755abe9cca410e9e2b0e7ecd6344",
+        "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/tracknet-points.jsonl": "5e4d58b082c987b28e46eb4f3711e178e760032cfaab1c721168f2c2f2b52fe5",
+        "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/reports/performance-first-round/inputs.json": "afd60a8dbb0930948faf6962fb881b27e27fc42d8dc4f395ff923695f27d8ec4",
+        "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4": "360e3de1018a9656770ea432c903afba44cff29c0052f03ea65606a5200867fd",
+        "/Users/bytedance/workspace/experiments/smash-suite/apps/video-clipper/.runtime/performance-first-round/combined-d/D-short/home/models/yolo11n.pt": "0ebbc80d4a7680d14987a577cd21342b65ecfd94632bd9a8da63ae6417644ee1",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/modules/rally/recognize.py": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/modules/media/video_input.py": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/modules/rally/common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/modules/rally/common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/modules/rally/common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/modules/models/yolo11n/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/person-signals.npz": "acb26813bfc0a0cfc51752dcf2278a98250462d83cd3f650f3986cf79f1bf2ed",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/D-short/person-signals.npz": "fcf228ffd8a544caeed353a64a5e0939ef1d0ceda641c850b394b10d2b92c185",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/original-people-D/observations.json.gz": "de715b85f9049ef2c5805defd9f44042e009e4e67030e530cef90cc6c9d238c9",
+        "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/original-people-D/statistics.json": "ddb0877183e0fbdd33c97ee0cffda5180d5e5b1e740bbdc95afa8be729c21727"
+      },
+      "acceptance_freeze_sha256": "8fd310fa1b9a0c7d4728a3a74d57ba25efebb2be73a17cf3c498750b6cb1ef9e",
+      "original_source": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/modules/rally/recognize.py",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+      "source_stats": [
+        {
+          "frames_decoded": 7527,
+          "frames_delivered": 7527,
+          "queue_peak": 6,
+          "decode_s": 6.974006499862298,
+          "conversion_s": 8.991276221815497,
+          "max_lag_s": 0.0,
+          "fps": 29.999962634562284,
+          "expected_frames": 7527,
+          "width": 1920,
+          "height": 1080,
+          "first_pts_ms": 0.0,
+          "last_timestamp_ms": 250867.0,
+          "last_delivered_timestamp_ms": 250867.0
+        }
+      ],
+      "stub_tracknet_calls": 2509,
+      "source_frames": 7527,
+      "selected_track_ids": [
+        58,
+        40
+      ],
+      "person_counts": {
+        "person_detector_calls": 314,
+        "person_detector_images": 1255,
+        "person_boxes": 3373,
+        "decode_passes": 1,
+        "frames_decoded": 7527,
+        "native_observations": 7527,
+        "shifted_observations": 1
+      },
+      "device": "YOLO MPS; TrackNet saved source-order stub; no pose model",
+      "runtime_versions": {
+        "python": "3.11.16 (main, Sep 29 2026, 14:49:58) [Clang 22.1.3 ]",
+        "torch": "2.8.0",
+        "opencv": "5.0.0",
+        "numpy": "2.2.6"
+      }
+    }
+  },
+  "hashes": {
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/reports/performance-validation-20261023/matrix.json": "6ceca97d86b8c011a600ea09550a6802a42750ecfac68a9040132f2d21002041",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/run.json": "463f800cc9507fdfae7e8dae851b78aa5426762c52130cc239fee2e9d6ed08cf",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/result.json": "85f28e0681fa3c92f0a8881444743b106040035354aada7f5471dd775a811c1e",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/statistics.json": "cd0035dae6ebb45ff7ac67603e3679d69a6ccb63b4b7cc7337992b45054b95fc",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/dynamic-diagnostics.json": "73b2591607f4dd81ddfba777399f033f9b03ef12c8c9702d33c6a81beb06afa7",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/tracknet-points.jsonl": "4484e19f09103809e1c22e1c161f2fe1173f79dca7986b7b7f831ed5811fad65",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/derived-recognize.py": "3a62fd280ad9371a43a1664812a2ac14deafc73785d6cede10623d2cca188492",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/output.mp4": "b13a8421eec78a75ccbebdcbc671b3e662769b885eee4101af524c21c7b7c117",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/run.json": "8e1e083d7d02feb6e8bdc49382b92173b241acafef8152b1e01aff4a1c2aa99a",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/result.json": "4e2cb8586da006f775d0dbea89914728aac46f5bdf19d761df5653a84d40576f",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/statistics.json": "b167321a0e0e93a44e7b9715ae4db5e3c4d7f6e768c569b84b290b16581032b9",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/dynamic-diagnostics.json": "c5d849ba15cfd4df4a790787e2539a26b01c571baf18a85f6667e1369376f853",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/tracknet-points.jsonl": "45a26b581d30125c4232dfa7af693d6e9368d1596bba08b51b783d928cda9fbd",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/derived-recognize.py": "3a62fd280ad9371a43a1664812a2ac14deafc73785d6cede10623d2cca188492",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/output.mp4": "f16d770e10a9a2a7f4cb5f5d3d501fe0839bb34428d91b521324b673d0d6ee88",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/original-people-D/replay-result.json": "313e006e075b30c216e00504d90bec0a17d2543127ae5bac9e79900da062fba3",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/docs/ai/opt06-dynamic/verifier/replay-original-people.py": "735ad44d110023310313fc247d64e550d7c2fc8b3cdd8c35b0846c66a784203f",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/original-people-D/observations.json.gz": "de715b85f9049ef2c5805defd9f44042e009e4e67030e530cef90cc6c9d238c9",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/docs/ai/opt06-dynamic/verifier/independent-A.log": "bce15218fbbed7e908ed4ced39deb9df3848fc316e53ab9bbc6ac2d1d6ca9792",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/docs/ai/opt06-dynamic/verifier/independent-D.log": "db72f63c342806466c44e0c95d5a3d9d5964f20d76279a8bfbfe01fe72fe7f13",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/docs/ai/opt06-dynamic/verifier/replay-original-people.log": "e1fb5771e918f5db4b12eedab4f09113f83aa6d97419d2dd1a22964029067a9b"
+  },
+  "hardware_stage_complete": true,
+  "note": "Independent faithful experiment delivery checks; A/D effect failure and not adopted; browser playback is a separate controller check.",
+  "checker_sha256": "f8e7543258e94c180045a4410232926b0df2e0cde626354c4087abd61943ab1c",
+  "acceptance_freeze_sha256": "8fd310fa1b9a0c7d4728a3a74d57ba25efebb2be73a17cf3c498750b6cb1ef9e",
+  "actual_head": "627a5ad75eddf13e8427d952e4792d695a6c1b8e",
+  "freeze_file_count": 74,
+  "source_data_checker_sha256": "999e05b3aa26f6634fd4cfadb086dbbd5aa45ccb3482fd2004b58afd76570626",
+  "checked_input_hashes": {
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/A-short/run.json": "99d1f6ba461a1cc25edc45ed8b29530d014a30ea89428f594d3bb6afb8577878",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/run.json": "463f800cc9507fdfae7e8dae851b78aa5426762c52130cc239fee2e9d6ed08cf",
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/A-short/result.json": "99c13ec57f1e711c93d84afcdfbf6545adf04973e01447a3f66b5540501c2c79",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/result.json": "85f28e0681fa3c92f0a8881444743b106040035354aada7f5471dd775a811c1e",
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/A-short/statistics.json": "7c97b56a1be4656efe003abd0621b8b4cad50cedb32b11d4ffad752bb37e3164",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/statistics.json": "cd0035dae6ebb45ff7ac67603e3679d69a6ccb63b4b7cc7337992b45054b95fc",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/dynamic-diagnostics.json": "73b2591607f4dd81ddfba777399f033f9b03ef12c8c9702d33c6a81beb06afa7",
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/A-short/tracknet-points.jsonl": "e3e038b2e768a203772ff8f982edab0624c9e2f055acd7e90739b7a0536e7970",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/tracknet-points.jsonl": "4484e19f09103809e1c22e1c161f2fe1173f79dca7986b7b7f831ed5811fad65",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/reports/opt06-dynamic/A-short/comparison.json": "a1e443282c5115d2f4c8dae297f811f3897bcfa5fcac61d68f6ae524a833a937",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/A-short/derived-recognize.py": "3a62fd280ad9371a43a1664812a2ac14deafc73785d6cede10623d2cca188492",
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/run.json": "2d604f8a69c8383d703bd75a54cfe220cf1780f700ab26e4ed0554cd80feb6e7",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/run.json": "8e1e083d7d02feb6e8bdc49382b92173b241acafef8152b1e01aff4a1c2aa99a",
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/result.json": "0eaa6f3269bb362f9ddc33661d12bfab67b6349a19bb723bad8647e07d2eff23",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/result.json": "4e2cb8586da006f775d0dbea89914728aac46f5bdf19d761df5653a84d40576f",
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/statistics.json": "7e5f4a25d89fa576e79afbbe4bedef56f61973a4baa8d41135a0823045fd1851",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/statistics.json": "b167321a0e0e93a44e7b9715ae4db5e3c4d7f6e768c569b84b290b16581032b9",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/dynamic-diagnostics.json": "c5d849ba15cfd4df4a790787e2539a26b01c571baf18a85f6667e1369376f853",
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/tracknet-points.jsonl": "5e4d58b082c987b28e46eb4f3711e178e760032cfaab1c721168f2c2f2b52fe5",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/tracknet-points.jsonl": "45a26b581d30125c4232dfa7af693d6e9368d1596bba08b51b783d928cda9fbd",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/reports/opt06-dynamic/D-short/comparison.json": "f5ad70c3721d620d504e8d15ce54aacdb6d2e145da2590c0b6ef03a77e61e595",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/derived-recognize.py": "3a62fd280ad9371a43a1664812a2ac14deafc73785d6cede10623d2cca188492",
+    "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/person-signals.npz": "acb26813bfc0a0cfc51752dcf2278a98250462d83cd3f650f3986cf79f1bf2ed",
+    "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/person-signals.npz": "fcf228ffd8a544caeed353a64a5e0939ef1d0ceda641c850b394b10d2b92c185"
+  },
+  "conclusions": {
+    "functional": "faithful experiment delivery passed; candidate A and D effect failed and remain unadopted",
+    "code": "passed frozen R2 implementation and v3 analysis",
+    "documentation": "reviewed frozen human reports; no unresolved factual discrepancy",
+    "browser_playback": "not performed by this verifier"
+  }
+}

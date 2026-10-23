@@ -1,0 +1,53 @@
+{
+  "backend": {
+    "command": "pnpm run test:backend",
+    "passed": 247,
+    "log": "backend-integrated-tests.log"
+  },
+  "benchmark_followup": {
+    "command": ".venv/bin/python -m pytest apps/video-clipper/backend/tests/test_benchmark.py -q",
+    "passed": 15
+  },
+  "frontend": {
+    "typecheck": "passed",
+    "build": "passed",
+    "config_tests_passed": 5
+  },
+  "browser": {
+    "default_collapsed": true,
+    "scene_defaults": true,
+    "explicit_false_restore": true,
+    "scene_choices_independent": true,
+    "new_tab_defaults": true,
+    "button_highlight": true,
+    "screenshot": "apps/video-clipper/reports/advanced-options/interface.jpg",
+    "viewer": {
+      "url": "http://127.0.0.1:60774/",
+      "playback_and_scene_switch": "passed",
+      "boundary_check_ms": 3796,
+      "all_off": "keep",
+      "product_default": "delete",
+      "screenshot": "apps/video-clipper/reports/advanced-options/review.jpg"
+    }
+  },
+  "head": "5951c006fb096ef01b27773d53298399248b307d",
+  "source_sha256": {
+    "apps/video-clipper/backend/app/product_types.py": "9fda980ab2855e6f6aed5f4729ef41f33a4edd45177d9f3df0200ff1d264592e",
+    "apps/video-clipper/backend/app/worker.py": "a83f19325b112368b9a5964ba1ae598ab06750d9f3cb1ab29fb613d4148492ad",
+    "apps/video-clipper/backend/app/benchmark.py": "dc75cd0b50152521261bb71ac1277ced1d5ebc13c6a945b89f3faf85d0629035",
+    "modules/rally/recognize.py": "6c73b16a75faaa74b3cbc2ba0056fca3209255e08f6b78bd3e01ab9bb8f410ee",
+    "modules/rally/dynamic_scan.py": "e28612c1f61bea2f9684d6949619d8ab94904f9f012f19c8ec4e0a4da6d796e2",
+    "modules/models/tracknet/predictor.py": "7aa636ae4109ffb2239774f19fe367bb8c6280e53bda476df51542947c2bfff3",
+    "modules/media/video_input.py": "e7e23f44714e2918a383a288a5bd95bf35891acd8799e3dbe55ae5d591c33a25",
+    "apps/video-clipper/frontend/src/App.tsx": "81fcccad28ffca2f8745ecf1e49cad43c16338b2414f5599147edb4c63cfdc17",
+    "apps/video-clipper/frontend/src/host.ts": "b945789c5f1551188e3a69b318ad0cf3349ee06e094ab6bf93ee119151567afb",
+    "apps/video-clipper/frontend/src/optimizations.ts": "35ea9525b2a69f36ca56a15af56442e99c6ed162a02d9a7bd6406fc1bd832bea"
+  },
+  "real_product_cases": {
+    "optimization_cases": 8,
+    "trajectory_integration_cases": 1,
+    "full_media_decode": "passed",
+    "padding_ms": 500,
+    "summary": "apps/video-clipper/reports/advanced-options/validation.json"
+  }
+}

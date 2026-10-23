@@ -1,0 +1,89 @@
+{
+  "case_id": "D",
+  "window_name": "observation",
+  "stage": "正在寻找羽毛球和球员",
+  "trace_bundle": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/observation.trace",
+    "file_count": 451,
+    "directory_sha256": "3ab6496195bc865c6b4df0df18a357b99ada2c076891f498b3bd4ace4879a635",
+    "manifest_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/artifact-index.json",
+    "manifest_sha256": "7dae8222ae84515a4ede6a499096dafac197dd71f4e470b7be61292c97188f0c"
+  },
+  "exports_and_logs": {
+    "source_artifact_index": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/artifact-index.json",
+    "files": [
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/toc.xml",
+        "size_bytes": 34124,
+        "sha256": "cff4f24a00cef94e748fc735e608109ad6b42b8d65e13aeb25fd0a2db0a63409"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/toc.xml.log",
+        "size_bytes": 201,
+        "sha256": "30eb3ede1189579d97c26560b36e622a0be3f66b0ce235004146d99f3beb113e"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/time-profile.xml",
+        "size_bytes": 6076512,
+        "sha256": "52ff83f501ba4a3f62972712e6277e70ffef3b47d5384afbe1b16b7e64be4adc"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/time-profile.xml.log",
+        "size_bytes": 210,
+        "sha256": "c090b84c8f3ec604d4802e4f02cb47749a3c3e0adc0f9239c12589e58198c2de"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/metal-gpu-intervals.xml",
+        "size_bytes": 29386049,
+        "sha256": "93dbbcce03a4db19c16dc006eb6726d97c9df5e1a14ddf41c4ce7f19838f5009"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/metal-gpu-intervals.xml.log",
+        "size_bytes": 217,
+        "sha256": "015cea91a7550530fd173017de7d7097834b112a3c2bdbfe6517343093f6ee33"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/os-signpost.xml",
+        "size_bytes": 52681867,
+        "sha256": "1d63d9e11fc4149d670569b40e66342e5ae31f7b025b00bed300a44ae51fbc3c"
+      },
+      {
+        "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/os-signpost.xml.log",
+        "size_bytes": 209,
+        "sha256": "2ee458f143076238bb31939690a9a51044df000c6a5fbe34cd2ba84196f35127"
+      }
+    ]
+  },
+  "export_status": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-v1/observation/export-status.json",
+    "size_bytes": 4094,
+    "sha256": "eaa4c045be9e997a56fbc7297139f23587c43529b761119821b72f916126ca91"
+  },
+  "stage_events": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-events.jsonl",
+    "size_bytes": 936,
+    "sha256": "a184db39ba171dffd48da7c24adc4c296b6136d14549280ee8b548a28ad88ac5"
+  },
+  "stage_current": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-current.json",
+    "size_bytes": 125,
+    "sha256": "36e4f67502b7d26e1cc5c784feeb850262cf321d6e9406d1d950c360c8d5119c"
+  },
+  "summary_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-final-v2/observation/summary.json",
+  "summary_sha256": "aebbd4f12fbced05ad23e82a48b5e0c4744be3fdd95718f299be0d07645d345f",
+  "controlled_stop_boundary_evidence": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/cnn-window-probe/stop-boundary-check.json",
+    "sha256": "9796a29e67b7adfa9dfb2588a325d65e38949d40fdddc8a8a89c22ce49a10eb6",
+    "status": "observed_cross_table_stop_boundary_difference",
+    "matching_case_evidence": {
+      "toc_duration_s": 9.189937,
+      "signpost_end_s": 9.739336875,
+      "tail_s": 0.549399875
+    }
+  },
+  "signpost_boundary_event_index": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/signpost-boundary-events.json",
+    "size_bytes": 5100641,
+    "sha256": "a657d9be1dcb03e150070d1b1f5a0f3582782469458968647ac6318a42d9831e"
+  }
+}

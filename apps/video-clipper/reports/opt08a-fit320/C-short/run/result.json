@@ -1,0 +1,115 @@
+{
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 14300.0,
+      "end_ms": 17733.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 24467.0,
+      "end_ms": 44400.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 49500.0,
+      "end_ms": 67167.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 75833.0,
+      "end_ms": 86467.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 96533.0,
+      "end_ms": 108967.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 120933.0,
+      "end_ms": 129933.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 149133.0,
+      "end_ms": 153600.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 170267.0,
+      "end_ms": 179533.0,
+      "emitted_at_ms": 179967.0
+    }
+  ],
+  "export_ranges": [
+    [
+      13800.0,
+      18233.0
+    ],
+    [
+      23967.0,
+      44900.0
+    ],
+    [
+      49000.0,
+      67667.0
+    ],
+    [
+      75333.0,
+      86967.0
+    ],
+    [
+      96033.0,
+      109467.0
+    ],
+    [
+      120433.0,
+      130433.0
+    ],
+    [
+      148633.0,
+      154100.0
+    ],
+    [
+      169767.0,
+      180000.3125
+    ]
+  ],
+  "details": {
+    "warnings": [],
+    "recognition": {
+      "algorithm": "courtside-tail_gap800_growth300",
+      "selected_people": [
+        {
+          "x1": 934.59228515625,
+          "y1": 643.3831787109375,
+          "x2": 995.131103515625,
+          "y2": 877.21337890625,
+          "confidence": 0.5861480236053467
+        },
+        {
+          "x1": 789.3871459960938,
+          "y1": 399.810546875,
+          "x2": 1000.7921752929688,
+          "y2": 965.6593017578125,
+          "confidence": 0.8823997974395752
+        }
+      ],
+      "native_frames": 5400,
+      "shifted_frames": 5400
+    },
+    "device": "mps",
+    "recognition_wall_s": 78.27240208396688
+  },
+  "padding_ms": 500,
+  "quality": "balanced",
+  "output_duration_ms": 94801.3125
+}

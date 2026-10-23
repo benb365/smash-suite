@@ -1,9 +1,11 @@
 import '@lynx-js/web-core/client';
 import type { LynxViewElement } from '@lynx-js/web-core/client';
-import { initialScreen, type JobState, type Point, type ScreenState } from './types';
+import { defaultOptimizations, resolveOptimizations,
+  type SessionPreferences, type SessionSnapshot } from './optimizations';
+import { initialScreen, type CameraType, type JobState, type Optimizations, type Point, type ScreenState } from './types';
 import './host.css';
 
-type Session = { id: string; token: string; preferences?: Pick<ScreenState, 'camera' | 'quality' | 'court'> };
+type Session = SessionSnapshot & { preferences?: SessionPreferences & { showShotPaths?: boolean } };
 type SaveHandle = { createWritable(): Promise<WritableStream<Uint8Array> & { abort(): Promise<void> }> };
 type SaveWindow = Window & { showSaveFilePicker?: (options: unknown) => Promise<SaveHandle> };
 const view = document.querySelector('#controls') as LynxViewElement;
@@ -23,7 +25,11 @@ let requestedFrame = '';
 
 function publish() {
   if (session) {
-    session.preferences = { camera: screen.camera, quality: screen.quality, court: screen.court };
+    session.preferences = { ...session.preferences, camera: screen.camera, quality: screen.quality, court: screen.court, showShotPaths: screen.showShotPaths };
+    session.preferences.optimizationsByCamera = {
+      ...session.preferences.optimizationsByCamera,
+      [screen.camera]: { ...screen.optimizations },
+    };
     sessionStorage.setItem('smash-session', JSON.stringify(session));
   }
   if (ready) view.sendGlobalEvent('product-state', [JSON.stringify(screen)]);
@@ -118,10 +124,20 @@ async function initialize(fresh = false) {
       const response = await request('');
       screen.job = await response.json();
       if (session.preferences) {
-        Object.assign(screen, session.preferences);
+        const preferences = session.preferences;
+        screen.camera = preferences.camera ?? screen.camera;
+        screen.quality = preferences.quality ?? screen.quality;
+        screen.showShotPaths = preferences.showShotPaths ?? screen.showShotPaths;
+        screen.court = preferences.court ?? [];
+        screen.optimizations = resolveOptimizations(screen.camera, preferences.optimizationsByCamera?.[screen.camera]);
         screen.selectingCourt = screen.court.length > 0 && screen.court.length < 4;
+      } else {
+        screen.optimizations = defaultOptimizations(screen.camera);
       }
     } else {
+      screen.camera = 'high';
+      screen.showShotPaths = true;
+      screen.optimizations = defaultOptimizations('high');
       const response = await fetch('/api/sessions', { method: 'POST' });
       if (!response.ok) throw new Error('暂时无法开始，请刷新页面重试。');
       const created = await response.json();
@@ -213,11 +229,24 @@ view.onNativeModulesCall = async (name: string, data: Record<string, unknown>) =
     if (name === 'ready') { ready = true; await initialized; }
     else if (name === 'pick') picker.click();
     else if (name === 'options') {
+      if (screen.job.status === 'running' || screen.job.status === 'uploading' || upload) {
+        return JSON.stringify(screen);
+      }
       if (data.camera) {
-        screen.camera = data.camera as ScreenState['camera'];
+        const camera = data.camera as CameraType;
+        if (camera !== screen.camera) {
+          screen.camera = camera;
+          screen.showShotPaths = camera === 'high';
+          screen.optimizations = resolveOptimizations(camera, session.preferences?.optimizationsByCamera?.[camera]);
+        }
         screen.court = []; screen.selectingCourt = false;
       }
       if (data.quality) screen.quality = data.quality as ScreenState['quality'];
+      if (data.optimizations && typeof data.optimizations === 'object') {
+        screen.optimizations = resolveOptimizations(screen.camera,
+          { ...screen.optimizations, ...(data.optimizations as Partial<Optimizations>) });
+      }
+      if (typeof data.showShotPaths === 'boolean' && screen.camera === 'high') screen.showShotPaths = data.showShotPaths;
     } else if (name === 'selectCourt') {
       if (!screen.selectingCourt) screen.court = [];
       screen.selectingCourt = true;
@@ -226,7 +255,9 @@ view.onNativeModulesCall = async (name: string, data: Record<string, unknown>) =
     else if (name === 'run') {
       if (screen.court.length && screen.court.length !== 4) throw new Error('请选完球场四角，或清除后再开始。');
       const response = await request('/run', { method: 'POST', headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ camera_type: screen.camera, quality: screen.quality, court: screen.court.length === 4 ? screen.court : null }) });
+        body: JSON.stringify({ camera_type: screen.camera, quality: screen.quality,
+          court: screen.court.length === 4 ? screen.court : null, optimizations: screen.optimizations,
+          show_shot_paths: screen.camera === 'high' && screen.showShotPaths }) });
       screen.notice = ''; screen.job = await response.json();
     } else if (name === 'cancel') {
       upload?.abort(); upload = undefined;

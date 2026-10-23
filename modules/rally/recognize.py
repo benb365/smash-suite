@@ -6,6 +6,7 @@ must not be represented as implementations of the causal RallyStream contract.
 from __future__ import annotations
 
 import json
+import math
 import time
 from collections import deque
 from dataclasses import asdict
@@ -16,9 +17,10 @@ import numpy as np
 
 from modules.media.types import VideoInfo, TimestampedFrame
 from .rally_stream import RallyStream
-from modules.models.tracknet import TrackNetPredictor
+from modules.models.tracknet import TrackNetPredictor, ShuttlePoint
 from .scenarios.high import TrajectoryConfig, TrajectoryRallySegmenter
 from modules.media.video_input import FileFrameSource
+from .dynamic_scan import DynamicScan
 
 
 def normalized(frame):
@@ -30,54 +32,83 @@ def normalized(frame):
 
 
 def recognize(source: Path, info: VideoInfo, camera_type: str, weights: dict, progress, directory: Path, court=None,
-              *, pose_device=None, pose_batch_size=1):
+              statistics=None, optimizations=None, observation_sink=None, *, pose_device=None, pose_batch_size=1):
+    from .statistics import Statistics
+    stats = statistics or Statistics()
     from .scenarios import SCENARIOS
     if camera_type not in SCENARIOS:
         raise ValueError(f"Unknown rally scene: {camera_type}")
+    # Product defaults are resolved by the application. Independent module callers
+    # retain the original algorithm unless they explicitly request an option.
+    options = dict(limit_fps=False, small_input=False, grayscale=False, dynamic_scan=False)
+    if optimizations is not None:
+        if set(optimizations) - options.keys() or any(type(v) is not bool for v in optimizations.values()):
+            raise ValueError("Unknown or non-boolean recognition optimization")
+        options.update(optimizations)
+    max_fps = 35 if options["limit_fps"] else None
     import torch
     cv2.setNumThreads(1)
     device = "mps" if torch.backends.mps.is_available() else "cuda" if torch.cuda.is_available() else "cpu"
-    started = time.perf_counter()
-    performance = dict(model_setup_s=0.0, observe_s=0.0, person_tracking_s=0.0,
-                       candidate_motion_s=0.0, person_signals_s=0.0, scenario_decision_s=0.0)
-    phase_started = time.perf_counter()
-    predictor = TrackNetPredictor(weights["ball_track.pt"], device=device, record_candidates=camera_type != "high")
+    started = time.monotonic()
+    with stats.phase("model_initialization"):
+        predictor = TrackNetPredictor(weights["ball_track.pt"], device=device, record_candidates=camera_type != "high", statistics=stats,
+                                      small_input=options["small_input"], grayscale=options["grayscale"])
     profile_path = Path(__file__).with_name("scenarios") / "profiles.json"
     profiles = json.loads(profile_path.read_text(encoding="utf-8"))
-    performance["model_setup_s"] = time.perf_counter() - phase_started
     warnings = []
     if (info.width, info.height) != (1920, 1080):
         warnings.append("识别按 1080p 参考画面计算，成片保持原尺寸；该尺寸的识别效果仍需检查。")
     progress("正在读取录像", .01)
     if camera_type == "high":
-        phase_started = time.perf_counter()
         predictions = []
         config = TrajectoryConfig(**profiles["high"])
-        segmenter = TrajectoryRallySegmenter(predictor, width=1920, height=1080, config=config)
+        segmenter = TrajectoryRallySegmenter(predictor, width=1920, height=1080, config=config,
+                                             statistics=stats, observation_sink=observation_sink)
         stream = RallyStream(segmenter)
+        scan = DynamicScan(predictor) if options["dynamic_scan"] else None
+        pending = []
         last = time.monotonic()
-        with FileFrameSource(source, mode="offline") as frames:
-            for frame in frames:
-                predictions.extend(asdict(p) for p in stream.process(normalized(frame)))
-                if time.monotonic() - last > 1:
-                    progress("正在识别对打回合", min(.95, frame.timestamp_ms / info.duration_ms))
-                    last = time.monotonic()
+        with stats.phase("video_observation"):
+            with FileFrameSource(source, mode="offline", max_fps=max_fps) as frames:
+                for frame in frames:
+                    if scan is None:
+                        predictions.extend(asdict(p) for p in stream.process(normalized(frame)))
+                    else:
+                        pending.append(normalized(frame))
+                        if len(pending) == 3:
+                            scan.add(pending)
+                            pending.clear()
+                    if time.monotonic() - last > 1:
+                        progress("正在识别对打回合", min(.95, frame.timestamp_ms / info.duration_ms))
+                        last = time.monotonic()
+        stats.source("observation", frames.stats)
+        if scan is not None:
+            scan.finish()
+            # This is file analysis: later coarse hits can expand backwards.
+            # Replay source metadata through one unchanged segmenter. Missing
+            # windows carry an internal non-finite sentinel, never a fake point.
+            cached = iter(scan.windows)
+            segmenter.predict = lambda _: next(cached).points or [ShuttlePoint(math.nan, math.nan, math.nan)] * 3
+            with stats.phase("rally_decision"):
+                for window in scan.windows:
+                    for source_frame in window.frames:
+                        predictions.extend(asdict(p) for p in stream.process(source_frame))
+                for frame in pending:
+                    predictions.extend(asdict(p) for p in stream.process(
+                        TimestampedFrame(frame.frame_id, frame.timestamp_ms, None)))
         if segmenter.active or segmenter.start_ms is not None:
             warnings.append("片尾存在未确认结束的候选对打，未将其伪造成完整回合。")
         if segmenter.pending:
             warnings.append(f"片尾剩余 {len(segmenter.pending)} 帧不足一个模型输入组，未补造帧。")
         diagnostics = dict(algorithm="high-trajectory-frozen-20261018", config=profiles["high"],
-                           decoded_frames=frames.stats["frames_delivered"])
-        performance["observe_s"] = time.perf_counter() - phase_started
-        performance["observe_includes_scenario_decision"] = True
+                           decoded_frames=frames.stats["frames_decoded"],
+                           analyzed_frames=frames.stats["frames_delivered"])
+        if scan is not None:
+            diagnostics.update(processing_mode="file-dynamic-scan", dynamic_scan=dict(native=scan.summary()))
     else:
-        phase_started = time.perf_counter()
-        observe_metrics = {}
-        observations = observe(source, info, camera_type, court, predictor, weights["yolo11n.pt"], device, progress,
-                               metrics=observe_metrics)
-        performance["model_setup_s"] += observe_metrics["model_setup_s"]
-        performance["observe_s"] = time.perf_counter() - phase_started - observe_metrics["model_setup_s"]
-        performance["observe"] = observe_metrics
+        scans = {} if options["dynamic_scan"] else None
+        observations = observe(source, info, camera_type, court, predictor, weights["yolo11n.pt"], device, progress, stats,
+                               max_fps=max_fps, scans=scans)
         native, shifted, features = observations
         if len(native) < 3 or len(features) < 2:
             raise ValueError("录像太短，缺少足够的真实帧和人物观测，无法识别回合。")
@@ -86,37 +117,36 @@ def recognize(source: Path, info: VideoInfo, camera_type: str, weights: dict, pr
             from .scenarios.courtside import predict as pipeline
             from modules.rally.common.shuttle_paths import observed_candidates, associate
             from modules.rally.common.coherent_flights import split, moving_points, fit, contact_points
-            phase_started = time.perf_counter()
             region = np.array([[x * 1920, y * 1080] for x, y in court], np.float32) if court else players.COURT
-            seeds = players.main_players(features[0]["boxes"], region)
-            if len(seeds) != 2:
-                raise ValueError("首帧未能选出主球场的两名球员。请圈选主球场，或换用开头有两名球员的录像。")
-            floor = min(b["y2"] - .5 * players.height(b) for b in seeds)
-            rows, maps = [], []
-            for row in features:
-                ids = [i for i, b in enumerate(row["boxes"]) if b["y2"] >= floor]
-                maps.append(ids)
-                rows.append(dict(row, boxes=[row["boxes"][i] for i in ids], features=[row["features"][i] for i in ids]))
-            people = players.tracks(rows, "appearance", region)
-            for row, ids in zip(people, maps):
-                for person in row["players"]:
-                    person["box_index"] = ids[person["box_index"]]
-            performance["person_tracking_s"] = time.perf_counter() - phase_started
+            with stats.phase("people_and_trajectories"):
+                seeds = players.main_players(features[0]["boxes"], region)
+                if len(seeds) != 2:
+                    raise ValueError("首帧未能选出主球场的两名球员。请圈选主球场，或换用开头有两名球员的录像。")
+                floor = min(b["y2"] - .5 * players.height(b) for b in seeds)
+                rows, maps = [], []
+                for row in features:
+                    ids = [i for i, b in enumerate(row["boxes"]) if b["y2"] >= floor]
+                    maps.append(ids)
+                    rows.append(dict(row, boxes=[row["boxes"][i] for i in ids], features=[row["features"][i] for i in ids]))
+                people = players.tracks(rows, "appearance", region)
+                for row, ids in zip(people, maps):
+                    for person in row["players"]:
+                        person["box_index"] = ids[person["box_index"]]
             progress("正在连接飞行轨迹与人物观测", .66)
-            phase_started = time.perf_counter()
-            paths = associate(observed_candidates(native, shifted[:len(native)]), "quadratic", 300)
-            flights = []
-            for track in paths:
-                for part in split(track["points"]):
-                    moving = moving_points(part)
-                    if moving:
-                        flights.append(dict(flight_id=len(flights), parent_track_id=track["track_id"], points=part,
-                                            moving=moving, fit=fit(part), contacts=contact_points(moving, people)))
-            performance["candidate_motion_s"] = time.perf_counter() - phase_started
-            phase_started = time.perf_counter()
-            predicted, trace = pipeline(native, shifted, people, flights, info.duration_ms, profiles["courtside"])
+            with stats.phase("people_and_trajectories"):
+                paths = associate(observed_candidates(native, shifted[:len(native)]), "quadratic", 300)
+                flights = []
+                for track in paths:
+                    for part in split(track["points"]):
+                        moving = moving_points(part)
+                        if moving:
+                            flights.append(dict(flight_id=len(flights), parent_track_id=track["track_id"], points=part,
+                                                moving=moving, fit=fit(part), contacts=contact_points(moving, people)))
+            with stats.phase("rally_decision"):
+                predicted, trace = pipeline(native, shifted, people, flights, info.duration_ms, profiles["courtside"])
+            stats.add("associated_tracks", len(paths))
+            stats.add("coherent_flights", len(flights))
             predictions = [asdict(p) for p in predicted]
-            performance["scenario_decision_s"] = time.perf_counter() - phase_started
             diagnostics = dict(algorithm="courtside-tail_gap800_growth300", selected_people=seeds,
                                native_frames=len(native), shifted_frames=len(shifted))
         else:
@@ -125,290 +155,358 @@ def recognize(source: Path, info: VideoInfo, camera_type: str, weights: dict, pr
             from .common.feet import add_foot_signals
             from .candidate_rally import CandidateRallyConfig, candidate_motion
             progress("正在选择并跟踪两名主要球员", .5)
-            phase_started = time.perf_counter()
-            states = track_all(features)
-            try:
-                seeds, _ = select(states, features)
-            except AssertionError as exc:
-                raise ValueError("未能稳定识别两名主要球员，请确认使用单打固定机位录像，或圈选主球场后重试。") from exc
-            people = follow(features, seeds)
-            performance["person_tracking_s"] = time.perf_counter() - phase_started
-            phase_started = time.perf_counter()
-            ball = candidate_motion(native, width=1920, config=CandidateRallyConfig(**profiles["personal_ball"]))
-            performance["candidate_motion_s"] = time.perf_counter() - phase_started
+            with stats.phase("people_and_trajectories"):
+                states = track_all(features)
+                try:
+                    seeds, _ = select(states, features)
+                except AssertionError as exc:
+                    raise ValueError("未能稳定识别两名主要球员，请确认使用单打固定机位录像，或圈选主球场后重试。") from exc
+                people = follow(features, seeds)
+                ball = candidate_motion(native, width=1920, config=CandidateRallyConfig(**profiles["personal_ball"]))
+            candidate_ids = scans["native"].candidate_ids() if scans is not None else None
             selected_pose_device = pose_device if pose_device is not None else (device if device.startswith("cuda") else "cpu")
             signal_metrics = {}
-            phase_started = time.perf_counter()
-            signals = person_signals(source, info, people, ball, weights["pose_kpRCNN.pth"], progress,
+            signals = person_signals(source, info, people, ball, weights["pose_kpRCNN.pth"], progress, stats,
+                                     max_fps=max_fps, candidate_ids=candidate_ids,
                                      pose_device=selected_pose_device, pose_batch_size=pose_batch_size,
                                      metrics=signal_metrics)
             if len(signals["times"]) < 2:
                 raise ValueError("有效人物观测不足，无法判断连续对打。")
-            add_foot_signals(signals, people)
-            np.savez_compressed(directory / "person-signals.npz", **signals)
-            performance["model_setup_s"] += signal_metrics["model_setup_s"]
-            performance["person_signals_s"] = time.perf_counter() - phase_started - signal_metrics["model_setup_s"]
-            performance["person_signals"] = signal_metrics
-            phase_started = time.perf_counter()
-            predicted, trace = predict(signals, info.duration_ms,
-                                       profiles["personal"])
+            with stats.phase("action_analysis"):
+                add_foot_signals(signals, people)
+            with stats.phase("intermediate_writes"):
+                np.savez_compressed(directory / "person-signals.npz", **signals)
+            with stats.phase("rally_decision"):
+                predicted, trace = predict(signals, info.duration_ms,
+                                           profiles["personal"])
             predictions = [asdict(p) for p in predicted]
-            performance["scenario_decision_s"] = time.perf_counter() - phase_started
             diagnostics = dict(algorithm="personal-context-candidate-20261018", native_frames=len(native),
-                               person_observations=len(features), selected_track_ids=[s["track_id"] for s in seeds])
-        (directory / "decisions.json").write_text(json.dumps(trace), encoding="utf-8")
+                               person_observations=len(features), selected_track_ids=[s["track_id"] for s in seeds],
+                               pose_device=signal_metrics["pose_device"], pose_batch_size=pose_batch_size,
+                               pose_model=signal_metrics["pose_model"])
+        with stats.phase("intermediate_writes"):
+            (directory / "decisions.json").write_text(json.dumps(trace), encoding="utf-8")
+        if scans is not None:
+            diagnostics["dynamic_scan"] = {phase: scan.summary() for phase, scan in scans.items()}
+    diagnostics.update(optimizations=options, max_fps=max_fps,
+                       tracknet_input_size=list(predictor.input_size),
+                       tracknet_content_size=list(predictor.content_size),
+                       tracknet_color_mode=predictor.color_mode)
     if any(not (0 <= p["start_ms"] < p["end_ms"] <= info.duration_ms) for p in predictions):
         raise RuntimeError("识别结果超出视频时间范围，已停止导出。")
     progress("回合识别完成", 1)
-    performance["total_s"] = time.perf_counter() - started
     return predictions, dict(warnings=warnings, recognition=diagnostics, device=device,
-                             recognition_wall_s=performance["total_s"], performance=performance)
+                             recognition_wall_s=time.monotonic() - started)
 
 
-def observe(source, info, camera_type, court, predictor, yolo_weight, device, progress, *, metrics=None):
-    started = time.perf_counter()
+def observe(source, info, camera_type, court, predictor, yolo_weight, device, progress, statistics=None,
+            *, max_fps=None, scans=None):
+    from .statistics import Statistics
+    stats = statistics or Statistics()
     from modules.models.yolo11n import PersonDetector
     from modules.rally.common.player_paths import descriptor
-    from modules.rally.common.body_features import body_motion
-    stats = {} if metrics is None else metrics
-    stats.update(frame_prepare_s=0.0, yolo_wall_s=0.0, yolo_calls=0, yolo_frames=0,
-                 descriptor_wall_s=0.0, farneback_body_motion_wall_s=0.0)
-    tracknet_metrics = dict(calls=0, frames=0, wall_s=0.0, preprocess_s=0.0,
-                            inference_and_transfer_s=0.0, point_decode_s=0.0,
-                            native_calls=0, shifted_calls=0, tail_calls=0)
-    stats["tracknet"] = tracknet_metrics
-    setup_started = time.perf_counter()
-    detector = PersonDetector(yolo_weight, device=device)
-    stats["model_setup_s"] = time.perf_counter() - setup_started
+    with stats.phase("model_initialization"):
+        detector = PersonDetector(yolo_weight, device=device)
     native, shifted, features = {}, {}, []
     queue = deque(maxlen=3)
     person_batch = []
-    previous_gray, previous_time = None, None
     last = time.monotonic()
     court = np.array([[x * 1920, y * 1080] for x, y in court], np.float32) if court else None
-
-    def tracknet_batch(images, kind):
-        inference_started = time.perf_counter()
-        predictor(images)
-        tracknet_metrics["wall_s"] += time.perf_counter() - inference_started
-        tracknet_metrics["calls"] += 1
-        tracknet_metrics["frames"] += len(images)
-        tracknet_metrics[f"{kind}_calls"] += 1
-        for key, value in predictor.last_timing.items():
-            tracknet_metrics[key] = tracknet_metrics.get(key, 0.0) + value
+    if scans is not None:
+        scans["native"] = DynamicScan(predictor, cache_frames=camera_type == "courtside")
+        if camera_type == "courtside":
+            scans["shifted"] = DynamicScan(predictor, cache_frames=True)
 
     def people_flush():
-        nonlocal previous_gray, previous_time
         if not person_batch:
             return
-        detection_started = time.perf_counter()
+        tick = time.monotonic()
         outputs = detector([f.image for f in person_batch])
-        stats["yolo_wall_s"] += time.perf_counter() - detection_started
-        stats["yolo_calls"] += 1
-        stats["yolo_frames"] += len(person_batch)
+        stats.timing("person_detector_s", time.monotonic() - tick)
+        stats.add("person_detector_calls")
+        stats.add("person_detector_images", len(person_batch))
+        stats.add("person_boxes", sum(len(boxes) for boxes in outputs))
         for frame, boxes in zip(person_batch, outputs):
             if court is not None and camera_type == "personal":
                 boxes = [b for b in boxes if cv2.pointPolygonTest(court, ((b["x1"] + b["x2"]) / 2, b["y2"]), False) >= 0]
             row = dict(frame_id=frame.frame_id, timestamp_ms=frame.timestamp_ms, boxes=boxes)
-            descriptor_started = time.perf_counter()
             descriptors = [descriptor(frame.image, b) for b in boxes]
-            stats["descriptor_wall_s"] += time.perf_counter() - descriptor_started
             if camera_type == "personal":
-                motion_started = time.perf_counter()
-                gray = cv2.cvtColor(cv2.resize(frame.image, (960, 540)), cv2.COLOR_BGR2GRAY)
-                dt = (frame.timestamp_ms - previous_time) / 1000 if previous_time is not None else None
-                flow = None if previous_gray is None else cv2.calcOpticalFlowFarneback(previous_gray, gray, None, .5, 4, 21, 3, 7, 1.5, 0)
-                row.update(appearance=descriptors, body_motion=[None if flow is None else body_motion(flow, b, dt) for b in boxes])
-                stats["farneback_body_motion_wall_s"] += time.perf_counter() - motion_started
-                previous_gray, previous_time = gray, frame.timestamp_ms
+                row["appearance"] = descriptors
             else:
                 row["features"] = descriptors
             features.append(row)
         person_batch.clear()
 
-    with FileFrameSource(source, mode="offline") as frames:
-        for original in frames:
-            prepare_started = time.perf_counter()
-            frame = normalized(original)
-            stats["frame_prepare_s"] += time.perf_counter() - prepare_started
-            queue.append(frame)
-            if frame.frame_id % 6 == 0:
-                person_batch.append(frame)
-                if len(person_batch) == 4:
-                    people_flush()
-            if len(queue) == 3:
-                phase = queue[0].frame_id % 3
-                if phase == 0 or (phase == 1 and camera_type == "courtside"):
-                    tracknet_batch([f.image for f in queue], "native" if phase == 0 else "shifted")
-                    target = native if phase == 0 else shifted
-                    for f, row in zip(queue, predictor.last_candidates):
-                        target[f.frame_id] = dict(row, frame_id=f.frame_id, timestamp_ms=f.timestamp_ms)
-                    if phase == 0 and len(native) == 3:
-                        shifted[0] = native[0]
-            if time.monotonic() - last > 1:
-                progress("正在寻找羽毛球和球员", .48 * min(1, frame.timestamp_ms / info.duration_ms))
-                last = time.monotonic()
-        people_flush()
-    if camera_type == "courtside" and shifted:
-        tail = None
-        for fid in range(max(shifted) + 1, frames.stats["frames_delivered"]):
-            if fid in native:
-                shifted[fid] = native[fid]
-            else:
-                if tail is None:
-                    tracknet_batch([f.image for f in queue], "tail"); tail = list(predictor.last_candidates)
-                j = next(i for i, f in enumerate(queue) if f.frame_id == fid)
-                f = list(queue)[j]
-                shifted[fid] = dict(tail[j], frame_id=fid, timestamp_ms=f.timestamp_ms)
-    result = [native[k] for k in sorted(native)], [shifted[k] for k in sorted(shifted)], features
-    stats["input"] = dict(frames.stats)
-    stats["total_s"] = time.perf_counter() - started
-    return result
+    try:
+        with stats.phase("video_observation"):
+            with FileFrameSource(source, mode="offline", max_fps=max_fps) as frames:
+                for analysis_index, original in enumerate(frames):
+                    frame = normalized(original)
+                    queue.append(frame)
+                    if analysis_index % 6 == 0:
+                        person_batch.append(frame)
+                        if len(person_batch) == 4:
+                            people_flush()
+                    if len(queue) == 3:
+                        phase = (analysis_index - 2) % 3
+                        if phase == 0 or (phase == 1 and camera_type == "courtside"):
+                            if scans is not None:
+                                scans["native" if phase == 0 else "shifted"].add(queue)
+                            elif camera_type == "courtside":
+                                predictor([f.image for f in queue], frame_ids=[f.frame_id for f in queue])
+                            else:
+                                predictor([f.image for f in queue])
+                            if scans is None:
+                                target = native if phase == 0 else shifted
+                                for f, row in zip(queue, predictor.last_candidates):
+                                    target[f.frame_id] = dict(row, frame_id=f.frame_id, timestamp_ms=f.timestamp_ms)
+                                if phase == 0 and len(native) == 3:
+                                    shifted[next(iter(native))] = next(iter(native.values()))
+                    if time.monotonic() - last > 1:
+                        progress("正在寻找羽毛球和球员", .48 * min(1, frame.timestamp_ms / info.duration_ms))
+                        last = time.monotonic()
+                people_flush()
+            if scans is not None:
+                for scan in scans.values():
+                    scan.finish()
+                native = scans["native"].observations()
+                shifted = scans["shifted"].observations() if camera_type == "courtside" else {}
+                if native:
+                    shifted[next(iter(native))] = next(iter(native.values()))
+            if camera_type == "courtside" and shifted and len(queue) == 3:
+                tail = None
+                last_shifted = max(shifted)
+                for j, f in enumerate(queue):
+                    fid = f.frame_id
+                    if fid <= last_shifted:
+                        continue
+                    if fid in native:
+                        shifted[fid] = native[fid]
+                    else:
+                        if tail is None:
+                            predictor([f.image for f in queue], frame_ids=[f.frame_id for f in queue]); tail = list(predictor.last_candidates)
+                        shifted[fid] = dict(tail[j], frame_id=fid, timestamp_ms=f.timestamp_ms)
+    finally:
+        if camera_type == "courtside":
+            predictor.clear_preprocessed_cache()
+    stats.source("observation", frames.stats)
+    stats.add("native_observations", len(native))
+    stats.add("shifted_observations", len(shifted))
+    return [native[k] for k in sorted(native)], [shifted[k] for k in sorted(shifted)], features
 
 
-def person_signals(source, info, people, ball, weight, progress, *, pose_device="cpu", pose_batch_size=1,
-                   metrics=None):
+def person_signals(source, info, people, ball, weight, progress, statistics=None,
+                   *, max_fps=None, candidate_ids=None, pose_device="cpu", pose_batch_size=1, metrics=None):
     started = time.perf_counter()
     if type(pose_batch_size) is not int or pose_batch_size < 1:
         raise ValueError("pose_batch_size must be a positive integer")
+    from .statistics import Statistics
+    stats = statistics or Statistics()
     import av
     from modules.models.keypoint_rcnn import PoseEstimator
     from modules.rally.common.pose_context import extract
     from modules.rally.common.player_paths import height
-    stats = {} if metrics is None else metrics
-    stats.update(model_setup_s=0.0, decode_s=0.0, frame_prepare_s=0.0, crop_prepare_s=0.0,
-                 pose_wall_s=0.0, pose_selection_s=0.0, flow_s=0.0, extract_s=0.0,
-                 decoded_frames=0, anchor_frames=0, flow_frames=0, pose_batch_size=pose_batch_size)
+    from modules.media.video_input import PtsFrameSelector
+    # Keep the optional direct-call metrics dictionary for existing callers;
+    # Statistics remains the shared pipeline phase/counter implementation.
+    metrics = {} if metrics is None else metrics
+    metrics.update(model_setup_s=0.0, decode_s=0.0, frame_prepare_s=0.0, crop_prepare_s=0.0,
+                   pose_wall_s=0.0, pose_selection_s=0.0, flow_s=0.0, extract_s=0.0,
+                   decoded_frames=0, anchor_frames=0, flow_frames=0, pose_batch_size=pose_batch_size)
     setup_started = time.perf_counter()
-    model = PoseEstimator(weight, device=pose_device)
-    stats["model_setup_s"] = time.perf_counter() - setup_started
-    stats["pose_device"] = model.device
-    stats["pose_model"] = model.timings
+    with stats.phase("model_initialization"):
+        model = PoseEstimator(weight, device=pose_device)
+    metrics["model_setup_s"] = time.perf_counter() - setup_started
+    metrics["pose_device"] = model.device
     anchors = {r["frame_id"]: r for r in people}
     rows, arms, highs, counts = [], [], [], []
     pending = None
+    anchors_seen = set()
     last = time.monotonic()
-
-    def decoded_frames(container):
-        frames = iter(container.decode(video=0))
-        while True:
-            decode_started = time.perf_counter()
-            try:
-                frame = next(frames)
-            except StopIteration:
-                stats["decode_s"] += time.perf_counter() - decode_started
-                return
-            stats["decode_s"] += time.perf_counter() - decode_started
-            stats["decoded_frames"] += 1
-            yield frame
-
-    decode_started = time.perf_counter()
-    with av.open(str(source)) as container:
-        stats["decode_s"] += time.perf_counter() - decode_started
-        for fid, frame in enumerate(decoded_frames(container)):
-            if fid in anchors:
-                prepare_started = time.perf_counter()
-                image = frame.to_ndarray(format="bgr24")
-                if image.shape[:2] != (1080, 1920):
-                    image = cv2.resize(image, (1920, 1080))
-                stats["frame_prepare_s"] += time.perf_counter() - prepare_started
-                row = anchors[fid]
-                persons = []
-                crops = []
-                crop_started = time.perf_counter()
-                for person in row["players"]:
-                    b = person["box"]; h = height(b)
-                    x1, x2 = max(0, int(b["x1"] - .2 * h)), min(1920, int(b["x2"] + .2 * h))
-                    y1, y2 = max(0, int(b["y1"] - .12 * h)), min(1080, int(b["y2"] + .12 * h))
-                    crop = image[y1:y2, x1:x2]
-                    if not crop.size:
-                        continue
-                    crops.append((person, b, x1, y1, crop))
-                stats["crop_prepare_s"] += time.perf_counter() - crop_started
-                # Batch only this anchor's crops. Keep their order and finish
-                # all poses before the same following-frame LK branches.
-                for offset in range(0, len(crops), pose_batch_size):
-                    batch = crops[offset:offset + pose_batch_size]
-                    pose_started = time.perf_counter()
-                    outputs = model.predict_batch([item[4] for item in batch])
-                    stats["pose_wall_s"] += time.perf_counter() - pose_started
-                    if len(outputs) != len(batch):
-                        raise RuntimeError("PoseEstimator must return one result for each person crop")
-                    selection_started = time.perf_counter()
-                    for (person, b, x1, y1, crop), raw in zip(batch, outputs):
-                        target = np.array([b["x1"] - x1, b["y1"] - y1, b["x2"] - x1, b["y2"] - y1])
-                        scores = []
-                        for box in raw["boxes"]:
-                            area = np.maximum(0, np.minimum(box[2:], target[2:]) - np.maximum(box[:2], target[:2])).prod()
-                            union = (box[2:] - box[:2]).prod() + (target[2:] - target[:2]).prod() - area
-                            scores.append(float(area / union))
-                        best = int(np.argmax(scores)) if scores else None
-                        selected = None
-                        if best is not None and scores[best] >= .3:
-                            points = np.array(raw["keypoints"][best], dtype=np.float64); points[:, 0] += x1; points[:, 1] += y1
-                            selected = dict(keypoints=points.tolist(), joint_scores=raw["keypoints_scores"][best].tolist())
-                        persons.append(dict(player_id=person["player_id"], box_index=person["box_index"], box=b, selected=selected))
-                    stats["pose_selection_s"] += time.perf_counter() - selection_started
-                result = dict(frame_id=fid, timestamp_ms=row["timestamp_ms"], people=persons)
-                rows.append(result); arms.append([0., 0.]); highs.append([0., 0.]); counts.append([0., 0.])
-                stats["anchor_frames"] += 1
-                prepare_started = time.perf_counter()
-                pending = dict(index=len(rows) - 1, row=result, gray=cv2.cvtColor(cv2.resize(image, (960, 540)), cv2.COLOR_BGR2GRAY),
-                               pts=float(frame.pts * frame.time_base), values={p["player_id"]: [] for p in persons})
-                stats["frame_prepare_s"] += time.perf_counter() - prepare_started
-            elif pending and fid - pending["row"]["frame_id"] in (1, 3, 5):
-                prepare_started = time.perf_counter()
-                gray = cv2.cvtColor(cv2.resize(frame.to_ndarray(format="bgr24"), (960, 540)), cv2.COLOR_BGR2GRAY)
-                stats["frame_prepare_s"] += time.perf_counter() - prepare_started
-                flow_started = time.perf_counter()
-                dt = float(frame.pts * frame.time_base) - pending["pts"]
-                for person in pending["row"]["people"]:
-                    if person["selected"] is None:
-                        continue
-                    key = person["player_id"]; q = person["selected"]
-                    xy = np.array(q["keypoints"])[:, :2]; ids = [5, 6, 9, 10]
-                    pts = (xy[ids] / 2).astype(np.float32).reshape(-1, 1, 2); h = height(person["box"])
-                    nxt, st, err = cv2.calcOpticalFlowPyrLK(pending["gray"], gray, pts, None, winSize=(15, 15), maxLevel=3,
-                                                          criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, .01))
-                    if nxt is None:
-                        continue
-                    back, bst, _ = cv2.calcOpticalFlowPyrLK(gray, pending["gray"], nxt, None, winSize=(15, 15), maxLevel=3,
-                                                          criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, .01))
-                    if back is None:
-                        continue
-                    fb = np.linalg.norm((back - pts).reshape(-1, 2) * 2, axis=1) / h
-                    conf = np.array(q["joint_scores"])[ids]
-                    good = (st.ravel() > 0) & (bst.ravel() > 0) & (fb < .025) & (conf >= 4) & np.isfinite(fb) & (err.ravel() < 35)
-                    delta = (nxt - pts).reshape(-1, 2) * 2; hips = (xy[11] + xy[12]) / 2
-                    values, raised = [], []
-                    for sh, wr in ((0, 2), (1, 3)):
-                        if not (good[sh] and good[wr]):
+    with stats.phase("action_analysis"):
+        decoded_count = selected_count = 0
+        tick = time.perf_counter()
+        with av.open(str(source)) as container:
+            metrics["decode_s"] += time.perf_counter() - tick
+            decoder = iter(container.decode(video=0))
+            fid = -1
+            selector = PtsFrameSelector(max_fps)
+            previous_pts = first_pts = None
+            analysis_index = -1
+            while True:
+                tick = time.perf_counter()
+                try:
+                    frame = next(decoder)
+                except StopIteration:
+                    metrics["decode_s"] += time.perf_counter() - tick
+                    break
+                elapsed = time.perf_counter() - tick
+                stats.timing("pose_decode_s", elapsed)
+                metrics["decode_s"] += elapsed
+                decoded_count += 1
+                fid += 1
+                if frame.is_corrupt:
+                    raise RuntimeError("Decoder returned a corrupt frame")
+                if frame.pts is None or frame.time_base is None or frame.time_base <= 0:
+                    raise ValueError("Decoded frame has no valid source PTS/time_base")
+                pts = frame.pts * frame.time_base
+                if first_pts is None:
+                    first_pts = pts
+                timestamp_ms = float((pts - first_pts) * 1000)
+                if not math.isfinite(timestamp_ms) or (previous_pts is not None and pts <= previous_pts):
+                    raise ValueError("Source PTS must be finite and strictly increasing")
+                previous_pts = pts
+                if (frame.width, frame.height) != (info.width, info.height):
+                    raise ValueError("Frame dimensions changed within the source")
+                if not selector.select(frame.pts, frame.time_base):
+                    continue
+                selected_count += 1
+                analysis_index += 1
+                if fid in anchors:
+                    if anchors[fid]["timestamp_ms"] != timestamp_ms:
+                        raise ValueError("Selected-frame PTS differs between observation passes")
+                    anchors_seen.add(fid)
+                if fid in anchors and candidate_ids is not None and fid not in candidate_ids:
+                    persons = [dict(player_id=p["player_id"], box_index=p["box_index"], box=p["box"],
+                                    selected=None, skip=True) for p in anchors[fid]["players"]]
+                    rows.append(dict(frame_id=fid, timestamp_ms=timestamp_ms, people=persons, skip=True))
+                    arms.append([0., 0.]); highs.append([0., 0.]); counts.append([0., 0.])
+                    pending = None
+                elif fid in anchors:
+                    metrics["anchor_frames"] += 1
+                    stats.add("pose_anchor_frames")
+                    prepare_started = time.perf_counter()
+                    tick = time.monotonic()
+                    image = frame.to_ndarray(format="bgr24")
+                    stats.timing("pose_conversion_s", time.monotonic() - tick)
+                    stats.add("pose_converted_frames")
+                    if image.shape[:2] != (1080, 1920):
+                        image = cv2.resize(image, (1920, 1080))
+                    metrics["frame_prepare_s"] += time.perf_counter() - prepare_started
+                    row = anchors[fid]
+                    persons = []
+                    crops = []
+                    crop_started = time.perf_counter()
+                    for person in row["players"]:
+                        b = person["box"]; h = height(b)
+                        x1, x2 = max(0, int(b["x1"] - .2 * h)), min(1920, int(b["x2"] + .2 * h))
+                        y1, y2 = max(0, int(b["y1"] - .12 * h)), min(1080, int(b["y2"] + .12 * h))
+                        crop = image[y1:y2, x1:x2]
+                        if not crop.size:
                             continue
-                        value = float(np.linalg.norm(delta[wr] - delta[sh]) / h / dt)
-                        if value > 5:
+                        crops.append((person, b, x1, y1, crop))
+                    elapsed = time.perf_counter() - crop_started
+                    metrics["crop_prepare_s"] += elapsed
+                    stats.timing("pose_crop_preparation_s", elapsed)
+                    # Batch within this anchor only. Preserve person order and
+                    # complete all poses before the following selected-frame LK.
+                    for offset in range(0, len(crops), pose_batch_size):
+                        batch = crops[offset:offset + pose_batch_size]
+                        tick = time.perf_counter()
+                        outputs = model.predict_batch([item[4] for item in batch])
+                        elapsed = time.perf_counter() - tick
+                        stats.timing("pose_inference_s", elapsed)
+                        metrics["pose_wall_s"] += elapsed
+                        stats.add("pose_calls")
+                        stats.add("person_crops", len(batch))
+                        if len(outputs) != len(batch):
+                            raise RuntimeError("PoseEstimator must return one result for each person crop")
+                        selection_started = time.perf_counter()
+                        for (person, b, x1, y1, crop), raw in zip(batch, outputs):
+                            target = np.array([b["x1"] - x1, b["y1"] - y1, b["x2"] - x1, b["y2"] - y1])
+                            scores = []
+                            for box in raw["boxes"]:
+                                area = np.maximum(0, np.minimum(box[2:], target[2:]) - np.maximum(box[:2], target[:2])).prod()
+                                union = (box[2:] - box[:2]).prod() + (target[2:] - target[:2]).prod() - area
+                                scores.append(float(area / union))
+                            best = int(np.argmax(scores)) if scores else None
+                            selected = None
+                            if best is not None and scores[best] >= .3:
+                                points = np.array(raw["keypoints"][best], dtype=np.float64); points[:, 0] += x1; points[:, 1] += y1
+                                selected = dict(keypoints=points.tolist(), joint_scores=raw["keypoints_scores"][best].tolist())
+                            persons.append(dict(player_id=person["player_id"], box_index=person["box_index"], box=b, selected=selected))
+                        elapsed = time.perf_counter() - selection_started
+                        metrics["pose_selection_s"] += elapsed
+                        stats.timing("pose_selection_s", elapsed)
+                    result = dict(frame_id=fid, timestamp_ms=row["timestamp_ms"], people=persons)
+                    rows.append(result); arms.append([0., 0.]); highs.append([0., 0.]); counts.append([0., 0.])
+                    prepare_started = time.perf_counter()
+                    pending = dict(index=len(rows) - 1, row=result, gray=cv2.cvtColor(cv2.resize(image, (960, 540)), cv2.COLOR_BGR2GRAY),
+                                   pts=float(frame.pts * frame.time_base), analysis_index=analysis_index,
+                                   values={p["player_id"]: [] for p in persons})
+                    metrics["frame_prepare_s"] += time.perf_counter() - prepare_started
+                elif pending and analysis_index - pending["analysis_index"] in (1, 3, 5):
+                    metrics["flow_frames"] += 1
+                    stats.add("pose_flow_frames")
+                    prepare_started = time.perf_counter()
+                    tick = time.monotonic()
+                    image = frame.to_ndarray(format="bgr24")
+                    stats.timing("pose_conversion_s", time.monotonic() - tick)
+                    stats.add("pose_converted_frames")
+                    gray = cv2.cvtColor(cv2.resize(image, (960, 540)), cv2.COLOR_BGR2GRAY)
+                    metrics["frame_prepare_s"] += time.perf_counter() - prepare_started
+                    flow_started = time.perf_counter()
+                    dt = float(frame.pts * frame.time_base) - pending["pts"]
+                    for person in pending["row"]["people"]:
+                        if person["selected"] is None:
                             continue
-                        values.append(value)
-                        if xy[ids[wr], 1] < hips[1] - .04 * h or abs(xy[ids[wr], 0] - xy[ids[sh], 0]) > .18 * h:
-                            raised.append(value)
-                    if values:
-                        pending["values"][key].append((max(values), max(raised, default=0)))
-                i = pending["index"]
-                for key, values in pending["values"].items():
-                    if values:
-                        arms[i][key] = float(np.median([p[0] for p in values]))
-                        highs[i][key] = float(np.median([p[1] for p in values]))
-                        counts[i][key] = len(values)
-                stats["flow_s"] += time.perf_counter() - flow_started
-                stats["flow_frames"] += 1
-            if time.monotonic() - last > 1:
-                progress("正在分析球员动作", .52 + .46 * min(1, (float(frame.pts * frame.time_base * 1000) - info.first_pts_ms) / info.duration_ms))
-                last = time.monotonic()
-    if not rows:
-        raise ValueError("没有可用于动作分析的人物观测。")
-    extract_started = time.perf_counter()
-    signals = extract(rows, people, ball)
-    signals.update(lkarm=np.array(arms), lkhigh=np.array(highs), lk_valid=np.array(counts))
-    stats["extract_s"] = time.perf_counter() - extract_started
-    stats["pose_model"] = model.timings
-    stats["total_s"] = time.perf_counter() - started
+                        key = person["player_id"]; q = person["selected"]
+                        xy = np.array(q["keypoints"])[:, :2]; ids = [5, 6, 9, 10]
+                        pts = (xy[ids] / 2).astype(np.float32).reshape(-1, 1, 2); h = height(person["box"])
+                        nxt, st, err = cv2.calcOpticalFlowPyrLK(pending["gray"], gray, pts, None, winSize=(15, 15), maxLevel=3,
+                                                              criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, .01))
+                        if nxt is None:
+                            continue
+                        back, bst, _ = cv2.calcOpticalFlowPyrLK(gray, pending["gray"], nxt, None, winSize=(15, 15), maxLevel=3,
+                                                              criteria=(cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, .01))
+                        if back is None:
+                            continue
+                        fb = np.linalg.norm((back - pts).reshape(-1, 2) * 2, axis=1) / h
+                        conf = np.array(q["joint_scores"])[ids]
+                        good = (st.ravel() > 0) & (bst.ravel() > 0) & (fb < .025) & (conf >= 4) & np.isfinite(fb) & (err.ravel() < 35)
+                        delta = (nxt - pts).reshape(-1, 2) * 2; hips = (xy[11] + xy[12]) / 2
+                        values, raised = [], []
+                        for sh, wr in ((0, 2), (1, 3)):
+                            if not (good[sh] and good[wr]):
+                                continue
+                            value = float(np.linalg.norm(delta[wr] - delta[sh]) / h / dt)
+                            if value > 5:
+                                continue
+                            values.append(value)
+                            if xy[ids[wr], 1] < hips[1] - .04 * h or abs(xy[ids[wr], 0] - xy[ids[sh], 0]) > .18 * h:
+                                raised.append(value)
+                        if values:
+                            pending["values"][key].append((max(values), max(raised, default=0)))
+                    i = pending["index"]
+                    for key, values in pending["values"].items():
+                        if values:
+                            arms[i][key] = float(np.median([p[0] for p in values]))
+                            highs[i][key] = float(np.median([p[1] for p in values]))
+                            counts[i][key] = len(values)
+                    elapsed = time.perf_counter() - flow_started
+                    metrics["flow_s"] += elapsed
+                    stats.timing("pose_flow_s", elapsed)
+                if time.monotonic() - last > 1:
+                    progress("正在分析球员动作", .52 + .46 * min(1, (float(frame.pts * frame.time_base * 1000) - info.first_pts_ms) / info.duration_ms))
+                    last = time.monotonic()
+        if anchors_seen != anchors.keys():
+            raise ValueError("Observation and pose passes selected different anchor frames")
+        if not rows:
+            raise ValueError("没有可用于动作分析的人物观测。")
+        extract_started = time.perf_counter()
+        signals = extract(rows, people, ball)
+        signals.update(lkarm=np.array(arms), lkhigh=np.array(highs), lk_valid=np.array(counts))
+        metrics["extract_s"] = time.perf_counter() - extract_started
+        stats.timing("pose_extract_s", metrics["extract_s"])
+    stats.source("pose", dict(frames_decoded=decoded_count, frames_selected=selected_count,
+                              frames_skipped=decoded_count - selected_count))
+    model_timings = model.timings
+    # These model subtimings overlap initialization/action phases and the outer
+    # pose call; keep their names separate rather than adding them to those totals.
+    stats.timing("pose_model_initialization_s", model_timings["initialization_s"])
+    stats.timing("pose_tensor_preparation_s", model_timings["tensor_preparation_s"])
+    stats.timing("pose_model_inference_and_transfer_s", model_timings["inference_and_transfer_s"])
+    metrics.update(decoded_frames=decoded_count, selected_frames=selected_count,
+                   pose_model=model_timings, total_s=time.perf_counter() - started)
     return signals

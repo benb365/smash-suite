@@ -1,0 +1,23 @@
+{
+  "run.json": {
+    "sha256": "8e1e083d7d02feb6e8bdc49382b92173b241acafef8152b1e01aff4a1c2aa99a",
+    "bytes": 15038,
+    "source": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/run.json"
+  },
+  "result.json": {
+    "sha256": "4e2cb8586da006f775d0dbea89914728aac46f5bdf19d761df5653a84d40576f",
+    "bytes": 1589,
+    "source": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/result.json"
+  },
+  "statistics.json": {
+    "sha256": "b167321a0e0e93a44e7b9715ae4db5e3c4d7f6e768c569b84b290b16581032b9",
+    "bytes": 18785,
+    "source": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/statistics.json"
+  },
+  "output.mp4": {
+    "retained_at": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/independent/D-short/output.mp4",
+    "sha256": "f16d770e10a9a2a7f4cb5f5d3d501fe0839bb34428d91b521324b673d0d6ee88",
+    "bytes": 12450338,
+    "copied": false
+  }
+}

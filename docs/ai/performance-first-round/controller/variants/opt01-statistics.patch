@@ -1,0 +1,49 @@
+--- a/modules/models/keypoint_rcnn/__init__.py
++++ b/modules/models/keypoint_rcnn/__init__.py
+@@ -12,8 +12,33 @@
+         self.model.roi_heads.detections_per_img = 3
+         self.model.rpn._pre_nms_top_n["testing"], self.model.rpn._post_nms_top_n["testing"] = 200, 200
+ 
+-    def __call__(self, image):
++    def _prepare(self, image, statistics=None):
+         import cv2
++        import time
++        enabled = statistics is not None and statistics.enabled
++        tick = time.monotonic() if enabled else None
+         tensor = self.torch.from_numpy(cv2.cvtColor(image, cv2.COLOR_BGR2RGB).copy()).permute(2, 0, 1).float() / 255
++        if enabled:
++            statistics.timing("pose_input_preparation_s", time.monotonic() - tick)
++        return tensor
++
++    def _convert(self, output, statistics=None):
++        import time
++        enabled = statistics is not None and statistics.enabled
++        tick = time.monotonic() if enabled else None
++        result = {k: v.cpu().numpy() for k, v in output.items()}
++        if enabled:
++            statistics.timing("pose_result_conversion_s", time.monotonic() - tick)
++        return result
++
++    def __call__(self, image, statistics=None):
++        tensor = self._prepare(image, statistics)
++        import time
++        enabled = statistics is not None and statistics.enabled
++        tick = time.monotonic() if enabled else None
+         with self.torch.inference_mode():
+-            return {k: v.cpu().numpy() for k, v in self.model([tensor])[0].items()}
++            output = self.model([tensor])[0]
++        if enabled:
++            statistics.timing("pose_model_call_s", time.monotonic() - tick)
++        return self._convert(output, statistics)
++
+--- a/modules/rally/recognize.py
++++ b/modules/rally/recognize.py
+@@ -269,7 +269,7 @@
+                         if not crop.size:
+                             continue
+                         tick = time.monotonic()
+-                        raw = model(crop)
++                        raw = model(crop, statistics=stats)
+                         stats.timing("pose_inference_s", time.monotonic() - tick)
+                         stats.add("pose_calls")
+                         stats.add("person_crops")

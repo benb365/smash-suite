@@ -1,0 +1,581 @@
+{
+  "scope": "Current original vs retained in-place normalization, recognition only. No export/long video/full D posture benchmark. Single observations do not prove stable speed or memory improvement.",
+  "base_commit": "94a8465946f97610d91c2bb75b6b9930a93650e5",
+  "predictor_sha256": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+  "strict_real_model_probe": "strict-equivalence.json",
+  "preprocessing_small_sample": "preprocess-small.json",
+  "rows": [
+    {
+      "case": "A-short",
+      "variants": {
+        "baseline": {
+          "recognition_s": 35.65500387502834,
+          "preprocess_s": 8.739977977471426,
+          "inference_and_transfer_s": 26.12635428016074,
+          "sampled_peak_rss_bytes": 600096768,
+          "resource_sample_count": 37,
+          "resource_max_interval_s": 1.0051526671741158,
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 3640.0,
+              "end_ms": 9600.0,
+              "emitted_at_ms": 11240.0
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 24480.0,
+              "end_ms": 31400.0,
+              "emitted_at_ms": 33080.0
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 47280.0,
+              "end_ms": 56720.0,
+              "emitted_at_ms": 58400.0
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 101080.0,
+              "end_ms": 108800.0,
+              "emitted_at_ms": 110480.0
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 142440.0,
+              "end_ms": 153840.0,
+              "emitted_at_ms": 155480.0
+            }
+          ],
+          "export_ranges": [
+            [
+              3140.0,
+              10100.0
+            ],
+            [
+              23980.0,
+              31900.0
+            ],
+            [
+              46780.0,
+              57220.0
+            ],
+            [
+              100580.0,
+              109300.0
+            ],
+            [
+              141940.0,
+              154340.0
+            ]
+          ],
+          "diagnostics": {
+            "algorithm": "high-trajectory-frozen-20261018",
+            "config": {
+              "confidence": 0.6,
+              "motion_window_ms": 200,
+              "min_motion_window_ms": 80,
+              "min_speed_px_s": 100,
+              "max_speed_px_s": 4000,
+              "quiet_ms": 1600,
+              "min_flight_span_ms": 2200,
+              "field": [
+                0,
+                0,
+                1,
+                1
+              ],
+              "direction_window_ms": 160,
+              "direction_min_span_ms": 40,
+              "direction_max_residual_px": 80,
+              "top_fraction": 0.15,
+              "exit_max_y_fraction": 0.4,
+              "exit_horizon_ms": 250,
+              "high_clear_gap_ms": 2800,
+              "reentry_x_fraction": 0.2,
+              "turn_jump_px_s": 1100,
+              "track_gap_ms": 120,
+              "return_support_ms": 320,
+              "return_travel_px": 120,
+              "short_event_ms": 5000,
+              "filter_single_flight": true,
+              "filter_uncertain_short": true
+            },
+            "decoded_frames": 4200
+          },
+          "counts": {
+            "tracknet_calls": 1400,
+            "tracknet_input_frames": 4200,
+            "candidate_peaks": 0,
+            "decode_passes": 1,
+            "frames_decoded": 4200
+          },
+          "device": "mps",
+          "opencv_threads_recorded_before_recognition": 18,
+          "torch_threads_recorded_before_recognition": 4,
+          "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+          "code_sha256": {
+            "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+            "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+            "predictor": "fa19748811ec51484bcb1f97241899da1c60a6f9972c8ceb80ea58180b1bd83c",
+            "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+            "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+            "frozen_predictor": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa"
+          },
+          "evidence_directory": "apps/video-clipper/.runtime/opt07a/recognition/baseline/A-short"
+        },
+        "candidate": {
+          "recognition_s": 34.91080008307472,
+          "preprocess_s": 8.186155364150181,
+          "inference_and_transfer_s": 25.96291031106375,
+          "sampled_peak_rss_bytes": 570146816,
+          "resource_sample_count": 36,
+          "resource_max_interval_s": 1.0051425830461085,
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 3640.0,
+              "end_ms": 9600.0,
+              "emitted_at_ms": 11240.0
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 24480.0,
+              "end_ms": 31400.0,
+              "emitted_at_ms": 33080.0
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 47280.0,
+              "end_ms": 56720.0,
+              "emitted_at_ms": 58400.0
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 101080.0,
+              "end_ms": 108800.0,
+              "emitted_at_ms": 110480.0
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 142440.0,
+              "end_ms": 153840.0,
+              "emitted_at_ms": 155480.0
+            }
+          ],
+          "export_ranges": [
+            [
+              3140.0,
+              10100.0
+            ],
+            [
+              23980.0,
+              31900.0
+            ],
+            [
+              46780.0,
+              57220.0
+            ],
+            [
+              100580.0,
+              109300.0
+            ],
+            [
+              141940.0,
+              154340.0
+            ]
+          ],
+          "diagnostics": {
+            "algorithm": "high-trajectory-frozen-20261018",
+            "config": {
+              "confidence": 0.6,
+              "motion_window_ms": 200,
+              "min_motion_window_ms": 80,
+              "min_speed_px_s": 100,
+              "max_speed_px_s": 4000,
+              "quiet_ms": 1600,
+              "min_flight_span_ms": 2200,
+              "field": [
+                0,
+                0,
+                1,
+                1
+              ],
+              "direction_window_ms": 160,
+              "direction_min_span_ms": 40,
+              "direction_max_residual_px": 80,
+              "top_fraction": 0.15,
+              "exit_max_y_fraction": 0.4,
+              "exit_horizon_ms": 250,
+              "high_clear_gap_ms": 2800,
+              "reentry_x_fraction": 0.2,
+              "turn_jump_px_s": 1100,
+              "track_gap_ms": 120,
+              "return_support_ms": 320,
+              "return_travel_px": 120,
+              "short_event_ms": 5000,
+              "filter_single_flight": true,
+              "filter_uncertain_short": true
+            },
+            "decoded_frames": 4200
+          },
+          "counts": {
+            "tracknet_calls": 1400,
+            "tracknet_input_frames": 4200,
+            "candidate_peaks": 0,
+            "decode_passes": 1,
+            "frames_decoded": 4200
+          },
+          "device": "mps",
+          "opencv_threads_recorded_before_recognition": 18,
+          "torch_threads_recorded_before_recognition": 4,
+          "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+          "code_sha256": {
+            "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+            "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+            "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+            "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+            "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23"
+          },
+          "evidence_directory": "apps/video-clipper/.runtime/opt07a/recognition/candidate/A-short"
+        }
+      },
+      "strict_complete_recognition_checks": {
+        "predictions": true,
+        "export_ranges": true,
+        "diagnostics": true,
+        "counts": true,
+        "device": true,
+        "video_sha256": true
+      },
+      "single_observation_change_s": -0.7442037919536233,
+      "single_observation_change_percent": -2.0872352014378537
+    },
+    {
+      "case": "C-short",
+      "variants": {
+        "baseline": {
+          "recognition_s": 98.45393237494864,
+          "preprocess_s": 9.04738832777366,
+          "inference_and_transfer_s": 66.40112224081531,
+          "sampled_peak_rss_bytes": 1702625280,
+          "resource_sample_count": 99,
+          "resource_max_interval_s": 1.0303530420642346,
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 7700.0,
+              "end_ms": 10800.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 14167.0,
+              "end_ms": 20267.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 24133.0,
+              "end_ms": 44833.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 49567.0,
+              "end_ms": 67367.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 5,
+              "start_ms": 70533.0,
+              "end_ms": 88033.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 91500.0,
+              "end_ms": 103000.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 120933.0,
+              "end_ms": 133600.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 8,
+              "start_ms": 149233.0,
+              "end_ms": 153533.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 170267.0,
+              "end_ms": 178467.0,
+              "emitted_at_ms": 179967.0
+            }
+          ],
+          "export_ranges": [
+            [
+              7200.0,
+              11300.0
+            ],
+            [
+              13667.0,
+              20767.0
+            ],
+            [
+              23633.0,
+              45333.0
+            ],
+            [
+              49067.0,
+              67867.0
+            ],
+            [
+              70033.0,
+              88533.0
+            ],
+            [
+              91000.0,
+              103500.0
+            ],
+            [
+              120433.0,
+              134100.0
+            ],
+            [
+              148733.0,
+              154033.0
+            ],
+            [
+              169767.0,
+              178967.0
+            ]
+          ],
+          "diagnostics": {
+            "algorithm": "courtside-tail_gap800_growth300",
+            "selected_people": [
+              {
+                "x1": 934.59228515625,
+                "y1": 643.3831787109375,
+                "x2": 995.131103515625,
+                "y2": 877.21337890625,
+                "confidence": 0.5861480236053467
+              },
+              {
+                "x1": 789.3871459960938,
+                "y1": 399.810546875,
+                "x2": 1000.7921752929688,
+                "y2": 965.6593017578125,
+                "confidence": 0.8823997974395752
+              }
+            ],
+            "native_frames": 5400,
+            "shifted_frames": 5400
+          },
+          "counts": {
+            "tracknet_cache_misses": 5400,
+            "tracknet_cache_prepared_frames": 5400,
+            "tracknet_calls": 3599,
+            "tracknet_input_frames": 10797,
+            "candidate_peaks": 69821,
+            "tracknet_cache_hits": 5397,
+            "person_detector_calls": 225,
+            "person_detector_images": 900,
+            "person_boxes": 7170,
+            "tracknet_cache_max_items": 3,
+            "decode_passes": 1,
+            "frames_decoded": 5400,
+            "native_observations": 5400,
+            "shifted_observations": 5400,
+            "associated_tracks": 184,
+            "coherent_flights": 226
+          },
+          "device": "mps",
+          "opencv_threads_recorded_before_recognition": 18,
+          "torch_threads_recorded_before_recognition": 4,
+          "video_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+          "code_sha256": {
+            "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+            "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+            "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+            "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+            "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+            "frozen_predictor": "df737b3bac7ae2ecba2a8ce6337cb56d7350cc053de54f4b950d997a634679aa"
+          },
+          "evidence_directory": "apps/video-clipper/.runtime/opt07a/recognition/baseline/C-short"
+        },
+        "candidate": {
+          "recognition_s": 97.74527516704984,
+          "preprocess_s": 9.389027002034709,
+          "inference_and_transfer_s": 66.05623956117779,
+          "sampled_peak_rss_bytes": 1675083776,
+          "resource_sample_count": 98,
+          "resource_max_interval_s": 1.792791417101398,
+          "predictions": [
+            {
+              "rally_id": 1,
+              "start_ms": 7700.0,
+              "end_ms": 10800.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 2,
+              "start_ms": 14167.0,
+              "end_ms": 20267.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 3,
+              "start_ms": 24133.0,
+              "end_ms": 44833.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 4,
+              "start_ms": 49567.0,
+              "end_ms": 67367.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 5,
+              "start_ms": 70533.0,
+              "end_ms": 88033.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 6,
+              "start_ms": 91500.0,
+              "end_ms": 103000.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 7,
+              "start_ms": 120933.0,
+              "end_ms": 133600.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 8,
+              "start_ms": 149233.0,
+              "end_ms": 153533.0,
+              "emitted_at_ms": 179967.0
+            },
+            {
+              "rally_id": 9,
+              "start_ms": 170267.0,
+              "end_ms": 178467.0,
+              "emitted_at_ms": 179967.0
+            }
+          ],
+          "export_ranges": [
+            [
+              7200.0,
+              11300.0
+            ],
+            [
+              13667.0,
+              20767.0
+            ],
+            [
+              23633.0,
+              45333.0
+            ],
+            [
+              49067.0,
+              67867.0
+            ],
+            [
+              70033.0,
+              88533.0
+            ],
+            [
+              91000.0,
+              103500.0
+            ],
+            [
+              120433.0,
+              134100.0
+            ],
+            [
+              148733.0,
+              154033.0
+            ],
+            [
+              169767.0,
+              178967.0
+            ]
+          ],
+          "diagnostics": {
+            "algorithm": "courtside-tail_gap800_growth300",
+            "selected_people": [
+              {
+                "x1": 934.59228515625,
+                "y1": 643.3831787109375,
+                "x2": 995.131103515625,
+                "y2": 877.21337890625,
+                "confidence": 0.5861480236053467
+              },
+              {
+                "x1": 789.3871459960938,
+                "y1": 399.810546875,
+                "x2": 1000.7921752929688,
+                "y2": 965.6593017578125,
+                "confidence": 0.8823997974395752
+              }
+            ],
+            "native_frames": 5400,
+            "shifted_frames": 5400
+          },
+          "counts": {
+            "tracknet_cache_misses": 5400,
+            "tracknet_cache_prepared_frames": 5400,
+            "tracknet_calls": 3599,
+            "tracknet_input_frames": 10797,
+            "candidate_peaks": 69821,
+            "tracknet_cache_hits": 5397,
+            "person_detector_calls": 225,
+            "person_detector_images": 900,
+            "person_boxes": 7170,
+            "tracknet_cache_max_items": 3,
+            "decode_passes": 1,
+            "frames_decoded": 5400,
+            "native_observations": 5400,
+            "shifted_observations": 5400,
+            "associated_tracks": 184,
+            "coherent_flights": 226
+          },
+          "device": "mps",
+          "opencv_threads_recorded_before_recognition": 18,
+          "torch_threads_recorded_before_recognition": 4,
+          "video_sha256": "f270602edffd9c6b081cb0463de9aa97f6d1ef3027b0b16d86ab46941bb07f5c",
+          "code_sha256": {
+            "modules": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "tracknet_package": "6e17272c77b173d8c573bb0ff88b5eea935e579aee8bacaaf042a6cf7ccfb078",
+            "recognize": "17fb4cfb4387a8394836bc9793e526c42cf139ec291d6ee890a9d09e7052adad",
+            "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+            "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+            "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23"
+          },
+          "evidence_directory": "apps/video-clipper/.runtime/opt07a/recognition/candidate/C-short"
+        }
+      },
+      "strict_complete_recognition_checks": {
+        "predictions": true,
+        "export_ranges": true,
+        "diagnostics": true,
+        "counts": true,
+        "device": true,
+        "video_sha256": true
+      },
+      "single_observation_change_s": -0.7086572078987956,
+      "single_observation_change_percent": -0.7197855797165809
+    }
+  ]
+}

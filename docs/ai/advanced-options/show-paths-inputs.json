@@ -1,0 +1,26 @@
+{
+  "cases": [
+    {
+      "scene": "high",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "court": null,
+      "sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "status": "passed",
+      "metadata": {
+        "bytes": 70418255,
+        "container_duration_s": 168.091,
+        "video_codec": "h264",
+        "width": 1920,
+        "height": 1080,
+        "fps": 25.0,
+        "container_frames": 4200,
+        "audio_streams": 1,
+        "audio_codecs": [
+          "aac"
+        ]
+      },
+      "case_id": "A-default-show-paths",
+      "show_shot_paths": true
+    }
+  ]
+}

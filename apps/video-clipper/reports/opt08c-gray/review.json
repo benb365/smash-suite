@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "title": "彩色与灰度找球对照",
+  "note": "同一 A 片保存的完整识别输出；无匹配人工标注，时间轴仅展示方案差异。",
+  "primary_track": "gray",
+  "tracks": [
+    {
+      "id": "color",
+      "label": "原彩色输入",
+      "role": "prediction"
+    },
+    {
+      "id": "gray",
+      "label": "折叠灰度输入",
+      "role": "prediction"
+    }
+  ],
+  "clips": [
+    {
+      "id": "A-short",
+      "title": "官方高视角短片",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "duration_ms": 168000,
+      "media_offset_ms": 91,
+      "intervals": {
+        "color": [
+          {
+            "id": "1",
+            "start_ms": 3640.0,
+            "end_ms": 9600.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24480.0,
+            "end_ms": 31400.0
+          },
+          {
+            "id": "4",
+            "start_ms": 47280.0,
+            "end_ms": 56720.0
+          },
+          {
+            "id": "6",
+            "start_ms": 101080.0,
+            "end_ms": 108800.0
+          },
+          {
+            "id": "7",
+            "start_ms": 142440.0,
+            "end_ms": 153840.0
+          }
+        ],
+        "gray": [
+          {
+            "id": "1",
+            "start_ms": 3880.0,
+            "end_ms": 9400.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24600.0,
+            "end_ms": 31440.0
+          },
+          {
+            "id": "4",
+            "start_ms": 47400.0,
+            "end_ms": 56640.0
+          },
+          {
+            "id": "5",
+            "start_ms": 101160.0,
+            "end_ms": 109000.0
+          },
+          {
+            "id": "6",
+            "start_ms": 142440.0,
+            "end_ms": 153840.0
+          }
+        ]
+      },
+      "issues": [
+        {
+          "label": "首段起止变化",
+          "start_ms": 3000,
+          "end_ms": 11000
+        },
+        {
+          "label": "第三段起止变化",
+          "start_ms": 46500,
+          "end_ms": 58000
+        },
+        {
+          "label": "第四段起止变化",
+          "start_ms": 100000,
+          "end_ms": 111000
+        }
+      ]
+    }
+  ]
+}

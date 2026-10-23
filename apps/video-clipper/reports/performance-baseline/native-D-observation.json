@@ -1,0 +1,1238 @@
+{
+  "case_id": "D",
+  "window_name": "observation",
+  "status": "passed_with_signpost_tail",
+  "errors": [],
+  "target_pid": 51087,
+  "target_uid": 501,
+  "stage": "正在寻找羽毛球和球员",
+  "python_capture": {
+    "target_pid": 51087,
+    "case_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-D/D-short",
+    "flamegraph": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/python-flamegraph.svg"
+  },
+  "native_case_directory": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-D/D-short",
+  "trace_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/observation.trace",
+  "window_mapping": {
+    "name": "observation",
+    "stage": "正在寻找羽毛球和球员",
+    "trace_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/observation.trace",
+    "trace_duration_seconds": 9.189937,
+    "trace_start_date": "2026-10-21T10:34:58.278+08:00",
+    "trace_coverage_epoch_seconds": [
+      1792550098.278,
+      1792550107.4679372
+    ],
+    "benchmark_recognition_epoch_seconds": [
+      1792550079.017273,
+      1792550403.4164054
+    ],
+    "ready_marker_monotonic_seconds": 1325235.905748,
+    "ready_marker_epoch_seconds": 1792550099.5234303,
+    "ready_marker_trace_relative_seconds": 1.2454302310943604,
+    "ready_marker_in_trace": true,
+    "ready_marker_observation_interval_seconds": 0.1,
+    "ready_marker_timing_interpretation": "ready_monotonic_s is the observed marker on a 0.1 s polling loop; the actual transition may precede it by up to one polling interval. The deterministic analysis start uses the observed marker.",
+    "mapped_benchmark_start_trace_relative_seconds": -19.260727167129517,
+    "mapped_rendering_trace_relative_seconds": 305.13840532302856,
+    "analysis_window_trace_relative_seconds": [
+      1.2454302310943604,
+      9.189937114715576
+    ],
+    "analysis_window_epoch_seconds": [
+      1792550099.5234303,
+      1792550107.4679372
+    ],
+    "analysis_window_duration_seconds": 7.944506883621216,
+    "pre_ready_trace_period_seconds": [
+      0.0,
+      1.2454302310943604
+    ],
+    "trace_covers_full_benchmark_interval": false,
+    "toc_start_date_precision_tolerance_seconds": 0.001,
+    "stage_clock_points": {
+      "trigger_observed_monotonic_s": {
+        "monotonic_seconds": 1325227.943495958,
+        "epoch_seconds": 1792550091.5611784,
+        "trace_relative_seconds": -6.716821670532227,
+        "covered_by_trace": false
+      },
+      "attach_requested_monotonic_s": {
+        "monotonic_seconds": 1325231.983745625,
+        "epoch_seconds": 1792550095.601428,
+        "trace_relative_seconds": -2.67657208442688,
+        "covered_by_trace": false
+      },
+      "ready_monotonic_s": {
+        "monotonic_seconds": 1325235.905748,
+        "epoch_seconds": 1792550099.5234303,
+        "trace_relative_seconds": 1.2454302310943604,
+        "covered_by_trace": true
+      },
+      "completed_monotonic_s": {
+        "monotonic_seconds": 1325283.522541958,
+        "epoch_seconds": 1792550147.1402245,
+        "trace_relative_seconds": 48.86222434043884,
+        "covered_by_trace": false
+      }
+    },
+    "mapping": "trace TOC start-date and duration define actual trace coverage; intersect that interval with benchmark_start-to-rendering after monotonic-to-epoch mapping"
+  },
+  "stage_validation": {
+    "events_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-events.jsonl",
+    "current_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-current.json",
+    "selected_stage": "正在寻找羽毛球和球员",
+    "actual_stage_segments_over_trace": [
+      {
+        "start_monotonic_s": 1325234.6603176594,
+        "end_monotonic_s": 1325243.850254774,
+        "status": "running",
+        "stage": "正在寻找羽毛球和球员",
+        "progress": 0.08082646369760899,
+        "closed_by_completed_job": true
+      }
+    ],
+    "actual_stage_segments_over_analysis_window": [
+      {
+        "start_monotonic_s": 1325235.9057478905,
+        "end_monotonic_s": 1325243.850254774,
+        "status": "running",
+        "stage": "正在寻找羽毛球和球员",
+        "progress": 0.08082646369760899
+      }
+    ],
+    "observed_stages_in_analysis_window": [
+      "正在寻找羽毛球和球员"
+    ],
+    "crosses_selected_stage_boundary": false,
+    "status": "stage-matches-window",
+    "policy": "Trace coverage is converted from epoch to monotonic using the recording offset; phase state comes only from stage-events/current evidence."
+  },
+  "full_toc_stage_validation": {
+    "events_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-events.jsonl",
+    "current_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/stage-current.json",
+    "selected_stage": "正在寻找羽毛球和球员",
+    "actual_stage_segments_over_trace": [
+      {
+        "start_monotonic_s": 1325234.6603176594,
+        "end_monotonic_s": 1325243.850254774,
+        "status": "running",
+        "stage": "正在寻找羽毛球和球员",
+        "progress": 0.08082646369760899,
+        "closed_by_completed_job": true
+      }
+    ],
+    "actual_stage_segments_over_analysis_window": [
+      {
+        "start_monotonic_s": 1325234.6603176594,
+        "end_monotonic_s": 1325243.850254774,
+        "status": "running",
+        "stage": "正在寻找羽毛球和球员",
+        "progress": 0.08082646369760899
+      }
+    ],
+    "observed_stages_in_analysis_window": [
+      "正在寻找羽毛球和球员"
+    ],
+    "crosses_selected_stage_boundary": false,
+    "status": "stage-matches-window",
+    "policy": "Trace coverage is converted from epoch to monotonic using the recording offset; phase state comes only from stage-events/current evidence."
+  },
+  "trace_time_origin_validation": {
+    "status": "passed_with_signpost_tail",
+    "tables": {
+      "time-profile": {
+        "target_time_range_s": [
+          0.249635083,
+          9.18993675
+        ],
+        "within_toc_trace_duration": true,
+        "overlaps_recognition_window": true
+      },
+      "metal-gpu-intervals": {
+        "target_time_range_s": [
+          0.2478825,
+          9.12603125
+        ],
+        "within_toc_trace_duration": true,
+        "overlaps_recognition_window": true
+      },
+      "os-signpost": {
+        "target_time_range_s": [
+          1.113013458,
+          9.739336875
+        ],
+        "within_toc_trace_duration": false,
+        "overlaps_recognition_window": true
+      }
+    },
+    "os_signpost_tail": {
+      "classification": "trailing_range_beyond_toc",
+      "raw_target_time_range_s": [
+        1.113013458,
+        9.739336875
+      ],
+      "toc_duration_seconds": 9.189937,
+      "tail_seconds": 0.5493998749999989,
+      "outside_toc_event_type_subsystem_name_counts": [
+        {
+          "count": 959,
+          "event_type": "Begin",
+          "subsystem": "PyTorchMPS",
+          "name": "PyTorchOperationIntervals"
+        },
+        {
+          "count": 952,
+          "event_type": "Event",
+          "subsystem": "PyTorchMPS",
+          "name": "PyTorchOperationEvents"
+        },
+        {
+          "count": 952,
+          "event_type": "End",
+          "subsystem": "PyTorchMPS",
+          "name": "PyTorchOperationIntervals"
+        },
+        {
+          "count": 873,
+          "event_type": "Begin",
+          "subsystem": "com.apple.metalperformanceshadersgraph",
+          "name": "MPSGraph_Encode"
+        },
+        {
+          "count": 872,
+          "event_type": "End",
+          "subsystem": "com.apple.metalperformanceshadersgraph",
+          "name": "MPSGraph_Encode"
+        },
+        {
+          "count": 49,
+          "event_type": "Begin",
+          "subsystem": "PyTorchMPS",
+          "name": "PyTorchCopyIntervals"
+        },
+        {
+          "count": 49,
+          "event_type": "Event",
+          "subsystem": "PyTorchMPS",
+          "name": "PyTorchCopyEvents"
+        },
+        {
+          "count": 49,
+          "event_type": "End",
+          "subsystem": "PyTorchMPS",
+          "name": "PyTorchCopyIntervals"
+        }
+      ],
+      "full_event_list_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/signpost-boundary-events.json"
+    },
+    "errors": []
+  },
+  "signpost_cross_table_stop_boundary": "reproduced_in_controlled_probe",
+  "controlled_stop_boundary_evidence": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/cnn-window-probe/stop-boundary-check.json",
+    "sha256": "9796a29e67b7adfa9dfb2588a325d65e38949d40fdddc8a8a89c22ce49a10eb6",
+    "status": "observed_cross_table_stop_boundary_difference",
+    "matching_case_evidence": {
+      "toc_duration_s": 9.189937,
+      "signpost_end_s": 9.739336875,
+      "tail_s": 0.549399875
+    }
+  },
+  "signpost_boundary_event_index": {
+    "path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-analysis/signpost-boundary-events.json",
+    "size_bytes": 5100641,
+    "sha256": "a657d9be1dcb03e150070d1b1f5a0f3582782469458968647ac6318a42d9831e"
+  },
+  "native_window_metadata": {
+    "name": "observation",
+    "stage": "正在寻找羽毛球和球员",
+    "trace_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/observation.trace",
+    "trace_command": [
+      "xcrun",
+      "xctrace",
+      "record",
+      "--template",
+      "Time Profiler",
+      "--instrument",
+      "GPU",
+      "--instrument",
+      "os_signpost",
+      "--attach",
+      "51087",
+      "--time-limit",
+      "8s",
+      "--output",
+      "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/observation.trace"
+    ],
+    "trace_log_path": "/Users/bytedance/.codex/worktrees/performance-baseline/smash-suite/apps/video-clipper/.runtime/performance-baseline/profile-control-D/observation-xctrace.log",
+    "requested_duration_s": 8,
+    "trigger_observed_monotonic_s": 1325227.943495958,
+    "attach_requested_monotonic_s": 1325231.983745625,
+    "ready_monotonic_s": 1325235.905748,
+    "completed_monotonic_s": 1325283.522541958,
+    "trace_returncode": 0,
+    "trigger_state": {
+      "monotonic_s": 1325227.943495958,
+      "status": "running",
+      "stage": "正在寻找羽毛球和球员",
+      "progress": 0.08082646369760899
+    },
+    "attach_state": {
+      "monotonic_s": 1325231.759449125,
+      "status": "running",
+      "stage": "正在寻找羽毛球和球员",
+      "progress": 0.08945887701913484
+    },
+    "coverage_status": "pending_trace_TOC_and_phase_validation",
+    "trace_pid": 51271
+  },
+  "time_profile": {
+    "trace_relative_range_s": [
+      1.2454302310943604,
+      9.189937114715576
+    ],
+    "target_rows_in_window": 9559,
+    "target_rows_outside_window_or_without_timestamp": 1187,
+    "running_positive_weight_samples": 9559,
+    "running_positive_weight_seconds_cpu_estimate": 9.559,
+    "sample_time_range_s": [
+      1.245936875,
+      9.18993675
+    ],
+    "leaf_symbol_exclusive_top50": [
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, true>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, true>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 1.932
+      },
+      {
+        "value": "cv::(anonymous namespace)::FarnebackOpticalFlowImpl::calc(cv::_InputArray const&, cv::_InputArray const&, cv::_InputOutputArray const&)",
+        "weight_seconds_estimate": 1.594
+      },
+      {
+        "value": "cv::FarnebackUpdateMatrices(cv::Mat const&, cv::Mat const&, cv::Mat const&, cv::Mat&, int, int)",
+        "weight_seconds_estimate": 0.613
+      },
+      {
+        "value": "0x136dee3dc",
+        "weight_seconds_estimate": 0.584
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<at::native::DEFAULT::copy_kernel(at::TensorIterator&, bool)::$_2::operator()() const::'lambda14'()::operator()() const::'lambda'()::operator()() const::'lambda8'()::operator()() const::'lambda'(char**, long long const*, long long)>(at::native::DEFAULT::copy_kernel(at::TensorIterator&, bool)::$_2::operator()() const::'lambda14'()::operator()() const::'lambda'()::operator()() const::'lambda8'()::operator()() const::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.538
+      },
+      {
+        "value": "__kdebug_trace64",
+        "weight_seconds_estimate": 0.43
+      },
+      {
+        "value": "iokit_user_client_trap",
+        "weight_seconds_estimate": 0.371
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::$_7::operator()() const::'lambda0'()::operator()() const::'lambda'(float, float), at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::$_7::operator()() const::'lambda0'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>, at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.354
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, false>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, false>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.343
+      },
+      {
+        "value": "cv::cpu_baseline::SymmColumnVec_32f::operator()(unsigned char const**, unsigned char*, int) const",
+        "weight_seconds_estimate": 0.187
+      },
+      {
+        "value": "cv::cpu_baseline::RowVec_32f::operator()(unsigned char const*, unsigned char*, int, int) const",
+        "weight_seconds_estimate": 0.154
+      },
+      {
+        "value": "start_wqthread",
+        "weight_seconds_estimate": 0.112
+      },
+      {
+        "value": "_platform_memmove",
+        "weight_seconds_estimate": 0.095
+      },
+      {
+        "value": "__psynch_cvwait",
+        "weight_seconds_estimate": 0.07
+      },
+      {
+        "value": "0x13863786c",
+        "weight_seconds_estimate": 0.066
+      },
+      {
+        "value": "0x138630078",
+        "weight_seconds_estimate": 0.059
+      },
+      {
+        "value": "0x138674838",
+        "weight_seconds_estimate": 0.053
+      },
+      {
+        "value": "kleidicv::neon::rgb_to_bgr_u8(unsigned char const*, unsigned long, unsigned char*, unsigned long, unsigned long, unsigned long)",
+        "weight_seconds_estimate": 0.049
+      },
+      {
+        "value": "FLOAT_argmax",
+        "weight_seconds_estimate": 0.046
+      },
+      {
+        "value": "_PyEval_EvalFrameDefault",
+        "weight_seconds_estimate": 0.044
+      },
+      {
+        "value": "objc_msgSend",
+        "weight_seconds_estimate": 0.042
+      },
+      {
+        "value": "mach_msg2_trap",
+        "weight_seconds_estimate": 0.035
+      },
+      {
+        "value": "_platform_memset",
+        "weight_seconds_estimate": 0.035
+      },
+      {
+        "value": "0x1386649f8",
+        "weight_seconds_estimate": 0.035
+      },
+      {
+        "value": "0x13865a198",
+        "weight_seconds_estimate": 0.034
+      },
+      {
+        "value": "__psynch_cvsignal",
+        "weight_seconds_estimate": 0.033
+      },
+      {
+        "value": "0x13864def0",
+        "weight_seconds_estimate": 0.033
+      },
+      {
+        "value": "0x1383ee8ec",
+        "weight_seconds_estimate": 0.031
+      },
+      {
+        "value": "kleidicv_error_t kleidicv::neon::kleidicv_resize_generic_stripe_u8<3, 3>(unsigned char const*, unsigned long, unsigned long, unsigned long, unsigned long, unsigned long, unsigned char*, unsigned long, unsigned long, unsigned long)",
+        "weight_seconds_estimate": 0.03
+      },
+      {
+        "value": "kevent_id",
+        "weight_seconds_estimate": 0.03
+      },
+      {
+        "value": "_xzm_free",
+        "weight_seconds_estimate": 0.03
+      },
+      {
+        "value": "_aligned_strided_to_contig_size1",
+        "weight_seconds_estimate": 0.029
+      },
+      {
+        "value": "<deduplicated_symbol>",
+        "weight_seconds_estimate": 0.028
+      },
+      {
+        "value": "0x1383ee780",
+        "weight_seconds_estimate": 0.027
+      },
+      {
+        "value": "simd_binary_scalar1_less_f32",
+        "weight_seconds_estimate": 0.024
+      },
+      {
+        "value": "_xzm_xzone_malloc_tiny",
+        "weight_seconds_estimate": 0.024
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::DEFAULT::direct_copy_kernel(at::TensorIteratorBase&)::$_6::operator()() const::'lambda13'()::operator()() const::'lambda'(float), at::native::DEFAULT::direct_copy_kernel(at::TensorIteratorBase&)::$_6::operator()() const::'lambda13'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 0.024
+      },
+      {
+        "value": "objc_release",
+        "weight_seconds_estimate": 0.022
+      },
+      {
+        "value": "cv::HResizeLinearVec_X4<float, float, float, cv::hal_baseline::v_float32x4>::operator()(float const**, float**, int, int const*, float const*, int, int, int, int, int) const",
+        "weight_seconds_estimate": 0.021
+      },
+      {
+        "value": "mach_absolute_time",
+        "weight_seconds_estimate": 0.018
+      },
+      {
+        "value": "kleidicv::neon::u8_to_f32(unsigned char const*, unsigned long, float*, unsigned long, unsigned long, unsigned long)",
+        "weight_seconds_estimate": 0.016
+      },
+      {
+        "value": "0x1384133e0",
+        "weight_seconds_estimate": 0.016
+      },
+      {
+        "value": "cv::cpu_baseline::SymmRowSmallVec_32f::operator()(unsigned char const*, unsigned char*, int, int) const",
+        "weight_seconds_estimate": 0.016
+      },
+      {
+        "value": "DYLD-STUB$$__swift_instantiateConcreteTypeFromMangledNameV2",
+        "weight_seconds_estimate": 0.015
+      },
+      {
+        "value": "objc_retain",
+        "weight_seconds_estimate": 0.015
+      },
+      {
+        "value": "FLOAT_equal",
+        "weight_seconds_estimate": 0.014
+      },
+      {
+        "value": "__bzero",
+        "weight_seconds_estimate": 0.013
+      },
+      {
+        "value": "0x138646c44",
+        "weight_seconds_estimate": 0.013
+      },
+      {
+        "value": "0x13863746c",
+        "weight_seconds_estimate": 0.013
+      },
+      {
+        "value": "cv::cpu_baseline::SymmColumnSmallVec_32f::operator()(unsigned char const**, unsigned char*, int) const",
+        "weight_seconds_estimate": 0.012
+      }
+    ],
+    "leaf_binary_exclusive_top50": [
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.dylib",
+        "weight_seconds_estimate": 3.297
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/cv2/cv2.abi3.so",
+        "weight_seconds_estimate": 2.776
+      },
+      {
+        "value": "/usr/lib/system/libsystem_kernel.dylib",
+        "weight_seconds_estimate": 0.659
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libswscale.8.3.100.dylib",
+        "weight_seconds_estimate": 0.591
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libavcodec.61.19.100.dylib",
+        "weight_seconds_estimate": 0.471
+      },
+      {
+        "value": "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit",
+        "weight_seconds_estimate": 0.376
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/numpy/_core/_multiarray_umath.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.179
+      },
+      {
+        "value": "/usr/lib/system/libsystem_platform.dylib",
+        "weight_seconds_estimate": 0.157
+      },
+      {
+        "value": "/usr/lib/libobjc.A.dylib",
+        "weight_seconds_estimate": 0.156
+      },
+      {
+        "value": "/System/Library/Frameworks/MetalPerformanceShadersGraph.framework/Versions/A/MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.147
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.runtime/uv-python/cpython-3.11.16-macos-aarch64-none/bin/python3.11",
+        "weight_seconds_estimate": 0.143
+      },
+      {
+        "value": "/usr/lib/system/libsystem_pthread.dylib",
+        "weight_seconds_estimate": 0.123
+      },
+      {
+        "value": "/usr/lib/system/libsystem_malloc.dylib",
+        "weight_seconds_estimate": 0.095
+      },
+      {
+        "value": "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+        "weight_seconds_estimate": 0.078
+      },
+      {
+        "value": "/System/Library/Extensions/AGXMetalG17X.bundle/Contents/MacOS/AGXMetalG17X",
+        "weight_seconds_estimate": 0.048
+      },
+      {
+        "value": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore",
+        "weight_seconds_estimate": 0.032
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.dylib",
+        "weight_seconds_estimate": 0.032
+      },
+      {
+        "value": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray",
+        "weight_seconds_estimate": 0.03
+      },
+      {
+        "value": "/System/Library/Frameworks/Metal.framework/Versions/A/Metal",
+        "weight_seconds_estimate": 0.022
+      },
+      {
+        "value": "/System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU",
+        "weight_seconds_estimate": 0.019
+      },
+      {
+        "value": "/usr/lib/system/libdispatch.dylib",
+        "weight_seconds_estimate": 0.018
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libc10.dylib",
+        "weight_seconds_estimate": 0.014
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libomp.dylib",
+        "weight_seconds_estimate": 0.014
+      },
+      {
+        "value": "/usr/lib/system/libsystem_trace.dylib",
+        "weight_seconds_estimate": 0.01
+      },
+      {
+        "value": "/usr/lib/libc++.1.dylib",
+        "weight_seconds_estimate": 0.01
+      },
+      {
+        "value": "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation",
+        "weight_seconds_estimate": 0.009
+      },
+      {
+        "value": "/usr/lib/system/libsystem_c.dylib",
+        "weight_seconds_estimate": 0.008
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/video/frame.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.006
+      },
+      {
+        "value": "/usr/lib/dyld",
+        "weight_seconds_estimate": 0.005
+      },
+      {
+        "value": "/usr/lib/system/libcorecrypto.dylib",
+        "weight_seconds_estimate": 0.005
+      },
+      {
+        "value": "/usr/lib/libc++abi.dylib",
+        "weight_seconds_estimate": 0.005
+      },
+      {
+        "value": "/usr/lib/libicucore.A.dylib",
+        "weight_seconds_estimate": 0.004
+      },
+      {
+        "value": "/usr/lib/system/libdyld.dylib",
+        "weight_seconds_estimate": 0.002
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/codec/context.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.002
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/video/format.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.002
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/container/streams.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.002
+      },
+      {
+        "value": "/usr/lib/system/libsystem_m.dylib",
+        "weight_seconds_estimate": 0.002
+      },
+      {
+        "value": "/usr/lib/system/libsystem_blocks.dylib",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/usr/lib/swift/libswiftCore.dylib",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/error.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/frame.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/video/reformatter.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/video/plane.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSHost.framework/Versions/A/MPSHost",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libavutil.59.39.100.dylib",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/plane.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.001
+      },
+      {
+        "value": "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/utils.cpython-311-darwin.so",
+        "weight_seconds_estimate": 0.001
+      }
+    ],
+    "all_leaf_binary_exclusive_weight_seconds_estimate": {
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libtorch_cpu.dylib": 3.297,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/cv2/cv2.abi3.so": 2.776,
+      "/usr/lib/system/libsystem_kernel.dylib": 0.659,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libswscale.8.3.100.dylib": 0.591,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libavcodec.61.19.100.dylib": 0.471,
+      "/System/Library/Frameworks/IOKit.framework/Versions/A/IOKit": 0.376,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/numpy/_core/_multiarray_umath.cpython-311-darwin.so": 0.179,
+      "/usr/lib/system/libsystem_platform.dylib": 0.157,
+      "/usr/lib/libobjc.A.dylib": 0.156,
+      "/System/Library/Frameworks/MetalPerformanceShadersGraph.framework/Versions/A/MetalPerformanceShadersGraph": 0.147,
+      "/Users/bytedance/workspace/experiments/smash-suite/.runtime/uv-python/cpython-3.11.16-macos-aarch64-none/bin/python3.11": 0.143,
+      "/usr/lib/system/libsystem_pthread.dylib": 0.123,
+      "/usr/lib/system/libsystem_malloc.dylib": 0.095,
+      "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation": 0.078,
+      "/System/Library/Extensions/AGXMetalG17X.bundle/Contents/MacOS/AGXMetalG17X": 0.048,
+      "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore": 0.032,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libtorch_python.dylib": 0.032,
+      "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray": 0.03,
+      "/System/Library/Frameworks/Metal.framework/Versions/A/Metal": 0.022,
+      "/System/Library/PrivateFrameworks/IOGPU.framework/Versions/A/IOGPU": 0.019,
+      "/usr/lib/system/libdispatch.dylib": 0.018,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libc10.dylib": 0.014,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/torch/lib/libomp.dylib": 0.014,
+      "/usr/lib/system/libsystem_trace.dylib": 0.01,
+      "/usr/lib/libc++.1.dylib": 0.01,
+      "/System/Library/Frameworks/Foundation.framework/Versions/C/Foundation": 0.009,
+      "/usr/lib/system/libsystem_c.dylib": 0.008,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/video/frame.cpython-311-darwin.so": 0.006,
+      "/usr/lib/dyld": 0.005,
+      "/usr/lib/system/libcorecrypto.dylib": 0.005,
+      "/usr/lib/libc++abi.dylib": 0.005,
+      "/usr/lib/libicucore.A.dylib": 0.004,
+      "/usr/lib/system/libdyld.dylib": 0.002,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/codec/context.cpython-311-darwin.so": 0.002,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/video/format.cpython-311-darwin.so": 0.002,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/container/streams.cpython-311-darwin.so": 0.002,
+      "/usr/lib/system/libsystem_m.dylib": 0.002,
+      "/usr/lib/system/libsystem_blocks.dylib": 0.001,
+      "/usr/lib/swift/libswiftCore.dylib": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/error.cpython-311-darwin.so": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/frame.cpython-311-darwin.so": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/video/reformatter.cpython-311-darwin.so": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/video/plane.cpython-311-darwin.so": 0.001,
+      "/System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSHost.framework/Versions/A/MPSHost": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/.dylibs/libavutil.59.39.100.dylib": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/plane.cpython-311-darwin.so": 0.001,
+      "/Users/bytedance/workspace/experiments/smash-suite/.venv/lib/python3.11/site-packages/av/utils.cpython-311-darwin.so": 0.001
+    },
+    "inclusive_symbol_top50": [
+      {
+        "value": "_PyFunction_Vectorcall",
+        "weight_seconds_estimate": 5.54
+      },
+      {
+        "value": "_PyEval_EvalFrameDefault",
+        "weight_seconds_estimate": 5.54
+      },
+      {
+        "value": "cfunction_vectorcall_FASTCALL_KEYWORDS",
+        "weight_seconds_estimate": 4.418
+      },
+      {
+        "value": "builtin_exec",
+        "weight_seconds_estimate": 4.417
+      },
+      {
+        "value": "Py_RunMain",
+        "weight_seconds_estimate": 4.417
+      },
+      {
+        "value": "_PyEval_Vector",
+        "weight_seconds_estimate": 4.417
+      },
+      {
+        "value": "main",
+        "weight_seconds_estimate": 4.417
+      },
+      {
+        "value": "pymain_main",
+        "weight_seconds_estimate": 4.417
+      },
+      {
+        "value": "start",
+        "weight_seconds_estimate": 4.417
+      },
+      {
+        "value": "pymain_run_module",
+        "weight_seconds_estimate": 4.417
+      },
+      {
+        "value": "cfunction_call",
+        "weight_seconds_estimate": 3.81
+      },
+      {
+        "value": ".omp_outlined.",
+        "weight_seconds_estimate": 3.209
+      },
+      {
+        "value": "__kmp_invoke_microtask",
+        "weight_seconds_estimate": 3.209
+      },
+      {
+        "value": "at::TensorIteratorBase::serial_for_each(c10::function_ref<void (char**, long long const*, long long, long long)>, at::Range) const",
+        "weight_seconds_estimate": 3.202
+      },
+      {
+        "value": "0x1ff",
+        "weight_seconds_estimate": 3.096
+      },
+      {
+        "value": "at::internal::serial_for_each(c10::ArrayRef<long long>, c10::ArrayRef<long long>, char**, unsigned long, c10::function_ref<void (char**, long long const*, long long, long long)>, at::Range)",
+        "weight_seconds_estimate": 3.087
+      },
+      {
+        "value": "0x726854207264",
+        "weight_seconds_estimate": 2.833
+      },
+      {
+        "value": "cv::calcOpticalFlowFarneback(cv::_InputArray const&, cv::_InputArray const&, cv::_InputOutputArray const&, double, int, int, int, int, double, int)",
+        "weight_seconds_estimate": 2.693
+      },
+      {
+        "value": "cv::(anonymous namespace)::FarnebackOpticalFlowImpl::calc(cv::_InputArray const&, cv::_InputArray const&, cv::_InputOutputArray const&)",
+        "weight_seconds_estimate": 2.693
+      },
+      {
+        "value": "pyopencv_cv_calcOpticalFlowFarneback(_object*, _object*, _object*)",
+        "weight_seconds_estimate": 2.693
+      },
+      {
+        "value": "method_vectorcall",
+        "weight_seconds_estimate": 2.121
+      },
+      {
+        "value": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, true>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, true>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "weight_seconds_estimate": 1.934
+      },
+      {
+        "value": "_PyObject_Call_Prepend",
+        "weight_seconds_estimate": 1.643
+      },
+      {
+        "value": "slot_tp_call",
+        "weight_seconds_estimate": 1.638
+      },
+      {
+        "value": "0x2af",
+        "weight_seconds_estimate": 1.63
+      },
+      {
+        "value": "_dispatch_client_callout",
+        "weight_seconds_estimate": 1.395
+      },
+      {
+        "value": "thread_start",
+        "weight_seconds_estimate": 1.209
+      },
+      {
+        "value": "_pthread_start",
+        "weight_seconds_estimate": 1.209
+      },
+      {
+        "value": "0x2bf",
+        "weight_seconds_estimate": 1.203
+      },
+      {
+        "value": "pythread_wrapper",
+        "weight_seconds_estimate": 1.123
+      },
+      {
+        "value": "thread_run",
+        "weight_seconds_estimate": 1.123
+      },
+      {
+        "value": "<Call stack limit reached>",
+        "weight_seconds_estimate": 1.028
+      },
+      {
+        "value": "_dispatch_lane_barrier_sync_invoke_and_complete",
+        "weight_seconds_estimate": 0.972
+      },
+      {
+        "value": "at::mps::MPSStream::executeMPSGraph(MPSGraph*, NSDictionary*, NSDictionary*, at::mps::SyncType)",
+        "weight_seconds_estimate": 0.899
+      },
+      {
+        "value": "invocation function for block in at::mps::MPSStream::executeMPSGraph(MPSGraph*, NSDictionary*, NSDictionary*, at::mps::SyncType)",
+        "weight_seconds_estimate": 0.84
+      },
+      {
+        "value": "-[MPSGraph encodeToCommandBuffer:feeds:targetOperations:resultsDictionary:executionDescriptor:]",
+        "weight_seconds_estimate": 0.795
+      },
+      {
+        "value": "-[MPSGraph runInternalWithMPSCommandBuffer:feeds:targetTensors:targetOperations:resultsDictionary:executionDescriptor:mpsGraphOwnedCommandBuffer:]",
+        "weight_seconds_estimate": 0.792
+      },
+      {
+        "value": "<Unknown Address>",
+        "weight_seconds_estimate": 0.736
+      },
+      {
+        "value": "start_wqthread",
+        "weight_seconds_estimate": 0.724
+      },
+      {
+        "value": "-[MPSGraphExecutable runInternalWithDevice:commandBuffer:feedsDictionary:resultsDictionary:executableExecutionDescriptor:mpsGraphOwnedCommandBuffer:]",
+        "weight_seconds_estimate": 0.661
+      },
+      {
+        "value": "-[MPSGraphExecutable runInternalWithDevice:commandBuffer:feeds:results:executableExecutionDescriptor:mpsGraphOwnedCommandBuffer:]",
+        "weight_seconds_estimate": 0.645
+      },
+      {
+        "value": "cv::FarnebackUpdateMatrices(cv::Mat const&, cv::Mat const&, cv::Mat const&, cv::Mat&, int, int)",
+        "weight_seconds_estimate": 0.615
+      },
+      {
+        "value": "__pyx_pw_2av_5video_5frame_10VideoFrame_13to_ndarray",
+        "weight_seconds_estimate": 0.613
+      },
+      {
+        "value": "_pthread_wqthread",
+        "weight_seconds_estimate": 0.612
+      },
+      {
+        "value": "_dispatch_workloop_worker_thread",
+        "weight_seconds_estimate": 0.612
+      },
+      {
+        "value": "__pyx_pf_2av_5video_5frame_10VideoFrame_12to_ndarray",
+        "weight_seconds_estimate": 0.612
+      },
+      {
+        "value": "_dispatch_root_queue_drain_deferred_wlh",
+        "weight_seconds_estimate": 0.604
+      },
+      {
+        "value": "_dispatch_lane_invoke",
+        "weight_seconds_estimate": 0.603
+      },
+      {
+        "value": "_PyObject_MakeTpCall",
+        "weight_seconds_estimate": 0.603
+      },
+      {
+        "value": "_dispatch_lane_serial_drain",
+        "weight_seconds_estimate": 0.599
+      }
+    ],
+    "native_symbol_examples_top50": [
+      {
+        "symbol": "at::TensorIteratorBase::serial_for_each(c10::function_ref<void (char**, long long const*, long long, long long)>, at::Range) const",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 3.202
+      },
+      {
+        "symbol": "at::internal::serial_for_each(c10::ArrayRef<long long>, c10::ArrayRef<long long>, char**, unsigned long, c10::function_ref<void (char**, long long const*, long long, long long)>, at::Range)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 3.087
+      },
+      {
+        "symbol": "cv::calcOpticalFlowFarneback(cv::_InputArray const&, cv::_InputArray const&, cv::_InputOutputArray const&, double, int, int, int, int, double, int)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 2.693
+      },
+      {
+        "symbol": "pyopencv_cv_calcOpticalFlowFarneback(_object*, _object*, _object*)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 2.693
+      },
+      {
+        "symbol": "cv::(anonymous namespace)::FarnebackOpticalFlowImpl::calc(cv::_InputArray const&, cv::_InputArray const&, cv::_InputOutputArray const&)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 2.693
+      },
+      {
+        "symbol": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, true>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, true>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 1.934
+      },
+      {
+        "symbol": "at::mps::MPSStream::executeMPSGraph(MPSGraph*, NSDictionary*, NSDictionary*, at::mps::SyncType)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.899
+      },
+      {
+        "symbol": "invocation function for block in at::mps::MPSStream::executeMPSGraph(MPSGraph*, NSDictionary*, NSDictionary*, at::mps::SyncType)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.84
+      },
+      {
+        "symbol": "-[MPSGraph encodeToCommandBuffer:feeds:targetOperations:resultsDictionary:executionDescriptor:]",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.795
+      },
+      {
+        "symbol": "-[MPSGraph runInternalWithMPSCommandBuffer:feeds:targetTensors:targetOperations:resultsDictionary:executionDescriptor:mpsGraphOwnedCommandBuffer:]",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.792
+      },
+      {
+        "symbol": "-[MPSGraphExecutable runInternalWithDevice:commandBuffer:feedsDictionary:resultsDictionary:executableExecutionDescriptor:mpsGraphOwnedCommandBuffer:]",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.661
+      },
+      {
+        "symbol": "-[MPSGraphExecutable runInternalWithDevice:commandBuffer:feeds:results:executableExecutionDescriptor:mpsGraphOwnedCommandBuffer:]",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.645
+      },
+      {
+        "symbol": "cv::FarnebackUpdateMatrices(cv::Mat const&, cv::Mat const&, cv::Mat const&, cv::Mat&, int, int)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.615
+      },
+      {
+        "symbol": "MPSRuntime::evaluateOps(mlir::func::FuncOp, RuntimeSpecialization*, NSArray<MPSGraphTensorData*>*, NSArray<MPSGraphTensorData*>*, MPSGraphExecutableExecutionDescriptor*, MPSCommandBuffer*, bool, bool, bool, bool*)",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.576
+      },
+      {
+        "symbol": "GPURegionRuntime::evaluateOps(GPU::EncodeDescriptor*, NSArray<MPSGraphTensorData*>*, NSArray<MPSGraphTensorData*>*)",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.573
+      },
+      {
+        "symbol": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<at::native::DEFAULT::copy_kernel(at::TensorIterator&, bool)::$_2::operator()() const::'lambda14'()::operator()() const::'lambda'()::operator()() const::'lambda8'()::operator()() const::'lambda'(char**, long long const*, long long)>(at::native::DEFAULT::copy_kernel(at::TensorIterator&, bool)::$_2::operator()() const::'lambda14'()::operator()() const::'lambda'()::operator()() const::'lambda8'()::operator()() const::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.538
+      },
+      {
+        "symbol": "void llvm::function_ref<void (mlir::Operation*)>::callback_fn<GPURegionRuntime::evaluateOps(GPU::EncodeDescriptor*, NSArray<MPSGraphTensorData*>*, NSArray<MPSGraphTensorData*>*)::$_1::operator()(mlir::FunctionOpInterface) const::'lambda'(mlir::Operation*)>(long, mlir::Operation*)",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.496
+      },
+      {
+        "symbol": "GPURegionRuntime::encodeOp(mlir::Operation*, GPU::EncodeDescriptor*)",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.494
+      },
+      {
+        "symbol": "cv::cpu_baseline::FilterEngine__proceed(cv::FilterEngine&, unsigned char const*, int, int, unsigned char*, int)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.421
+      },
+      {
+        "symbol": "cv::FilterEngine::apply(cv::Mat const&, cv::Mat&, cv::Size_<int> const&, cv::Point_<int> const&)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.421
+      },
+      {
+        "symbol": "cv::cpu_baseline::FilterEngine__apply(cv::FilterEngine&, cv::Mat const&, cv::Mat&, cv::Size_<int> const&, cv::Point_<int> const&)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.421
+      },
+      {
+        "symbol": "cv::GaussianBlur(cv::_InputArray const&, cv::_OutputArray const&, cv::Size_<int>, double, double, int, cv::AlgorithmHint)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.413
+      },
+      {
+        "symbol": "cv::sepFilter2D(cv::_InputArray const&, cv::_OutputArray const&, int, cv::_InputArray const&, cv::_InputArray const&, cv::Point_<int>, double, int)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.411
+      },
+      {
+        "symbol": "cv::hal::sepFilter2D(int, int, int, unsigned char*, unsigned long, unsigned char*, unsigned long, int, int, int, int, int, int, unsigned char*, int, unsigned char*, int, int, int, double, int)",
+        "binary": "cv2.abi3.so",
+        "weight_seconds_estimate": 0.411
+      },
+      {
+        "symbol": "GPU::StitchedOpHandler::encodeOp(GPU::EncodeDescriptor*)",
+        "binary": "MetalPerformanceShadersGraph",
+        "weight_seconds_estimate": 0.404
+      },
+      {
+        "symbol": "-[IOGPUMetalCommandQueue submitCommandBuffers:count:]",
+        "binary": "IOGPU",
+        "weight_seconds_estimate": 0.382
+      },
+      {
+        "symbol": "-[IOGPUMetalCommandQueue _submitCommandBuffers:count:]",
+        "binary": "IOGPU",
+        "weight_seconds_estimate": 0.381
+      },
+      {
+        "symbol": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<at::native::DEFAULT::VectorizedLoop2d<at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::$_7::operator()() const::'lambda0'()::operator()() const::'lambda'(float, float), at::native::(anonymous namespace)::div_true_kernel(at::TensorIteratorBase&)::$_7::operator()() const::'lambda0'()::operator()() const::'lambda'(at::vec::DEFAULT::Vectorized<float>, at::vec::DEFAULT::Vectorized<float>)>>(long, char**, long long const*, long long, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.354
+      },
+      {
+        "symbol": "void c10::function_ref<void (char**, long long const*, long long, long long)>::callback_fn<auto at::TensorIteratorBase::loop_2d_from_1d<void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, false>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long)>(void at::native::(anonymous namespace)::cpu_upsample_generic_aa<float, false>(at::TensorIterator&, unsigned int)::'lambda'(char**, long long const*, long long) const&)::'lambda'(char**, long long const*, long long, long long)>(long, char**, long long const*, long long, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.345
+      },
+      {
+        "symbol": "torch::autograd::THPVariable_conv2d(_object*, _object*, _object*)",
+        "binary": "libtorch_python.dylib",
+        "weight_seconds_estimate": 0.291
+      },
+      {
+        "symbol": "at::_ops::convolution::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.282
+      },
+      {
+        "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd___convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.282
+      },
+      {
+        "symbol": "at::_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long, bool, bool, bool, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.282
+      },
+      {
+        "symbol": "at::native::convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.282
+      },
+      {
+        "symbol": "at::_ops::_convolution::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt, bool, bool, bool, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.282
+      },
+      {
+        "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_CompositeExplicitAutograd__convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, bool, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.282
+      },
+      {
+        "symbol": "at::native::_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, bool, c10::ArrayRef<long long>, long long, bool, bool, bool, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.281
+      },
+      {
+        "symbol": "at::_mps_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.276
+      },
+      {
+        "symbol": "at::_ops::_mps_convolution::call(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.276
+      },
+      {
+        "symbol": "at::native::_mps_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, long long)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.274
+      },
+      {
+        "symbol": "at::native::_mps_convolution_impl(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<long long>, c10::ArrayRef<long long>, c10::ArrayRef<long long>, long long, std::__1::optional<c10::ArrayRef<long long>>)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.274
+      },
+      {
+        "symbol": "c10::impl::wrap_kernel_functor_unboxed_<c10::impl::detail::WrapFunctionIntoFunctor_<c10::CompileTimeFunctionPointer<at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt), &at::(anonymous namespace)::(anonymous namespace)::wrapper_MPS___mps_convolution(at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)>, at::Tensor, c10::guts::typelist::typelist<at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt>>, at::Tensor (at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)>::call(c10::OperatorKernel*, c10::DispatchKeySet, at::Tensor const&, at::Tensor const&, std::__1::optional<at::Tensor> const&, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::ArrayRef<c10::SymInt>, c10::SymInt)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.274
+      },
+      {
+        "symbol": "torch::autograd::THPVariable_batch_norm(_object*, _object*, _object*)",
+        "binary": "libtorch_python.dylib",
+        "weight_seconds_estimate": 0.245
+      },
+      {
+        "symbol": "at::native::batch_norm(at::Tensor const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, bool, double, double, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.244
+      },
+      {
+        "symbol": "at::_ops::batch_norm::call(at::Tensor const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, bool, double, double, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.244
+      },
+      {
+        "symbol": "at::_ops::_batch_norm_impl_index::call(at::Tensor const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, bool, double, double, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.242
+      },
+      {
+        "symbol": "at::native::_batch_norm_impl_index(at::Tensor const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, bool, double, double, bool)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.241
+      },
+      {
+        "symbol": "at::native::batch_norm_mps(at::Tensor const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, bool, double, double)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.239
+      },
+      {
+        "symbol": "at::_ops::native_batch_norm::call(at::Tensor const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, bool, double, double)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.239
+      },
+      {
+        "symbol": "at::native::batch_norm_mps_out(at::Tensor const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, std::__1::optional<at::Tensor> const&, bool, double, double, at::Tensor&, at::Tensor&, at::Tensor&)",
+        "binary": "libtorch_cpu.dylib",
+        "weight_seconds_estimate": 0.237
+      }
+    ]
+  },
+  "metal_gpu_intervals": {
+    "trace_relative_range_s": [
+      1.2454302310943604,
+      9.189937114715576
+    ],
+    "target_rows_overlapping_window": 16098,
+    "target_rows_outside_window": 1850,
+    "state_counts": {
+      "Active": 16098
+    },
+    "state_ranges_s": {
+      "Active": [
+        1.2454302310943604,
+        9.12603125
+      ]
+    },
+    "active_interval_count": 16098,
+    "active_union_seconds": 2.66188
+  },
+  "os_signpost": {
+    "pytorch_mps_event_type_counts": {
+      "Begin": 16451,
+      "Event": 16458,
+      "End": 16458
+    },
+    "pytorch_mps_event_count": 49367,
+    "pytorch_mps_paired_interval_count": 16458,
+    "pytorch_mps_interval_union_seconds": 3.538855
+  },
+  "source_summary": {
+    "path": "apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-final-v2/observation/summary.json",
+    "bytes": 1906033,
+    "sha256": "aebbd4f12fbced05ad23e82a48b5e0c4744be3fdd95718f299be0d07645d345f"
+  },
+  "source_artifact_index": {
+    "path": "apps/video-clipper/.runtime/performance-baseline/profile-analysis/D/phase-windows-final-v2/observation/artifact-index.json",
+    "bytes": 5671,
+    "sha256": "49670b7e30ca7c88d48f34dec60560c4e2f539c2c9d0dfb43bfe82803e2bd57b"
+  }
+}

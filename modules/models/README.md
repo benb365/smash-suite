@@ -10,7 +10,7 @@
 
 ## 环境与文件
 
-先按[项目首页](../../README.md#开发工作流)安装共同环境。主要依赖 PyTorch、Torchvision、Ultralytics、OpenCV 和 NumPy；权重下载使用 Requests 和 Filelock。
+先按[项目首页](../../README.md#开发环境)安装共同环境。主要依赖 PyTorch、Torchvision、Ultralytics、OpenCV 和 NumPy；权重下载使用 Requests 和 Filelock。
 
 每个模型的代码、配置与 README 位于对应目录，开发权重放在该目录的 `weights/`，不提交 Git。`assets.py` 记录固定下载来源、大小和 SHA256；缺失权重首次使用时下载并校验，之后离线复用。已迁移现有的三个在用权重。
 
@@ -26,4 +26,8 @@
 
 ## 当前进展
 
-整理后模块导入和自动测试通过。Windows 本机已使用固定权重完整处理 D1，验证三类模型运行及 CPU/CUDA 姿态对照，见[实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)；其他平台本轮未复测。此前入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。
+原性能基线已复核 A/C/D 真实处理；首轮帧预处理复用和删除冗余复制已合入 develop，后续原地归一化减少分配及产品高级配置分别记录于[性能专题](../../docs/features/performance-optimization/README.md)。早期 CPU 姿态细分诊断和多人批处理试验的结论仍保留，不能将调用次数减少当作效果通过。
+
+独立调用 `PoseEstimator()` 默认 CPU；可显式选择 CUDA，默认批大小由调用方控制。回合模块的个人视角入口在 CUDA 可用时自动选择 CUDA，默认逐张推理；设备支持、累计计时及批处理差异见[姿态接口](keypoint_rcnn/README.md)。
+
+Windows 的固定权重 D1 对照见[2026-10-21 实测报告](../../apps/video-clipper/reports/pose-performance-20261021.md)。当前 `codex/windows-latest` 正在整合最新 develop，本轮模型与高级配置联用仍待实际验证；旧报告不代表当前整合版本通过。此前入口检查记录见[快速检查说明](../../docs/ai/2026-10-19-quick-check/notes.md)。

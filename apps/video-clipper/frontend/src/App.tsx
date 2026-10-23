@@ -1,6 +1,6 @@
 import { useEffect, useState } from '@lynx-js/react';
 import { action } from './bridge';
-import { initialScreen, type CameraType, type Quality, type ScreenState } from './types';
+import { initialScreen, type CameraType, type Optimizations, type Quality, type ScreenState } from './types';
 import './styles.css';
 
 const cameras: { key: CameraType; title: string; hint: string; mark: string }[] = [
@@ -10,6 +10,12 @@ const cameras: { key: CameraType; title: string; hint: string; mark: string }[] 
 ];
 const qualities: { key: Quality; title: string }[] = [
   { key: 'high', title: '高画质' }, { key: 'balanced', title: '均衡' }, { key: 'small', title: '小体积' },
+];
+const optimizationOptions: { key: keyof Optimizations; title: string; hint: string }[] = [
+  { key: 'limit_fps', title: '识别帧率上限', hint: '最高 35 fps，成片帧率不变' },
+  { key: 'small_input', title: '缩小找球图像', hint: '最长边 320 像素' },
+  { key: 'grayscale', title: '灰度找球', hint: '使用灰度图找球' },
+  { key: 'dynamic_scan', title: '动态粗筛', hint: '先筛选，再分析回合' },
 ];
 
 function duration(ms: number) {
@@ -27,6 +33,7 @@ function elapsed(seconds: number) {
 export function App() {
   const [screen, setScreen] = useState<ScreenState>(initialScreen);
   const [localError, setError] = useState('');
+  const [advancedOpen, setAdvancedOpen] = useState(false);
   useEffect(() => {
     const events = lynx.getJSModule('GlobalEventEmitter');
     const receive = (next: unknown) => setScreen(JSON.parse(String(next)) as ScreenState);
@@ -41,6 +48,8 @@ export function App() {
   const { job } = screen;
   const busy = job.status === 'running' || job.status === 'uploading';
   const error = localError || screen.error || job.error;
+  const shownOptimizations = job.status === 'running' && job.optimizations ? job.optimizations : screen.optimizations;
+  const enabledOptimizationCount = optimizationOptions.filter(({ key }) => shownOptimizations[key]).length;
   const progress = job.status === 'uploading' ? screen.uploadProgress : job.progress;
   const timings: [string, number][] = job.timings && job.elapsed_s !== null ? [
     ['准备', job.timings.preparation_s], ['识别', job.timings.recognition_s],
@@ -59,9 +68,16 @@ export function App() {
         <text className="upload-icon">＋</text><text className="upload-title">{job.video ? '更换 MP4 录像' : '选择 MP4 录像'}</text><text className="upload-hint">横屏 · 最高 1080p · 单打</text>
       </view>
       {job.video && <view className="file-info"><text className="file-name">{job.video.name}</text><text className="file-meta">{duration(job.video.duration_ms)} · {job.video.width} × {job.video.height}{job.video.has_audio ? ' · 有原声音' : ' · 无音轨'}</text></view>}
+      {job.video && screen.camera === 'high' && !busy && job.status !== 'completed' && <view className="shot-path-option" bindtap={() => invoke('options', { showShotPaths: !screen.showShotPaths })}><view className={`checkbox ${screen.showShotPaths ? 'checked' : ''}`}>{screen.showShotPaths && <text className="checkbox-mark">✓</text>}</view><view className="shot-path-copy"><text className="setting-title">在成片中显示球路</text><text className="muted small">高视角默认开启，可随时关闭</text></view></view>}
       {job.video && screen.camera !== 'high' && !busy && job.status !== 'completed' && <view className="court-actions"><view bindtap={() => invoke('selectCourt')}><text className="link">{screen.selectingCourt ? `继续选角点（${screen.court.length}/4）` : '圈选主球场'}</text></view>{screen.court.length > 0 && <view bindtap={() => invoke('clearCourt')}><text className="muted small">清除</text></view>}</view>}
       <view className="quality-heading"><text className="setting-title">成片质量</text><text className="muted small">前后各保留 0.5 秒</text></view>
       <view className="quality-options">{qualities.map((quality) => <view key={quality.key} className={`quality ${screen.quality === quality.key ? 'active' : ''}`} bindtap={() => !busy && invoke('options', { quality: quality.key })}><text className="quality-text">{quality.title}</text></view>)}</view>
+      <view className="advanced-heading" bindtap={() => setAdvancedOpen(!advancedOpen)}>
+        <text className="setting-title">高级选项</text><text className="muted small">{enabledOptimizationCount} 项开启　{advancedOpen ? '⌃' : '⌄'}</text>
+      </view>
+      {advancedOpen && <view className="advanced-list">{optimizationOptions.map(({ key, title, hint }) => <view key={key} className={`advanced-option ${shownOptimizations[key] ? 'active' : ''} ${busy ? 'locked' : ''}`} bindtap={() => !busy && invoke('options', { optimizations: { [key]: !screen.optimizations[key] } })}>
+        <text className="advanced-title">{title}</text><text className="advanced-hint">{hint}</text>
+      </view>)}</view>}
       {busy && <view className="progress-panel"><view className="progress-label"><text className="progress-title">{job.stage}</text><text className="progress-number">{Math.round(progress * 100)}%</text></view><view className="progress-track"><view className="progress-fill" style={{ width: `${Math.max(2, progress * 100)}%` }} /></view><text className="muted small">处理需要一些时间，可以随时取消。</text></view>}
       {job.status === 'completed' && <view className="complete"><text className="complete-title">✓ 成片已生成</text><text className="complete-info">{job.rally_count}段对打 · {duration(job.output_duration_ms ?? 0)} · {((job.output_bytes ?? 0) / 1048576).toFixed(1)} MB</text>{timings.length > 0 && <view className="timings">{timings.map(([label, seconds]) => <view key={label} className="timing-row"><text className="timing-label">{label}</text><text className="timing-value">{elapsed(seconds)}</text></view>)}</view>}</view>}
       {error && <view className="error"><text className="error-text">{error}</text></view>}

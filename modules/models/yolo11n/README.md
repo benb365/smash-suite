@@ -15,7 +15,7 @@ boxes_per_image = model([image], confidence=.2, image_size=960)
 
 ## 用视频测试
 
-完成[共同环境准备](../../../README.md#开发工作流)，在仓库根目录运行：
+完成[共同环境准备](../../../README.md#开发环境)，在仓库根目录运行：
 
 ```sh
 .venv/bin/python -m modules.models --model yolo11n \

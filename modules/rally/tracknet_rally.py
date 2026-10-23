@@ -38,10 +38,15 @@ class ShuttleRallySegmenter:
         width: float,
         height: float,
         config: FlightConfig | None = None,
+        statistics=None,
+        observation_sink=None,
     ) -> None:
+        from .statistics import Statistics
+        self.statistics = statistics or Statistics()
         self.predict = predict
         self.width, self.height = width, height
         self.config = config or FlightConfig()
+        self.observation_sink = observation_sink
         self.pending: list[TimestampedFrame] = []
         self.points: deque[tuple[float, ShuttlePoint]] = deque()
         self.streak: list[tuple[float, float]] = []
@@ -61,8 +66,13 @@ class ShuttleRallySegmenter:
         if len(points) != 3:
             raise ValueError("TrackNet must return one point for each of three frames.")
         intervals = []
-        for source, point in zip(self.pending, points):
-            intervals.extend(self._observe(source, point, frame.timestamp_ms))
+        with self.statistics.phase("rally_decision"):
+            for source, point in zip(self.pending, points):
+                # File-only scans use a non-finite score for an unevaluated
+                # window. Persist actual model observations, not skip markers.
+                if self.observation_sink is not None and math.isfinite(point.confidence):
+                    self.observation_sink(source, point)
+                intervals.extend(self._observe(source, point, frame.timestamp_ms))
         self.pending.clear()
         return intervals
 

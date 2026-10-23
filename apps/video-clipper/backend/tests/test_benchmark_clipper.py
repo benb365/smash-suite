@@ -17,6 +17,14 @@ def benchmark_driver():
     return module
 
 
+@pytest.mark.parametrize("scene", ["high", "courtside", "personal"])
+def test_benchmark_records_explicit_input_choices(benchmark_driver, scene):
+    assert benchmark_driver.recognition_optimizations(scene, "off") == dict(
+        limit_fps=False, small_input=False, grayscale=False, dynamic_scan=False)
+    assert benchmark_driver.recognition_optimizations(scene, "default") == dict(
+        limit_fps=True, small_input=True, grayscale=True, dynamic_scan=scene == "high")
+
+
 @pytest.mark.parametrize("has_audio,audio_samples,expected", [
     pytest.param(False, (), True, id="no-audio-track"),
     pytest.param(True, (), False, id="audio-track-with-no-frames"),

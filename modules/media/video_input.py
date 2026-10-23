@@ -5,6 +5,7 @@ import math
 import queue
 import threading
 import time
+from fractions import Fraction
 from pathlib import Path
 from typing import Iterator
 
@@ -73,6 +74,31 @@ def _verified_edit_list_frames(path: Path, declared_frames: int, decoded_frames:
         return None
 
 
+class PtsFrameSelector:
+    """Keep the first decoded frame in each source-time bucket."""
+
+    def __init__(self, max_fps: float | None = None) -> None:
+        if max_fps is not None and (not math.isfinite(max_fps) or max_fps <= 0):
+            raise ValueError("max_fps must be finite and positive")
+        self.max_fps = Fraction(str(max_fps)) if max_fps is not None else None
+        self.first_pts: Fraction | None = None
+        self.last_bucket: int | None = None
+
+    def select(self, pts: int, time_base: Fraction) -> bool:
+        if time_base <= 0:
+            raise ValueError("Decoded frame has no valid source PTS/time_base")
+        absolute_pts = pts * time_base
+        if self.first_pts is None:
+            self.first_pts = absolute_pts
+        if self.max_fps is None:
+            return True
+        bucket = math.floor((absolute_pts - self.first_pts + time_base / 2) * self.max_fps)
+        if self.last_bucket is not None and bucket <= self.last_bucket:
+            return False
+        self.last_bucket = bucket
+        return True
+
+
 class FileFrameSource:
     """One decoder thread, at most six queued original BGR frames.
 
@@ -82,13 +108,15 @@ class FileFrameSource:
     """
 
     def __init__(self, path: str | Path, *, mode: str = "offline",
-                 limit_s: float | None = None, max_lag_s: float = 5.0) -> None:
+                 limit_s: float | None = None, max_lag_s: float = 5.0,
+                 max_fps: float | None = None) -> None:
         if mode not in ("offline", "realtime"):
             raise ValueError("mode must be offline or realtime")
         if not math.isfinite(max_lag_s) or max_lag_s <= 0:
             raise ValueError("max_lag_s must be finite and positive")
         if limit_s is not None and (not math.isfinite(limit_s) or limit_s <= 0):
             raise ValueError("limit_s must be finite and positive")
+        self.selector = PtsFrameSelector(max_fps)
         self.path, self.mode, self.limit_s = Path(path), mode, limit_s
         self.max_lag_s = max_lag_s
         self._queue: queue.Queue = queue.Queue(maxsize=6)
@@ -98,7 +126,8 @@ class FileFrameSource:
         self._thread: threading.Thread | None = None
         self.started_at = 0.0
         self.last_delivery: dict = {}
-        self.stats = dict(frames_decoded=0, frames_delivered=0, queue_peak=0,
+        self.stats = dict(frames_decoded=0, frames_selected=0, frames_skipped=0,
+                          frames_converted=0, frames_delivered=0, queue_peak=0,
                           decode_s=0.0, conversion_s=0.0, max_lag_s=0.0)
 
     def __enter__(self) -> FileFrameSource:
@@ -146,6 +175,9 @@ class FileFrameSource:
                         reached_eof = True
                         break
                     decode_s = time.monotonic() - tick
+                    frame_id = self.stats["frames_decoded"]
+                    self.stats["frames_decoded"] += 1
+                    self.stats["decode_s"] += decode_s
                     if decoded.is_corrupt:
                         raise RuntimeError("Decoder returned a corrupt frame")
                     if decoded.pts is None or decoded.time_base is None or decoded.time_base <= 0:
@@ -157,19 +189,24 @@ class FileFrameSource:
                     timestamp_ms = float((pts - first_pts) * 1000)
                     if not math.isfinite(timestamp_ms) or (previous_ms is not None and timestamp_ms <= previous_ms):
                         raise ValueError("Source PTS must be finite and strictly increasing")
-                    if self.limit_s is not None and timestamp_ms >= self.limit_s * 1000:
-                        break
                     previous_ms = timestamp_ms
+                    self.stats["last_timestamp_ms"] = timestamp_ms
+                    if (decoded.width, decoded.height) != (self.stats["width"], self.stats["height"]):
+                        raise ValueError("Frame dimensions changed within the source")
+                    if self.limit_s is not None and timestamp_ms >= self.limit_s * 1000:
+                        self.stats["frames_skipped"] += 1
+                        break
+                    if not self.selector.select(decoded.pts, decoded.time_base):
+                        self.stats["frames_skipped"] += 1
+                        continue
+                    self.stats["frames_selected"] += 1
                     tick = time.monotonic()
                     image = decoded.to_ndarray(format="bgr24")
                     conversion_s = time.monotonic() - tick
                     if image.shape[:2] != (self.stats["height"], self.stats["width"]):
                         raise ValueError("Frame dimensions changed within the source")
-                    frame_id = self.stats["frames_decoded"]
-                    self.stats["frames_decoded"] += 1
-                    self.stats["decode_s"] += decode_s
+                    self.stats["frames_converted"] += 1
                     self.stats["conversion_s"] += conversion_s
-                    self.stats["last_timestamp_ms"] = timestamp_ms
                     deadline = self.started_at + timestamp_ms / 1000
                     if self.mode == "realtime":
                         while not self._stop.is_set():
