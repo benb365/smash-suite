@@ -1,0 +1,532 @@
+{
+  "schema_version": 1,
+  "error": null,
+  "primary_phases": [
+    "model_initialization",
+    "video_observation",
+    "people_and_trajectories",
+    "action_analysis",
+    "rally_decision",
+    "intermediate_writes"
+  ],
+  "seconds": {
+    "model_initialization": 8.806433042045683,
+    "tracknet_preprocess_s": 9.184025456663221,
+    "tracknet_inference_and_transfer_s": 43.0567310329061,
+    "tracknet_point_decode_s": 2.069785464555025,
+    "person_detector_s": 10.665010794997215,
+    "video_observation": 65.64549200003967,
+    "people_and_trajectories": 3.3896816668566316,
+    "rally_decision": 0.41829616599716246,
+    "intermediate_writes": 0.0009116670116782188
+  },
+  "counts": {
+    "tracknet_cache_misses": 5400,
+    "tracknet_cache_prepared_frames": 5400,
+    "tracknet_calls": 3599,
+    "tracknet_input_frames": 10797,
+    "candidate_peaks": 23276,
+    "tracknet_cache_hits": 5397,
+    "person_detector_calls": 225,
+    "person_detector_images": 900,
+    "person_boxes": 7170,
+    "tracknet_cache_max_items": 3,
+    "decode_passes": 1,
+    "frames_decoded": 5400,
+    "native_observations": 5400,
+    "shifted_observations": 5400,
+    "associated_tracks": 162,
+    "coherent_flights": 199
+  },
+  "sources": [
+    {
+      "pass_name": "observation",
+      "frames_decoded": 5400,
+      "frames_delivered": 5400,
+      "queue_peak": 6,
+      "decode_s": 11.957762674894184,
+      "conversion_s": 7.75489546591416,
+      "max_lag_s": 0.0,
+      "fps": 29.99994791675709,
+      "expected_frames": 5400,
+      "width": 1920,
+      "height": 1080,
+      "first_pts_ms": 0.0,
+      "last_timestamp_ms": 179967.0,
+      "last_delivered_timestamp_ms": 179967.0
+    }
+  ],
+  "mps_samples": [
+    {
+      "monotonic_s": 1508252.702507958,
+      "allocated_bytes": 0,
+      "driver_bytes": 458752
+    },
+    {
+      "monotonic_s": 1508253.706928083,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 84361216
+    },
+    {
+      "monotonic_s": 1508254.717022708,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 84344832
+    },
+    {
+      "monotonic_s": 1508255.727070791,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 84344832
+    },
+    {
+      "monotonic_s": 1508256.737114583,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 84344832
+    },
+    {
+      "monotonic_s": 1508257.74716075,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 84344832
+    },
+    {
+      "monotonic_s": 1508258.757206875,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 84344832
+    },
+    {
+      "monotonic_s": 1508259.767260583,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 84344832
+    },
+    {
+      "monotonic_s": 1508260.777311666,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 84344832
+    },
+    {
+      "monotonic_s": 1508261.787355875,
+      "allocated_bytes": 45371904,
+      "driver_bytes": 1160544256
+    },
+    {
+      "monotonic_s": 1508262.797399791,
+      "allocated_bytes": 62523392,
+      "driver_bytes": 1187627008
+    },
+    {
+      "monotonic_s": 1508263.807447583,
+      "allocated_bytes": 185031680,
+      "driver_bytes": 1196441600
+    },
+    {
+      "monotonic_s": 1508264.817471375,
+      "allocated_bytes": 103974144,
+      "driver_bytes": 1196605440
+    },
+    {
+      "monotonic_s": 1508265.821394666,
+      "allocated_bytes": 113353728,
+      "driver_bytes": 1196769280
+    },
+    {
+      "monotonic_s": 1508266.831418583,
+      "allocated_bytes": 103998720,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508267.841443333,
+      "allocated_bytes": 102891520,
+      "driver_bytes": 1197359104
+    },
+    {
+      "monotonic_s": 1508268.851463958,
+      "allocated_bytes": 60945664,
+      "driver_bytes": 1197391872
+    },
+    {
+      "monotonic_s": 1508269.861488416,
+      "allocated_bytes": 60485120,
+      "driver_bytes": 1197473792
+    },
+    {
+      "monotonic_s": 1508270.870808958,
+      "allocated_bytes": 61406208,
+      "driver_bytes": 1197522944
+    },
+    {
+      "monotonic_s": 1508271.880832875,
+      "allocated_bytes": 115363584,
+      "driver_bytes": 1197654016
+    },
+    {
+      "monotonic_s": 1508272.890897916,
+      "allocated_bytes": 60024320,
+      "driver_bytes": 1197654016
+    },
+    {
+      "monotonic_s": 1508273.896016291,
+      "allocated_bytes": 62604544,
+      "driver_bytes": 1199783936
+    },
+    {
+      "monotonic_s": 1508274.906040791,
+      "allocated_bytes": 100784640,
+      "driver_bytes": 1197686784
+    },
+    {
+      "monotonic_s": 1508275.916064166,
+      "allocated_bytes": 139374848,
+      "driver_bytes": 1197752320
+    },
+    {
+      "monotonic_s": 1508276.926088208,
+      "allocated_bytes": 104432128,
+      "driver_bytes": 1197817856
+    },
+    {
+      "monotonic_s": 1508277.936530041,
+      "allocated_bytes": 100710400,
+      "driver_bytes": 1197948928
+    },
+    {
+      "monotonic_s": 1508278.938068958,
+      "allocated_bytes": 60970496,
+      "driver_bytes": 1198669824
+    },
+    {
+      "monotonic_s": 1508279.940249375,
+      "allocated_bytes": 111971840,
+      "driver_bytes": 1197948928
+    },
+    {
+      "monotonic_s": 1508280.950313041,
+      "allocated_bytes": 108310016,
+      "driver_bytes": 1197948928
+    },
+    {
+      "monotonic_s": 1508281.960357833,
+      "allocated_bytes": 77219840,
+      "driver_bytes": 1197981696
+    },
+    {
+      "monotonic_s": 1508282.968333083,
+      "allocated_bytes": 112224000,
+      "driver_bytes": 1197981696
+    },
+    {
+      "monotonic_s": 1508283.971393583,
+      "allocated_bytes": 103974144,
+      "driver_bytes": 1198014464
+    },
+    {
+      "monotonic_s": 1508284.981433458,
+      "allocated_bytes": 138428928,
+      "driver_bytes": 1198080000
+    },
+    {
+      "monotonic_s": 1508285.991508041,
+      "allocated_bytes": 60026880,
+      "driver_bytes": 1198112768
+    },
+    {
+      "monotonic_s": 1508286.999315666,
+      "allocated_bytes": 103743744,
+      "driver_bytes": 1198112768
+    },
+    {
+      "monotonic_s": 1508288.00567375,
+      "allocated_bytes": 146426368,
+      "driver_bytes": 1198112768
+    },
+    {
+      "monotonic_s": 1508289.011046625,
+      "allocated_bytes": 124287488,
+      "driver_bytes": 1198112768
+    },
+    {
+      "monotonic_s": 1508290.021083958,
+      "allocated_bytes": 137512960,
+      "driver_bytes": 1198112768
+    },
+    {
+      "monotonic_s": 1508291.031113958,
+      "allocated_bytes": 61200640,
+      "driver_bytes": 1198866432
+    },
+    {
+      "monotonic_s": 1508292.041136833,
+      "allocated_bytes": 103516160,
+      "driver_bytes": 1198145536
+    },
+    {
+      "monotonic_s": 1508293.051160541,
+      "allocated_bytes": 102092800,
+      "driver_bytes": 1198145536
+    },
+    {
+      "monotonic_s": 1508294.056347666,
+      "allocated_bytes": 179179264,
+      "driver_bytes": 1198161920
+    },
+    {
+      "monotonic_s": 1508295.066372916,
+      "allocated_bytes": 137534976,
+      "driver_bytes": 1198178304
+    },
+    {
+      "monotonic_s": 1508296.076398125,
+      "allocated_bytes": 137534976,
+      "driver_bytes": 1198178304
+    },
+    {
+      "monotonic_s": 1508297.086427875,
+      "allocated_bytes": 101967104,
+      "driver_bytes": 1198211072
+    },
+    {
+      "monotonic_s": 1508298.096454291,
+      "allocated_bytes": 103765760,
+      "driver_bytes": 1198211072
+    },
+    {
+      "monotonic_s": 1508299.097654583,
+      "allocated_bytes": 60945920,
+      "driver_bytes": 1198931968
+    },
+    {
+      "monotonic_s": 1508300.107722833,
+      "allocated_bytes": 61018368,
+      "driver_bytes": 1198243840
+    },
+    {
+      "monotonic_s": 1508301.113886375,
+      "allocated_bytes": 60097280,
+      "driver_bytes": 1198276608
+    },
+    {
+      "monotonic_s": 1508302.117601708,
+      "allocated_bytes": 111971840,
+      "driver_bytes": 1198276608
+    },
+    {
+      "monotonic_s": 1508303.123195458,
+      "allocated_bytes": 103741184,
+      "driver_bytes": 1198276608
+    },
+    {
+      "monotonic_s": 1508304.130240875,
+      "allocated_bytes": 112892928,
+      "driver_bytes": 1198440448
+    },
+    {
+      "monotonic_s": 1508305.1402915,
+      "allocated_bytes": 112892928,
+      "driver_bytes": 1198505984
+    },
+    {
+      "monotonic_s": 1508306.150325708,
+      "allocated_bytes": 183987200,
+      "driver_bytes": 1198538752
+    },
+    {
+      "monotonic_s": 1508307.160351416,
+      "allocated_bytes": 99890944,
+      "driver_bytes": 1198538752
+    },
+    {
+      "monotonic_s": 1508308.167355,
+      "allocated_bytes": 104201728,
+      "driver_bytes": 1198538752
+    },
+    {
+      "monotonic_s": 1508309.177381041,
+      "allocated_bytes": 60712448,
+      "driver_bytes": 1198571520
+    },
+    {
+      "monotonic_s": 1508310.187405875,
+      "allocated_bytes": 179256576,
+      "driver_bytes": 1198571520
+    },
+    {
+      "monotonic_s": 1508311.197427208,
+      "allocated_bytes": 138043904,
+      "driver_bytes": 1198735360
+    },
+    {
+      "monotonic_s": 1508312.204748083,
+      "allocated_bytes": 61479424,
+      "driver_bytes": 1199685632
+    },
+    {
+      "monotonic_s": 1508313.214769458,
+      "allocated_bytes": 60557824,
+      "driver_bytes": 1198964736
+    },
+    {
+      "monotonic_s": 1508314.224790083,
+      "allocated_bytes": 138043904,
+      "driver_bytes": 1198997504
+    },
+    {
+      "monotonic_s": 1508315.234881375,
+      "allocated_bytes": 60484864,
+      "driver_bytes": 1199095808
+    },
+    {
+      "monotonic_s": 1508316.244908666,
+      "allocated_bytes": 101967104,
+      "driver_bytes": 1199161344
+    },
+    {
+      "monotonic_s": 1508317.251217333,
+      "allocated_bytes": 112505344,
+      "driver_bytes": 1199161344
+    },
+    {
+      "monotonic_s": 1508318.261269833,
+      "allocated_bytes": 103516160,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508319.271308583,
+      "allocated_bytes": 111974400,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508320.281361416,
+      "allocated_bytes": 179179264,
+      "driver_bytes": 1199210496
+    },
+    {
+      "monotonic_s": 1508321.291393458,
+      "allocated_bytes": 103996160,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508322.301221333,
+      "allocated_bytes": 137813504,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508323.311278041,
+      "allocated_bytes": 60942848,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508324.317486916,
+      "allocated_bytes": 61249024,
+      "driver_bytes": 1199915008
+    },
+    {
+      "monotonic_s": 1508325.319300291,
+      "allocated_bytes": 103743744,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508326.329323666,
+      "allocated_bytes": 60048896,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508327.339478083,
+      "allocated_bytes": 58048768,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508328.385935708,
+      "allocated_bytes": 58048768,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508329.395051541,
+      "allocated_bytes": 58048768,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508330.405146083,
+      "allocated_bytes": 58048768,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508331.415360375,
+      "allocated_bytes": 0,
+      "driver_bytes": 1199194112
+    },
+    {
+      "monotonic_s": 1508332.425489125,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508333.430943,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508334.437827875,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508335.447883041,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508336.457933208,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508337.467983166,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508338.4780495,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508339.488123125,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508340.498202208,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508341.508267583,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508342.518337125,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508343.528401041,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508344.538452708,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508345.548525333,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    },
+    {
+      "monotonic_s": 1508346.558573458,
+      "allocated_bytes": 0,
+      "driver_bytes": 1197096960
+    }
+  ],
+  "accounting": "Primary phases are exclusive; model and decode subtimings overlap their parent. Decoder work is on another thread. Do not sum subtimings or process memory with MPS memory."
+}

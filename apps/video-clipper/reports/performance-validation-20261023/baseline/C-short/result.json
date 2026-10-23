@@ -1,0 +1,125 @@
+{
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 7700.0,
+      "end_ms": 10800.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 14167.0,
+      "end_ms": 20267.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 24133.0,
+      "end_ms": 44833.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 49567.0,
+      "end_ms": 67367.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 70533.0,
+      "end_ms": 88033.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 91500.0,
+      "end_ms": 103000.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 120933.0,
+      "end_ms": 133600.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 149233.0,
+      "end_ms": 153533.0,
+      "emitted_at_ms": 179967.0
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 170267.0,
+      "end_ms": 178467.0,
+      "emitted_at_ms": 179967.0
+    }
+  ],
+  "export_ranges": [
+    [
+      7200.0,
+      11300.0
+    ],
+    [
+      13667.0,
+      20767.0
+    ],
+    [
+      23633.0,
+      45333.0
+    ],
+    [
+      49067.0,
+      67867.0
+    ],
+    [
+      70033.0,
+      88533.0
+    ],
+    [
+      91000.0,
+      103500.0
+    ],
+    [
+      120433.0,
+      134100.0
+    ],
+    [
+      148733.0,
+      154033.0
+    ],
+    [
+      169767.0,
+      178967.0
+    ]
+  ],
+  "details": {
+    "warnings": [],
+    "recognition": {
+      "algorithm": "courtside-tail_gap800_growth300",
+      "selected_people": [
+        {
+          "x1": 934.59228515625,
+          "y1": 643.3831787109375,
+          "x2": 995.131103515625,
+          "y2": 877.21337890625,
+          "confidence": 0.5861480236053467
+        },
+        {
+          "x1": 789.3871459960938,
+          "y1": 399.810546875,
+          "x2": 1000.7921752929688,
+          "y2": 965.6593017578125,
+          "confidence": 0.8823997974395752
+        }
+      ],
+      "native_frames": 5400,
+      "shifted_frames": 5400
+    },
+    "device": "mps",
+    "recognition_wall_s": 98.37668500002474
+  },
+  "padding_ms": 500,
+  "quality": "balanced",
+  "output_duration_ms": 110867.0
+}

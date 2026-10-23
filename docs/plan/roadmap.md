@@ -93,7 +93,7 @@ flowchart BT
 | 任务 | 负责人 + 分支 | 当前进展 |
 | --- | --- | --- |
 | 性能基线 | benb365 + [develop](https://github.com/benb365/smash-suite/tree/develop) | 已完成（2026-10-21 基线），作为后续优化参考而非活跃认领；[性能报告](../../apps/video-clipper/reports/performance-baseline.md) |
-| 性能优化 | benb365 + codex/opt09b-frame-rate | 进行中：OPT-07A 已合入；OPT-06 本轮固定候选、OPT-08A 两种缩小尺寸均不采用；OPT-20 已合入；OPT-09B 缺真实高帧率素材，用户确认保留待验收分支；[方案与进展](../features/performance-optimization/README.md) |
+| 性能优化 | benb365 + codex/opt09b-frame-rate | 进行中：OPT-07A 已合入；OPT-06 动态粗筛 A/D、OPT-08A 输入画幅 A/C/D 本轮试验均已完成，候选不采用；OPT-20 已合入；OPT-09B 缺真实高帧率素材，用户确认保留待验收分支；[方案与进展](../features/performance-optimization/README.md) |
 | Windows 后端适配 | cjfranklin1 + [codex/windows-runtime](https://github.com/benb365/smash-suite/tree/codex/windows-runtime) | 已开始推进，适配与验证结果待同步 |
 
 本轮性能报告按人工确认保留为已完成基线引用，作为“结束后移除此处记录”的明确例外。
@@ -152,7 +152,7 @@ flowchart TD
 | 2 | 性能基线 | 固定当前版本和代表性输入，测量完整耗时、处理速度及内存等资源开销 | P1 | — | 已完成 |
 | 3 | 回合效果与场景适应 | 改善漏回合、边界缺失、间歇残留与主场选人，使用独立来源验证效果与适用范围；含 D 找球后回合结束判断的稳健性（OPT-02 前置） | P1 | — | 待办 |
 | 4 | 事件识别与内容评价 | 提供高光、全场最佳等剪辑所需的内容判别能力，含义与标准在需求中明确 | P1 | — | 待办 |
-| 5 | 性能优化 | 根据基线降低处理成本，验证速度收益及识别效果变化，为后续流式处理提供基础；首轮 OPT-03/04 已合入，OPT-02 等待 D 算法改进；OPT-07A 已合入，OPT-06 本轮固定候选不采用，OPT-08A 两候选不采用；OPT-08C 本轮不采用；OPT-09A 本轮两候选不采用；OPT-20 已合入；OPT-09B 缺真实高帧率素材，保留待验收分支；后续方案与进展见[专题](../features/performance-optimization/README.md) | P1 | 2 | 进行中 |
+| 5 | 性能优化 | 根据基线降低处理成本，验证速度收益及识别效果变化，为后续流式处理提供基础；首轮 OPT-03/04 已合入，OPT-02 等待 D 算法改进；OPT-07A 已合入，OPT-06 动态粗筛与 OPT-08A 输入画幅本轮试验已完成，候选不采用；OPT-08C 本轮不采用；OPT-09A 本轮两候选不采用；OPT-20 已合入；OPT-09B 缺真实高帧率素材，保留待验收分支；后续方案与进展见[专题](../features/performance-optimization/README.md) | P1 | 2 | 进行中 |
 | 6 | *进阶视频剪辑* | 支持高光集锦、全场最佳等内容筛选与成片生成，具体范围与验收另行规划 | P1 | 4 | 待办 |
 | 7 | *后端硬件选型* | 依据实测、目标负载及优化结果比较硬件，确认适用的后端配置 | P1 | 2、5 | 待办 |
 | 8 | 仓库维护 skill | 引入清理与重构 harness（辅助检查、清理和验证的机制），定期维护代码、架构和文档，保持简洁规范 | P2 | — | 待办 |

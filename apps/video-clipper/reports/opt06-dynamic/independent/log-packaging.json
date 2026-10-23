@@ -1,0 +1,71 @@
+{
+  "stage": "R2 mechanical raw-log packaging only",
+  "prior": {
+    "output": {
+      "path": "docs/ai/opt06-dynamic/verifier/output.md",
+      "sha256": "65c2176f6c2a13124236eec3ea412cf190a358786b5bb9b4122e0a7bcd7e116f"
+    },
+    "summary": {
+      "path": "docs/ai/opt06-dynamic/verifier/independent-summary.json",
+      "sha256": "6356d32012dcbe771dabb75d4bc0d32876fa34c295c232686b06e8f694215870"
+    },
+    "logs": {
+      "independent-A.log": {
+        "path": "docs/ai/opt06-dynamic/verifier/independent-A.log",
+        "raw_sha256": "bce15218fbbed7e908ed4ced39deb9df3848fc316e53ab9bbc6ac2d1d6ca9792"
+      },
+      "independent-D.log": {
+        "path": "docs/ai/opt06-dynamic/verifier/independent-D.log",
+        "raw_sha256": "db72f63c342806466c44e0c95d5a3d9d5964f20d76279a8bfbfe01fe72fe7f13"
+      },
+      "replay-original-people.log": {
+        "path": "docs/ai/opt06-dynamic/verifier/replay-original-people.log",
+        "raw_sha256": "e1fb5771e918f5db4b12eedab4f09113f83aa6d97419d2dd1a22964029067a9b"
+      },
+      "final-check.log": {
+        "path": "docs/ai/opt06-dynamic/verifier/final-check.log",
+        "raw_sha256": "5684269a6840360d7bfc8e17066aa6a7d49b528bddd45d72897756f5c80e0ce1"
+      }
+    }
+  },
+  "new": {
+    "output": {
+      "path": "docs/ai/opt06-dynamic/verifier/output.md",
+      "sha256": "aa6c41bbb7eccc6982df8d4e7fc10a3c81b8a0800465b5f01bb7d14aac1bebf3"
+    },
+    "summary": {
+      "path": "docs/ai/opt06-dynamic/verifier/independent-summary.json",
+      "sha256": "51d47d36510ca6a9cd083fda1035d40ff3ba414929fe20f45589b71f11655221"
+    },
+    "logs": {
+      "independent-A.log": {
+        "original_path": "docs/ai/opt06-dynamic/verifier/independent-A.log",
+        "raw_sha256": "bce15218fbbed7e908ed4ced39deb9df3848fc316e53ab9bbc6ac2d1d6ca9792",
+        "gzip_path": "docs/ai/opt06-dynamic/verifier/independent-A.log.gz",
+        "gzip_sha256": "f47d85d0a566fbb98f6eae01b5dff1ed0f58923a1a1c0b0d9c3e973deaf83fa0",
+        "retained_raw_runtime_path": "apps/video-clipper/.runtime/opt06-dynamic/independent/raw-verifier-logs/independent-A.log"
+      },
+      "independent-D.log": {
+        "original_path": "docs/ai/opt06-dynamic/verifier/independent-D.log",
+        "raw_sha256": "db72f63c342806466c44e0c95d5a3d9d5964f20d76279a8bfbfe01fe72fe7f13",
+        "gzip_path": "docs/ai/opt06-dynamic/verifier/independent-D.log.gz",
+        "gzip_sha256": "a392be3f4cc8738dfce4409339cf80fe1263cd44461e8ba6762c451b0f9865fe",
+        "retained_raw_runtime_path": "apps/video-clipper/.runtime/opt06-dynamic/independent/raw-verifier-logs/independent-D.log"
+      },
+      "replay-original-people.log": {
+        "original_path": "docs/ai/opt06-dynamic/verifier/replay-original-people.log",
+        "raw_sha256": "e1fb5771e918f5db4b12eedab4f09113f83aa6d97419d2dd1a22964029067a9b",
+        "gzip_path": "docs/ai/opt06-dynamic/verifier/replay-original-people.log.gz",
+        "gzip_sha256": "c3e2d5e46c1697c10b61f7863e1923612d7f3539ab455aedb39c0b7b9a4427c3",
+        "retained_raw_runtime_path": "apps/video-clipper/.runtime/opt06-dynamic/independent/raw-verifier-logs/replay-original-people.log"
+      },
+      "final-check.log": {
+        "original_path": "docs/ai/opt06-dynamic/verifier/final-check.log",
+        "raw_sha256": "5684269a6840360d7bfc8e17066aa6a7d49b528bddd45d72897756f5c80e0ce1",
+        "gzip_path": "docs/ai/opt06-dynamic/verifier/final-check.log.gz",
+        "gzip_sha256": "7969bbe721ba011a390c277a9973b8ba85fce09d5561bb8547d2c0d40d097793",
+        "retained_raw_runtime_path": "apps/video-clipper/.runtime/opt06-dynamic/independent/raw-verifier-logs/final-check.log"
+      }
+    }
+  }
+}

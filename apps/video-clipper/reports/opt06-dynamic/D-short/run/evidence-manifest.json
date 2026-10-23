@@ -1,0 +1,98 @@
+{
+  "runtime": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/D-short",
+  "artifacts": {
+    "decisions.json": {
+      "bytes": 5183,
+      "sha256": "53a0692c732fc730abcbafcb240a9eea501cb58f0b0e23efbcfc78e3ca875c5b",
+      "archive_file": "decisions.json",
+      "archive_bytes": 5183,
+      "archive_sha256": "53a0692c732fc730abcbafcb240a9eea501cb58f0b0e23efbcfc78e3ca875c5b",
+      "gzip": false
+    },
+    "derived-recognize.py": {
+      "bytes": 20751,
+      "sha256": "3a62fd280ad9371a43a1664812a2ac14deafc73785d6cede10623d2cca188492",
+      "archive_file": "derived-recognize.py",
+      "archive_bytes": 20751,
+      "archive_sha256": "3a62fd280ad9371a43a1664812a2ac14deafc73785d6cede10623d2cca188492",
+      "gzip": false
+    },
+    "dynamic-diagnostics.json": {
+      "bytes": 17828786,
+      "sha256": "7a4cbbb130864bb813cd4d16a52017bc59b2755abe9cca410e9e2b0e7ecd6344",
+      "archive_file": "dynamic-diagnostics.json.gz",
+      "archive_bytes": 3670873,
+      "archive_sha256": "8a34a650c3e4f2a2d2aeb2bdd34c49de0ed0a3b58015fc8d1c55e048e55a2e36",
+      "gzip": true
+    },
+    "output.ffmpeg.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "archive_file": "output.ffmpeg.log",
+      "archive_bytes": 0,
+      "archive_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip": false
+    },
+    "output.filters": {
+      "bytes": 1239,
+      "sha256": "4ab252c7708e103ec84bb55e0bc7d5a48e3de5ac784b52b627f0638ae89b659a",
+      "archive_file": "output.filters",
+      "archive_bytes": 1239,
+      "archive_sha256": "4ab252c7708e103ec84bb55e0bc7d5a48e3de5ac784b52b627f0638ae89b659a",
+      "gzip": false
+    },
+    "output.mp4": {
+      "bytes": 12450338,
+      "sha256": "f16d770e10a9a2a7f4cb5f5d3d501fe0839bb34428d91b521324b673d0d6ee88",
+      "retained_in_runtime_only": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/D-short/output.mp4"
+    },
+    "person-signals.npz": {
+      "bytes": 52480,
+      "sha256": "fcf228ffd8a544caeed353a64a5e0939ef1d0ceda641c850b394b10d2b92c185",
+      "archive_file": "person-signals.npz",
+      "archive_bytes": 52480,
+      "archive_sha256": "fcf228ffd8a544caeed353a64a5e0939ef1d0ceda641c850b394b10d2b92c185",
+      "gzip": false
+    },
+    "resources.jsonl": {
+      "bytes": 62059,
+      "sha256": "63ff98c0be3b2d50a98db17d842441e107e9b98861a8c32fbeca62ebf091ad1c",
+      "archive_file": "resources.jsonl.gz",
+      "archive_bytes": 8606,
+      "archive_sha256": "cb17ef90faa80d56b9e6c0f9c35d9b7b9b623d4d4d863dc65345cd12909b5668",
+      "gzip": true
+    },
+    "result.json": {
+      "bytes": 1589,
+      "sha256": "a63b2cd1f439676031cb3e816e2fe803eecea3c001ea2c8ad5b9e484fdb551e8",
+      "archive_file": "result.json",
+      "archive_bytes": 1589,
+      "archive_sha256": "a63b2cd1f439676031cb3e816e2fe803eecea3c001ea2c8ad5b9e484fdb551e8",
+      "gzip": false
+    },
+    "run.json": {
+      "bytes": 14963,
+      "sha256": "8b3854cbbdbeeed2c6cb3d7b8b240020e6ae082b499ec1f01736b0924d45061b",
+      "archive_file": "run.json",
+      "archive_bytes": 14963,
+      "archive_sha256": "8b3854cbbdbeeed2c6cb3d7b8b240020e6ae082b499ec1f01736b0924d45061b",
+      "gzip": false
+    },
+    "statistics.json": {
+      "bytes": 18668,
+      "sha256": "858d35f8599ae395eb4d6b7c5c79d9771508f8de95db53f38b6705c495fef2a2",
+      "archive_file": "statistics.json",
+      "archive_bytes": 18668,
+      "archive_sha256": "858d35f8599ae395eb4d6b7c5c79d9771508f8de95db53f38b6705c495fef2a2",
+      "gzip": false
+    },
+    "tracknet-points.jsonl": {
+      "bytes": 1848463,
+      "sha256": "45a26b581d30125c4232dfa7af693d6e9368d1596bba08b51b783d928cda9fbd",
+      "archive_file": "tracknet-points.jsonl.gz",
+      "archive_bytes": 229075,
+      "archive_sha256": "994931490b841f8a632949be7d29b98b82e9297946b1b1def083cdb964cc37b3",
+      "gzip": true
+    }
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "schema_version": 1,
+  "title": "A-short baseline 与 candidate 时间轴对照",
+  "note": "正式人工行仅含 review_status=verified；difference issues 是复看窗口，不代表准确率错误。",
+  "primary_track": "candidate-export",
+  "tracks": [
+    {
+      "id": "truth",
+      "label": "已核验人工回合",
+      "role": "truth"
+    },
+    {
+      "id": "baseline-raw",
+      "label": "baseline 原始区间",
+      "role": "prediction"
+    },
+    {
+      "id": "candidate-raw",
+      "label": "candidate 原始区间",
+      "role": "prediction"
+    },
+    {
+      "id": "baseline-export",
+      "label": "baseline 成片区间",
+      "role": "prediction"
+    },
+    {
+      "id": "candidate-export",
+      "label": "candidate 成片区间",
+      "role": "prediction"
+    },
+    {
+      "id": "excluded",
+      "label": "已确认排除事件",
+      "role": "excluded"
+    }
+  ],
+  "clips": [
+    {
+      "id": "A-short",
+      "title": "A-short",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "duration_ms": 168000.0,
+      "media_offset_ms": 91.0,
+      "note": "clip时间从首帧PTS归零；首帧原始PTS=91.0ms。",
+      "intervals": {
+        "truth": [
+          {
+            "id": "1",
+            "label": "第1回合",
+            "start_ms": 4040.0,
+            "end_ms": 9280.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "2",
+            "label": "第2回合",
+            "start_ms": 24640.0,
+            "end_ms": 31000.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "3",
+            "label": "第3回合",
+            "start_ms": 47480.0,
+            "end_ms": 56120.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "4",
+            "label": "第4回合",
+            "start_ms": 100880.0,
+            "end_ms": 108840.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "5",
+            "label": "第5回合",
+            "start_ms": 142320.0,
+            "end_ms": 153200.0,
+            "review_status": "verified"
+          }
+        ],
+        "baseline-raw": [
+          {
+            "id": "1",
+            "start_ms": 3640.0,
+            "end_ms": 9600.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24480.0,
+            "end_ms": 31400.0
+          },
+          {
+            "id": "4",
+            "start_ms": 47280.0,
+            "end_ms": 56720.0
+          },
+          {
+            "id": "6",
+            "start_ms": 101080.0,
+            "end_ms": 108800.0
+          },
+          {
+            "id": "7",
+            "start_ms": 142440.0,
+            "end_ms": 153840.0
+          }
+        ],
+        "candidate-raw": [
+          {
+            "id": "1",
+            "start_ms": 3760.0,
+            "end_ms": 16760.0
+          },
+          {
+            "id": "2",
+            "start_ms": 24480.0,
+            "end_ms": 30760.0
+          },
+          {
+            "id": "3",
+            "start_ms": 47040.0,
+            "end_ms": 56400.0
+          },
+          {
+            "id": "4",
+            "start_ms": 101040.0,
+            "end_ms": 108680.0
+          },
+          {
+            "id": "5",
+            "start_ms": 142240.0,
+            "end_ms": 153880.0
+          }
+        ],
+        "baseline-export": [
+          {
+            "id": "1",
+            "start_ms": 3140.0,
+            "end_ms": 10100.0
+          },
+          {
+            "id": "2",
+            "start_ms": 23980.0,
+            "end_ms": 31900.0
+          },
+          {
+            "id": "3",
+            "start_ms": 46780.0,
+            "end_ms": 57220.0
+          },
+          {
+            "id": "4",
+            "start_ms": 100580.0,
+            "end_ms": 109300.0
+          },
+          {
+            "id": "5",
+            "start_ms": 141940.0,
+            "end_ms": 154340.0
+          }
+        ],
+        "candidate-export": [
+          {
+            "id": "1",
+            "start_ms": 3260.0,
+            "end_ms": 17260.0
+          },
+          {
+            "id": "2",
+            "start_ms": 23980.0,
+            "end_ms": 31260.0
+          },
+          {
+            "id": "3",
+            "start_ms": 46540.0,
+            "end_ms": 56900.0
+          },
+          {
+            "id": "4",
+            "start_ms": 100540.0,
+            "end_ms": 109180.0
+          },
+          {
+            "id": "5",
+            "start_ms": 141740.0,
+            "end_ms": 154380.0
+          }
+        ],
+        "excluded": []
+      },
+      "issues": [
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 8100.0,
+          "end_ms": 18260.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 45540.0,
+          "end_ms": 48780.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 99540.0,
+          "end_ms": 102580.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 140740.0,
+          "end_ms": 143940.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 152340.0,
+          "end_ms": 155380.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 2140.0,
+          "end_ms": 5260.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 29260.0,
+          "end_ms": 32900.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 54900.0,
+          "end_ms": 58220.0
+        },
+        {
+          "label": "raw：候选缺失区间",
+          "start_ms": 107180.0,
+          "end_ms": 110300.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 2140.0,
+          "end_ms": 5260.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 8100.0,
+          "end_ms": 18260.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 29260.0,
+          "end_ms": 32900.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 45540.0,
+          "end_ms": 48780.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 54900.0,
+          "end_ms": 58220.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 99540.0,
+          "end_ms": 102580.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 107180.0,
+          "end_ms": 110300.0
+        },
+        {
+          "label": "raw：start边界变化，需复看",
+          "start_ms": 140740.0,
+          "end_ms": 143940.0
+        },
+        {
+          "label": "raw：end边界变化，需复看",
+          "start_ms": 152340.0,
+          "end_ms": 155380.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 8600.0,
+          "end_ms": 18760.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 45040.0,
+          "end_ms": 48280.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 99040.0,
+          "end_ms": 102080.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 140240.0,
+          "end_ms": 143440.0
+        },
+        {
+          "label": "export：候选新增区间，需复看",
+          "start_ms": 152840.0,
+          "end_ms": 155880.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 1640.0,
+          "end_ms": 4760.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 29760.0,
+          "end_ms": 33400.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 55400.0,
+          "end_ms": 58720.0
+        },
+        {
+          "label": "export：候选缺失区间",
+          "start_ms": 107680.0,
+          "end_ms": 110800.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 1640.0,
+          "end_ms": 4760.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 8600.0,
+          "end_ms": 18760.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 29760.0,
+          "end_ms": 33400.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 45040.0,
+          "end_ms": 48280.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 55400.0,
+          "end_ms": 58720.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 99040.0,
+          "end_ms": 102080.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 107680.0,
+          "end_ms": 110800.0
+        },
+        {
+          "label": "export：start边界变化，需复看",
+          "start_ms": 140240.0,
+          "end_ms": 143440.0
+        },
+        {
+          "label": "export：end边界变化，需复看",
+          "start_ms": 152840.0,
+          "end_ms": 155880.0
+        }
+      ]
+    }
+  ]
+}

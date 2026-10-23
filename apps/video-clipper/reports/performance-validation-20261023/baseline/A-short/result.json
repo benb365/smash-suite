@@ -1,0 +1,98 @@
+{
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 3640.0,
+      "end_ms": 9600.0,
+      "emitted_at_ms": 11240.0
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 24480.0,
+      "end_ms": 31400.0,
+      "emitted_at_ms": 33080.0
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 47280.0,
+      "end_ms": 56720.0,
+      "emitted_at_ms": 58400.0
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 101080.0,
+      "end_ms": 108800.0,
+      "emitted_at_ms": 110480.0
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 142440.0,
+      "end_ms": 153840.0,
+      "emitted_at_ms": 155480.0
+    }
+  ],
+  "export_ranges": [
+    [
+      3140.0,
+      10100.0
+    ],
+    [
+      23980.0,
+      31900.0
+    ],
+    [
+      46780.0,
+      57220.0
+    ],
+    [
+      100580.0,
+      109300.0
+    ],
+    [
+      141940.0,
+      154340.0
+    ]
+  ],
+  "details": {
+    "warnings": [],
+    "recognition": {
+      "algorithm": "high-trajectory-frozen-20261018",
+      "config": {
+        "confidence": 0.6,
+        "motion_window_ms": 200,
+        "min_motion_window_ms": 80,
+        "min_speed_px_s": 100,
+        "max_speed_px_s": 4000,
+        "quiet_ms": 1600,
+        "min_flight_span_ms": 2200,
+        "field": [
+          0,
+          0,
+          1,
+          1
+        ],
+        "direction_window_ms": 160,
+        "direction_min_span_ms": 40,
+        "direction_max_residual_px": 80,
+        "top_fraction": 0.15,
+        "exit_max_y_fraction": 0.4,
+        "exit_horizon_ms": 250,
+        "high_clear_gap_ms": 2800,
+        "reentry_x_fraction": 0.2,
+        "turn_jump_px_s": 1100,
+        "track_gap_ms": 120,
+        "return_support_ms": 320,
+        "return_travel_px": 120,
+        "short_event_ms": 5000,
+        "filter_single_flight": true,
+        "filter_uncertain_short": true
+      },
+      "decoded_frames": 4200
+    },
+    "device": "mps",
+    "recognition_wall_s": 35.33983499999158
+  },
+  "padding_ms": 500,
+  "quality": "balanced",
+  "output_duration_ms": 46440.0
+}

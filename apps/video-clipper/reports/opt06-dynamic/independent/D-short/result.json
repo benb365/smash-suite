@@ -1,0 +1,93 @@
+{
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 0,
+      "end_ms": 6200.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 32500.0,
+      "end_ms": 41200.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 79300.0,
+      "end_ms": 90000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 117300.0,
+      "end_ms": 129200.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 137100.0,
+      "end_ms": 141000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 153300.0,
+      "end_ms": 174200.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 215700.0,
+      "end_ms": 232600.0,
+      "emitted_at_ms": 250900.3125
+    }
+  ],
+  "export_ranges": [
+    [
+      0,
+      6700.0
+    ],
+    [
+      32000.0,
+      41700.0
+    ],
+    [
+      78800.0,
+      90500.0
+    ],
+    [
+      116800.0,
+      129700.0
+    ],
+    [
+      136600.0,
+      141500.0
+    ],
+    [
+      152800.0,
+      174700.0
+    ],
+    [
+      215200.0,
+      233100.0
+    ]
+  ],
+  "details": {
+    "warnings": [],
+    "recognition": {
+      "algorithm": "personal-context-candidate-20261018",
+      "native_frames": 7527,
+      "person_observations": 1255,
+      "selected_track_ids": [
+        58,
+        40
+      ]
+    },
+    "device": "mps",
+    "recognition_wall_s": 132.03747175005265
+  },
+  "padding_ms": 500,
+  "quality": "balanced",
+  "output_duration_ms": 85700.0
+}

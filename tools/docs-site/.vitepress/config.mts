@@ -90,6 +90,11 @@ export default withMermaid(defineConfig({
       { text: '产品', items: [
         { ...page('自动剪辑', 'apps/video-clipper/README.md'), items: [
           page('产品需求', 'apps/video-clipper/requirements.md'),
+          { text: '性能试验', collapsed: true, items: [
+            page('自动剪辑性能优化', 'docs/features/performance-optimization/README.md'),
+            page('OPT-06 动态粗筛试验', 'apps/video-clipper/reports/opt06-dynamic/README.md'),
+            page('OPT-08A 输入画幅试验', 'apps/video-clipper/reports/opt08a-fit320/README.md'),
+          ] },
         ] },
         { ...page('Android 场边采集', 'apps/android-capture/README.md'), items: [
           page('采集接收端', 'apps/android-capture/receiver/README.md'),

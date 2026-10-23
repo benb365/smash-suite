@@ -1,0 +1,1150 @@
+{
+  "schema_version": 1,
+  "case": "A-short",
+  "source": {
+    "video_path": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+    "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+    "annotation_path": "datasets/badminton-v1/annotations/reviewed/rally/m1-short-a1-01-20261015/full-v1.json",
+    "annotation_sha256_expected": "b5f538e867c92336189fa8360ac3fe2c2fbc264314893d092ee3d1298b1470fd",
+    "annotation_sha256_at_run": "b5f538e867c92336189fa8360ac3fe2c2fbc264314893d092ee3d1298b1470fd",
+    "annotation_sha_matches_index": true,
+    "review_state": {
+      "source_status": "verified_full_clip",
+      "source_review_status": null,
+      "negative_time_is_not_verified": true,
+      "formal_benchmark_ready": false,
+      "whole_clip_review_complete": null,
+      "listed_items_review_complete": null,
+      "progress": null
+    },
+    "media_offset_ms": 91.0,
+    "duration_ms": 168000.0,
+    "frames_index_sha256": "3a19f33631d10bfd40b815e021d2d5c3c84cff1e1d31f0f4082ae2ba2c3df678",
+    "c_frame_time_mapping": null
+  },
+  "timings_schema": {
+    "source": "run.json",
+    "fields": [
+      "preparation_s",
+      "recognition_s",
+      "rendering_s",
+      "total_s"
+    ],
+    "unit": "seconds",
+    "component_sum_required": true
+  },
+  "runs": {
+    "baseline": {
+      "run_dir": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/A-short",
+      "case": "A-short",
+      "variant": "baseline",
+      "status": "completed",
+      "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "git_commit": "f19450b0595acfbcfb37047f202af3bc4d2704f2",
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "c69aa8f3d75374d46781470a968eb6b5406c68fb7c3c9f7330e37ffae2d3f3b9",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb"
+      },
+      "timings": {
+        "preparation_s": 2.949201500043273,
+        "recognition_s": 35.359510000096634,
+        "rendering_s": 8.0829937919043,
+        "total_s": 46.39170529204421
+      },
+      "result": {
+        "padding_ms": 500,
+        "quality": "balanced",
+        "output_duration_ms": 46440.0
+      }
+    },
+    "candidate": {
+      "run_dir": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/A-short",
+      "case": "A-short",
+      "variant": "dynamic",
+      "status": "completed",
+      "video_sha256": "e2ea56c398507cc0c1679088121f26ac5a0d6b23ad12502151fb855b13966ef2",
+      "git_commit": "627a5ad75eddf13e8427d952e4792d695a6c1b8e",
+      "code_sha256": {
+        "harness": "9578b5c3a8528d10b864397016156d01ac0f4cf270a3e3b307c6944ad3e74fe4",
+        "runner": "70a02e3eefdfe7f565d44c897582375fb743aacde05ea260fcaca5b7d2162c85",
+        "recognize": "08f340cce19d3649705bbb5c35c42ee60047800aa4dd0d3b1a68076a9f7f976f",
+        "rally_stream": "bedb2e11c4412ea59aa4c4f423d01a70e545e6ca8481d9336f0552d8350b940e",
+        "predictor": "d8208470e973ff4388d8c34be54f19609a50a61571e72aaa3ed45dcaf8c34152",
+        "tracknet_model": "381a7eea4f56f1f2142edc169d0b5b8c87219be781d83dcb4e79da54a61ab7d1",
+        "scenario_profiles": "65c20277fe790d6ef648f4693bee985b38c77310803abdd3c2aace81839d7b23",
+        "model_assets": "c15500e5b6ccace9ea73ac0250d6d1d22dbf0769aed44c2b237c56878712a44e",
+        "media_video": "4b07047608bb2b3facd50a82cc51fa0c3d3b6e9c3b984b1a4cf5e812fd2086bf",
+        "media_input": "b9ec0605a6ca6829bdb1f1558a0ea7f80c32e2c85d3459a32df74dbd02e31c21",
+        "statistics": "b64dec9a23020515c99afee25bc3bebcba1e3834bff9c4f47e38fd9747c3fad5",
+        "resource_sampler": "6973fdbd750556e2297a9dbef298d725fbd2cc4cd5c8b4d12feb55ebd334a1fe",
+        "scenario/courtside.py": "fd29d6ccb60f8cdc02641ef2835be476542aa18e12fa021404806cc963e5d00b",
+        "scenario/high.py": "7d3dfa64ce4777f2192b3c6edebc606eab862dc727f0ed27d7500af4ef87f554",
+        "scenario/__init__.py": "0038d4ff5aa4222c0dc290b5b91734574c4daf3d6a27dba016293557047c49f4",
+        "scenario/personal.py": "38084917fd9f59f03b31d901b5e23ebd149b41971717b384228a1d15f8ea7450",
+        "rally_common/arc_features.py": "eb67773f34045f39fb440286526d859cdc202d6e52bafcf27a79a000e12e0bef",
+        "rally_common/check_short_events.py": "b025a5fe6ff543972d9c422ace8dceaa17d42f2ff5600f9cf78885b72875d76d",
+        "rally_common/trials.py": "994f9a3759cbee543fe97024e3f21e7baf4a9b7bbded1e571c2961cbbd805550",
+        "rally_common/coherent_flights.py": "235f76cd3e43f28232493a93cc1de6bf0e88c1c655b07afa8a776e5d61c245d4",
+        "rally_common/high_return.py": "f96608fe99b1522ee169970ee5dc6e5c960d97cd53562e9c5f3b0a7af6eae411",
+        "rally_common/players_v2.py": "8d7bfc1a45b3fdbf396d491e7d26ac540863595e94cc4f6699f96066cbf3273c",
+        "rally_common/shuttle_paths.py": "f542e0784b26a89cbadbcf91a689b664447110cb33fa27d7d9aca4b9ef9b6aae",
+        "rally_common/buffer_actions.py": "886f653e4f896b88a71d33e76dadc1690d17913b3a966b2a6a60e287978c49c6",
+        "rally_common/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "rally_common/seeded_source.py": "bb0bab3c62e908f1f0744f18d364dfa50742d154700709a31074cc6e75bb9e66",
+        "rally_common/refined_person.py": "d6b9b83e7d5f367ed2662e71e4856345b65c95abb7f16d2f7915f208b03e92fd",
+        "rally_common/supported_start.py": "7651a231ba0ab38471b60e565163f5472b1d31cc2549281402d24facc2969ab6",
+        "rally_common/connected_flight_filter.py": "c93c82b70496df79572f3d0d491ce3c3fedb153ac78baa1095834d235eca5566",
+        "rally_common/region_gate.py": "1e1d6bd4e290d5d0af039e45e60ca85ad0fb7e17848bc6b892abfb2e73b267d5",
+        "rally_common/pose_context.py": "1e08a3dadf2b6a4908a5fde8331c9c2f633f5a535025bacdfd9a35f3a84ddb2a",
+        "rally_common/attached_motion.py": "7d6c728b98e39259a992c9dd97d624fe4b5555d5f30798f50df54d53c84707fc",
+        "rally_common/pose_lk_motion_count.py": "dd6ceda3d0e103707e5402537539056dc9450c1e07a9cabe73c6d625c600d97e",
+        "rally_common/player_paths.py": "783b56c5b90a0c1b05960556aab9a56c3851119ea1d6d24aa4fd855d23d08d75",
+        "rally_common/court_rules.py": "234422457ed2b9bd9c2e6942b0e47b91c39beed88c48c2879a9a1420999d9bc5",
+        "rally_common/feet.py": "b6e56f36d2c9666d78f2057cc0d20e7153340139a15c94d339c7fdb2180bd146",
+        "yolo/__init__.py": "820b0300f2ea61e7344868315d9a40de86f900a08d11a4d30da3d7238f6bdb3d",
+        "pose/__init__.py": "daf28084d5ee79523fe648de9565011a5a02d21d90fb9a774263117f0a7c7ecb",
+        "candidate": "9b1cfd61b1111e3a1acf34946fb02dc0796d78dbe8022bdc508be1f27aa19ac0"
+      },
+      "timings": {
+        "preparation_s": 2.5957231249194592,
+        "recognition_s": 22.206777167040855,
+        "rendering_s": 7.82849816698581,
+        "total_s": 32.630998458946124
+      },
+      "result": {
+        "padding_ms": 500,
+        "quality": "balanced",
+        "output_duration_ms": 45400.0
+      }
+    }
+  },
+  "timing_fields_for_first_round_eight_run_comparison": {
+    "per_run": [
+      "case",
+      "variant",
+      "status",
+      "git_commit",
+      "code_sha256",
+      "timings.preparation_s",
+      "timings.recognition_s",
+      "timings.rendering_s",
+      "timings.total_s"
+    ],
+    "comparison": [
+      "case",
+      "baseline.total_s",
+      "candidate.total_s",
+      "candidate_minus_baseline.total_s"
+    ],
+    "candidate_minus_baseline_total_s": -13.760706833098084
+  },
+  "raw": {
+    "baseline_intervals": [
+      {
+        "rally_id": 1,
+        "start_ms": 3640.0,
+        "end_ms": 9600.0,
+        "emitted_at_ms": 11240.0
+      },
+      {
+        "rally_id": 3,
+        "start_ms": 24480.0,
+        "end_ms": 31400.0,
+        "emitted_at_ms": 33080.0
+      },
+      {
+        "rally_id": 4,
+        "start_ms": 47280.0,
+        "end_ms": 56720.0,
+        "emitted_at_ms": 58400.0
+      },
+      {
+        "rally_id": 6,
+        "start_ms": 101080.0,
+        "end_ms": 108800.0,
+        "emitted_at_ms": 110480.0
+      },
+      {
+        "rally_id": 7,
+        "start_ms": 142440.0,
+        "end_ms": 153840.0,
+        "emitted_at_ms": 155480.0
+      }
+    ],
+    "candidate_intervals": [
+      {
+        "rally_id": 1,
+        "start_ms": 3840.0,
+        "end_ms": 9600.0,
+        "emitted_at_ms": 11240.0
+      },
+      {
+        "rally_id": 2,
+        "start_ms": 24480.0,
+        "end_ms": 31400.0,
+        "emitted_at_ms": 33080.0
+      },
+      {
+        "rally_id": 3,
+        "start_ms": 48120.0,
+        "end_ms": 56720.0,
+        "emitted_at_ms": 58400.0
+      },
+      {
+        "rally_id": 4,
+        "start_ms": 101080.0,
+        "end_ms": 108800.0,
+        "emitted_at_ms": 110480.0
+      },
+      {
+        "rally_id": 5,
+        "start_ms": 142440.0,
+        "end_ms": 153840.0,
+        "emitted_at_ms": 155480.0
+      }
+    ],
+    "baseline_union_ms": [
+      [
+        3640.0,
+        9600.0
+      ],
+      [
+        24480.0,
+        31400.0
+      ],
+      [
+        47280.0,
+        56720.0
+      ],
+      [
+        101080.0,
+        108800.0
+      ],
+      [
+        142440.0,
+        153840.0
+      ]
+    ],
+    "candidate_union_ms": [
+      [
+        3840.0,
+        9600.0
+      ],
+      [
+        24480.0,
+        31400.0
+      ],
+      [
+        48120.0,
+        56720.0
+      ],
+      [
+        101080.0,
+        108800.0
+      ],
+      [
+        142440.0,
+        153840.0
+      ]
+    ],
+    "baseline_union_duration_ms": 41440.0,
+    "candidate_union_duration_ms": 40400.0,
+    "candidate_added_subintervals_ms": [],
+    "candidate_added_duration_ms": 0,
+    "candidate_missing_subintervals_ms": [
+      [
+        3640.0,
+        3840.0
+      ],
+      [
+        47280.0,
+        48120.0
+      ]
+    ],
+    "candidate_missing_duration_ms": 1040.0,
+    "maximum_total_iou_pairs": [
+      {
+        "baseline_id": 1,
+        "candidate_id": 1,
+        "temporal_iou": 0.9664429530201343,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 200.0,
+            "within_three_source_frames": false,
+            "tolerance": {
+              "anchor_frame_id": 91,
+              "anchor_pts_ms": 3640.0,
+              "other_frame_ids": [
+                91,
+                94
+              ],
+              "other_pts_ms": [
+                3640.0,
+                3760.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 240,
+              "anchor_pts_ms": 9600.0,
+              "other_frame_ids": [
+                240,
+                243
+              ],
+              "other_pts_ms": [
+                9600.0,
+                9720.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      },
+      {
+        "baseline_id": 3,
+        "candidate_id": 2,
+        "temporal_iou": 1.0,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 612,
+              "anchor_pts_ms": 24480.0,
+              "other_frame_ids": [
+                612,
+                615
+              ],
+              "other_pts_ms": [
+                24480.0,
+                24600.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 785,
+              "anchor_pts_ms": 31400.0,
+              "other_frame_ids": [
+                785,
+                788
+              ],
+              "other_pts_ms": [
+                31400.0,
+                31520.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      },
+      {
+        "baseline_id": 4,
+        "candidate_id": 3,
+        "temporal_iou": 0.9110169491525424,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 840.0,
+            "within_three_source_frames": false,
+            "tolerance": {
+              "anchor_frame_id": 1182,
+              "anchor_pts_ms": 47280.0,
+              "other_frame_ids": [
+                1182,
+                1185
+              ],
+              "other_pts_ms": [
+                47280.0,
+                47400.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 1418,
+              "anchor_pts_ms": 56720.0,
+              "other_frame_ids": [
+                1418,
+                1421
+              ],
+              "other_pts_ms": [
+                56720.0,
+                56840.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      },
+      {
+        "baseline_id": 6,
+        "candidate_id": 4,
+        "temporal_iou": 1.0,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 2527,
+              "anchor_pts_ms": 101080.0,
+              "other_frame_ids": [
+                2527,
+                2530
+              ],
+              "other_pts_ms": [
+                101080.0,
+                101200.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 2720,
+              "anchor_pts_ms": 108800.0,
+              "other_frame_ids": [
+                2720,
+                2723
+              ],
+              "other_pts_ms": [
+                108800.0,
+                108920.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      },
+      {
+        "baseline_id": 7,
+        "candidate_id": 5,
+        "temporal_iou": 1.0,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 3561,
+              "anchor_pts_ms": 142440.0,
+              "other_frame_ids": [
+                3561,
+                3564
+              ],
+              "other_pts_ms": [
+                142440.0,
+                142560.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 3846,
+              "anchor_pts_ms": 153840.0,
+              "other_frame_ids": [
+                3846,
+                3849
+              ],
+              "other_pts_ms": [
+                153840.0,
+                153960.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      }
+    ],
+    "positive_overlap_graph": [
+      {
+        "baseline_id": 1,
+        "candidate_id": 1,
+        "overlap_ms": 5760.0,
+        "temporal_iou": 0.9664429530201343
+      },
+      {
+        "baseline_id": 3,
+        "candidate_id": 2,
+        "overlap_ms": 6920.0,
+        "temporal_iou": 1.0
+      },
+      {
+        "baseline_id": 4,
+        "candidate_id": 3,
+        "overlap_ms": 8600.0,
+        "temporal_iou": 0.9110169491525424
+      },
+      {
+        "baseline_id": 6,
+        "candidate_id": 4,
+        "overlap_ms": 7720.0,
+        "temporal_iou": 1.0
+      },
+      {
+        "baseline_id": 7,
+        "candidate_id": 5,
+        "overlap_ms": 11400.0,
+        "temporal_iou": 1.0
+      }
+    ],
+    "unpaired_baseline_ids": [],
+    "unpaired_candidate_ids": [],
+    "matching_method": "modules.rally.evaluation.rally_eval._maximum_iou_matching over the complete temporal IoU matrix; every positive edge is retained separately"
+  },
+  "export": {
+    "baseline_intervals": [
+      {
+        "rally_id": 1,
+        "start_ms": 3140.0,
+        "end_ms": 10100.0,
+        "emitted_at_ms": 10100.0
+      },
+      {
+        "rally_id": 2,
+        "start_ms": 23980.0,
+        "end_ms": 31900.0,
+        "emitted_at_ms": 31900.0
+      },
+      {
+        "rally_id": 3,
+        "start_ms": 46780.0,
+        "end_ms": 57220.0,
+        "emitted_at_ms": 57220.0
+      },
+      {
+        "rally_id": 4,
+        "start_ms": 100580.0,
+        "end_ms": 109300.0,
+        "emitted_at_ms": 109300.0
+      },
+      {
+        "rally_id": 5,
+        "start_ms": 141940.0,
+        "end_ms": 154340.0,
+        "emitted_at_ms": 154340.0
+      }
+    ],
+    "candidate_intervals": [
+      {
+        "rally_id": 1,
+        "start_ms": 3340.0,
+        "end_ms": 10100.0,
+        "emitted_at_ms": 10100.0
+      },
+      {
+        "rally_id": 2,
+        "start_ms": 23980.0,
+        "end_ms": 31900.0,
+        "emitted_at_ms": 31900.0
+      },
+      {
+        "rally_id": 3,
+        "start_ms": 47620.0,
+        "end_ms": 57220.0,
+        "emitted_at_ms": 57220.0
+      },
+      {
+        "rally_id": 4,
+        "start_ms": 100580.0,
+        "end_ms": 109300.0,
+        "emitted_at_ms": 109300.0
+      },
+      {
+        "rally_id": 5,
+        "start_ms": 141940.0,
+        "end_ms": 154340.0,
+        "emitted_at_ms": 154340.0
+      }
+    ],
+    "baseline_union_ms": [
+      [
+        3140.0,
+        10100.0
+      ],
+      [
+        23980.0,
+        31900.0
+      ],
+      [
+        46780.0,
+        57220.0
+      ],
+      [
+        100580.0,
+        109300.0
+      ],
+      [
+        141940.0,
+        154340.0
+      ]
+    ],
+    "candidate_union_ms": [
+      [
+        3340.0,
+        10100.0
+      ],
+      [
+        23980.0,
+        31900.0
+      ],
+      [
+        47620.0,
+        57220.0
+      ],
+      [
+        100580.0,
+        109300.0
+      ],
+      [
+        141940.0,
+        154340.0
+      ]
+    ],
+    "baseline_union_duration_ms": 46440.0,
+    "candidate_union_duration_ms": 45400.0,
+    "candidate_added_subintervals_ms": [],
+    "candidate_added_duration_ms": 0,
+    "candidate_missing_subintervals_ms": [
+      [
+        3140.0,
+        3340.0
+      ],
+      [
+        46780.0,
+        47620.0
+      ]
+    ],
+    "candidate_missing_duration_ms": 1040.0,
+    "maximum_total_iou_pairs": [
+      {
+        "baseline_id": 1,
+        "candidate_id": 1,
+        "temporal_iou": 0.9712643678160919,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 200.0,
+            "within_three_source_frames": false,
+            "tolerance": {
+              "anchor_frame_id": 78,
+              "anchor_pts_ms": 3120.0,
+              "other_frame_ids": [
+                78,
+                81
+              ],
+              "other_pts_ms": [
+                3120.0,
+                3240.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 252,
+              "anchor_pts_ms": 10080.0,
+              "other_frame_ids": [
+                252,
+                255
+              ],
+              "other_pts_ms": [
+                10080.0,
+                10200.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      },
+      {
+        "baseline_id": 2,
+        "candidate_id": 2,
+        "temporal_iou": 1.0,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 599,
+              "anchor_pts_ms": 23960.0,
+              "other_frame_ids": [
+                599,
+                602
+              ],
+              "other_pts_ms": [
+                23960.0,
+                24080.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 797,
+              "anchor_pts_ms": 31880.0,
+              "other_frame_ids": [
+                797,
+                800
+              ],
+              "other_pts_ms": [
+                31880.0,
+                32000.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      },
+      {
+        "baseline_id": 3,
+        "candidate_id": 3,
+        "temporal_iou": 0.9195402298850575,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 840.0,
+            "within_three_source_frames": false,
+            "tolerance": {
+              "anchor_frame_id": 1169,
+              "anchor_pts_ms": 46760.0,
+              "other_frame_ids": [
+                1169,
+                1172
+              ],
+              "other_pts_ms": [
+                46760.0,
+                46880.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 1430,
+              "anchor_pts_ms": 57200.0,
+              "other_frame_ids": [
+                1430,
+                1433
+              ],
+              "other_pts_ms": [
+                57200.0,
+                57320.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      },
+      {
+        "baseline_id": 4,
+        "candidate_id": 4,
+        "temporal_iou": 1.0,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 2514,
+              "anchor_pts_ms": 100560.0,
+              "other_frame_ids": [
+                2514,
+                2517
+              ],
+              "other_pts_ms": [
+                100560.0,
+                100680.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 2732,
+              "anchor_pts_ms": 109280.0,
+              "other_frame_ids": [
+                2732,
+                2735
+              ],
+              "other_pts_ms": [
+                109280.0,
+                109400.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      },
+      {
+        "baseline_id": 5,
+        "candidate_id": 5,
+        "temporal_iou": 1.0,
+        "topology_changed": false,
+        "boundary_errors_applicable": true,
+        "boundaries": {
+          "start": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 3548,
+              "anchor_pts_ms": 141920.0,
+              "other_frame_ids": [
+                3548,
+                3551
+              ],
+              "other_pts_ms": [
+                141920.0,
+                142040.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          },
+          "end": {
+            "candidate_minus_baseline_ms": 0.0,
+            "within_three_source_frames": true,
+            "tolerance": {
+              "anchor_frame_id": 3858,
+              "anchor_pts_ms": 154320.0,
+              "other_frame_ids": [
+                3858,
+                3861
+              ],
+              "other_pts_ms": [
+                154320.0,
+                154440.0
+              ],
+              "preferred_direction": "forward",
+              "sampled_direction": "forward",
+              "edge_fallback": false,
+              "tolerance_ms": 120.0,
+              "method": "nearest source frame to the baseline boundary; positive candidate-minus-baseline offset samples the following three-frame PTS span, negative offset samples the preceding span; at a clip edge use the nearest complete span in the opposite direction"
+            }
+          }
+        }
+      }
+    ],
+    "positive_overlap_graph": [
+      {
+        "baseline_id": 1,
+        "candidate_id": 1,
+        "overlap_ms": 6760.0,
+        "temporal_iou": 0.9712643678160919
+      },
+      {
+        "baseline_id": 2,
+        "candidate_id": 2,
+        "overlap_ms": 7920.0,
+        "temporal_iou": 1.0
+      },
+      {
+        "baseline_id": 3,
+        "candidate_id": 3,
+        "overlap_ms": 9600.0,
+        "temporal_iou": 0.9195402298850575
+      },
+      {
+        "baseline_id": 4,
+        "candidate_id": 4,
+        "overlap_ms": 8720.0,
+        "temporal_iou": 1.0
+      },
+      {
+        "baseline_id": 5,
+        "candidate_id": 5,
+        "overlap_ms": 12400.0,
+        "temporal_iou": 1.0
+      }
+    ],
+    "unpaired_baseline_ids": [],
+    "unpaired_candidate_ids": [],
+    "matching_method": "modules.rally.evaluation.rally_eval._maximum_iou_matching over the complete temporal IoU matrix; every positive edge is retained separately",
+    "baseline_source_export_ranges_ms": [
+      [
+        3140.0,
+        10100.0
+      ],
+      [
+        23980.0,
+        31900.0
+      ],
+      [
+        46780.0,
+        57220.0
+      ],
+      [
+        100580.0,
+        109300.0
+      ],
+      [
+        141940.0,
+        154340.0
+      ]
+    ],
+    "candidate_source_export_ranges_ms": [
+      [
+        3340.0,
+        10100.0
+      ],
+      [
+        23980.0,
+        31900.0
+      ],
+      [
+        47620.0,
+        57220.0
+      ],
+      [
+        100580.0,
+        109300.0
+      ],
+      [
+        141940.0,
+        154340.0
+      ]
+    ]
+  },
+  "verified_rally_retention": {
+    "rallies": [
+      {
+        "truth_id": 1,
+        "truth_start_ms": 4040.0,
+        "truth_end_ms": 9280.0,
+        "truth_duration_ms": 5240.0,
+        "baseline_retained_ms": 5240.0,
+        "candidate_retained_ms": 5240.0,
+        "newly_lost_subintervals_ms": [],
+        "newly_lost_vs_baseline_ms": 0,
+        "candidate_minus_baseline_retained_ms": 0.0,
+        "duration_group": ">3000ms",
+        "requires_user_case_review": false,
+        "interpretation": "newly lost baseline-retained content is set difference; net duration change is reported separately, and neither is by itself an accuracy error"
+      },
+      {
+        "truth_id": 2,
+        "truth_start_ms": 24640.0,
+        "truth_end_ms": 31000.0,
+        "truth_duration_ms": 6360.0,
+        "baseline_retained_ms": 6360.0,
+        "candidate_retained_ms": 6360.0,
+        "newly_lost_subintervals_ms": [],
+        "newly_lost_vs_baseline_ms": 0,
+        "candidate_minus_baseline_retained_ms": 0.0,
+        "duration_group": ">3000ms",
+        "requires_user_case_review": false,
+        "interpretation": "newly lost baseline-retained content is set difference; net duration change is reported separately, and neither is by itself an accuracy error"
+      },
+      {
+        "truth_id": 3,
+        "truth_start_ms": 47480.0,
+        "truth_end_ms": 56120.0,
+        "truth_duration_ms": 8640.0,
+        "baseline_retained_ms": 8640.0,
+        "candidate_retained_ms": 8000.0,
+        "newly_lost_subintervals_ms": [
+          [
+            47480.0,
+            48120.0
+          ]
+        ],
+        "newly_lost_vs_baseline_ms": 640.0,
+        "candidate_minus_baseline_retained_ms": -640.0,
+        "duration_group": ">3000ms",
+        "requires_user_case_review": false,
+        "interpretation": "newly lost baseline-retained content is set difference; net duration change is reported separately, and neither is by itself an accuracy error"
+      },
+      {
+        "truth_id": 4,
+        "truth_start_ms": 100880.0,
+        "truth_end_ms": 108840.0,
+        "truth_duration_ms": 7960.0,
+        "baseline_retained_ms": 7720.0,
+        "candidate_retained_ms": 7720.0,
+        "newly_lost_subintervals_ms": [],
+        "newly_lost_vs_baseline_ms": 0,
+        "candidate_minus_baseline_retained_ms": 0.0,
+        "duration_group": ">3000ms",
+        "requires_user_case_review": false,
+        "interpretation": "newly lost baseline-retained content is set difference; net duration change is reported separately, and neither is by itself an accuracy error"
+      },
+      {
+        "truth_id": 5,
+        "truth_start_ms": 142320.0,
+        "truth_end_ms": 153200.0,
+        "truth_duration_ms": 10880.0,
+        "baseline_retained_ms": 10760.0,
+        "candidate_retained_ms": 10760.0,
+        "newly_lost_subintervals_ms": [],
+        "newly_lost_vs_baseline_ms": 0,
+        "candidate_minus_baseline_retained_ms": 0.0,
+        "duration_group": ">3000ms",
+        "requires_user_case_review": false,
+        "interpretation": "newly lost baseline-retained content is set difference; net duration change is reported separately, and neither is by itself an accuracy error"
+      }
+    ],
+    "new_loss_groups": {
+      ">3000ms": [
+        3
+      ],
+      "<=3000ms": []
+    }
+  },
+  "official_evaluation": {
+    "function": "modules.rally.evaluation.rally_eval.evaluate_rallies",
+    "boundary_tolerance_ms": 1500.0,
+    "boundary_policy": "original outward-only 1.5 seconds; the three-source-frame tolerance below is comparison-only",
+    "scope_note": "The evaluator directly reports its existing metrics; annotation review_state remains authoritative for whether results can be called a formal benchmark.",
+    "baseline_file": "evaluation-baseline.json",
+    "candidate_file": "evaluation-candidate.json"
+  },
+  "new_candidate_intervals_without_confirmed_negative_evidence": [],
+  "review_file": "review.json"
+}

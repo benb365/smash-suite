@@ -1,0 +1,340 @@
+{
+  "case_count": 8,
+  "cases": [
+    {
+      "audio": {
+        "codec": "aac",
+        "decoded_duration_ms": 46463.12925170068,
+        "decoded_frames": 2001,
+        "first_timestamp_ms": 0.0,
+        "height": null,
+        "last_timestamp_ms": 46439.90929705215,
+        "sample_rate": 44100,
+        "width": null
+      },
+      "case": "A-short",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "container_duration_ms": 46440.0,
+      "duration_delta_ms": 0.0,
+      "errors": [],
+      "experiment": "opt08a-fit320",
+      "file_size_bytes": 16834404,
+      "network_input_shapes": {
+        "1x9x288x512": 1400
+      },
+      "output_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/A-short/output.mp4",
+      "padding_ms": 500,
+      "result_quality": "balanced",
+      "run_status": "completed",
+      "sha256": "3af92631d398b211fb03b3887d8ab891f80316d6402eb1e24fd658b1825fb6aa",
+      "statistics_tracknet_calls": 1400,
+      "statistics_tracknet_input_frames": 4200,
+      "target_output_duration_ms": 46440.0,
+      "variant": "baseline",
+      "video": {
+        "codec": "h264",
+        "decoded_duration_ms": 46439.98277347114,
+        "decoded_frames": 1161,
+        "first_timestamp_ms": 20.0,
+        "height": 1080,
+        "last_timestamp_ms": 46420.0,
+        "sample_rate": null,
+        "width": 1920
+      }
+    },
+    {
+      "audio": {
+        "codec": "aac",
+        "decoded_duration_ms": 110869.3125,
+        "decoded_frames": 5197,
+        "first_timestamp_ms": 0.0,
+        "height": null,
+        "last_timestamp_ms": 110847.97916666667,
+        "sample_rate": 48000,
+        "width": null
+      },
+      "case": "C-short",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "container_duration_ms": 110867.0,
+      "duration_delta_ms": 0.0,
+      "errors": [],
+      "experiment": "opt08a-fit320",
+      "file_size_bytes": 44465082,
+      "network_input_shapes": {
+        "1x9x288x512": 3599
+      },
+      "output_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/C-short/output.mp4",
+      "padding_ms": 500,
+      "result_quality": "balanced",
+      "run_status": "completed",
+      "sha256": "4f16419abb135c1866e55f09b24e88fa35b586c2c60c780280bb79d9a2df0519",
+      "statistics_tracknet_calls": 3599,
+      "statistics_tracknet_input_frames": 10797,
+      "target_output_duration_ms": 110867.0,
+      "variant": "baseline",
+      "video": {
+        "codec": "h264",
+        "decoded_duration_ms": 110866.33343355382,
+        "decoded_frames": 3326,
+        "first_timestamp_ms": 0.0,
+        "height": 1080,
+        "last_timestamp_ms": 110833.0,
+        "sample_rate": null,
+        "width": 1920
+      }
+    },
+    {
+      "audio": {
+        "codec": "aac",
+        "decoded_duration_ms": 147121.6326530612,
+        "decoded_frames": 6336,
+        "first_timestamp_ms": 0.0,
+        "height": null,
+        "last_timestamp_ms": 147098.4126984127,
+        "sample_rate": 44100,
+        "width": null
+      },
+      "case": "D-short",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "container_duration_ms": 147100.0,
+      "duration_delta_ms": 0.0,
+      "errors": [],
+      "experiment": "opt08a-fit320",
+      "file_size_bytes": 20814940,
+      "network_input_shapes": {
+        "1x9x288x512": 2509
+      },
+      "output_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/baseline/D-short/output.mp4",
+      "padding_ms": 500,
+      "result_quality": "balanced",
+      "run_status": "completed",
+      "sha256": "f97c720cda23768819373766cb49f5c3531179a879fdfa0dc043f497726d5eed",
+      "statistics_tracknet_calls": 2509,
+      "statistics_tracknet_input_frames": 7527,
+      "target_output_duration_ms": 147100.0,
+      "variant": "baseline",
+      "video": {
+        "codec": "h264",
+        "decoded_duration_ms": 147100.33333333334,
+        "decoded_frames": 4413,
+        "first_timestamp_ms": 0.0,
+        "height": 1080,
+        "last_timestamp_ms": 147067.0,
+        "sample_rate": null,
+        "width": 1920
+      }
+    },
+    {
+      "audio": {
+        "codec": "aac",
+        "decoded_duration_ms": 45418.23129251701,
+        "decoded_frames": 1956,
+        "first_timestamp_ms": 0.0,
+        "height": null,
+        "last_timestamp_ms": 45395.011337868484,
+        "sample_rate": 44100,
+        "width": null
+      },
+      "case": "A-short",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "container_duration_ms": 45400.0,
+      "duration_delta_ms": 0.0,
+      "errors": [],
+      "experiment": "opt06-dynamic",
+      "file_size_bytes": 16495729,
+      "network_input_shapes": {
+        "1x9x288x512": 562
+      },
+      "output_path": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/A-short/output.mp4",
+      "padding_ms": 500,
+      "result_quality": "balanced",
+      "run_status": "completed",
+      "sha256": "b13a8421eec78a75ccbebdcbc671b3e662769b885eee4101af524c21c7b7c117",
+      "statistics_tracknet_calls": 562,
+      "statistics_tracknet_input_frames": 1686,
+      "target_output_duration_ms": 45400.0,
+      "variant": "dynamic",
+      "video": {
+        "codec": "h264",
+        "decoded_duration_ms": 45399.98237885463,
+        "decoded_frames": 1135,
+        "first_timestamp_ms": 20.0,
+        "height": 1080,
+        "last_timestamp_ms": 45380.0,
+        "sample_rate": null,
+        "width": 1920
+      }
+    },
+    {
+      "audio": {
+        "codec": "aac",
+        "decoded_duration_ms": 85704.85260770975,
+        "decoded_frames": 3691,
+        "first_timestamp_ms": 0.0,
+        "height": null,
+        "last_timestamp_ms": 85681.63265306123,
+        "sample_rate": 44100,
+        "width": null
+      },
+      "case": "D-short",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "container_duration_ms": 85700.0,
+      "duration_delta_ms": 0.0,
+      "errors": [],
+      "experiment": "opt06-dynamic",
+      "file_size_bytes": 12450338,
+      "network_input_shapes": {
+        "1x9x288x512": 1299
+      },
+      "output_path": "/Users/bytedance/.codex/worktrees/opt06-dynamic/smash-suite/apps/video-clipper/.runtime/opt06-dynamic/dynamic/D-short/output.mp4",
+      "padding_ms": 500,
+      "result_quality": "balanced",
+      "run_status": "completed",
+      "sha256": "f16d770e10a9a2a7f4cb5f5d3d501fe0839bb34428d91b521324b673d0d6ee88",
+      "statistics_tracknet_calls": 1299,
+      "statistics_tracknet_input_frames": 3897,
+      "target_output_duration_ms": 85700.0,
+      "variant": "dynamic",
+      "video": {
+        "codec": "h264",
+        "decoded_duration_ms": 85700.33333333333,
+        "decoded_frames": 2571,
+        "first_timestamp_ms": 0.0,
+        "height": 1080,
+        "last_timestamp_ms": 85667.0,
+        "sample_rate": null,
+        "width": 1920
+      }
+    },
+    {
+      "audio": {
+        "codec": "aac",
+        "decoded_duration_ms": 52941.49659863946,
+        "decoded_frames": 2280,
+        "first_timestamp_ms": 0.0,
+        "height": null,
+        "last_timestamp_ms": 52918.27664399093,
+        "sample_rate": 44100,
+        "width": null
+      },
+      "case": "A-short",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "container_duration_ms": 52920.0,
+      "duration_delta_ms": 0.0,
+      "errors": [],
+      "experiment": "opt08a-fit320",
+      "file_size_bytes": 19137292,
+      "network_input_shapes": {
+        "1x9x184x320": 1400
+      },
+      "output_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/fit320/A-short/output.mp4",
+      "padding_ms": 500,
+      "result_quality": "balanced",
+      "run_status": "completed",
+      "sha256": "98b6a35aff667b73c9a94d5df909d74055ce2e34651203cd9643f6526ee38a55",
+      "statistics_tracknet_calls": 1400,
+      "statistics_tracknet_input_frames": 4200,
+      "target_output_duration_ms": 52920.0,
+      "variant": "fit320",
+      "video": {
+        "codec": "h264",
+        "decoded_duration_ms": 52919.98488284203,
+        "decoded_frames": 1323,
+        "first_timestamp_ms": 20.0,
+        "height": 1080,
+        "last_timestamp_ms": 52900.0,
+        "sample_rate": null,
+        "width": 1920
+      }
+    },
+    {
+      "audio": {
+        "codec": "aac",
+        "decoded_duration_ms": 94805.29166666666,
+        "decoded_frames": 4444,
+        "first_timestamp_ms": 0.0,
+        "height": null,
+        "last_timestamp_ms": 94783.95833333333,
+        "sample_rate": 48000,
+        "width": null
+      },
+      "case": "C-short",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "container_duration_ms": 94801.313,
+      "duration_delta_ms": 0.0004999999946448952,
+      "errors": [],
+      "experiment": "opt08a-fit320",
+      "file_size_bytes": 38958652,
+      "network_input_shapes": {
+        "1x9x184x320": 3599
+      },
+      "output_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/fit320/C-short/output.mp4",
+      "padding_ms": 500,
+      "result_quality": "balanced",
+      "run_status": "completed",
+      "sha256": "fd1e8f71584d0b6fc255b9f93e7e2812dc690a0fdb3adfe3dcb84fc6e49f683d",
+      "statistics_tracknet_calls": 3599,
+      "statistics_tracknet_input_frames": 10797,
+      "target_output_duration_ms": 94801.3125,
+      "variant": "fit320",
+      "video": {
+        "codec": "h264",
+        "decoded_duration_ms": 94801.33379483123,
+        "decoded_frames": 2844,
+        "first_timestamp_ms": 0.0,
+        "height": 1080,
+        "last_timestamp_ms": 94768.0,
+        "sample_rate": null,
+        "width": 1920
+      }
+    },
+    {
+      "audio": {
+        "codec": "aac",
+        "decoded_duration_ms": 146308.9342403628,
+        "decoded_frames": 6301,
+        "first_timestamp_ms": 0.0,
+        "height": null,
+        "last_timestamp_ms": 146285.7142857143,
+        "sample_rate": 44100,
+        "width": null
+      },
+      "case": "D-short",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "container_duration_ms": 146300.0,
+      "duration_delta_ms": 0.0,
+      "errors": [],
+      "experiment": "opt08a-fit320",
+      "file_size_bytes": 20684401,
+      "network_input_shapes": {
+        "1x9x184x320": 2509
+      },
+      "output_path": "/Users/bytedance/.codex/worktrees/opt08a-size/smash-suite/apps/video-clipper/.runtime/opt08a-fit320/fit320/D-short/output.mp4",
+      "padding_ms": 500,
+      "result_quality": "balanced",
+      "run_status": "completed",
+      "sha256": "e89041cb1c0ab788503758e48d01950fbd7c21d2b98d96b2e48d629df00e4587",
+      "statistics_tracknet_calls": 2509,
+      "statistics_tracknet_input_frames": 7527,
+      "target_output_duration_ms": 146300.0,
+      "variant": "fit320",
+      "video": {
+        "codec": "h264",
+        "decoded_duration_ms": 146300.33333333334,
+        "decoded_frames": 4389,
+        "first_timestamp_ms": 0.0,
+        "height": 1080,
+        "last_timestamp_ms": 146267.0,
+        "sample_rate": null,
+        "width": 1920
+      }
+    }
+  ],
+  "decoder": {
+    "library": "PyAV",
+    "method": "each video and audio stream fully decoded separately",
+    "version": "14.2.0"
+  },
+  "passed": true,
+  "schema_version": 1
+}

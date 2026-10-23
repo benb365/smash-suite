@@ -1,0 +1,17 @@
+[0:v]setpts=PTS-0,select='gte(pts,0)*lt(pts,123200)+gte(pts,294400)*lt(pts,440000)+gte(pts,467200)*lt(pts,680000)+gte(pts,796800)*lt(pts,888000)+gte(pts,1008000)*lt(pts,1105600)+gte(pts,1232000)*lt(pts,1441600)+gte(pts,1606400)*lt(pts,1736000)+gte(pts,1840000)*lt(pts,2075200)+gte(pts,2185600)*lt(pts,2337600)+gte(pts,2441600)*lt(pts,2836800)+gte(pts,3171200)*lt(pts,3332800)+gte(pts,3443200)*lt(pts,3736000)+gte(pts,3852800)*lt(pts,3947200)',setpts='round(PTS-(0+171199.99999999997*gte(PTS,294400)+27199.999999999989*gte(PTS,467200)+116799.99999999996*gte(PTS,796800)+120000*gte(PTS,1008000)+126400.00000000009*gte(PTS,1232000)+164800.00000000017*gte(PTS,1606400)+104000*gte(PTS,1840000)+110400.00000000009*gte(PTS,2185600)+104000*gte(PTS,2441600)+334399.99999999965*gte(PTS,3171200)+110399.99999999964*gte(PTS,3443200)+116800.00000000017*gte(PTS,3852800)))'[video];
+[0:a:0]asetpts=PTS-(0.000000000)/TB,aresample=async=1:first_pts=0,apad[abase];
+[abase]asplit=13[a0][a1][a2][a3][a4][a5][a6][a7][a8][a9][a10][a11][a12];
+[a0]atrim=start=0.000000000:end=7.700000000,asetpts=PTS-(0.000000000)/TB[ao0];
+[a1]atrim=start=18.400000000:end=27.500000000,asetpts=PTS-(18.400000000)/TB[ao1];
+[a2]atrim=start=29.200000000:end=42.500000000,asetpts=PTS-(29.200000000)/TB[ao2];
+[a3]atrim=start=49.800000000:end=55.500000000,asetpts=PTS-(49.800000000)/TB[ao3];
+[a4]atrim=start=63.000000000:end=69.100000000,asetpts=PTS-(63.000000000)/TB[ao4];
+[a5]atrim=start=77.000000000:end=90.100000000,asetpts=PTS-(77.000000000)/TB[ao5];
+[a6]atrim=start=100.400000000:end=108.500000000,asetpts=PTS-(100.400000000)/TB[ao6];
+[a7]atrim=start=115.000000000:end=129.700000000,asetpts=PTS-(115.000000000)/TB[ao7];
+[a8]atrim=start=136.600000000:end=146.100000000,asetpts=PTS-(136.600000000)/TB[ao8];
+[a9]atrim=start=152.600000000:end=177.300000000,asetpts=PTS-(152.600000000)/TB[ao9];
+[a10]atrim=start=198.200000000:end=208.300000000,asetpts=PTS-(198.200000000)/TB[ao10];
+[a11]atrim=start=215.200000000:end=233.500000000,asetpts=PTS-(215.200000000)/TB[ao11];
+[a12]atrim=start=240.800000000:end=246.700000000,asetpts=PTS-(240.800000000)/TB[ao12];
+[ao0][ao1][ao2][ao3][ao4][ao5][ao6][ao7][ao8][ao9][ao10][ao11][ao12]concat=n=13:v=0:a=1[audio]

@@ -1,0 +1,153 @@
+{
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 0,
+      "end_ms": 7200.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 18900.0,
+      "end_ms": 27000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 29700.0,
+      "end_ms": 42000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 50300.0,
+      "end_ms": 55000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 63500.0,
+      "end_ms": 68600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 77500.0,
+      "end_ms": 89600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 100900.0,
+      "end_ms": 108000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 115500.0,
+      "end_ms": 129200.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 137100.0,
+      "end_ms": 145600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 153100.0,
+      "end_ms": 176800.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 11,
+      "start_ms": 198700.0,
+      "end_ms": 207800.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 12,
+      "start_ms": 215700.0,
+      "end_ms": 233000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 13,
+      "start_ms": 241300.0,
+      "end_ms": 246200.0,
+      "emitted_at_ms": 250900.3125
+    }
+  ],
+  "export_ranges": [
+    [
+      0,
+      7700.0
+    ],
+    [
+      18400.0,
+      27500.0
+    ],
+    [
+      29200.0,
+      42500.0
+    ],
+    [
+      49800.0,
+      55500.0
+    ],
+    [
+      63000.0,
+      69100.0
+    ],
+    [
+      77000.0,
+      90100.0
+    ],
+    [
+      100400.0,
+      108500.0
+    ],
+    [
+      115000.0,
+      129700.0
+    ],
+    [
+      136600.0,
+      146100.0
+    ],
+    [
+      152600.0,
+      177300.0
+    ],
+    [
+      198200.0,
+      208300.0
+    ],
+    [
+      215200.0,
+      233500.0
+    ],
+    [
+      240800.0,
+      246700.0
+    ]
+  ],
+  "details": {
+    "warnings": [],
+    "recognition": {
+      "algorithm": "personal-context-candidate-20261018",
+      "native_frames": 7527,
+      "person_observations": 1255,
+      "selected_track_ids": [
+        58,
+        40
+      ]
+    },
+    "device": "mps",
+    "recognition_wall_s": 257.49362004199065
+  },
+  "padding_ms": 500,
+  "quality": "balanced",
+  "output_duration_ms": 146300.0
+}

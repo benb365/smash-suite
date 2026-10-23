@@ -1,0 +1,1153 @@
+{
+  "schema_version": 1,
+  "title": "动态粗筛与320输入：同一新基线对照",
+  "note": "首轮8组串行完整处理；候选均不采用。人工审核状态保持原样，查看不等于审核通过。",
+  "primary_track": "baseline-export",
+  "tracks": [
+    {
+      "id": "truth",
+      "label": "已核验人工回合",
+      "role": "truth"
+    },
+    {
+      "id": "baseline-raw",
+      "label": "新基线 原始",
+      "role": "prediction"
+    },
+    {
+      "id": "baseline-export",
+      "label": "新基线 导出 +500ms",
+      "role": "prediction"
+    },
+    {
+      "id": "dynamic-raw",
+      "label": "动态粗筛 原始",
+      "role": "prediction"
+    },
+    {
+      "id": "dynamic-export",
+      "label": "动态粗筛 导出 +500ms",
+      "role": "prediction"
+    },
+    {
+      "id": "fit320-raw",
+      "label": "320 输入 原始",
+      "role": "prediction"
+    },
+    {
+      "id": "fit320-export",
+      "label": "320 输入 导出 +500ms",
+      "role": "prediction"
+    },
+    {
+      "id": "excluded",
+      "label": "已确认排除事件",
+      "role": "excluded"
+    }
+  ],
+  "clips": [
+    {
+      "id": "A-short",
+      "title": "A：近场固定机位",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/m1-short-a1-01-20261015/clip.mp4",
+      "duration_ms": 168000.0,
+      "media_offset_ms": 91.0,
+      "note": "clip时间从首帧PTS归零；首帧原始PTS=91.0ms。",
+      "intervals": {
+        "truth": [
+          {
+            "id": "1",
+            "label": "第1回合",
+            "start_ms": 4040.0,
+            "end_ms": 9280.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "2",
+            "label": "第2回合",
+            "start_ms": 24640.0,
+            "end_ms": 31000.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "3",
+            "label": "第3回合",
+            "start_ms": 47480.0,
+            "end_ms": 56120.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "4",
+            "label": "第4回合",
+            "start_ms": 100880.0,
+            "end_ms": 108840.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "5",
+            "label": "第5回合",
+            "start_ms": 142320.0,
+            "end_ms": 153200.0,
+            "review_status": "verified"
+          }
+        ],
+        "baseline-raw": [
+          {
+            "id": "1",
+            "start_ms": 3640.0,
+            "end_ms": 9600.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24480.0,
+            "end_ms": 31400.0
+          },
+          {
+            "id": "4",
+            "start_ms": 47280.0,
+            "end_ms": 56720.0
+          },
+          {
+            "id": "6",
+            "start_ms": 101080.0,
+            "end_ms": 108800.0
+          },
+          {
+            "id": "7",
+            "start_ms": 142440.0,
+            "end_ms": 153840.0
+          }
+        ],
+        "baseline-export": [
+          {
+            "id": "1",
+            "start_ms": 3140.0,
+            "end_ms": 10100.0
+          },
+          {
+            "id": "2",
+            "start_ms": 23980.0,
+            "end_ms": 31900.0
+          },
+          {
+            "id": "3",
+            "start_ms": 46780.0,
+            "end_ms": 57220.0
+          },
+          {
+            "id": "4",
+            "start_ms": 100580.0,
+            "end_ms": 109300.0
+          },
+          {
+            "id": "5",
+            "start_ms": 141940.0,
+            "end_ms": 154340.0
+          }
+        ],
+        "dynamic-raw": [
+          {
+            "id": "1",
+            "start_ms": 3840.0,
+            "end_ms": 9600.0
+          },
+          {
+            "id": "2",
+            "start_ms": 24480.0,
+            "end_ms": 31400.0
+          },
+          {
+            "id": "3",
+            "start_ms": 48120.0,
+            "end_ms": 56720.0
+          },
+          {
+            "id": "4",
+            "start_ms": 101080.0,
+            "end_ms": 108800.0
+          },
+          {
+            "id": "5",
+            "start_ms": 142440.0,
+            "end_ms": 153840.0
+          }
+        ],
+        "dynamic-export": [
+          {
+            "id": "1",
+            "start_ms": 3340.0,
+            "end_ms": 10100.0
+          },
+          {
+            "id": "2",
+            "start_ms": 23980.0,
+            "end_ms": 31900.0
+          },
+          {
+            "id": "3",
+            "start_ms": 47620.0,
+            "end_ms": 57220.0
+          },
+          {
+            "id": "4",
+            "start_ms": 100580.0,
+            "end_ms": 109300.0
+          },
+          {
+            "id": "5",
+            "start_ms": 141940.0,
+            "end_ms": 154340.0
+          }
+        ],
+        "fit320-raw": [
+          {
+            "id": "1",
+            "start_ms": 3760.0,
+            "end_ms": 16760.0
+          },
+          {
+            "id": "2",
+            "start_ms": 24480.0,
+            "end_ms": 30760.0
+          },
+          {
+            "id": "3",
+            "start_ms": 47040.0,
+            "end_ms": 56400.0
+          },
+          {
+            "id": "4",
+            "start_ms": 101040.0,
+            "end_ms": 108680.0
+          },
+          {
+            "id": "5",
+            "start_ms": 142240.0,
+            "end_ms": 153880.0
+          }
+        ],
+        "fit320-export": [
+          {
+            "id": "1",
+            "start_ms": 3260.0,
+            "end_ms": 17260.0
+          },
+          {
+            "id": "2",
+            "start_ms": 23980.0,
+            "end_ms": 31260.0
+          },
+          {
+            "id": "3",
+            "start_ms": 46540.0,
+            "end_ms": 56900.0
+          },
+          {
+            "id": "4",
+            "start_ms": 100540.0,
+            "end_ms": 109180.0
+          },
+          {
+            "id": "5",
+            "start_ms": 141740.0,
+            "end_ms": 154380.0
+          }
+        ],
+        "excluded": []
+      },
+      "issues": [
+        {
+          "label": "动态：第3回合开始少640ms",
+          "start_ms": 46000,
+          "end_ms": 50000
+        },
+        {
+          "label": "320：第1段结束延长",
+          "start_ms": 8500,
+          "end_ms": 18000
+        },
+        {
+          "label": "320：第2回合结尾少240ms",
+          "start_ms": 29500,
+          "end_ms": 32000
+        }
+      ]
+    },
+    {
+      "id": "C-short",
+      "title": "C：高位固定机位",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/personal-qianfoshan-singles-restored/clip.mp4",
+      "duration_ms": 180000.313,
+      "media_offset_ms": 0.0,
+      "note": "clip时间从首帧PTS归零；首帧原始PTS=0.0ms。 C 本轮未测动态粗筛，对应空行不表示漏检；人工仅已列条目确认，整片审核未完成。",
+      "intervals": {
+        "truth": [
+          {
+            "id": "1",
+            "label": "第1回合",
+            "start_ms": 2000.0,
+            "end_ms": 5167.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "2",
+            "label": "第2回合",
+            "start_ms": 14333.333333,
+            "end_ms": 20033.333333333332,
+            "review_status": "verified"
+          },
+          {
+            "id": "3",
+            "label": "第3回合",
+            "start_ms": 24433.333333,
+            "end_ms": 42500.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "4",
+            "label": "第4回合",
+            "start_ms": 49433.333333,
+            "end_ms": 68600.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "5",
+            "label": "第5回合",
+            "start_ms": 76133.333333,
+            "end_ms": 84800.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "6",
+            "label": "第6回合",
+            "start_ms": 94566.666667,
+            "end_ms": 103433.333333,
+            "review_status": "verified"
+          },
+          {
+            "id": "7",
+            "label": "第7回合",
+            "start_ms": 111100.0,
+            "end_ms": 114433.333333,
+            "review_status": "verified"
+          },
+          {
+            "id": "8",
+            "label": "第8回合",
+            "start_ms": 120833.333333,
+            "end_ms": 128700.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "9",
+            "label": "第9回合",
+            "start_ms": 146266.666667,
+            "end_ms": 151100.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "10",
+            "label": "第10回合",
+            "start_ms": 157733.333333,
+            "end_ms": 161600.0,
+            "review_status": "verified"
+          }
+        ],
+        "baseline-raw": [
+          {
+            "id": "1",
+            "start_ms": 7700.0,
+            "end_ms": 10800.0
+          },
+          {
+            "id": "2",
+            "start_ms": 14167.0,
+            "end_ms": 20267.0
+          },
+          {
+            "id": "3",
+            "start_ms": 24133.0,
+            "end_ms": 44833.0
+          },
+          {
+            "id": "4",
+            "start_ms": 49567.0,
+            "end_ms": 67367.0
+          },
+          {
+            "id": "5",
+            "start_ms": 70533.0,
+            "end_ms": 88033.0
+          },
+          {
+            "id": "6",
+            "start_ms": 91500.0,
+            "end_ms": 103000.0
+          },
+          {
+            "id": "7",
+            "start_ms": 120933.0,
+            "end_ms": 133600.0
+          },
+          {
+            "id": "8",
+            "start_ms": 149233.0,
+            "end_ms": 153533.0
+          },
+          {
+            "id": "9",
+            "start_ms": 170267.0,
+            "end_ms": 178467.0
+          }
+        ],
+        "baseline-export": [
+          {
+            "id": "1",
+            "start_ms": 7200.0,
+            "end_ms": 11300.0
+          },
+          {
+            "id": "2",
+            "start_ms": 13667.0,
+            "end_ms": 20767.0
+          },
+          {
+            "id": "3",
+            "start_ms": 23633.0,
+            "end_ms": 45333.0
+          },
+          {
+            "id": "4",
+            "start_ms": 49067.0,
+            "end_ms": 67867.0
+          },
+          {
+            "id": "5",
+            "start_ms": 70033.0,
+            "end_ms": 88533.0
+          },
+          {
+            "id": "6",
+            "start_ms": 91000.0,
+            "end_ms": 103500.0
+          },
+          {
+            "id": "7",
+            "start_ms": 120433.0,
+            "end_ms": 134100.0
+          },
+          {
+            "id": "8",
+            "start_ms": 148733.0,
+            "end_ms": 154033.0
+          },
+          {
+            "id": "9",
+            "start_ms": 169767.0,
+            "end_ms": 178967.0
+          }
+        ],
+        "dynamic-raw": [],
+        "dynamic-export": [],
+        "fit320-raw": [
+          {
+            "id": "1",
+            "start_ms": 14300.0,
+            "end_ms": 17733.0
+          },
+          {
+            "id": "2",
+            "start_ms": 24467.0,
+            "end_ms": 44400.0
+          },
+          {
+            "id": "3",
+            "start_ms": 49500.0,
+            "end_ms": 67167.0
+          },
+          {
+            "id": "4",
+            "start_ms": 75833.0,
+            "end_ms": 86467.0
+          },
+          {
+            "id": "5",
+            "start_ms": 96533.0,
+            "end_ms": 108967.0
+          },
+          {
+            "id": "6",
+            "start_ms": 120933.0,
+            "end_ms": 129933.0
+          },
+          {
+            "id": "7",
+            "start_ms": 149133.0,
+            "end_ms": 153600.0
+          },
+          {
+            "id": "8",
+            "start_ms": 170267.0,
+            "end_ms": 179533.0
+          }
+        ],
+        "fit320-export": [
+          {
+            "id": "1",
+            "start_ms": 13800.0,
+            "end_ms": 18233.0
+          },
+          {
+            "id": "2",
+            "start_ms": 23967.0,
+            "end_ms": 44900.0
+          },
+          {
+            "id": "3",
+            "start_ms": 49000.0,
+            "end_ms": 67667.0
+          },
+          {
+            "id": "4",
+            "start_ms": 75333.0,
+            "end_ms": 86967.0
+          },
+          {
+            "id": "5",
+            "start_ms": 96033.0,
+            "end_ms": 109467.0
+          },
+          {
+            "id": "6",
+            "start_ms": 120433.0,
+            "end_ms": 130433.0
+          },
+          {
+            "id": "7",
+            "start_ms": 148633.0,
+            "end_ms": 154100.0
+          },
+          {
+            "id": "8",
+            "start_ms": 169767.0,
+            "end_ms": 180000.3125
+          }
+        ],
+        "excluded": [
+          {
+            "id": "C2-E01",
+            "label": "failed_serve_or_return",
+            "start_ms": 8700.0,
+            "end_ms": 10300.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E02",
+            "label": "shuttle_return",
+            "start_ms": 44000.0,
+            "end_ms": 45000.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E03",
+            "label": "shuttle_return",
+            "start_ms": 86000.0,
+            "end_ms": 88000.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E04",
+            "label": "shuttle_return",
+            "start_ms": 105800.0,
+            "end_ms": 107800.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E05",
+            "label": "shuttle_return",
+            "start_ms": 114600.0,
+            "end_ms": 116000.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E06",
+            "label": "shuttle_return",
+            "start_ms": 132700.0,
+            "end_ms": 134000.0,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "C2-E07",
+            "label": "shuttle_return",
+            "start_ms": 164800.0,
+            "end_ms": 166000.0,
+            "review_status": "human_confirmed"
+          }
+        ]
+      },
+      "issues": [
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 48000.0,
+          "end_ms": 51067.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 101500.0,
+          "end_ms": 110467.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 147633.0,
+          "end_ms": 150733.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 152033.0,
+          "end_ms": 155100.0
+        },
+        {
+          "label": "raw：候选新增区间，需复看",
+          "start_ms": 176967.0,
+          "end_ms": 180000.313
+        }
+      ]
+    },
+    {
+      "id": "D-short",
+      "title": "D：人物与姿态",
+      "video": "/Users/bytedance/workspace/experiments/smash-suite/datasets/badminton-v1/local/rally/d2-check-20261018/clip.mp4",
+      "duration_ms": 250900.313,
+      "media_offset_ms": 0.0,
+      "note": "clip时间从首帧PTS归零；首帧原始PTS=0.0ms。 人工条目已确认；顶层 needs_review 与进度“整片完成”冲突保留，不是正式基准。",
+      "intervals": {
+        "truth": [
+          {
+            "id": "1",
+            "label": "第1回合",
+            "start_ms": 533.0,
+            "end_ms": 5800.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "2",
+            "label": "第2回合",
+            "start_ms": 19633.0,
+            "end_ms": 22700.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "3",
+            "label": "第3回合",
+            "start_ms": 30367.0,
+            "end_ms": 39433.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "4",
+            "label": "第4回合",
+            "start_ms": 49467.0,
+            "end_ms": 55300.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "5",
+            "label": "第5回合",
+            "start_ms": 62667.0,
+            "end_ms": 66967.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "6",
+            "label": "第6回合",
+            "start_ms": 77733.0,
+            "end_ms": 88700.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "7",
+            "label": "第7回合",
+            "start_ms": 102300.0,
+            "end_ms": 108267.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "8",
+            "label": "第8回合",
+            "start_ms": 116333.0,
+            "end_ms": 130067.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "9",
+            "label": "第9回合",
+            "start_ms": 138467.0,
+            "end_ms": 144367.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "10",
+            "label": "第10回合",
+            "start_ms": 153467.0,
+            "end_ms": 172700.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "11",
+            "label": "第11回合",
+            "start_ms": 186567.0,
+            "end_ms": 190900.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "12",
+            "label": "第12回合",
+            "start_ms": 200067.0,
+            "end_ms": 207233.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "13",
+            "label": "第13回合",
+            "start_ms": 216500.0,
+            "end_ms": 232000.0,
+            "review_status": "verified"
+          },
+          {
+            "id": "14",
+            "label": "第14回合",
+            "start_ms": 242467.0,
+            "end_ms": 245967.0,
+            "review_status": "verified"
+          }
+        ],
+        "baseline-raw": [
+          {
+            "id": "1",
+            "start_ms": 0,
+            "end_ms": 7200.0
+          },
+          {
+            "id": "2",
+            "start_ms": 18900.0,
+            "end_ms": 27000.0
+          },
+          {
+            "id": "3",
+            "start_ms": 29700.0,
+            "end_ms": 42000.0
+          },
+          {
+            "id": "4",
+            "start_ms": 50300.0,
+            "end_ms": 55000.0
+          },
+          {
+            "id": "5",
+            "start_ms": 63500.0,
+            "end_ms": 68600.0
+          },
+          {
+            "id": "6",
+            "start_ms": 77500.0,
+            "end_ms": 90000.0
+          },
+          {
+            "id": "7",
+            "start_ms": 100900.0,
+            "end_ms": 108000.0
+          },
+          {
+            "id": "8",
+            "start_ms": 115500.0,
+            "end_ms": 129600.0
+          },
+          {
+            "id": "9",
+            "start_ms": 137100.0,
+            "end_ms": 145600.0
+          },
+          {
+            "id": "10",
+            "start_ms": 153100.0,
+            "end_ms": 176800.0
+          },
+          {
+            "id": "11",
+            "start_ms": 198700.0,
+            "end_ms": 207800.0
+          },
+          {
+            "id": "12",
+            "start_ms": 215700.0,
+            "end_ms": 233000.0
+          },
+          {
+            "id": "13",
+            "start_ms": 241300.0,
+            "end_ms": 246200.0
+          }
+        ],
+        "baseline-export": [
+          {
+            "id": "1",
+            "start_ms": 0,
+            "end_ms": 7700.0
+          },
+          {
+            "id": "2",
+            "start_ms": 18400.0,
+            "end_ms": 27500.0
+          },
+          {
+            "id": "3",
+            "start_ms": 29200.0,
+            "end_ms": 42500.0
+          },
+          {
+            "id": "4",
+            "start_ms": 49800.0,
+            "end_ms": 55500.0
+          },
+          {
+            "id": "5",
+            "start_ms": 63000.0,
+            "end_ms": 69100.0
+          },
+          {
+            "id": "6",
+            "start_ms": 77000.0,
+            "end_ms": 90500.0
+          },
+          {
+            "id": "7",
+            "start_ms": 100400.0,
+            "end_ms": 108500.0
+          },
+          {
+            "id": "8",
+            "start_ms": 115000.0,
+            "end_ms": 130100.0
+          },
+          {
+            "id": "9",
+            "start_ms": 136600.0,
+            "end_ms": 146100.0
+          },
+          {
+            "id": "10",
+            "start_ms": 152600.0,
+            "end_ms": 177300.0
+          },
+          {
+            "id": "11",
+            "start_ms": 198200.0,
+            "end_ms": 208300.0
+          },
+          {
+            "id": "12",
+            "start_ms": 215200.0,
+            "end_ms": 233500.0
+          },
+          {
+            "id": "13",
+            "start_ms": 240800.0,
+            "end_ms": 246700.0
+          }
+        ],
+        "dynamic-raw": [
+          {
+            "id": "1",
+            "start_ms": 0,
+            "end_ms": 6200.0
+          },
+          {
+            "id": "2",
+            "start_ms": 32500.0,
+            "end_ms": 41200.0
+          },
+          {
+            "id": "3",
+            "start_ms": 79300.0,
+            "end_ms": 90000.0
+          },
+          {
+            "id": "4",
+            "start_ms": 117300.0,
+            "end_ms": 129200.0
+          },
+          {
+            "id": "5",
+            "start_ms": 137100.0,
+            "end_ms": 141000.0
+          },
+          {
+            "id": "6",
+            "start_ms": 153300.0,
+            "end_ms": 174200.0
+          },
+          {
+            "id": "7",
+            "start_ms": 215700.0,
+            "end_ms": 232600.0
+          }
+        ],
+        "dynamic-export": [
+          {
+            "id": "1",
+            "start_ms": 0,
+            "end_ms": 6700.0
+          },
+          {
+            "id": "2",
+            "start_ms": 32000.0,
+            "end_ms": 41700.0
+          },
+          {
+            "id": "3",
+            "start_ms": 78800.0,
+            "end_ms": 90500.0
+          },
+          {
+            "id": "4",
+            "start_ms": 116800.0,
+            "end_ms": 129700.0
+          },
+          {
+            "id": "5",
+            "start_ms": 136600.0,
+            "end_ms": 141500.0
+          },
+          {
+            "id": "6",
+            "start_ms": 152800.0,
+            "end_ms": 174700.0
+          },
+          {
+            "id": "7",
+            "start_ms": 215200.0,
+            "end_ms": 233100.0
+          }
+        ],
+        "fit320-raw": [
+          {
+            "id": "1",
+            "start_ms": 0,
+            "end_ms": 7200.0
+          },
+          {
+            "id": "2",
+            "start_ms": 18900.0,
+            "end_ms": 27000.0
+          },
+          {
+            "id": "3",
+            "start_ms": 29700.0,
+            "end_ms": 42000.0
+          },
+          {
+            "id": "4",
+            "start_ms": 50300.0,
+            "end_ms": 55000.0
+          },
+          {
+            "id": "5",
+            "start_ms": 63500.0,
+            "end_ms": 68600.0
+          },
+          {
+            "id": "6",
+            "start_ms": 77500.0,
+            "end_ms": 89600.0
+          },
+          {
+            "id": "7",
+            "start_ms": 100900.0,
+            "end_ms": 108000.0
+          },
+          {
+            "id": "8",
+            "start_ms": 115500.0,
+            "end_ms": 129200.0
+          },
+          {
+            "id": "9",
+            "start_ms": 137100.0,
+            "end_ms": 145600.0
+          },
+          {
+            "id": "10",
+            "start_ms": 153100.0,
+            "end_ms": 176800.0
+          },
+          {
+            "id": "11",
+            "start_ms": 198700.0,
+            "end_ms": 207800.0
+          },
+          {
+            "id": "12",
+            "start_ms": 215700.0,
+            "end_ms": 233000.0
+          },
+          {
+            "id": "13",
+            "start_ms": 241300.0,
+            "end_ms": 246200.0
+          }
+        ],
+        "fit320-export": [
+          {
+            "id": "1",
+            "start_ms": 0,
+            "end_ms": 7700.0
+          },
+          {
+            "id": "2",
+            "start_ms": 18400.0,
+            "end_ms": 27500.0
+          },
+          {
+            "id": "3",
+            "start_ms": 29200.0,
+            "end_ms": 42500.0
+          },
+          {
+            "id": "4",
+            "start_ms": 49800.0,
+            "end_ms": 55500.0
+          },
+          {
+            "id": "5",
+            "start_ms": 63000.0,
+            "end_ms": 69100.0
+          },
+          {
+            "id": "6",
+            "start_ms": 77000.0,
+            "end_ms": 90100.0
+          },
+          {
+            "id": "7",
+            "start_ms": 100400.0,
+            "end_ms": 108500.0
+          },
+          {
+            "id": "8",
+            "start_ms": 115000.0,
+            "end_ms": 129700.0
+          },
+          {
+            "id": "9",
+            "start_ms": 136600.0,
+            "end_ms": 146100.0
+          },
+          {
+            "id": "10",
+            "start_ms": 152600.0,
+            "end_ms": 177300.0
+          },
+          {
+            "id": "11",
+            "start_ms": 198200.0,
+            "end_ms": 208300.0
+          },
+          {
+            "id": "12",
+            "start_ms": 215200.0,
+            "end_ms": 233500.0
+          },
+          {
+            "id": "13",
+            "start_ms": 240800.0,
+            "end_ms": 246700.0
+          }
+        ],
+        "excluded": [
+          {
+            "id": "d2-event-01",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 7000,
+            "end_ms": 18000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-02",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 25000,
+            "end_ms": 29000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-03",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 40000,
+            "end_ms": 48000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-04",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 56000,
+            "end_ms": 62000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-05",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 93000,
+            "end_ms": 101000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-06",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 109000,
+            "end_ms": 115000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-07",
+            "label": "shuttle_return_and_preparation",
+            "start_ms": 132000,
+            "end_ms": 138000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-08",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 175000,
+            "end_ms": 186000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-09",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 208000,
+            "end_ms": 215000,
+            "review_status": "human_confirmed"
+          },
+          {
+            "id": "d2-event-10",
+            "label": "pickup_and_shuttle_return",
+            "start_ms": 233000,
+            "end_ms": 241000,
+            "review_status": "human_confirmed"
+          }
+        ]
+      },
+      "issues": [
+        {
+          "label": "动态：第2回合原保留内容全部丢失",
+          "start_ms": 18000,
+          "end_ms": 28000
+        },
+        {
+          "label": "320：第8回合结束提前400ms",
+          "start_ms": 127500,
+          "end_ms": 131500
+        }
+      ]
+    }
+  ]
+}

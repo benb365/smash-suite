@@ -1,0 +1,8 @@
+{
+  "scope": "One-second process-and-children observations; peaks may be missed. RSS and MPS are separate.",
+  "rss_peak_bytes": 2158690304,
+  "cpu_peak_percent": 563.5999999999999,
+  "work_logical_peak_bytes": 32621357,
+  "mps_allocated_peak_bytes": 234509056,
+  "mps_driver_peak_bytes": 1194557440
+}

@@ -1,0 +1,583 @@
+{
+  "evaluator_version": "rally-iou-v3",
+  "boundary_policy": {
+    "outward_tolerance_ms": 1500.0,
+    "start_offset_range_ms": [
+      -1500.0,
+      0.0
+    ],
+    "end_offset_range_ms": [
+      0.0,
+      1500.0
+    ],
+    "error_summary_population": "matched_boundaries_outside_acceptable_range",
+    "acceptance_denominator": "all_verified_truth"
+  },
+  "boundary_acceptance": {
+    "truth_count": 14,
+    "matched_count": 13,
+    "start_acceptable_count": 11,
+    "start_acceptable_rate": 0.7857142857142857,
+    "end_acceptable_count": 6,
+    "end_acceptable_rate": 0.42857142857142855,
+    "both_acceptable_count": 6,
+    "both_acceptable_rate": 0.42857142857142855
+  },
+  "truth_count": 14,
+  "prediction_count": 13,
+  "input_prediction_count": 13,
+  "exclusion_policy": "fully_contained_without_truth_overlap",
+  "excluded_events": [
+    {
+      "event_id": "d2-event-01",
+      "range_ms": [
+        7000,
+        18000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-02",
+      "range_ms": [
+        25000,
+        29000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-03",
+      "range_ms": [
+        40000,
+        48000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-04",
+      "range_ms": [
+        56000,
+        62000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-05",
+      "range_ms": [
+        93000,
+        101000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-06",
+      "range_ms": [
+        109000,
+        115000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-07",
+      "range_ms": [
+        132000,
+        138000
+      ],
+      "type": "shuttle_return_and_preparation",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-08",
+      "range_ms": [
+        175000,
+        186000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-09",
+      "range_ms": [
+        208000,
+        215000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    },
+    {
+      "event_id": "d2-event-10",
+      "range_ms": [
+        233000,
+        241000
+      ],
+      "type": "pickup_and_shuttle_return",
+      "review_status": "human_confirmed",
+      "user_message": "整个视频我都确认"
+    }
+  ],
+  "ignored_predictions": [],
+  "excluded_annotation_ids": [],
+  "matches": [
+    {
+      "prediction_id": 1,
+      "truth_id": 1,
+      "temporal_iou": 0.7315277777777778,
+      "start_offset_ms": -533.0,
+      "end_offset_ms": 1400.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 243700.3125
+    },
+    {
+      "prediction_id": 2,
+      "truth_id": 2,
+      "temporal_iou": 0.37864197530864196,
+      "start_offset_ms": -733.0,
+      "end_offset_ms": 4300.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 2800.0,
+      "start_acceptable": true,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 223900.3125
+    },
+    {
+      "prediction_id": 3,
+      "truth_id": 3,
+      "temporal_iou": 0.7370731707317073,
+      "start_offset_ms": -667.0,
+      "end_offset_ms": 2567.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 1067.0,
+      "start_acceptable": true,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 208900.3125
+    },
+    {
+      "prediction_id": 4,
+      "truth_id": 4,
+      "temporal_iou": 0.8057603291616664,
+      "start_offset_ms": 833.0,
+      "end_offset_ms": -300.0,
+      "start_error_ms": 833.0,
+      "end_error_ms": 300.0,
+      "start_acceptable": false,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 195900.3125
+    },
+    {
+      "prediction_id": 5,
+      "truth_id": 5,
+      "temporal_iou": 0.5843586718354964,
+      "start_offset_ms": 833.0,
+      "end_offset_ms": 1633.0,
+      "start_error_ms": 833.0,
+      "end_error_ms": 133.0,
+      "start_acceptable": false,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 182300.3125
+    },
+    {
+      "prediction_id": 6,
+      "truth_id": 6,
+      "temporal_iou": 0.87736,
+      "start_offset_ms": -233.0,
+      "end_offset_ms": 1300.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 160900.3125
+    },
+    {
+      "prediction_id": 7,
+      "truth_id": 7,
+      "temporal_iou": 0.7737206461246098,
+      "start_offset_ms": -1400.0,
+      "end_offset_ms": -267.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 267.0,
+      "start_acceptable": true,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 142900.3125
+    },
+    {
+      "prediction_id": 8,
+      "truth_id": 8,
+      "temporal_iou": 0.9107571909109632,
+      "start_offset_ms": -833.0,
+      "end_offset_ms": -467.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 467.0,
+      "start_acceptable": true,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 121300.3125
+    },
+    {
+      "prediction_id": 9,
+      "truth_id": 9,
+      "temporal_iou": 0.6941176470588235,
+      "start_offset_ms": -1367.0,
+      "end_offset_ms": 1233.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 105300.3125
+    },
+    {
+      "prediction_id": 10,
+      "truth_id": 10,
+      "temporal_iou": 0.8115189873417722,
+      "start_offset_ms": -367.0,
+      "end_offset_ms": 4100.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 2600.0,
+      "start_acceptable": true,
+      "end_acceptable": false,
+      "both_acceptable": false,
+      "output_latency_ms": 74100.3125
+    },
+    {
+      "prediction_id": 11,
+      "truth_id": 12,
+      "temporal_iou": 0.7874725274725275,
+      "start_offset_ms": -1367.0,
+      "end_offset_ms": 567.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 43100.3125
+    },
+    {
+      "prediction_id": 12,
+      "truth_id": 13,
+      "temporal_iou": 0.8959537572254336,
+      "start_offset_ms": -800.0,
+      "end_offset_ms": 1000.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 17900.3125
+    },
+    {
+      "prediction_id": 13,
+      "truth_id": 14,
+      "temporal_iou": 0.7142857142857143,
+      "start_offset_ms": -1167.0,
+      "end_offset_ms": 233.0,
+      "start_error_ms": 0.0,
+      "end_error_ms": 0.0,
+      "start_acceptable": true,
+      "end_acceptable": true,
+      "both_acceptable": true,
+      "output_latency_ms": 4700.3125
+    }
+  ],
+  "missed_rally_count": 1,
+  "false_positive_count": 0,
+  "false_split_count": 0,
+  "false_merge_count": 0,
+  "start_error_ms": {
+    "count": 2,
+    "mean": 833.0,
+    "p50": 833.0,
+    "p95": 833.0,
+    "max": 833.0
+  },
+  "end_error_ms": {
+    "count": 7,
+    "mean": 1090.5714285714287,
+    "p50": 467.0,
+    "p95": 2740.0,
+    "max": 2800.0
+  },
+  "output_latency_ms": {
+    "count": 13,
+    "mean": 132684.92788461538,
+    "p50": 142900.3125,
+    "p95": 231820.31249999997,
+    "max": 243700.3125
+  },
+  "unmatched_prediction_ids": [],
+  "unmatched_truth_ids": [
+    11
+  ],
+  "prediction_overlaps": {
+    "1": [
+      1
+    ],
+    "2": [
+      2
+    ],
+    "3": [
+      3
+    ],
+    "4": [
+      4
+    ],
+    "5": [
+      5
+    ],
+    "6": [
+      6
+    ],
+    "7": [
+      7
+    ],
+    "8": [
+      8
+    ],
+    "9": [
+      9
+    ],
+    "10": [
+      10
+    ],
+    "11": [
+      12
+    ],
+    "12": [
+      13
+    ],
+    "13": [
+      14
+    ]
+  },
+  "truth_overlaps": {
+    "1": [
+      1
+    ],
+    "2": [
+      2
+    ],
+    "3": [
+      3
+    ],
+    "4": [
+      4
+    ],
+    "5": [
+      5
+    ],
+    "6": [
+      6
+    ],
+    "7": [
+      7
+    ],
+    "8": [
+      8
+    ],
+    "9": [
+      9
+    ],
+    "10": [
+      10
+    ],
+    "11": [],
+    "12": [
+      11
+    ],
+    "13": [
+      12
+    ],
+    "14": [
+      13
+    ]
+  },
+  "predictions": [
+    {
+      "rally_id": 1,
+      "start_ms": 0,
+      "end_ms": 7200.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 18900.0,
+      "end_ms": 27000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 29700.0,
+      "end_ms": 42000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 50300.0,
+      "end_ms": 55000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 63500.0,
+      "end_ms": 68600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 77500.0,
+      "end_ms": 90000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 100900.0,
+      "end_ms": 108000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 115500.0,
+      "end_ms": 129600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 137100.0,
+      "end_ms": 145600.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 153100.0,
+      "end_ms": 176800.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 11,
+      "start_ms": 198700.0,
+      "end_ms": 207800.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 12,
+      "start_ms": 215700.0,
+      "end_ms": 233000.0,
+      "emitted_at_ms": 250900.3125
+    },
+    {
+      "rally_id": 13,
+      "start_ms": 241300.0,
+      "end_ms": 246200.0,
+      "emitted_at_ms": 250900.3125
+    }
+  ],
+  "annotations": [
+    {
+      "rally_id": 1,
+      "start_ms": 533.0,
+      "end_ms": 5800.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 2,
+      "start_ms": 19633.0,
+      "end_ms": 22700.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 3,
+      "start_ms": 30367.0,
+      "end_ms": 39433.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 4,
+      "start_ms": 49467.0,
+      "end_ms": 55300.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 5,
+      "start_ms": 62667.0,
+      "end_ms": 66967.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 6,
+      "start_ms": 77733.0,
+      "end_ms": 88700.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 7,
+      "start_ms": 102300.0,
+      "end_ms": 108267.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 8,
+      "start_ms": 116333.0,
+      "end_ms": 130067.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 9,
+      "start_ms": 138467.0,
+      "end_ms": 144367.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 10,
+      "start_ms": 153467.0,
+      "end_ms": 172700.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 11,
+      "start_ms": 186567.0,
+      "end_ms": 190900.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 12,
+      "start_ms": 200067.0,
+      "end_ms": 207233.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 13,
+      "start_ms": 216500.0,
+      "end_ms": 232000.0,
+      "review_status": "verified"
+    },
+    {
+      "rally_id": 14,
+      "start_ms": 242467.0,
+      "end_ms": 245967.0,
+      "review_status": "verified"
+    }
+  ]
+}

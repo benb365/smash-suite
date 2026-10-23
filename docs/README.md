@@ -27,4 +27,5 @@
 | 媒体输入与实时模拟结果 | [输入实验](../modules/media/experiments/realtime-input.md) |
 | 剪辑产品验收与耗时 | [产品验证记录](../apps/video-clipper/README.md#验证记录) |
 | 首轮跨模块性能优化结果 | [首轮性能优化报告](features/performance-optimization/reports/first-round.md) |
+| 动态粗筛与输入画幅试验 | [OPT-06 动态粗筛](../apps/video-clipper/reports/opt06-dynamic/README.md) · [OPT-08A 输入画幅](../apps/video-clipper/reports/opt08a-fit320/README.md) |
 | 素材筛选与标注审核 | [素材记录](../datasets/README.md#审核与整理记录) |
